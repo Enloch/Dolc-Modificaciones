@@ -1,0 +1,206 @@
+[
+    {
+        "title": "Inicio",
+        "link": "/"
+    },
+    {
+        "title": "Dolcker soluciona",
+        "link": "#dolcker"
+    },
+    {
+        "title": "Ventajas del sistema Dolcker",
+        "link": "#ventajas"
+    },
+    {
+        "title": "Aplicaciones",
+        "subList": [
+            {
+                "title": "Aplicaciones",
+                "link": "#aplicaciones"
+            },
+            {
+                "title": "Rehabilitación",
+                "link": "#rehabilitacion"
+            },
+            {
+                "title": "Obra nueva",
+                "subList": [
+                    {
+                        "title": "Obra nueva",
+                        "link": "#obra-nueva"
+                    },
+                    {
+                        "title": "Fachadas",
+                        "link": "#fachadas"
+                    },
+                    {
+                        "title": "Terrazas, suelos elevados, techos y soluciones",
+                        "link": "#terrazas"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Diseño",
+        "subList": [
+            {
+                "title": "Diseño",
+                "link": "#diseno"
+            },
+            {
+                "title": "Formato",
+                "link": "#formato"
+            },
+            {
+                "title": "Acabados",
+                "link": "#acabados"
+            },
+            {
+                "title": "Espesores",
+                "link": "#espesores"
+            },
+            {
+                "title": "Piezas especiales",
+                "link": "#piezas"
+            },
+            {
+                "title": "Series",
+                "subList": [
+                    {
+                        "title": "Series",
+                        "link": "#series"
+                    },
+                    {
+                        "title": "Piedra",
+                        "subList": [
+                            {
+                                "title": "DO&BASALT",
+                                "link": "#basalt"
+                            },
+                            {
+                                "title": "DO&DOLM",
+                                "link": "#dolm"
+                            },
+                            {
+                                "title": "DO&DQUARTZ",
+                                "link": "#dquartz"
+                            },
+                            {
+                                "title": "DO&MARBLE",
+                                "link": "#marble"
+                            },
+                            {
+                                "title": "DO&STONE",
+                                "link": "#stone"
+                            },
+                            {
+                                "title": "DO&QUARCITY",
+                                "link": "#quarcity"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Cemento",
+                        "subList": [
+                            {
+                                "title": "DO&CRETE",
+                                "link": "#crete"
+                            },
+                            {
+                                "title": "DO&PORTLAND",
+                                "link": "#portland"
+                            },
+                            {
+                                "title": "DO&SPACE",
+                                "link": "#space"
+                            },
+                            {
+                                "title": "DO&TZMENT",
+                                "link": "#tzment"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Madera",
+                        "subList": [
+                            {
+                                "title": "DO&WOOD",
+                                "link": "#wood"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Terrazo",
+                        "subList": [
+                            {
+                                "title": "DO&TERRAZO",
+                                "link": "#terrazo"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Monocolor",
+                        "subList": [
+                            {
+                                "title": "DO&ARQUITECT",
+                                "link": "#arquitect"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Volumen",
+                        "subList": [
+                            {
+                                "title": "DO&VOLUMEN",
+                                "link": "#volumen"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Características",
+        "subList": [
+            {
+                "title": "Características técnicas",
+                "link": "#caracteristicas-especiales"
+            },
+            {
+                "title": "Datos técnicos",
+                "link": "#datos-tecnicos"
+            }
+        ]
+    },
+    {
+        "title": "Sistemas",
+        "subList": [
+            {
+                "title": "Sistemas",
+                "link": "#sistemas"
+            },
+            {
+                "title": "Dolcker & Clip",
+                "link": "#dolcker-and-clip"
+            },
+            {
+                "title": "Dol-TC11",
+                "link": "#dol-tc11"
+            },
+            {
+                "title": "Dol-TC14",
+                "link": "#dol-tc14"
+            },
+            {
+                "title": "Dol-HC20",
+                "link": "#dol-hc20"
+            }
+        ]
+    },
+    {
+        "title": "Descargas",
+        "link": "#descargas"
+    }
+]
