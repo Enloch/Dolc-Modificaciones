@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import FachadaVentilada from './pages/catalogos/FachadaVentilada'
 import DolckerStep from './pages/catalogos/DolckerStep'
+import Escamas from './pages/catalogos/Escamas'
 // import FontStyles from './global/FontStyles'
 import './assets/fonts/fonts.css'
 import GlobalStyles from './global/GlobalStyles'
@@ -30,6 +31,10 @@ ReactDOM.render(
                 <Route
                     path='/fachadas-ventiladas/dolcker-step'
                     element={<DolckerStep />}
+                />
+                <Route
+                    path='/fachadas-ventiladas/escamas'
+                    element={<Escamas />}
                 />
                 <Route path='/' element={<Main />} />
                 <Route path='/quienes-somos' element={<QuienesSomos />} />
