@@ -16,6 +16,7 @@ import MainEn from './pages/en/MainEn'
 import QuienesSomosEn from './pages/en/QuienesSomoEn'
 import FachadaVentiladaEn from './pages/en/catalogos/FachadaVentiladaEn'
 import Contacto from './pages/Contacto'
+import PaginaImagenes from './pages/PaginaImagen'
 
 ReactDOM.render(
     <React.StrictMode>
@@ -35,6 +36,10 @@ ReactDOM.render(
                 <Route
                     path='/fachadas-ventiladas/escamas'
                     element={<Escamas />}
+                />
+                <Route
+                    path='/cambios-pendientes'
+                    element={<PaginaImagenes />}
                 />
                 <Route path='/' element={<Main />} />
                 <Route path='/quienes-somos' element={<QuienesSomos />} />
