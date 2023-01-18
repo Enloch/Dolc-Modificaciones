@@ -12,43 +12,43 @@ const menuLanzadera = [
             },
             {
                 title: 'Dolcker Escamas',
-                link: '/fachadas-ventiladas/dolcker-escamas',
+                link: '/cambios-pendientes',
             },
             {
                 title: 'Dolcker T-Line',
-                link: '/fachadas-ventiladas/dolcker-escamas',
+                link: '/cambios-pendientes',
             },
             {
                 title: 'Dolcker Wood',
-                link: '/fachadas-ventiladas/dolcker-escamas',
+                link: '/cambios-pendientes',
             },
             {
                 title: 'Dolcker G-10',
-                link: '/fachadas-ventiladas/dolcker-escamas',
+                link: '/cambios-pendientes',
             },
             {
                 title: 'Dolcker Matrix',
-                link: '/fachadas-ventiladas/dolcker-escamas',
+                link: '/cambios-pendientes',
             },
             {
                 title: 'Dolcker 3D',
-                link: '/fachadas-ventiladas/dolcker-escamas',
+                link: '/cambios-pendientes',
             },
             {
                 title: 'Dolcker Pirámide',
-                link: '/fachadas-ventiladas/dolcker-escamas',
+                link: '/cambios-pendientes',
             },
             {
                 title: 'Dolcker T5',
-                link: '/fachadas-ventiladas/dolcker-escamas',
+                link: '/cambios-pendientes',
             },
             {
                 title: 'Dolcker Baguette',
-                link: '/fachadas-ventiladas/dolcker-escamas',
+                link: '/cambios-pendientes',
             },
             {
                 title: 'Dolcker Recercos',
-                link: '/fachadas-ventiladas/dolcker-escamas',
+                link: '/cambios-pendientes',
             },
             // {
             //     title: 'Dolcker Step',
