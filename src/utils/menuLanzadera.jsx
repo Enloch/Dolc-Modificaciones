@@ -10,6 +10,46 @@ const menuLanzadera = [
                 title: 'Dolcker System',
                 link: '/fachadas-ventiladas/dolcker-system',
             },
+            {
+                title: 'Dolcker Escamas',
+                link: '/fachadas-ventiladas/dolcker-escamas',
+            },
+            {
+                title: 'Dolcker T-Line',
+                link: '/fachadas-ventiladas/dolcker-escamas',
+            },
+            {
+                title: 'Dolcker Wood',
+                link: '/fachadas-ventiladas/dolcker-escamas',
+            },
+            {
+                title: 'Dolcker G-10',
+                link: '/fachadas-ventiladas/dolcker-escamas',
+            },
+            {
+                title: 'Dolcker Matrix',
+                link: '/fachadas-ventiladas/dolcker-escamas',
+            },
+            {
+                title: 'Dolcker 3D',
+                link: '/fachadas-ventiladas/dolcker-escamas',
+            },
+            {
+                title: 'Dolcker Pirámide',
+                link: '/fachadas-ventiladas/dolcker-escamas',
+            },
+            {
+                title: 'Dolcker T5',
+                link: '/fachadas-ventiladas/dolcker-escamas',
+            },
+            {
+                title: 'Dolcker Baguette',
+                link: '/fachadas-ventiladas/dolcker-escamas',
+            },
+            {
+                title: 'Dolcker Recercos',
+                link: '/fachadas-ventiladas/dolcker-escamas',
+            },
             // {
             //     title: 'Dolcker Step',
             //     link: '/fachadas-ventiladas/dolcker-step',

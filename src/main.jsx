@@ -34,7 +34,7 @@ ReactDOM.render(
                     element={<DolckerStep />}
                 />
                 <Route
-                    path='/fachadas-ventiladas/escamas'
+                    path='/fachadas-ventiladas/dolcker-escamas'
                     element={<Escamas />}
                 />
                 <Route
