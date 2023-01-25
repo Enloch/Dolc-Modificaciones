@@ -1,4 +1,5 @@
 import React from 'react'
+import imagen0 from '../assets/Dolker-Completo-00.webp'
 import imagen1 from '../assets/Dolker-Completo-01.webp'
 import imagen2 from '../assets/Dolker-Completo-02.webp'
 import imagen3 from '../assets/Dolker-Completo-03.webp'
@@ -17,6 +18,7 @@ const PaginaImagenes = () => {
                     <Titulo color={COLORS.gray01}>DOLCKER</Titulo>
                     <MenuLanzaderaTemp />
                 </StyledIndice>
+                <img src={imagen0} />
                 <IndiceEsc />
                 <img src={imagen1} />
                 <img src={imagen2} />
