@@ -136,7 +136,7 @@ const Caracteristicas = ({ id }) => {
                     </li>
                 </Listado>
             </StyledCaracteristicas>
-            <StyledCaracteristicas id={id[1]} backgroundColor={COLORS.gray01}>
+            <StyledCaracteristicas id={id[1]} backgroundColor={COLORS.gray02}>
                 <Titulo>TECHNICAL DATA</Titulo>
                 <ImageWithCaption
                     src={caracter2}

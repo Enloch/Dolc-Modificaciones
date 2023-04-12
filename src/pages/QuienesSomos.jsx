@@ -22,36 +22,10 @@ const QuienesSomos = () => {
             {menuDesplegable}
             {btnIndice}
             <Seccion style={{ minHeight: '100vh' }}>
-                <Titulo2>Quiénes somos</Titulo2>
+                <Titulo2>QUIÉNES SOMOS</Titulo2>
                 <Text>
-                    Dolcker trabaja con arquitectos y diseñadores para llevar
-                    sus proyectos a la vanguardia de la construcción sostenible.
-                    <br />
-                    <br />
-                    Nuestro punto fuerte es el desarrollo de fachadas ventiladas
-                    innovadoras y de alto rendimiento. Éstas se encuentran en
-                    algunos de los edificios más llamativos del mundo. En
-                    nuestros laboratorios de investigación y desarrollo,
-                    experimentamos y probamos constantemente nuevos materiales,
-                    técnicas de cocción y procesos de producción. Esto nos
-                    permite garantizar que nuestros productos cumplen los
-                    requisitos más estrictos de diseño y calidad.
-                    <br />
-                    <br />
-                    Nuestra apuesta decidida por la calidad de nuestros
-                    productos nos ha hecho merecedores de la confianza de miles
-                    de arquitectos, colocadores y clientes.
-                    <br />
-                    <br />
-                    En el Adn de Dolcker se encuentra el colaborar de una manera
-                    directa con arquitectos y diseñadores para que puedan llevar
-                    sus proyectos a la vanguardia de la construcción sostenible.
-                    <br />
-                    <br />
-                    Nuestro punto fuerte es el desarrollo de fachadas ventiladas
-                    innovadoras y de alto rendimiento. Dichas fachadas se
-                    encuentran en algunos de los edificios más sugerentes del
-                    mundo.
+                    En Dolcker, nos enfocamos en fachadas ventiladas innovadoras
+                    y de alto rendimiento para la construcción sostenible.
                     <br />
                     <br />
                     Desde nuestros laboratorios de investigación y desarrollo,

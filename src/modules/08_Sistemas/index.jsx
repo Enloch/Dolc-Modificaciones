@@ -1,7 +1,7 @@
 import Text from '../../components/Text'
 import { Titulo, Titulo2 } from '../../components/Titulos'
 import StyledSistemas, { Enlaces } from './styles'
-
+import { COLORS } from '../../global/GlobalStyles'
 import sistemas from '../../assets/images/Sistemas/sistemas.webp'
 
 import dolckerClip1 from '../../assets/images/Sistemas/sistema-dolcker-clip.webp'
@@ -20,7 +20,7 @@ import ImageWithCaption from '../../components/ImageWithCaption'
 const Sistemas = ({ id }) => {
     return (
         <>
-            <StyledSistemas id={id[0]}>
+            <StyledSistemas id={id[0]} backgroundColor={COLORS.gray02}>
                 <Titulo>Sistema constructivos</Titulo>
                 <ImageWithCaption
                     src={sistemas}

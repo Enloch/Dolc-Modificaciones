@@ -20,7 +20,7 @@ const Dolcker = ({ id }) => {
     }
 
     return (
-        <StyledDolcker id={id} backgroundColor={COLORS.gray03}>
+        <StyledDolcker id={id} backgroundColor={COLORS.gray02}>
             <Titulo>Dolcker solves</Titulo>
             <div className='dolcker-info'>
                 <ImageWithCaption

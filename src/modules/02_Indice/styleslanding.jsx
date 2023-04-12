@@ -2,8 +2,18 @@ import styled, { css } from 'styled-components'
 import Seccion from '../../components/Seccion'
 import { TextMedium } from '../../global/GlobalStyles'
 import { mediaQueryTablet } from '../../styles/sizes'
+import Fondo from '../../assets/images/Inicio/inicio.jpg'
+
 const StyledIndice = styled(Seccion)`
     min-height: 100vh;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+        ),
+        url(${Fondo});
+    background-size: cover;
+    background-position: center center;
     .flecha-indice {
         width: 25px;
         grid-column: 5;

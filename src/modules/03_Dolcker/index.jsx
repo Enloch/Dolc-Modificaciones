@@ -20,7 +20,7 @@ const Dolcker = ({ id }) => {
     }
 
     return (
-        <StyledDolcker id={id} backgroundColor={COLORS.gray03}>
+        <StyledDolcker id={id} backgroundColor={COLORS.gray02}>
             <Titulo>Dolcker soluciona</Titulo>
             <div className='dolcker-info'>
                 <ImageWithCaption
@@ -29,17 +29,17 @@ const Dolcker = ({ id }) => {
                     caption='SISTEMA DOLCKER &CLIP Seguridad mecánica y elástica en el mismo sistema'
                 />
                 <Text>
-                    El primer sistema de ranura continua ful&body,{' '}
+                    El primer sistema de ranura c ontinua full&body,{' '}
                     <strong>
                         con infinitas posibilidades de modulaciones.
                     </strong>{' '}
                     El sistema DOLCKER permite diseñar fachadas, con soluciones
-                    técnicas para el desarrollo suelos elevados , techos así
-                    como recercados de ventanas tapas de coronación siempre
+                    técnicas para el desarrollo de suelos elevados, techos, así
+                    como recercados de ventanas, tapas de coronación, siempre
                     utilizando el mismo material.
                     <br />
                     <br />
-                    La tecnología ful&body permite diseñar aristas del edificio
+                    La tecnología full&body permite diseñar aristas del edificio
                     continuas.
                     <br />
                     <br />

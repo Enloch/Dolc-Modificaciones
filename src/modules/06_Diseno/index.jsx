@@ -51,12 +51,12 @@ const Disenos = ({ id }) => {
                     colorAutor={COLORS.gray05}
                 />
             </StyledDisenos>
-            <StyledDisenos id={id[1]} backgroundColor={COLORS.gray02}>
+            <StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
                 <Titulo2>Formato</Titulo2>
                 <Anotacion {...propsFormato.anotacion} />
                 <VisualizadorVariaciones {...propsFormato.visualizador} />
             </StyledDisenos>
-            <StyledDisenos id={id[3]} backgroundColor={COLORS.gray02}>
+            <StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
                 <Titulo2>Acabados</Titulo2>
                 <Anotaciones>
                     <Anotacion
@@ -72,7 +72,7 @@ const Disenos = ({ id }) => {
             </StyledDisenos>
             <StyledDisenos
                 id={id[4]}
-                backgroundColor={COLORS.gray02}
+                backgroundColor={COLORS.gray01}
                 isEspesores
             >
                 <Titulo2>Espesores</Titulo2>
@@ -109,7 +109,7 @@ const Disenos = ({ id }) => {
                     </ul>
                 </div>
             </StyledDisenos>
-            <StyledDisenos id={id[5]} backgroundColor={COLORS.gray02}>
+            <StyledDisenos id={id[5]} backgroundColor={COLORS.gray01}>
                 <Titulo2>Piezas especiales</Titulo2>
                 <Anotaciones>
                     <Anotacion

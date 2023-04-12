@@ -13,8 +13,6 @@ import VisualizadorRotador from '../../../components/VisualizadorRotador'
 import config from '../../../configs/EN/configPiezasEspeciales'
 import configAcabados from '../../../configs/configAcabados'
 import Series from './06_2_Series'
-import img2 from '../../../assets/images/Diseno/Espesores/img1.webp'
-import img3 from '../../../assets/images/Diseno/Espesores/img2.webp'
 import ranurado11 from '../../../assets/images/Diseno/Espesores/ranurado11mm.webp'
 import ranurado14 from '../../../assets/images/Diseno/Espesores/ranurado14.webp'
 import ranurado20 from '../../../assets/images/Diseno/Espesores/ranurado20.webp'
@@ -51,12 +49,12 @@ const Disenos = ({ id }) => {
                     colorAutor={COLORS.gray05}
                 />
             </StyledDisenos>
-            <StyledDisenos id={id[1]} backgroundColor={COLORS.gray02}>
+            <StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
                 <Titulo2>Format</Titulo2>
                 <Anotacion {...propsFormato.anotacion} />
                 <VisualizadorVariaciones {...propsFormato.visualizador} />
             </StyledDisenos>
-            <StyledDisenos id={id[3]} backgroundColor={COLORS.gray02}>
+            <StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
                 <Titulo2>Finishes</Titulo2>
                 <Anotaciones>
                     <Anotacion
@@ -72,14 +70,10 @@ const Disenos = ({ id }) => {
             </StyledDisenos>
             <StyledDisenos
                 id={id[4]}
-                backgroundColor={COLORS.gray02}
+                backgroundColor={COLORS.gray01}
                 isEspesores
             >
                 <Titulo2>Thicknesses</Titulo2>
-                <div className='espesores-ejemplos'>
-                    <img src={img2} alt='' />
-                    <img src={img3} alt='' />
-                </div>
                 <div className='espesor espesor-1'>
                     <img src={ranurado11} alt='' />
                     <ul>
@@ -113,7 +107,7 @@ const Disenos = ({ id }) => {
                     </ul>
                 </div>
             </StyledDisenos>
-            <StyledDisenos id={id[5]} backgroundColor={COLORS.gray02}>
+            <StyledDisenos id={id[5]} backgroundColor={COLORS.gray01}>
                 <Titulo2>Special pieces</Titulo2>
                 <Anotaciones>
                     <Anotacion

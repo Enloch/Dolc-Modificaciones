@@ -29,7 +29,7 @@ const StyledDisenos = styled(Seccion)`
     }
 
     .espesor {
-        grid-row: 2;
+        grid-row: 1;
 
         ul {
             display: flex;

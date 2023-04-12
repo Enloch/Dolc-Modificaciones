@@ -14,10 +14,10 @@ const Aplicaciones = ({ id }) => {
         <>
             <StyledAplicaciones
                 id={id[0]}
-                backgroundColor={COLORS.gray08}
+                backgroundColor={COLORS.gray02}
                 rowGap={DISTANCES.long}
             >
-                <Titulo color={COLORS.gray01}>APPLICATIONS</Titulo>
+                <Titulo color={COLORS.gray08}>APPLICATIONS</Titulo>
                 <ImageWithCaption
                     src={img1}
                     alt='Imagen de Aplicaciones 1'
@@ -28,16 +28,16 @@ const Aplicaciones = ({ id }) => {
                     big
                     cita="The architect's job today is to create beautiful buildings. That's it."
                     author='Philip Johnson'
-                    colorCita={COLORS.gray01}
-                    colorAutor={COLORS.gray03}
+                    colorCita={COLORS.gray08}
+                    colorAutor={COLORS.gray04}
                 />
             </StyledAplicaciones>
             <StyledAplicaciones
                 id={id[1]}
-                backgroundColor={COLORS.gray08}
+                backgroundColor={COLORS.gray01}
                 rowGap={DISTANCES.medium}
             >
-                <Titulo2 color={COLORS.gray01}>Rehabilitation</Titulo2>
+                <Titulo2 color={COLORS.gray08}>Rehabilitation</Titulo2>
                 <ImageWithCaption
                     src={img2}
                     alt='Imagen de Aplicaciones 1'
@@ -47,13 +47,13 @@ const Aplicaciones = ({ id }) => {
                 <Cita
                     cita='We live in a wonderful world that is full of beauty, enchantment and adventure.There is no limit to the adventures we can have as long as we look for them with our eyes wide open.'
                     author='Jawaharial Nehru'
-                    colorCita={COLORS.gray01}
-                    colorAutor={COLORS.gray03}
+                    colorCita={COLORS.gray08}
+                    colorAutor={COLORS.gray04}
                 />
             </StyledAplicaciones>
             <StyledAplicaciones
                 id={id[2]}
-                backgroundColor={COLORS.gray06}
+                backgroundColor={COLORS.gray01}
                 rowGap={DISTANCES.medium}
             >
                 <Titulo2 color={COLORS.gray01}>New construction</Titulo2>
@@ -66,16 +66,16 @@ const Aplicaciones = ({ id }) => {
                 <Cita
                     cita="When I'm working on a problem, I never think about its beauty. I only think about how to solve the problem. But when I finish it, if the solution isn't beautiful, I know it's wrong."
                     author='Richard Buckminster Fuller'
-                    colorCita={COLORS.gray01}
-                    colorAutor={COLORS.gray03}
+                    colorCita={COLORS.gray08}
+                    colorAutor={COLORS.gray04}
                 />
             </StyledAplicaciones>
             <StyledAplicaciones
                 id={id[3]}
-                backgroundColor={COLORS.gray06}
+                backgroundColor={COLORS.gray01}
                 rowGap={DISTANCES.medium}
             >
-                <Titulo3 color={COLORS.gray01}>— Facades</Titulo3>
+                <Titulo3 color={COLORS.gray08}>Facades</Titulo3>
                 <ImageWithCaption
                     src={img4}
                     alt='Imagen de Aplicaciones 4'
@@ -85,11 +85,11 @@ const Aplicaciones = ({ id }) => {
             </StyledAplicaciones>
             <StyledAplicaciones
                 id={id[4]}
-                backgroundColor={COLORS.gray06}
+                backgroundColor={COLORS.gray01}
                 rowGap={DISTANCES.medium}
             >
-                <Titulo3 color={COLORS.gray01}>
-                    — Terraces, raised floors, ceilings and solutions
+                <Titulo3 color={COLORS.gray08}>
+                    Terraces, raised floors, ceilings and solutions
                 </Titulo3>
                 <ImageWithCaption
                     src={img5}

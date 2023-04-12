@@ -36,7 +36,7 @@ const Indice = ({ indiceRef }) => {
                     onClick={handleClickFlecha}
                 />
                 <div className='idiomas'>
-                    <Link to='/catalogos/fachadas-ventiladas'>ES</Link>
+                    <Link to='/fachadas-ventiladas/dolcker-system'>ES</Link>
                     <Link to='#' className='seleccionado'>
                         EN
                     </Link>

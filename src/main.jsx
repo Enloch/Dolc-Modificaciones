@@ -51,7 +51,7 @@ ReactDOM.render(
                 />
 
                 <Route
-                    path='/en/catalogos/fachadas-ventiladas'
+                    path='/en/fachadas-ventiladas/dolcker-system'
                     element={<FachadaVentiladaEn />}
                 />
                 <Route path='/en/' element={<MainEn />} />

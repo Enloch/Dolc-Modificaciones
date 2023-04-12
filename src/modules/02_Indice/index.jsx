@@ -36,10 +36,10 @@ const Indice = ({ indiceRef }) => {
                     onClick={handleClickFlecha}
                 />
                 <div className='idiomas'>
-                    <Link to='#' className='seleccionado'>
+                    <Link to='/fachadas-ventiladas/dolcker-system' className='seleccionado'>
                         ES
                     </Link>
-                    <Link to='/en/catalogos/fachadas-ventiladas'>EN</Link>
+                    <Link to='/en/fachadas-ventiladas/dolcker-system'>EN</Link>
                 </div>
             </StyledIndice>
             {menuDesplegable}

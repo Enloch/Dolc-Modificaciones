@@ -14,10 +14,10 @@ const Aplicaciones = ({ id }) => {
         <>
             <StyledAplicaciones
                 id={id[0]}
-                backgroundColor={COLORS.gray08}
+                backgroundColor={COLORS.gray02}
                 rowGap={DISTANCES.long}
             >
-                <Titulo color={COLORS.gray01}>Aplicaciones</Titulo>
+                <Titulo color={COLORS.gray08}>Aplicaciones</Titulo>
                 <ImageWithCaption
                     src={img1}
                     alt='Imagen de Aplicaciones 1'
@@ -28,16 +28,16 @@ const Aplicaciones = ({ id }) => {
                     big
                     cita='El trabajo del arquitecto de hoy es crear hermosos edificios. Eso es todo.'
                     author='Philip Johnson'
-                    colorCita={COLORS.gray01}
-                    colorAutor={COLORS.gray03}
+                    colorCita={COLORS.gray08}
+                    colorAutor={COLORS.gray04}
                 />
             </StyledAplicaciones>
             <StyledAplicaciones
                 id={id[1]}
-                backgroundColor={COLORS.gray08}
+                backgroundColor={COLORS.gray01}
                 rowGap={DISTANCES.medium}
             >
-                <Titulo2 color={COLORS.gray01}>Rehabilitación</Titulo2>
+                <Titulo2 color={COLORS.gray08}>Rehabilitación</Titulo2>
                 <ImageWithCaption
                     src={img2}
                     alt='Imagen de Aplicaciones 1'
@@ -47,16 +47,16 @@ const Aplicaciones = ({ id }) => {
                 <Cita
                     cita='Vivimos en un mundo maravilloso que está lleno de belleza, encanto y aventura. No hay un límite para las aventuras que podemos tener siempre y cuando las busquemos con los ojos bien abiertos.'
                     author='Jawaharial Nehru'
-                    colorCita={COLORS.gray01}
-                    colorAutor={COLORS.gray03}
+                    colorCita={COLORS.gray08}
+                    colorAutor={COLORS.gray04}
                 />
             </StyledAplicaciones>
             <StyledAplicaciones
                 id={id[2]}
-                backgroundColor={COLORS.gray06}
+                backgroundColor={COLORS.gray01}
                 rowGap={DISTANCES.medium}
             >
-                <Titulo2 color={COLORS.gray01}>Obra nueva</Titulo2>
+                <Titulo2 color={COLORS.gray08}>Obra nueva</Titulo2>
                 <ImageWithCaption
                     src={img3}
                     alt='Imagen de Aplicaciones 1'
@@ -66,16 +66,16 @@ const Aplicaciones = ({ id }) => {
                 <Cita
                     cita='Cuando estoy trabajando en un problema, nunca pienso en su belleza. Solo pienso en cómo resolver el problema. Pero cuando lo termino, si la solución no es bella, se que está equivocada'
                     author='Richard Buckminster Fuller'
-                    colorCita={COLORS.gray01}
-                    colorAutor={COLORS.gray03}
+                    colorCita={COLORS.gray08}
+                    colorAutor={COLORS.gray04}
                 />
             </StyledAplicaciones>
             <StyledAplicaciones
                 id={id[3]}
-                backgroundColor={COLORS.gray06}
+                backgroundColor={COLORS.gray01}
                 rowGap={DISTANCES.medium}
             >
-                <Titulo3 color={COLORS.gray01}>— Fachadas</Titulo3>
+                <Titulo3 color={COLORS.gray08}>Fachadas</Titulo3>
                 <ImageWithCaption
                     src={img4}
                     alt='Imagen de Aplicaciones 4'
@@ -85,11 +85,11 @@ const Aplicaciones = ({ id }) => {
             </StyledAplicaciones>
             <StyledAplicaciones
                 id={id[4]}
-                backgroundColor={COLORS.gray06}
+                backgroundColor={COLORS.gray01}
                 rowGap={DISTANCES.medium}
             >
-                <Titulo3 color={COLORS.gray01}>
-                    — Terrazas, suelos elevados, techos y soluciones
+                <Titulo3 color={COLORS.gray08}>
+                    Terrazas, suelos elevados, techos y soluciones
                 </Titulo3>
                 <ImageWithCaption
                     src={img5}

@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-key */
+
 import { useCallback, useState, Children, useRef } from 'react'
 import Indicador from '../components/Indicador'
 

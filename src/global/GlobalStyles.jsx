@@ -13,6 +13,7 @@ const DISTANCES = {
 const TABLET_SIZE = '980px'
 
 const COLORS = {
+    green: ' #00BFA6',
     gray01: '#F2F2F2',
     gray02: '#D9D9D9',
     gray03: '#BFBFBF',
