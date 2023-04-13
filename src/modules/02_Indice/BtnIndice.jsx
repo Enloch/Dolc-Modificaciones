@@ -7,7 +7,7 @@ const BtnIndice = styled.img`
     top: ${GRID.verticalSpace};
     right: ${GRID.horizontalSpace};
     z-index: 4;
-    width: 3rem;
+    width: 2rem;
     cursor: pointer;
     visibility: hidden;
 
@@ -17,7 +17,9 @@ const BtnIndice = styled.img`
     mix-blend-mode: difference;
 
     ${mediaQueryTablet(css`
-        top: ${DISTANCES.small};
+        top: 3rem;
+        right: 2.5rem;
+        width: 1.5rem;
     `)}
 `
 

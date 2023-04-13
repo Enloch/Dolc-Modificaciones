@@ -23,7 +23,7 @@ const Indice = ({ indiceRef }) => {
     return (
         <>
             <StyledIndice
-                backgroundColor={COLORS.gray08}
+                backgroundColor={COLORS.gray04}
                 ref={indiceRef}
                 id='indice'
             >

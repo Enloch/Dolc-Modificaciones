@@ -43,8 +43,7 @@ const Disenos = ({ id }) => {
                     columnSpan='6'
                 />
                 <Cita
-                    big
-                    cita='Simplicity taken to the extreme becomes elegance.'
+                    cita='“Simplicity taken to the extreme becomes elegance.”'
                     author='John Franklin'
                     colorAutor={COLORS.gray05}
                 />

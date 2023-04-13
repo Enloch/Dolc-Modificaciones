@@ -25,8 +25,8 @@ const Aplicaciones = ({ id }) => {
                     columnSpan='6'
                 />
                 <Cita
-                    big
-                    cita="The architect's job today is to create beautiful buildings. That's it."
+                    cita="“The architect's job today is to create beautiful buildings.
+                    That's it.”"
                     author='Philip Johnson'
                     colorCita={COLORS.gray08}
                     colorAutor={COLORS.gray04}
@@ -45,7 +45,7 @@ const Aplicaciones = ({ id }) => {
                     columnSpan='6'
                 />
                 <Cita
-                    cita='We live in a wonderful world that is full of beauty, enchantment and adventure.There is no limit to the adventures we can have as long as we look for them with our eyes wide open.'
+                    cita='“We live in a wonderful world that is full of beauty, enchantment and adventure.There is no limit to the adventures we can have as long as we look for them with our eyes wide open.”'
                     author='Jawaharial Nehru'
                     colorCita={COLORS.gray08}
                     colorAutor={COLORS.gray04}
@@ -64,7 +64,7 @@ const Aplicaciones = ({ id }) => {
                     columnSpan='6'
                 />
                 <Cita
-                    cita="When I'm working on a problem, I never think about its beauty. I only think about how to solve the problem. But when I finish it, if the solution isn't beautiful, I know it's wrong."
+                    cita="“When I'm working on a problem, I never think about its beauty. I only think about how to solve the problem. But when I finish it, if the solution isn't beautiful, I know it's wrong.”"
                     author='Richard Buckminster Fuller'
                     colorCita={COLORS.gray08}
                     colorAutor={COLORS.gray04}

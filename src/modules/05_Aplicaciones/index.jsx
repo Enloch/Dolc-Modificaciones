@@ -25,8 +25,7 @@ const Aplicaciones = ({ id }) => {
                     columnSpan='6'
                 />
                 <Cita
-                    big
-                    cita='El trabajo del arquitecto de hoy es crear hermosos edificios. Eso es todo.'
+                    cita='“El trabajo del arquitecto de hoy es crear hermosos edificios. Eso es todo.”'
                     author='Philip Johnson'
                     colorCita={COLORS.gray08}
                     colorAutor={COLORS.gray04}
@@ -45,7 +44,7 @@ const Aplicaciones = ({ id }) => {
                     columnSpan='6'
                 />
                 <Cita
-                    cita='Vivimos en un mundo maravilloso que está lleno de belleza, encanto y aventura. No hay un límite para las aventuras que podemos tener siempre y cuando las busquemos con los ojos bien abiertos.'
+                    cita='“Vivimos en un mundo maravilloso que está lleno de belleza, encanto y aventura. No hay un límite para las aventuras que podemos tener siempre y cuando las busquemos con los ojos bien abiertos.”'
                     author='Jawaharial Nehru'
                     colorCita={COLORS.gray08}
                     colorAutor={COLORS.gray04}
@@ -64,7 +63,7 @@ const Aplicaciones = ({ id }) => {
                     columnSpan='6'
                 />
                 <Cita
-                    cita='Cuando estoy trabajando en un problema, nunca pienso en su belleza. Solo pienso en cómo resolver el problema. Pero cuando lo termino, si la solución no es bella, se que está equivocada'
+                    cita='“Cuando estoy trabajando en un problema, nunca pienso en su belleza. Solo pienso en cómo resolver el problema. Pero cuando lo termino, si la solución no es bella, se que está equivocada”'
                     author='Richard Buckminster Fuller'
                     colorCita={COLORS.gray08}
                     colorAutor={COLORS.gray04}

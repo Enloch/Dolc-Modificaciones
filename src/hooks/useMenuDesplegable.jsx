@@ -3,7 +3,7 @@ import { Titulo } from '../components/Titulos'
 import { COLORS } from '../global/GlobalStyles'
 import { slideUp } from '../helpers/animations'
 import BtnIndice from '../modules/02_Indice/BtnIndice'
-import MenuDesplegable from '../modules/02_Indice/MenuDesplegable'
+import MenuDesplegable from '../modules/02_Indice/MenuDesplegableLanding'
 import openMenu from '../assets/icons/indice/open-menu.svg'
 import closeMenu from '../assets/icons/indice/close-menu.svg'
 

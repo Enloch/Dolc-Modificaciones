@@ -45,8 +45,7 @@ const Disenos = ({ id }) => {
                     columnSpan='6'
                 />
                 <Cita
-                    big
-                    cita='La simplicidad llevada al extremo, se convierte en elegancia.'
+                    cita='“La simplicidad llevada al extremo, se convierte en elegancia.”'
                     author='John Franklin'
                     colorAutor={COLORS.gray05}
                 />
