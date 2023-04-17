@@ -65,7 +65,11 @@ const useMenuDesplegable = (Lista, titulo, indiceRef) => {
             document.body.style.overflowY = 'hidden'
             document.body.parentElement.style.scrollBehavior = 'auto'
             setMenuDesplegable(
-                <MenuDesplegable menuRef={menuRef} setIsOpen={setIsOpen}>
+                <MenuDesplegable
+                    color={COLORS.gray06}
+                    menuRef={menuRef}
+                    setIsOpen={setIsOpen}
+                >
                     <Titulo color={COLORS.gray01}>{titulo}</Titulo>
                     <Lista isMenuDesplegable={true} />
                 </MenuDesplegable>

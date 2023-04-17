@@ -15,7 +15,7 @@ const MenuDesplegable = ({ children, menuRef, setIsOpen }) => {
 
     return (
         <StyledMenuDesplegable
-            backgroundColor='#595959C0'
+            backgroundColor={COLORS.gray06}
             ref={menuRef}
             onClick={handleClickAnchor}
         >

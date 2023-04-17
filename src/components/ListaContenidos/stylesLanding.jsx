@@ -1,11 +1,15 @@
 import styled, { css } from 'styled-components'
 import { GRID, TextMedium, COLORS } from '../../global/GlobalStyles'
-import { column_3_span3, column_6_spanEnd } from '../../styles/grid'
+import {
+    column_3_span3,
+    column_6_spanEnd,
+    column_5_span7,
+} from '../../styles/grid'
 import { mediaQueryTablet } from '../../styles/sizes'
 import StyledSublista from './Sublista/styles'
 
 const StyledListaContenidos = styled.nav`
-    ${column_3_span3}
+    ${column_5_span7}
 
     counter-reset: counter -1;
 

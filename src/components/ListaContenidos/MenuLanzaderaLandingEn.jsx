@@ -114,14 +114,14 @@ const MenuLanzadera = () => {
             <StyledListaContenidos>
                 <ul>{contenidos}</ul>
             </StyledListaContenidos>
-            <StyledMiniaturasContainer>
+            {/* <StyledMiniaturasContainer>
                 <div className='titulo'>
                     <TituloSerie>OUR SERIES</TituloSerie>
                 </div>
                 {miniaturas.map(miniatura => (
                     <Miniatura key={miniatura.id} miniatura={miniatura} />
                 ))}
-            </StyledMiniaturasContainer>
+            </StyledMiniaturasContainer> */}
         </>
     )
 }

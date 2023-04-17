@@ -23,7 +23,7 @@ const Indice = ({ indiceRef }) => {
     return (
         <>
             <StyledIndice
-                backgroundColor={COLORS.gray04}
+                backgroundColor={COLORS.gray06}
                 ref={indiceRef}
                 id='indice'
             >
@@ -36,7 +36,10 @@ const Indice = ({ indiceRef }) => {
                     onClick={handleClickFlecha}
                 />
                 <div className='idiomas'>
-                    <Link to='/fachadas-ventiladas/dolcker-system' className='seleccionado'>
+                    <Link
+                        to='/fachadas-ventiladas/dolcker-system'
+                        className='seleccionado'
+                    >
                         ES
                     </Link>
                     <Link to='/en/fachadas-ventiladas/dolcker-system'>EN</Link>

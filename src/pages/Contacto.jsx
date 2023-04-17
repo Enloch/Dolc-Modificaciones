@@ -61,7 +61,7 @@ const Contacto = ({ lang = '' }) => {
                 ></IframeMapa>
             </Seccion>
 
-            <Final />
+            {/* <Final /> */}
         </>
     )
 }

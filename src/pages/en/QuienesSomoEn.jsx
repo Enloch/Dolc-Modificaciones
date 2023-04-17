@@ -4,12 +4,12 @@ import Text from '../../components/Text'
 import { Titulo2 } from '../../components/Titulos'
 import useMenuDesplegableEn from '../../hooks/useMenuDesplegableEn'
 import Final from '../../modules/EN/10_Final'
-
+import ImageSlider from '../../components/slider/slider'
 import img1 from '../../assets/images/QuienesSomos/DSC_6195.jpg'
 import img2 from '../../assets/images/QuienesSomos/DSC_6221.jpg'
 import img3 from '../../assets/images/QuienesSomos/DSC_6303.jpg'
 import ImageWithCaption from '../../components/ImageWithCaption'
-
+const Slider1 = [img1, img2, img3]
 const QuienesSomos = () => {
     const { menuDesplegable, btnIndice } = useMenuDesplegableEn(
         MenuLanzadera,
@@ -44,25 +44,9 @@ const QuienesSomos = () => {
                     worthy of the trust of a large number of architects,
                     installers and clients.
                 </Text>
-                <ImageWithCaption
-                    src={img1}
-                    alt='Imagen de Aplicaciones 1'
-                    columnSpan='6'
-                />
-                <ImageWithCaption
-                    src={img2}
-                    alt='Imagen de Aplicaciones 1'
-                    columnSpan='3'
-                />
-                <ImageWithCaption
-                    src={img3}
-                    alt='Imagen de Aplicaciones 1'
-                    style={{
-                        gridColumn: 'span 3',
-                    }}
-                />
+                <ImageSlider images={Slider1} />
             </Seccion>
-            <Final />
+            {/* <Final /> */}
         </>
     )
 }

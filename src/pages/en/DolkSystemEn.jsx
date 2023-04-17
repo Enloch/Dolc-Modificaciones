@@ -4,13 +4,14 @@ import fondo from '../../assets/images/Inicio/landing2.jpg'
 const DolkSystem = () => {
     return (
         <Container>
+            <MainTitle>Ventilated facades</MainTitle>
             <Wrapper>
                 <ImageContainer>
                     <Image src={fondo} />
                 </ImageContainer>
                 <Content>
-                    <Title>VENTILATED FAÇADES</Title>
-                    <Subtitle>DOL -TC11. Do&Dolm Nacar</Subtitle>
+                    <Title>Dolcker System</Title>
+                    {/* <Subtitle>DOL -TC11. Do&Dolm Nacar</Subtitle> */}
                     <Text>
                         The DOLCKER system allows the design of facades, with
                         technical solutions for the development of raised
@@ -31,6 +32,7 @@ export default DolkSystem
 const Container = styled.div`
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #f5f5f5;
@@ -68,6 +70,13 @@ const Content = styled.div`
     justify-content: center;
     align-items: center;
     padding: 20px;
+`
+const MainTitle = styled.h2`
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 70px 0;
+    color: #333;
+    text-align: center;
 `
 
 const Title = styled.h2`
