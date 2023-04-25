@@ -13,8 +13,8 @@ const configDescargas = [
     {
         // path: '/downloads/Catalogo general Dolcker.pdf',
         imgSrc: downloadImgSrc['Catalogo general Dolcker'],
-        title: 'Catálogo general',
-        fileName: 'Dolcker T-LINE',
+        title: 'Catálogo general - Arquitecto da Catálogo',
+        fileName: 'Dolcker T-LINE - Arquitecto da Catálogo',
         fileType: 'pdf',
         size: '8,4 MB',
     },

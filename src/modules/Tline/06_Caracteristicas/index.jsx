@@ -2,7 +2,9 @@ import ImageWithCaption from '../../../components/ImageWithCaption'
 import { Titulo } from '../../../components/Titulos'
 import { COLORS } from '../../../global/GlobalStyles'
 import StyledCaracteristicas from './styles'
-import caracter1 from '../../../assets/images/DolckerStep/catalogo3-1-5.webp'
+import caracter1 from '../../../assets/images/Dolckertline/7475.webp'
+import ImagenJorge from '../../../assets/images/Dolckertline/tablas.jpg'
+import ImagenConstructiva from '../../../assets/images/Dolckertline/tablas.jpg'
 import caracter2 from '../../../assets/icons/caracteristicas/caracteristicas_02.svg'
 import caracter3 from '../../../assets/icons/caracteristicas/caracteristicas_03.svg'
 import Text from '../../../components/Text'
@@ -60,7 +62,7 @@ const CaracteristicasTline = ({ id }) => {
             <StyledCaracteristicas id={id[1]} backgroundColor={COLORS.gray02}>
                 <Titulo>Datos técnicos</Titulo>
                 <ImageWithCaption
-                    src={caracter1}
+                    src={ImagenJorge}
                     alt='Imágenes técnicas (Jorge)'
                     caption='Imágenes técnicas (Jorge)'
                     columnSpan='6'
@@ -69,7 +71,7 @@ const CaracteristicasTline = ({ id }) => {
                     <strong>Textos (Jorge)</strong>
                 </Text>
                 <ImageWithCaption
-                    src={caracter1}
+                    src={ImagenJorge}
                     alt='Imágenes técnicas (Jorge)'
                     caption='Imágenes técnicas (Jorge)'
                     columnSpan='6'

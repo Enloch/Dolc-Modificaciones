@@ -14,7 +14,7 @@ import configSPACE from '../../../../configs/Series/configSpace'
 import configSTONE from '../../../../configs/Series/configStone'
 import configTERRAZO from '../../../../configs/Series/configTerrazo'
 import configTZMENT from '../../../../configs/Series/configTzment'
-import configVOLUMEN from '../../../../configs/Series/configVolumen'
+import configVOLUMEN from '../../../../configs/SeriesTline/configVolumen'
 import configWOOD from '../../../../configs/Series/configWood'
 import { COLORS } from '../../../../global/GlobalStyles'
 import Serie from './Serie'
@@ -23,7 +23,8 @@ import fondo from '../../../../assets/images/VolumenVariacion/fondo.jpg'
 import indicadoresFormato from '../../../../configs/configVolumenVariacion'
 import { useListaCambios } from '../../../../contexts/MultipleOptionsContext'
 import Anotaciones from '../../../../components/Anotacion/Anotaciones'
-
+import ImageWithCaption from '../../../../components/ImageWithCaption'
+import configfachadaimg from '../../../../assets/images/DolckerTline/configcenefas.jpg'
 import { useRef } from 'react'
 import createPDF from '../../../../utils/createPDF'
 
@@ -157,21 +158,27 @@ const Series = ({ ids }) => {
                 setFullScreenSrc={setFullScreenSrc}
                 setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
-            />
+            />*/}
             <Serie
                 id={ids[13]}
-                config={configVOLUMEN}
+                config={configBASALT}
                 setFullScreenSrc={setFullScreenSrc}
                 setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             >
+                {/* <VisualizadorVariaciones {...propsFormato.visualizador} /> */}
+                <ImageWithCaption
+                    src={configfachadaimg}
+                    alt='Imagen de Diseños 1'
+                    caption='intercambiador de fachada'
+                    columnSpan='6'
+                />
                 <Anotaciones className='anotacion-variaciones'>
                     <Anotacion {...propsFormato.anotacion2} />
                     <Anotacion {...propsFormato.anotacion} />
                     <Anotacion {...propsFormato.anotacionPDF} />
                 </Anotaciones>
-                <VisualizadorVariaciones {...propsFormato.visualizador} />
-            </Serie> */}
+            </Serie>
         </>
     )
 }

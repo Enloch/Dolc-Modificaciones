@@ -3,8 +3,8 @@ import { Titulo } from '../../../components/Titulos'
 import StyledDolcker from './styles'
 import { COLORS } from '../../../global/GlobalStyles'
 
-import img2 from '../../../assets/images/DolckerStep/catalogo3-1-5.webp'
-import img3 from '../../../assets/images/DolckerStep/catalogo3-1-7.webp'
+import img2 from '../../../assets/images/DolckerTline/jorgeobra.jpg'
+import img3 from '../../../assets/images/DolckerTline/arquitecto.webp'
 import VisualizadorNota from '../../../components/VisualizadorNota'
 import Text from '../../../components/Text'
 
@@ -48,15 +48,16 @@ const DolckerTline = ({ id }) => {
             <Text>
                 <strong>Imagen Exterior T-LINE(Arquitecto )</strong>
                 <br />
-                -Esquina
+                -Esquina {'( dibujo técnico/croquis por parte del arquitecto)'}
                 <br />
-                -Recerco
+                -Recerco {'( dibujo técnico/croquis por parte del arquitecto)'}
                 <br />
-                -Coronación
+                -Coronación{' '}
+                {'( dibujo técnico/croquis por parte del arquitecto)'}
                 <br />
-                -Arranque
+                -Arranque {'( dibujo técnico/croquis por parte del arquitecto)'}
                 <br />
-                -Fachada
+                -Fachada {'( dibujo técnico/croquis por parte del arquitecto)'}
             </Text>
         </StyledDolcker>
     )

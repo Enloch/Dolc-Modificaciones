@@ -9,10 +9,10 @@ const muestrasImports = import.meta.globEager(
 )
 
 const ambientes = getDataFromModules(ambientesImports)
-const muestras = getDataFromModules(muestrasImports)
+// const muestras = getDataFromModules(muestrasImports)
 
 const configVOLUMEN = {
-    titulo: 'DO&VOLUMEN',
+    titulo: 'Serie 2',
     descripcion: '',
     imgSeleccionar: '',
     indicadores: [
@@ -23,44 +23,44 @@ const configVOLUMEN = {
             },
         },
     ],
-    muestras: [
-        {
-            imagen: muestras[0],
-            titulo: 'Pieza 1',
-        },
-        {
-            imagen: muestras[1],
-            titulo: 'Pieza 2',
-        },
-        {
-            imagen: muestras[2],
-            titulo: 'Pieza 3',
-        },
-        {
-            imagen: muestras[3],
-            titulo: 'Pieza 4',
-        },
-        {
-            imagen: muestras[4],
-            titulo: 'Pieza 5',
-        },
-        {
-            imagen: muestras[5],
-            titulo: 'Pieza 6',
-        },
-        {
-            imagen: muestras[6],
-            titulo: 'Pieza 7',
-        },
-        {
-            imagen: muestras[7],
-            titulo: 'Pieza 8',
-        },
-        {
-            imagen: muestras[8],
-            titulo: 'Pieza 9',
-        },
-    ],
+    // muestras: [
+    //     {
+    //         imagen: muestras[0],
+    //         titulo: 'Pieza 1',
+    //     },
+    //     {
+    //         imagen: muestras[1],
+    //         titulo: 'Pieza 2',
+    //     },
+    //     {
+    //         imagen: muestras[2],
+    //         titulo: 'Pieza 3',
+    //     },
+    //     {
+    //         imagen: muestras[3],
+    //         titulo: 'Pieza 4',
+    //     },
+    //     {
+    //         imagen: muestras[4],
+    //         titulo: 'Pieza 5',
+    //     },
+    //     {
+    //         imagen: muestras[5],
+    //         titulo: 'Pieza 6',
+    //     },
+    //     {
+    //         imagen: muestras[6],
+    //         titulo: 'Pieza 7',
+    //     },
+    //     {
+    //         imagen: muestras[7],
+    //         titulo: 'Pieza 8',
+    //     },
+    //     {
+    //         imagen: muestras[8],
+    //         titulo: 'Pieza 9',
+    //     },
+    // ],
 }
 
 export default configVOLUMEN

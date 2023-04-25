@@ -1,6 +1,6 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 import imgSeleccionar from '../../assets/images/Series/BASALT/Dolcker-BASALT_seleccionar.webp'
-import InteractivoImg from '../../assets/images/DolckerTline/Interactivo.webp'
+import InteractivoImg from '../../assets/images/DolckerTline/Interactivofachada.jpg'
 import MuestraImg from '../../assets/images/DolckerTline/ranurado11mm.webp'
 const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/BASALT/AMBIENTES/**'

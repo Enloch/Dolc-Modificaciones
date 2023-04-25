@@ -2,19 +2,18 @@ import Text from '../../../components/Text'
 import { Titulo, Titulo2 } from '../../../components/Titulos'
 import StyledSistemas, { Enlaces } from './styles'
 import { COLORS } from '../../../global/GlobalStyles'
-import sistemas from '../../../assets/images/DolckerStep/catalogo3-1-5.webp'
+import sistemas from '../../../assets/images/Dolckertline/7475.webp'
+import dolckerClip1 from '../../../assets/images/Dolckertline/detalles.jpg'
+import dolckerClip2 from '../../../assets/images/Dolckertline/detalles.jpg'
 
-import dolckerClip1 from '../../../assets/images/DolckerStep/catalogo3-1-5.webp'
-import dolckerClip2 from '../../../assets/images/DolckerStep/catalogo3-1-5.webp'
+import tc111 from '../../../assets/images/Dolckertline/detalles.jpg'
+import tc112 from '../../../assets/images/Dolckertline/detalles.jpg'
 
-import tc111 from '../../../assets/images/DolckerStep/catalogo3-1-5.webp'
-import tc112 from '../../../assets/images/DolckerStep/catalogo3-1-5.webp'
+import tc141 from '../../../assets/images/Dolckertline/detalles.jpg'
+import tc142 from '../../../assets/images/Dolckertline/detalles.jpg'
 
-import tc141 from '../../../assets/images/DolckerStep/catalogo3-1-5.webp'
-import tc142 from '../../../assets/images/DolckerStep/catalogo3-1-5.webp'
-
-import hc201 from '../../../assets/images/DolckerStep/catalogo3-1-5.webp'
-import hc202 from '../../../assets/images/DolckerStep/catalogo3-1-5.webp'
+import hc201 from '../../../assets/images/Dolckertline/detalles.jpg'
+import hc202 from '../../../assets/images/Dolckertline/detalles.jpg'
 import ImageWithCaption from '../../../components/ImageWithCaption'
 
 const SistemasTline = ({ id }) => {
