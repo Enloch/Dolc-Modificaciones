@@ -12,10 +12,11 @@
         "deploy": "gh-pages -d build"
     },
     "dependencies": {
+        "framer-motion": "^10.12.4",
         "gh-pages": "^4.0.0",
         "jspdf": "2.5.1",
         "react": "^18.2.0",
-        "react-dom": "^17.0.2",
+        "react-dom": "^18.2.0",
         "react-icons": "^4.8.0",
         "react-router-dom": "6.3.0",
         "react-scroll": "1.8.7",

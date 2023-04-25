@@ -59,7 +59,7 @@ const ButtonsContainer = styled.div`
     width: 100%;
     top: 0;
     left: 0;
-    padding-top: 5px;
+    padding-top: 8px;
     justify-content: center;
     z-index: 999;
 `
@@ -92,15 +92,15 @@ const Navbar = () => {
     const additionalButtons = [
         {
             href: '/fachadas-ventiladas/dolcker-system',
-            label: '·  Dolcker System',
+            label: '  Dolcker System',
         },
         {
             // href: '/fachadas-ventiladas/dolcker-t-line',
-            label: '·  Dolcker T-LINE',
+            label: '  Dolcker T-LINE',
         },
         {
             // href: '/fachadas-ventiladas/dolcker-g10',
-            label: '·  Dolcker G10',
+            label: '  Dolcker G10',
         },
         // Agrega más botones aquí
     ]
@@ -123,7 +123,7 @@ const Navbar = () => {
                                 initial={{ opacity: 0, y: -50 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -50 }}
-                                transition={{ duration: 0.4 }}
+                                transition={{ duration: 0.5 }}
                             >
                                 <AdditionalButtonsContainer>
                                     {additionalButtons.map(
