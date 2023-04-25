@@ -13,13 +13,14 @@ const Listado = styled.ul`
         //justify-content: space-between;
 
         border-top: 1px solid black;
-        padding: ${DISTANCES.small} 5rem ${DISTANCES.small} 0;
+        padding: 10px 5rem 10px 0;
 
         ::after {
             content: url(${check});
             position: absolute;
             right: 0;
-            top: ${DISTANCES.small};
+            /* top: ${DISTANCES.small}; */
+            top: 10px;
         }
 
         ${mediaQueryTablet(css`

@@ -74,7 +74,7 @@ const Aplicaciones = ({ id }) => {
                 backgroundColor={COLORS.gray01}
                 rowGap={DISTANCES.medium}
             >
-                <Titulo3 color={COLORS.gray08}>Fachadas</Titulo3>
+                <Titulo3 color={COLORS.gray08}>- Fachadas</Titulo3>
                 <ImageWithCaption
                     src={img4}
                     alt='Imagen de Aplicaciones 4'
@@ -88,7 +88,7 @@ const Aplicaciones = ({ id }) => {
                 rowGap={DISTANCES.medium}
             >
                 <Titulo3 color={COLORS.gray08}>
-                    Terrazas, suelos elevados, techos y soluciones
+                   - Terrazas, suelos elevados, techos y soluciones
                 </Titulo3>
                 <ImageWithCaption
                     src={img5}

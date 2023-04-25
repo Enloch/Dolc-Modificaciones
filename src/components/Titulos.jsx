@@ -25,7 +25,7 @@ const Titulo2 = styled.h3`
 const Titulo3 = styled.h4`
     ${TextLarge}
     font-weight: normal;
-    font-style: italic;
+    /* font-style: italic; */
 
     a {
         text-decoration: none;

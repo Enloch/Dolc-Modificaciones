@@ -38,11 +38,13 @@ const StyledDisenos = styled(Seccion)`
 
             strong {
                 padding: ${DISTANCES.small} 0;
+
             }
 
             li {
                 border-top: 1px solid ${COLORS.gray05};
-                padding: ${DISTANCES.small} 0;
+                /* padding: ${DISTANCES.small} 0; */
+                padding: 5px 0;
                 word-break: break-word;
             }
         }

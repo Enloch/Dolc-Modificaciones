@@ -46,7 +46,7 @@ const SECCION_GRID = {
     columnGap: DISTANCES.small,
     rowGap: DISTANCES.medium,
     horizontalSpace: `clamp(${DISTANCES.small}, 2.604vw, ${DISTANCES.medium})`,
-    verticalSpace: DISTANCES.long,
+    verticalSpace: DISTANCES.medium,
 }
 
 export const seccionLayout = gridLayoutTemplate(

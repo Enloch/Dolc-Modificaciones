@@ -84,8 +84,10 @@ const TextSmall = css`
 
 const TextMedium = css`
     ${Text}
-    font-size: clamp(16px,0.99vw,1.188rem);
+    /* font-size: clamp(16px,0.99vw,1.188rem); */
+    font-size: 16px;
     line-height: clamp(25px, 1.51vw, 29px);
+    line-height: 19px;
 `
 
 const TextLarge = css`

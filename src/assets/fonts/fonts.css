@@ -29,28 +29,28 @@ body {
     font-family: 'WorkSans';
     src: local('WorkSans'), url('./WorkSans-Regular.ttf');
     font-weight: normal;
-    font-style: normal; 
+    font-style: normal;
 }
 
 body {
     font-family: 'WorkSans' !important;
 } */
 @font-face {
-    font-family: 'Roboto';
-    src: local('Roboto'), url('./Roboto-Bold.ttf');
+    font-family: 'Poppins';
+    src: local('Poppins'), url('./Poppins-Bold.ttf');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: local('Roboto'), url('./Roboto-Regular.ttf');
+    font-family: 'Poppins';
+    src: local('Poppins'), url('./Poppins-Regular.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    font-family: 'Roboto' !important;
+    font-family: 'Poppins' !important;
 }
 /* @font-face {
     font-family: 'Lato';

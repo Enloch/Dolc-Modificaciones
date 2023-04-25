@@ -3,10 +3,27 @@ import { Titulo } from '../../components/Titulos'
 import { COLORS } from '../../global/GlobalStyles'
 import { StyledIndice } from './styles'
 import flecha from '../../assets/icons/flechita.svg'
+import { BsMouse } from 'react-icons/bs'
 import scrollTo from '../../helpers/scrollTo'
 import useMenuDesplegable from '../../hooks/useMenuDesplegable'
 import { Link } from 'react-router-dom'
-
+import styled, { keyframes } from 'styled-components'
+// Define la animación para la flecha
+const pulse = keyframes`
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+`
+// Define los estilos para la flecha animada
+const AnimatedArrow = styled(BsMouse)`
+    animation: ${pulse} 2s ease-in-out infinite;
+`
 const Indice = ({ indiceRef }) => {
     const { menuDesplegable, btnIndice } = useMenuDesplegable(
         ListaContenidos,
@@ -27,10 +44,11 @@ const Indice = ({ indiceRef }) => {
                 ref={indiceRef}
                 id='indice'
             >
-                <Titulo color={COLORS.gray01}>Índice</Titulo>
+                <Titulo color={COLORS.gray01}>Dolcker System</Titulo>
                 <ListaContenidos />
-                <img
-                    src={flecha}
+                <AnimatedArrow
+                    size={32}
+                    color='white'
                     alt=''
                     className='flecha-indice'
                     onClick={handleClickFlecha}

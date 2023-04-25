@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { BsMouse } from 'react-icons/bs'
 import Fondo from '../assets/images/Inicio/inicio.jpg'
@@ -7,17 +7,6 @@ import Logo from '../assets/images/Inicio/logo.png'
 const Loading = ({ onButtonClick }) => {
     return (
         <LoadingPage>
-            <ButtonsContainer>
-                {/* Añade enlaces a los botones */}
-                <Button href='/contacto'>Contacto</Button>
-                <Button href='/quienes-somos'>Quiénes Somos</Button>
-                <Button href='/'>
-                    <strong>ES</strong>
-                </Button>
-                <Button href='/en'>
-                    <strong>EN</strong>
-                </Button>
-            </ButtonsContainer>
             <LoadingContainer>
                 <LoadingTitle src={Logo} />
                 <LoadingSubtitle>
@@ -43,20 +32,56 @@ const Button = styled.a`
     color: white;
     border: none;
     font-size: 1rem;
-    margin: 0 20px;
+    margin: 5px 20px;
     text-decoration: none;
     cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+        transition: all 1s cubic-bezier(0, 0.94, 0.13, 1.01);
+    }
+    &.active {
+        color: #696969;
+        text-decoration: underline;
+    }
+    @media screen and (max-width: 786px) {
+        margin: 5px 10px;
+    }
 `
 
 // Define los estilos para el contenedor de los botones
 const ButtonsContainer = styled.div`
+    background-color: rgba(0, 0, 0, 0.3);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     position: absolute;
-    top: 20px;
-    left: 10px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 5px;
+    @media screen and (max-width: 786px) {
+        justify-content: center;
+    }
+`
+
+const ButtonColumn = styled.div`
+    position: absolute;
+    left: 14%;
+    top: 30px;
     /* transform: translateX(-50%); */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    @media screen and (max-width: 786px) {
+        left: 58%;
+        top: 30px;
+    }
+`
+
+const AdditionalButtonsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: left;
 `
 
 // Define los estilos para la página de carga

@@ -8,12 +8,14 @@ export const text = ({ fontSize = 'medium', lineHeight = 'normal' }) => css`
 `
 
 const TEXT_SMALL = {
-    fontSize: 'clamp(14px, 0.833vw, 1rem)',
+    // fontSize: 'clamp(14px, 0.833vw, 1rem)',
+    fontSize: '16px',
     lineHeight: 'clamp(21px, 1.302vw, 25px)',
 }
 
 const TEXT_MEDIUM = {
-    fontSize: 'clamp(16px,0.99vw,1.188rem)',
+    // fontSize: 'clamp(16px,0.99vw,1.188rem)',
+    fontSize: '16px',
     lineHeight: 'clamp(25px, 1.51vw, 29px)',
 }
 
