@@ -96,12 +96,12 @@ const Navbar = () => {
         },
         {
             // href: '/fachadas-ventiladas/dolcker-t-line',
-            label: '  Dolcker T-LINE',
+            // label: '  Dolcker T-LINE',
         },
-        {
-            // href: '/fachadas-ventiladas/dolcker-g10',
-            label: '  Dolcker G10',
-        },
+        // {
+        //     href: '/fachadas-ventiladas/dolcker-g10',
+        //     label: '  Dolcker G10',
+        // },
         // Agrega más botones aquí
     ]
     const buttonHeight = showFachadasVentiladasButtons

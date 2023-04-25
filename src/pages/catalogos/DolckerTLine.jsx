@@ -2,16 +2,15 @@ import React, { useRef, useState, useEffect } from 'react'
 import MultipleOptionsProvider from '../../contexts/MultipleOptionsContext'
 import styled from 'styled-components'
 import {
-    Aplicaciones,
-    Caracteristicas,
-    Descargas,
-    Disenos,
-    Dolcker,
+    AplicacionesTline as Aplicaciones,
+    CaracteristicasTline as Caracteristicas,
+    DescargasTline as Descargas,
+    DisenosTline as Disenos,
+    DolckerTline as Dolcker,
     Final,
-    Indice,
-    Introduccion,
-    Sistemas,
-    Ventajas,
+    IndiceTline as Indice,
+    SistemasTline as Sistemas,
+    VentajasTline as Ventajas,
 } from '../../modules'
 
 const DolckerTLine = () => {
@@ -37,7 +36,6 @@ const DolckerTLine = () => {
 
     return (
         <MultipleOptionsProvider>
-            {/* <Introduccion indiceRef={indiceRef} /> */}
             <Indice id='indice' indiceRef={indiceRef} />
             <Dolcker id='dolcker' />
             <Ventajas id='ventajas' />

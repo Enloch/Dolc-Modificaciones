@@ -3,9 +3,10 @@ import MenuLanzadera from '../components/ListaContenidos/MenuLanzaderaLanding'
 import useMenuDesplegable from '../hooks/useMenuDesplegable'
 import Loading from '../components/Loading'
 import Footer from '../components/Footer'
-import DolkSystem from './DolkSystem'
+import DolkSystem from './landing/DolkSystem'
 import Navbar from '../components/NavBar'
 import Logo from '../assets/images/Inicio/logo.png'
+import DolckerTline from './landing/TLine'
 
 const Main = () => {
     const dolckerSystemRef = useRef(null)
@@ -27,6 +28,7 @@ const Main = () => {
             <div ref={dolckerSystemRef}>
                 <DolkSystem id='dolcker-system' />
             </div>
+            {/* <DolckerTline /> */}
             <Footer />
         </>
     )

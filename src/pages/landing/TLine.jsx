@@ -1,35 +1,35 @@
 import styled from 'styled-components'
-import fondo from '../assets/images/Inicio/landing2.jpg'
+import fondo from '../../assets/images/Inicio/landing2.jpg'
 
-const DolkSystem = () => {
+const DolckerTline = () => {
     return (
         <Container>
-            <MainTitle>Fachadas ventiladas</MainTitle>
             <Wrapper>
-                <ImageContainer>
-                    <Image src={fondo} />
-                </ImageContainer>
                 <Content>
-                    <Title>Dolcker System</Title>
+                    <Title>Dolcker TLine</Title>
                     <Text>
-                        El sistema DOLCKER permite diseñar fachadas, con
+                        El sistema DOLCKER TLINE permite diseñar fachadas, con
                         soluciones técnicas para el desarrollo de suelos
                         elevados, techos, así como recercados de ventanas, tapas
                         de coronación, siempre utilizando el mismo material.
                     </Text>
-                    <Button href={'/fachadas-ventiladas/dolcker-system'}>
+                    <Button href={'/fachadas-ventiladas/dolcker-tline'}>
                         Saber Más
                     </Button>
                 </Content>
+                <ImageContainer>
+                    <Image src={fondo} />
+                </ImageContainer>
             </Wrapper>
         </Container>
     )
 }
 
-export default DolkSystem
+export default DolckerTline
 
 const Container = styled.div`
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    padding: 2rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;

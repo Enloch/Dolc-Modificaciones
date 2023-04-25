@@ -1,29 +1,29 @@
 import ImageWithCaption from '../../../components/ImageWithCaption'
 import { Titulo } from '../../../components/Titulos'
 import StyledVentajas from './styles'
-import img1 from '../../../assets/images/VentajasStep/catalogo3-1-8.webp'
+import img1 from '../../../assets/images/DolckerStep/catalogo3-1-5.webp'
 import Text from '../../../components/Text'
 import { COLORS } from '../../../global/GlobalStyles'
 import Listado from '../../../components/Listado'
 
-const VentajasStep = ({ id }) => {
+const VentajasTline = ({ id }) => {
     return (
         <StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-            <Titulo>Ventajas del sistema Dolcker Step</Titulo>
+            <Titulo>Ventajas del sistema Dolcker T-LINE</Titulo>
             <ImageWithCaption
                 src={img1}
                 alt='Imagen de Ventajas 1'
-                caption='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+                caption='A consultar Jorge( Arquitecto dará referencia para que 7475 cree la imagen)'
                 columnSpan='6'
             />
             <Text>
-                Lorem ipsum dolor sit amet,{' '}
-                <strong>consectetur adipiscing elit.</strong>Morbi eleifend odio
-                in lectus lacinia consectetur.
+                Dispone de un desarrollo técnico de fijación para fachadas
+                mejorado,para adaptarse tanto a las necesidades estéticas como
+                funcionales del proyecto.
             </Text>
             <Listado>
                 <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <strong>Texto de la lista (Jorge).</strong>
                 </li>
                 <li>Lorem ipsum dolor sit amet.</li>
                 <li>Morbi eleifend odio in lectus lacinia consectetur.</li>
@@ -54,4 +54,4 @@ const VentajasStep = ({ id }) => {
     )
 }
 
-export default VentajasStep
+export default VentajasTline

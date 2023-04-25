@@ -10,9 +10,9 @@ import Text from '../../../components/Text'
 
 import config from '../../../configs/configDolcker'
 
-const Dolcker_Step = ({ id }) => {
+const DolckerTline = ({ id }) => {
     const propsVisualizador = {
-        //text: 'Pasa el ratón por los puntos para ver la información',
+        text: 'Pasa el ratón por los puntos para ver la información',
         type: 'normal',
         //indicadores: config,
         imgBackground: img3,
@@ -21,15 +21,16 @@ const Dolcker_Step = ({ id }) => {
 
     return (
         <StyledDolcker id={id} backgroundColor={COLORS.gray03}>
-            <Titulo>Dolcker Step</Titulo>
+            <Titulo>Dolcker T-LINE soluciona</Titulo>
             <div className='dolcker-info'>
                 <ImageWithCaption
                     src={img2}
                     alt='Imagen Dolcker 2'
-                    caption='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend odio in lectus lacinia consectetur. Quisque ut nulla libero.'
+                    caption='Imagen Obra T-LINE (Jorge)'
                 />
                 <Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,{' '}
+                    <strong>Texto(Jorge)</strong>Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit,{' '}
                     <strong>consectetur adipiscing elit.</strong> Lorem ipsum
                     dolor sit amet, consectetur adipiscing elit. Morbi eleifend
                     odio in lectus lacinia consectetur. Quisque ut nulla libero.
@@ -44,8 +45,21 @@ const Dolcker_Step = ({ id }) => {
                 </Text>
             </div>
             <VisualizadorNota {...propsVisualizador} />
+            <Text>
+                <strong>Imagen Exterior T-LINE(Arquitecto )</strong>
+                <br />
+                -Esquina
+                <br />
+                -Recerco
+                <br />
+                -Coronación
+                <br />
+                -Arranque
+                <br />
+                -Fachada
+            </Text>
         </StyledDolcker>
     )
 }
 
-export default Dolcker_Step
+export default DolckerTline

@@ -22,3 +22,13 @@ export { default as DisenoEscamas } from './Escamas/Escamas05_Diseno'
 export { default as CaracteristicasEsc } from './Escamas/Escamas06_Caracteristicas'
 export { default as SistemasEsc } from './Escamas/Escamas07_Sistemas'
 export { default as DescargasEsc } from './Escamas/Escamas08_Descargas'
+// Tline
+export { default as IndiceTline } from './Tline/01_Inicio'
+export { default as DolckerTline } from './Tline/02_Dolcker'
+export { default as VentajasTline } from './Tline/03_Ventajas'
+export { default as AplicacionesTline } from './Tline/04_Aplicaciones'
+export { default as DisenosTline } from './Tline/05_Diseno'
+export { default as CaracteristicasTline } from './Tline/06_Caracteristicas'
+export { default as SistemasTline } from './Tline/07_Sistemas'
+export { default as DescargasTline } from './Tline/08_Descargas'
+//G10

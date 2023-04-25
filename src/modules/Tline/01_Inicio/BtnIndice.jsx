@@ -1,13 +1,13 @@
 import styled, { css } from 'styled-components'
-import { DISTANCES, GRID } from '../../global/GlobalStyles'
-import { mediaQueryTablet } from '../../styles/sizes'
+import { DISTANCES, GRID } from '../../../global/GlobalStyles'
+import { mediaQueryTablet } from '../../../styles/sizes'
 
 const BtnIndice = styled.img`
     position: fixed;
     top: ${GRID.verticalSpace};
     right: ${GRID.horizontalSpace};
     z-index: 4;
-    width: 3rem;
+    width: 2rem;
     cursor: pointer;
     visibility: hidden;
 
@@ -17,7 +17,9 @@ const BtnIndice = styled.img`
     mix-blend-mode: difference;
 
     ${mediaQueryTablet(css`
-        top: ${DISTANCES.small};
+        top: 3rem;
+        right: 2.5rem;
+        width: 1.5rem;
     `)}
 `
 
