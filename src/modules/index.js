@@ -32,3 +32,6 @@ export { default as CaracteristicasTline } from './Tline/06_Caracteristicas'
 export { default as SistemasTline } from './Tline/07_Sistemas'
 export { default as DescargasTline } from './Tline/08_Descargas'
 //G10
+export { default as IndiceG10 } from './G10/01_Inicio'
+export { default as DolckerG10 } from './G10/02_Dolcker'
+export { default as VentajasG10 } from './G10/03_Ventajas'
