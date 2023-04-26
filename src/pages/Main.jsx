@@ -7,6 +7,7 @@ import DolkSystem from './landing/DolkSystem'
 import Navbar from '../components/NavBar'
 import Logo from '../assets/images/Inicio/logo.png'
 import DolckerTline from './landing/TLine'
+import G10 from './landing/G10'
 
 const Main = () => {
     const dolckerSystemRef = useRef(null)

@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import FachadaVentilada from './pages/catalogos/FachadaVentilada'
 import DolckerTLine from './pages/catalogos/DolckerTLine'
+import DolckerG10 from './pages/catalogos/DolckerG10'
 import Escamas from './pages/catalogos/Escamas'
 // import FontStyles from './global/FontStyles'
 import './assets/fonts/fonts.css'
@@ -33,6 +34,11 @@ ReactDOM.render(
                     path='/fachadas-ventiladas/dolcker-tline'
                     element={<DolckerTLine />}
                 />
+                <Route
+                    path='/fachadas-ventiladas/dolcker-G10'
+                    element={<DolckerG10 />}
+                />
+
                 <Route
                     path='/fachadas-ventiladas/dolcker-escamas'
                     element={<Escamas />}

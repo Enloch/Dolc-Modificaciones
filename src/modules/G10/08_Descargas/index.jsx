@@ -1,10 +1,10 @@
 import { Titulo } from '../../../components/Titulos'
-import configDescargas from '../../../configs/configDescargasTline'
+import configDescargas from '../../../configs/configDescargasG10'
 import { COLORS } from '../../../global/GlobalStyles'
 import useDescargas from '../../../hooks/useDescargas'
 import StyledDescargas from './styles'
 
-const DescargasTline = ({ id }) => {
+const Descargas = ({ id }) => {
     const descargas = useDescargas(configDescargas)
 
     return (
@@ -16,4 +16,4 @@ const DescargasTline = ({ id }) => {
     )
 }
 
-export default DescargasTline
+export default Descargas

@@ -16,7 +16,7 @@ import hc201 from '../../../assets/images/Dolckertline/detalles.jpg'
 import hc202 from '../../../assets/images/Dolckertline/detalles.jpg'
 import ImageWithCaption from '../../../components/ImageWithCaption'
 
-const SistemasTline = ({ id }) => {
+const Sistemas = ({ id }) => {
     return (
         <>
             <StyledSistemas id={id[0]} backgroundColor={COLORS.gray02}>
@@ -212,4 +212,4 @@ const SistemasTline = ({ id }) => {
     )
 }
 
-export default SistemasTline
+export default Sistemas

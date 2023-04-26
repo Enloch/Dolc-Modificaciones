@@ -2,18 +2,18 @@ import React, { useRef, useState, useEffect } from 'react'
 import MultipleOptionsProvider from '../../contexts/MultipleOptionsContext'
 import styled from 'styled-components'
 import {
-    AplicacionesTline as Aplicaciones,
-    CaracteristicasTline as Caracteristicas,
-    DescargasTline as Descargas,
-    DisenosTline as Disenos,
-    DolckerTline as Dolcker,
+    AplicacionesG10 as Aplicaciones,
+    CaracteristicasG10 as Caracteristicas,
+    DescargasG10 as Descargas,
+    DisenosG10 as Disenos,
+    DolckerG10 as Dolcker,
     Final,
-    IndiceTline as Indice,
-    SistemasTline as Sistemas,
-    VentajasTline as Ventajas,
+    IndiceG10 as Indice,
+    SistemasG10 as Sistemas,
+    VentajasG10 as Ventajas,
 } from '../../modules'
 
-const DolckerTLine = () => {
+const DolckerG10 = () => {
     const indiceRef = useRef()
     const [showButton, setShowButton] = useState(false)
 
@@ -80,7 +80,7 @@ const DolckerTLine = () => {
     )
 }
 
-export default DolckerTLine
+export default DolckerG10
 
 const StyledButton = styled.button`
     position: fixed;

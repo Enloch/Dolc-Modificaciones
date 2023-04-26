@@ -26,7 +26,7 @@ import ConfiguradorImg from '../../../assets/images/DolckerTline/formatoscolor.w
 import interactivoImg from '../../../assets/images/DolckerTline/interactivo.webp'
 import rotadorImg from '../../../assets/images/DolckerTline/config.jpg'
 
-const DisenosTline = ({ id }) => {
+const Disenos = ({ id }) => {
     const propsFormato = {
         anotacion: {
             text: 'Pulsa en el punto para ver las posibilidades de formato',
@@ -85,26 +85,6 @@ const DisenosTline = ({ id }) => {
                     caption='Visualizador acabados'
                     columnSpan='6'
                 /> */}
-            </StyledDisenos>
-            <StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
-                <Titulo2>Acabados y Perfiles de Cenefas</Titulo2>
-                <Anotaciones>
-                    <Anotacion
-                        type='normal'
-                        text='Pulsa en el punto para ver todas las posibilidades de piezas especiales'
-                    />
-                    <Anotacion
-                        type='swipe'
-                        text='Desliza con el ratón o el dedo para apreciar la textura'
-                    />
-                </Anotaciones>
-                {/* <VisualizadorDesplazador config={configAcabados} /> */}
-                <ImageWithCaption
-                    src={Intercambiador}
-                    alt='Imagen de Diseños 1'
-                    caption='Configurador interactivo'
-                    columnSpan='6'
-                />
             </StyledDisenos>
             <StyledDisenos
                 id={id[4]}
@@ -200,4 +180,4 @@ const DisenosTline = ({ id }) => {
     )
 }
 
-export default DisenosTline
+export default Disenos

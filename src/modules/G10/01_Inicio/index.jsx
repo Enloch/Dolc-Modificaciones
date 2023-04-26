@@ -1,4 +1,4 @@
-import ListaContenidos from '../../../components/ListaContenidosTline'
+import ListaContenidos from '../../../components/ListaContenidosG10'
 import { Titulo } from '../../../components/Titulos'
 import { COLORS } from '../../../global/GlobalStyles'
 import { StyledIndice } from './styles'
@@ -44,7 +44,7 @@ const Indice = ({ indiceRef }) => {
                 ref={indiceRef}
                 id='indice'
             >
-                <Titulo color={COLORS.gray01}>Dolcker T-LINE</Titulo>
+                <Titulo color={COLORS.gray01}>Dolcker G10</Titulo>
                 <ListaContenidos />
                 <AnimatedArrow
                     size={32}

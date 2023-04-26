@@ -10,7 +10,7 @@ import caracter3 from '../../../assets/icons/caracteristicas/caracteristicas_03.
 import Text from '../../../components/Text'
 import Listado from '../../../components/Listado'
 
-const CaracteristicasTline = ({ id }) => {
+const Caracteristicas = ({ id }) => {
     return (
         <>
             <StyledCaracteristicas id={id[0]} backgroundColor={COLORS.gray02}>
@@ -81,4 +81,4 @@ const CaracteristicasTline = ({ id }) => {
     )
 }
 
-export default CaracteristicasTline
+export default Caracteristicas

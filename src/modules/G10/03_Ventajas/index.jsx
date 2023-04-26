@@ -6,10 +6,10 @@ import Text from '../../../components/Text'
 import { COLORS } from '../../../global/GlobalStyles'
 import Listado from '../../../components/Listado'
 
-const VentajasTline = ({ id }) => {
+const Ventajas = ({ id }) => {
     return (
         <StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-            <Titulo>Ventajas del sistema Dolcker T-LINE</Titulo>
+            <Titulo>Ventajas del sistema Dolcker G10</Titulo>
             <ImageWithCaption
                 src={img1}
                 alt='Imagen de Ventajas 1'
@@ -54,4 +54,4 @@ const VentajasTline = ({ id }) => {
     )
 }
 
-export default VentajasTline
+export default Ventajas

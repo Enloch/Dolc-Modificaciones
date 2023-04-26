@@ -9,7 +9,7 @@ import img4 from '../../../assets/images/DolckerTline/arquitecto.webp'
 import img5 from '../../../assets/images/DolckerTline/arquitecto.webp'
 import Cita from '../../../components/Cita'
 
-const AplicacionesTline = ({ id }) => {
+const Aplicaciones = ({ id }) => {
     return (
         <>
             <StyledAplicaciones
@@ -99,4 +99,4 @@ const AplicacionesTline = ({ id }) => {
     )
 }
 
-export default AplicacionesTline
+export default Aplicaciones

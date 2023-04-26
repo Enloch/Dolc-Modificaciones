@@ -21,12 +21,12 @@ const Dolcker = ({ id }) => {
 
     return (
         <StyledDolcker id={id} backgroundColor={COLORS.gray03}>
-            <Titulo>Dolcker T-LINE soluciona</Titulo>
+            <Titulo>Dolcker G10 soluciona</Titulo>
             <div className='dolcker-info'>
                 <ImageWithCaption
                     src={img2}
                     alt='Imagen Dolcker 2'
-                    caption='Imagen Obra T-LINE (Jorge)'
+                    caption='Imagen Obra G10 (Jorge)'
                 />
                 <Text>
                     <strong>Texto(Jorge)</strong>Lorem ipsum dolor sit amet,
@@ -46,7 +46,7 @@ const Dolcker = ({ id }) => {
             </div>
             <VisualizadorNota {...propsVisualizador} />
             <Text>
-                <strong>Imagen Exterior T-LINE(Arquitecto )</strong>
+                <strong>Imagen Exterior G10(Arquitecto )</strong>
                 <br />
                 -Esquina {'( dibujo técnico/croquis por parte del arquitecto)'}
                 <br />
