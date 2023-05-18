@@ -3,7 +3,7 @@ import { Titulo } from '../../../components/Titulos'
 import StyledDolcker from './styles'
 import { COLORS } from '../../../global/GlobalStyles'
 
-import img2 from '../../../assets/images/DolckerTline/jorgeobra.jpg'
+import img2 from '../../../assets/images/DolckerTline/Dolcker_T-Line_Soluciona.jpg'
 import img3 from '../../../assets/images/DolckerTline/arquitecto.webp'
 import VisualizadorNota from '../../../components/VisualizadorNota'
 import Text from '../../../components/Text'
@@ -26,22 +26,20 @@ const DolckerTline = ({ id }) => {
                 <ImageWithCaption
                     src={img2}
                     alt='Imagen Dolcker 2'
-                    caption='Imagen Obra T-LINE (Jorge)'
+                    caption='Imagen sistema T-LINE'
                 />
                 <Text>
-                    <strong>Texto(Jorge)</strong>Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit,{' '}
-                    <strong>consectetur adipiscing elit.</strong> Lorem ipsum
-                    dolor sit amet, consectetur adipiscing elit. Morbi eleifend
-                    odio in lectus lacinia consectetur. Quisque ut nulla libero.
-                    Maecenas non hendrerit nisl.
+                    El primer sistema de cenefa continua , con infinitas
+                    posibilidades de modulaciones. El sistema DOLCKER line
+                    permite diseñar fachadas, con soluciones decorativas al
+                    disponer de numerosas cenefas con acabados metalicos ,
+                    madera y colores metalizados.
                     <br />
                     <br />
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <br />
-                    <br />
-                    Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit.Morbi eleifend odio in lectus lacinia consectetur.
+                    DOLCKER line ha desarrollado un sistema de colocación de
+                    alta seguridad para que los técnicos diseñen edificos
+                    singulares modulando cenefas a juego con recercados de
+                    ventanas.
                 </Text>
             </div>
             <VisualizadorNota {...propsVisualizador} />

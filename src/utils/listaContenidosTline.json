@@ -182,20 +182,16 @@
                 "link": "#sistemas"
             },
             {
-                "title": "Dolcker & Clip",
-                "link": "#dolcker-and-clip"
+                "title": "LINE .L",
+                "link": "#line-l"
             },
             {
-                "title": "Dol-TC11",
-                "link": "#dol-tc11"
+                "title": "LINE .M",
+                "link": "#line-m"
             },
             {
-                "title": "Dol-TC14",
-                "link": "#dol-tc14"
-            },
-            {
-                "title": "Dol-HC20",
-                "link": "#dol-hc20"
+                "title": "LINE .S",
+                "link": "#line-s"
             }
         ]
     },

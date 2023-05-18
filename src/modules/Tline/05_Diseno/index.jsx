@@ -15,9 +15,9 @@ import configAcabados from '../../../configs/configAcabados'
 import Series from './05_2_Series'
 import img2 from '../../../assets/images/Diseno/Espesores/img1.webp'
 import img3 from '../../../assets/images/Diseno/Espesores/img2.webp'
-import ranurado11 from '../../../assets/images/DolckerTline/ranurado11mm.webp'
-import ranurado14 from '../../../assets/images/DolckerTline/ranurado11mm.webp'
-import ranurado20 from '../../../assets/images/DolckerTline/ranurado11mm.webp'
+import ranurado6 from '../../../assets/images/DisenoTline/Espesores/Dolcker_espesor_6mm.jpg'
+import ranurado9 from '../../../assets/images//DisenoTline/Espesores/Dolcker_espesor_9mm.jpg'
+import ranurado11 from '../../../assets/images//DisenoTline/Espesores/Dolcker_espesor_11mm.jpg'
 import VisualizadorDesplazador from '../../../components/VisualizadorDesplazador'
 import Text from '../../../components/Text'
 import IndiceSeries from './05_1_IndiceSeries'
@@ -113,7 +113,17 @@ const DisenosTline = ({ id }) => {
             >
                 <Titulo2>Espesores</Titulo2>
                 <div className='espesor espesor-1'>
-                    <img src={ranurado11} alt='' />
+                    <img src={ranurado6} alt='' />
+                    <ul>
+                        <strong>TC 6 / 6 mm.</strong>
+                        <li>Suelo</li>
+                        <li>Techo</li>
+                        <li>Fachada</li>
+                        <li>Recerco</li>
+                    </ul>
+                </div>
+                <div className='espesor espesor-2'>
+                    <img src={ranurado9} alt='' />
                     <ul>
                         <strong>TC 9 / 9 mm.</strong>
                         <li>Suelo</li>
@@ -122,18 +132,8 @@ const DisenosTline = ({ id }) => {
                         <li>Recerco</li>
                     </ul>
                 </div>
-                <div className='espesor espesor-2'>
-                    <img src={ranurado14} alt='' />
-                    <ul>
-                        <strong>TC 10 / 10 mm.</strong>
-                        <li>Suelo</li>
-                        <li>Techo</li>
-                        <li>Fachada</li>
-                        <li>Recerco</li>
-                    </ul>
-                </div>
                 <div className='espesor espesor-3'>
-                    <img src={ranurado20} alt='' />
+                    <img src={ranurado11} alt='' />
                     <ul>
                         <strong>TC 11 / 11 mm.</strong>
                         <li>Suelo</li>

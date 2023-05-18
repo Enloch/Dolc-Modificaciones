@@ -17,38 +17,29 @@ const VentajasTline = ({ id }) => {
                 columnSpan='6'
             />
             <Text>
-                Dispone de un desarrollo técnico de fijación para fachadas
-                mejorado,para adaptarse tanto a las necesidades estéticas como
-                funcionales del proyecto.
+                Sistema dolcker line dispone de un desarrollo técnico de
+                fijación oculta en las piezas porcelanicas para poder clipar una
+                cenefa lacada en diferentes acabados
             </Text>
             <Listado>
+                <li>Sistema desmontable</li>
                 <li>
-                    <strong>Texto de la lista (Jorge).</strong>
-                </li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Morbi eleifend odio in lectus lacinia consectetur.</li>
-                <li>
-                    Pellentesque justo turpis, interdum ut laoreet et, aliquet
-                    nec libero.
-                </li>
-                <li>Donec sit amet dapibus mauris. </li>
-                <li>Proin a urna vel ex dapibus congue nec eget lacus. </li>
-                <li>
-                    Suspendisse potenti. Nunc lobortis ut lacus et sollicitudin.
-                </li>
-                <li>Nulla facilisi. In viverra a urna quis tincidunt.</li>
-                <li>
-                    Praesent vitae elementum tortor, et faucibus augue.(1, 2 y
-                    3)
+                    Clip correderos (seguridad para piezas de ariostamiento
+                    andamios)
                 </li>
                 <li>
-                    Suspendisse potenti. Nunc lobortis ut lacus et sollicitudin.
-                    1{' '}
+                    Perfil continuo de gran inercia para soporte de grandes
+                    cargas
                 </li>
-                <li>
-                    Nulla facilisi. In viverra a urna quis
-                    tincidunt.&quot;praesent vitae&quot;
-                </li>
+                <li>Sistema de libre colocación</li>
+                <li>Multitud de tamaños de piezas</li>
+                <li>Despiece a medida</li>
+                <li>Diferentes espesores de piezas (6, 9 y 11 mm)</li>
+                <li>Sistema desarrollado para cámaras de hasta 20 cm</li>
+                <li>Fabricación de piezas con texturas mate, flamed y honed</li>
+                <li>Montaje rápido y seguro</li>
+                <li>Sistema versátil a la hora de diseñar la fachada</li>
+                <li>Sistema versátil en la decoración de las cenefas</li>
             </Listado>
         </StyledVentajas>
     )
