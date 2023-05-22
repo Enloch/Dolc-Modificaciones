@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import FachadaVentilada from './pages/catalogos/FachadaVentilada'
 import DolckerTLine from './pages/catalogos/DolckerTLine'
 import DolckerG10 from './pages/catalogos/DolckerG10'
@@ -18,9 +18,8 @@ import QuienesSomosEn from './pages/en/QuienesSomoEn'
 import FachadaVentiladaEn from './pages/en/catalogos/FachadaVentiladaEn'
 import Contacto from './pages/Contacto'
 import PaginaImagenes from './pages/PaginaImagen'
-
-ReactDOM.render(
-    <React.StrictMode>
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <>
         <ResetStyles />
         {/* <FontStyles /> */}
         <GlobalStyles />
@@ -73,6 +72,5 @@ ReactDOM.render(
                 />
             </Routes>
         </BrowserRouter>
-    </React.StrictMode>,
-    document.getElementById('root')
+    </>
 )

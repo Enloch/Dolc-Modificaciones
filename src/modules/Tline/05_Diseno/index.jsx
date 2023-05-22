@@ -25,6 +25,7 @@ import Intercambiador from '../../../assets/images/DolckerTline/intercambiador.j
 import ConfiguradorImg from '../../../assets/images/DolckerTline/formatoscolor.webp'
 import interactivoImg from '../../../assets/images/DolckerTline/interactivo.webp'
 import rotadorImg from '../../../assets/images/DolckerTline/config.jpg'
+import RotadorTline from '../../../components/Rotadores/Tline/Rotador'
 
 const DisenosTline = ({ id }) => {
     const propsFormato = {
@@ -79,12 +80,6 @@ const DisenosTline = ({ id }) => {
                     />
                 </Anotaciones>
                 <VisualizadorDesplazador config={configAcabados} />
-                {/* <ImageWithCaption
-                    src={interactivoImg}
-                    alt='Imagen de Diseños 1'
-                    caption='Visualizador acabados'
-                    columnSpan='6'
-                /> */}
             </StyledDisenos>
             <StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
                 <Titulo2>Acabados y Perfiles de Cenefas</Titulo2>
@@ -98,13 +93,16 @@ const DisenosTline = ({ id }) => {
                         text='Desliza con el ratón o el dedo para apreciar la textura'
                     />
                 </Anotaciones>
-                {/* <VisualizadorDesplazador config={configAcabados} /> */}
-                <ImageWithCaption
-                    src={Intercambiador}
-                    alt='Imagen de Diseños 1'
-                    caption='Configurador interactivo'
-                    columnSpan='6'
-                />
+                <div
+                    className='rotador'
+                    style={{
+                        backgroundColor: '#fff',
+                        gridColumn: '5 / -1',
+                        height: '800px',
+                    }}
+                >
+                    <RotadorTline />
+                </div>
             </StyledDisenos>
             <StyledDisenos
                 id={id[4]}
@@ -163,20 +161,6 @@ const DisenosTline = ({ id }) => {
                     columnSpan='6'
                 />
             </StyledDisenos>
-            {/* <StyledDisenos id={id[5]} backgroundColor={COLORS.gray01}>
-                <Titulo2>Perfiles Cenefa</Titulo2>
-                <Anotaciones>
-                    <Anotacion
-                        type='normal'
-                        text='Pulsa en el punto para ver todas las posibilidades de piezas especiales'
-                    />
-                    <Anotacion
-                        type='swipe'
-                        text='Desliza con el ratón o el dedo para rotar la imagen 360º'
-                    />
-                </Anotaciones>
-                <VisualizadorRotador config={config} />
-            </StyledDisenos> */}
             <IndiceSeries id={id[6]} />
             <Series
                 ids={[
