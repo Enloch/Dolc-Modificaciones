@@ -1,34 +1,27 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { NombreMateriales } from './Materiales'
-import { ChromePicker } from 'react-color'
-import IconoAbrir from '../../../assets/icons/open-indicator.svg'
-import IconoCerrar from '../../../assets/icons/close-indicator.svg'
+import { SketchPicker } from 'react-color'
 import IconoRAL from '../../../assets/icons/RAL.png'
 
 const MenuContainer = styled.div`
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    visibility: ${({ visible }) => (visible ? 'visible' : 'hidden')};
+    display: ${({ visible }) => (visible ? 'flex' : 'none')};
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 5px;
 `
 
 const MenuContainer2 = styled.div`
     width: 100%;
-    padding: 15px;
-    display: flex;
+    display: ${({ visible }) => (visible ? 'flex' : 'none')};
     flex-direction: row;
     flex-wrap: wrap;
-    visibility: ${({ visible }) => (visible ? 'visible' : 'hidden')};
-    overflow-x: auto;
-    position: relative;
-    bottom: -50px;
-    left: -65px;
 `
 
 const MaterialButton = styled.button`
-    width: 90px;
+    width: 70px;
     height: 75px;
     padding: 0;
     background: none;
@@ -46,13 +39,20 @@ const MaterialImage = styled.img`
     height: 50px;
     object-fit: cover;
 `
-
+const MaterialTextContainer = styled.div`
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: break-spaces;
+    margin-top: 2px;
+`
 const MaterialText = styled.span`
     font-size: 10px;
-    margin-top: 2px;
 `
 
 const ModelButton = styled.button`
+    margin: 0 auto;
     padding: 0;
     border: none;
     background: none;
@@ -64,60 +64,51 @@ const ModelImage = styled.img`
     height: 100%;
     object-fit: cover;
 `
-
-const ColorPickerContainer = styled.div`
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-`
-
-const ColorPreview = styled.div`
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: ${({ color }) => color};
-    margin-right: 10px;
-`
-
-const Menu = ({ handleModelChange, handleMaterialChange }) => {
-    const [showModelButtons, setShowModelButtons] = useState(false)
-    const [showMaterialButtons, setShowMaterialButtons] = useState(false)
-    const [selectedColor, setSelectedColor] = useState('#000000')
-
-    const handleToggleModelButtons = () => {
-        setShowModelButtons(!showModelButtons)
-        setShowMaterialButtons(false)
+const Titulo = styled.h2`
+    cursor: pointer;
+    margin: 5px;
+    ::before {
+        content: '>  ';
     }
+`
+const Menu = ({
+    handleModelChange,
+    handleMaterialChange,
+    color,
+    setColor,
+    colorPickerActive,
+    setColorPickerActive,
+}) => {
+    const [showModelButtons, setShowModelButtons] = useState(true)
+    const [showMaterialButtons, setShowMaterialButtons] = useState(false)
+    const [showMetales, setShowMetales] = useState(false)
+    const [showMaderas, setShowMaderas] = useState(false)
+    const [showColorPicker, setShowColorPicker] = useState(false)
 
     const handleToggleMaterialButtons = () => {
         setShowModelButtons(false)
         setShowMaterialButtons(!showMaterialButtons)
+        setShowMetales(true) // Mostrar los botones de metales
+        setShowMaderas(false) // Ocultar los botones de maderas
+        setShowColorPicker(false) // Ocultar el color picker
+        setColorPickerActive(false) // Establecer colorPickerActive en false al seleccionar un material
     }
 
     const handleHideButtons = () => {
-        setShowModelButtons(false)
+        setShowModelButtons(true)
         setShowMaterialButtons(false)
+        setShowMetales(false) // Ocultar los botones de metales
+        setShowMaderas(false) // Ocultar los botones de maderas
+        setShowColorPicker(false) // Ocultar el color picker
     }
 
-    const handleColorChange = color => {
-        setSelectedColor(color.hex)
+    const handleColorChange = newColor => {
+        setColor(newColor.hex)
+        handleMaterialChange(0) // Restablecer el material cuando se selecciona un color
     }
 
     return (
         <div>
-            {!showModelButtons && !showMaterialButtons && (
-                <ModelButton onClick={handleToggleModelButtons}>
-                    <ModelImage
-                        style={{ width: '20px', height: '20px' }}
-                        src={IconoAbrir}
-                        alt='Abrir'
-                    />
-                </ModelButton>
-            )}
-
             {showModelButtons && (
                 <MenuContainer visible={showModelButtons}>
                     <ModelButton
@@ -169,49 +160,95 @@ const Menu = ({ handleModelChange, handleMaterialChange }) => {
 
             {showMaterialButtons && (
                 <>
-                    <MaterialButton
-                        onClick={handleHideButtons}
-                        style={{
-                            position: 'absolute',
-                            bottom: '126px',
-                            left: '-25px',
-                            width: '40px',
-                            height: '40px',
-                        }}
-                    >
-                        <ModelImage
-                            style={{ width: '30px', height: '30px' }}
-                            src={IconoCerrar}
-                            alt='cerrar'
-                        />
-                    </MaterialButton>
-
-                    <MenuContainer2 visible={showMaterialButtons}>
-                        {NombreMateriales.map((material, index) => (
-                            <MaterialButton
-                                key={index}
-                                onClick={() => handleMaterialChange(index)}
-                            >
-                                <MaterialImage
-                                    src={material.textura}
-                                    alt={`Material ${index + 1}`}
-                                />
-                                <MaterialText>{material.nombre}</MaterialText>
-                            </MaterialButton>
-                        ))}
-                        <MaterialButton style={{ cursor: 'default' }}>
-                            <MaterialImage src={IconoRAL} />
-                            <MaterialText>Opcion RAL</MaterialText>
-                        </MaterialButton>
-                    </MenuContainer2>
-
-                    {/* <ColorPickerContainer>
-                        <ColorPreview color={selectedColor} />
-                        <ChromePicker
-                            color={selectedColor}
-                            onChange={handleColorChange}
-                        />
-                    </ColorPickerContainer> */}
+                    <Titulo onClick={handleHideButtons}>
+                        Volver a Modelos
+                    </Titulo>
+                    <div className='metales'>
+                        <Titulo
+                            onClick={() => (
+                                setShowMetales(!showMetales),
+                                setShowMaderas(false),
+                                setShowColorPicker(false),
+                                setColorPickerActive(false)
+                            )}
+                        >
+                            Metales
+                        </Titulo>
+                        <MenuContainer2
+                            visible={showMaterialButtons && showMetales}
+                        >
+                            {NombreMateriales.slice(0, 18).map(
+                                (material, index) => (
+                                    <MaterialButton
+                                        key={index}
+                                        onClick={() =>
+                                            handleMaterialChange(index)
+                                        }
+                                    >
+                                        <MaterialImage
+                                            src={material.textura}
+                                            alt={`Material ${material.nombre}`}
+                                        />
+                                        <MaterialTextContainer>
+                                            <MaterialText>
+                                                {material.nombre}
+                                            </MaterialText>
+                                        </MaterialTextContainer>
+                                    </MaterialButton>
+                                )
+                            )}
+                        </MenuContainer2>
+                        <Titulo
+                            onClick={() => (
+                                setShowMaderas(!showMaderas),
+                                setShowMetales(false),
+                                setShowColorPicker(false),
+                                setColorPickerActive(false)
+                            )}
+                        >
+                            Maderas
+                        </Titulo>
+                        <MenuContainer2
+                            visible={showMaterialButtons && showMaderas}
+                        >
+                            {NombreMateriales.slice(18, 22).map(
+                                (material, index) => (
+                                    <MaterialButton
+                                        key={index}
+                                        onClick={() =>
+                                            handleMaterialChange(index + 18)
+                                        }
+                                    >
+                                        <MaterialImage
+                                            src={material.textura}
+                                            alt={`Material ${material.nombre}`}
+                                        />
+                                        <MaterialTextContainer>
+                                            <MaterialText>
+                                                {material.nombre}
+                                            </MaterialText>
+                                        </MaterialTextContainer>
+                                    </MaterialButton>
+                                )
+                            )}
+                        </MenuContainer2>
+                        <Titulo
+                            onClick={() => (
+                                setShowColorPicker(true),
+                                setColorPickerActive(true),
+                                setShowMetales(false),
+                                setShowMaderas(false)
+                            )}
+                        >
+                            Colores
+                        </Titulo>
+                        <MenuContainer2 visible={showColorPicker}>
+                            <SketchPicker
+                                color={color}
+                                onChange={handleColorChange}
+                            />
+                        </MenuContainer2>
+                    </div>
                 </>
             )}
         </div>

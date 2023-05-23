@@ -4,7 +4,8 @@ import StyledDolcker from './styles'
 import { COLORS } from '../../../global/GlobalStyles'
 
 import img2 from '../../../assets/images/DolckerTline/Dolcker_T-Line_Soluciona.jpg'
-import img3 from '../../../assets/images/DolckerTline/arquitecto.webp'
+import img3 from '/temporal.jpg'
+import img4 from '../../../assets/temporal.jpg'
 import VisualizadorNota from '../../../components/VisualizadorNota'
 import Text from '../../../components/Text'
 
@@ -15,7 +16,7 @@ const DolckerTline = ({ id }) => {
         text: 'Pasa el ratón por los puntos para ver la información',
         type: 'normal',
         //indicadores: config,
-        imgBackground: img3,
+        imgBackground: img4,
         alt: 'Imagen de fondo con indicadores',
     }
 

@@ -6,83 +6,120 @@ import {
     Environment,
     ContactShadows,
 } from '@react-three/drei'
-import Menu from './Menu'
 import { Model1, Model2, Model3, Model4 } from './Modelos'
-import { Materiales, MaterialesMetalizados } from './Materiales'
-
-export default function RotadorTline() {
+import {
+    ContRotador,
+    CanvasContainer,
+    MenuContainer,
+    IntroContainer,
+    IntroContent,
+    IntroImage,
+    IntroText,
+    BotonExpandir,
+    ImagenExpandir,
+} from './styles'
+import Menu from './Menu'
+import R360 from '../../../assets/icons/360.svg'
+import IconoAbrir from '../../../assets/icons/open-indicator.svg'
+import IconoCerrar from '../../../assets/icons/close-indicator.svg'
+export default function Rotador() {
     const [model, setModel] = useState('Modelo 1')
     const [materialIndex, setMaterialIndex] = useState(0)
+    const [showIntro, setShowIntro] = useState(true)
+    const [color, setColor] = useState('#ffffff0') // Color blanco como color base predeterminado
+    const [colorPickerActive, setColorPickerActive] = useState(false)
 
-    const handleModelChange = selectedModel => {
-        console.log('Cambiando modelo a:', selectedModel)
-        setModel(selectedModel)
-    }
-
-    const handleMaterialChange = index => {
-        console.log('Cambiando material a:', index)
-        setMaterialIndex(index)
+    const handleIntroClick = () => {
+        setShowIntro(false)
     }
 
     return (
-        <div style={{ width: 'auto', height: '100%', position: 'relative' }}>
-            <Canvas linear flat>
-                <PerspectiveCamera makeDefault fov={25} position={[0, 0, 1]} />
-                <Environment files='/StudioA.hdr' />
-                <ambientLight intensity={0.3} />
-                <ContactShadows
-                    opacity={0.5}
-                    scale={1}
-                    blur={1}
-                    far={1}
-                    resolution={256}
-                    color='#0000001e'
-                    position={[0, -0.09, 0]}
-                    frames={1}
-                />
-                {model === 'Modelo 1' && (
-                    <Model1
-                        material={materialIndex}
-                        metalness={materialIndex}
-                        roughness={materialIndex}
-                    />
+        <ContRotador>
+            <BotonExpandir>
+                <ImagenExpandir src={IconoAbrir} alt='Rotador' />
+            </BotonExpandir>
+            <CanvasContainer>
+                {showIntro && (
+                    <IntroContainer onClick={handleIntroClick}>
+                        <IntroContent>
+                            <IntroImage src={R360} alt='Rotador' />
+                            <IntroText>Rotador</IntroText>
+                        </IntroContent>
+                    </IntroContainer>
                 )}
-                {model === 'Modelo 2' && (
-                    <Model2
-                        material={materialIndex}
-                        metalness={materialIndex}
-                        roughness={materialIndex}
+                <Canvas
+                    linear
+                    flat
+                    style={{ position: 'relative', top: 0, left: 0 }}
+                >
+                    <PerspectiveCamera
+                        makeDefault
+                        fov={50}
+                        position={[0, -1, 1]}
                     />
-                )}
-                {model === 'Modelo 3' && (
-                    <Model3
-                        material={materialIndex}
-                        metalness={materialIndex}
-                        roughness={materialIndex}
+                    <Environment files='/StudioE2.hdr' />
+                    <ambientLight intensity={0.3} />
+                    <ContactShadows
+                        opacity={0.5}
+                        scale={1}
+                        blur={1}
+                        far={1}
+                        resolution={256}
+                        color='#0000001e'
+                        position={[0, -0.09, 0]}
+                        frames={1}
                     />
-                )}
-                {model === 'Modelo 4' && (
-                    <Model4
-                        material={materialIndex}
-                        metalness={materialIndex}
-                        roughness={materialIndex}
-                    />
-                )}
+                    {model === 'Modelo 1' && (
+                        <Model1
+                            material={materialIndex}
+                            metalness={materialIndex}
+                            roughness={materialIndex}
+                            color={color}
+                            colorPickerActive={colorPickerActive} // Pasar el estado colorPickerActive al componente Model1
+                        />
+                    )}
+                    {model === 'Modelo 2' && (
+                        <Model2
+                            material={materialIndex}
+                            metalness={materialIndex}
+                            roughness={materialIndex}
+                        />
+                    )}
+                    {model === 'Modelo 3' && (
+                        <Model3
+                            material={materialIndex}
+                            metalness={materialIndex}
+                            roughness={materialIndex}
+                        />
+                    )}
+                    {model === 'Modelo 4' && (
+                        <Model4
+                            material={materialIndex}
+                            metalness={materialIndex}
+                            roughness={materialIndex}
+                        />
+                    )}
 
-                <OrbitControls
-                    maxPolarAngle={1.6}
-                    minDistance={0.6}
-                    maxDistance={1}
-                    enableZoom={true}
-                    enablePan={false}
-                />
-            </Canvas>
-            <div style={{ position: 'absolute', bottom: '5%', left: '5%' }}>
+                    <OrbitControls
+                        maxPolarAngle={1.6}
+                        minDistance={0.2}
+                        maxDistance={0.6}
+                        enableZoom={true}
+                        enablePan={false}
+                    />
+                </Canvas>
+            </CanvasContainer>
+
+            <MenuContainer>
                 <Menu
-                    handleModelChange={handleModelChange}
-                    handleMaterialChange={handleMaterialChange}
+                    handleModelChange={setModel}
+                    handleMaterialChange={setMaterialIndex}
+                    color={color}
+                    setColor={setColor}
+                    colorPickerActive={colorPickerActive} // Pasar el estado colorPickerActive al componente Menu
+                    setColorPickerActive={setColorPickerActive} // Pasar el callback setColorPickerActive al componente Menu
                 />
-            </div>
-        </div>
+            </MenuContainer>
+        </ContRotador>
     )
 }
