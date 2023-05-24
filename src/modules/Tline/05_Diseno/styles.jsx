@@ -30,7 +30,11 @@ const StyledDisenos = styled(Seccion)`
             grid-column: 4 / span 2;
         }
     } */
-
+    .rotador {
+        grid-column: 5 / -1;
+        background-color: #fff;
+        height: 800px;
+    }
     .espesor {
         ul {
             display: flex;
@@ -48,10 +52,8 @@ const StyledDisenos = styled(Seccion)`
             }
         }
     }
-    .rotador {
-        grid-column: 5 / -1;
-        background-color: #fff;
-        height: 800px;
+    .espesor-1 {
+        grid-column: 5 / span 2;
     }
 
     .espesor-2 {
