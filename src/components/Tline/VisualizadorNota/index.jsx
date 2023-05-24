@@ -1,4 +1,4 @@
-import useIndicadoresNota from '../../hooks/useIndicadoresNota'
+import useIndicadoresNota from '../../../hooks/useIndicadoresNotaTline'
 import VisualizadorWithAnotacion from '../VisualizadorWithAnotacion'
 import StyledVisualizadorNota from './styles'
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { COLORS, DISTANCES } from '../../global/GlobalStyles'
-import { column_5_span8 } from '../../styles/grid'
+import { COLORS, DISTANCES } from '../../../global/GlobalStyles'
+import { column_5_span8 } from '../../../styles/grid'
 
 const StyledVisualizadorNota = styled.div`
     ${column_5_span8}
