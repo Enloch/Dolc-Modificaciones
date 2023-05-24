@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import {
     OrbitControls,
@@ -32,13 +32,22 @@ export default function Rotador() {
     const handleIntroClick = () => {
         setShowIntro(false)
     }
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const menuContainerRef = useRef(null)
+
+    const handleExpandClick = () => {
+        setIsMenuOpen(!isMenuOpen)
+    }
 
     return (
         <ContRotador>
-            <BotonExpandir>
-                <ImagenExpandir src={IconoAbrir} alt='Rotador' />
+            <BotonExpandir onClick={handleExpandClick}>
+                <ImagenExpandir
+                    src={isMenuOpen ? IconoAbrir : IconoCerrar}
+                    alt='Rotador'
+                />
             </BotonExpandir>
-            <CanvasContainer>
+            <CanvasContainer visible={isMenuOpen}>
                 {showIntro && (
                     <IntroContainer onClick={handleIntroClick}>
                         <IntroContent>
@@ -83,6 +92,8 @@ export default function Rotador() {
                             material={materialIndex}
                             metalness={materialIndex}
                             roughness={materialIndex}
+                            color={color}
+                            colorPickerActive={colorPickerActive}
                         />
                     )}
                     {model === 'Modelo 3' && (
@@ -90,6 +101,8 @@ export default function Rotador() {
                             material={materialIndex}
                             metalness={materialIndex}
                             roughness={materialIndex}
+                            color={color}
+                            colorPickerActive={colorPickerActive}
                         />
                     )}
                     {model === 'Modelo 4' && (
@@ -97,6 +110,8 @@ export default function Rotador() {
                             material={materialIndex}
                             metalness={materialIndex}
                             roughness={materialIndex}
+                            color={color}
+                            colorPickerActive={colorPickerActive}
                         />
                     )}
 
@@ -110,7 +125,7 @@ export default function Rotador() {
                 </Canvas>
             </CanvasContainer>
 
-            <MenuContainer>
+            <MenuContainer visible={isMenuOpen}>
                 <Menu
                     handleModelChange={setModel}
                     handleMaterialChange={setMaterialIndex}

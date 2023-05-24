@@ -10,7 +10,7 @@ export const ContRotador = styled.div`
     display: flex;
     flex-direction: row;
 
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
         flex-direction: column;
     }
 `
@@ -20,20 +20,27 @@ export const CanvasContainer = styled.div`
     top: 0;
     left: 0;
     width: 100%;
+    /* width: ${({ visible }) => (visible ? '75%' : '100%')}; */
     height: 100%;
     cursor: all-scroll;
-    @media (max-width: 768px) {
+    @media screen and (max-width: 1080px) {
+        width: 66%;
+    }
+    @media screen and (max-width: 480px) {
         width: 100%;
-        height: 50%;
     }
 `
 export const BotonExpandir = styled.a`
+    display: none;
     position: absolute;
     top: 50%;
     right: 24%;
     width: 25px;
     height: 25px;
     z-index: 20;
+    @media (max-width: 1080px) {
+        display: none;
+    }
 `
 
 export const ImagenExpandir = styled.img`
@@ -47,11 +54,12 @@ export const MenuContainer = styled.div`
     background-color: #ffffff;
     height: 100%;
     border-left: 1px solid #e0e0e0;
+    /* width: ${({ visible }) => (visible ? '25%' : '0')}; */
+    /* display: ${({ visible }) => (visible ? 'block' : 'none')}; */
 
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
         width: 100%;
-        height: 50%;
-        padding: 20px;
+        padding: 5px;
     }
 `
 

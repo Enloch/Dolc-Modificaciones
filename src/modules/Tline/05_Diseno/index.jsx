@@ -93,14 +93,7 @@ const DisenosTline = ({ id }) => {
                         text='Desliza con el ratón o el dedo para apreciar la textura'
                     />
                 </Anotaciones>
-                <div
-                    className='rotador'
-                    style={{
-                        backgroundColor: '#fff',
-                        gridColumn: '5 / -1',
-                        height: '800px',
-                    }}
-                >
+                <div className='rotador'>
                     <RotadorTline />
                 </div>
             </StyledDisenos>

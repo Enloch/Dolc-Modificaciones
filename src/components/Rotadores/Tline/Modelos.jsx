@@ -64,7 +64,6 @@ export function Model2({
     if (colorPickerActive) {
         material = null
     }
-
     return (
         <group {...props} dispose={null}>
             <mesh
@@ -81,7 +80,7 @@ export function Model2({
                         color={null}
                     />
                 ) : (
-                    <meshBasicMaterial color={color} metalness='0.5' />
+                    <meshStandardMaterial color={color} metalness='0.5' />
                 )}
             </mesh>
             <mesh

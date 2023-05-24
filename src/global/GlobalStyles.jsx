@@ -10,7 +10,8 @@ const DISTANCES = {
     long: '6.25rem',
 }
 
-const TABLET_SIZE = '980px'
+const TABLET_SIZE = '1080px'
+const MOBILE_SIZE = '480px'
 
 const COLORS = {
     green: ' #00BFA6',

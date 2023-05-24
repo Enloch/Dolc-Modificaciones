@@ -38,7 +38,6 @@ const StyledDisenos = styled(Seccion)`
 
             strong {
                 padding: ${DISTANCES.small} 0;
-
             }
 
             li {
@@ -49,9 +48,10 @@ const StyledDisenos = styled(Seccion)`
             }
         }
     }
-
-    .espesor-1 {
-        grid-column: 5 / span 2;
+    .rotador {
+        grid-column: 5 / -1;
+        background-color: #fff;
+        height: 800px;
     }
 
     .espesor-2 {
@@ -69,7 +69,11 @@ const StyledDisenos = styled(Seccion)`
 
         ${props =>
             props.isEspesores ? 'grid-template-columns: repeat(3, 1fr);' : null}
-
+        .rotador {
+            grid-column: 1 / -1;
+            min-height: 375px;
+            height: auto;
+        }
         .espesor-1 {
             grid-column: 1 / span 1;
         }

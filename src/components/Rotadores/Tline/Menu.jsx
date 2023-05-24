@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { NombreMateriales } from './Materiales'
 import { SketchPicker } from 'react-color'
 import IconoRAL from '../../../assets/icons/RAL.png'
-
 const MenuContainer = styled.div`
     width: 100%;
     display: ${({ visible }) => (visible ? 'flex' : 'none')};
@@ -11,6 +10,10 @@ const MenuContainer = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     row-gap: 5px;
+    @media (max-width: 480px) {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
 `
 
 const MenuContainer2 = styled.div`
@@ -240,7 +243,7 @@ const Menu = ({
                                 setShowMaderas(false)
                             )}
                         >
-                            Colores
+                            Sólidos
                         </Titulo>
                         <MenuContainer2 visible={showColorPicker}>
                             <SketchPicker
