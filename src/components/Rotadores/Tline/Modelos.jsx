@@ -80,7 +80,7 @@ export function Model2({
                         color={null}
                     />
                 ) : (
-                    <meshStandardMaterial color={color} metalness='0.5' />
+                    <meshBasicMaterial color={color} metalness='0.5' />
                 )}
             </mesh>
             <mesh
