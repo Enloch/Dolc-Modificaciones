@@ -4,67 +4,51 @@ const piezas = getDataFromModules(piezasImport)
 
 const config = [
     {
-        top: '11.3%',
-        left: '37.6%',
+        top: '31.3%',
+        left: '64%',
         content: {
-            imgSrc: piezas[6],
+            imgSrc: piezas[3],
             title: 'Recercos',
         },
     },
     {
-        top: '2.8%',
-        left: '65%',
+        top: '23%',
+        left: '18%',
         content: {
-            imgSrc: piezas[0],
+            imgSrc: piezas[5],
             title: 'Tapa coronación',
         },
     },
     {
-        top: '24.5%',
-        left: '44.5%',
+        top: '70.3%',
+        left: '77.3%',
         content: {
             imgSrc: piezas[2],
             title: 'Fachada ventilada',
         },
     },
     {
-        top: '20%',
-        left: '21%',
+        top: '40%',
+        left: '37.5%',
         content: {
             imgSrc: piezas[1],
             title: 'Esquina full body',
         },
     },
     {
-        top: '31.3%',
-        left: '51%',
+        top: '64%',
+        left: '29%',
         content: {
-            imgSrc: piezas[7],
+            imgSrc: piezas[4],
             title: 'Rejilla techo',
         },
     },
     {
-        top: '53.3%',
-        left: '83.3%',
+        top: '84%',
+        left: '17%',
         content: {
-            imgSrc: piezas[8],
-            title: 'Suelo elevado',
-        },
-    },
-    {
-        top: '60%',
-        left: '34%',
-        content: {
-            imgSrc: piezas[7],
-            title: 'Rejilla piscina',
-        },
-    },
-    {
-        top: '70%',
-        left: '66%',
-        content: {
-            imgSrc: piezas[4],
-            title: 'Peldaño',
+            imgSrc: piezas[0],
+            title: 'Arranque',
         },
     },
 ]

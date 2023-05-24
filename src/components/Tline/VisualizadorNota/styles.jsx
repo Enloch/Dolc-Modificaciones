@@ -25,9 +25,9 @@ const StyledVisualizadorNota = styled.div`
 
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        /* gap: 1rem; */
 
-        padding: ${DISTANCES.small} ${DISTANCES.medium};
+        padding: 0.5rem ${DISTANCES.medium};
 
         background-color: ${COLORS.gray01};
         opacity: 0;
