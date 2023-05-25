@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { NombreMateriales } from './Materiales'
 import { SketchPicker } from 'react-color'
+import IconoRAL from '../../../assets/icons/RAL.png'
 const MenuContainer = styled.div`
     width: 100%;
     display: ${({ visible }) => (visible ? 'flex' : 'none')};

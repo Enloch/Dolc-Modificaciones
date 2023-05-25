@@ -18,12 +18,10 @@ const VisualizadorNota = ({
                 <img src={imgBackground} alt={alt} />
                 <div className='indicadores-container'>{listaIndicadores}</div>
                 <div className='visualizador-nota-container' ref={containerRef}>
-                    <div className='visualizador-caja'>
-                        <img src={piezaImgSrc} alt='Pieza' />
-                        <p className='visualizador-nota' ref={textRef}>
-                            {title}
-                        </p>
-                    </div>
+                    <img src={piezaImgSrc} alt='Pieza' />
+                    <p className='visualizador-nota' ref={textRef}>
+                        {title}
+                    </p>
                 </div>
             </StyledVisualizadorNota>
         </VisualizadorWithAnotacion>

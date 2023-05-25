@@ -1,4 +1,4 @@
-import React, { useState, useRef, Suspense } from 'react'
+import React, { useState, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import {
     OrbitControls,
@@ -26,7 +26,7 @@ export default function Rotador() {
     const [model, setModel] = useState('Modelo 1')
     const [materialIndex, setMaterialIndex] = useState(0)
     const [showIntro, setShowIntro] = useState(true)
-    const [color, setColor] = useState('#ffffff') // Color blanco como color base predeterminado
+    const [color, setColor] = useState('#ffffff0') // Color blanco como color base predeterminado
     const [colorPickerActive, setColorPickerActive] = useState(false)
 
     const handleIntroClick = () => {
@@ -56,75 +56,73 @@ export default function Rotador() {
                         </IntroContent>
                     </IntroContainer>
                 )}
-                <Suspense fallback={<span>loading...</span>}>
-                    <Canvas
-                        linear
-                        flat
-                        style={{ position: 'relative', top: 0, left: 0 }}
-                    >
-                        <PerspectiveCamera
-                            makeDefault
-                            fov={50}
-                            position={[0, -1, 1]}
+                <Canvas
+                    linear
+                    flat
+                    style={{ position: 'relative', top: 0, left: 0 }}
+                >
+                    <PerspectiveCamera
+                        makeDefault
+                        fov={50}
+                        position={[0, -1, 1]}
+                    />
+                    <Environment files='/StudioE2.hdr' />
+                    <ambientLight intensity={0.3} />
+                    <ContactShadows
+                        opacity={0.5}
+                        scale={1}
+                        blur={1}
+                        far={1}
+                        resolution={256}
+                        color='#0000001e'
+                        position={[0, -0.09, 0]}
+                        frames={1}
+                    />
+                    {model === 'Modelo 1' && (
+                        <Model1
+                            material={materialIndex}
+                            metalness={materialIndex}
+                            roughness={materialIndex}
+                            color={color}
+                            colorPickerActive={colorPickerActive} // Pasar el estado colorPickerActive al componente Model1
                         />
-                        <Environment files={'/HDR/StudioE2.hdr'} />
-                        <ambientLight intensity={0.3} />
-                        <ContactShadows
-                            opacity={0.5}
-                            scale={1}
-                            blur={1}
-                            far={1}
-                            resolution={256}
-                            color='#0000001e'
-                            position={[0, -0.09, 0]}
-                            frames={1}
+                    )}
+                    {model === 'Modelo 2' && (
+                        <Model2
+                            material={materialIndex}
+                            metalness={materialIndex}
+                            roughness={materialIndex}
+                            color={color}
+                            colorPickerActive={colorPickerActive}
                         />
-                        {model === 'Modelo 1' && (
-                            <Model1
-                                material={materialIndex}
-                                metalness={materialIndex}
-                                roughness={materialIndex}
-                                color={color}
-                                colorPickerActive={colorPickerActive} // Pasar el estado colorPickerActive al componente Model1
-                            />
-                        )}
-                        {model === 'Modelo 2' && (
-                            <Model2
-                                material={materialIndex}
-                                metalness={materialIndex}
-                                roughness={materialIndex}
-                                color={color}
-                                colorPickerActive={colorPickerActive}
-                            />
-                        )}
-                        {model === 'Modelo 3' && (
-                            <Model3
-                                material={materialIndex}
-                                metalness={materialIndex}
-                                roughness={materialIndex}
-                                color={color}
-                                colorPickerActive={colorPickerActive}
-                            />
-                        )}
-                        {model === 'Modelo 4' && (
-                            <Model4
-                                material={materialIndex}
-                                metalness={materialIndex}
-                                roughness={materialIndex}
-                                color={color}
-                                colorPickerActive={colorPickerActive}
-                            />
-                        )}
+                    )}
+                    {model === 'Modelo 3' && (
+                        <Model3
+                            material={materialIndex}
+                            metalness={materialIndex}
+                            roughness={materialIndex}
+                            color={color}
+                            colorPickerActive={colorPickerActive}
+                        />
+                    )}
+                    {model === 'Modelo 4' && (
+                        <Model4
+                            material={materialIndex}
+                            metalness={materialIndex}
+                            roughness={materialIndex}
+                            color={color}
+                            colorPickerActive={colorPickerActive}
+                        />
+                    )}
 
-                        <OrbitControls
-                            maxPolarAngle={1.6}
-                            minDistance={0.2}
-                            maxDistance={0.6}
-                            enableZoom={true}
-                            enablePan={false}
-                        />
-                    </Canvas>
-                </Suspense>
+                    <OrbitControls
+                        maxPolarAngle={1.6}
+                        minDistance={0.2}
+                        maxDistance={0.6}
+                        enableZoom={true}
+                        enablePan={false}
+                    />
+                </Canvas>
             </CanvasContainer>
 
             <MenuContainer visible={isMenuOpen}>
