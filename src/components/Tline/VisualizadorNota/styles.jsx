@@ -25,7 +25,7 @@ const StyledVisualizadorNota = styled.div`
 
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        /* gap: 1rem; */
 
         padding: ${DISTANCES.small} ${DISTANCES.medium};
 
@@ -38,11 +38,21 @@ const StyledVisualizadorNota = styled.div`
         img {
             width: 6rem;
         }
-
+        .visualizador-caja {
+            width: 6em;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            gap: 1rem;
+        }
         .visualizador-nota,
         img {
             animation: slide-right-fade-in 0.3s;
             animation-fill-mode: forwards;
+        }
+        p {
+            text-align: center;
         }
     }
 
