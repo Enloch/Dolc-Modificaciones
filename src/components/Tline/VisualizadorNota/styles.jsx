@@ -20,14 +20,14 @@ const StyledVisualizadorNota = styled.div`
         position: absolute;
         right: 0;
         left: 0;
-        bottom: 0;
+        /* bottom: 0; */
         z-index: 2;
 
         display: flex;
         flex-direction: column;
-        /* gap: 1rem; */
+        gap: 1rem;
 
-        padding: 0.5rem ${DISTANCES.medium};
+        padding: ${DISTANCES.small} ${DISTANCES.medium};
 
         background-color: ${COLORS.gray01};
         opacity: 0;

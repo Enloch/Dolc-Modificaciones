@@ -14,7 +14,7 @@ const DolckerTline = ({ id }) => {
     const propsVisualizador = {
         text: 'Pasa el ratón por los puntos para ver la información',
         type: 'normal',
-        indicadores: config,    
+        indicadores: config,
         imgBackground: img3,
         alt: 'Imagen de fondo con indicadores',
     }
@@ -44,18 +44,12 @@ const DolckerTline = ({ id }) => {
             </div>
             <VisualizadorNota {...propsVisualizador} />
             <Text>
-                <strong>Imagen Exterior T-LINE(Arquitecto )</strong>
+
                 <br />
-                -Esquina {'( dibujo técnico/croquis por parte del arquitecto)'}
+
                 <br />
-                -Recerco {'( dibujo técnico/croquis por parte del arquitecto)'}
-                <br />
-                -Coronación{' '}
-                {'( dibujo técnico/croquis por parte del arquitecto)'}
-                <br />
-                -Arranque {'( dibujo técnico/croquis por parte del arquitecto)'}
-                <br />
-                -Fachada {'( dibujo técnico/croquis por parte del arquitecto)'}
+
+
             </Text>
         </StyledDolcker>
     )
