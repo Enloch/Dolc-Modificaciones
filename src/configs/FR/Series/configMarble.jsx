@@ -38,8 +38,7 @@ const muestrasAcabados = {
 
 const configMARBLE = {
     titulo: 'DO&MARBLE',
-    descripcion:
-        'Natural like the stones that have forged the history of architecture, Time, because this is the time of structural and aesthetic perfection. The privilege of an innovative collection that overcomes the imperfections and excesses of the natural reference in which each plate tells a story made of design and functionality.',
+    descripcion: '',
     imgSeleccionar,
     indicadores: [
         {
@@ -47,7 +46,7 @@ const configMARBLE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: 'Do&Marble Crema',
+                titulo: 'Do&Marble Crème',
             },
         },
         {
@@ -55,7 +54,7 @@ const configMARBLE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: 'Do&Marble Lava',
+                titulo: 'Do&Marble Lave',
             },
         },
         {
@@ -71,7 +70,7 @@ const configMARBLE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: 'Do&Marble Grey',
+                titulo: 'Do&Marble Gris',
             },
         },
     ],
@@ -83,17 +82,17 @@ const configMARBLE = {
         },
         {
             imagen: muestras[1],
-            titulo: 'Crema',
+            titulo: 'Crème',
             acabados: muestrasAcabados['CREMA'],
         },
         {
             imagen: muestras[2],
-            titulo: 'Lava',
+            titulo: 'Lave',
             acabados: muestrasAcabados['LAVA'],
         },
         {
             imagen: muestras[3],
-            titulo: 'Grey',
+            titulo: 'Gris',
             acabados: muestrasAcabados['GREY'],
         },
     ],

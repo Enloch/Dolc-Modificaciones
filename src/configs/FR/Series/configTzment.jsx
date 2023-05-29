@@ -46,7 +46,7 @@ const configTZMENT = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'Do&Tzment Black',
+                titulo: 'Do&Tzment Noir',
             },
         },
         {
@@ -54,7 +54,7 @@ const configTZMENT = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: 'Do&Tzment Coal',
+                titulo: 'Do&Tzment Charbon',
             },
         },
         {
@@ -62,7 +62,7 @@ const configTZMENT = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: 'Do&Tzment Steel',
+                titulo: 'Do&Tzment Acier',
             },
         },
         {
@@ -70,29 +70,29 @@ const configTZMENT = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: 'Do&Tzment White',
+                titulo: 'Do&Tzment Blanc',
             },
         },
     ],
     muestras: [
         {
             imagen: muestras[0],
-            titulo: 'Black',
+            titulo: 'Noir',
             acabados: muestrasAcabados['BLACK'],
         },
         {
             imagen: muestras[1],
-            titulo: 'Coal',
+            titulo: 'Charbon',
             acabados: muestrasAcabados['COAL'],
         },
         {
             imagen: muestras[2],
-            titulo: 'Steel',
+            titulo: 'Acier',
             acabados: muestrasAcabados['STEEL'],
         },
         {
             imagen: muestras[3],
-            titulo: 'White',
+            titulo: 'Blanc',
             acabados: muestrasAcabados['WHITE'],
         },
     ],

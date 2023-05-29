@@ -20,13 +20,13 @@ const Aplicaciones = ({ id }) => {
                 <Titulo color={COLORS.gray08}>APPLICATIONS</Titulo>
                 <ImageWithCaption
                     src={img1}
-                    alt='Imagen de Aplicaciones 1'
+                    alt='Applications Image 1'
                     caption='DOLCKER &CLIP. Do&Marble Calacatta + Do&Wood Eucalipto'
                     columnSpan='6'
                 />
                 <Cita
-                    cita="“The architect's job today is to create beautiful buildings.
-                    That's it.”"
+                    cita="“Aujourd'hui, le travail de l'architecte consiste à créer de beaux bâtiments.
+                    C'est tout.”"
                     author='Philip Johnson'
                     colorCita={COLORS.gray08}
                     colorAutor={COLORS.gray04}
@@ -37,16 +37,16 @@ const Aplicaciones = ({ id }) => {
                 backgroundColor={COLORS.gray01}
                 rowGap={DISTANCES.medium}
             >
-                <Titulo2 color={COLORS.gray08}>Rehabilitation</Titulo2>
+                <Titulo2 color={COLORS.gray08}>Réhabilitation</Titulo2>
                 <ImageWithCaption
                     src={img2}
-                    alt='Imagen de Aplicaciones 1'
+                    alt='Applications Image 2'
                     caption='DOL -TC11. Do&Dolm Nacar'
                     columnSpan='6'
                 />
                 <Cita
-                    cita='“We live in a wonderful world that is full of beauty, enchantment and adventure.There is no limit to the adventures we can have as long as we look for them with our eyes wide open.”'
-                    author='Jawaharial Nehru'
+                    cita="“Nous vivons dans un monde merveilleux, plein de beauté, d\'enchantement et d\'aventure. Il n\'y a pas de limite aux aventures que nous pouvons vivre, à condition de les chercher les yeux grands ouverts.”"
+                    author='Jawaharlal Nehru'
                     colorCita={COLORS.gray08}
                     colorAutor={COLORS.gray04}
                 />
@@ -59,12 +59,12 @@ const Aplicaciones = ({ id }) => {
                 <Titulo2 color={COLORS.gray01}>New construction</Titulo2>
                 <ImageWithCaption
                     src={img3}
-                    alt='Imagen de Aplicaciones 1'
+                    alt='Applications Image 3'
                     caption='DOL -TC14. Do&Quarz Grey / Do&Quarz Black'
                     columnSpan='6'
                 />
                 <Cita
-                    cita="“When I'm working on a problem, I never think about its beauty. I only think about how to solve the problem. But when I finish it, if the solution isn't beautiful, I know it's wrong.”"
+                    cita="“Lorsque je travaille sur un problème, je ne pense jamais à sa beauté. Je ne pense qu'à la façon de résoudre le problème. Mais lorsque je l'ai terminé, si la solution n'est pas belle, je sais qu'elle est mauvaise.”"
                     author='Richard Buckminster Fuller'
                     colorCita={COLORS.gray08}
                     colorAutor={COLORS.gray04}
@@ -78,7 +78,7 @@ const Aplicaciones = ({ id }) => {
                 <Titulo3 color={COLORS.gray08}>Facades</Titulo3>
                 <ImageWithCaption
                     src={img4}
-                    alt='Imagen de Aplicaciones 4'
+                    alt='Applications Image 4'
                     caption='DOL -TC20. Do&Space Ivory'
                     columnSpan='6'
                 />
@@ -89,11 +89,11 @@ const Aplicaciones = ({ id }) => {
                 rowGap={DISTANCES.medium}
             >
                 <Titulo3 color={COLORS.gray08}>
-                    Terraces, raised floors, ceilings and solutions
+                    Terrasses, planchers surélevés, plafonds et solutions
                 </Titulo3>
                 <ImageWithCaption
                     src={img5}
-                    alt='Imagen de Aplicaciones 5'
+                    alt='Applications Image  5'
                     caption='DOL -TC11. Do&Space Ivory'
                     columnSpan='6'
                 />

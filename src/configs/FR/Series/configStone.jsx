@@ -21,7 +21,7 @@ const acabados = getDataFromModules(acabadosImports)
 const configSTONE = {
     titulo: 'DO&STONE',
     descripcion:
-        'The STONE series is the result of innovation and functionality, the union between the most advanced technique and versatility. The formats of the collection, its neutral tones and its monochrome appearance, allow it to be the star of any space.',
+        "La série STONE est le résultat de l'innovation et de la fonctionnalité, l'union entre la technique la plus avancée et la polyvalence. Les formats de la collection, ses tons neutres et son aspect monochrome, lui permettent d'être la star de n'importe quel espace.",
     imgSeleccionar,
     indicadores: [
         {
@@ -29,7 +29,7 @@ const configSTONE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'Do&Stone Black',
+                titulo: 'Do&Stone Noir',
             },
         },
         {
@@ -45,7 +45,7 @@ const configSTONE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: 'Do&Stone Light',
+                titulo: 'Do&Stone Clair',
             },
         },
         {
@@ -53,18 +53,18 @@ const configSTONE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: 'Do&Stone White',
+                titulo: 'Do&Stone Blanc',
             },
         },
     ],
     muestras: [
         {
             imagen: muestras[0],
-            titulo: 'Black',
+            titulo: 'Noir',
         },
         {
             imagen: muestras[1],
-            titulo: 'Light',
+            titulo: 'Clair',
         },
         {
             imagen: muestras[2],
@@ -72,7 +72,7 @@ const configSTONE = {
         },
         {
             imagen: muestras[3],
-            titulo: 'White',
+            titulo: 'Blanc',
         },
     ],
     acabados: [

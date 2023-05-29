@@ -39,7 +39,7 @@ const muestrasAcabados = {
 const configCRETE = {
     titulo: 'DO&CRETE',
     descripcion:
-        'Living material, which attracts designers and planners for its way of presenting itself and changes according to the reflections of light, creating new and surprising materials.',
+        "Living material, which attracts'Matériau vivant, qui attire les designers et les aménageurs pour sa façon de se présenter et change selon les reflets de la lumière, créant des matériaux nouveaux et surprenants.', designers and planners for its way of presenting itself and changes according to the reflections of light, creating new and surprising materials.",
     imgSeleccionar,
     indicadores: [
         {
@@ -47,7 +47,7 @@ const configCRETE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'Do&Crete Blanco',
+                titulo: 'Do&Crete Blanc',
             },
         },
         {
@@ -63,7 +63,7 @@ const configCRETE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: 'Do&Crete Negro',
+                titulo: 'Do&Crete Noir',
             },
         },
         {
@@ -78,7 +78,7 @@ const configCRETE = {
     muestras: [
         {
             imagen: muestras[0],
-            titulo: 'Blanco',
+            titulo: 'Blanc',
             acabados: muestrasAcabados['BLANCO'],
         },
         {
@@ -88,7 +88,7 @@ const configCRETE = {
         },
         {
             imagen: muestras[2],
-            titulo: 'Negro',
+            titulo: 'Noir',
             acabados: muestrasAcabados['NEGRO'],
         },
         {

@@ -43,7 +43,7 @@ const muestrasAcabados = {
 const configWOOD = {
     titulo: 'DO&WOOD',
     descripcion:
-        'The natural color of the wood returns to the urban space the vitality of an intense life full of emotion, in total harmony with the environment.',
+        "La couleur naturelle du bois restitue à l'espace urbain la vitalité d'une vie intense pleine d'émotions, en totale harmonie avec l'environnement.",
     imgSeleccionar,
     indicadores: [
         {
@@ -51,7 +51,7 @@ const configWOOD = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'Do&Wood Abedul',
+                titulo: 'Do&Wood Bouleau',
             },
         },
         {
@@ -59,7 +59,7 @@ const configWOOD = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: 'Do&Wood Eucalipto',
+                titulo: 'Do&Wood Eucalyptus',
             },
         },
         {
@@ -67,7 +67,7 @@ const configWOOD = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: 'Do&Wood Encina',
+                titulo: 'Do&Wood Chêne vert',
             },
         },
         {
@@ -75,7 +75,7 @@ const configWOOD = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: 'Do&Wood Manzano',
+                titulo: 'Do&Wood Pommier',
             },
         },
         {
@@ -83,34 +83,34 @@ const configWOOD = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[4],
-                titulo: 'Do&Wood Sauce',
+                titulo: 'Do&Wood Saule ',
             },
         },
     ],
     muestras: [
         {
             imagen: muestras[0],
-            titulo: 'Abedul',
+            titulo: 'Bouleau',
             acabados: muestrasAcabados['ABEDUL'],
         },
         {
             imagen: muestras[1],
-            titulo: 'Encina',
+            titulo: 'Chêne vert',
             acabados: muestrasAcabados['ENCINA'],
         },
         {
             imagen: muestras[2],
-            titulo: 'Eucalipto',
+            titulo: 'Eucalyptus',
             acabados: muestrasAcabados['EUCALIPTO'],
         },
         {
             imagen: muestras[3],
-            titulo: 'Manzano',
+            titulo: 'Pommier',
             acabados: muestrasAcabados['MANZANO'],
         },
         {
             imagen: muestras[4],
-            titulo: 'Sauce',
+            titulo: 'Saule ',
             acabados: muestrasAcabados['SAUCE'],
         },
     ],

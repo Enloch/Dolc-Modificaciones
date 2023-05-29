@@ -58,7 +58,7 @@ const configVOLUMEN = {
         },
         {
             imagen: muestras[8],
-            titulo: 'Part 9 (relieve de prensa)',
+            titulo: 'Part 9 (soulagement de la presse)',
         },
     ],
 }

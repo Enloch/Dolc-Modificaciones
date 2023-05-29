@@ -37,7 +37,7 @@ const muestrasAcabados = {
 const configDOLM = {
     titulo: 'DO&DOLM',
     descripcion:
-        'From the desire to rediscover the essence of the original materials and their details, this stone-effect collection was born that interprets and re-proposes the mineral and massive aspect of a material that resists over time. Nature becomes a source of inspiration for these stone-effect ceramics and is reflected in the colors and combinations to create the perfect balance.',
+        "De la volonté de redécouvrir l'essence des matériaux d'origine et leurs détails, est née cette collection effet pierre qui interprète et propose à nouveau l'aspect minéral et massif d'une matière qui résiste dans le temps. La nature devient une source d'inspiration pour ces céramiques effet pierre et se reflète dans les couleurs et les combinaisons pour créer un équilibre parfait.",
     imgSeleccionar,
     indicadores: [
         {

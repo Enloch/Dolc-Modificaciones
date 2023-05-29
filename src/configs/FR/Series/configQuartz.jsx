@@ -36,7 +36,7 @@ const configQUARTZ = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: 'Do&Quartz Black',
+                titulo: 'Do&Quartz Noir',
             },
         },
         {
@@ -52,7 +52,7 @@ const configQUARTZ = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: 'Do&Quartz Grey',
+                titulo: 'Do&Quartz Gris',
             },
         },
     ],
@@ -63,7 +63,7 @@ const configQUARTZ = {
         },
         {
             imagen: muestras[1],
-            titulo: 'Black',
+            titulo: 'Noir',
         },
         {
             imagen: muestras[2],
@@ -71,7 +71,7 @@ const configQUARTZ = {
         },
         {
             imagen: muestras[3],
-            titulo: 'Grey',
+            titulo: 'Gris',
         },
     ],
     acabados: [

@@ -72,7 +72,7 @@ const muestrasAcabados = {
 const configArquitect = {
     titulo: 'DO&ARQUITECT',
     descripcion:
-        'The ARQUITECT series is the result of innovation and functionality, the union between the most advanced technique and versatility. The formats of the collection, its neutral tones and its monochrome appearance, allow it to be the star of any space.',
+        "La série ARQUITECT est le résultat de l'innovation et de la fonctionnalité, l'union entre la technique la plus avancée et la polyvalence. Les formats de la collection, ses tons neutres et son aspect monochrome lui permettent d'être le protagoniste de n'importe quel espace.",
     imgSeleccionar,
     indicadores: [
         {
@@ -80,7 +80,7 @@ const configArquitect = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[13],
-                titulo: 'Do&Arquitect Blanco',
+                titulo: 'Do&Arquitect Blanc',
             },
         },
         {
@@ -88,7 +88,7 @@ const configArquitect = {
             left: '75%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: 'Do&Arquitect Ceniza',
+                titulo: 'Do&Arquitect Cendre',
             },
         },
         {
@@ -96,7 +96,7 @@ const configArquitect = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[10],
-                titulo: 'Do&Arquitect Rojo',
+                titulo: 'Do&Arquitect Rouge',
             },
         },
         {
@@ -104,7 +104,7 @@ const configArquitect = {
             left: '75%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'Do&Arquitect Amarillo',
+                titulo: 'Do&Arquitect Jaune',
             },
         },
         {
@@ -112,7 +112,7 @@ const configArquitect = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[12],
-                titulo: 'Do&Arquitect Verde',
+                titulo: 'Do&Arquitect Vert',
             },
         },
         {
@@ -120,7 +120,7 @@ const configArquitect = {
             left: '75%',
             ambiente: {
                 imagen: ambientes[4],
-                titulo: 'Do&Arquitect Grafito',
+                titulo: 'Do&Arquitect Graphite',
             },
         },
         {
@@ -128,7 +128,7 @@ const configArquitect = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[8],
-                titulo: 'Do&Arquitect Mango',
+                titulo: 'Do&Arquitect Mangue',
             },
         },
         {
@@ -144,7 +144,7 @@ const configArquitect = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[11],
-                titulo: 'Do&Arquitect Turquesa',
+                titulo: 'Do&Arquitect Turquoise',
             },
         },
         {
@@ -152,7 +152,7 @@ const configArquitect = {
             left: '75%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: 'Do&Arquitect Azul',
+                titulo: 'Do&Arquitect Bleu',
             },
         },
         {
@@ -168,34 +168,34 @@ const configArquitect = {
             left: '75%',
             ambiente: {
                 imagen: ambientes[9],
-                titulo: 'Do&Arquitect Negro',
+                titulo: 'Do&Arquitect Noir',
             },
         },
     ],
     muestras: [
         {
             imagen: muestras[0],
-            titulo: 'Amarillo',
+            titulo: 'Jaune',
             acabados: muestrasAcabados['AMARILLO'],
         },
         {
             imagen: muestras[1],
-            titulo: 'Azul',
+            titulo: 'Bleu',
             acabados: muestrasAcabados['AZUL'],
         },
         {
             imagen: muestras[2],
-            titulo: 'Blanco',
+            titulo: 'Blanc',
             acabados: muestrasAcabados['BLANCO'],
         },
         {
             imagen: muestras[3],
-            titulo: 'Ceniza',
+            titulo: 'Cendre',
             acabados: muestrasAcabados['CENIZA'],
         },
         {
             imagen: muestras[4],
-            titulo: 'Grafito',
+            titulo: 'Graphite',
             acabados: muestrasAcabados['GRAFITO'],
         },
         {
@@ -205,32 +205,32 @@ const configArquitect = {
         },
         {
             imagen: muestras[6],
-            titulo: 'Malva',
+            titulo: 'Mauve',
             acabados: muestrasAcabados['MALVA'],
         },
         {
             imagen: muestras[7],
-            titulo: 'Mango',
+            titulo: 'Mangue',
             acabados: muestrasAcabados['MANGO'],
         },
         {
             imagen: muestras[8],
-            titulo: 'Negro',
+            titulo: 'Noir',
             acabados: muestrasAcabados['NEGRO'],
         },
         {
             imagen: muestras[9],
-            titulo: 'Rojo',
+            titulo: 'Rouge',
             acabados: muestrasAcabados['ROJO'],
         },
         {
             imagen: muestras[10],
-            titulo: 'Turquesa',
+            titulo: 'Turquoise',
             acabados: muestrasAcabados['TURQUESA'],
         },
         {
             imagen: muestras[11],
-            titulo: 'Verde',
+            titulo: 'Vert',
             acabados: muestrasAcabados['VERDE'],
         },
     ],

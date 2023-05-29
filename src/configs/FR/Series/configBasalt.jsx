@@ -20,7 +20,7 @@ const acabados = getDataFromModules(acabadosImports)
 const configBASALT = {
     titulo: 'DO&BASALT',
     descripcion:
-        'A suggestive reinterpretation of basalt at Dolcker: elegant nuances, meticulous details and soft veining are obtained with the most modern production technologies and faithfully reproduce the chromatic variations of the natural product.',
+        'Une réinterprétation suggestive du basalte chez Dolcker : des nuances élégantes, des détails minutieux et des veines douces sont obtenus grâce aux technologies de production les plus modernes et reproduisent fidèlement les variations chromatiques du produit naturel.',
     imgSeleccionar,
     indicadores: [
         {
@@ -36,7 +36,7 @@ const configBASALT = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: 'Do&Basalt Grey',
+                titulo: 'Do&Basalt Gris',
             },
         },
         {
@@ -59,7 +59,7 @@ const configBASALT = {
         },
         {
             imagen: muestras[2],
-            titulo: 'Grey',
+            titulo: 'Gris',
         },
     ],
     acabados: [

@@ -8,41 +8,46 @@ import img3 from '../../../assets/images/Dolcker/catalogo3-1-7.webp'
 import VisualizadorNota from '../../../components/VisualizadorNota'
 import Text from '../../../components/Text'
 
-import config from '../../../configs/EN/configDolcker'
+import config from '../../../configs/FR/configDolcker'
 
 const Dolcker = ({ id }) => {
     const propsVisualizador = {
-        text: 'Move the mouse over the points to see the information',
+        text: 'Déplacez la souris sur les points pour voir les informations.',
         type: 'normal',
         indicadores: config,
         imgBackground: img3,
-        alt: 'Imagen de fondo con indicadores',
+        alt: 'Image de fond avec indicateurs',
     }
 
     return (
         <StyledDolcker id={id} backgroundColor={COLORS.gray02}>
-            <Titulo>Dolcker solves</Titulo>
+            <Titulo>Dolcker résout</Titulo>
             <div className='dolcker-info'>
                 <ImageWithCaption
                     src={img2}
                     alt='Imagen Dolcker 2'
-                    caption='DOLCKER &CLIP SYSTEM Mechanical and elastic safety in the same system'
+                    caption='DOLCKER &CLIP SYSTEM Sécurité mécanique et élastique dans le même système'
                 />
                 <Text>
-                    The first ful&body continuous groove system,{' '}
-                    <strong>with endless modulation possibilities.</strong> The
-                    DOLCKER system allows the design of facades, with technical
-                    solutions for the development of raised floors, ceilings, as
-                    well as window surrounds, crown caps, always using the same
-                    material.
+                    Le premier ful&body système de rainurage continu,{' '}
+                    <strong>
+                        avec des possibilités de modulation infinies.
+                    </strong>{' '}
+                    Le système DOLCKER permet de concevoir des façades, avec des
+                    solutions techniques pour l'aménagement de planchers
+                    surélevés. des solutions techniques pour l'aménagement de
+                    planchers surélevés, plafonds, ainsi que des encadrements de
+                    fenêtres, des couronnes, en utilisant toujours le même
+                    matériau. en utilisant toujours le même matériau.
                     <br />
                     <br />
-                    The ful&body technology allows the design of continuous
-                    building edges.
+                    La technologie ful&body permet de concevoir des arêtes de
+                    continues.
                     <br />
                     <br />
-                    DOLCKER has developed 4 high security placement systems for
-                    technicians to design unique buildings.
+                    DOLCKER a développé 4 systèmes de placement de haute
+                    sécurité pour les techniciens pour concevoir des bâtiments
+                    uniques.
                 </Text>
             </div>
             <VisualizadorNota {...propsVisualizador} />

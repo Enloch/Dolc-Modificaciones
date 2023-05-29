@@ -5,12 +5,12 @@ import { COLORS } from '../../../global/GlobalStyles'
 import StyledDisenos from './styles'
 import img1 from '../../../assets/images/Diseno/catalogo3-1-14.webp'
 import fondo from '../../../assets/images/Diseno/Formato/fondo.webp'
-import indicadoresFormato from '../../../utils/en/indicadoresFormato'
+import indicadoresFormato from '../../../utils/fr/indicadoresFormato'
 import Anotacion from '../../../components/Anotacion'
 import VisualizadorVariaciones from '../../../components/VisualizadorVariaciones'
 import Anotaciones from '../../../components/Anotacion/Anotaciones'
 import VisualizadorRotador from '../../../components/VisualizadorRotador'
-import config from '../../../configs/EN/configPiezasEspeciales'
+import config from '../../../configs/FR/configPiezasEspeciales'
 import configAcabados from '../../../configs/configAcabados'
 import Series from './06_2_Series'
 import ranurado11 from '../../../assets/images/Diseno/Espesores/ranurado11mm.webp'
@@ -22,13 +22,13 @@ import IndiceSeries from './06_1_IndiceSeries'
 const Disenos = ({ id }) => {
     const propsFormato = {
         anotacion: {
-            text: 'Click on the point to see the formatting possibilities',
+            text: 'Cliquez sur le point pour voir les possibilités de mise en forme',
             type: 'click',
         },
         visualizador: {
             config: indicadoresFormato,
             srcfondo: fondo,
-            altFondo: 'Imagen de fondo con indicadores',
+            altFondo: 'Image de fond avec indicateurs',
         },
     }
 
@@ -43,7 +43,7 @@ const Disenos = ({ id }) => {
                     columnSpan='6'
                 />
                 <Cita
-                    cita='“Simplicity taken to the extreme becomes elegance.”'
+                    cita="“La simplicité poussée à l'extrême devient élégance.”"
                     author='John Franklin'
                     colorAutor={COLORS.gray05}
                 />
@@ -58,11 +58,11 @@ const Disenos = ({ id }) => {
                 <Anotaciones>
                     <Anotacion
                         type='normal'
-                        text='Click on the point to see all the possibilities of special pieces'
+                        text='Cliquez sur le point pour voir toutes les possibilités de pièces spéciales'
                     />
                     <Anotacion
                         type='swipe'
-                        text='Swipe with your mouse or finger to appreciate the texture'
+                        text='Balayez avec votre souris ou votre doigt pour apprécier la texture.'
                     />
                 </Anotaciones>
                 <VisualizadorDesplazador config={configAcabados} />
@@ -72,50 +72,50 @@ const Disenos = ({ id }) => {
                 backgroundColor={COLORS.gray01}
                 isEspesores
             >
-                <Titulo2>Thicknesses</Titulo2>
+                <Titulo2>Épaisseurs</Titulo2>
                 <div className='espesor espesor-1'>
                     <img src={ranurado11} alt='' />
                     <ul>
                         <strong>TC 11 / 11 mm.</strong>
-                        <li>Floor</li>
-                        <li>Ceiling</li>
-                        <li>Facade</li>
+                        <li>Plancher</li>
+                        <li>Plafond</li>
+                        <li>Façade</li>
                     </ul>
                 </div>
                 <div className='espesor espesor-2'>
                     <img src={ranurado14} alt='' />
                     <ul>
                         <strong>TC 14 / 14 mm.</strong>
-                        <li>Floor</li>
-                        <li>Ceiling</li>
-                        <li>Facade</li>
-                        <li>Fence</li>
+                        <li>Plancher</li>
+                        <li>Plafond</li>
+                        <li>Façade</li>
+                        <li>Clôture</li>
                     </ul>
                 </div>
                 <div className='espesor espesor-3'>
                     <img src={ranurado20} alt='' />
                     <ul>
                         <strong>TC 20 / 20 mm.</strong>
-                        <li>Raised floor</li>
-                        <li>Facade</li>
-                        <li>Fence</li>
-                        <li>Covers</li>
-                        <li>Flashing</li>
-                        <li>Rack</li>
-                        <li>Step</li>
+                        <li>Plancher surélevé</li>
+                        <li>Façade</li>
+                        <li>Clôture</li>
+                        <li>Couvertures</li>
+                        <li>Gouttière</li>
+                        <li>Grille</li>
+                        <li>Marche</li>
                     </ul>
                 </div>
             </StyledDisenos>
             <StyledDisenos id={id[5]} backgroundColor={COLORS.gray01}>
-                <Titulo2>Special pieces</Titulo2>
+                <Titulo2>Pièces spéciales</Titulo2>
                 <Anotaciones>
                     <Anotacion
                         type='normal'
-                        text='Click on the point to see all the possibilities of special pieces'
+                        text='Cliquez sur le point pour voir toutes les possibilités de pièces spéciales.'
                     />
                     <Anotacion
                         type='swipe'
-                        text='Swipe with your mouse or finger to rotate the image 360º'
+                        text="Faites glisser votre souris ou votre doigt pour faire pivoter l'image à 360ºFaites glisser votre souris ou votre doigt pour faire pivoter l'image à 360º."
                     />
                 </Anotaciones>
                 <VisualizadorRotador config={config} />

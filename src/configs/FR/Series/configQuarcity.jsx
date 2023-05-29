@@ -55,7 +55,7 @@ const configQUARCITY = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: 'Do&Quarcity Black',
+                titulo: 'Do&Quarcity Noir',
             },
         },
         {
@@ -71,7 +71,7 @@ const configQUARCITY = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: 'Do&Quarcity Grey',
+                titulo: 'Do&Quarcity Gris',
             },
         },
     ],
@@ -83,7 +83,7 @@ const configQUARCITY = {
         },
         {
             imagen: muestras[1],
-            titulo: 'Black',
+            titulo: 'Noir',
             acabados: muestrasAcabados['BLACK'],
         },
         {
@@ -93,7 +93,7 @@ const configQUARCITY = {
         },
         {
             imagen: muestras[3],
-            titulo: 'Grey',
+            titulo: 'Gris',
             acabados: muestrasAcabados['GREY'],
         },
     ],

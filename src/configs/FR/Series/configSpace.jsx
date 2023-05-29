@@ -55,7 +55,7 @@ const configSPACE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: 'Do&Space Ivory',
+                titulo: 'Do&Space Ivoire',
             },
         },
         {
@@ -63,7 +63,7 @@ const configSPACE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: 'Do&Space Dark',
+                titulo: 'Do&Space Sombre',
             },
         },
         {
@@ -71,7 +71,7 @@ const configSPACE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: 'Do&Space Black',
+                titulo: 'Do&Space Noir',
             },
         },
         {
@@ -79,7 +79,7 @@ const configSPACE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'Do&Space White',
+                titulo: 'Do&Space Blanc',
             },
         },
         {
@@ -87,7 +87,7 @@ const configSPACE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[4],
-                titulo: 'Do&Space Soft',
+                titulo: 'Do&Space Douce',
             },
         },
         {
@@ -102,22 +102,22 @@ const configSPACE = {
     muestras: [
         {
             imagen: muestras[0],
-            titulo: 'Black',
+            titulo: 'Noir',
             acabados: muestrasAcabados['BLACK'],
         },
         {
             imagen: muestras[1],
-            titulo: 'Dark',
+            titulo: 'Sombre',
             acabados: muestrasAcabados['DARK'],
         },
         {
             imagen: muestras[2],
-            titulo: 'Ivory',
+            titulo: 'Ivoire',
             acabados: muestrasAcabados['IVORY'],
         },
         {
             imagen: muestras[3],
-            titulo: 'Soft',
+            titulo: 'Douce',
             acabados: muestrasAcabados['SOFT'],
         },
         {
@@ -127,7 +127,7 @@ const configSPACE = {
         },
         {
             imagen: muestras[5],
-            titulo: 'White',
+            titulo: 'Blanc',
             acabados: muestrasAcabados['WHITE'],
         },
     ],

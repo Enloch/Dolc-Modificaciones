@@ -45,27 +45,27 @@ const config = {
         selectores: [
             {
                 selectorImg: selectores[0],
-                titulo: 'Coping',
+                titulo: 'Chapes',
                 rotador: albardillaImports,
             },
             {
                 selectorImg: selectores[3],
-                titulo: 'Steps',
+                titulo: 'Marches',
                 menu: {
                     selectores: [
                         {
                             selectorImg: selectores[3],
-                            titulo: 'Tipo 1',
+                            titulo: 'Type 1',
                             rotador: peldano1Imports,
                         },
                         {
                             selectorImg: selectores[4],
-                            titulo: 'Tipo 2',
+                            titulo: 'Type 2',
                             rotador: peldano2Imports,
                         },
                         {
                             selectorImg: selectores[5],
-                            titulo: 'Tipo 3',
+                            titulo: 'Type 3',
                             rotador: peldano3Imports,
                         },
                     ],
@@ -73,22 +73,22 @@ const config = {
             },
             {
                 selectorImg: selectores[7],
-                titulo: 'Rack',
+                titulo: 'Grille',
                 rotador: rejillaImports,
             },
             {
                 selectorImg: selectores[8],
-                titulo: 'Raised floor',
+                titulo: 'Plancher surélevé',
                 rotador: sueloElevadoImports,
             },
             {
                 selectorImg: selectores[9],
-                titulo: 'Techo',
+                titulo: 'Toit',
                 rotador: techoImports,
             },
             {
                 selectorImg: selectores[10],
-                titulo: 'Flashing',
+                titulo: 'Gouttière',
                 rotador: vierteaguasImports,
             },
         ],

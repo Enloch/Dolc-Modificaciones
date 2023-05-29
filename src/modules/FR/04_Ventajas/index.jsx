@@ -9,35 +9,45 @@ import Listado from '../../../components/Listado'
 const Ventajas = ({ id }) => {
     return (
         <StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-            <Titulo>ADVANTAGES OF THE DOLCKER SYSTEM</Titulo>
+            <Titulo>AVANTAGES DU DOLCKER SYSTEM</Titulo>
             <ImageWithCaption
                 src={img1}
-                alt='Imagen de Ventajas 1'
+                alt='Avantage Image 1'
                 caption='DOLCKER &CLIP. Do &Conce Gris+Do&Arquitect'
                 columnSpan='6'
             />
             <Text>
-                It has an improved technical{' '}
-                <strong>fixing development for ventilated facades,</strong> to
-                adapt to both the aesthetic and functional needs of the project.
+                Il est doté d'une technique améliorée{' '}
+                <strong>
+                    développement de la fixation pour les façades ventilées,
+                </strong>{' '}
+                pour s'adapter aux besoins esthétiques et fonctionnels du
+                projet.
             </Text>
             <Listado>
-                <li>Hidden mechanical fixing system + elastic fixing</li>
-                <li>Detachable system</li>
-                <li>Sliding clip (safety for scaffolding bracing parts)</li>
-                <li>High inertia continuous profile to support high loads</li>
-                <li>Factory calibrated continuous groove</li>
-                <li>Free placement system</li>
-                <li>Many part sizes</li>
-                <li>Tailor-made exploded view</li>
-                <li>Different thicknesses of pieces (11, 14 and 20 mm)</li>
-                <li>System developed for gaps up to 20 cm</li>
-                <li>Pieces with &quot;full body &quot; edge</li>
                 <li>
-                    Manufacture of pieces with matte, flamed and honed textures
+                    Système de fixation mécanique caché + fixation élastique
                 </li>
-                <li>Quick and safe assembly</li>
-                <li>Versatile system when designing the façade</li>
+                <li>Système amovible</li>
+                <li>
+                    Clip coulissant (sécurité pour les pièces d'échafaudage)
+                </li>
+                <li>
+                    Profil continu à forte inertie pour supporter des charges
+                    élevées
+                </li>
+                <li>Rainure continue étalonnée en usine</li>
+                <li>Système autoportant</li>
+                <li>Multitude de tailles de pièces</li>
+                <li>Découpage à mi-hauteur</li>
+                <li>Différentes épaisseurs de pièces(11, 14 and 20 mm)</li>
+                <li>Système développé pour les caméras jusqu'à 20 cm</li>
+                <li>Pièces avec bord exposé &quot;full body &quot;</li>
+                <li>
+                    Fabrication de pièces texturées mates, flammées et adoucies
+                </li>
+                <li>Assemblage rapide et sûr</li>
+                <li>Système polyvalent pour la conception de façades</li>
             </Listado>
         </StyledVentajas>
     )

@@ -42,8 +42,7 @@ const muestrasAcabados = {
 
 const configPORTLAND = {
     titulo: 'DO&PORTLAND',
-    descripcion:
-        'Cement constitutes, for architecture and design, an aesthetic and project resource, a material that allows the creation of spectacular effects but also minimalist spaces, with a great versatility of materials and composition.',
+    descripcion: '',
     imgSeleccionar,
     indicadores: [
         {
@@ -67,7 +66,7 @@ const configPORTLAND = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: 'Do&Portland Negro',
+                titulo: 'Do&Portland Noir',
             },
         },
         {
@@ -75,7 +74,7 @@ const configPORTLAND = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'Do&Portland Blanco',
+                titulo: 'Do&Portland Blanc',
             },
         },
         {
@@ -83,14 +82,14 @@ const configPORTLAND = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: 'Do&Portland Nacar',
+                titulo: 'Do&Portland Nacre',
             },
         },
     ],
     muestras: [
         {
             imagen: muestras[0],
-            titulo: 'Blanco',
+            titulo: 'Blanc',
             acabados: muestrasAcabados['BLANCO'],
         },
         {
@@ -100,12 +99,12 @@ const configPORTLAND = {
         },
         {
             imagen: muestras[2],
-            titulo: 'Nacar',
+            titulo: 'Nacre',
             acabados: muestrasAcabados['NACAR'],
         },
         {
             imagen: muestras[3],
-            titulo: 'Negro',
+            titulo: 'Noir',
             acabados: muestrasAcabados['NEGRO'],
         },
         {

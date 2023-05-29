@@ -2,25 +2,25 @@ import { useRef, useState } from 'react'
 import Anotacion from '../../../../components/Anotacion'
 import FullScreen from '../../../../components/FullScreen'
 import VisualizadorVariaciones from '../../../../components/VisualizadorVariaciones'
-import configArquitect from '../../../../configs/EN/Series/configArquitect'
-import configBASALT from '../../../../configs/EN/Series/configBasalt'
-import configCRETE from '../../../../configs/EN/Series/configCrete'
-import configDOLM from '../../../../configs/EN/Series/configDolm'
-import configMARBLE from '../../../../configs/EN/Series/configMarble'
-import configPORTLAND from '../../../../configs/EN/Series/configPortland'
-import configQUARCITY from '../../../../configs/EN/Series/configQuarcity'
-import configQUARTZ from '../../../../configs/EN/Series/configQuartz'
-import configSPACE from '../../../../configs/EN/Series/configSpace'
-import configSTONE from '../../../../configs/EN/Series/configStone'
-import configTERRAZO from '../../../../configs/EN/Series/configTerrazo'
-import configTZMENT from '../../../../configs/EN/Series/configTzment'
-import configVOLUMEN from '../../../../configs/EN/Series/configVolumen'
-import configWOOD from '../../../../configs/EN/Series/configWood'
+import configArquitect from '../../../../configs/FR/Series/configArquitect'
+import configBASALT from '../../../../configs/FR/Series/configBasalt'
+import configCRETE from '../../../../configs/FR/Series/configCrete'
+import configDOLM from '../../../../configs/FR/Series/configDolm'
+import configMARBLE from '../../../../configs/FR/Series/configMarble'
+import configPORTLAND from '../../../../configs/FR/Series/configPortland'
+import configQUARCITY from '../../../../configs/FR/Series/configQuarcity'
+import configQUARTZ from '../../../../configs/FR/Series/configQuartz'
+import configSPACE from '../../../../configs/FR/Series/configSpace'
+import configSTONE from '../../../../configs/FR/Series/configStone'
+import configTERRAZO from '../../../../configs/FR/Series/configTerrazo'
+import configTZMENT from '../../../../configs/FR/Series/configTzment'
+import configVOLUMEN from '../../../../configs/FR/Series/configVolumen'
+import configWOOD from '../../../../configs/FR/Series/configWood'
 import { COLORS } from '../../../../global/GlobalStyles'
 import Serie from './Serie'
 
 import fondo from '../../../../assets/images/VolumenVariacion/fondo.jpg'
-import configVolumenSelectores from '../../../../configs/EN/configVolumenVariacion'
+import configVolumenSelectores from '../../../../configs/FR/configVolumenVariacion'
 import { useListaCambios } from '../../../../contexts/MultipleOptionsContext'
 import Anotaciones from '../../../../components/Anotacion/Anotaciones'
 import createPDF from '../../../../utils/createPDF'
@@ -34,16 +34,16 @@ const Series = ({ ids }) => {
         useListaCambios()
     const propsFormato = {
         anotacionPDF: {
-            text: 'Click here to download a PDF of your placement',
+            text: 'Cliquez ici pour télécharger un PDF de votre placement',
             type: 'pdf',
             onClick: () => createPDF(visRef),
         },
         anotacion2: {
-            text: 'Select the areas where you want to apply the part',
+            text: 'Sélectionnez les zones où vous souhaitez appliquer la pièce',
             type: 'normal',
         },
         anotacion: {
-            text: 'Click on the point to select the part to be applied.',
+            text: 'Cliquez sur le point pour sélectionner la partie à appliquer.',
             type: 'click',
         },
         visualizador: {

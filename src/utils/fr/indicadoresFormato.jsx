@@ -22,18 +22,18 @@ const config = {
                 selectores: [
                     {
                         selectorImg: selects[21],
-                        titulo: 'Free lengths',
+                        titulo: 'Longueurs libres',
                         menu: {
                             seleccionado: 0,
                             selectores: [
                                 {
                                     selectorImg: selects[21],
-                                    titulo: 'Free lengths 1',
+                                    titulo: 'Longueurs libres 1',
                                     primerPlano: backgrounds[16],
                                 },
                                 {
                                     selectorImg: selects[28],
-                                    titulo: 'Free lengths 2',
+                                    titulo: 'Longueurs libres 2',
                                     primerPlano: backgrounds[26],
                                 },
                             ],
@@ -41,7 +41,7 @@ const config = {
                     },
                     {
                         selectorImg: selects[25],
-                        titulo: 'Line colors',
+                        titulo: 'Couleurs des lignes',
                         primerPlano: {
                             bg: backgrounds[1],
                             another: Children.toArray([
@@ -132,47 +132,47 @@ const config = {
                             selectores: [
                                 {
                                     selectorImg: selects[13],
-                                    titulo: 'Modular 1',
+                                    titulo: 'Modulaire 1',
                                     primerPlano: backgrounds[17],
                                 },
                                 {
                                     selectorImg: selects[14],
-                                    titulo: 'Modular 2',
+                                    titulo: 'Modulaire 2',
                                     primerPlano: backgrounds[18],
                                 },
                                 {
                                     selectorImg: selects[15],
-                                    titulo: 'Modular 3',
+                                    titulo: 'Modulaire 3',
                                     primerPlano: backgrounds[19],
                                 },
                                 {
                                     selectorImg: selects[16],
-                                    titulo: 'Modular 4',
+                                    titulo: 'Modulaire 4',
                                     primerPlano: backgrounds[20],
                                 },
                                 {
                                     selectorImg: selects[17],
-                                    titulo: 'Modular 5',
+                                    titulo: 'Modulaire 5',
                                     primerPlano: backgrounds[21],
                                 },
                                 {
                                     selectorImg: selects[18],
-                                    titulo: 'Modular 6',
+                                    titulo: 'Modulaire 6',
                                     primerPlano: backgrounds[22],
                                 },
                                 {
                                     selectorImg: selects[20],
-                                    titulo: 'Modular 7',
+                                    titulo: 'Modulaire 7',
                                     primerPlano: backgrounds[23],
                                 },
                                 {
                                     selectorImg: selects[22],
-                                    titulo: 'Modular 8',
+                                    titulo: 'Modulaire 8',
                                     primerPlano: backgrounds[24],
                                 },
                                 {
                                     selectorImg: selects[23],
-                                    titulo: 'Modular 9',
+                                    titulo: 'Modulaire 9',
                                     primerPlano: backgrounds[25],
                                 },
                             ],

@@ -8,7 +8,7 @@ const IndiceSeries = ({ id }) => {
 
     return (
         <StyledIndiceSeries id={id} backgroundColor={COLORS.gray02}>
-            <Titulo2>SERIES</Titulo2>
+            <Titulo2>SÉRIES</Titulo2>
             {enlacesSeries}
         </StyledIndiceSeries>
     )

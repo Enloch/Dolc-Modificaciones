@@ -9,7 +9,7 @@ const config = [
         left: '37.6%',
         content: {
             imgSrc: piezas[6],
-            title: 'Fences',
+            title: 'Clôtures',
         },
     },
     {
@@ -17,7 +17,7 @@ const config = [
         left: '65%',
         content: {
             imgSrc: piezas[0],
-            title: 'Coronation cap',
+            title: 'Casquette de couronnement',
         },
     },
     {
@@ -25,7 +25,7 @@ const config = [
         left: '44.5%',
         content: {
             imgSrc: piezas[2],
-            title: 'Ventilated facade',
+            title: 'Façade ventilée',
         },
     },
     {
@@ -33,7 +33,7 @@ const config = [
         left: '21%',
         content: {
             imgSrc: piezas[1],
-            title: 'Full body corner',
+            title: 'Coin du corps entier',
         },
     },
     {
@@ -41,7 +41,7 @@ const config = [
         left: '51%',
         content: {
             imgSrc: piezas[7],
-            title: 'Ceiling grid',
+            title: 'Grille de plafond',
         },
     },
     {
@@ -49,7 +49,7 @@ const config = [
         left: '83.3%',
         content: {
             imgSrc: piezas[8],
-            title: 'Raised floor',
+            title: 'Plancher surélevé',
         },
     },
     {
@@ -57,7 +57,7 @@ const config = [
         left: '34%',
         content: {
             imgSrc: piezas[7],
-            title: 'Pool grid',
+            title: 'Grille de la piscine',
         },
     },
     {
@@ -65,7 +65,7 @@ const config = [
         left: '66%',
         content: {
             imgSrc: piezas[4],
-            title: 'Step',
+            title: 'Marche',
         },
     },
 ]
