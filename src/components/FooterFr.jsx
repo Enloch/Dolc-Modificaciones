@@ -18,8 +18,8 @@ const Footer = () => {
     return (
         <footer>
             <ButtonContainer>
-                <Button href='/en/aviso-legal'>Legal</Button>
-                <Button href='/en/politica-privacidad'>
+                <Button href='/fr/aviso-legal'>Legal</Button>
+                <Button href='/fr/politica-privacidad'>
                     Politique de confidentialité
                 </Button>
                 <Button href='/'>ES</Button>
