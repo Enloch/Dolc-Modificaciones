@@ -40,6 +40,11 @@ const Indice = ({ indiceRef }) => {
                     <Link to='#' className='seleccionado'>
                         EN
                     </Link>
+                    <Link
+                        to='/fr/fachadas-ventiladas/dolcker-system'
+                    >
+                        FR
+                    </Link>
                 </div>
             </StyledIndice>
             {menuDesplegable}

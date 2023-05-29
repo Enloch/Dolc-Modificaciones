@@ -22,6 +22,7 @@ const Footer = () => {
                 <Button href='/politica-privacidad'>Privacidad</Button>
                 <Button href='/'>ES</Button>
                 <Button href='/en'>EN</Button>
+                <Button href='/fr'>FR</Button>
             </ButtonContainer>
         </footer>
     )

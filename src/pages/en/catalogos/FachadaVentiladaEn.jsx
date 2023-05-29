@@ -37,7 +37,7 @@ const FachadaVentiladaEn = () => {
 
     return (
         <MultipleOptionsProvider>
-            <Introduccion indiceRef={indiceRef} />
+            {/* <Introduccion indiceRef={indiceRef} /> */}
             <Indice id='indice' indiceRef={indiceRef} />
             <Dolcker id='dolcker' />
             <Ventajas id='ventajas' />

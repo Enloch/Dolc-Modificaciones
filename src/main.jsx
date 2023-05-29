@@ -18,6 +18,8 @@ import QuienesSomosEn from './pages/en/QuienesSomoEn'
 import FachadaVentiladaEn from './pages/en/catalogos/FachadaVentiladaEn'
 import Contacto from './pages/Contacto'
 import PaginaImagenes from './pages/PaginaImagen'
+import MainFr from './pages/fr/MainFr'
+import FachadaVentiladaFr from './pages/fr/catalogos/FachadaVentiladaFr'
 ReactDOM.createRoot(document.getElementById('root')).render(
     <>
         <ResetStyles />
@@ -37,7 +39,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                     path='/fachadas-ventiladas/dolcker-G10'
                     element={<DolckerG10 />}
                 />
-
                 <Route
                     path='/fachadas-ventiladas/dolcker-escamas'
                     element={<Escamas />}
@@ -54,7 +55,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                     path='/politica-privacidad'
                     element={<PoliticaPrivacidad />}
                 />
-
+                {/* EN */}
                 <Route
                     path='/en/fachadas-ventiladas/dolcker-system'
                     element={<FachadaVentiladaEn />}
@@ -69,6 +70,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <Route
                     path='/en/politica-privacidad'
                     element={<PoliticaPrivacidad lang='en' />}
+                />
+                {/* FR */}
+                <Route path='/fr/' element={<MainFr />} />
+                <Route
+                    path='/fr/fachadas-ventiladas/dolcker-system'
+                    element={<FachadaVentiladaFr />}
                 />
             </Routes>
         </BrowserRouter>

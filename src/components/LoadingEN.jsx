@@ -7,17 +7,6 @@ import Logo from '../assets/images/Inicio/logo.png'
 const Loading = ({ onButtonClick }) => {
     return (
         <LoadingPage>
-            <ButtonsContainer>
-                {/* Añade enlaces a los botones */}
-                <Button href='/contacto'>Contact</Button>
-                <Button href='/quienes-somos'>About Us</Button>
-                <Button href='/'>
-                    <strong>ES</strong>
-                </Button>
-                <Button href='/en'>
-                    <strong>EN</strong>
-                </Button>
-            </ButtonsContainer>
             <LoadingContainer>
                 <LoadingTitle src={Logo} />
                 <LoadingSubtitle>

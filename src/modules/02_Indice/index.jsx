@@ -61,6 +61,7 @@ const Indice = ({ indiceRef }) => {
                         ES
                     </Link>
                     <Link to='/en/fachadas-ventiladas/dolcker-system'>EN</Link>
+                    <Link to='/fr/fachadas-ventiladas/dolcker-system'>FR</Link>
                 </div>
             </StyledIndice>
             {menuDesplegable}
