@@ -13,144 +13,155 @@ const Caracteristicas = ({ id }) => {
     return (
         <>
             <StyledCaracteristicas id={id[0]} backgroundColor={COLORS.gray02}>
-                <Titulo>TECHNICAL CHARACTERISTICS</Titulo>
+                <Titulo>CARACTÉRISTIQUES TECHNIQUES</Titulo>
                 <ImageWithCaption
                     src={caracter1}
                     alt='características técnicas imagen'
                     columnSpan='6'
                 />
                 <Text>
-                    DOLCKER is a compact, resistant material characterized by an
-                    almost non-existent porosity and by less than 0.1% water
+                    DOLCKER est un matériau compact et résistant caractérisé par
+                    une porosité quasi inexistante et par moins de 0,1% d'eau
                     absorption.
                     <br />
                     <br />
-                    Its vitrified structure, with a low degree of porosity,
-                    guarantees high impermeability to dirt and ice.
+                    Sa structure vitrifiée, à faible degré de porosité, garantit
+                    une haute imperméabilité à la saleté et à la glace.
                     <br />
                     <br />
-                    full&body body
+                    full&body corp
                     <br />
                     <br />
-                    The advantages of a unique material.
+                    Les avantages d'un matériau unique.
                 </Text>
                 <Listado>
                     <li>
                         <strong>
-                            Wide range of colors, formats, thicknesses and
-                            finishes.
+                            Large gamme de couleurs, formats, épaisseurs et
+                            finitions.
                         </strong>
                     </li>
                     <li>
-                        <strong>It's antacid.</strong> It is insensitive to the
-                        most widespread acids (it does not resist the attack of
-                        hydrofluoric acid).
+                        <strong>C'est antiacide.</strong>Il est insensible à les
+                        acides les plus répandus (il ne résiste pas à l'attaque
+                        d'acide fluorhydrique).
                     </li>
                     <li>
-                        <strong>It is resistant.</strong> Resistant to abrasion
-                        and wear more than any natural material.
+                        <strong>Il est résistant.</strong> Résistant à
+                        l'abrasion et porter plus que n'importe quel matériau
+                        naturel.
                     </li>
                     <li>
-                        <strong>Not fuel.</strong> The material does not burn or
-                        produce toxic-harmful gases or fumes in case of fire or
-                        exposure to flames.
+                        <strong>Incombustible.</strong> Le matériau ne brûle pas
+                        ou ne produit pas de gaz ou de fumées nocifs en cas
+                        d'incendie ou d'exposition aux flammes. en cas
+                        d'incendie ou d'exposition aux flammes.
                     </li>
                     <li>
                         <strong>
-                            Does not retain organic substances and bacteria,
-                            cause of allergies and disturbances.
+                            Il ne retient pas les substances organiques et les
+                            bactéries, qui sont la cause d'allergies et de
+                            troubles.
                         </strong>
                     </li>
                     <li>
-                        <strong>Easy to work with.</strong> The product lends
-                        itself to being worked (cut, drilled, etc.) like natural
-                        stone to satisfy any type of customization.
+                        <strong>Facile à travailler.</strong> Le produit se
+                        prête se prête à être travaillé (coupé, percé, etc.)
+                        comme la pierre comme la pierre naturelle pour répondre
+                        à tout type de personnalisation.
                     </li>
                     <li>
-                        <strong>It is unassailable.</strong> No problem with hot
-                        pots or lighted cigarettes, which on the contrary damage
-                        wood, plastic laminates or resin agglomerates.
+                        <strong>Il est inattaquable.</strong> No problem with
+                        with hot pots or lit cigarettes, which can otherwise
+                        damage wood damage wood, plastic or resin-bonded
+                        laminates. plastic or resin-bonded laminates.
                     </li>
                     <li>
-                        <strong>Easy to clean.</strong> It is possible to use
-                        very strong detergents or solvents without the danger of
-                        damaging the material.
+                        <strong>Facile à nettoyer.</strong>Il est possible Il
+                        est possible d'utiliser des détergents ou des solvants
+                        très puissants sans risquer d'endommager le matériel.
+                        risque d'endommager le matériau.
                     </li>
                     <li>
-                        <strong>Frost resistant.</strong> The material is
-                        resistant to cold and ice.
+                        <strong>Résistant au gel.</strong> Le matériau est
+                        résistant au froid et à la glace.
                     </li>
                     <li>
-                        <strong>Chromatic stable.</strong> The colors are
-                        completely stable and are not altered by exposure to the
-                        sun, atmospheric agents or smog.
+                        <strong>Stabilité chromatique.</strong> Les couleurs
+                        sont complètement stables et ne sont pas altérées par
+                        l'exposition au soleil au soleil, aux agents
+                        atmosphériques ou au smog.
                     </li>
                 </Listado>
                 <Text>
-                    <strong>ECOLOGICAL</strong>
+                    <strong>ECOLOGIQUE</strong>
                     <br />
                     <br />
-                    It does not contain chemical waterproofing agents, varnishes
-                    or resins, it does not emit exhalations even with the heat
-                    of a flame. Contrary to some natural stones, it does not
-                    emit Radon or other radioactive gases and it is not polished
-                    with lead. It is produced respecting the environment.
+                    Il ne contient pas d'imperméabilisants chimiques, de vernis
+                    ou de résines. résines, il n'émet pas d'exhalaisons même à
+                    la chaleur d'une d'une flamme. Contrairement à certaines
+                    pierres naturelles, elle n'émet pas de Radon ou d'autres gaz
+                    radioactifs et n'est pas polie. Radon ou d'autres gaz
+                    radioactifs et n'est pas polie au plomb. avec du plomb. Elle
+                    est produite dans le respect de l'environnement.
                     <br />
                     <br />
                     <strong>
-                        RESISTANCE TO SURPASS CHANGES IN TEMPERATURE
+                        LA RÉSISTANCE AUX CHANGEMENTS BRUSQUES DE TEMPÉRATURE
                     </strong>
                     <br />
                     <br />
                     <strong>
-                        BENDING STRENGTH WITH FIXED AND STATIC LOADS
+                        RÉSISTANCE À LA FLEXION SOUS CHARGES FIXE ET STATIQUE
                     </strong>
                     <br />
                     <br />
-                    <strong>RESISTANCE TO IMPACT AND ABRASION SAFETY</strong>
+                    <strong>
+                        RÉSISTANCE AUX CHOCS, RÉSISTANCE À L'ABRASION SÉCURITÉ
+                    </strong>
                 </Text>
                 <Listado>
-                    <li>Negligible moisture expansion</li>
-                    <li>Fireproof</li>
-                    <li>Flame retardant</li>
-                    <li>Absence of danger in case of fire</li>
-                    <li>Electrical safety</li>
+                    <li>Extension d'humidité négligeable</li>
+                    <li>Ignifuge</li>
+                    <li>Ignifuge</li>
+                    <li>Absence de danger en cas d'incendie</li>
+                    <li>Sécurité électrique</li>
                 </Listado>
                 <Text>
-                    <strong>HEALTH & WELLNESS</strong>
+                    <strong>SANTÉ ET BIEN-ÊTRE</strong>
                 </Text>
                 <Listado>
-                    <li>Lack of own or acquired odor</li>
-                    <li>Resistance to self-dust release</li>
-                    <li>Ease of cleaning dust acquired</li>
-                    <li>Easy cleaning and maintenance</li>
+                    <li>Absence d'odeur propre ou acquise</li>
+                    <li>Résistance à la libération de sa propre poussière</li>
+                    <li>Poussière acquise facile à nettoyer</li>
+                    <li>Nettoyage et entretien faciles</li>
                     <li>
-                        It is a product that, due to its electrical insulating
-                        capacity, prevents the capture of electrically active
-                        environmental dust.
+                        C'est un produit qui, en raison de sa capacité isolante
+                        électrique, empêche l'accumulation de poussière
+                        environnementale électriquement actif
                     </li>
-                    <li>Suitable where water use is abundant</li>
+                    <li>Convient là où la consommation d'eau est abondante</li>
                     <li>
-                        It is the definitive installation: it does not require
-                        any maintenance after its installation.
+                        C'est l'installation définitive : vous n'avez besoin
+                        d'aucune entretien après mise en service
                     </li>
                 </Listado>
             </StyledCaracteristicas>
             <StyledCaracteristicas id={id[1]} backgroundColor={COLORS.gray02}>
-                <Titulo>TECHNICAL DATA</Titulo>
+                <Titulo>DONNÉES TECHNIQUES</Titulo>
                 <ImageWithCaption
                     src={caracter2}
                     alt='características dimensionales y mecanicas'
                     columnSpan='6'
                 />
                 <Text>
-                    <strong>PHYSICAL AND MECHANICAL CHARACTERISTICS</strong>
+                    <strong>CARACTERISTIQUES PHYSIQUES ET MECANIQUES</strong>
                     <br />
                     <br />
-                    Ceramic pieces are classified as dry-pressed ceramic tiles
-                    with low water absorption according to the UNE-EN 14411
-                    standard, with the following characteristics declared by the
-                    manufacturer:
+                    Les pièces en céramique sont classées comme carreaux de
+                    céramique pressés à sec à faible absorption d'eau selon la
+                    norme UNE-EN 14411 standard, avec les caractéristiques
+                    suivantes déclarées par le fabricant:
                 </Text>
                 <ImageWithCaption
                     src={caracter3}

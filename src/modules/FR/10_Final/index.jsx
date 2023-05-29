@@ -11,28 +11,32 @@ const Final = ({ invert = false }) => {
         <StyledFinal backgroundColor={bgColor} fullScreen>
             <Logo />
             <Text color={textColor}>
-                The content of this catalog is protected by the Intellectual
-                Property Law, Royal Legislative Decree 1/1996. Any reproduction
-                of the same, in part or in its entirety, without the express
-                authorization of DOLCKER may be sanctioned in accordance with
-                the penal code.
+                Le contenu de ce catalogue est protégé par la loi sur la
+                propriété par la loi sur la propriété intellectuelle, décret
+                législatif royal 1/1996. Toute reproduction partielle ou totale,
+                sans l'autorisation expresse de DOLCKER, peut être
+                l'autorisation expresse de DOLCKER peut être sanctionnée
+                conformément au au code pénal.
                 <br />
                 <br />
-                DOLCKER reserves the right to modify and/or delete certain
-                models, characteristics or presentations of the models displayed
-                in this catalogue, without prior notice, due to production
-                requirements without incurring any right or prejudice.
+                DOLCKER se réserve le droit de modifier et/ou de supprimer
+                certains certains modèles, caractéristiques ou présentations des
+                modèles dans ce catalogue, sans avis préalable, pour des raisons
+                de production production, sans que cela n'entraîne de droit ou
+                de préjudice.
                 <br />
                 <br />
-                All our standard measurements are subject to possible variations
-                due to production circumstances. The environments shown in this
-                catalog are decorative suggestions for advertising purposes. The
-                colors and/or tones of the pieces may present slight differences
-                with respect to the real pieces. It is important before laying
-                to check that the pieces correspond to the requested models and
-                characteristics of quality, tone and caliber. The installation
-                instructions published by DOLCKER must be used in the actual
-                installation.
+                Toutes nos mesures standard sont sujettes à des variations
+                possibles dues à des circonstances de production. Les
+                environnements présentés dans ce sont des suggestions
+                décoratives à des fins publicitaires. Les couleurs Les couleurs
+                et/ou les tons des pièces peuvent présenter de légères
+                différences par rapport aux pièces réelles. Il est important
+                avant la pose de vérifier que les pièces correspondent aux
+                modèles et aux caractéristiques de qualité, de tonalité et de
+                calibre demandés. caractéristiques de qualité, de tonalité et de
+                calibre. Les instructions de pose DOLCKER doivent être utilisées
+                pour la pose effective. l'installation.
             </Text>
         </StyledFinal>
     )

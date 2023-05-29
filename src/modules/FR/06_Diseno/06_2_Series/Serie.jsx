@@ -40,7 +40,7 @@ const Serie = ({
             {isOverflow ? (
                 <Anotacion
                     type='swipe'
-                    text='Swipe with your mouse or finger to see all the images'
+                    text='Glissez avec votre souris ou votre doigt pour voir toutes les images'
                     className='anotacion-ejemplo'
                 />
             ) : undefined}
@@ -56,7 +56,7 @@ const Serie = ({
             <Text className='text-descripcion'>{descripcion}</Text>
             <Anotacion
                 type='click'
-                text='Click on the image to see the full size image'
+                text="Cliquez sur l'image pour voir l'image en taille réelle"
                 className='anotacion-muestra'
             />
             <div className='muestra-container'>{imgsMuestra}</div>

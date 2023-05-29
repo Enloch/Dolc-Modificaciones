@@ -21,7 +21,7 @@ const Sistemas = ({ id }) => {
     return (
         <>
             <StyledSistemas id={id[0]} backgroundColor={COLORS.gray02}>
-                <Titulo>CONSTRUCTION SYSTEM</Titulo>
+                <Titulo>SYSTÈME CONSTRUCTIF</Titulo>
                 <ImageWithCaption
                     src={sistemas}
                     alt='Sistemas introducción'
@@ -30,28 +30,28 @@ const Sistemas = ({ id }) => {
                 <Enlaces>
                     <li>
                         <a href={'#' + id[1]}>
-                            System
+                            Système
                             <br />
                             <strong>Dolcker & Clip</strong>
                         </a>
                     </li>
                     <li>
                         <a href={'#' + id[2]}>
-                            System
+                            Système
                             <br />
                             <strong>DOL - TC11</strong>
                         </a>
                     </li>
                     <li>
                         <a href={'#' + id[3]}>
-                            System
+                            Système
                             <br />
                             <strong>DOL - TC14</strong>
                         </a>
                     </li>
                     <li>
                         <a href={'#' + id[4]}>
-                            System
+                            Système
                             <br />
                             <strong>DOL - HC20</strong>
                         </a>
@@ -62,44 +62,50 @@ const Sistemas = ({ id }) => {
             <StyledSistemas id={id[1]}>
                 <Titulo2>Dolcker & Clip</Titulo2>
                 <Text>
-                    The DOLCKER & CLIP system for dolcker-type ceramic facades
-                    is a system with high-inertia profiles and double security.
-                    Each and every one of the elements that make up this system
-                    are manufactured with the highest quality raw materials.
+                    Le système DOLCKER & CLIP pour les façades en céramique de
+                    type dolcker est un système avec des profils à haute inertie
+                    et une double sécurité. Chacun des éléments qui composent ce
+                    système sont fabriqués avec des matières premières de la
+                    plus haute qualité.
                     <br />
                     <br />
-                    It is a mechanical clip fixing system + chemical fixing by
-                    means of a substructure that is made up of adjustable
-                    brackets made of high-quality aluminum in the shape of an
-                    “L”, 3 mm thick, which transmit forces and are fixed by
-                    means of anchoring to the base structure of the building
-                    (brick wall or concrete slab). On these brackets, the 3 mm
-                    thick “T” shaped vertical extruded aluminum profiles are
-                    fixed by means of stainless steel self-drilling screws.
+                    C'est un système de fixation mécanique par clip + fixation
+                    chimique par au moyen d'une sous-structure constituée
+                    d'éléments réglables supports en aluminium de haute qualité
+                    en forme de "L", 3 mm d'épaisseur, qui transmettent les
+                    efforts et sont fixés par moyen d'ancrage à la structure de
+                    base du bâtiment (mur de brique ou dalle de béton). Sur ces
+                    supports, les 3 mm des profilés en aluminium extrudés
+                    verticaux épais en forme de "T" sont fixé au moyen de vis
+                    autoperceuses en acier inoxydable.
                     <br />
                     <br />
-                    Horizontal “G”-shaped profiles are screwed into these
-                    “T”-shaped profiles, thus allowing the piece to be supported
-                    in its entirety. It is the ideal system for placing
-                    ceramics, allowing the pieces to be replaced as it has a
-                    sliding stainless steel clip, achieving an infinite number
-                    of placements. It also allows the horizontal profile to be
-                    lacquered according to the color of its carpentry, allowing
-                    the customer to choose the color of the joint. At least two
-                    sliding clips are placed on top of the starter piece at 1/5
-                    of the length of the piece. In the rest of the intermediate
-                    pieces, at least 4 clips will be placed for each piece of
-                    ceramic. Points of sika-111 polyurethane gluing and sealing
-                    putty or similar (4 per piece) will be added to allow us to
-                    absorb the expansion of the façade in the sliding clips.
+                    Des profils horizontaux en forme de "G" sont vissés dans ces
+                    Profils en forme de "T", permettant ainsi de soutenir la
+                    pièce dans son intégralité. C'est le système idéal pour
+                    placer céramique, permettant le remplacement des pièces car
+                    il a un clip coulissant en acier inoxydable, réalisant un
+                    nombre infini de placements. Il permet également au profil
+                    horizontal d'être laqué selon la couleur de sa menuiserie,
+                    permettant au client de choisir la couleur du joint. Au
+                    moins deux des clips coulissants sont placés sur le dessus
+                    de la pièce de départ à 1/5 de la longueur de la pièce. Dans
+                    le reste de l'intermédiaire pièces, au moins 4 clips seront
+                    placés pour chaque pièce de céramique. Points de collage et
+                    d'étanchéité polyuréthane sika-111 mastic ou similaire (4
+                    par pièce) sera ajouté pour nous permettre de absorber la
+                    dilatation de la façade dans les clips coulissants.
                     <br />
                     <br />
-                    It is, without a doubt, a system with multiple façade
-                    composition options since it is possible to break the
-                    vertical joints. These vertical joints are minimized to just
-                    1 mm, thus enhancing the horizontal joints. The output of
-                    the ceramic is between 43-47 mm depending on the thickness
-                    of the chosen ceramic.
+                    Il s'agit, sans aucun doute, d'un système offrant de
+                    multiples possibilités de composition de la façade,
+                    puisqu'il est possible de rompre avec la structure de la
+                    façade. de composition de façade puisqu'il est possible de
+                    rompre les les joints verticaux. Ces joints verticaux sont
+                    réduits à seulement 1 mm, ce qui permet de renforcer les
+                    joints horizontaux. Le rendement de la de la céramique se
+                    situe entre 43 et 47 mm, en fonction de l'épaisseur de la
+                    céramique choisie. de la céramique choisie.
                 </Text>
                 <ImageWithCaption
                     src={dolckerClip1}
@@ -118,17 +124,22 @@ const Sistemas = ({ id }) => {
             <StyledSistemas id={id[2]}>
                 <Titulo2>DOL - TC11</Titulo2>
                 <Text>
-                    The DOL-TC11 system for ceramic facades with hidden clips is
-                    a safe, easy and simple system to install. Each and every
-                    one of the elements that make up this system are
-                    manufactured with the highest quality raw materials.
+                    Le système DOL-TC11 pour les façades en céramique avec des
+                    clips cachés est un système sûr, facile et simple à
+                    installer. Chacun des éléments tous les éléments qui
+                    composent ce système sont fabriqués avec des matières
+                    premières de la plus haute qualité.
                     <br />
                     <br />
-                    It is a hidden mechanical fastening through a substructure
-                    that is made up of adjustable brackets made of high-quality
-                    aluminum, 3 mm thick, with a separating function, which also
-                    transmit forces and are fixed to the base structure of the
-                    building ( brick wall or concrete floor)
+                    Il s'agit d'une fixation mécanique cachée à travers une
+                    sous-structure composée d'équerres réglables en aluminium de
+                    haute qualité, d'une épaisseur de 3 mm, avec une fonction de
+                    séparation. en aluminium de haute qualité, d'une épaisseur
+                    de 3 mm, avec une fonction de séparation, qui transmettent
+                    également les forces et sont fixés à la structure de base de
+                    l'édifice. transmettent également les forces et sont fixés à
+                    la structure de base du bâtiment (mur en briques ou sol en
+                    béton)
                 </Text>
                 <ImageWithCaption
                     src={tc111}
@@ -147,17 +158,22 @@ const Sistemas = ({ id }) => {
             <StyledSistemas id={id[3]}>
                 <Titulo2>DOL - TC14</Titulo2>
                 <Text>
-                    The DOL-TC14 system for ceramic facades with hidden clips is
-                    a safe, easy and simple system to install. Each and every
-                    one of the elements that make up this system are
-                    manufactured with the highest quality raw materials.
+                    Le système DOL-TC14 pour les façades en céramique avec des
+                    clips cachés est un système sûr, facile et simple à
+                    installer. Chacun des éléments tous les éléments qui
+                    composent ce système sont fabriqués avec des matières
+                    premières de la plus haute qualité.
                     <br />
                     <br />
-                    It is a hidden mechanical fastening through a substructure
-                    that is made up of adjustable brackets made of high-quality
-                    aluminum, 3 mm thick, with a separating function, which also
-                    transmit forces and are fixed to the base structure of the
-                    building ( brick wall or concrete floor)
+                    Il s'agit d'une fixation mécanique cachée à travers une
+                    sous-structure composée d'équerres réglables en aluminium de
+                    haute qualité, d'une épaisseur de 3 mm, avec une fonction de
+                    séparation. en aluminium de haute qualité, d'une épaisseur
+                    de 3 mm, avec une fonction de séparation, qui transmettent
+                    également les forces et sont fixés à la structure de base de
+                    l'édifice. transmettent également les forces et sont fixés à
+                    la structure de base du bâtiment (mur en briques ou sol en
+                    béton)
                 </Text>
                 <ImageWithCaption
                     src={tc141}
@@ -176,17 +192,22 @@ const Sistemas = ({ id }) => {
             <StyledSistemas id={id[4]}>
                 <Titulo2>DOL - HC20</Titulo2>
                 <Text>
-                    The DOL-HC20 system for 20 mm ceramic or stone facades with
-                    hidden clip is a safe, easy and simple system to install.
-                    Each and every one of the elements that make up this system
-                    are manufactured with the highest quality raw materials.
+                    Le système DOL-HC20 pour les façades en céramique ou en
+                    pierre de 20 mm avec Le système DOL-HC20 pour façades en
+                    céramique ou en pierre de 20 mm avec clip caché est un
+                    système sûr, facile et simple à installer. Tous les éléments
+                    qui composent ce système sont fabriqués avec des matières
+                    premières de la plus haute qualité. sont fabriqués avec des
+                    matières premières de la plus haute qualité.
                     <br />
                     <br />
-                    It is a hidden mechanical fastening through a substructure
-                    that is made up of adjustable high-quality aluminum brackets
-                    3 mm thick with a spacer function, which also transmit
-                    forces and are fixed to the base structure of the building
-                    (brick wall or concrete floor)
+                    Il s'agit d'une fixation mécanique cachée à travers une
+                    sous-structure composée d'équerres réglables en aluminium de
+                    haute qualité de 3 mm d'épaisseur avec une fonction
+                    d'espacement, qui transmettent également les forces et sont
+                    fixées à la structure de base du bâtiment. forces et sont
+                    fixés à la structure de base du bâtiment (mur en briques ou
+                    sol en béton). (mur en briques ou sol en béton)
                 </Text>
                 <ImageWithCaption
                     src={hc201}

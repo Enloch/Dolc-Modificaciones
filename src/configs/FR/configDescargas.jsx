@@ -14,7 +14,7 @@ const configDescargas = [
     {
         path: '/downloads/Catalogo general Dolcker.pdf',
         imgSrc: downloadImgSrc['Catalogo general Dolcker'],
-        title: 'General catalog',
+        title: 'Catalogue général',
         fileName: 'Dolcker',
         fileType: 'pdf',
         size: '8,4 MB',
