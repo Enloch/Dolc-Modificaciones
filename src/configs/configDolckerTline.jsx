@@ -32,7 +32,7 @@ const config = [
         left: '37.5%',
         content: {
             imgSrc: piezas[1],
-            title: 'Esquina full body',
+            title: 'Esquina cerámica',
         },
     },
     {
