@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom'
-import MenuLanzadera from '../components/ListaContenidos/MenuLanzadera'
-import Seccion from '../components/SeccionContacto'
-import Text from '../components/Text'
-import { Titulo2 } from '../components/Titulos'
-import useMenuDesplegable from '../hooks/useMenuDesplegable'
-import Final from '../modules/10_Final'
+import MenuLanzadera from '../../components/ListaContenidos/MenuLanzadera'
+import Seccion from '../../components/SeccionContacto'
+import Text from '../../components/Text'
+import { Titulo2 } from '../../components/Titulos'
+import useMenuDesplegableFr from '../../hooks/useMenuDesplegableFr'
 import styled from 'styled-components'
 
 const IframeMapa = styled.iframe`
@@ -19,8 +18,8 @@ const IframeMapa = styled.iframe`
     }
 `
 
-const Contacto = ({ lang = '' }) => {
-    const { menuDesplegable, btnIndice } = useMenuDesplegable(
+const ContactoFr = ({ lang = '' }) => {
+    const { menuDesplegable, btnIndice } = useMenuDesplegableFr(
         MenuLanzadera,
         <Link to={`/${lang}`}>Dolcker</Link>
     )
@@ -29,7 +28,7 @@ const Contacto = ({ lang = '' }) => {
             {menuDesplegable}
             {btnIndice}
             <Seccion fullScreen>
-                <Titulo2>CONTACTO</Titulo2>
+                <Titulo2>CONTACT</Titulo2>
                 <Text>
                     DOLCKER SISTEMAS, S.L.
                     <br />
@@ -66,4 +65,4 @@ const Contacto = ({ lang = '' }) => {
     )
 }
 
-export default Contacto
+export default ContactoFr

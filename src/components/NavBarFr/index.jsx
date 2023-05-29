@@ -111,8 +111,8 @@ const Navbar = () => {
     return (
         <NavbarContainer>
             <ButtonsContainer style={{ height: buttonHeight }}>
-                <Button href='/contacto'>Contact</Button>
-                <Button href='/en/quienes-somos'>A propos de nous</Button>
+                <Button href='/fr/contacto'>Contact</Button>
+                <Button href='/fr/quienes-somos'>A propos de nous</Button>
                 <div style={{ position: 'relative', paddingTop: '2.5px' }}>
                     <Button onClick={handleShowFachadasVentiladasButtons}>
                         Façades ventilées

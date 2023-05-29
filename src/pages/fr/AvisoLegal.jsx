@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'
-import MenuLanzadera from '../components/ListaContenidos/MenuLanzadera'
-import Seccion from '../components/Seccion'
-import Text from '../components/Text'
-import { Titulo2 } from '../components/Titulos'
-import useMenuDesplegable from '../hooks/useMenuDesplegable'
-import Final from '../modules/10_Final'
+import MenuLanzadera from '../../components/ListaContenidos/MenuLanzadera'
+import Seccion from '../../components/Seccion'
+import Text from '../../components/Text'
+import { Titulo2 } from '../../components/Titulos'
+import useMenuDesplegableFr from '../../hooks/useMenuDesplegableFr'
+import Final from '../../modules/FR/10_Final'
 
 const AvisoLegal = ({ lang = '' }) => {
-    const { menuDesplegable, btnIndice } = useMenuDesplegable(
+    const { menuDesplegable, btnIndice } = useMenuDesplegableFr(
         MenuLanzadera,
         <Link to={`/${lang}`}>Dolcker</Link>
     )
@@ -16,298 +16,300 @@ const AvisoLegal = ({ lang = '' }) => {
             {menuDesplegable}
             {btnIndice}
             <Seccion>
-                <Titulo2>Aviso legal</Titulo2>
+                <Titulo2>Mentions légales</Titulo2>
                 <Text>
-                    <strong>DATOS IDENTIFICATIVOS:</strong>
+                    <strong>INFORMATIONS D'IDENTIFICATION:</strong>
                     <br />
-                    Ley 34/2002, de 11 de julio, de servicios de la sociedad de
-                    la información y de comercio electrónico Razón social:
-                    DOLCKER SISTEMAS, S.L. CIF: B-09710724 Domicilio: Calle
-                    Talamanca del Jarama, 19 portal A 5ª. 28051 Madrid (Spain)
-                    Correo electrónico: dolcker@dolcker.es Teléfono: +34 913 851
-                    480 en adelante EL TITULAR.
-                    <br />
-                    <br />
-                    <strong>OBJETO</strong>
-                    <br />
-                    El objeto de LA WEB es proporcionar información acerca de
-                    nuestros servicios y noticias. Si deseas contactar con
-                    nosotros puedes hacerlo a través de los siguientes medios:
+                    Loi 34/2002 du 11 juillet sur les services de la société de
+                    l'information et du commerce électronique Raison sociale :
+                    DOLCKER SISTEMAS, S.L. CIF : B-09710724 Adresse : Calle
+                    Talamanca del Jarama, 19 portal A 5ª. 28051 Madrid (Espagne)
+                    Courriel : dolcker@dolcker.es Téléphone : +34 913 851 480
+                    ci-après dénommé LE TITULAIRE.
                     <br />
                     <br />
-                    <ul style={{ listStyle: 'initial', paddingLeft: '40px' }}>
-                        <li>
-                            Mediante correo postal, en la dirección indicada
-                            anteriormente a través del correo electrónico a La
-                            dirección dolcker@dolcker.es
-                        </li>
-                        <li>Mediante el teléfono: +34 913 851 480</li>
-                    </ul>
+                    <strong>OBJET</strong>
                     <br />
-                    El acceso a la página web es gratuito salvo en lo relativo
-                    al coste de la conexión a través de la red de
-                    telecomunicaciones suministrada por el proveedor de acceso
-                    contratado por EL USUARIO.
-                    <br />
-                    Las Condiciones de Uso, tienen por objeto definir las
-                    condiciones en las que se realizan las ventas de los
-                    productos propuestos en la página web del TITULAR.
-                    <br />
-                    <br />
-                    <strong>USO DE LA WEB</strong>
-                    <br />
-                    www.dolcker.es proporciona el acceso a multitud de
-                    informaciones y servicios (en adelante, “los contenidos”)
-                    pertenecientes a EL TITULAR. El usuario asume la
-                    responsabilidad del uso de la web. Dicha responsabilidad se
-                    extiende a los registros que fuese necesario para acceder a
-                    determinados servicios o contenidos. En dichos registros el
-                    usuario será responsable de aportar información veraz y
-                    lícita. El usuario se compromete a hacer un uso adecuado de
-                    los contenidos y servicios que EL TITULAR ofrece a través de
-                    su web y con carácter enunciativo pero no limitativo, a no
-                    emplearlos para (I) incurrir en actividades ilícitas,
-                    ilegales o contrarias a la buena fe y al orden público; (II)
-                    difundir contenidos o propaganda de carácter racista,
-                    xenófobo, pornográfico-ilegal, de apología del terrorismo o
-                    atentatorio contra los derechos humanos; (III) provocar
-                    daños en los sistemas físicos y lógicos de EL TITULAR, de
-                    sus proveedores o de terceras personas, introducir o
-                    difundir en la red virus informáticos o cualesquiera otros
-                    sistemas físicos o lógicos que sean susceptibles de provocar
-                    los daños anteriormente mencionados; (IV) intentar acceder
-                    y, en su caso, utilizar las cuentas de correo electrónico de
-                    otros usuarios y modificar o manipular sus mensajes. EL
-                    TITULAR se reserva el derecho de retirar todos aquellos
-                    comentarios y aportaciones que vulneren el respeto a la
-                    dignidad de la persona, que sean discriminatorios,
-                    xenófobos, racistas, pornográficos, que atenten contra la
-                    juventud o la infancia, el orden o la seguridad pública o
-                    que, a su juicio, no resultaran adecuados para su
-                    publicación por no estar relacionados con el objetivo. En
-                    cualquier caso, EL TITULAR como administrador de su web,
-                    actuará diligentemente nada más tenga conocimiento de actos
-                    cometidos en contra de la ética profesional, la imagen y el
-                    prestigio de EL TITULAR, así como las presentes Condiciones
-                    de Uso o de su Política de Privacidad. EL TITULAR se reserva
-                    el derecho a denegar discrecionalmente, en cualquier momento
-                    y sin necesidad de preaviso, el acceso de cualquier usuario
-                    a esta página web o a parte de la misma.
-                    <br />
-                    <br />
-                    <strong>POLÍTICA DE ENLACES</strong>
-                    <br />
-                    Los sitios web enlazados no están controlados por EL TITULAR
-                    y EL TITULAR no se hace responsable de los contenidos de
-                    ningún sitio enlazado ni de ningún enlace que se encuentre
-                    en cualquier sitio web enlazado, ni de ningún cambio o
-                    actualización de tales sitios web. EL TITULAR sólo le está
-                    proporcionando estos enlaces a usted para su comodidad, y la
-                    inclusión de cualquier enlace no implica la aprobación del
-                    sitio web por EL TITULAR.
-                    <br />
-                    <br />
-                    <strong>DERECHOS DE PROPIEDAD INTELECTUAL</strong>
-                    <br />
-                    La página web www.dolcker.es , su código fuente, diseño,
-                    estructura de navegación, bases de datos y los distintos
-                    elementos contenidos en la misma (textos, gráficos,
-                    imágenes, fotografías, muestras y materiales que aparecen en
-                    los mismos, tecnologías industriales, ficheros, logotipos,
-                    combinaciones de colores y cualquier elemento susceptible de
-                    protección) están protegidos por derechos de propiedad
-                    intelectual e industrial titularidad de DOLCKER SISTEMAS,
-                    S.L. EL USUARIO está autorizado a reproducir, visualizar,
-                    imprimir, enlazar y/o descargar parcialmente contenido de LA
-                    WEB sólo y exclusivamente cumpliendo TODAS las siguientes
-                    condiciones:
-                    <br />
-                    <br />
-                    <ul style={{ listStyle: 'initial', paddingLeft: '40px' }}>
-                        <li>Que sea compatible con el objetivo de LA WEB</li>
-                        <li>
-                            Que no se utilice para fines comerciales ajenos a EL
-                            TITULAR.
-                        </li>
-                        <li>
-                            Que ninguno de los contenidos de la WEB sean
-                            alterados de manera alguna.
-                        </li>
-                        <li>
-                            Que ningún gráfico, fotografía o imagen disponible
-                            en la WEB sea utilizado, copiado o distribuido
-                            separadamente del texto o resto de imágenes que lo
-                            acompañan.
-                        </li>
-                        <li>
-                            Que se incluya, en todo momento y de forma visible
-                            información sobre la dirección URL (o enlace) a la
-                            página web de donde se ha extraído la misma o en su
-                            defecto a www.dolcker.es
-                        </li>
-                    </ul>
-                    <br />
-                    <br />
-                    EL USUARIO de LA WEB deberá abstenerse de suprimir, alterar,
-                    eludir o manipular cualesquiera dispositivos de protección o
-                    sistemas de seguridad incluidos en los distintos elementos
-                    que la forman (gráficos, imágenes, fotografías, muestras y
-                    materiales que aparecen en los mismos, ficheros, logotipos,
-                    etc.…).
-                    <br />
-                    <br />
-                    El acceso a LA WEB no implica cesión, transmisión o
-                    cualquier otro tipo de renuncia, total o parcial, de los
-                    derechos de Propiedad Intelectual o Industrial. No se
-                    permite la utilización de los signos distintivos (marcas,
-                    nombres comerciales), salvo autorización expresa de los
-                    legítimos titulares.
-                    <br />
-                    <br />
-                    EL TITULAR se reserva el derecho de modificar, suprimir y/o
-                    actualizar las informaciones y elementos contenidos en LA
-                    WEB, su configuración y/o su presentación, en cualquier
-                    momento y sin necesidad de previo aviso.
-                    <br />
-                    <br />
-                    <strong>LIMITACIÓN DE RESPONSABILIDADES</strong>
-                    <br />
-                    El USUARIO se compromete a no utilizar el sitio web y los
-                    servicios que se ofrecen en el mismo para la realización de
-                    actividades contrarias a la ley y a respetar en todo momento
-                    las presentes condiciones generales, absteniéndose de
-                    utilizar el sitio web www.dolcker.es , de cualquier forma
-                    que pueda impedir, dañar o deteriorar el normal
-                    funcionamiento del mismo, los bienes o derechos de EL
-                    TITULAR, del resto de Usuarios o en general de cualquier
-                    tercero.
-                    <br />
-                    <br />
-                    En particular, y sin que ello implique restricción alguna a
-                    la obligación asumida por EL USUARIO con carácter general de
-                    conformidad con el apartado anterior, EL USUARIO se obliga,
-                    en la utilización de LA WEB a:
+                    L'objectif du SITE WEB est de fournir des informations sur
+                    nos services et actualités. Si vous souhaitez nous
+                    contacter, vous pouvez le faire via les moyens suivants :
                     <br />
                     <br />
                     <ul style={{ listStyle: 'initial', paddingLeft: '40px' }}>
                         <li>
-                            No introducir, almacenar o difundir en o desde el
-                            sitio web, contenidos o propaganda de carácter
-                            racista, xenófobo, pornográfico, sexista, de
-                            apología del terrorismo o atentatorio contra los
-                            derechos humanos, o actuar en perjuicio de los
-                            derechos a la intimidad, al honor, a la propia
-                            imagen o contra la dignidad de las personas.
+                            Par courrier postal à l'adresse indiquée ci-dessus
+                            ou par courrier électronique à l'adresse
+                            dolcker@dolcker.es
                         </li>
-                        <li>
-                            No introducir, almacenar o difundir mediante el
-                            sitio web virus informáticos o cualesquiera otros
-                            sistemas físicos o lógicos que sean susceptibles de
-                            provocar daños en los equipos informáticos de EL
-                            TITULAR o de terceros.
-                        </li>
-                        <li>
-                            No introducir, almacenar o difundir en o desde el
-                            sitio web manifestaciones o referencias falsas,
-                            incorrectas o inexactas sobre las páginas, los
-                            productos y/o los servicios de EL TITULAR.
-                        </li>
+                        <li>Par téléphone : +34 913 851 480</li>
                     </ul>
                     <br />
+                    L'accès au site web est gratuit, sauf en ce qui concerne les
+                    frais de connexion via le réseau de télécommunications
+                    fourni par le fournisseur d'accès choisi par L'UTILISATEUR.
                     <br />
-                    EL TITULAR no será responsable:
+                    Les Conditions d'utilisation visent à définir les conditions
+                    de vente des produits proposés sur le site web du TITULAIRE.
+                    <br />
+                    <br />
+                    <strong>UTILISATION DU SITE WEB</strong>
+                    <br />
+                    www.dolcker.es donne accès à de nombreuses informations et
+                    services (ci-après, "les contenus") appartenant au
+                    TITULAIRE. L'utilisateur est responsable de l'utilisation du
+                    site web. Cette responsabilité s'étend aux enregistrements
+                    nécessaires pour accéder à certains services ou contenus.
+                    Dans ces enregistrements, l'utilisateur est responsable de
+                    fournir des informations véridiques et licites.
+                    L'utilisateur s'engage à faire un usage approprié des
+                    contenus et services offerts par LE TITULAIRE via son site
+                    web et, à titre indicatif mais non limitatif, à ne pas les
+                    utiliser pour (I) se livrer à des activités illicites,
+                    illégales ou contraires à la bonne foi et à l'ordre public ;
+                    (II) diffuser du contenu ou de la propagande à caractère
+                    raciste, xénophobe, pornographique-illegal, faisant
+                    l'apologie du terrorisme ou portant atteinte aux droits de
+                    l'homme ; (III) causer des dommages aux systèmes physiques
+                    et logiques du TITULAIRE, de ses fournisseurs ou de tiers,
+                    introduire ou propager des virus informatiques ou tout autre
+                    système physique ou logique susceptible de causer les
+                    dommages mentionnés ci-dessus ; (IV) tenter d'accéder et, le
+                    cas échéant, d'utiliser les comptes de messagerie
+                    électronique d'autres utilisateurs et de modifier ou de
+                    manipuler leurs messages. LE TITULAIRE se réserve le droit
+                    de supprimer tous les commentaires et contributions qui
+                    violent le respect de la dignité de la personne, qui sont
+                    discriminatoires, xénophobes, racistes, pornographiques, qui
+                    portent atteinte à la jeunesse ou à l'enfance, à l'ordre ou
+                    à la sécurité publique, ou qui, à son avis, ne conviennent
+                    pas à la publication car elles ne sont pas liées à
+                    l'objectif. En tout état de cause, LE TITULAIRE, en tant
+                    qu'administrateur de son site web, agira diligemment dès
+                    qu'il aura connaissance d'actes commis contre l'éthique
+                    professionnelle, l'image et le prestige du TITULAIRE, ainsi
+                    que des présentes Conditions d'utilisation ou de sa
+                    Politique de confidentialité. LE TITULAIRE se réserve le
+                    droit de refuser discrétionnairement, à tout moment et sans
+                    préavis, l'accès de tout utilisateur à cette page web ou à
+                    une partie de celle-ci.
+                    <br />
+                    <br />
+                    <strong>POLITIQUE DE LIENS</strong>
+                    <br />
+                    Les sites web liés ne sont pas contrôlés par LE TITULAIRE et
+                    LE TITULAIRE n'est pas responsable du contenu de tout site
+                    lié ni de tout lien se trouvant sur un site web lié, ni de
+                    tout changement ou mise à jour de ces sites web. LE
+                    TITULAIRE vous fournit uniquement ces liens pour votre
+                    commodité, et l'inclusion de tout lien n'implique pas
+                    l'approbation du site web par LE TITULAIRE.
+                    <br />
+                    <br />
+                    <strong>DROITS DE PROPRIÉTÉ INTELLECTUELLE</strong>
+                    <br />
+                    Le site web www.dolcker.es, son code source, sa conception,
+                    sa structure de navigation, ses bases de données et les
+                    différents éléments qui y sont contenus (textes, graphiques,
+                    images, photographies, échantillons et matériaux qui y
+                    figurent, technologies industrielles, fichiers, logos,
+                    combinaisons de couleurs et tout élément susceptible de
+                    protection) sont protégés par des droits de propriété
+                    intellectuelle et industrielle appartenant à DOLCKER
+                    SISTEMAS, S.L. L'UTILISATEUR est autorisé à reproduire,
+                    visualiser, imprimer, lier et/ou télécharger partiellement
+                    le contenu du SITE WEB uniquement et exclusivement en
+                    respectant TOUTES les conditions suivantes :
                     <br />
                     <br />
                     <ul style={{ listStyle: 'initial', paddingLeft: '40px' }}>
                         <li>
-                            Respecto del uso inadecuado del servicio.- EL
-                            USUARIO debe realizar un uso adecuado del servicio
-                            puesto a su disposición, sin que ninguna
-                            responsabilidad pueda tener EL TITULAR por la
-                            utilización indebida.
+                            Il doit être compatible avec l'objectif du SITE WEB.
                         </li>
                         <li>
-                            Respecto a las opiniones o contenidos.- EL TITULAR
-                            no se hace responsable directamente ni
-                            subsidiariamente de las opiniones o contenidos
-                            emitidos en los mensajes.
+                            Il ne doit pas être utilisé à des fins commerciales
+                            autres que celles du TITULAIRE.
                         </li>
                         <li>
-                            Respecto de posibles deficiencias técnicas.- La
-                            EMPRESA no será responsable en ningún caso de las
-                            alteraciones en el servicio que se produzcan por
-                            fallos en la red eléctrica, en la red de conexión de
-                            datos, en el servidor o en las prestaciones de los
-                            mismos.
+                            Aucun des contenus du SITE WEB ne doit être modifié
+                            de quelque manière que ce soit.
                         </li>
                         <li>
-                            Respecto del contenido de páginas de terceros. EL
-                            TITULAR no es responsable de la información y demás
-                            contenidos integrados en espacios o páginas web de
-                            terceros accesibles desde LA WEB.
+                            Aucun graphique, photographie ou image disponible
+                            sur le SITE WEB ne doit être utilisé, copié ou
+                            distribué séparément du texte ou des autres images
+                            qui l'accompagnent.
+                        </li>
+                        <li>
+                            Il doit inclure, en permanence et de manière
+                            visible, des informations sur l'URL (ou le lien)
+                            vers la page web d'où il a été extrait, ou à défaut,
+                            vers www.dolcker.es
                         </li>
                     </ul>
                     <br />
                     <br />
-                    EL TITULAR invierte incesantemente en dispositivos
-                    tecnológicos que tratan de minimizar el riesgo de virus y
-                    software similares, así como de contenidos no autorizados en
-                    sus sistemas de información. Sin embargo, EL USUARIO debe
-                    ser consciente de que debe adoptar sus propias medidas
-                    orientadas a minimizar los daños ocasionados por dicho
-                    software no autorizado, virus, troyanos y cualquier clase de
-                    software denominado malware, eximiendo a EL TITULAR de toda
-                    responsabilidad que pudiera derivarse de la contención de
-                    malware en los ficheros habilitados en la presente web.
+                    L'UTILISATEUR du SITE WEB doit s'abstenir de supprimer,
+                    altérer, contourner ou manipuler tout dispositif de
+                    protection ou système de sécurité inclus dans les différents
+                    éléments qui le composent (graphiques, images,
+                    photographies, échantillons et matériaux qui y figurent,
+                    fichiers, logos, etc.).
                     <br />
                     <br />
-                    Como quiera que el uso de LA WEB puede suponer un
-                    tratamiento de datos personales le rogamos lea atentamente
-                    nuestra política de privacidad al respecto. EL TITULAR se
-                    reserva el derecho de modificar, en todo momento y sin
-                    previo aviso, las presentes Condiciones Generales, así como
-                    las Condiciones Particulares que, en su caso, se incluyan,
-                    mediante la publicación de dichas modificaciones en el sitio
-                    web con el fin de que puedan ser conocidas por los Usuarios.
-                    En caso de que cualquier cláusula del presente documento sea
-                    declarada nula, las demás cláusulas seguirán vigentes y se
-                    interpretarán teniendo en cuenta la voluntad de las partes y
-                    la finalidad misma de las presentes condiciones.
+                    L'accès au SITE WEB ne confère aucun droit, en totalité ou
+                    en partie, sur les droits de propriété intellectuelle ou
+                    industrielle. L'utilisation de signes distinctifs (marques,
+                    noms commerciaux) n'est pas autorisée sans l'autorisation
+                    expresse des titulaires légitimes.
                     <br />
                     <br />
-                    EL TITULAR no será responsable si no tiene conocimiento
-                    efectivo de que la actividad o la información a la que
-                    remite o recomienda es ilícita o de que lesiona bienes o
-                    derechos de un tercero susceptibles de indemnización, o si
-                    lo tiene, actúa con diligencia para suprimir o inutilizar el
-                    enlace correspondiente.
+                    LE TITULAIRE se réserve le droit de modifier, supprimer
+                    et/ou mettre à jour les informations et éléments contenus
+                    sur le SITE WEB, sa configuration et/ou sa présentation, à
+                    tout moment et sans préavis.
                     <br />
                     <br />
-                    <strong>JURISDICCIÓN Y LEYES APLICABLES</strong>
+                    <strong>LIMITATION DE RESPONSABILITÉ</strong>
                     <br />
-                    La ley aplicable al presente contrato será la Ley Española.
-                    Para las controversias que pudieren surgir con ocasión del
-                    presente contrato, las partes, con renuncia de su fuero
-                    propio, se someten expresamente a los Juzgados y Tribunales
-                    de Madrid.
-                    <br />
-                    <br />
-                    <strong>GENERALIDADES</strong>
-                    <br />
-                    EL TITULAR perseguirá el incumplimiento de las presentes
-                    condiciones así como cualquier utilización indebida de su
-                    web ejerciendo todas las acciones legales que le puedan
-                    corresponder en derecho.
+                    L'UTILISATEUR s'engage à ne pas utiliser le site web et les
+                    services qui y sont offerts pour des activités contraires à
+                    la loi et à respecter à tout moment les présentes conditions
+                    générales, en s'abstenant d'utiliser le site web
+                    www.dolcker.es de manière à pouvoir entraver, endommager ou
+                    altérer son fonctionnement normal, les biens ou les droits
+                    du TITULAIRE, des autres utilisateurs ou, en général, de
+                    tout tiers.
                     <br />
                     <br />
-                    Eventualmente, estas Condiciones de Uso pueden ser revisadas
-                    con el fin de actualizar los cambios en la legislación
-                    vigente, actualizar nuestros procedimientos de recogida y
-                    uso de la información, la aparición de nuevos servicios o la
-                    exclusión de otros. Estos cambios serán vigentes a partir de
-                    su publicación en la web, por lo que es importante que
-                    revises regularmente este Aviso Legal con el fin de
-                    permanecer informado sobre los cambios realizados.
+                    En particulier, sans que cela limite l'obligation générale
+                    assumée par L'UTILISATEUR conformément au paragraphe
+                    précédent, L'UTILISATEUR s'engage, lors de l'utilisation du
+                    SITE WEB, à :
+                    <br />
+                    <br />
+                    <ul style={{ listStyle: 'initial', paddingLeft: '40px' }}>
+                        <li>
+                            Ne pas introduire, stocker ou diffuser via le site
+                            web des contenus ou de la propagande à caractère
+                            raciste, xénophobe, pornographique, sexiste, faisant
+                            l'apologie du terrorisme ou portant atteinte aux
+                            droits de l'homme, ou agir au détriment des droits à
+                            la vie privée, à l'honneur, à l'image ou à la
+                            dignité des personnes.
+                        </li>
+                        <li>
+                            Ne pas introduire, stocker ou diffuser via le site
+                            web des virus informatiques ou tout autre système
+                            physique ou logique susceptible de causer des
+                            dommages aux équipements informatiques du TITULAIRE
+                            ou de tiers.
+                        </li>
+                        <li>
+                            Ne pas introduire, stocker ou diffuser via le site
+                            web des déclarations ou références fausses,
+                            incorrectes ou inexactes concernant les pages, les
+                            produits et/ou les services du TITULAIRE.
+                        </li>
+                    </ul>
+                    <br />
+                    <br />
+                    LE TITULAIRE ne sera pas responsable :
+                    <br />
+                    <br />
+                    <ul style={{ listStyle: 'initial', paddingLeft: '40px' }}>
+                        <li>
+                            En ce qui concerne l'utilisation abusive du service.
+                            - L'UTILISATEUR doit faire un usage approprié du
+                            service mis à sa disposition, et LE TITULAIRE ne
+                            pourra être tenu responsable de l'utilisation
+                            abusive qui en est faite.
+                        </li>
+                        <li>
+                            En ce qui concerne les opinions ou contenus. - LE
+                            TITULAIRE n'est pas responsable directement ou
+                            indirectement des opinions ou contenus émis dans les
+                            messages.
+                        </li>
+                        <li>
+                            En ce qui concerne les éventuelles défaillances
+                            techniques. - L'ENTREPRISE ne sera en aucun cas
+                            responsable des altérations du service causées par
+                            des défaillances du réseau électrique, du réseau de
+                            connexion de données, du serveur ou des prestations
+                            de ces derniers.
+                        </li>
+                        <li>
+                            En ce qui concerne le contenu des sites web de
+                            tiers. - LE TITULAIRE n'est pas responsable des
+                            informations et autres contenus intégrés dans les
+                            espaces ou les pages web de tiers accessibles à
+                            partir du SITE WEB.
+                        </li>
+                    </ul>
+                    <br />
+                    <br />
+                    LE TITULAIRE investit constamment dans des dispositifs
+                    technologiques visant à minimiser le risque de virus et de
+                    logiciels similaires, ainsi que de contenus non autorisés
+                    dans ses systèmes d'information. Cependant, L'UTILISATEUR
+                    doit être conscient qu'il doit prendre ses propres mesures
+                    pour minimiser les dommages causés par de tels logiciels non
+                    autorisés, virus, chevaux de Troie et tout autre type de
+                    logiciel malveillant, en déchargeant LE TITULAIRE de toute
+                    responsabilité découlant de la présence de logiciels
+                    malveillants dans les fichiers mis à disposition sur le
+                    présent site web.
+                    <br />
+                    <br />
+                    Comme l'utilisation du SITE WEB peut impliquer un traitement
+                    de données personnelles, nous vous demandons de lire
+                    attentivement notre politique de confidentialité à cet
+                    égard. LE TITULAIRE se réserve le droit de modifier à tout
+                    moment et sans préavis les présentes Conditions générales,
+                    ainsi que les Conditions particulières éventuellement
+                    incluses, par la publication de ces modifications sur le
+                    site web afin qu'elles puissent être connues des
+                    utilisateurs. Si une clause du présent document est déclarée
+                    nulle, les autres clauses resteront en vigueur et seront
+                    interprétées en tenant compte de la volonté des parties et
+                    de l'objet même des présentes conditions.
+                    <br />
+                    <br />
+                    LE TITULAIRE ne sera pas responsable s'il n'a pas
+                    connaissance effective que l'activité ou les informations
+                    auxquelles il renvoie ou recommande sont illicites ou
+                    portent atteinte à des biens ou droits de tiers susceptibles
+                    d'indemnisation, ou s'il en a connaissance, s'il agit avec
+                    diligence pour supprimer ou désactiver le lien
+                    correspondant.
+                    <br />
+                    <br />
+                    <strong>JURIDICTION ET LOIS APPLICABLES</strong>
+                    <br />
+                    La loi applicable au présent contrat est la loi espagnole.
+                    Pour les litiges qui pourraient survenir à l'occasion du
+                    présent contrat, les parties se soumettent expressément aux
+                    tribunaux et aux juges de Madrid, renonçant à leur propre
+                    juridiction.
+                    <br />
+                    <br />
+                    <strong>GÉNÉRALITÉS</strong>
+                    <br />
+                    LE TITULAIRE poursuivra toute violation des présentes
+                    conditions ainsi que toute utilisation abusive de son site
+                    web en exerçant toutes les actions légales qui peuvent lui
+                    correspondre en droit.
+                    <br />
+                    <br />
+                    Éventuellement, ces Conditions d'utilisation peuvent être
+                    révisées afin de mettre à jour les changements de la
+                    législation en vigueur, de mettre à jour nos procédures de
+                    collecte et d'utilisation des informations, d'introduire de
+                    nouveaux services ou d'exclure d'autres services. Ces
+                    modifications seront effectives dès leur publication sur le
+                    site web, il est donc important de consulter régulièrement
+                    cet Avis juridique pour rester informé des modifications
+                    apportées.
                 </Text>
             </Seccion>
             <Final />

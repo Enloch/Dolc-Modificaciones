@@ -3,17 +3,15 @@ import MenuLanzadera from '../../components/ListaContenidos/MenuLanzadera'
 import Seccion from '../../components/Seccion'
 import Text from '../../components/Text'
 import { Titulo2 } from '../../components/Titulos'
-import useMenuDesplegable from '../../hooks/useMenuDesplegable'
+import useMenuDesplegableFr from '../../hooks/useMenuDesplegableFr'
 import ImageSlider from '../../components/slider/slider'
-import Final from '../modules/10_Final'
 import Logo from '../../assets/images/Inicio/logo.png'
 import img1 from '../../assets/images/QuienesSomos/DSC_6195.jpg'
 import img2 from '../../assets/images/QuienesSomos/DSC_6221.jpg'
 import img3 from '../../assets/images/QuienesSomos/DSC_6303.jpg'
-import ImageWithCaption from '../components/ImageWithCaption'
 const Slider1 = [img1, img2, img3]
-const QuienesSomos = () => {
-    const { menuDesplegable, btnIndice } = useMenuDesplegable(
+const QuienesSomosFr = () => {
+    const { menuDesplegable, btnIndice } = useMenuDesplegableFr(
         MenuLanzadera,
         <Link to='/'>
             <img src={Logo} style={{ scale: '0.5', filter: 'invert(1)' }} />
@@ -52,4 +50,4 @@ const QuienesSomos = () => {
     )
 }
 
-export default QuienesSomos
+export default QuienesSomosFr

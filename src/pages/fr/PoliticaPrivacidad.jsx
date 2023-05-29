@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'
-import MenuLanzadera from '../components/ListaContenidos/MenuLanzadera'
-import Seccion from '../components/Seccion'
-import Text from '../components/Text'
-import { Titulo2 } from '../components/Titulos'
-import useMenuDesplegable from '../hooks/useMenuDesplegable'
-import Final from '../modules/10_Final'
+import MenuLanzadera from '../../components/ListaContenidos/MenuLanzadera'
+import Seccion from '../../components/Seccion'
+import Text from '../../components/Text'
+import { Titulo2 } from '../../components/Titulos'
+import useMenuDesplegableFr from '../../hooks/useMenuDesplegableFr'
+import Final from '../../modules/FR/10_Final'
 
-const PoliticaPrivacidad = ({ lang = '' }) => {
-    const { menuDesplegable, btnIndice } = useMenuDesplegable(
+const PoliticaPrivacidadFr = ({ lang = 'fr' }) => {
+    const { menuDesplegable, btnIndice } = useMenuDesplegableFr(
         MenuLanzadera,
         <Link to={`/${lang}`}>Dolcker</Link>
     )
@@ -17,178 +17,185 @@ const PoliticaPrivacidad = ({ lang = '' }) => {
             {menuDesplegable}
             {btnIndice}
             <Seccion>
-                <Titulo2>Política de privacidad</Titulo2>
+                <Titulo2>Politique de confidentialité</Titulo2>
                 <Text>
-                    <strong>POLÍTICA DE PRIVACIDAD DE www.dolcker.es</strong>
+                    <strong>
+                        POLITIQUE DE CONFIDENTIALITÉ DE www.dolcker.es
+                    </strong>
                     <br />
-                    Fecha de última actualización: 20/06/2022
-                    <br />
-                    <br />
-                    <strong>¿QUIÉN ES EL RESPONSABLE DEL TRATAMIENTO?</strong>
-                    <br />
-                    Identidad del responsable. DOLCKER SISTEMAS, S.L.
-                    (B-09710724) Dirección física. Calle Talamanca del Jarama,
-                    19 portal A 5ª. 28051 Madrid (Spain) Correo electrónico.
-                    dolcker@dolcker.es Teléfono. +34 913 851 480
+                    Dernière mise à jour : 20/06/2022
                     <br />
                     <br />
-                    <strong>¿QUÉ DATOS PERSONALES TRATAMOS?</strong>
+                    <strong>QUI EST RESPONSABLE DU TRAITEMENT ?</strong>
                     <br />
-                    En el marco de los distintos tratamientos de actividades
-                    realizadas en la organización, se recaban los siguiente
-                    tipos: Datos de carácter identificativos.
+                    Identité du responsable : DOLCKER SISTEMAS, S.L.
+                    (B-09710724) Adresse physique : Calle Talamanca del Jarama,
+                    19 portal A 5ª. 28051 Madrid (Espagne) Adresse électronique
+                    : dolcker@dolcker.es Téléphone : +34 913 851 480
                     <br />
                     <br />
                     <strong>
-                        ¿CON QUÉ FINALIDAD Y CASOS ESPECÍFICOS CON QUE TRATAMOS
-                        LOS DATOS PERSONALES?
+                        QUELLES DONNÉES PERSONNELLES TRAITONS-NOUS ?
                     </strong>
                     <br />
-                    En www.dolcker.es se tratan los datos personales con las
-                    siguientes finalidades: Newletter: Enviar información a
-                    través de los medios proporcionados acerca de las novedades,
-                    noticias, productos y servicios relacionados con nosotros o
-                    nuestro sector.
-                    <br />
-                    <br />
-                    Contacto: responder a las solicitudes de información
-                    recibidas sobre los productos y servicios que se ofrecen,
-                    así como dar respuesta a cualquier otro tipo de pregunta que
-                    envíen los usuarios.
-                    <br />
-                    <br />
-                    Con los datos personales recabados no se elaboraran perfiles
-                    ni se realizarán decisiones automatizadas.
+                    Dans le cadre des différents traitements d'activités
+                    effectuées dans l'organisation, nous recueillons les types
+                    de données personnelles suivants : Données d'identification.
                     <br />
                     <br />
                     <strong>
-                        ¿CUÁL ES LA LEGITIMACIÓN PARA EL TRATAMIENTO DE LOS
-                        DATOS?
+                        POUR QUELLES FINALITÉS ET DANS QUELS CAS SPÉCIFIQUES
+                        TRAITONS-NOUS LES DONNÉES PERSONNELLES ?
                     </strong>
                     <br />
-                    En la organización se pueden tratar información de carácter
-                    personal para: Consentimiento: Al acceder a nuestra web en
-                    caso de rellenar los formularios o enviarnos datos a través
-                    de los medios de contacto electrónicos indicados, aceptas
-                    esta Política de Privacidad. Es por ello, que nos basamos en
-                    el consentimiento del usuario para el tratamiento de sus
-                    datos. Adicionalmente, te informamos que sólo usaremos la
-                    información de carácter personal en virtud de esta Política
-                    de Privacidad y, con carácter general, solicitaremos tu
-                    consentimiento para usos con fines distintos de aquéllos
-                    para los cuales los otorgaste inicialmente. Finalmente, te
-                    informamos que puedes retirar el consentimiento en cualquier
-                    momento, solo tendrás que ponerte en contacto con nosotros a
-                    través de los medios indicados en esta política de
-                    privacidad.
+                    Sur www.dolcker.es, nous traitons les données personnelles
+                    dans les buts suivants : Bulletin d'information : Envoi
+                    d'informations via les moyens fournis sur les nouveautés,
+                    actualités, produits et services liés à nous-mêmes ou à
+                    notre secteur.
                     <br />
                     <br />
-                    Para la respuesta a las solicitudes, el interesado deberá
-                    proporcionar la información mínima solicitada. En caso
-                    contrato, no podrán ser atendidas.
+                    Contact : Répondre aux demandes d'information reçues sur les
+                    produits et services proposés, ainsi que répondre à toute
+                    autre question envoyée par les utilisateurs.
+                    <br />
+                    <br />
+                    Les profils ne seront pas établis et aucune décision
+                    automatisée ne sera prise sur la base des données
+                    personnelles collectées.
                     <br />
                     <br />
                     <strong>
-                        ¿DURANTE CUÁNTO TRATAMOS LOS DATOS PERSONALES?
+                        QUEL EST LE FONDEMENT JURIDIQUE DU TRAITEMENT DES
+                        DONNÉES ?
                     </strong>
                     <br />
-                    En www.dolcker.es se tratan los datos personales durante los
-                    siguientes plazos: El periodo establecido por la ley.
+                    Dans l'organisation, des informations à caractère personnel
+                    peuvent être traitées pour : Consentement : En accédant à
+                    notre site web et en remplissant les formulaires ou en nous
+                    envoyant des données via les moyens de contact électroniques
+                    indiqués, vous acceptez cette Politique de confidentialité.
+                    C'est pourquoi nous nous appuyons sur le consentement de
+                    l'utilisateur pour le traitement de ses données. De plus,
+                    nous vous informons que nous n'utiliserons les informations
+                    à caractère personnel qu'en vertu de cette Politique de
+                    confidentialité et, en général, nous demanderons votre
+                    consentement pour des utilisations autres que celles pour
+                    lesquelles vous les avez initialement accordées. Enfin, nous
+                    vous informons que vous pouvez retirer votre consentement à
+                    tout moment, il vous suffit de nous contacter via les moyens
+                    indiqués dans cette politique de confidentialité.
                     <br />
                     <br />
-                    El período necesario para cumplir con las obligaciones
-                    operativas.
-                    <br />
-                    <br />
-                    Se conservarán los datos durante el tiempo necesario para
-                    cumplir con la finalidad para la que se recabaron y para
-                    determinar las posibles responsabilidades que se pudieran
-                    derivar de dicha finalidad y del tratamiento de los datos,
-                    conforme las normativas anteriormente expuestas, además de
-                    los periodos establecidos en la normativa de archivos y
-                    documentación que sea de aplicación.
+                    Pour répondre aux demandes, la personne concernée doit
+                    fournir les informations minimales demandées. Dans le cas
+                    contraire, elles ne pourront pas être prises en compte.
                     <br />
                     <br />
                     <strong>
-                        ¿CON QUIÉN COMPARTIMOS LOS DATOS PERSONALES?
+                        COMBIEN DE TEMPS CONSERVONS-NOUS LES DONNÉES
+                        PERSONNELLES ?
                     </strong>
                     <br />
-                    Para cumplir las finalidades anteriormente descritas, se
-                    puede compartir datos personales con: Proveedores de
-                    servicios que realizan servicios a nuestro nombre. No se
-                    realizan transferencias internacionales fuera del Espacio
-                    Económico Europeo.
+                    Sur www.dolcker.es, nous traitons les données personnelles
+                    pendant les périodes suivantes : La période établie par la
+                    loi.
                     <br />
                     <br />
-                    <strong>¿QUÉ DERECHOS PUEDES EJERCER?</strong>
-                    <br />
-                    Según la normativa europea los derechos que le asisten son
-                    los siguientes: Acceso, derecho a solicitar información al
-                    responsable de un fichero sobre si sus datos personales
-                    están siendo tratados.
+                    La période nécessaire pour remplir les obligations
+                    opérationnelles.
                     <br />
                     <br />
-                    Rectificación, derecho que permite a la persona afectada
-                    solicitar la modificación de datos que sean inexactos o
-                    incompletos.
+                    Les données seront conservées pendant le temps nécessaire
+                    pour atteindre la finalité pour laquelle elles ont été
+                    collectées et pour déterminer les éventuelles
+                    responsabilités découlant de cette finalité et du traitement
+                    des données, conformément aux réglementations précédemment
+                    mentionnées, ainsi que les périodes établies par la
+                    réglementation sur les archives et la documentation
+                    applicable.
                     <br />
                     <br />
-                    Oposición, derecho de una persona a oponerse al tratamiento
-                    de sus datos personales o el cese de éstos.
+                    <strong>
+                        AVEC QUI PARTAGEONS-NOUS LES DONNÉES PERSONNELLES ?
+                    </strong>
+                    <br />
+                    Pour atteindre les finalités décrites ci-dessus, des données
+                    personnelles peuvent être partagées avec : Des prestataires
+                    de services qui effectuent des services en notre nom. Aucun
+                    transfert international en dehors de l'Espace économique
+                    européen n'est effectué.
                     <br />
                     <br />
-                    Decisiones individuales automatizadas, derecho a no ser
-                    objeto de una decisión basada únicamente en el tratamiento
-                    automatizado, incluida la elaboración de perfiles, que
-                    produzca efectos jurídicos en él o le afecte
-                    significativamente de modo similar.
+                    <strong>
+                        QUELS SONT VOS DROITS ET COMMENT LES EXERCER ?
+                    </strong>
+                    <br />
+                    Conformément à la réglementation européenne, les droits qui
+                    vous sont accordés sont les suivants : Accès : Droit de
+                    demander au responsable d'un fichier si vos données
+                    personnelles sont traitées.
                     <br />
                     <br />
-                    Limitación, derecho a suspender el tratamiento de los datos
-                    personales del usuario en determinados supuestos.
+                    Rectification : Droit de demander la modification des
+                    données qui sont inexactes ou incomplètes.
                     <br />
                     <br />
-                    Supresión u Olvido, derecho a supresión de los datos
-                    personales del interesado Portabilidad, derecho a solicitar
-                    al responsable del tratamiento que se le faciliten los datos
-                    personales en un formato estructurado y claro a otro
-                    responsable. El plazo máximo para la resolución de la
-                    solicitud es de 30 días desde su recepción, puede
-                    prorrogarse como máximo por un plazo de 2 meses siempre que
-                    sea necesario.
+                    Opposition : Droit de s'opposer au traitement de vos données
+                    personnelles ou d'en demander la cessation.
                     <br />
                     <br />
-                    El solicitante puede ejercer sus derechos a través de los
-                    siguientes medios: Email a recomiendo dolcker@dolcker.es,
-                    aportando documentación que acredite la identidad del
-                    solicitante (copia del anverso del Documento Nacional de
-                    Identidad, o equivalente).
+                    Décisions individuelles automatisées : Droit de ne pas être
+                    soumis à une décision fondée uniquement sur un traitement
+                    automatisé, y compris la création de profils, qui produit
+                    des effets juridiques sur vous ou qui vous affecte de
+                    manière significative.
                     <br />
                     <br />
-                    Correo postal a Calle Talamanca del Jarama, 19 portal A 5A.
-                    28051, Madrid (Spain), aportando documentación que acredite
-                    la identidad del solicitante (copia del anverso del
-                    Documento Nacional de Identidad, o equivalente).
+                    Limitation : Droit de suspendre le traitement de vos données
+                    personnelles dans certains cas.
                     <br />
                     <br />
-                    En cualquier caso, puede solicitar la tutela de la Agencia
-                    Española de Protección de Datos a través de su página web.
+                    Suppression ou Oubli : Droit de demander la suppression de
+                    vos données personnelles. Portabilité : Droit de demander au
+                    responsable du traitement que vos données personnelles vous
+                    soient fournies dans un format structuré et lisible, ou de
+                    les transférer à un autre responsable. Le délai maximal pour
+                    résoudre la demande est de 30 jours à compter de sa
+                    réception, il peut être prolongé d'un maximum de 2 mois si
+                    nécessaire.
                     <br />
                     <br />
-                    <strong>CAMBIOS EN ESTA POLíTICA DE PRIVACIDAD</strong>
-                    <br />
-                    Eventualmente, esta Política de Privacidad puede ser
-                    revisada con el fin de actualizar los cambios en la
-                    legislación vigente, actualizar los procedimientos de
-                    recogida y uso de la información de carácter personal, la
-                    aparición de nuevos
+                    Le demandeur peut exercer ses droits par les moyens suivants
+                    : Email à recommander dolcker@dolcker.es, en fournissant des
+                    documents justificatifs de l'identité du demandeur (copie
+                    recto de la carte d'identité nationale ou équivalent).
                     <br />
                     <br />
-                    servicios o la exclusión de otros. Estos cambios serán
-                    vigentes a partir de su publicación en la web, por lo que es
-                    importante que revises regularmente esta Política de
-                    Privacidad con el fin de permanecer informado sobre los
-                    cambios realizados.
+                    Courrier postal à Calle Talamanca del Jarama, 19 portal A
+                    5A. 28051, Madrid (Espagne), en fournissant des documents
+                    justificatifs de l'identité du demandeur (copie recto de la
+                    carte d'identité nationale ou équivalent).
+                    <br />
+                    <br />
+                    Dans tous les cas, vous pouvez demander la protection de
+                    l'Agence espagnole de protection des données via son site
+                    web.
+                    <br />
+                    <br />
+                    <strong>
+                        MODIFICATIONS DE CETTE POLITIQUE DE CONFIDENTIALITÉ
+                    </strong>
+                    <br />
+                    Cette Politique de confidentialité peut être révisée pour
+                    tenir compte des changements dans la législation en vigueur,
+                    des mises à jour des procédures de collecte et d'utilisation
+                    des informations personnelles, de l'apparition de nouveaux
+                    services ou de l'exclusion d'autres services. Ces
+                    changements entreront en vigueur à partir de leur
+                    publication sur le site web, il est donc important de
+                    consulter régulièrement cette Politique de confidentialité
+                    pour rester informé des changements apportés.
                 </Text>
             </Seccion>
             <Final />
@@ -196,4 +203,4 @@ const PoliticaPrivacidad = ({ lang = '' }) => {
     )
 }
 
-export default PoliticaPrivacidad
+export default PoliticaPrivacidadFr
