@@ -2,10 +2,10 @@ import ImageWithCaption from '../../../components/ImageWithCaption'
 import { Titulo, Titulo2, Titulo3 } from '../../../components/Titulos'
 import { COLORS, DISTANCES } from '../../../global/GlobalStyles'
 import StyledAplicaciones from './styles'
-import img1 from '../../../assets/images/DolckerTline/arquitecto.webp'
-import img2 from '../../../assets/images/DolckerTline/arquitecto.webp'
-import img3 from '../../../assets/images/DolckerTline/jorgeobra.jpg'
-import img4 from '../../../assets/images/DolckerTline/arquitecto.webp'
+import img1 from '../../../assets/images/DolckerTline/Aplicaciones/catalogo3-1-9.webp'
+import img2 from '../../../assets/images/DolckerTline/Aplicaciones/catalogo3-1-10.webp'
+import img3 from '../../../assets/images/DolckerTline/Aplicaciones/catalogo3-1-11.webp'
+import img4 from '../../../assets/images/DolckerTline/Aplicaciones/catalogo3-1-12.webp'
 import img5 from '../../../assets/images/DolckerTline/arquitecto.webp'
 import Cita from '../../../components/Cita'
 
@@ -21,7 +21,7 @@ const AplicacionesTline = ({ id }) => {
                 <ImageWithCaption
                     src={img1}
                     alt='Imagen de Aplicaciones 1'
-                    caption='Arquitecto dará referencias.'
+                    caption=''
                     columnSpan='6'
                 />
                 <Cita
@@ -40,7 +40,7 @@ const AplicacionesTline = ({ id }) => {
                 <ImageWithCaption
                     src={img2}
                     alt='Imagen de Aplicaciones 1'
-                    caption='Arquitecto dará referencias. '
+                    caption=''
                     columnSpan='6'
                 />
                 <Cita

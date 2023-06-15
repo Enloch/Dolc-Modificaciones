@@ -37,15 +37,15 @@ const Contacto = ({ lang = '' }) => {
                     <br />
                     28051 Madrid (España)
                     <br />
-                    (+34) 902 363 725
+                    (+34) 620 03 32 59
                     <br />
                     <br />
                     <a href='mailto:administracion@dolcker.es'>
                         administracion@dolcker.es
                     </a>
                     <br />
-                    <a href='mailto:comercial@dolcker.es'>
-                        comercial@dolcker.es
+                    <a href='mailto:alberto.lopez@dolcker.es'>
+                        alberto.lopez@dolcker.es
                     </a>
                     <br />
                     <a href='mailto:dolcker@dolcker.es'>dolcker@dolcker.es</a>

@@ -1,7 +1,7 @@
 import ImageWithCaption from '../../../components/ImageWithCaption'
 import { Titulo } from '../../../components/Titulos'
 import StyledVentajas from './styles'
-import img1 from '../../../assets/images/DolckerTline/7475.webp'
+import img1 from '../../../assets/images/DolckerTline/Ventajas/catalogo3-1-8.webp'
 import Text from '../../../components/Text'
 import { COLORS } from '../../../global/GlobalStyles'
 import Listado from '../../../components/Listado'
@@ -13,7 +13,7 @@ const VentajasTline = ({ id }) => {
             <ImageWithCaption
                 src={img1}
                 alt='Imagen de Ventajas 1'
-                caption='A consultar Jorge( Arquitecto dará referencia para que 7475 cree la imagen)'
+                caption=''
                 columnSpan='6'
             />
             <Text>
