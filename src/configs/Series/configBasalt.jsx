@@ -2,12 +2,12 @@ import getDataFromModules from '../../helpers/getDataFromModules'
 import imgSeleccionar from '../../assets/images/Series/BASALT/Dolcker-BASALT_seleccionar.webp'
 
 const ambientesImports = import.meta.globEager(
-    '../../assets/images/Series/BASALT/AMBIENTES/**'
+    '../../assets/images/SeriesTline/BASALT/AMBIENTES/**'
 )
 
 const muestrasImports = import.meta.globEager(
-    '../../assets/images/Series/BASALT/DESPIECE/**'
-)
+  "../../assets/images/SeriesTline/BASALT/DESPIECE/**"
+);
 
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
