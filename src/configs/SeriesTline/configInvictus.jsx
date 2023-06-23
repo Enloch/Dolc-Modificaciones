@@ -3,11 +3,11 @@ import imgSeleccionar from "../../assets/images/Series/BASALT/Dolcker-BASALT_sel
 import InteractivoImg from "../../assets/images/DolckerTline/Interactivofachada.jpg";
 import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
-  "../../assets/images/DolckerTline/Series/CAPRI/AMBIENTES/**"
+  "../../assets/images/DolckerTline/Series/INVICTUS/AMBIENTES/**"
 );
 
 const muestrasImports = import.meta.globEager(
-  "../../assets/images/DolckerTline/Series/CAPRI/DESPIECE/**"
+  "../../assets/images/DolckerTline/Series/INVICTUS/DESPIECE/**"
 );
 
 const acabadosImports = import.meta.globEager("../../assets/icons/acabados/**");
@@ -16,8 +16,8 @@ const ambientes = getDataFromModules(ambientesImports);
 const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
-const configCapri = {
-  titulo: "Capri",
+const configInvictus = {
+  titulo: "Invictus",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -26,39 +26,17 @@ const configCapri = {
       left: "20%",
       ambiente: {
         imagen: InteractivoImg,
-        titulo: "Capri Dark",
+        titulo: "Invictus Natural",
       },
     },
-    {
-      top: "45%",
-      left: "20%",
-      ambiente: {
-        imagen: ambientes[1],
-        titulo: "Capri Gery",
-      },
-    },
-    {
-      top: "75%",
-      left: "20%",
-      ambiente: {
-        imagen: ambientes[2],
-        titulo: "Capri Cream",
-      },
-    },
+
   ],
   muestras: [
     {
-      imagen: muestras[1],
-      titulo: "Dark",
-    },
-    {
-      imagen: muestras[2],
-      titulo: "Grey",
-    },
-    {
       imagen: muestras[0],
-      titulo: "Cream",
+      titulo: "Natural",
     },
+
   ],
   acabados: [
     {
@@ -68,4 +46,4 @@ const configCapri = {
   ],
 };
 
-export default configCapri;
+export default configInvictus;

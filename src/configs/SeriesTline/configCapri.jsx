@@ -34,7 +34,7 @@ const configCapri = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Capri Gery",
+        titulo: "Capri Grey",
       },
     },
     {
