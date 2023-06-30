@@ -1,8 +1,5 @@
 import { useState, useRef } from "react";
-import Anotacion from "../../../../components/Anotacion";
 import FullScreen from "../../../../components/FullScreen";
-import VisualizadorVariaciones from "../../../../components/VisualizadorVariaciones";
-import configArquitect from "../../../../configs/Series/configArquitect";
 import configAmarna from "../../../../configs/SeriesTline/configAmarna";
 import configArdesia from "../../../../configs/SeriesTline/configArdesia";
 import configBalmoral from "../../../../configs/SeriesTline/configBalmoral";
@@ -16,49 +13,21 @@ import configDome from "../../../../configs/SeriesTline/configDome";
 import configEternal from "../../../../configs/SeriesTline/configEternal";
 import configGravel from "../../../../configs/SeriesTline/configGravel";
 import configHabitat from "../../../../configs/SeriesTline/configHabitat";
-
+import configHannover from "../../../../configs/SeriesTline/configHannover";
+import configInvictus from "../../../../configs/SeriesTline/configInvictus";
+import configKursaal from "../../../../configs/SeriesTline/configKursaal";
+import configLenci from "../../../../configs/SeriesTline/configLenci";
+import configNikea from "../../../../configs/SeriesTline/configNikea";
+import configNiro from "../../../../configs/SeriesTline/configNiro";
+import configStoneland from "../../../../configs/SeriesTline/configStoneland";
+import configStorm from "../../../../configs/SeriesTline/configStorm";
+import configUnik from "../../../../configs/SeriesTline/configUnik";
 import { COLORS } from "../../../../global/GlobalStyles";
 import Serie from "./Serie";
 
-import fondo from "../../../../assets/images/VolumenVariacion/fondo.jpg";
-import indicadoresFormato from "../../../../configs/configVolumenVariacion";
-import { useListaCambios } from "../../../../contexts/MultipleOptionsContext";
-import Anotaciones from "../../../../components/Anotacion/Anotaciones";
-import ImageWithCaption from "../../../../components/ImageWithCaption";
-import configfachadaimg from "../../../../assets/images/DolckerTline/configcenefas.jpg";
-import createPDF from "../../../../utils/createPDF";
-
-const Series = ({ ids }) => {
+const Series = ({ id, serieActiva }) => {
   const [fullScreenSrc, setFullScreenSrc] = useState("");
   const [fullScreenTitulo, setFullScreenTitulo] = useState("");
-  const visRef = useRef(null);
-
-  const { listaCambios, cleanListaCambios, addIdsMenu, idsMenu } =
-    useListaCambios();
-
-  const propsFormato = {
-    anotacionPDF: {
-      text: "Haz click aquí para descargar un PDF con tu colocación",
-      type: "pdf",
-      onClick: () => createPDF(visRef),
-    },
-    anotacion2: {
-      text: "Selecciona las áreas donde quieras aplicar la pieza",
-      type: "normal",
-    },
-    anotacion: {
-      text: "Haz click en el punto para seleccionar la pieza a aplicar",
-      type: "click",
-    },
-    visualizador: {
-      config: indicadoresFormato,
-      srcfondo: fondo,
-      altFondo: "Imagen de fondo con indicadores",
-      volumen: { listaCambios, cleanListaCambios, addIdsMenu, idsMenu },
-      visRef,
-    },
-  };
-
   return (
     <>
       <FullScreen
@@ -68,111 +37,379 @@ const Series = ({ ids }) => {
         setFullScreenTitulo={setFullScreenTitulo}
         backgroundColor={COLORS.gray01}
       />
+      {/* {serieActiva === "amarna" && (
+        <Serie
+          id={id[0]}
+          config={configAmarna}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "ardesia" && (
+        <Serie
+          id={id[1]}
+          config={configArdesia}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "balmoral" && (
+        <Serie
+          id={id[2]}
+          config={configBalmoral}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "bellagio" && (
+        <Serie
+          id={id[3]}
+          config={configBellagio}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "brunswich" && (
+        <Serie
+          id={id[4]}
+          config={configBrunswich}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "byb" && (
+        <Serie
+          id={id[5]}
+          config={configByb}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "capri" && (
+        <Serie
+          id={id[6]}
+          config={configCapri}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "core" && (
+        <Serie
+          id={id[7]}
+          config={configCore}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "cromat" && (
+        <Serie
+          id={id[8]}
+          config={configCromat}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "dome" && (
+        <Serie
+          id={id[9]}
+          config={configDome}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "eternal" && (
+        <Serie
+          id={id[10]}
+          config={configEternal}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "gravel" && (
+        <Serie
+          id={id[11]}
+          config={configGravel}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "habitat" && (
+        <Serie
+          id={id[12]}
+          config={configHabitat}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "hannover" && (
+        <Serie
+          id={id[13]}
+          config={configHannover}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "invictus" && (
+        <Serie
+          id={id[14]}
+          config={configInvictus}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "kursaal" && (
+        <Serie
+          id={id[15]}
+          config={configKursaal}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "lenci" && (
+        <Serie
+          id={id[16]}
+          config={configLenci}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "nikea" && (
+        <Serie
+          id={id[17]}
+          config={configNikea}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "niro" && (
+        <Serie
+          id={id[18]}
+          config={configNiro}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "stoneland" && (
+        <Serie
+          id={id[19]}
+          config={configStoneland}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "storm" && (
+        <Serie
+          id={id[20]}
+          config={configStorm}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )}
+
+      {serieActiva === "unik" && (
+        <Serie
+          id={id[21]}
+          config={configUnik}
+          setFullScreenSrc={setFullScreenSrc}
+          setFullScreenTitulo={setFullScreenTitulo}
+          backgroundColor={COLORS.gray01}
+        />
+      )} */}
       <Serie
-        id={ids[0]}
+        id={id[0]}
         config={configAmarna}
         setFullScreenSrc={setFullScreenSrc}
         setFullScreenTitulo={setFullScreenTitulo}
         backgroundColor={COLORS.gray01}
       />
       <Serie
-        id={ids[1]}
+        id={id[1]}
         config={configArdesia}
         setFullScreenSrc={setFullScreenSrc}
         setFullScreenTitulo={setFullScreenTitulo}
         backgroundColor={COLORS.gray01}
       />
       <Serie
-        id={ids[2]}
+        id={id[2]}
         config={configBalmoral}
         setFullScreenSrc={setFullScreenSrc}
         setFullScreenTitulo={setFullScreenTitulo}
         backgroundColor={COLORS.gray01}
       />
       <Serie
-        id={ids[3]}
+        id={id[3]}
         config={configBellagio}
         setFullScreenSrc={setFullScreenSrc}
         setFullScreenTitulo={setFullScreenTitulo}
         backgroundColor={COLORS.gray01}
       />
       <Serie
-        id={ids[4]}
+        id={id[4]}
         config={configBrunswich}
         setFullScreenSrc={setFullScreenSrc}
         setFullScreenTitulo={setFullScreenTitulo}
         backgroundColor={COLORS.gray01}
       />
       <Serie
-        id={ids[5]}
+        id={id[5]}
         config={configByb}
         setFullScreenSrc={setFullScreenSrc}
         setFullScreenTitulo={setFullScreenTitulo}
         backgroundColor={COLORS.gray01}
       />
       <Serie
-        id={ids[6]}
+        id={id[6]}
         config={configCapri}
         setFullScreenSrc={setFullScreenSrc}
         setFullScreenTitulo={setFullScreenTitulo}
         backgroundColor={COLORS.gray01}
       />
       <Serie
-        id={ids[7]}
+        id={id[7]}
         config={configCore}
         setFullScreenSrc={setFullScreenSrc}
         setFullScreenTitulo={setFullScreenTitulo}
         backgroundColor={COLORS.gray01}
       />
       <Serie
-        id={ids[8]}
+        id={id[8]}
+        config={configCromat}
+        setFullScreenSrc={setFullScreenSrc}
+        setFullScreenTitulo={setFullScreenTitulo}
+        backgroundColor={COLORS.gray01}
+      />
+      <Serie
+        id={id[9]}
         config={configDome}
         setFullScreenSrc={setFullScreenSrc}
         setFullScreenTitulo={setFullScreenTitulo}
         backgroundColor={COLORS.gray01}
       />
       <Serie
-        id={ids[9]}
+        id={id[10]}
         config={configEternal}
         setFullScreenSrc={setFullScreenSrc}
         setFullScreenTitulo={setFullScreenTitulo}
         backgroundColor={COLORS.gray01}
       />
       <Serie
-        id={ids[10]}
+        id={id[11]}
         config={configGravel}
         setFullScreenSrc={setFullScreenSrc}
         setFullScreenTitulo={setFullScreenTitulo}
         backgroundColor={COLORS.gray01}
       />
       <Serie
-        id={ids[11]}
+        id={id[12]}
         config={configHabitat}
         setFullScreenSrc={setFullScreenSrc}
         setFullScreenTitulo={setFullScreenTitulo}
         backgroundColor={COLORS.gray01}
       />
-
       <Serie
-        id={ids[13]}
-        config={configCapri}
+        id={id[13]}
+        config={configHannover}
         setFullScreenSrc={setFullScreenSrc}
         setFullScreenTitulo={setFullScreenTitulo}
         backgroundColor={COLORS.gray01}
-      >
-        {/* <VisualizadorVariaciones {...propsFormato.visualizador} /> */}
-        <ImageWithCaption
-          src={configfachadaimg}
-          alt='Imagen de Diseños 1'
-          caption='intercambiador de fachada'
-          columnSpan='6'
-        />
-        <Anotaciones className='anotacion-variaciones'>
-          <Anotacion {...propsFormato.anotacion2} />
-          <Anotacion {...propsFormato.anotacion} />
-          <Anotacion {...propsFormato.anotacionPDF} />
-        </Anotaciones>
-      </Serie>
+      />
+      <Serie
+        id={id[14]}
+        config={configInvictus}
+        setFullScreenSrc={setFullScreenSrc}
+        setFullScreenTitulo={setFullScreenTitulo}
+        backgroundColor={COLORS.gray01}
+      />
+      <Serie
+        id={id[15]}
+        config={configKursaal}
+        setFullScreenSrc={setFullScreenSrc}
+        setFullScreenTitulo={setFullScreenTitulo}
+        backgroundColor={COLORS.gray01}
+      />
+      <Serie
+        id={id[16]}
+        config={configLenci}
+        setFullScreenSrc={setFullScreenSrc}
+        setFullScreenTitulo={setFullScreenTitulo}
+        backgroundColor={COLORS.gray01}
+      />
+      <Serie
+        id={id[17]}
+        config={configNikea}
+        setFullScreenSrc={setFullScreenSrc}
+        setFullScreenTitulo={setFullScreenTitulo}
+        backgroundColor={COLORS.gray01}
+      />
+      <Serie
+        id={id[18]}
+        config={configNiro}
+        setFullScreenSrc={setFullScreenSrc}
+        setFullScreenTitulo={setFullScreenTitulo}
+        backgroundColor={COLORS.gray01}
+      />
+      <Serie
+        id={id[19]}
+        config={configStoneland}
+        setFullScreenSrc={setFullScreenSrc}
+        setFullScreenTitulo={setFullScreenTitulo}
+        backgroundColor={COLORS.gray01}
+      />
+      <Serie
+        id={id[20]}
+        config={configStorm}
+        setFullScreenSrc={setFullScreenSrc}
+        setFullScreenTitulo={setFullScreenTitulo}
+        backgroundColor={COLORS.gray01}
+      />
+      <Serie
+        id={id[21]}
+        config={configUnik}
+        setFullScreenSrc={setFullScreenSrc}
+        setFullScreenTitulo={setFullScreenTitulo}
+        backgroundColor={COLORS.gray01}
+      />
     </>
   );
 };

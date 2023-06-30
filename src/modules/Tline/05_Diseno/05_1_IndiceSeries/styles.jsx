@@ -1,22 +1,40 @@
-import styled, { css } from 'styled-components'
-import Seccion from '../../../../components/Seccion'
-import { Titulo2 } from '../../../../components/Titulos'
-import { column_5_span7, column_total } from '../../../../styles/grid'
-import { mediaQueryTablet } from '../../../../styles/sizes'
-import Enlace from './Enlace'
+import styled, { css } from "styled-components";
+import Seccion from "../../../../components/Seccion";
+import { Titulo2 } from "../../../../components/Titulos";
+import { column_5_span7, column_total } from "../../../../styles/grid";
+import { mediaQueryTablet } from "../../../../styles/sizes";
+import Enlace from "./Enlace";
 
-const SyledIndiceSeries = styled(Seccion)`
-    ${Titulo2} {
-        ${column_total}
+const StyledIndiceSeries = styled(Seccion)`
+  ${Titulo2} {
+    ${column_total}
+  }
+  select {
+    /* Estilos para el selector */
+    width: 200px;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    background-color: transparent;
+
+    /* Estilos adicionales para diferentes estados del selector */
+    &:focus {
+      outline: none;
+      border-color: #0066cc;
     }
-
-    ${Enlace}, > .enlace {
-        grid-column-end: span 2;
-        ${mediaQueryTablet(css`
-            grid-column-start: 1;
-            grid-column-end: -1;
-        `)}
+    &:hover {
+      border-color: #999;
     }
-`
+  }
 
-export default SyledIndiceSeries
+  ${Enlace}, > .enlace {
+    grid-column-end: span 2;
+    ${mediaQueryTablet(css`
+      grid-column-start: 1;
+      grid-column-end: -1;
+    `)}
+  }
+`;
+
+export default StyledIndiceSeries;

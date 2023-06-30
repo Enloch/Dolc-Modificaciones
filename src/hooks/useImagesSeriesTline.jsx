@@ -4,39 +4,78 @@ import getDataFromModules from "../helpers/getDataFromModules";
 import Enlace from "../modules/06_Diseno/06_1_IndiceSeries/Enlace";
 import img1 from "../assets/images/DolckerTline/ranurado11mm.webp";
 const imagenesAmbienteImports = import.meta.globEager(
-  "../assets/images/Series/**/EJEMPLO/**"
+  "../assets/images/DolckerTline/Series/**/EJEMPLO/**"
 );
 
 const imagenesAmbiente = getDataFromModules(imagenesAmbienteImports);
 
 const enlacesObj = [
-  { titulo: "CAPRI", src: img1, id: "#capri" },
-  { titulo: "CORE", src: img1, id: "#core" },
-  { titulo: "GRAVEL", src: img1, id: "#gravel" },
-  { titulo: "KURSAAL", src: img1, id: "#kursaal" },
-  { titulo: "STORM", src: img1, id: "#storm" },
-  { titulo: "BALMORAL", src: img1, id: "#balmoral" },
-  { titulo: "BELLAGIO", src: img1, id: "#bellagio" },
-  { titulo: "BLACK Y BLANCO", src: img1, id: "#byb" },
-  { titulo: "BRUNSWICH", src: img1, id: "#brunswich" },
-  { titulo: "DOME", src: img1, id: "#dome" },
-  { titulo: "ETERNAL", src: img1, id: "#eternal" },
-  { titulo: "HABITAT", src: img1, id: "#habitat" },
-  { titulo: "HANOVER", src: img1, id: "#hanover" },
-  { titulo: "INVICTUS", src: img1, id: "#invictus" },
-  { titulo: "NIKEA", src: img1, id: "#nikea" },
-  { titulo: "STONELAND", src: img1, id: "#stoneland" },
-  { titulo: "UNIK", src: img1, id: "#unik" },
-  { titulo: "ARDESIA", src: img1, id: "#ardesia" },
-  { titulo: "CROMAT", src: img1, id: "#cromat" },
-  { titulo: "AMARNA", src: img1, id: "#amarna" },
-  { titulo: "NIRO", src: img1, id: "#niro" },
-  { titulo: "LENCI", src: img1, id: "#lenci" },
+  { titulo: "AMARNA", src: img1, id: "#amarna", categoria: "Marmol" },
+  { titulo: "ARDESIA", src: img1, id: "#ardesia", categoria: "Piedra" },
+  { titulo: "BALMORAL", src: img1, id: "#balmoral", categoria: "Piedra" },
+  {
+    titulo: "BELLAGIO",
+    src: imagenesAmbiente[3],
+    id: "#bellagio",
+    categoria: "Marmol",
+  },
+  { titulo: "BLACK Y BLANCO", src: img1, id: "#byb", categoria: "Monocolor" },
+  { titulo: "BRUNSWICH", src: img1, id: "#brunswich", categoria: "Piedra" },
+  {
+    titulo: "CAPRI",
+    src: imagenesAmbiente[6],
+    id: "#capri",
+    categoria: "Piedra",
+  },
+  {
+    titulo: "CORE",
+    src: imagenesAmbiente[7],
+    id: "#core",
+    categoria: "Cemento",
+  },
+  { titulo: "CROMAT", src: img1, id: "#cromat", categoria: "Piedra" },
+  { titulo: "DOME", src: img1, id: "#dome", categoria: "Piedra" },
+  { titulo: "ETERNAL", src: img1, id: "#eternal", categoria: "Marmol" },
+  {
+    titulo: "GRAVEL",
+    src: imagenesAmbiente[11],
+    id: "#gravel",
+    categoria: "Cemento",
+  },
+  { titulo: "HABITAT", src: img1, id: "#habitat", categoria: "Cemento" },
+  { titulo: "HANNOVER", src: img1, id: "#hannover", categoria: "Terrazo" },
+  { titulo: "INVICTUS", src: img1, id: "#invictus", categoria: "Marmol" },
+  {
+    titulo: "KURSAAL",
+    src: imagenesAmbiente[15],
+    id: "#kursaal",
+    categoria: "Piedra",
+  },
+  { titulo: "LENCI", src: img1, id: "#lenci", categoria: "Marmol" },
+  { titulo: "NIKEA", src: img1, id: "#nikea", categoria: "Marmol" },
+  { titulo: "NIRO", src: img1, id: "#niro", categoria: "Marmol" },
+  { titulo: "STONELAND", src: img1, id: "#stoneland", categoria: "Piedra" },
+  { titulo: "STORM", src: img1, id: "#storm", categoria: "Piedra" },
+  { titulo: "UNIK", src: img1, id: "#unik", categoria: "Cemento" },
 ];
 
-const useImagesSeries = () => {
+const useImagesSeries = (categoria, serieActiva, setSerieActiva) => {
+  // Filtra los enlaces de acuerdo a la categoría seleccionada
+  const enlacesFiltrados = enlacesObj.filter((enlace) => {
+    if (categoria === "Todas") {
+      return true; // Mostrar todas las categorías
+    } else {
+      return enlace.categoria === categoria; // Mostrar solo la categoría seleccionada
+    }
+  });
+  const handleSerieChange = (event) => {
+    event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+    const serie = event.target.getAttribute("href");
+    setSerieActiva(serie);
+    console.log(setSerieActiva(serie));
+  };
   return Children.toArray(
-    enlacesObj.map(({ titulo, src, id }) => {
+    enlacesFiltrados.map(({ titulo, src, id }) => {
       return (
         <Enlace href={id} className='enlace'>
           <img src={src} alt={titulo + " ejemplo"} />

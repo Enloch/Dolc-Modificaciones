@@ -1,5 +1,5 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
-import imgSeleccionar from "../../assets/images/Series/BASALT/Dolcker-BASALT_seleccionar.webp";
+import imgSeleccionar from "../../assets/images/DolckerTline/Series/CORE/DOLCKER CORE materiales seleccion.webp";
 import InteractivoImg from "../../assets/images/DolckerTline/Interactivofachada.jpg";
 import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
@@ -22,15 +22,15 @@ const conficCore = {
   imgSeleccionar,
   indicadores: [
     {
-      top: "15%",
+      top: "8%",
       left: "20%",
       ambiente: {
-        imagen: InteractivoImg,
+        imagen: ambientes[0],
         titulo: "Core ambre",
       },
     },
     {
-      top: "45%",
+      top: "22%",
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
@@ -38,7 +38,7 @@ const conficCore = {
       },
     },
     {
-      top: "75%",
+      top: "38%",
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
@@ -46,7 +46,7 @@ const conficCore = {
       },
     },
     {
-      top: "85%",
+      top: "55%",
       left: "20%",
       ambiente: {
         imagen: ambientes[3],
@@ -54,7 +54,7 @@ const conficCore = {
       },
     },
     {
-      top: "85%",
+      top: "71%",
       left: "20%",
       ambiente: {
         imagen: ambientes[4],
@@ -62,7 +62,7 @@ const conficCore = {
       },
     },
     {
-      top: "85%",
+      top: "86%",
       left: "20%",
       ambiente: {
         imagen: ambientes[5],

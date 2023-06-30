@@ -1,5 +1,5 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
-import imgSeleccionar from "../../assets/images/Series/BASALT/Dolcker-BASALT_seleccionar.webp";
+import imgSeleccionar from "../../assets/images/DolckerTline/Series/KURSAAL/DOLCKER KURSAAL materiales seleccion.webp";
 import InteractivoImg from "../../assets/images/DolckerTline/Interactivofachada.jpg";
 import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
@@ -22,42 +22,78 @@ const configKursaal = {
   imgSeleccionar,
   indicadores: [
     {
-      top: "15%",
+      top: "8%",
       left: "20%",
       ambiente: {
-        imagen: InteractivoImg,
-        titulo: "Kursaal Dark",
+        imagen: ambientes[0],
+        titulo: "Kursaal Ashen",
       },
     },
     {
-      top: "45%",
+      top: "22%",
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Kursaal Gery",
+        titulo: "Kursaal Neutral",
       },
     },
     {
-      top: "75%",
+      top: "38%",
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
-        titulo: "Kursaal Cream",
+        titulo: "Kursaal Pure",
+      },
+    },
+    {
+      top: "55%",
+      left: "20%",
+      ambiente: {
+        imagen: ambientes[3],
+        titulo: "Kursaal Raven",
+      },
+    },
+    {
+      top: "71%",
+      left: "20%",
+      ambiente: {
+        imagen: ambientes[4],
+        titulo: "Kursaal Rust",
+      },
+    },
+    {
+      top: "86%",
+      left: "20%",
+      ambiente: {
+        imagen: ambientes[5],
+        titulo: "Kursaal Slate",
       },
     },
   ],
   muestras: [
     {
+      imagen: muestras[0],
+      titulo: "Ashen",
+    },
+    {
       imagen: muestras[1],
-      titulo: "Dark",
+      titulo: "Neutral",
     },
     {
       imagen: muestras[2],
-      titulo: "Grey",
+      titulo: "Pure",
     },
     {
-      imagen: muestras[0],
-      titulo: "Cream",
+      imagen: muestras[3],
+      titulo: "Raven",
+    },
+    {
+      imagen: muestras[4],
+      titulo: "Rust",
+    },
+    {
+      imagen: muestras[5],
+      titulo: "Slate",
     },
   ],
   acabados: [

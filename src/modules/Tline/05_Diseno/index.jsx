@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Cita from "../../../components/Cita";
 import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo, Titulo2 } from "../../../components/Titulos";
@@ -28,6 +29,31 @@ import rotadorImg from "../../../assets/images/DolckerTline/config.jpg";
 import RotadorTline from "../../../components/Rotadores/Tline/Rotador";
 
 const DisenosTline = ({ id }) => {
+  const ids = [
+    "amarna",
+    "ardesia",
+    "balmoral",
+    "bellagio",
+    "brunswich",
+    "byb",
+    "capri",
+    "core",
+    "cromat",
+    "dome",
+    "eternal",
+    "gravel",
+    "habitat",
+    "hannover",
+    "invictus",
+    "kursaal",
+    "lenci",
+    "nikea",
+    "niro",
+    "stoneland",
+    "storm",
+    "unik",
+  ];
+
   const propsFormato = {
     anotacion: {
       text: "Pulsa en el punto para ver las posibilidades de formato",
@@ -39,7 +65,7 @@ const DisenosTline = ({ id }) => {
       altFondo: "Imagen de fondo con indicadores",
     },
   };
-
+  const [serieActiva, setSerieActiva] = useState("#amarna");
   return (
     <>
       <StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
@@ -150,33 +176,12 @@ const DisenosTline = ({ id }) => {
           columnSpan='6'
         />
       </StyledDisenos>
-      <IndiceSeries id={id[6]} />
-      <Series
-        ids={[
-          "amarna",
-          "ardesia",
-          "balmoral",
-          "bellagio",
-          "brunswich",
-          "byb",
-          "capri",
-          "core",
-          "cromat",
-          "dome",
-          "eternal",
-          "gravel",
-          "habitat",
-          "hannover",
-          "invictus",
-          "kursaal",
-          "lenci",
-          "nikea",
-          "niro",
-          "stoneland",
-          "storm",
-          "unik",
-        ]}
+      <IndiceSeries
+        id={id[6]}
+        serieActiva={serieActiva}
+        setSerieActiva={setSerieActiva}
       />
+      <Series id={ids} serieActiva={serieActiva} />
     </>
   );
 };

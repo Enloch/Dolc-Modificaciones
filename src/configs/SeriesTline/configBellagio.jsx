@@ -1,5 +1,5 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
-import imgSeleccionar from "../../assets/images/Series/BASALT/Dolcker-BASALT_seleccionar.webp";
+import imgSeleccionar from "../../assets/images/DolckerTline/Series/BELLAGIO/DOLCKER BELLAGIO materiales seleccion.webp";
 import InteractivoImg from "../../assets/images/DolckerTline/Interactivofachada.jpg";
 import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
@@ -25,7 +25,7 @@ const configBellagio = {
       top: "15%",
       left: "20%",
       ambiente: {
-        imagen: InteractivoImg,
+        imagen: ambientes[0],
         titulo: "Bellagio Natural",
       },
     },

@@ -3,11 +3,11 @@ import imgSeleccionar from "../../assets/images/Series/BASALT/Dolcker-BASALT_sel
 import InteractivoImg from "../../assets/images/DolckerTline/Interactivofachada.jpg";
 import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
-  "../../assets/images/DolckerTline/Series/CAPRI/AMBIENTES/**"
+  "../../assets/images/DolckerTline/Series/STONELAND/AMBIENTES/**"
 );
 
 const muestrasImports = import.meta.globEager(
-  "../../assets/images/DolckerTline/Series/CAPRI/DESPIECE/**"
+  "../../assets/images/DolckerTline/Series/STONELAND/DESPIECE/**"
 );
 
 const acabadosImports = import.meta.globEager("../../assets/icons/acabados/**");
@@ -16,8 +16,8 @@ const ambientes = getDataFromModules(ambientesImports);
 const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
-const configCapri = {
-  titulo: "Capri",
+const configStoneland = {
+  titulo: "Stoneland",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -26,7 +26,7 @@ const configCapri = {
       left: "20%",
       ambiente: {
         imagen: InteractivoImg,
-        titulo: "Capri Dark",
+        titulo: "Stoneland Grey Rectificado",
       },
     },
     {
@@ -34,7 +34,7 @@ const configCapri = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Capri Gery",
+        titulo: "Stoneland Ivory",
       },
     },
     {
@@ -42,22 +42,22 @@ const configCapri = {
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
-        titulo: "Capri Cream",
+        titulo: "Stoneland Pearl",
       },
     },
   ],
   muestras: [
     {
+      imagen: muestras[0],
+      titulo: "Grey Rectificado",
+    },
+    {
       imagen: muestras[1],
-      titulo: "Dark",
+      titulo: "Ivory",
     },
     {
       imagen: muestras[2],
-      titulo: "Grey",
-    },
-    {
-      imagen: muestras[0],
-      titulo: "Cream",
+      titulo: "Pearl",
     },
   ],
   acabados: [
@@ -68,4 +68,4 @@ const configCapri = {
   ],
 };
 
-export default configCapri;
+export default configStoneland;

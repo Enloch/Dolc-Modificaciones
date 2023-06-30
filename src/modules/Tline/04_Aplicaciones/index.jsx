@@ -82,19 +82,6 @@ const AplicacionesTline = ({ id }) => {
                     columnSpan='6'
                 />
             </StyledAplicaciones>
-            <StyledAplicaciones
-                id={id[4]}
-                backgroundColor={COLORS.gray01}
-                rowGap={DISTANCES.medium}
-            >
-                <Titulo3 color={COLORS.gray08}>— Interior</Titulo3>
-                <ImageWithCaption
-                    src={img5}
-                    alt='Imagen de Aplicaciones 5'
-                    caption='Arquitecto dará referencias.'
-                    columnSpan='6'
-                />
-            </StyledAplicaciones>
         </>
     )
 }
