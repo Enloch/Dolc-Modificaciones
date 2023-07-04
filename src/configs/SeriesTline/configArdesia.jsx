@@ -1,15 +1,12 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
-import imgSeleccionar from "../../assets/images/Series/BASALT/Dolcker-BASALT_seleccionar.webp";
-import InteractivoImg from "../../assets/images/DolckerTline/Interactivofachada.jpg";
+import imgSeleccionar from "../../assets/images/DolckerTline/Series/ARDESIA/DOLCKER CR ARDESIA materiales seleccion.webp";
 import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
   "../../assets/images/DolckerTline/Series/ARDESIA/AMBIENTES/**"
 );
-
 const muestrasImports = import.meta.globEager(
   "../../assets/images/DolckerTline/Series/ARDESIA/DESPIECE/**"
 );
-
 const acabadosImports = import.meta.globEager("../../assets/icons/acabados/**");
 
 const ambientes = getDataFromModules(ambientesImports);
@@ -22,15 +19,15 @@ const configArdesia = {
   imgSeleccionar,
   indicadores: [
     {
-      top: "15%",
+      top: "8%",
       left: "20%",
       ambiente: {
-        imagen: InteractivoImg,
+        imagen: ambientes[0],
         titulo: "Ardesia Bronce",
       },
     },
     {
-      top: "45%",
+      top: "23%",
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
@@ -38,7 +35,7 @@ const configArdesia = {
       },
     },
     {
-      top: "75%",
+      top: "41%",
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
@@ -46,7 +43,7 @@ const configArdesia = {
       },
     },
     {
-      top: "85%",
+      top: "60%",
       left: "20%",
       ambiente: {
         imagen: ambientes[3],
@@ -54,7 +51,7 @@ const configArdesia = {
       },
     },
     {
-      top: "85%",
+      top: "78%",
       left: "20%",
       ambiente: {
         imagen: ambientes[4],

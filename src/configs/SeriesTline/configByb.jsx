@@ -1,6 +1,5 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
-import imgSeleccionar from "../../assets/images/Series/BASALT/Dolcker-BASALT_seleccionar.webp";
-import InteractivoImg from "../../assets/images/DolckerTline/Interactivofachada.jpg";
+import imgSeleccionar from "../../assets/images/DolckerTline/Series/BYB/DOLCKER BLACK Y BLANCO materiales seleccion.webp";
 import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
   "../../assets/images/DolckerTline/Series/BYB/AMBIENTES/**"
@@ -22,15 +21,15 @@ const configByb = {
   imgSeleccionar,
   indicadores: [
     {
-      top: "15%",
+      top: "23%",
       left: "20%",
       ambiente: {
-        imagen: InteractivoImg,
+        imagen: ambientes[0],
         titulo: "Black y Blanco Black Matt",
       },
     },
     {
-      top: "45%",
+      top: "68%",
       left: "20%",
       ambiente: {
         imagen: ambientes[1],

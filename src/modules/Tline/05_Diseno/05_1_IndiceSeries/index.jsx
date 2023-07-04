@@ -4,14 +4,13 @@ import useImagesSeries from "../../../../hooks/useImagesSeriesTline";
 import StyledIndiceSeries from "./styles";
 import React, { useState } from "react";
 
-const IndiceSeries = ({ id, serieActiva, setSerieActiva }) => {
+const IndiceSeries = ({ id, queSerieActiva }) => {
   const [categoria, setCategoria] = useState("Todas");
-  const enlacesSeries = useImagesSeries(categoria, serieActiva, setSerieActiva);
+  const enlacesSeries = useImagesSeries(categoria, queSerieActiva);
 
   const handleCategoriaChange = (event) => {
     setCategoria(event.target.value); // Actualiza la categoría seleccionada
   };
-
   return (
     <StyledIndiceSeries id={id} backgroundColor={COLORS.gray02}>
       <select value={categoria} onChange={handleCategoriaChange}>

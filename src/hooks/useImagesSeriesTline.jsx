@@ -11,7 +11,12 @@ const imagenesAmbiente = getDataFromModules(imagenesAmbienteImports);
 
 const enlacesObj = [
   { titulo: "AMARNA", src: img1, id: "#amarna", categoria: "Marmol" },
-  { titulo: "ARDESIA", src: img1, id: "#ardesia", categoria: "Piedra" },
+  {
+    titulo: "ARDESIA",
+    src: imagenesAmbiente[1],
+    id: "#ardesia",
+    categoria: "Piedra",
+  },
   { titulo: "BALMORAL", src: img1, id: "#balmoral", categoria: "Piedra" },
   {
     titulo: "BELLAGIO",
@@ -19,7 +24,12 @@ const enlacesObj = [
     id: "#bellagio",
     categoria: "Marmol",
   },
-  { titulo: "BLACK Y BLANCO", src: img1, id: "#byb", categoria: "Monocolor" },
+  {
+    titulo: "BLACK Y BLANCO",
+    src: imagenesAmbiente[5],
+    id: "#byb",
+    categoria: "Monocolor",
+  },
   { titulo: "BRUNSWICH", src: img1, id: "#brunswich", categoria: "Piedra" },
   {
     titulo: "CAPRI",
@@ -55,11 +65,16 @@ const enlacesObj = [
   { titulo: "NIKEA", src: img1, id: "#nikea", categoria: "Marmol" },
   { titulo: "NIRO", src: img1, id: "#niro", categoria: "Marmol" },
   { titulo: "STONELAND", src: img1, id: "#stoneland", categoria: "Piedra" },
-  { titulo: "STORM", src: img1, id: "#storm", categoria: "Piedra" },
+  {
+    titulo: "STORM",
+    src: imagenesAmbiente[20],
+    id: "#storm",
+    categoria: "Piedra",
+  },
   { titulo: "UNIK", src: img1, id: "#unik", categoria: "Cemento" },
 ];
 
-const useImagesSeries = (categoria, serieActiva, setSerieActiva) => {
+const useImagesSeries = (categoria, queSerieActiva) => {
   // Filtra los enlaces de acuerdo a la categoría seleccionada
   const enlacesFiltrados = enlacesObj.filter((enlace) => {
     if (categoria === "Todas") {
@@ -68,16 +83,19 @@ const useImagesSeries = (categoria, serieActiva, setSerieActiva) => {
       return enlace.categoria === categoria; // Mostrar solo la categoría seleccionada
     }
   });
-  const handleSerieChange = (event) => {
-    event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
-    const serie = event.target.getAttribute("href");
-    setSerieActiva(serie);
-    console.log(setSerieActiva(serie));
+  const handleSerieChange = (event, id) => {
+    // event.preventDefault();
+    queSerieActiva(id);
+    console.log("Indice serie serie activa?", id);
   };
   return Children.toArray(
     enlacesFiltrados.map(({ titulo, src, id }) => {
       return (
-        <Enlace href={id} className='enlace'>
+        <Enlace
+          href={id}
+          className='enlace'
+          onClick={(event) => handleSerieChange(event, id)}
+        >
           <img src={src} alt={titulo + " ejemplo"} />
           <span>{titulo}</span>
         </Enlace>

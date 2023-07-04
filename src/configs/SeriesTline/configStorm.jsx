@@ -1,6 +1,5 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
-import imgSeleccionar from "../../assets/images/Series/BASALT/Dolcker-BASALT_seleccionar.webp";
-import InteractivoImg from "../../assets/images/DolckerTline/Interactivofachada.jpg";
+import imgSeleccionar from "../../assets/images/DolckerTline/Series/STORM/DOLCKER STORM materiales seleccion.webp";
 import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
   "../../assets/images/DolckerTline/Series/STORM/AMBIENTES/**"
@@ -22,15 +21,15 @@ const configStorm = {
   imgSeleccionar,
   indicadores: [
     {
-      top: "15%",
+      top: "8%",
       left: "20%",
       ambiente: {
-        imagen: InteractivoImg,
+        imagen: ambientes[0],
         titulo: "Storm Cloud",
       },
     },
     {
-      top: "45%",
+      top: "23%",
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
@@ -38,7 +37,7 @@ const configStorm = {
       },
     },
     {
-      top: "75%",
+      top: "41%",
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
@@ -46,7 +45,7 @@ const configStorm = {
       },
     },
     {
-      top: "85%",
+      top: "60%",
       left: "20%",
       ambiente: {
         imagen: ambientes[3],
@@ -54,7 +53,7 @@ const configStorm = {
       },
     },
     {
-      top: "85%",
+      top: "78%",
       left: "20%",
       ambiente: {
         imagen: ambientes[4],

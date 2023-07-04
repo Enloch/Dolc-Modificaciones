@@ -65,7 +65,7 @@ const DisenosTline = ({ id }) => {
       altFondo: "Imagen de fondo con indicadores",
     },
   };
-  const [serieActiva, setSerieActiva] = useState("#amarna");
+  const [serieActiva, setSerieActiva] = useState("");
   return (
     <>
       <StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
@@ -176,12 +176,8 @@ const DisenosTline = ({ id }) => {
           columnSpan='6'
         />
       </StyledDisenos>
-      <IndiceSeries
-        id={id[6]}
-        serieActiva={serieActiva}
-        setSerieActiva={setSerieActiva}
-      />
-      <Series id={ids} serieActiva={serieActiva} />
+      <IndiceSeries id={id[6]} queSerieActiva={setSerieActiva} />
+      <Series id={ids} serieActivaMostrar={serieActiva} />
     </>
   );
 };
