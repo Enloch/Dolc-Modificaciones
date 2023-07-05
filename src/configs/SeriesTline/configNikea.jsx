@@ -1,6 +1,6 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
-import imgSeleccionar from "../../assets/images/Series/BASALT/Dolcker-BASALT_seleccionar.webp";
-import InteractivoImg from "../../assets/images/DolckerTline/Interactivofachada.jpg";
+import imgSeleccionar from "../../assets/images/DolckerTline/Series/NIKEA/DOLCKER NIKEA materiales seleccion.webp";
+
 import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
   "../../assets/images/DolckerTline/Series/NIKEA/AMBIENTES/**"
@@ -25,7 +25,7 @@ const configNikea = {
       top: "15%",
       left: "20%",
       ambiente: {
-        imagen: InteractivoImg,
+        imagen: ambientes[0],
         titulo: "Nikea Nikea",
       },
     },

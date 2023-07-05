@@ -17,7 +17,12 @@ const enlacesObj = [
     id: "#ardesia",
     categoria: "Piedra",
   },
-  { titulo: "BALMORAL", src: img1, id: "#balmoral", categoria: "Piedra" },
+  {
+    titulo: "BALMORAL",
+    src: imagenesAmbiente[2],
+    id: "#balmoral",
+    categoria: "Piedra",
+  },
   {
     titulo: "BELLAGIO",
     src: imagenesAmbiente[3],
@@ -30,7 +35,12 @@ const enlacesObj = [
     id: "#byb",
     categoria: "Monocolor",
   },
-  { titulo: "BRUNSWICH", src: img1, id: "#brunswich", categoria: "Piedra" },
+  {
+    titulo: "BRUNSWICH",
+    src: imagenesAmbiente[4],
+    id: "#brunswich",
+    categoria: "Piedra",
+  },
   {
     titulo: "CAPRI",
     src: imagenesAmbiente[6],
@@ -45,7 +55,12 @@ const enlacesObj = [
   },
   { titulo: "CROMAT", src: img1, id: "#cromat", categoria: "Piedra" },
   { titulo: "DOME", src: img1, id: "#dome", categoria: "Piedra" },
-  { titulo: "ETERNAL", src: img1, id: "#eternal", categoria: "Marmol" },
+  {
+    titulo: "ETERNAL",
+    src: imagenesAmbiente[10],
+    id: "#eternal",
+    categoria: "Marmol",
+  },
   {
     titulo: "GRAVEL",
     src: imagenesAmbiente[11],
@@ -62,7 +77,12 @@ const enlacesObj = [
     categoria: "Piedra",
   },
   { titulo: "LENCI", src: img1, id: "#lenci", categoria: "Marmol" },
-  { titulo: "NIKEA", src: img1, id: "#nikea", categoria: "Marmol" },
+  {
+    titulo: "NIKEA",
+    src: imagenesAmbiente[16],
+    id: "#nikea",
+    categoria: "Marmol",
+  },
   { titulo: "NIRO", src: img1, id: "#niro", categoria: "Marmol" },
   { titulo: "STONELAND", src: img1, id: "#stoneland", categoria: "Piedra" },
   {
