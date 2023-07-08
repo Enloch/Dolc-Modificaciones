@@ -67,7 +67,12 @@ const enlacesObj = [
     id: "#gravel",
     categoria: "Cemento",
   },
-  { titulo: "HABITAT", src: img1, id: "#habitat", categoria: "Cemento" },
+  {
+    titulo: "HABITAT",
+    src: imagenesAmbiente[12],
+    id: "#habitat",
+    categoria: "Cemento",
+  },
   { titulo: "HANNOVER", src: img1, id: "#hannover", categoria: "Terrazo" },
   { titulo: "INVICTUS", src: img1, id: "#invictus", categoria: "Marmol" },
   {
@@ -79,7 +84,7 @@ const enlacesObj = [
   { titulo: "LENCI", src: img1, id: "#lenci", categoria: "Marmol" },
   {
     titulo: "NIKEA",
-    src: imagenesAmbiente[16],
+    src: imagenesAmbiente[17],
     id: "#nikea",
     categoria: "Marmol",
   },

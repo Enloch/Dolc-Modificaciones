@@ -1,5 +1,5 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
-import imgSeleccionar from "../../assets/images/Series/BASALT/Dolcker-BASALT_seleccionar.webp";
+import imgSeleccionar from "../../assets/images/DolckerTline/Series/HABITAT/DOLCKER HABITAT materiales seleccion.webp";
 import InteractivoImg from "../../assets/images/DolckerTline/Interactivofachada.jpg";
 import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
@@ -25,7 +25,7 @@ const configHabitat = {
       top: "15%",
       left: "20%",
       ambiente: {
-        imagen: InteractivoImg,
+        imagen: ambientes[0],
         titulo: "Habitat Grey",
       },
     },
@@ -34,23 +34,7 @@ const configHabitat = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Habitat Grey Anti-slip",
-      },
-    },
-    {
-      top: "75%",
-      left: "20%",
-      ambiente: {
-        imagen: ambientes[2],
         titulo: "Habitat Taupe",
-      },
-    },
-    {
-      top: "75%",
-      left: "20%",
-      ambiente: {
-        imagen: ambientes[3],
-        titulo: "Habitat Taupe Anti-slip",
       },
     },
   ],
@@ -59,17 +43,10 @@ const configHabitat = {
       imagen: muestras[0],
       titulo: "Grey",
     },
+
     {
       imagen: muestras[1],
-      titulo: "Grey Anti-slip",
-    },
-    {
-      imagen: muestras[2],
       titulo: "Taupe",
-    },
-    {
-      imagen: muestras[3],
-      titulo: "Taupe Anti-slip",
     },
   ],
   acabados: [
