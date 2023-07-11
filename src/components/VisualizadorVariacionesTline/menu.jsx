@@ -1,0 +1,1 @@
+import { SelectoresFormato, SelectoresModular } from "./miniaturas";

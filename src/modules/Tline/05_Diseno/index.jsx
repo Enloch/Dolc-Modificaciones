@@ -27,6 +27,7 @@ import ConfiguradorImg from "../../../assets/images/DolckerTline/formatoscolor.w
 import interactivoImg from "../../../assets/images/DolckerTline/interactivo.webp";
 import rotadorImg from "../../../assets/images/DolckerTline/config.jpg";
 import RotadorTline from "../../../components/Rotadores/Tline/Rotador";
+import ConfiguradorFormatosTine from "../../../components/VisualizadorVariacionesTline";
 
 const DisenosTline = ({ id }) => {
   const ids = [
@@ -86,12 +87,14 @@ const DisenosTline = ({ id }) => {
         <Titulo2>Formato</Titulo2>
         <Anotacion {...propsFormato.anotacion} />
         {/* <VisualizadorVariaciones {...propsFormato.visualizador} /> */}
+        <ConfiguradorFormatosTine />
+        {/*
         <ImageWithCaption
           src={ConfiguradorImg}
           alt='Imagen de Diseños 1'
           caption='Configurador interactivo'
           columnSpan='6'
-        />
+        /> */}
       </StyledDisenos>
       <StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
         <Titulo2>Acabados Cerámica</Titulo2>

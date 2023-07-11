@@ -1,5 +1,5 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
-import imgSeleccionar from "../../assets/images/Series/BASALT/Dolcker-BASALT_seleccionar.webp";
+import imgSeleccionar from "../../assets/images/DolckerTline/Series/DOME/DOLCKER DOME materiales seleccion_WEBP.webp";
 import InteractivoImg from "../../assets/images/DolckerTline/Interactivofachada.jpg";
 import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
@@ -25,12 +25,12 @@ const configDome = {
       top: "15%",
       left: "20%",
       ambiente: {
-        imagen: InteractivoImg,
+        imagen: ambientes[0],
         titulo: "Dome Anthracite Rectificado",
       },
     },
     {
-      top: "45%",
+      top: "35%",
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
@@ -38,7 +38,7 @@ const configDome = {
       },
     },
     {
-      top: "75%",
+      top: "57%",
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
@@ -46,7 +46,7 @@ const configDome = {
       },
     },
     {
-      top: "75%",
+      top: "78%",
       left: "20%",
       ambiente: {
         imagen: ambientes[3],

@@ -54,7 +54,12 @@ const enlacesObj = [
     categoria: "Cemento",
   },
   { titulo: "CROMAT", src: img1, id: "#cromat", categoria: "Piedra" },
-  { titulo: "DOME", src: img1, id: "#dome", categoria: "Piedra" },
+  {
+    titulo: "DOME",
+    src: imagenesAmbiente[9],
+    id: "#dome",
+    categoria: "Piedra",
+  },
   {
     titulo: "ETERNAL",
     src: imagenesAmbiente[10],
@@ -74,7 +79,12 @@ const enlacesObj = [
     categoria: "Cemento",
   },
   { titulo: "HANNOVER", src: img1, id: "#hannover", categoria: "Terrazo" },
-  { titulo: "INVICTUS", src: img1, id: "#invictus", categoria: "Marmol" },
+  {
+    titulo: "INVICTUS",
+    src: imagenesAmbiente[14],
+    id: "#invictus",
+    categoria: "Marmol",
+  },
   {
     titulo: "KURSAAL",
     src: imagenesAmbiente[15],
