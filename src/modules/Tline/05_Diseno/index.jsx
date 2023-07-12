@@ -74,12 +74,12 @@ const DisenosTline = ({ id }) => {
         <ImageWithCaption
           src={img1}
           alt='Imagen de Diseños 1'
-          caption='Arquitectos pasan la referencia'
+          // caption='Arquitectos pasan la referencia'
           columnSpan='6'
         />
         <Cita
-          cita='“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at sem ex. Donec pretium quis neque vel tempus.”'
-          author='Lorem Ipsun'
+          cita='“La regla de la arquitectura es hacer las cosas con amor y obsesión en gran proporción.”'
+          author='Miguel Fisac (1913-2006)'
           colorAutor={COLORS.gray05}
         />
       </StyledDisenos>

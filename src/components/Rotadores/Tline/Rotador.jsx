@@ -52,7 +52,7 @@ export default function Rotador() {
           <IntroContainer onClick={handleIntroClick}>
             <IntroContent>
               <IntroImage src={R360} alt='Rotador' />
-              <IntroText>Rotador</IntroText>
+              <IntroText>Presiona para interactuar</IntroText>
             </IntroContent>
           </IntroContainer>
         )}

@@ -3,18 +3,33 @@ import styled from "styled-components";
 import { NombreMateriales } from "./Materiales";
 import { SketchPicker } from "react-color";
 import IconoRAL from "../../../assets/icons/RAL.png";
+
+import Perfil1 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL1.jpg";
+import Perfil2 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL2.jpg";
+import Perfil3 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL3.jpg";
+import Perfil4 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL4.jpg";
 const MenuContainer = styled.div`
   width: 100%;
-  display: ${({ visible }) => (visible ? "flex" : "none")};
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: ${({ visible }) => (visible ? "grid" : "none")};
+  grid-template-columns: 1fr 1fr;
   row-gap: 5px;
   @media (max-width: 480px) {
     flex-direction: row;
     justify-content: flex-start;
   }
 `;
+// const MenuContainer = styled.div`
+//   width: 100%;
+//   display: ${({ visible }) => (visible ? "grid" : "none")};
+//   flex-direction: column;
+//   justify-content: center;
+//   flex-wrap: wrap;
+//   row-gap: 5px;
+//   @media (max-width: 480px) {
+//     flex-direction: row;
+//     justify-content: flex-start;
+//   }
+// `;
 
 const MenuContainer2 = styled.div`
   width: 100%;
@@ -60,6 +75,7 @@ const ModelButton = styled.button`
   border: none;
   background: none;
   cursor: pointer;
+  width: auto;
 `;
 
 const ModelImage = styled.img`
@@ -120,10 +136,8 @@ const Menu = ({
               handleToggleMaterialButtons();
             }}
           >
-            <ModelImage
-              src='https://via.placeholder.com/120x80.png?text=Modelo1'
-              alt='Modelo 1'
-            />
+            Cenefa 1
+            <ModelImage src={Perfil1} alt='Modelo 1' />
           </ModelButton>
           <ModelButton
             onClick={() => {
@@ -131,10 +145,8 @@ const Menu = ({
               handleToggleMaterialButtons();
             }}
           >
-            <ModelImage
-              src='https://via.placeholder.com/120x80.png?text=Modelo2'
-              alt='Modelo 2'
-            />
+            Cenefa 2
+            <ModelImage src={Perfil2} alt='Modelo 2' />
           </ModelButton>
           <ModelButton
             onClick={() => {
@@ -142,10 +154,8 @@ const Menu = ({
               handleToggleMaterialButtons();
             }}
           >
-            <ModelImage
-              src='https://via.placeholder.com/120x80.png?text=Modelo3'
-              alt='Modelo 3'
-            />
+            Cenefa 3
+            <ModelImage src={Perfil3} alt='Modelo 3' />
           </ModelButton>
           <ModelButton
             onClick={() => {
@@ -153,10 +163,8 @@ const Menu = ({
               handleToggleMaterialButtons();
             }}
           >
-            <ModelImage
-              src='https://via.placeholder.com/120x80.png?text=Modelo4'
-              alt='Modelo 4'
-            />
+            Cenefa 4
+            <ModelImage src={Perfil4} alt='Modelo 4' />
           </ModelButton>
         </MenuContainer>
       )}

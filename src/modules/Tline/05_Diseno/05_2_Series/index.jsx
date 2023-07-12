@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import FullScreen from "../../../../components/FullScreen";
-import configAmarna from "../../../../configs/SeriesTline/configAmarna";
+
 import configArdesia from "../../../../configs/SeriesTline/configArdesia";
 import configBalmoral from "../../../../configs/SeriesTline/configBalmoral";
 import configBellagio from "../../../../configs/SeriesTline/configBellagio";
@@ -16,9 +16,7 @@ import configHabitat from "../../../../configs/SeriesTline/configHabitat";
 import configHannover from "../../../../configs/SeriesTline/configHannover";
 import configInvictus from "../../../../configs/SeriesTline/configInvictus";
 import configKursaal from "../../../../configs/SeriesTline/configKursaal";
-import configLenci from "../../../../configs/SeriesTline/configLenci";
 import configNikea from "../../../../configs/SeriesTline/configNikea";
-import configNiro from "../../../../configs/SeriesTline/configNiro";
 import configStoneland from "../../../../configs/SeriesTline/configStoneland";
 import configStorm from "../../../../configs/SeriesTline/configStorm";
 import configUnik from "../../../../configs/SeriesTline/configUnik";
@@ -37,15 +35,6 @@ const Series = ({ id, serieActivaMostrar }) => {
         setFullScreenTitulo={setFullScreenTitulo}
         backgroundColor={COLORS.gray01}
       />
-      {serieActivaMostrar === "#amarna" && (
-        <Serie
-          id={id[0]}
-          config={configAmarna}
-          setFullScreenSrc={setFullScreenSrc}
-          setFullScreenTitulo={setFullScreenTitulo}
-          backgroundColor={COLORS.gray01}
-        />
-      )}
 
       {serieActivaMostrar === "#ardesia" && (
         <Serie
@@ -197,30 +186,10 @@ const Series = ({ id, serieActivaMostrar }) => {
         />
       )}
 
-      {serieActivaMostrar === "#lenci" && (
-        <Serie
-          id={id[16]}
-          config={configLenci}
-          setFullScreenSrc={setFullScreenSrc}
-          setFullScreenTitulo={setFullScreenTitulo}
-          backgroundColor={COLORS.gray01}
-        />
-      )}
-
       {serieActivaMostrar === "#nikea" && (
         <Serie
           id={id[17]}
           config={configNikea}
-          setFullScreenSrc={setFullScreenSrc}
-          setFullScreenTitulo={setFullScreenTitulo}
-          backgroundColor={COLORS.gray01}
-        />
-      )}
-
-      {serieActivaMostrar === "#niro" && (
-        <Serie
-          id={id[18]}
-          config={configNiro}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
           backgroundColor={COLORS.gray01}

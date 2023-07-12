@@ -15,7 +15,8 @@ const acabados = getDataFromModules(acabadosImports);
 
 const configArdesia = {
   titulo: "Ardesia",
-  descripcion: "Texto Jorge.",
+  descripcion:
+    "Un estilo de vida contemporáneo, lujoso pero equilibrado Inspirada en la belleza antigua y refinada la colección transforma el sueño de elegancia contemporánea en realidad a través de suaves tonalidades y preciosos colores en sintonía con las más actuales tendencias de la vivienda de lujosa. De la opulencia y de la ostentación, el mundo del lujo evoluciona hacia expresiones decorativas más austeras y equilibradas, de rasgos minimalistas.",
   imgSeleccionar,
   indicadores: [
     {
