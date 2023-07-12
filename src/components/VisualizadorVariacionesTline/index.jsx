@@ -1,24 +1,46 @@
-import React from "react";
-import { AppIntercambiador } from "./styles";
-import { Fondo, Formato20x120 } from "./data";
+import React, { useState } from "react";
+import {
+  AppIntercambiador,
+  ImgFondo,
+  ImgFormato,
+  ImgPerfil,
+  Icono,
+} from "./styles";
+import Indicador from "../../assets/icons/open-indicator.svg";
+import { Fondo, Formato20x120, Perfil_1_Bronce } from "./data";
+import Menu from "./menu";
 
 const ConfiguradorFormatosTine = () => {
+  const [imagenFormato, setImagenFormato] = useState(null);
+  const [imagenPerfil, setImagenPerfil] = useState(null);
+  const [perfilSize, setPerfilSize] = useState(null);
+  const [presionado, setPresionado] = useState(false);
+
   return (
     <AppIntercambiador>
       <div>
-        <img
-          src={Fondo}
-          alt='fondo'
-        />
-        <img
-          src={Formato20x120[0].imagen}
-          alt='Capa'
-          style={{ position: "absolute", top: "0", left: "0", zIndex: "1" }}
-        />
+        <ImgFondo src={Fondo} alt='fondo' />
+        <ImgFormato src={imagenFormato} />
+        <ImgPerfil src={imagenPerfil} />
       </div>
-      <div>menus</div>
+      <Icono
+        src={Indicador}
+        alt='indicador'
+        onClick={() => setPresionado(!presionado)}
+      />
+      {presionado && (
+        <Menu
+          presionado={presionado}
+          setPresionado={setPresionado}
+          imagenFormato={imagenFormato}
+          setImagenFormato={setImagenFormato}
+          imagenPerfil={imagenPerfil}
+          setImagenPerfil={setImagenPerfil}
+          perfilSize={perfilSize}
+          setPerfilSize={setPerfilSize}
+        />
+      )}
     </AppIntercambiador>
   );
 };
-
 export default ConfiguradorFormatosTine;
