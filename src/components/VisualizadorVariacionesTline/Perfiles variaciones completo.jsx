@@ -1257,3 +1257,68 @@ if (miniatura.id === "Perfil4") {
     cambio = Perfil_4_Olmo[0].imagen;
   }
 }
+
+
+  const handleRAL = (miniatura) => {
+    let cambio = null;
+    if (miniatura.id === "Perfil1") {
+      if (perfilSize === "20x120" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[0].imagen;
+      }
+      if (perfilSize === "30x120" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[1].imagen;
+      }
+      if (perfilSize === "40x120" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[3].imagen;
+      }
+      if (perfilSize === "30x60" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[1].imagen;
+      }
+      if (perfilSize === "30x90" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[1].imagen;
+      }
+      if (perfilSize === "40x80" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[2].imagen;
+      }
+      if (perfilSize === "45x90" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[3].imagen;
+      }
+      if (perfilSize === "50x100" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[4].imagen;
+      }
+      if (perfilSize === "50x120" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[4].imagen;
+      }
+      if (perfilSize === "60x60" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[5].imagen;
+      }
+      if (perfilSize === "60x90" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[5].imagen;
+      }
+      if (perfilSize === "80x80" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[6].imagen;
+      }
+      if (perfilSize === "Modular1" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[7].imagen;
+      }
+      if (perfilSize === "Modular2" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[8].imagen;
+      }
+      if (perfilSize === "Modular3" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[9].imagen;
+      }
+      if (perfilSize === "Modular4" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[10].imagen;
+      }
+      if (perfilSize === "Modular5" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[11].imagen;
+      }
+      if (perfilSize === "Modular6" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[12].imagen;
+      }
+      if (perfilSize === "Modular9" && colorPerfil === "RAL") {
+        cambio = Perfil_1_RAL[13].imagen;
+      }
+    }
+    setImagenSvg(cambio);
+  };

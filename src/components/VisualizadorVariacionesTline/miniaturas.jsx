@@ -98,3 +98,7 @@ export const PerfilesMini = [
   { id: "Perfil3", imagen: Perfil3, name: "Perfil 3" },
   { id: "Perfil4", imagen: Perfil4, name: "Perfil 4" },
 ];
+
+import RAL from "../../assets/icons/RAL.png";
+
+export const RALS = [{ id: "RAL", imagen: RAL, name: "RAL" }];

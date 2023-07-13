@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { SketchPicker } from "react-color";
 import {
   MiniaturasColor,
   SelectoresFormato,
@@ -6,6 +7,7 @@ import {
   Metales,
   Maderas,
   PerfilesMini,
+  RALS,
 } from "./miniaturas";
 import {
   AppMenu,
@@ -22,6 +24,7 @@ import {
   BotonMenu,
 } from "./styles";
 import {
+  Fondos,
   Formato20x120,
   Formato30x120,
   Formato30x60,
@@ -52,8 +55,8 @@ import {
   Perfil_1_Embero_Dorado,
   Perfil_1_Nogal,
   Perfil_1_Olmo,
+  Perfil_1_RAL,
 } from "./data";
-import { color } from "framer-motion";
 
 const Menu = ({
   presionado,
@@ -64,27 +67,57 @@ const Menu = ({
   setImagenPerfil,
   perfilSize,
   setPerfilSize,
+  imagenSvg,
+  setImagenSvg,
+  color,
+  handleColorChange,
 }) => {
   const [menuBase, setMenuBase] = useState(true);
-  const [menuColorFormato, setMenuColorFormato] = useState(false);
+  const [menuColorFormato, setMenuColorFormato] = useState(true);
   const [menuTipoFormato, setMenuTipoFormato] = useState(false);
   const [menuFormato, setMenuFormato] = useState(false);
   const [menuMultiformato, setMenuMultiformato] = useState(false);
   const [menuColorPerfil, setMenuColorPerfil] = useState(false);
   const [menuPerfil, setMenuPerfil] = useState(false);
+  const [showColorPicker, setShowColorPicker] = useState(false);
 
   // const [perfilSize, setPerfilSize] = useState(null);
+  const [seleccionRal, setSeleccionRal] = useState(null);
+  const [seleccionPerfil, setSeleccionPerfil] = useState(null);
   const [colorFormato, setColorFormato] = useState(false);
   const [colorPerfil, setColorPerfil] = useState(false);
-  console.log("img formato:", imagenFormato);
-  console.log("tamaño perfil:", perfilSize);
-  console.log("Color perfil:", colorPerfil);
+  // console.log("img formato:", imagenFormato);
+  // console.log("tamaño perfil:", perfilSize);
+  // console.log("color RAL:", color);
+  // console.log("Color PErfil?:", colorPerfil);
+  // console.log("color perfil:", imagenSvg);
+  // console.log("Color perfil:", colorPerfil);
   const handleButtonClick = (imagenFormato) => {
     if (imagenFormato === null) {
       setMenuColorFormato(true);
       setMenuColorPerfil(false);
       window.alert("Selecciona un formato primero!");
     }
+  };
+  const handleFondoFormatos = (miniatura) => {
+    let cambio = null;
+    if (miniatura === "Cream") {
+      cambio = Fondos[0].imagen;
+    }
+    if (miniatura === "Earth") {
+      cambio = Fondos[1].imagen;
+    }
+    if (miniatura === "Grey") {
+      cambio = Fondos[2].imagen;
+    }
+    if (miniatura === "Shadow") {
+      cambio = Fondos[3].imagen;
+    }
+    if (miniatura === "White") {
+      cambio = Fondos[4].imagen;
+    }
+    console.log("Que fondo?", cambio);
+    setImagenFormato(cambio);
   };
   const handleImagenFormato = (miniatura) => {
     const formatos = {
@@ -235,432 +268,558 @@ const Menu = ({
   };
   const handlePerfil = (miniatura) => {
     let cambio = null;
-    if (miniatura.id === "Perfil1") {
-      if (perfilSize === "20x120" && colorPerfil === "Bronce") {
+    if (seleccionPerfil === "Perfil1") {
+      if (perfilSize === "20x120" && miniatura.id === "Bronce") {
         cambio = Perfil_1_Bronce[0].imagen;
-      } else if (perfilSize === "20x120" && colorPerfil === "Burdeos") {
+      } else if (perfilSize === "20x120" && miniatura.id === "Burdeos") {
         cambio = Perfil_1_Burdeos[0].imagen;
-      } else if (perfilSize === "20x120" && colorPerfil === "Inox") {
+      } else if (perfilSize === "20x120" && miniatura.id === "Inox") {
         cambio = Perfil_1_Inox[0].imagen;
-      } else if (perfilSize === "20x120" && colorPerfil === "Negro") {
+      } else if (perfilSize === "20x120" && miniatura.id === "Negro") {
         cambio = Perfil_1_Negro[0].imagen;
-      } else if (perfilSize === "20x120" && colorPerfil === "Oro") {
+      } else if (perfilSize === "20x120" && miniatura.id === "Oro") {
         cambio = Perfil_1_Oro[0].imagen;
-      } else if (perfilSize === "20x120" && colorPerfil === "Plata") {
+      } else if (perfilSize === "20x120" && miniatura.id === "Plata") {
         cambio = Perfil_1_Plata[0].imagen;
-      } else if (perfilSize === "20x120" && colorPerfil === "Embero") {
+      } else if (perfilSize === "20x120" && miniatura.id === "Embero") {
         cambio = Perfil_1_Embero[0].imagen;
-      } else if (perfilSize === "20x120" && colorPerfil === "EmberoDorado") {
+      } else if (perfilSize === "20x120" && miniatura.id === "EmberoDorado") {
         cambio = Perfil_1_Embero_Dorado[0].imagen;
-      } else if (perfilSize === "20x120" && colorPerfil === "Nogal") {
+      } else if (perfilSize === "20x120" && miniatura.id === "Nogal") {
         cambio = Perfil_1_Nogal[0].imagen;
-      } else if (perfilSize === "20x120" && colorPerfil === "Olmo") {
+      } else if (perfilSize === "20x120" && miniatura.id === "Olmo") {
         cambio = Perfil_1_Olmo[0].imagen;
       }
 
-      if (perfilSize === "30x120" && colorPerfil === "Bronce") {
+      if (perfilSize === "30x120" && miniatura.id === "Bronce") {
         cambio = Perfil_1_Bronce[1].imagen;
-      } else if (perfilSize === "30x120" && colorPerfil === "Burdeos") {
+      } else if (perfilSize === "30x120" && miniatura.id === "Burdeos") {
         cambio = Perfil_1_Burdeos[1].imagen;
-      } else if (perfilSize === "30x120" && colorPerfil === "Inox") {
+      } else if (perfilSize === "30x120" && miniatura.id === "Inox") {
         cambio = Perfil_1_Inox[1].imagen;
-      } else if (perfilSize === "30x120" && colorPerfil === "Negro") {
+      } else if (perfilSize === "30x120" && miniatura.id === "Negro") {
         cambio = Perfil_1_Negro[1].imagen;
-      } else if (perfilSize === "30x120" && colorPerfil === "Oro") {
+      } else if (perfilSize === "30x120" && miniatura.id === "Oro") {
         cambio = Perfil_1_Oro[1].imagen;
-      } else if (perfilSize === "30x120" && colorPerfil === "Plata") {
+      } else if (perfilSize === "30x120" && miniatura.id === "Plata") {
         cambio = Perfil_1_Plata[1].imagen;
-      } else if (perfilSize === "30x120" && colorPerfil === "Embero") {
+      } else if (perfilSize === "30x120" && miniatura.id === "Embero") {
         cambio = Perfil_1_Embero[1].imagen;
-      } else if (perfilSize === "30x120" && colorPerfil === "EmberoDorado") {
+      } else if (perfilSize === "30x120" && miniatura.id === "EmberoDorado") {
         cambio = Perfil_1_Embero_Dorado[1].imagen;
-      } else if (perfilSize === "30x120" && colorPerfil === "Nogal") {
+      } else if (perfilSize === "30x120" && miniatura.id === "Nogal") {
         cambio = Perfil_1_Nogal[1].imagen;
-      } else if (perfilSize === "30x120" && colorPerfil === "Olmo") {
+      } else if (perfilSize === "30x120" && miniatura.id === "Olmo") {
         cambio = Perfil_1_Olmo[1].imagen;
       }
 
-      if (perfilSize === "40x120" && colorPerfil === "Bronce") {
-        cambio = Perfil_1_Bronce[3].imagen;
-      } else if (perfilSize === "40x120" && colorPerfil === "Burdeos") {
-        cambio = Perfil_1_Burdeos[3].imagen;
-      } else if (perfilSize === "40x120" && colorPerfil === "Inox") {
-        cambio = Perfil_1_Inox[3].imagen;
-      } else if (perfilSize === "40x120" && colorPerfil === "Negro") {
-        cambio = Perfil_1_Negro[3].imagen;
-      } else if (perfilSize === "40x120" && colorPerfil === "Oro") {
-        cambio = Perfil_1_Oro[3].imagen;
-      } else if (perfilSize === "40x120" && colorPerfil === "Plata") {
-        cambio = Perfil_1_Plata[3].imagen;
-      } else if (perfilSize === "40x120" && colorPerfil === "Embero") {
-        cambio = Perfil_1_Embero[3].imagen;
-      } else if (perfilSize === "40x120" && colorPerfil === "EmberoDorado") {
-        cambio = Perfil_1_Embero_Dorado[3].imagen;
-      } else if (perfilSize === "40x120" && colorPerfil === "Nogal") {
-        cambio = Perfil_1_Nogal[3].imagen;
-      } else if (perfilSize === "40x120" && colorPerfil === "Olmo") {
-        cambio = Perfil_1_Olmo[3].imagen;
-      }
-
-      if (perfilSize === "30x60" && colorPerfil === "Bronce") {
-        cambio = Perfil_1_Bronce[1].imagen;
-      } else if (perfilSize === "30x60" && colorPerfil === "Burdeos") {
-        cambio = Perfil_1_Burdeos[1].imagen;
-      } else if (perfilSize === "30x60" && colorPerfil === "Inox") {
-        cambio = Perfil_1_Inox[1].imagen;
-      } else if (perfilSize === "30x60" && colorPerfil === "Negro") {
-        cambio = Perfil_1_Negro[1].imagen;
-      } else if (perfilSize === "30x60" && colorPerfil === "Oro") {
-        cambio = Perfil_1_Oro[1].imagen;
-      } else if (perfilSize === "30x60" && colorPerfil === "Plata") {
-        cambio = Perfil_1_Plata[1].imagen;
-      } else if (perfilSize === "30x60" && colorPerfil === "Embero") {
-        cambio = Perfil_1_Embero[1].imagen;
-      } else if (perfilSize === "30x60" && colorPerfil === "EmberoDorado") {
-        cambio = Perfil_1_Embero_Dorado[1].imagen;
-      } else if (perfilSize === "30x60" && colorPerfil === "Nogal") {
-        cambio = Perfil_1_Nogal[1].imagen;
-      } else if (perfilSize === "30x60" && colorPerfil === "Olmo") {
-        cambio = Perfil_1_Olmo[1].imagen;
-      }
-
-      if (perfilSize === "30x90" && colorPerfil === "Bronce") {
-        cambio = Perfil_1_Bronce[1].imagen;
-      } else if (perfilSize === "30x90" && colorPerfil === "Burdeos") {
-        cambio = Perfil_1_Burdeos[1].imagen;
-      } else if (perfilSize === "30x90" && colorPerfil === "Inox") {
-        cambio = Perfil_1_Inox[1].imagen;
-      } else if (perfilSize === "30x90" && colorPerfil === "Negro") {
-        cambio = Perfil_1_Negro[1].imagen;
-      } else if (perfilSize === "30x90" && colorPerfil === "Oro") {
-        cambio = Perfil_1_Oro[1].imagen;
-      } else if (perfilSize === "30x90" && colorPerfil === "Plata") {
-        cambio = Perfil_1_Plata[1].imagen;
-      } else if (perfilSize === "30x90" && colorPerfil === "Embero") {
-        cambio = Perfil_1_Embero[1].imagen;
-      } else if (perfilSize === "30x90" && colorPerfil === "EmberoDorado") {
-        cambio = Perfil_1_Embero_Dorado[1].imagen;
-      } else if (perfilSize === "30x90" && colorPerfil === "Nogal") {
-        cambio = Perfil_1_Nogal[1].imagen;
-      } else if (perfilSize === "30x90" && colorPerfil === "Olmo") {
-        cambio = Perfil_1_Olmo[1].imagen;
-      }
-
-      if (perfilSize === "40x80" && colorPerfil === "Bronce") {
+      if (perfilSize === "40x120" && miniatura.id === "Bronce") {
         cambio = Perfil_1_Bronce[2].imagen;
-      } else if (perfilSize === "40x80" && colorPerfil === "Burdeos") {
+      } else if (perfilSize === "40x120" && miniatura.id === "Burdeos") {
         cambio = Perfil_1_Burdeos[2].imagen;
-      } else if (perfilSize === "40x80" && colorPerfil === "Inox") {
+      } else if (perfilSize === "40x120" && miniatura.id === "Inox") {
         cambio = Perfil_1_Inox[2].imagen;
-      } else if (perfilSize === "40x80" && colorPerfil === "Negro") {
+      } else if (perfilSize === "40x120" && miniatura.id === "Negro") {
         cambio = Perfil_1_Negro[2].imagen;
-      } else if (perfilSize === "40x80" && colorPerfil === "Oro") {
+      } else if (perfilSize === "40x120" && miniatura.id === "Oro") {
         cambio = Perfil_1_Oro[2].imagen;
-      } else if (perfilSize === "40x80" && colorPerfil === "Plata") {
+      } else if (perfilSize === "40x120" && miniatura.id === "Plata") {
         cambio = Perfil_1_Plata[2].imagen;
-      } else if (perfilSize === "40x80" && colorPerfil === "Embero") {
+      } else if (perfilSize === "40x120" && miniatura.id === "Embero") {
         cambio = Perfil_1_Embero[2].imagen;
-      } else if (perfilSize === "40x80" && colorPerfil === "EmberoDorado") {
+      } else if (perfilSize === "40x120" && miniatura.id === "EmberoDorado") {
         cambio = Perfil_1_Embero_Dorado[2].imagen;
-      } else if (perfilSize === "40x80" && colorPerfil === "Nogal") {
+      } else if (perfilSize === "40x120" && miniatura.id === "Nogal") {
         cambio = Perfil_1_Nogal[2].imagen;
-      } else if (perfilSize === "40x80" && colorPerfil === "Olmo") {
+      } else if (perfilSize === "40x120" && miniatura.id === "Olmo") {
+        cambio = Perfil_1_Olmo[2].imagen;
+      }
+      if (perfilSize === "30x60" && miniatura.id === "Bronce") {
+        cambio = Perfil_1_Bronce[1].imagen;
+      } else if (perfilSize === "30x60" && miniatura.id === "Burdeos") {
+        cambio = Perfil_1_Burdeos[1].imagen;
+      } else if (perfilSize === "30x60" && miniatura.id === "Inox") {
+        cambio = Perfil_1_Inox[1].imagen;
+      } else if (perfilSize === "30x60" && miniatura.id === "Negro") {
+        cambio = Perfil_1_Negro[1].imagen;
+      } else if (perfilSize === "30x60" && miniatura.id === "Oro") {
+        cambio = Perfil_1_Oro[1].imagen;
+      } else if (perfilSize === "30x60" && miniatura.id === "Plata") {
+        cambio = Perfil_1_Plata[1].imagen;
+      } else if (perfilSize === "30x60" && miniatura.id === "Embero") {
+        cambio = Perfil_1_Embero[1].imagen;
+      } else if (perfilSize === "30x60" && miniatura.id === "EmberoDorado") {
+        cambio = Perfil_1_Embero_Dorado[1].imagen;
+      } else if (perfilSize === "30x60" && miniatura.id === "Nogal") {
+        cambio = Perfil_1_Nogal[1].imagen;
+      } else if (perfilSize === "30x60" && miniatura.id === "Olmo") {
+        cambio = Perfil_1_Olmo[1].imagen;
+      }
+
+      if (perfilSize === "30x90" && miniatura.id === "Bronce") {
+        cambio = Perfil_1_Bronce[1].imagen;
+      } else if (perfilSize === "30x90" && miniatura.id === "Burdeos") {
+        cambio = Perfil_1_Burdeos[1].imagen;
+      } else if (perfilSize === "30x90" && miniatura.id === "Inox") {
+        cambio = Perfil_1_Inox[1].imagen;
+      } else if (perfilSize === "30x90" && miniatura.id === "Negro") {
+        cambio = Perfil_1_Negro[1].imagen;
+      } else if (perfilSize === "30x90" && miniatura.id === "Oro") {
+        cambio = Perfil_1_Oro[1].imagen;
+      } else if (perfilSize === "30x90" && miniatura.id === "Plata") {
+        cambio = Perfil_1_Plata[1].imagen;
+      } else if (perfilSize === "30x90" && miniatura.id === "Embero") {
+        cambio = Perfil_1_Embero[1].imagen;
+      } else if (perfilSize === "30x90" && miniatura.id === "EmberoDorado") {
+        cambio = Perfil_1_Embero_Dorado[1].imagen;
+      } else if (perfilSize === "30x90" && miniatura.id === "Nogal") {
+        cambio = Perfil_1_Nogal[1].imagen;
+      } else if (perfilSize === "30x90" && miniatura.id === "Olmo") {
+        cambio = Perfil_1_Olmo[1].imagen;
+      }
+
+      if (perfilSize === "40x80" && miniatura.id === "Bronce") {
+        cambio = Perfil_1_Bronce[2].imagen;
+      } else if (perfilSize === "40x80" && miniatura.id === "Burdeos") {
+        cambio = Perfil_1_Burdeos[2].imagen;
+      } else if (perfilSize === "40x80" && miniatura.id === "Inox") {
+        cambio = Perfil_1_Inox[2].imagen;
+      } else if (perfilSize === "40x80" && miniatura.id === "Negro") {
+        cambio = Perfil_1_Negro[2].imagen;
+      } else if (perfilSize === "40x80" && miniatura.id === "Oro") {
+        cambio = Perfil_1_Oro[2].imagen;
+      } else if (perfilSize === "40x80" && miniatura.id === "Plata") {
+        cambio = Perfil_1_Plata[2].imagen;
+      } else if (perfilSize === "40x80" && miniatura.id === "Embero") {
+        cambio = Perfil_1_Embero[2].imagen;
+      } else if (perfilSize === "40x80" && miniatura.id === "EmberoDorado") {
+        cambio = Perfil_1_Embero_Dorado[2].imagen;
+      } else if (perfilSize === "40x80" && miniatura.id === "Nogal") {
+        cambio = Perfil_1_Nogal[2].imagen;
+      } else if (perfilSize === "40x80" && miniatura.id === "Olmo") {
         cambio = Perfil_1_Olmo[2].imagen;
       }
 
-      if (perfilSize === "45x90" && colorPerfil === "Bronce") {
+      if (perfilSize === "45x90" && miniatura.id === "Bronce") {
         cambio = Perfil_1_Bronce[3].imagen;
-      } else if (perfilSize === "45x90" && colorPerfil === "Burdeos") {
+      } else if (perfilSize === "45x90" && miniatura.id === "Burdeos") {
         cambio = Perfil_1_Burdeos[3].imagen;
-      } else if (perfilSize === "45x90" && colorPerfil === "Inox") {
+      } else if (perfilSize === "45x90" && miniatura.id === "Inox") {
         cambio = Perfil_1_Inox[3].imagen;
-      } else if (perfilSize === "45x90" && colorPerfil === "Negro") {
+      } else if (perfilSize === "45x90" && miniatura.id === "Negro") {
         cambio = Perfil_1_Negro[3].imagen;
-      } else if (perfilSize === "45x90" && colorPerfil === "Oro") {
+      } else if (perfilSize === "45x90" && miniatura.id === "Oro") {
         cambio = Perfil_1_Oro[3].imagen;
-      } else if (perfilSize === "45x90" && colorPerfil === "Plata") {
+      } else if (perfilSize === "45x90" && miniatura.id === "Plata") {
         cambio = Perfil_1_Plata[3].imagen;
-      } else if (perfilSize === "45x90" && colorPerfil === "Embero") {
+      } else if (perfilSize === "45x90" && miniatura.id === "Embero") {
         cambio = Perfil_1_Embero[3].imagen;
-      } else if (perfilSize === "45x90" && colorPerfil === "EmberoDorado") {
+      } else if (perfilSize === "45x90" && miniatura.id === "EmberoDorado") {
         cambio = Perfil_1_Embero_Dorado[3].imagen;
-      } else if (perfilSize === "45x90" && colorPerfil === "Nogal") {
+      } else if (perfilSize === "45x90" && miniatura.id === "Nogal") {
         cambio = Perfil_1_Nogal[3].imagen;
-      } else if (perfilSize === "45x90" && colorPerfil === "Olmo") {
+      } else if (perfilSize === "45x90" && miniatura.id === "Olmo") {
         cambio = Perfil_1_Olmo[3].imagen;
       }
 
-      if (perfilSize === "50x100" && colorPerfil === "Bronce") {
+      if (perfilSize === "50x100" && miniatura.id === "Bronce") {
         cambio = Perfil_1_Bronce[4].imagen;
-      } else if (perfilSize === "50x100" && colorPerfil === "Burdeos") {
+      } else if (perfilSize === "50x100" && miniatura.id === "Burdeos") {
         cambio = Perfil_1_Burdeos[4].imagen;
-      } else if (perfilSize === "50x100" && colorPerfil === "Inox") {
+      } else if (perfilSize === "50x100" && miniatura.id === "Inox") {
         cambio = Perfil_1_Inox[4].imagen;
-      } else if (perfilSize === "50x100" && colorPerfil === "Negro") {
+      } else if (perfilSize === "50x100" && miniatura.id === "Negro") {
         cambio = Perfil_1_Negro[4].imagen;
-      } else if (perfilSize === "50x100" && colorPerfil === "Oro") {
+      } else if (perfilSize === "50x100" && miniatura.id === "Oro") {
         cambio = Perfil_1_Oro[4].imagen;
-      } else if (perfilSize === "50x100" && colorPerfil === "Plata") {
+      } else if (perfilSize === "50x100" && miniatura.id === "Plata") {
         cambio = Perfil_1_Plata[4].imagen;
-      } else if (perfilSize === "50x100" && colorPerfil === "Embero") {
+      } else if (perfilSize === "50x100" && miniatura.id === "Embero") {
         cambio = Perfil_1_Embero[4].imagen;
-      } else if (perfilSize === "50x100" && colorPerfil === "EmberoDorado") {
+      } else if (perfilSize === "50x100" && miniatura.id === "EmberoDorado") {
         cambio = Perfil_1_Embero_Dorado[4].imagen;
-      } else if (perfilSize === "50x100" && colorPerfil === "Nogal") {
+      } else if (perfilSize === "50x100" && miniatura.id === "Nogal") {
         cambio = Perfil_1_Nogal[4].imagen;
-      } else if (perfilSize === "50x100" && colorPerfil === "Olmo") {
+      } else if (perfilSize === "50x100" && miniatura.id === "Olmo") {
         cambio = Perfil_1_Olmo[4].imagen;
       }
 
-      if (perfilSize === "50x120" && colorPerfil === "Bronce") {
+      if (perfilSize === "50x120" && miniatura.id === "Bronce") {
         cambio = Perfil_1_Bronce[4].imagen;
-      } else if (perfilSize === "50x120" && colorPerfil === "Burdeos") {
+      } else if (perfilSize === "50x120" && miniatura.id === "Burdeos") {
         cambio = Perfil_1_Burdeos[4].imagen;
-      } else if (perfilSize === "50x120" && colorPerfil === "Inox") {
+      } else if (perfilSize === "50x120" && miniatura.id === "Inox") {
         cambio = Perfil_1_Inox[4].imagen;
-      } else if (perfilSize === "50x120" && colorPerfil === "Negro") {
+      } else if (perfilSize === "50x120" && miniatura.id === "Negro") {
         cambio = Perfil_1_Negro[4].imagen;
-      } else if (perfilSize === "50x120" && colorPerfil === "Oro") {
+      } else if (perfilSize === "50x120" && miniatura.id === "Oro") {
         cambio = Perfil_1_Oro[4].imagen;
-      } else if (perfilSize === "50x120" && colorPerfil === "Plata") {
+      } else if (perfilSize === "50x120" && miniatura.id === "Plata") {
         cambio = Perfil_1_Plata[4].imagen;
-      } else if (perfilSize === "50x120" && colorPerfil === "Embero") {
+      } else if (perfilSize === "50x120" && miniatura.id === "Embero") {
         cambio = Perfil_1_Embero[4].imagen;
-      } else if (perfilSize === "50x120" && colorPerfil === "EmberoDorado") {
+      } else if (perfilSize === "50x120" && miniatura.id === "EmberoDorado") {
         cambio = Perfil_1_Embero_Dorado[4].imagen;
-      } else if (perfilSize === "50x120" && colorPerfil === "Nogal") {
+      } else if (perfilSize === "50x120" && miniatura.id === "Nogal") {
         cambio = Perfil_1_Nogal[4].imagen;
-      } else if (perfilSize === "50x120" && colorPerfil === "Olmo") {
+      } else if (perfilSize === "50x120" && miniatura.id === "Olmo") {
         cambio = Perfil_1_Olmo[4].imagen;
       }
 
-      if (perfilSize === "60x60" && colorPerfil === "Bronce") {
+      if (perfilSize === "60x60" && miniatura.id === "Bronce") {
         cambio = Perfil_1_Bronce[5].imagen;
-      } else if (perfilSize === "60x60" && colorPerfil === "Burdeos") {
+      } else if (perfilSize === "60x60" && miniatura.id === "Burdeos") {
         cambio = Perfil_1_Burdeos[5].imagen;
-      } else if (perfilSize === "60x60" && colorPerfil === "Inox") {
+      } else if (perfilSize === "60x60" && miniatura.id === "Inox") {
         cambio = Perfil_1_Inox[5].imagen;
-      } else if (perfilSize === "60x60" && colorPerfil === "Negro") {
+      } else if (perfilSize === "60x60" && miniatura.id === "Negro") {
         cambio = Perfil_1_Negro[5].imagen;
-      } else if (perfilSize === "60x60" && colorPerfil === "Oro") {
+      } else if (perfilSize === "60x60" && miniatura.id === "Oro") {
         cambio = Perfil_1_Oro[5].imagen;
-      } else if (perfilSize === "60x60" && colorPerfil === "Plata") {
+      } else if (perfilSize === "60x60" && miniatura.id === "Plata") {
         cambio = Perfil_1_Plata[5].imagen;
-      } else if (perfilSize === "60x60" && colorPerfil === "Embero") {
+      } else if (perfilSize === "60x60" && miniatura.id === "Embero") {
         cambio = Perfil_1_Embero[5].imagen;
-      } else if (perfilSize === "60x60" && colorPerfil === "EmberoDorado") {
+      } else if (perfilSize === "60x60" && miniatura.id === "EmberoDorado") {
         cambio = Perfil_1_Embero_Dorado[5].imagen;
-      } else if (perfilSize === "60x60" && colorPerfil === "Nogal") {
+      } else if (perfilSize === "60x60" && miniatura.id === "Nogal") {
         cambio = Perfil_1_Nogal[5].imagen;
-      } else if (perfilSize === "60x60" && colorPerfil === "Olmo") {
+      } else if (perfilSize === "60x60" && miniatura.id === "Olmo") {
+        cambio = Perfil_1_Olmo[5].imagen;
+      }
+      if (perfilSize === "60x90" && miniatura.id === "Bronce") {
+        cambio = Perfil_1_Bronce[5].imagen;
+      } else if (perfilSize === "60x90" && miniatura.id === "Burdeos") {
+        cambio = Perfil_1_Burdeos[5].imagen;
+      } else if (perfilSize === "60x90" && miniatura.id === "Inox") {
+        cambio = Perfil_1_Inox[5].imagen;
+      } else if (perfilSize === "60x90" && miniatura.id === "Negro") {
+        cambio = Perfil_1_Negro[5].imagen;
+      } else if (perfilSize === "60x90" && miniatura.id === "Oro") {
+        cambio = Perfil_1_Oro[5].imagen;
+      } else if (perfilSize === "60x90" && miniatura.id === "Plata") {
+        cambio = Perfil_1_Plata[5].imagen;
+      } else if (perfilSize === "60x90" && miniatura.id === "Embero") {
+        cambio = Perfil_1_Embero[5].imagen;
+      } else if (perfilSize === "60x90" && miniatura.id === "EmberoDorado") {
+        cambio = Perfil_1_Embero_Dorado[5].imagen;
+      } else if (perfilSize === "60x90" && miniatura.id === "Nogal") {
+        cambio = Perfil_1_Nogal[5].imagen;
+      } else if (perfilSize === "60x90" && miniatura.id === "Olmo") {
         cambio = Perfil_1_Olmo[5].imagen;
       }
 
-      if (perfilSize === "60x90" && colorPerfil === "Bronce") {
-        cambio = Perfil_1_Bronce[5].imagen;
-      } else if (perfilSize === "60x90" && colorPerfil === "Burdeos") {
-        cambio = Perfil_1_Burdeos[5].imagen;
-      } else if (perfilSize === "60x90" && colorPerfil === "Inox") {
-        cambio = Perfil_1_Inox[5].imagen;
-      } else if (perfilSize === "60x90" && colorPerfil === "Negro") {
-        cambio = Perfil_1_Negro[5].imagen;
-      } else if (perfilSize === "60x90" && colorPerfil === "Oro") {
-        cambio = Perfil_1_Oro[5].imagen;
-      } else if (perfilSize === "60x90" && colorPerfil === "Plata") {
-        cambio = Perfil_1_Plata[5].imagen;
-      } else if (perfilSize === "60x90" && colorPerfil === "Embero") {
-        cambio = Perfil_1_Embero[5].imagen;
-      } else if (perfilSize === "60x90" && colorPerfil === "EmberoDorado") {
-        cambio = Perfil_1_Embero_Dorado[5].imagen;
-      } else if (perfilSize === "60x90" && colorPerfil === "Nogal") {
-        cambio = Perfil_1_Nogal[5].imagen;
-      } else if (perfilSize === "60x90" && colorPerfil === "Olmo") {
-        cambio = Perfil_1_Olmo[5].imagen;
-      }
-
-      if (perfilSize === "80x80" && colorPerfil === "Bronce") {
+      if (perfilSize === "80x80" && miniatura.id === "Bronce") {
         cambio = Perfil_1_Bronce[6].imagen;
-      } else if (perfilSize === "80x80" && colorPerfil === "Burdeos") {
+      } else if (perfilSize === "80x80" && miniatura.id === "Burdeos") {
         cambio = Perfil_1_Burdeos[6].imagen;
-      } else if (perfilSize === "80x80" && colorPerfil === "Inox") {
+      } else if (perfilSize === "80x80" && miniatura.id === "Inox") {
         cambio = Perfil_1_Inox[6].imagen;
-      } else if (perfilSize === "80x80" && colorPerfil === "Negro") {
+      } else if (perfilSize === "80x80" && miniatura.id === "Negro") {
         cambio = Perfil_1_Negro[6].imagen;
-      } else if (perfilSize === "80x80" && colorPerfil === "Oro") {
+      } else if (perfilSize === "80x80" && miniatura.id === "Oro") {
         cambio = Perfil_1_Oro[6].imagen;
-      } else if (perfilSize === "80x80" && colorPerfil === "Plata") {
+      } else if (perfilSize === "80x80" && miniatura.id === "Plata") {
         cambio = Perfil_1_Plata[6].imagen;
-      } else if (perfilSize === "80x80" && colorPerfil === "Embero") {
+      } else if (perfilSize === "80x80" && miniatura.id === "Embero") {
         cambio = Perfil_1_Embero[6].imagen;
-      } else if (perfilSize === "80x80" && colorPerfil === "EmberoDorado") {
+      } else if (perfilSize === "80x80" && miniatura.id === "EmberoDorado") {
         cambio = Perfil_1_Embero_Dorado[6].imagen;
-      } else if (perfilSize === "80x80" && colorPerfil === "Nogal") {
+      } else if (perfilSize === "80x80" && miniatura.id === "Nogal") {
         cambio = Perfil_1_Nogal[6].imagen;
-      } else if (perfilSize === "80x80" && colorPerfil === "Olmo") {
+      } else if (perfilSize === "80x80" && miniatura.id === "Olmo") {
         cambio = Perfil_1_Olmo[6].imagen;
       }
-
-      if (perfilSize === "Modular1" && colorPerfil === "Bronce") {
+      if (perfilSize === "Modular1" && miniatura.id === "Bronce") {
         cambio = Perfil_1_Bronce[7].imagen;
-      } else if (perfilSize === "Modular1" && colorPerfil === "Burdeos") {
+      } else if (perfilSize === "Modular1" && miniatura.id === "Burdeos") {
         cambio = Perfil_1_Burdeos[7].imagen;
-      } else if (perfilSize === "Modular1" && colorPerfil === "Inox") {
+      } else if (perfilSize === "Modular1" && miniatura.id === "Inox") {
         cambio = Perfil_1_Inox[7].imagen;
-      } else if (perfilSize === "Modular1" && colorPerfil === "Negro") {
+      } else if (perfilSize === "Modular1" && miniatura.id === "Negro") {
         cambio = Perfil_1_Negro[7].imagen;
-      } else if (perfilSize === "Modular1" && colorPerfil === "Oro") {
+      } else if (perfilSize === "Modular1" && miniatura.id === "Oro") {
         cambio = Perfil_1_Oro[7].imagen;
-      } else if (perfilSize === "Modular1" && colorPerfil === "Plata") {
+      } else if (perfilSize === "Modular1" && miniatura.id === "Plata") {
         cambio = Perfil_1_Plata[7].imagen;
-      } else if (perfilSize === "Modular1" && colorPerfil === "Embero") {
+      } else if (perfilSize === "Modular1" && miniatura.id === "Embero") {
         cambio = Perfil_1_Embero[7].imagen;
-      } else if (perfilSize === "Modular1" && colorPerfil === "EmberoDorado") {
+      } else if (perfilSize === "Modular1" && miniatura.id === "EmberoDorado") {
         cambio = Perfil_1_Embero_Dorado[7].imagen;
-      } else if (perfilSize === "Modular1" && colorPerfil === "Nogal") {
+      } else if (perfilSize === "Modular1" && miniatura.id === "Nogal") {
         cambio = Perfil_1_Nogal[7].imagen;
-      } else if (perfilSize === "Modular1" && colorPerfil === "Olmo") {
+      } else if (perfilSize === "Modular1" && miniatura.id === "Olmo") {
         cambio = Perfil_1_Olmo[7].imagen;
       }
 
-      if (perfilSize === "Modular2" && colorPerfil === "Bronce") {
+      if (perfilSize === "Modular2" && miniatura.id === "Bronce") {
         cambio = Perfil_1_Bronce[8].imagen;
-      } else if (perfilSize === "Modular2" && colorPerfil === "Burdeos") {
+      } else if (perfilSize === "Modular2" && miniatura.id === "Burdeos") {
         cambio = Perfil_1_Burdeos[8].imagen;
-      } else if (perfilSize === "Modular2" && colorPerfil === "Inox") {
+      } else if (perfilSize === "Modular2" && miniatura.id === "Inox") {
         cambio = Perfil_1_Inox[8].imagen;
-      } else if (perfilSize === "Modular2" && colorPerfil === "Negro") {
+      } else if (perfilSize === "Modular2" && miniatura.id === "Negro") {
         cambio = Perfil_1_Negro[8].imagen;
-      } else if (perfilSize === "Modular2" && colorPerfil === "Oro") {
+      } else if (perfilSize === "Modular2" && miniatura.id === "Oro") {
         cambio = Perfil_1_Oro[8].imagen;
-      } else if (perfilSize === "Modular2" && colorPerfil === "Plata") {
+      } else if (perfilSize === "Modular2" && miniatura.id === "Plata") {
         cambio = Perfil_1_Plata[8].imagen;
-      } else if (perfilSize === "Modular2" && colorPerfil === "Embero") {
+      } else if (perfilSize === "Modular2" && miniatura.id === "Embero") {
         cambio = Perfil_1_Embero[8].imagen;
-      } else if (perfilSize === "Modular2" && colorPerfil === "EmberoDorado") {
+      } else if (perfilSize === "Modular2" && miniatura.id === "EmberoDorado") {
         cambio = Perfil_1_Embero_Dorado[8].imagen;
-      } else if (perfilSize === "Modular2" && colorPerfil === "Nogal") {
+      } else if (perfilSize === "Modular2" && miniatura.id === "Nogal") {
         cambio = Perfil_1_Nogal[8].imagen;
-      } else if (perfilSize === "Modular2" && colorPerfil === "Olmo") {
+      } else if (perfilSize === "Modular2" && miniatura.id === "Olmo") {
         cambio = Perfil_1_Olmo[8].imagen;
       }
 
-      if (perfilSize === "Modular3" && colorPerfil === "Bronce") {
+      if (perfilSize === "Modular3" && miniatura.id === "Bronce") {
         cambio = Perfil_1_Bronce[9].imagen;
-      } else if (perfilSize === "Modular3" && colorPerfil === "Burdeos") {
+      } else if (perfilSize === "Modular3" && miniatura.id === "Burdeos") {
         cambio = Perfil_1_Burdeos[9].imagen;
-      } else if (perfilSize === "Modular3" && colorPerfil === "Inox") {
+      } else if (perfilSize === "Modular3" && miniatura.id === "Inox") {
         cambio = Perfil_1_Inox[9].imagen;
-      } else if (perfilSize === "Modular3" && colorPerfil === "Negro") {
+      } else if (perfilSize === "Modular3" && miniatura.id === "Negro") {
         cambio = Perfil_1_Negro[9].imagen;
-      } else if (perfilSize === "Modular3" && colorPerfil === "Oro") {
+      } else if (perfilSize === "Modular3" && miniatura.id === "Oro") {
         cambio = Perfil_1_Oro[9].imagen;
-      } else if (perfilSize === "Modular3" && colorPerfil === "Plata") {
+      } else if (perfilSize === "Modular3" && miniatura.id === "Plata") {
         cambio = Perfil_1_Plata[9].imagen;
-      } else if (perfilSize === "Modular3" && colorPerfil === "Embero") {
+      } else if (perfilSize === "Modular3" && miniatura.id === "Embero") {
         cambio = Perfil_1_Embero[9].imagen;
-      } else if (perfilSize === "Modular3" && colorPerfil === "EmberoDorado") {
+      } else if (perfilSize === "Modular3" && miniatura.id === "EmberoDorado") {
         cambio = Perfil_1_Embero_Dorado[9].imagen;
-      } else if (perfilSize === "Modular3" && colorPerfil === "Nogal") {
+      } else if (perfilSize === "Modular3" && miniatura.id === "Nogal") {
         cambio = Perfil_1_Nogal[9].imagen;
-      } else if (perfilSize === "Modular3" && colorPerfil === "Olmo") {
+      } else if (perfilSize === "Modular3" && miniatura.id === "Olmo") {
         cambio = Perfil_1_Olmo[9].imagen;
       }
 
-      if (perfilSize === "Modular4" && colorPerfil === "Bronce") {
+      if (perfilSize === "Modular4" && miniatura.id === "Bronce") {
         cambio = Perfil_1_Bronce[10].imagen;
-      } else if (perfilSize === "Modular4" && colorPerfil === "Burdeos") {
+      } else if (perfilSize === "Modular4" && miniatura.id === "Burdeos") {
         cambio = Perfil_1_Burdeos[10].imagen;
-      } else if (perfilSize === "Modular4" && colorPerfil === "Inox") {
+      } else if (perfilSize === "Modular4" && miniatura.id === "Inox") {
         cambio = Perfil_1_Inox[10].imagen;
-      } else if (perfilSize === "Modular4" && colorPerfil === "Negro") {
+      } else if (perfilSize === "Modular4" && miniatura.id === "Negro") {
         cambio = Perfil_1_Negro[10].imagen;
-      } else if (perfilSize === "Modular4" && colorPerfil === "Oro") {
+      } else if (perfilSize === "Modular4" && miniatura.id === "Oro") {
         cambio = Perfil_1_Oro[10].imagen;
-      } else if (perfilSize === "Modular4" && colorPerfil === "Plata") {
+      } else if (perfilSize === "Modular4" && miniatura.id === "Plata") {
         cambio = Perfil_1_Plata[10].imagen;
-      } else if (perfilSize === "Modular4" && colorPerfil === "Embero") {
+      } else if (perfilSize === "Modular4" && miniatura.id === "Embero") {
         cambio = Perfil_1_Embero[10].imagen;
-      } else if (perfilSize === "Modular4" && colorPerfil === "EmberoDorado") {
+      } else if (perfilSize === "Modular4" && miniatura.id === "EmberoDorado") {
         cambio = Perfil_1_Embero_Dorado[10].imagen;
-      } else if (perfilSize === "Modular4" && colorPerfil === "Nogal") {
+      } else if (perfilSize === "Modular4" && miniatura.id === "Nogal") {
         cambio = Perfil_1_Nogal[10].imagen;
-      } else if (perfilSize === "Modular4" && colorPerfil === "Olmo") {
+      } else if (perfilSize === "Modular4" && miniatura.id === "Olmo") {
         cambio = Perfil_1_Olmo[10].imagen;
       }
-
-      if (perfilSize === "Modular5" && colorPerfil === "Bronce") {
+      if (perfilSize === "Modular5" && miniatura.id === "Bronce") {
         cambio = Perfil_1_Bronce[11].imagen;
-      } else if (perfilSize === "Modular5" && colorPerfil === "Burdeos") {
+      } else if (perfilSize === "Modular5" && miniatura.id === "Burdeos") {
         cambio = Perfil_1_Burdeos[11].imagen;
-      } else if (perfilSize === "Modular5" && colorPerfil === "Inox") {
+      } else if (perfilSize === "Modular5" && miniatura.id === "Inox") {
         cambio = Perfil_1_Inox[11].imagen;
-      } else if (perfilSize === "Modular5" && colorPerfil === "Negro") {
+      } else if (perfilSize === "Modular5" && miniatura.id === "Negro") {
         cambio = Perfil_1_Negro[11].imagen;
-      } else if (perfilSize === "Modular5" && colorPerfil === "Oro") {
+      } else if (perfilSize === "Modular5" && miniatura.id === "Oro") {
         cambio = Perfil_1_Oro[11].imagen;
-      } else if (perfilSize === "Modular5" && colorPerfil === "Plata") {
+      } else if (perfilSize === "Modular5" && miniatura.id === "Plata") {
         cambio = Perfil_1_Plata[11].imagen;
-      } else if (perfilSize === "Modular5" && colorPerfil === "Embero") {
+      } else if (perfilSize === "Modular5" && miniatura.id === "Embero") {
         cambio = Perfil_1_Embero[11].imagen;
-      } else if (perfilSize === "Modular5" && colorPerfil === "EmberoDorado") {
+      } else if (perfilSize === "Modular5" && miniatura.id === "EmberoDorado") {
         cambio = Perfil_1_Embero_Dorado[11].imagen;
-      } else if (perfilSize === "Modular5" && colorPerfil === "Nogal") {
+      } else if (perfilSize === "Modular5" && miniatura.id === "Nogal") {
         cambio = Perfil_1_Nogal[11].imagen;
-      } else if (perfilSize === "Modular5" && colorPerfil === "Olmo") {
+      } else if (perfilSize === "Modular5" && miniatura.id === "Olmo") {
         cambio = Perfil_1_Olmo[11].imagen;
       }
 
-      if (perfilSize === "Modular6" && colorPerfil === "Bronce") {
+      if (perfilSize === "Modular6" && miniatura.id === "Bronce") {
         cambio = Perfil_1_Bronce[12].imagen;
-      } else if (perfilSize === "Modular6" && colorPerfil === "Burdeos") {
+      } else if (perfilSize === "Modular6" && miniatura.id === "Burdeos") {
         cambio = Perfil_1_Burdeos[12].imagen;
-      } else if (perfilSize === "Modular6" && colorPerfil === "Inox") {
+      } else if (perfilSize === "Modular6" && miniatura.id === "Inox") {
         cambio = Perfil_1_Inox[12].imagen;
-      } else if (perfilSize === "Modular6" && colorPerfil === "Negro") {
+      } else if (perfilSize === "Modular6" && miniatura.id === "Negro") {
         cambio = Perfil_1_Negro[12].imagen;
-      } else if (perfilSize === "Modular6" && colorPerfil === "Oro") {
+      } else if (perfilSize === "Modular6" && miniatura.id === "Oro") {
         cambio = Perfil_1_Oro[12].imagen;
-      } else if (perfilSize === "Modular6" && colorPerfil === "Plata") {
+      } else if (perfilSize === "Modular6" && miniatura.id === "Plata") {
         cambio = Perfil_1_Plata[12].imagen;
-      } else if (perfilSize === "Modular6" && colorPerfil === "Embero") {
+      } else if (perfilSize === "Modular6" && miniatura.id === "Embero") {
         cambio = Perfil_1_Embero[12].imagen;
-      } else if (perfilSize === "Modular6" && colorPerfil === "EmberoDorado") {
+      } else if (perfilSize === "Modular6" && miniatura.id === "EmberoDorado") {
         cambio = Perfil_1_Embero_Dorado[12].imagen;
-      } else if (perfilSize === "Modular6" && colorPerfil === "Nogal") {
+      } else if (perfilSize === "Modular6" && miniatura.id === "Nogal") {
         cambio = Perfil_1_Nogal[12].imagen;
-      } else if (perfilSize === "Modular6" && colorPerfil === "Olmo") {
+      } else if (perfilSize === "Modular6" && miniatura.id === "Olmo") {
         cambio = Perfil_1_Olmo[12].imagen;
       }
 
-      if (perfilSize === "Modular9" && colorPerfil === "Bronce") {
+      if (perfilSize === "Modular9" && miniatura.id === "Bronce") {
         cambio = Perfil_1_Bronce[13].imagen;
-      } else if (perfilSize === "Modular9" && colorPerfil === "Burdeos") {
+      } else if (perfilSize === "Modular9" && miniatura.id === "Burdeos") {
         cambio = Perfil_1_Burdeos[13].imagen;
-      } else if (perfilSize === "Modular9" && colorPerfil === "Inox") {
+      } else if (perfilSize === "Modular9" && miniatura.id === "Inox") {
         cambio = Perfil_1_Inox[13].imagen;
-      } else if (perfilSize === "Modular9" && colorPerfil === "Negro") {
+      } else if (perfilSize === "Modular9" && miniatura.id === "Negro") {
         cambio = Perfil_1_Negro[13].imagen;
-      } else if (perfilSize === "Modular9" && colorPerfil === "Oro") {
+      } else if (perfilSize === "Modular9" && miniatura.id === "Oro") {
         cambio = Perfil_1_Oro[13].imagen;
-      } else if (perfilSize === "Modular9" && colorPerfil === "Plata") {
+      } else if (perfilSize === "Modular9" && miniatura.id === "Plata") {
         cambio = Perfil_1_Plata[13].imagen;
-      } else if (perfilSize === "Modular9" && colorPerfil === "Embero") {
+      } else if (perfilSize === "Modular9" && miniatura.id === "Embero") {
         cambio = Perfil_1_Embero[13].imagen;
-      } else if (perfilSize === "Modular9" && colorPerfil === "EmberoDorado") {
+      } else if (perfilSize === "Modular9" && miniatura.id === "EmberoDorado") {
         cambio = Perfil_1_Embero_Dorado[13].imagen;
-      } else if (perfilSize === "Modular9" && colorPerfil === "Nogal") {
+      } else if (perfilSize === "Modular9" && miniatura.id === "Nogal") {
         cambio = Perfil_1_Nogal[13].imagen;
-      } else if (perfilSize === "Modular9" && colorPerfil === "Olmo") {
+      } else if (perfilSize === "Modular9" && miniatura.id === "Olmo") {
         cambio = Perfil_1_Olmo[13].imagen;
       }
     }
 
     setImagenPerfil(cambio);
   };
-
+  const handleRAL = (miniatura) => {
+    let cambio = null;
+    console.log("Que hay aqui?", miniatura.id);
+    console.log("Color PErfil?:", colorPerfil);
+    console.log("tamaño perfil:", perfilSize);
+    if (seleccionPerfil === "Perfil1") {
+      if (perfilSize === "20x120" && miniatura.id === "RAL") {
+        // cambio = Perfil_1_RAL[0].imagen;
+        cambio = "20x120";
+      }
+      if (perfilSize === "30x120" && miniatura.id === "RAL") {
+        cambio = "30x120";
+      }
+      if (perfilSize === "40x120" && miniatura.id === "RAL") {
+        cambio = "40x120";
+      }
+      if (perfilSize === "30x60" && miniatura.id === "RAL") {
+        cambio = "30x60";
+      }
+      if (perfilSize === "30x90" && miniatura.id === "RAL") {
+        cambio = "30x90";
+      }
+      if (perfilSize === "40x80" && miniatura.id === "RAL") {
+        cambio = "40x80";
+      }
+      if (perfilSize === "45x90" && miniatura.id === "RAL") {
+        cambio = "45x90";
+      }
+      if (perfilSize === "50x100" && miniatura.id === "RAL") {
+        cambio = "50x100";
+      }
+      if (perfilSize === "50x120" && miniatura.id === "RAL") {
+        cambio = "50x120";
+      }
+      if (perfilSize === "60x60" && miniatura.id === "RAL") {
+        cambio = "60x60";
+      }
+      if (perfilSize === "60x90" && miniatura.id === "RAL") {
+        cambio = "60x90";
+      }
+      if (perfilSize === "80x80" && miniatura.id === "RAL") {
+        cambio = "80x80";
+      }
+      if (perfilSize === "Modular1" && miniatura.id === "RAL") {
+        cambio = "Modular1";
+      }
+      if (perfilSize === "Modular2" && miniatura.id === "RAL") {
+        cambio = "Modular2";
+      }
+      if (perfilSize === "Modular3" && miniatura.id === "RAL") {
+        cambio = "Modular3";
+      }
+      if (perfilSize === "Modular4" && miniatura.id === "RAL") {
+        cambio = "Modular4";
+      }
+      if (perfilSize === "Modular5" && miniatura.id === "RAL") {
+        cambio = "Modular5";
+      }
+      if (perfilSize === "Modular6" && miniatura.id === "RAL") {
+        cambio = "Modular6";
+      }
+      if (perfilSize === "Modular9" && miniatura.id === "RAL") {
+        cambio = "Modular9";
+      }
+    }
+    setImagenSvg(cambio);
+  };
+  const handlePerfilBase = (miniatura) => {
+    let cambio = null;
+    if (miniatura.id === "Perfil1") {
+      if (perfilSize === "20x120") {
+        cambio = Perfil_1_Inox[0].imagen;
+      }
+      if (perfilSize === "30x120") {
+        cambio = Perfil_1_Inox[1].imagen;
+      }
+      if (perfilSize === "40x120") {
+        cambio = Perfil_1_Inox[2].imagen;
+      }
+      if (perfilSize === "30x60") {
+        cambio = Perfil_1_Inox[1].imagen;
+      }
+      if (perfilSize === "30x90") {
+        cambio = Perfil_1_Inox[1].imagen;
+      }
+      if (perfilSize === "40x80") {
+        cambio = Perfil_1_Inox[2].imagen;
+      }
+      if (perfilSize === "45x90") {
+        cambio = Perfil_1_Inox[3].imagen;
+      }
+      if (perfilSize === "50x100") {
+        cambio = Perfil_1_Inox[4].imagen;
+      }
+      if (perfilSize === "50x120") {
+        cambio = Perfil_1_Inox[4].imagen;
+      }
+      if (perfilSize === "60x60") {
+        cambio = Perfil_1_Inox[5].imagen;
+      }
+      if (perfilSize === "60x90") {
+        cambio = Perfil_1_Inox[5].imagen;
+      }
+      if (perfilSize === "80x80") {
+        cambio = Perfil_1_Inox[6].imagen;
+      }
+      if (perfilSize === "Modular1") {
+        cambio = Perfil_1_Inox[7].imagen;
+      }
+      if (perfilSize === "Modular2") {
+        cambio = Perfil_1_Inox[8].imagen;
+      }
+      if (perfilSize === "Modular3") {
+        cambio = Perfil_1_Inox[9].imagen;
+      }
+      if (perfilSize === "Modular4") {
+        cambio = Perfil_1_Inox[10].imagen;
+      }
+      if (perfilSize === "Modular5") {
+        cambio = Perfil_1_Inox[11].imagen;
+      }
+      if (perfilSize === "Modular6") {
+        cambio = Perfil_1_Inox[12].imagen;
+      }
+      if (perfilSize === "Modular9") {
+        cambio = Perfil_1_Inox[13].imagen;
+      }
+    }
+    setSeleccionPerfil(miniatura.id);
+    setImagenPerfil(cambio);
+  };
   return (
     <AppMenu>
-      {presionado && menuBase && (
+      {/* {presionado && menuBase && (
         <MenuRectangulos classname='Base'>
           <TituloMenu>Personaliza la fachada</TituloMenu>
           <ContenedorRectangulo>
@@ -682,15 +841,20 @@ const Menu = ({
             </TextureContainerRectangulo>
           </ContenedorRectangulo>
         </MenuRectangulos>
-      )}
-      {menuColorFormato && (
+      )} */}
+      {presionado && menuColorFormato && (
         <MenuCirculos classname='Seleccionar color Formatos'>
           <TituloMenu>Acabados</TituloMenu>
           <ContenedorCirculos>
             {MiniaturasColor.map((miniatura, index) => (
               <TextureContainer
                 key={miniatura.id}
-                onClick={() => setColorFormato(miniatura.id)}
+                onClick={() => (
+                  setColorFormato(miniatura.id),
+                  handleFondoFormatos(miniatura.id),
+                  setImagenPerfil(null),
+                  setImagenSvg(null)
+                )}
               >
                 <ImgCirculos src={miniatura.imagen} />
                 <TextTextura>{miniatura.name}</TextTextura>
@@ -716,7 +880,8 @@ const Menu = ({
                 setMenuTipoFormato(false),
                 setMenuFormato(true),
                 setMenuMultiformato(false),
-                setImagenPerfil(null)
+                setImagenPerfil(null),
+                setImagenSvg(null)
               )}
             >
               <ImgRectangulos src={SelectoresFormato[9].imagen} />
@@ -735,6 +900,13 @@ const Menu = ({
               <TextTextura>Multiformatos</TextTextura>
             </TextureContainerRectangulo>
           </ContenedorRectangulo>
+          <BotonMenu
+            onClick={() => (
+              setMenuColorFormato(true), setMenuTipoFormato(false)
+            )}
+          >
+            Atrás
+          </BotonMenu>
         </MenuRectangulos>
       )}
       {menuFormato && (
@@ -753,14 +925,22 @@ const Menu = ({
           </ContenedorRectangulo>
           <BotonMenu
             onClick={() => (
-              setPresionado(false),
-              setMenuBase(true),
               setMenuColorFormato(false),
               setMenuTipoFormato(false),
-              setMenuFormato(false)
+              setMenuFormato(false),
+              setMenuPerfil(true)
             )}
           >
             Aceptar
+          </BotonMenu>
+          <BotonMenu
+            onClick={() => (
+              setMenuColorFormato(false),
+              setMenuTipoFormato(true),
+              setMenuFormato(false)
+            )}
+          >
+            Atrás
           </BotonMenu>
         </MenuRectangulos>
       )}
@@ -780,18 +960,66 @@ const Menu = ({
           </ContenedorRectangulo>
           <BotonMenu
             onClick={() => (
-              setPresionado(false),
               setMenuBase(true),
               setMenuColorFormato(false),
               setMenuTipoFormato(false),
-              setMenuFormato(false)
+              setMenuFormato(false),
+              setMenuMultiformato(false),
+              setMenuPerfil(true)
             )}
           >
             Aceptar
           </BotonMenu>
+          <BotonMenu
+            onClick={() => (
+              setMenuColorFormato(false),
+              setMenuTipoFormato(true),
+              setMenuFormato(false),
+              setMenuMultiformato(false)
+            )}
+          >
+            Atrás
+          </BotonMenu>
         </MenuRectangulos>
       )}
-
+      {menuPerfil && (
+        <MenuRectangulos classname='Formatos'>
+          <TituloMenu>Cenefas</TituloMenu>
+          <ContenedorRectangulo>
+            {PerfilesMini.map((miniatura, index) => (
+              <TextureContainerRectangulo
+                key={miniatura.id}
+                onClick={() => handlePerfilBase(miniatura)}
+              >
+                <ImgRectangulos src={miniatura.imagen} />
+                <TextTextura>{miniatura.name}</TextTextura>
+              </TextureContainerRectangulo>
+            ))}
+          </ContenedorRectangulo>
+          <BotonMenu
+            onClick={() => (
+              setMenuColorFormato(false),
+              setMenuTipoFormato(false),
+              setMenuFormato(false),
+              setMenuPerfil(false),
+              setMenuColorPerfil(true)
+            )}
+          >
+            Aceptar
+          </BotonMenu>
+          <BotonMenu
+            onClick={() => (
+              setMenuColorFormato(false),
+              setMenuTipoFormato(true),
+              setMenuFormato(false),
+              setMenuPerfil(false),
+              setImagenPerfil(null)
+            )}
+          >
+            Atrás
+          </BotonMenu>
+        </MenuRectangulos>
+      )}
       {menuColorPerfil && (
         <MenuCirculos className='Cenefas color'>
           <TituloMenu>Acabados Cenefa</TituloMenu>
@@ -801,8 +1029,9 @@ const Menu = ({
               <TextureContainer
                 key={miniatura.id}
                 onClick={() => (
-                  setColorPerfil(miniatura.id),
-                  console.log("Material", miniatura.id)
+                  handlePerfil(miniatura),
+                  setShowColorPicker(false),
+                  setImagenSvg(null)
                 )}
               >
                 <ImgCirculos src={miniatura.imagen} />
@@ -815,47 +1044,68 @@ const Menu = ({
             {Maderas.map((miniatura, index) => (
               <TextureContainer
                 key={miniatura.id}
-                onClick={() => setColorPerfil(miniatura.id)}
+                onClick={() => (
+                  handlePerfil(miniatura),
+                  setShowColorPicker(false),
+                  setImagenSvg(null)
+                )}
               >
                 <ImgCirculos src={miniatura.imagen} />
                 <TextTextura>{miniatura.name}</TextTextura>
               </TextureContainer>
             ))}
           </ContenedorCirculos>
-          <BotonMenu
-            onClick={() => (setMenuPerfil(true), setMenuColorPerfil(false))}
-          >
-            Siguiente
-          </BotonMenu>
-        </MenuCirculos>
-      )}
-      {menuPerfil && (
-        <MenuRectangulos classname='Formatos'>
-          <TituloMenu>Cenefas</TituloMenu>
-          <ContenedorRectangulo>
-            {PerfilesMini.map((miniatura, index) => (
-              <TextureContainerRectangulo
+          <TituloMenu>RAL</TituloMenu>
+          <ContenedorCirculos>
+            {RALS.map((miniatura, index) => (
+              <TextureContainer
                 key={miniatura.id}
-                onClick={() => handlePerfil(miniatura)}
+                onClick={() => {
+                  handleRAL(miniatura);
+                  setShowColorPicker(true);
+                  setImagenPerfil(null);
+                }}
               >
-                <ImgRectangulos src={miniatura.imagen} />
+                <ImgCirculos src={miniatura.imagen} />
                 <TextTextura>{miniatura.name}</TextTextura>
-              </TextureContainerRectangulo>
+              </TextureContainer>
             ))}
-          </ContenedorRectangulo>
+          </ContenedorCirculos>
+          {showColorPicker && (
+            <>
+              <TituloMenu>Selecciona tu Color</TituloMenu>
+              <SketchPicker
+                color={color}
+                onChange={(selectedColor) =>
+                  handleColorChange(selectedColor.hex)
+                }
+              />
+            </>
+          )}
           <BotonMenu
             onClick={() => (
               setPresionado(false),
-              setMenuBase(true),
+              setMenuColorPerfil(false),
               setMenuColorFormato(false),
-              setMenuTipoFormato(false),
-              setMenuFormato(false),
               setMenuPerfil(false)
             )}
           >
-            Aceptar
+            Finalizar
           </BotonMenu>
-        </MenuRectangulos>
+          <BotonMenu
+            onClick={() => (
+              setMenuColorFormato(false),
+              setMenuTipoFormato(false),
+              setMenuFormato(false),
+              setMenuPerfil(true),
+              setImagenPerfil(null),
+              setImagenSvg(null),
+              setMenuColorPerfil(false)
+            )}
+          >
+            Atrás
+          </BotonMenu>
+        </MenuCirculos>
       )}
     </AppMenu>
   );

@@ -19,6 +19,14 @@ export const ImgPerfil = styled.img`
   left: 0;
   z-index: 1;
 `;
+export const ImgSvg = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+`;
 export const ImgRAL = styled.img`
   position: absolute;
   top: 0;
@@ -53,7 +61,8 @@ export const AppMenu = styled.div`
 export const MenuCirculos = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 10px 15px;
+  margin: 0 15px;
+  padding: 10px 0;
   overflow-y: auto;
   height: 100%;
 `;
@@ -97,7 +106,8 @@ export const TextTextura = styled.span`
 export const MenuRectangulos = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 10px 15px;
+  margin: 0 15px;
+  padding: 10px 0;
   justify-content: flex-start;
   height: 100%;
   overflow-y: auto;

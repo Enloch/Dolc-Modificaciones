@@ -1,5 +1,19 @@
 export { default as Fondo } from "../../assets/images/DolckerTline/Diseno/Formato/fondo.webp";
 
+import FondoCream from "../../assets/images/DolckerTline/Diseno/Formato/CREAM.webp";
+import FondoEarth from "../../assets/images/DolckerTline/Diseno/Formato/EARTH.webp";
+import FondoGrey from "../../assets/images/DolckerTline/Diseno/Formato/GREY.webp";
+import FondoShadow from "../../assets/images/DolckerTline/Diseno/Formato/SHADOW.webp";
+import FondoWhite from "../../assets/images/DolckerTline/Diseno/Formato/WHITE.webp";
+
+export const Fondos = [
+  { id: "Cream", imagen: FondoCream },
+  { id: "Earth", imagen: FondoEarth },
+  { id: "Grey", imagen: FondoGrey },
+  { id: "Shadow", imagen: FondoShadow },
+  { id: "White", imagen: FondoWhite },
+];
+
 import Cream20x120 from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/20x120/CREAM_20x120.webp";
 import Earth20x120 from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/20x120/EARTH_20x120.webp";
 import Grey20x120 from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/20x120/GREY_20x120.webp";
@@ -600,4 +614,40 @@ export const Perfil_1_Olmo = [
   { id: "Olmo", imagen: OlmoModulo5, formato: "Modulo5" },
   { id: "Olmo", imagen: OlmoModulo6, formato: "Modulo6" },
   { id: "Olmo", imagen: OlmoModulo9, formato: "Modulo9" },
+];
+
+import RAL20 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/20.svg";
+import RAL30 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/30.svg";
+import RAL40 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/40.svg";
+import RAL45 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/45.svg";
+import RAL50 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/50.svg";
+import RAL60 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/60.svg";
+import RAL80 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/80.svg";
+import RALModulo1 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/60.svg";
+// import RALModulo1 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/MODULAR 1.svg";
+import RALModulo2 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/60.svg";
+import RALModulo3 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/30.svg";
+// import RALModulo4 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/MODULAR 4.svg";
+import RALModulo4 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/60.svg";
+import RALModulo5 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/60.svg";
+// import RALModulo5 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/MODULAR 5.svg";
+import RALModulo6 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/30.svg";
+import RALModulo9 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/60.svg";
+// import RALModulo9 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/MODULAR 9.svg";
+
+export const Perfil_1_RAL = [
+  { id: "RAL", imagen: RAL20, formato: "20" },
+  { id: "RAL", imagen: RAL30, formato: "30" },
+  { id: "RAL", imagen: RAL40, formato: "40" },
+  { id: "RAL", imagen: RAL45, formato: "45" },
+  { id: "RAL", imagen: RAL50, formato: "50" },
+  { id: "RAL", imagen: RAL60, formato: "60" },
+  { id: "RAL", imagen: RAL80, formato: "80" },
+  { id: "RAL", imagen: RALModulo1, formato: "Modulo1" },
+  { id: "RAL", imagen: RALModulo2, formato: "Modulo2" },
+  { id: "RAL", imagen: RALModulo3, formato: "Modulo3" },
+  { id: "RAL", imagen: RALModulo4, formato: "Modulo4" },
+  { id: "RAL", imagen: RALModulo5, formato: "Modulo5" },
+  { id: "RAL", imagen: RALModulo6, formato: "Modulo6" },
+  { id: "RAL", imagen: RALModulo9, formato: "Modulo9" },
 ];
