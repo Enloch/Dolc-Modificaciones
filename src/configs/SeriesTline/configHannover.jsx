@@ -1,5 +1,5 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
-import imgSeleccionar from "../../assets/images/Series/BASALT/Dolcker-BASALT_seleccionar.webp";
+import imgSeleccionar from "../../assets/images/DolckerTline/Series/HANNOVER/DOLCKER HANNOVER materiales seleccion_WEBP.webp";
 import InteractivoImg from "../../assets/images/DolckerTline/Interactivofachada.jpg";
 import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
@@ -7,7 +7,7 @@ const ambientesImports = import.meta.globEager(
 );
 
 const muestrasImports = import.meta.globEager(
-  "../../assets/images/DolckerTline/HANNOVER/Hannover/DESPIECE/**"
+  "../../assets/images/DolckerTline/Series/HANNOVER/DESPIECE/**"
 );
 
 const acabadosImports = import.meta.globEager("../../assets/icons/acabados/**");
@@ -22,16 +22,12 @@ const configHannover = {
   imgSeleccionar,
   indicadores: [
     {
-      top: "15%",
-      left: "20%",
       ambiente: {
-        imagen: InteractivoImg,
+        imagen: ambientes[0],
         titulo: "Hannover Black Natural",
       },
     },
     {
-      top: "45%",
-      left: "20%",
       ambiente: {
         imagen: ambientes[1],
         titulo: "Hannover Steel Natural",

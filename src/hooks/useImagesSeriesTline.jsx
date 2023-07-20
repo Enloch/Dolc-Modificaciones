@@ -77,7 +77,12 @@ const enlacesObj = [
     id: "#habitat",
     categoria: "Cemento",
   },
-  { titulo: "HANNOVER", src: img1, id: "#hannover", categoria: "Terrazo" },
+  {
+    titulo: "HANNOVER",
+    src: imagenesAmbiente[12],
+    id: "#hannover",
+    categoria: "Terrazo",
+  },
   {
     titulo: "INVICTUS",
     src: imagenesAmbiente[13],
@@ -96,14 +101,24 @@ const enlacesObj = [
     id: "#nikea",
     categoria: "Marmol",
   },
-  { titulo: "STONELAND", src: img1, id: "#stoneland", categoria: "Piedra" },
+  {
+    titulo: "STONELAND",
+    src: imagenesAmbiente[16],
+    id: "#stoneland",
+    categoria: "Piedra",
+  },
   {
     titulo: "STORM",
     src: imagenesAmbiente[17],
     id: "#storm",
     categoria: "Piedra",
   },
-  { titulo: "UNIK", src: img1, id: "#unik", categoria: "Cemento" },
+  {
+    titulo: "UNIK",
+    src: imagenesAmbiente[18],
+    id: "#unik",
+    categoria: "Cemento",
+  },
 ];
 
 const useImagesSeries = (categoria, queSerieActiva) => {
