@@ -17,7 +17,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configBrunswich = {
-  titulo: "Brunswich",
+  titulo: "Dolcker & Brun",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -26,7 +26,7 @@ const configBrunswich = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Brunswich Acero",
+        titulo: "Dolcker & Brun Acero",
       },
     },
     {
@@ -34,7 +34,7 @@ const configBrunswich = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Brunswich Ceniza",
+        titulo: "Dolcker & Brun Ceniza",
       },
     },
   ],

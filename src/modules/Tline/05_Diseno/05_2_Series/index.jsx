@@ -36,9 +36,9 @@ const Series = ({ id, serieActivaMostrar }) => {
         backgroundColor={COLORS.gray01}
       />
 
-      {serieActivaMostrar === "#ardesia" && (
+      {serieActivaMostrar === "#ard" && (
         <Serie
-          id={id[1]}
+          id={id[0]}
           config={configArdesia}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
@@ -46,9 +46,9 @@ const Series = ({ id, serieActivaMostrar }) => {
         />
       )}
 
-      {serieActivaMostrar === "#balmoral" && (
+      {serieActivaMostrar === "#balm" && (
         <Serie
-          id={id[2]}
+          id={id[1]}
           config={configBalmoral}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
@@ -56,9 +56,9 @@ const Series = ({ id, serieActivaMostrar }) => {
         />
       )}
 
-      {serieActivaMostrar === "#bellagio" && (
+      {serieActivaMostrar === "#bella" && (
         <Serie
-          id={id[3]}
+          id={id[2]}
           config={configBellagio}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
@@ -66,9 +66,9 @@ const Series = ({ id, serieActivaMostrar }) => {
         />
       )}
 
-      {serieActivaMostrar === "#brunswich" && (
+      {serieActivaMostrar === "#brun" && (
         <Serie
-          id={id[4]}
+          id={id[3]}
           config={configBrunswich}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
@@ -78,7 +78,7 @@ const Series = ({ id, serieActivaMostrar }) => {
 
       {serieActivaMostrar === "#byb" && (
         <Serie
-          id={id[5]}
+          id={id[4]}
           config={configByb}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
@@ -86,9 +86,9 @@ const Series = ({ id, serieActivaMostrar }) => {
         />
       )}
 
-      {serieActivaMostrar === "#capri" && (
+      {serieActivaMostrar === "#cap" && (
         <Serie
-          id={id[6]}
+          id={id[5]}
           config={configCapri}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
@@ -96,9 +96,9 @@ const Series = ({ id, serieActivaMostrar }) => {
         />
       )}
 
-      {serieActivaMostrar === "#core" && (
+      {serieActivaMostrar === "#cor" && (
         <Serie
-          id={id[7]}
+          id={id[6]}
           config={configCore}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
@@ -106,9 +106,9 @@ const Series = ({ id, serieActivaMostrar }) => {
         />
       )}
 
-      {serieActivaMostrar === "#cromat" && (
+      {serieActivaMostrar === "#crom" && (
         <Serie
-          id={id[8]}
+          id={id[7]}
           config={configCromat}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
@@ -116,9 +116,9 @@ const Series = ({ id, serieActivaMostrar }) => {
         />
       )}
 
-      {serieActivaMostrar === "#dome" && (
+      {serieActivaMostrar === "#dom" && (
         <Serie
-          id={id[9]}
+          id={id[8]}
           config={configDome}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
@@ -126,9 +126,9 @@ const Series = ({ id, serieActivaMostrar }) => {
         />
       )}
 
-      {serieActivaMostrar === "#eternal" && (
+      {serieActivaMostrar === "#eter" && (
         <Serie
-          id={id[10]}
+          id={id[9]}
           config={configEternal}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
@@ -136,9 +136,9 @@ const Series = ({ id, serieActivaMostrar }) => {
         />
       )}
 
-      {serieActivaMostrar === "#gravel" && (
+      {serieActivaMostrar === "#grav" && (
         <Serie
-          id={id[11]}
+          id={id[10]}
           config={configGravel}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
@@ -146,9 +146,9 @@ const Series = ({ id, serieActivaMostrar }) => {
         />
       )}
 
-      {serieActivaMostrar === "#habitat" && (
+      {serieActivaMostrar === "#habi" && (
         <Serie
-          id={id[12]}
+          id={id[11]}
           config={configHabitat}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
@@ -156,9 +156,9 @@ const Series = ({ id, serieActivaMostrar }) => {
         />
       )}
 
-      {serieActivaMostrar === "#hannover" && (
+      {serieActivaMostrar === "#han" && (
         <Serie
-          id={id[13]}
+          id={id[12]}
           config={configHannover}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
@@ -166,9 +166,9 @@ const Series = ({ id, serieActivaMostrar }) => {
         />
       )}
 
-      {serieActivaMostrar === "#invictus" && (
+      {serieActivaMostrar === "#inv" && (
         <Serie
-          id={id[14]}
+          id={id[13]}
           config={configInvictus}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
@@ -176,9 +176,9 @@ const Series = ({ id, serieActivaMostrar }) => {
         />
       )}
 
-      {serieActivaMostrar === "#kursaal" && (
+      {serieActivaMostrar === "#kur" && (
         <Serie
-          id={id[15]}
+          id={id[14]}
           config={configKursaal}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
@@ -186,9 +186,9 @@ const Series = ({ id, serieActivaMostrar }) => {
         />
       )}
 
-      {serieActivaMostrar === "#nikea" && (
+      {serieActivaMostrar === "#nik" && (
         <Serie
-          id={id[17]}
+          id={id[15]}
           config={configNikea}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
@@ -196,9 +196,9 @@ const Series = ({ id, serieActivaMostrar }) => {
         />
       )}
 
-      {serieActivaMostrar === "#stoneland" && (
+      {serieActivaMostrar === "#stone" && (
         <Serie
-          id={id[19]}
+          id={id[16]}
           config={configStoneland}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
@@ -206,9 +206,9 @@ const Series = ({ id, serieActivaMostrar }) => {
         />
       )}
 
-      {serieActivaMostrar === "#storm" && (
+      {serieActivaMostrar === "#stor" && (
         <Serie
-          id={id[20]}
+          id={id[17]}
           config={configStorm}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}
@@ -216,9 +216,9 @@ const Series = ({ id, serieActivaMostrar }) => {
         />
       )}
 
-      {serieActivaMostrar === "#unik" && (
+      {serieActivaMostrar === "#uni" && (
         <Serie
-          id={id[21]}
+          id={id[18]}
           config={configUnik}
           setFullScreenSrc={setFullScreenSrc}
           setFullScreenTitulo={setFullScreenTitulo}

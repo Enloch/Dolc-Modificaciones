@@ -17,7 +17,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configEternal = {
-  titulo: "Eternal",
+  titulo: "Dolcker & Eter",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -26,7 +26,7 @@ const configEternal = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Eternal Cream Natural",
+        titulo: "Dolcker & Eter Cream Natural",
       },
     },
     {
@@ -34,7 +34,7 @@ const configEternal = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Eternal Dark Natural",
+        titulo: "Dolcker & Eter Dark Natural",
       },
     },
     {
@@ -42,7 +42,7 @@ const configEternal = {
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
-        titulo: "Eternal Pearl Natural",
+        titulo: "Dolcker & Eter Pearl Natural",
       },
     },
     {
@@ -50,7 +50,7 @@ const configEternal = {
       left: "20%",
       ambiente: {
         imagen: ambientes[3],
-        titulo: "Eternal Taupe Natural",
+        titulo: "Dolcker & Eter Taupe Natural",
       },
     },
   ],

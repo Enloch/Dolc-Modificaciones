@@ -17,7 +17,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configGravel = {
-  titulo: "Gravel",
+  titulo: "Dolcker & Grav",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -26,7 +26,7 @@ const configGravel = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Gravel Black",
+        titulo: "Dolcker & Grav Black",
       },
     },
     {
@@ -34,7 +34,7 @@ const configGravel = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Gravel Cream",
+        titulo: "Dolcker & Grav Cream",
       },
     },
     {
@@ -42,7 +42,7 @@ const configGravel = {
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
-        titulo: "Gravel Earth",
+        titulo: "Dolcker & Grav Earth",
       },
     },
     {
@@ -50,7 +50,7 @@ const configGravel = {
       left: "20%",
       ambiente: {
         imagen: ambientes[3],
-        titulo: "Gravel Grey",
+        titulo: "Dolcker & Grav Grey",
       },
     },
     {
@@ -58,7 +58,7 @@ const configGravel = {
       left: "20%",
       ambiente: {
         imagen: ambientes[4],
-        titulo: "Gravel Shadow",
+        titulo: "Dolcker & Grav Shadow",
       },
     },
     {
@@ -66,7 +66,7 @@ const configGravel = {
       left: "20%",
       ambiente: {
         imagen: ambientes[5],
-        titulo: "Gravel White",
+        titulo: "Dolcker & Grav White",
       },
     },
   ],

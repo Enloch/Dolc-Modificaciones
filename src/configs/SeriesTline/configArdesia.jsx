@@ -14,7 +14,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configArdesia = {
-  titulo: "Ardesia",
+  titulo: "Dolcker & Ard",
   descripcion:
     "Un estilo de vida contemporáneo, lujoso pero equilibrado Inspirada en la belleza antigua y refinada la colección transforma el sueño de elegancia contemporánea en realidad a través de suaves tonalidades y preciosos colores en sintonía con las más actuales tendencias de la vivienda de lujosa. De la opulencia y de la ostentación, el mundo del lujo evoluciona hacia expresiones decorativas más austeras y equilibradas, de rasgos minimalistas.",
   imgSeleccionar,
@@ -24,7 +24,7 @@ const configArdesia = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Ardesia Bronce",
+        titulo: "Dolcker & Ard Bronce",
       },
     },
     {
@@ -32,7 +32,7 @@ const configArdesia = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Ardesia Earth",
+        titulo: "Dolcker & Ard Earth",
       },
     },
     {
@@ -40,7 +40,7 @@ const configArdesia = {
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
-        titulo: "Ardesia Noir",
+        titulo: "Dolcker & Ard Noir",
       },
     },
     {
@@ -48,7 +48,7 @@ const configArdesia = {
       left: "20%",
       ambiente: {
         imagen: ambientes[3],
-        titulo: "Ardesia Opal",
+        titulo: "Dolcker & Ard Opal",
       },
     },
     {
@@ -56,7 +56,7 @@ const configArdesia = {
       left: "20%",
       ambiente: {
         imagen: ambientes[4],
-        titulo: "Ardesia Silver",
+        titulo: "Dolcker & Ard Silver",
       },
     },
   ],

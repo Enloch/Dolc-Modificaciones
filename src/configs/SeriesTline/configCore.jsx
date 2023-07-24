@@ -17,7 +17,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const conficCore = {
-  titulo: "Core",
+  titulo: "Dolcker & Cor",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -26,7 +26,7 @@ const conficCore = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Core ambre",
+        titulo: "Dolcker & Cor ambre",
       },
     },
     {
@@ -34,7 +34,7 @@ const conficCore = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Core Tortora",
+        titulo: "Dolcker & Cor Tortora",
       },
     },
     {
@@ -42,7 +42,7 @@ const conficCore = {
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
-        titulo: "Core Snow",
+        titulo: "Dolcker & Cor Snow",
       },
     },
     {
@@ -50,7 +50,7 @@ const conficCore = {
       left: "20%",
       ambiente: {
         imagen: ambientes[3],
-        titulo: "Core Concrete",
+        titulo: "Dolcker & Cor Concrete",
       },
     },
     {
@@ -58,7 +58,7 @@ const conficCore = {
       left: "20%",
       ambiente: {
         imagen: ambientes[4],
-        titulo: "Core plumb",
+        titulo: "Dolcker & Cor plumb",
       },
     },
     {
@@ -66,7 +66,7 @@ const conficCore = {
       left: "20%",
       ambiente: {
         imagen: ambientes[5],
-        titulo: "Core argent",
+        titulo: "Dolcker & Cor argent",
       },
     },
   ],

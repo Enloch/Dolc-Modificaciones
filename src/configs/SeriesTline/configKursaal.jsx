@@ -17,7 +17,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configKursaal = {
-  titulo: "Kursaal",
+  titulo: "Dolcker & Kur",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -26,7 +26,7 @@ const configKursaal = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Kursaal Ashen",
+        titulo: "Dolcker & Kur Ashen",
       },
     },
     {
@@ -34,7 +34,7 @@ const configKursaal = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Kursaal Neutral",
+        titulo: "Dolcker & Kur Neutral",
       },
     },
     {
@@ -42,7 +42,7 @@ const configKursaal = {
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
-        titulo: "Kursaal Pure",
+        titulo: "Dolcker & Kur Pure",
       },
     },
     {
@@ -50,7 +50,7 @@ const configKursaal = {
       left: "20%",
       ambiente: {
         imagen: ambientes[3],
-        titulo: "Kursaal Raven",
+        titulo: "Dolcker & Kur Raven",
       },
     },
     {
@@ -58,7 +58,7 @@ const configKursaal = {
       left: "20%",
       ambiente: {
         imagen: ambientes[4],
-        titulo: "Kursaal Rust",
+        titulo: "Dolcker & Kur Rust",
       },
     },
     {
@@ -66,7 +66,7 @@ const configKursaal = {
       left: "20%",
       ambiente: {
         imagen: ambientes[5],
-        titulo: "Kursaal Slate",
+        titulo: "Dolcker & Kur Slate",
       },
     },
   ],

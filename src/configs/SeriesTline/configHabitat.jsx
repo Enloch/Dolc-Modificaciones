@@ -17,7 +17,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configHabitat = {
-  titulo: "Habitat",
+  titulo: "Dolcker & Habi",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -26,7 +26,7 @@ const configHabitat = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Habitat Grey",
+        titulo: "Dolcker & Habi Grey",
       },
     },
     {
@@ -34,7 +34,7 @@ const configHabitat = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Habitat Taupe",
+        titulo: "Dolcker & Habi Taupe",
       },
     },
   ],

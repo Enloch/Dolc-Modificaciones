@@ -29,7 +29,7 @@ const StyledIndiceSeries = styled(Seccion)`
   }
 
   ${Enlace}, > .enlace {
-    grid-column-end: span 2;
+    grid-column-end: span 3;
     ${mediaQueryTablet(css`
       grid-column-start: 1;
       grid-column-end: -1;

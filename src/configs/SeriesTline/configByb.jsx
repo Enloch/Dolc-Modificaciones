@@ -16,7 +16,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configByb = {
-  titulo: "Black y Blanco",
+  titulo: "Dolcker & ByB",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -25,7 +25,7 @@ const configByb = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Black y Blanco Black Matt",
+        titulo: "Dolcker & ByB Black Matt",
       },
     },
     {
@@ -33,7 +33,7 @@ const configByb = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Black y Blanco Blanco Natural",
+        titulo: "Dolcker & ByB Blanco Natural",
       },
     },
   ],

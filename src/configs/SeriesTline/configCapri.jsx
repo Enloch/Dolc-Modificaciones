@@ -17,7 +17,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configCapri = {
-  titulo: "Capri",
+  titulo: "Dolcker & Cap",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -26,7 +26,7 @@ const configCapri = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Capri Cream",
+        titulo: "Dolcker & Cap Cream",
       },
     },
     {
@@ -34,7 +34,7 @@ const configCapri = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Capri Dark",
+        titulo: "Dolcker & Cap Dark",
       },
     },
     {
@@ -42,7 +42,7 @@ const configCapri = {
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
-        titulo: "Capri Grey",
+        titulo: "Dolcker & Cap Grey",
       },
     },
   ],

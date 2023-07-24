@@ -31,28 +31,25 @@ import ConfiguradorFormatosTine from "../../../components/VisualizadorVariacione
 
 const DisenosTline = ({ id }) => {
   const ids = [
-    "amarna",
-    "ardesia",
-    "balmoral",
-    "bellagio",
-    "brunswich",
+    "ard",
+    "balm",
+    "bella",
+    "brun",
     "byb",
-    "capri",
-    "core",
-    "cromat",
-    "dome",
-    "eternal",
-    "gravel",
-    "habitat",
-    "hannover",
-    "invictus",
-    "kursaal",
-    "lenci",
-    "nikea",
-    "niro",
-    "stoneland",
-    "storm",
-    "unik",
+    "cap",
+    "cor",
+    "crom",
+    "dom",
+    "eter",
+    "grav",
+    "habi",
+    "han",
+    "inv",
+    "kur",
+    "nik",
+    "stone",
+    "stor",
+    "uni",
   ];
 
   const propsFormato = {
@@ -159,26 +156,7 @@ const DisenosTline = ({ id }) => {
           </ul>
         </div>
       </StyledDisenos>
-      <StyledDisenos id={id[5]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Piezas especiales</Titulo2>
-        <Anotaciones>
-          <Anotacion
-            type='normal'
-            text='Pulsa en el punto para ver todas las posibilidades de piezas especiales'
-          />
-          <Anotacion
-            type='swipe'
-            text='Desliza con el ratón o el dedo para rotar la imagen 360º'
-          />
-        </Anotaciones>
-        {/* <VisualizadorRotador config={config} /> */}
-        <ImageWithCaption
-          src={rotadorImg}
-          alt='Imagen de Diseños 1'
-          caption='Jorge debe definir que piezas exactamente son'
-          columnSpan='6'
-        />
-      </StyledDisenos>
+
       <IndiceSeries id={id[6]} queSerieActiva={setSerieActiva} />
       <Series id={ids} serieActivaMostrar={serieActiva} />
     </>

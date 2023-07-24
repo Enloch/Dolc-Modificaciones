@@ -16,7 +16,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configStorm = {
-  titulo: "Storm",
+  titulo: "Dolcker & Stor",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -25,7 +25,7 @@ const configStorm = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Storm Cloud",
+        titulo: "Dolcker & Stor Cloud",
       },
     },
     {
@@ -33,7 +33,7 @@ const configStorm = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Storm Cream",
+        titulo: "Dolcker & Stor Cream",
       },
     },
     {
@@ -41,7 +41,7 @@ const configStorm = {
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
-        titulo: "Storm Earth",
+        titulo: "Dolcker & Stor Earth",
       },
     },
     {
@@ -49,7 +49,7 @@ const configStorm = {
       left: "20%",
       ambiente: {
         imagen: ambientes[3],
-        titulo: "Storm Grey",
+        titulo: "Dolcker & Stor Grey",
       },
     },
     {
@@ -57,7 +57,7 @@ const configStorm = {
       left: "20%",
       ambiente: {
         imagen: ambientes[4],
-        titulo: "Storm White",
+        titulo: "Dolcker & Stor White",
       },
     },
   ],

@@ -17,20 +17,20 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configHannover = {
-  titulo: "Hannover",
+  titulo: "Dolcker & Han",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
     {
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Hannover Black Natural",
+        titulo: "Dolcker & Han Black Natural",
       },
     },
     {
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Hannover Steel Natural",
+        titulo: "Dolcker & Han Steel Natural",
       },
     },
   ],
