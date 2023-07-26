@@ -83,11 +83,28 @@ const Text = css`
   color: ${(props) => props.color || ""};
 `;
 
+const TextExtraSmall = css`
+  ${Text}
+  font-size: clamp(10px, 0.5vw, 0.8rem);
+  line-height: clamp(15px, 0.9vw, 18px);
+`;
+
+const TextSmaller = css`
+  ${Text}
+  font-size: clamp(12px, 0.625vw, 0.9rem);
+  line-height: clamp(18px, 1.1vw, 20px);
+`;
+
 const TextSmall = css`
   ${Text}
   font-size: clamp(14px, 0.833vw, 1rem);
-  line-height: clamp(21px, 1.302vw, 25px);
+  line-height: clamp(18px, 1.1vw, 20px);
 `;
+// const TextSmall = css`
+//   ${Text}
+//   font-size: clamp(14px, 0.833vw, 1rem);
+//   line-height: clamp(21px, 1.302vw, 25px);
+// `;
 
 const TextMedium = css`
   ${Text}
@@ -134,6 +151,8 @@ export {
   DISTANCES,
   GRID,
   TextExtraLarge,
+  TextExtraSmall,
+  TextSmaller,
   TextSmall,
   TextMedium,
   TextLarge,
