@@ -10,15 +10,15 @@ const AmbienteContainer = styled.div`
 
   display: flex;
   align-items: flex-start;
-  gap: ${DISTANCES.small};
+  /* gap: ${DISTANCES.small}; */
 
   margin-right: clamp(-${DISTANCES.medium}, -2.604vw, -${DISTANCES.small});
   overflow-x: auto;
 
   ${StyledImageWithCaption} {
     img {
-      width: auto;
-      height: 750px;
+      width: 100%;
+      height: clamp(24vh,80vh,100%);
       /* height: clamp(500px, 46.875vw, 900px); */
       object-fit: cover;
     }

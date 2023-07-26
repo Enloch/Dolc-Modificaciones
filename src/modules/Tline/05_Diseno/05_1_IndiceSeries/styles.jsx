@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components";
 import Seccion from "../../../../components/Seccion";
-import { Titulo2 } from "../../../../components/Titulos";
+import { Titulo } from "../../../../components/Titulos";
 import { column_5_span7, column_total } from "../../../../styles/grid";
 import { mediaQueryTablet } from "../../../../styles/sizes";
 import Enlace from "./Enlace";
 
 const StyledIndiceSeries = styled(Seccion)`
-  ${Titulo2} {
+  ${Titulo} {
     ${column_total}
   }
   select {
@@ -27,7 +27,9 @@ const StyledIndiceSeries = styled(Seccion)`
       border-color: #999;
     }
   }
-
+  ${Enlace} {
+    grid-row:2;
+  }
   ${Enlace}, > .enlace {
     grid-column-end: span 3;
     ${mediaQueryTablet(css`

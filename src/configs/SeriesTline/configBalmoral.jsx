@@ -17,7 +17,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configBalmoral = {
-  titulo: "Dolcker & Bal",
+  titulo: "Dolcker & LineDolcker & Line  Bal",
   descripcion:
     "Suaves vetas y tenues contrastes cromáticos caracterizan una colección que expresa buen gusto y un estilo auténtico, lejos de matices vivos y llamativos. Las superficies de tonalidades luminosas, profundas y delicadas valorizan el espacio sin anular su armonía arquitectónica. La colección se adecúa a interpretaciones estilísticas diversas: los colores cálidos de acabado mate delinean ambientes naturales y relajantes, los tonos perla y azul emanan luz y exhiben un carácter único, revelando infinitas posibilidades que explorar.",
   imgSeleccionar,
@@ -27,7 +27,7 @@ const configBalmoral = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Dolcker & Bal Dark Natural",
+        titulo: "Dolcker & LineDolcker & Line  Bal Dark Natural",
       },
     },
     {
@@ -35,18 +35,18 @@ const configBalmoral = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Dolcker & Bal Moon Natural",
+        titulo: "Dolcker & LineDolcker & Line  Bal Moon Natural",
       },
     },
   ],
   muestras: [
     {
       imagen: muestras[0],
-      titulo: "Dark Natural",
+      titulo: "Dolcker & Line Dark Natural",
     },
     {
       imagen: muestras[1],
-      titulo: "Moon Natural",
+      titulo: "Dolcker & Line Moon Natural",
     },
   ],
   acabados: [

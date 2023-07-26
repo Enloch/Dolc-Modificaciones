@@ -17,7 +17,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configCromat = {
-  titulo: "Dolcker & Crom",
+  titulo: "Dolcker & LineDolcker & Line  Crom",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -26,7 +26,7 @@ const configCromat = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Dolcker & Crom Gris",
+        titulo: "Dolcker & LineDolcker & Line  Crom Gris",
       },
     },
     {
@@ -34,7 +34,7 @@ const configCromat = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Dolcker & Crom Marengo",
+        titulo: "Dolcker & LineDolcker & Line  Crom Marengo",
       },
     },
     {
@@ -42,7 +42,7 @@ const configCromat = {
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
-        titulo: "Dolcker & Crom Marfil",
+        titulo: "Dolcker & LineDolcker & Line  Crom Marfil",
       },
     },
     {
@@ -50,7 +50,7 @@ const configCromat = {
       left: "20%",
       ambiente: {
         imagen: ambientes[3],
-        titulo: "Dolcker & Crom Noce",
+        titulo: "Dolcker & LineDolcker & Line  Crom Noce",
       },
     },
     {
@@ -58,30 +58,30 @@ const configCromat = {
       left: "20%",
       ambiente: {
         imagen: ambientes[4],
-        titulo: "Dolcker & Crom Perla",
+        titulo: "Dolcker & LineDolcker & Line  Crom Perla",
       },
     },
   ],
   muestras: [
     {
       imagen: muestras[0],
-      titulo: "Gris",
+      titulo: "Dolcker & Line Gris",
     },
     {
       imagen: muestras[1],
-      titulo: "Marengo",
+      titulo: "Dolcker & Line Marengo",
     },
     {
       imagen: muestras[2],
-      titulo: "Marfil",
+      titulo: "Dolcker & Line Marfil",
     },
     {
       imagen: muestras[3],
-      titulo: "Noce",
+      titulo: "Dolcker & Line Noce",
     },
     {
       imagen: muestras[4],
-      titulo: "Perla",
+      titulo: "Dolcker & Line Perla",
     },
   ],
   acabados: [

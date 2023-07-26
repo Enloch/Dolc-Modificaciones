@@ -4,7 +4,7 @@ import openIndicador from '../../../assets/icons/open-indicator.svg'
 const StyledIndicador = styled.img.attrs({
     src: openIndicador,
 })`
-    width: clamp(1.25rem, 1.302vw, 1.563rem);
+    width: clamp(1.30rem, 1.302vw, 1.563rem);
     position: absolute;
     top: ${props => props.position.Y};
     left: ${props => props.position.X || '0px'};

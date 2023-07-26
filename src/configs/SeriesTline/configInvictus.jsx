@@ -17,7 +17,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configInvictus = {
-  titulo: "Dolcker & Inv",
+  titulo: "Dolcker & Line Inv",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -26,14 +26,14 @@ const configInvictus = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Dolcker & Inv Natural",
+        titulo: "Dolcker & Line Inv Natural",
       },
     },
   ],
   muestras: [
     {
       imagen: muestras[0],
-      titulo: "Natural",
+      titulo: "Dolcker & Line Natural",
     },
   ],
   acabados: [

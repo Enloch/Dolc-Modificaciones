@@ -17,7 +17,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configDome = {
-  titulo: "Dolcker & Dom",
+  titulo: "Dolcker & LineDolcker & Line  Dom",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -26,7 +26,7 @@ const configDome = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Dolcker & Dom Anthracite Rectificado",
+        titulo: "Dolcker & LineDolcker & Line  Dom Anthracite Rectificado",
       },
     },
     {
@@ -34,7 +34,7 @@ const configDome = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Dolcker & Dom Ash",
+        titulo: "Dolcker & LineDolcker & Line  Dom Ash",
       },
     },
     {
@@ -42,7 +42,7 @@ const configDome = {
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
-        titulo: "Dolcker & Dom Bone",
+        titulo: "Dolcker & LineDolcker & Line  Dom Bone",
       },
     },
     {
@@ -50,26 +50,26 @@ const configDome = {
       left: "20%",
       ambiente: {
         imagen: ambientes[3],
-        titulo: "Dolcker & Dom Nut",
+        titulo: "Dolcker & LineDolcker & Line  Dom Nut",
       },
     },
   ],
   muestras: [
     {
       imagen: muestras[0],
-      titulo: "Anthracite Rectificado",
+      titulo: "Dolcker & Line Anthracite Rectificado",
     },
     {
       imagen: muestras[1],
-      titulo: "Ash",
+      titulo: "Dolcker & Line Ash",
     },
     {
       imagen: muestras[2],
-      titulo: "Bone",
+      titulo: "Dolcker & Line Bone",
     },
     {
       imagen: muestras[3],
-      titulo: "Nut",
+      titulo: "Dolcker & Line Nut",
     },
   ],
   acabados: [

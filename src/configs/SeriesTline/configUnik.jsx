@@ -17,7 +17,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configUnik = {
-  titulo: "Dolcker & Uni",
+  titulo: "Dolcker & LineDolcker & Line  Uni",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -26,7 +26,7 @@ const configUnik = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Dolcker & Uni Ash Natural",
+        titulo: "Dolcker & LineDolcker & Line  Uni Ash Natural",
       },
     },
     {
@@ -34,18 +34,18 @@ const configUnik = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Dolcker & Uni Ivory Natural",
+        titulo: "Dolcker & LineDolcker & Line  Uni Ivory Natural",
       },
     },
   ],
   muestras: [
     {
       imagen: muestras[0],
-      titulo: "Ash Natural",
+      titulo: "Dolcker & Line Ash Natural",
     },
     {
       imagen: muestras[1],
-      titulo: "Ivory Natural",
+      titulo: "Dolcker & Line Ivory Natural",
     },
   ],
   acabados: [

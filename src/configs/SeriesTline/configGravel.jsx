@@ -17,7 +17,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configGravel = {
-  titulo: "Dolcker & Grav",
+  titulo: "Dolcker & LineDolcker & Line  Grav",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -26,7 +26,7 @@ const configGravel = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Dolcker & Grav Black",
+        titulo: "Dolcker & LineDolcker & Line  Grav Black",
       },
     },
     {
@@ -34,7 +34,7 @@ const configGravel = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Dolcker & Grav Cream",
+        titulo: "Dolcker & LineDolcker & Line  Grav Cream",
       },
     },
     {
@@ -42,7 +42,7 @@ const configGravel = {
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
-        titulo: "Dolcker & Grav Earth",
+        titulo: "Dolcker & LineDolcker & Line  Grav Earth",
       },
     },
     {
@@ -50,7 +50,7 @@ const configGravel = {
       left: "20%",
       ambiente: {
         imagen: ambientes[3],
-        titulo: "Dolcker & Grav Grey",
+        titulo: "Dolcker & LineDolcker & Line  Grav Grey",
       },
     },
     {
@@ -58,7 +58,7 @@ const configGravel = {
       left: "20%",
       ambiente: {
         imagen: ambientes[4],
-        titulo: "Dolcker & Grav Shadow",
+        titulo: "Dolcker & LineDolcker & Line  Grav Shadow",
       },
     },
     {
@@ -66,34 +66,34 @@ const configGravel = {
       left: "20%",
       ambiente: {
         imagen: ambientes[5],
-        titulo: "Dolcker & Grav White",
+        titulo: "Dolcker & LineDolcker & Line  Grav White",
       },
     },
   ],
   muestras: [
     {
       imagen: muestras[0],
-      titulo: "Black",
+      titulo: "Dolcker & Line Black",
     },
     {
       imagen: muestras[1],
-      titulo: "Cream",
+      titulo: "Dolcker & Line Cream",
     },
     {
       imagen: muestras[2],
-      titulo: "Earth",
+      titulo: "Dolcker & Line Earth",
     },
     {
       imagen: muestras[3],
-      titulo: "Grey",
+      titulo: "Dolcker & Line Grey",
     },
     {
       imagen: muestras[4],
-      titulo: "Shadow",
+      titulo: "Dolcker & Line Shadow",
     },
     {
       imagen: muestras[5],
-      titulo: "White",
+      titulo: "Dolcker & Line White",
     },
   ],
   acabados: [

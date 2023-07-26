@@ -14,7 +14,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configArdesia = {
-  titulo: "Dolcker & Ard",
+  titulo: "Dolcker & Line Ard",
   descripcion:
     "Un estilo de vida contemporáneo, lujoso pero equilibrado Inspirada en la belleza antigua y refinada la colección transforma el sueño de elegancia contemporánea en realidad a través de suaves tonalidades y preciosos colores en sintonía con las más actuales tendencias de la vivienda de lujosa. De la opulencia y de la ostentación, el mundo del lujo evoluciona hacia expresiones decorativas más austeras y equilibradas, de rasgos minimalistas.",
   imgSeleccionar,
@@ -24,7 +24,7 @@ const configArdesia = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Dolcker & Ard Bronce",
+        titulo: "Dolcker & Line Ard Bronce",
       },
     },
     {
@@ -32,7 +32,7 @@ const configArdesia = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Dolcker & Ard Earth",
+        titulo: "Dolcker & Line Ard Earth",
       },
     },
     {
@@ -40,7 +40,7 @@ const configArdesia = {
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
-        titulo: "Dolcker & Ard Noir",
+        titulo: "Dolcker & Line Ard Noir",
       },
     },
     {
@@ -48,7 +48,7 @@ const configArdesia = {
       left: "20%",
       ambiente: {
         imagen: ambientes[3],
-        titulo: "Dolcker & Ard Opal",
+        titulo: "Dolcker & Line Ard Opal",
       },
     },
     {
@@ -56,30 +56,30 @@ const configArdesia = {
       left: "20%",
       ambiente: {
         imagen: ambientes[4],
-        titulo: "Dolcker & Ard Silver",
+        titulo: "Dolcker & Line Ard Silver",
       },
     },
   ],
   muestras: [
     {
       imagen: muestras[0],
-      titulo: "Bronce",
+      titulo: "Dolcker & Line Bronce",
     },
     {
       imagen: muestras[1],
-      titulo: "Earth",
+      titulo: "Dolcker & Line Earth",
     },
     {
       imagen: muestras[2],
-      titulo: "Noir",
+      titulo: "Dolcker & Line Noir",
     },
     {
       imagen: muestras[3],
-      titulo: "Opal",
+      titulo: "Dolcker & Line Opal",
     },
     {
       imagen: muestras[4],
-      titulo: "Silver",
+      titulo: "Dolcker & Line Silver",
     },
   ],
   acabados: [

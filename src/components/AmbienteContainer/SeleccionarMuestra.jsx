@@ -3,9 +3,9 @@ import styled from "styled-components";
 const SeleccionarMuestra = styled.div`
   position: relative;
   .seleccionar-ambiente {
-    width: auto;
-    height: 750px;
-    /* height: clamp(500px, 46.875vw, 900px); */
+    width: 67%;
+    height: clamp(24vh, 80vh, 100%);
+    object-fit: cover;
   }
 `;
 

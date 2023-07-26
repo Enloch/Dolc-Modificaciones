@@ -41,6 +41,13 @@ const StyledDolcker = styled(Seccion)`
         > p {
             grid-column: 1 / span 6;
         }
+         ${StyledImageWithCaption}:nth-of-type(2) {
+            grid-column: 1 / span 6;
+        }
+
+        > p {
+            grid-column: 1 / span 6;
+        }
     }
 
     ${StyledAnotacion} {

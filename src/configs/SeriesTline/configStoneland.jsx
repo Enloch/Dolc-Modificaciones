@@ -17,7 +17,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configStoneland = {
-  titulo: "Dolcker & Stone",
+  titulo: "Dolcker & Line Stone",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -26,7 +26,7 @@ const configStoneland = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Dolcker & Stone Grey Rectificado",
+        titulo: "Dolcker & Line Stone Grey Rectificado",
       },
     },
     {
@@ -34,7 +34,7 @@ const configStoneland = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Dolcker & Stone Ivory",
+        titulo: "Dolcker & Line Stone Ivory",
       },
     },
     {
@@ -42,22 +42,22 @@ const configStoneland = {
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
-        titulo: "Dolcker & Stone Pearl",
+        titulo: "Dolcker & Line Stone Pearl",
       },
     },
   ],
   muestras: [
     {
       imagen: muestras[0],
-      titulo: "Grey Rectificado",
+      titulo: "Dolcker & Line Grey Rectificado",
     },
     {
       imagen: muestras[1],
-      titulo: "Ivory",
+      titulo: "Dolcker & Line Ivory",
     },
     {
       imagen: muestras[2],
-      titulo: "Pearl",
+      titulo: "Dolcker & Line Pearl",
     },
   ],
   acabados: [

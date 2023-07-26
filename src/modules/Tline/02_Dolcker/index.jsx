@@ -3,6 +3,7 @@ import { Titulo } from "../../../components/Titulos";
 import StyledDolcker from "./styles";
 import { COLORS } from "../../../global/GlobalStyles";
 import img2 from "../../../assets/images/DolckerTline/Dolcker/catalogo3-1-5.webp";
+import img4 from "../../../assets/images/DolckerTline/Dolcker/DOLCKER_T-LINE SOLUCIONA GRAPA.webp";
 import img3 from "../../../assets/images/DolckerTline/Dolcker/catalogo3-1-7.webp";
 import VisualizadorNota from "../../../components/Tline/VisualizadorNota";
 import Text from "../../../components/Text";
@@ -25,7 +26,12 @@ const DolckerTline = ({ id }) => {
         <ImageWithCaption
           src={img2}
           alt='Imagen Dolcker 2'
-          caption='Imagen sistema T-LINE'
+          caption='Sistema T-LINE con perfilería.'
+        />
+        <ImageWithCaption
+          src={img4}
+          alt='Imagen Dolcker 2'
+          caption='Sistema T-LINE con grapa vista. Grapa y cara del perfíl interior lacado en el color de la cerámica.'
         />
         <Text>
           El sistema DOLCKER & line para fachadas de cerámica tipo Dolcker line
@@ -67,7 +73,7 @@ const DolckerTline = ({ id }) => {
           de fachada ya que es posible romper las juntas verticales. Estas
           juntas verticales se ven minimizadas a tan solo 1 mm potenciando de
           esta manera las juntas horizontales. La salida de la cerámica es entre
-          43-47 mm dependiendo del espesor de la cerámica escogida
+          43-47 mm dependiendo del espesor de la cerámica escogida.
         </Text>
       </div>
       <VisualizadorNota {...propsVisualizador} />

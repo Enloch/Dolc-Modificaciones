@@ -17,7 +17,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configNikea = {
-  titulo: "Dolcker & Nik",
+  titulo: "Dolcker & Line Nik",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -26,14 +26,14 @@ const configNikea = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Dolcker & ik Nikea",
+        titulo: "Dolcker & Line ik Nikea",
       },
     },
   ],
   muestras: [
     {
       imagen: muestras[0],
-      titulo: "Nik",
+      titulo: "Dolcker & Line Nik",
     },
   ],
   acabados: [

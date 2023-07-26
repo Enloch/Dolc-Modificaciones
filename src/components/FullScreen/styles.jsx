@@ -52,6 +52,7 @@ const StyledFullScreen = styled.div`
     z-index: 2;
     color: white;
     mix-blend-mode: difference;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
   }
 
   .controles {

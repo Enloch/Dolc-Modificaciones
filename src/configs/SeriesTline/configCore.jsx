@@ -17,7 +17,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const conficCore = {
-  titulo: "Dolcker & Cor",
+  titulo: "Dolcker & LineDolcker & Line  Cor",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -26,7 +26,7 @@ const conficCore = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Dolcker & Cor ambre",
+        titulo: "Dolcker & LineDolcker & Line  Cor ambre",
       },
     },
     {
@@ -34,7 +34,7 @@ const conficCore = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Dolcker & Cor Tortora",
+        titulo: "Dolcker & LineDolcker & Line  Cor Tortora",
       },
     },
     {
@@ -42,7 +42,7 @@ const conficCore = {
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
-        titulo: "Dolcker & Cor Snow",
+        titulo: "Dolcker & LineDolcker & Line  Cor Snow",
       },
     },
     {
@@ -50,7 +50,7 @@ const conficCore = {
       left: "20%",
       ambiente: {
         imagen: ambientes[3],
-        titulo: "Dolcker & Cor Concrete",
+        titulo: "Dolcker & LineDolcker & Line  Cor Concrete",
       },
     },
     {
@@ -58,7 +58,7 @@ const conficCore = {
       left: "20%",
       ambiente: {
         imagen: ambientes[4],
-        titulo: "Dolcker & Cor plumb",
+        titulo: "Dolcker & LineDolcker & Line  Cor plumb",
       },
     },
     {
@@ -66,34 +66,34 @@ const conficCore = {
       left: "20%",
       ambiente: {
         imagen: ambientes[5],
-        titulo: "Dolcker & Cor argent",
+        titulo: "Dolcker & LineDolcker & Line  Cor argent",
       },
     },
   ],
   muestras: [
     {
       imagen: muestras[0],
-      titulo: "Ambre",
+      titulo: "Dolcker & Line Ambre",
     },
     {
       imagen: muestras[1],
-      titulo: "Argent",
+      titulo: "Dolcker & Line Argent",
     },
     {
       imagen: muestras[2],
-      titulo: "Concrete",
+      titulo: "Dolcker & Line Concrete",
     },
     {
       imagen: muestras[3],
-      titulo: "Plumb",
+      titulo: "Dolcker & Line Plumb",
     },
     {
       imagen: muestras[4],
-      titulo: "Snow",
+      titulo: "Dolcker & Line Snow",
     },
     {
       imagen: muestras[5],
-      titulo: "Tortora",
+      titulo: "Dolcker & Line Tortora",
     },
   ],
   acabados: [

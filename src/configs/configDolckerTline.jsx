@@ -52,8 +52,8 @@ const config = [
         },
     },
     {
-        top: '46%',
-        left: '17%',
+        top: '61%',
+        left: '61%',
         content: {
             imgSrc: piezas[1],
             title: 'Cenefa',

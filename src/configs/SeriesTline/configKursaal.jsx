@@ -17,7 +17,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configKursaal = {
-  titulo: "Dolcker & Kur",
+  titulo: "Dolcker & Line Kur",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -26,7 +26,7 @@ const configKursaal = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Dolcker & Kur Ashen",
+        titulo: "Dolcker & Line Kur Ashen",
       },
     },
     {
@@ -34,7 +34,7 @@ const configKursaal = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Dolcker & Kur Neutral",
+        titulo: "Dolcker & Line Kur Neutral",
       },
     },
     {
@@ -42,7 +42,7 @@ const configKursaal = {
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
-        titulo: "Dolcker & Kur Pure",
+        titulo: "Dolcker & Line Kur Pure",
       },
     },
     {
@@ -50,7 +50,7 @@ const configKursaal = {
       left: "20%",
       ambiente: {
         imagen: ambientes[3],
-        titulo: "Dolcker & Kur Raven",
+        titulo: "Dolcker & Line Kur Raven",
       },
     },
     {
@@ -58,7 +58,7 @@ const configKursaal = {
       left: "20%",
       ambiente: {
         imagen: ambientes[4],
-        titulo: "Dolcker & Kur Rust",
+        titulo: "Dolcker & Line Kur Rust",
       },
     },
     {
@@ -66,34 +66,34 @@ const configKursaal = {
       left: "20%",
       ambiente: {
         imagen: ambientes[5],
-        titulo: "Dolcker & Kur Slate",
+        titulo: "Dolcker & Line Kur Slate",
       },
     },
   ],
   muestras: [
     {
       imagen: muestras[0],
-      titulo: "Ashen",
+      titulo: "Dolcker & Line Ashen",
     },
     {
       imagen: muestras[1],
-      titulo: "Neutral",
+      titulo: "Dolcker & Line Neutral",
     },
     {
       imagen: muestras[2],
-      titulo: "Pure",
+      titulo: "Dolcker & Line Pure",
     },
     {
       imagen: muestras[3],
-      titulo: "Raven",
+      titulo: "Dolcker & Line Raven",
     },
     {
       imagen: muestras[4],
-      titulo: "Rust",
+      titulo: "Dolcker & Line Rust",
     },
     {
       imagen: muestras[5],
-      titulo: "Slate",
+      titulo: "Dolcker & Line Slate",
     },
   ],
   acabados: [

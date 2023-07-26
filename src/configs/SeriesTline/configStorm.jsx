@@ -16,7 +16,7 @@ const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const configStorm = {
-  titulo: "Dolcker & Stor",
+  titulo: "Dolcker & Line Stor",
   descripcion: "Texto Jorge.",
   imgSeleccionar,
   indicadores: [
@@ -25,7 +25,7 @@ const configStorm = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Dolcker & Stor Cloud",
+        titulo: "Dolcker & Line Stor Cloud",
       },
     },
     {
@@ -33,7 +33,7 @@ const configStorm = {
       left: "20%",
       ambiente: {
         imagen: ambientes[1],
-        titulo: "Dolcker & Stor Cream",
+        titulo: "Dolcker & Line Stor Cream",
       },
     },
     {
@@ -41,7 +41,7 @@ const configStorm = {
       left: "20%",
       ambiente: {
         imagen: ambientes[2],
-        titulo: "Dolcker & Stor Earth",
+        titulo: "Dolcker & Line Stor Earth",
       },
     },
     {
@@ -49,7 +49,7 @@ const configStorm = {
       left: "20%",
       ambiente: {
         imagen: ambientes[3],
-        titulo: "Dolcker & Stor Grey",
+        titulo: "Dolcker & Line Stor Grey",
       },
     },
     {
@@ -57,30 +57,30 @@ const configStorm = {
       left: "20%",
       ambiente: {
         imagen: ambientes[4],
-        titulo: "Dolcker & Stor White",
+        titulo: "Dolcker & Line Stor White",
       },
     },
   ],
   muestras: [
     {
       imagen: muestras[0],
-      titulo: "Cloud",
+      titulo: "Dolcker & Line Cloud",
     },
     {
       imagen: muestras[1],
-      titulo: "Cream",
+      titulo: "Dolcker & Line Cream",
     },
     {
       imagen: muestras[2],
-      titulo: "Earth",
+      titulo: "Dolcker & Line Earth",
     },
     {
       imagen: muestras[3],
-      titulo: "Grey",
+      titulo: "Dolcker & Line Grey",
     },
     {
       imagen: muestras[4],
-      titulo: "White",
+      titulo: "Dolcker & Line White",
     },
   ],
   acabados: [
