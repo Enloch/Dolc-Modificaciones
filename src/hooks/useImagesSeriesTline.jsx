@@ -30,13 +30,13 @@ const enlacesObj = [
   },
   {
     titulo: "DOLCKER & BYB",
-    src: imagenesAmbiente[3],
+    src: imagenesAmbiente[4],
     id: "#byb",
     categoria: "Monocolor",
   },
   {
     titulo: "DOLCKER & BRUN",
-    src: imagenesAmbiente[4],
+    src: imagenesAmbiente[3],
     id: "#brun",
     categoria: "Piedra",
   },

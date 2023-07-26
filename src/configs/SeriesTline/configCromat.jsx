@@ -22,7 +22,7 @@ const configCromat = {
   imgSeleccionar,
   indicadores: [
     {
-      top: "15%",
+      top: "8%",
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
@@ -30,7 +30,7 @@ const configCromat = {
       },
     },
     {
-      op: "23%",
+      top: "23%",
       left: "20%",
       ambiente: {
         imagen: ambientes[1],

@@ -20,17 +20,18 @@ import {
   SVGMODULAR1,
   SVGMODULAR4,
   SVGMODULAR5,
+  SVGMODULAR8,
   SVGMODULAR9,
 } from "./perfilesSvg";
 import Menu from "./menu";
-const ConfiguradorFormatosTine = () => {
+const Configurador1Tline = () => {
   const [imagenFormato, setImagenFormato] = useState(null);
   const [imagenPerfil, setImagenPerfil] = useState(null);
   const [imagenSvg, setImagenSvg] = useState(null);
   const [perfilSize, setPerfilSize] = useState(null);
   const [presionado, setPresionado] = useState(false);
   const [color, setColor] = useState("#c83636"); // Estado para almacenar el color, inicializado en negro (#000000)
-  console.log("Imagen SVG?", imagenSvg);
+  // console.log("Imagen SVG?", imagenSvg);
   const handleColorChange = (newColor) => {
     setColor(newColor);
   };
@@ -61,6 +62,7 @@ const ConfiguradorFormatosTine = () => {
           {imagenSvg === "Modular4" && <SVGMODULAR4 fill={color} />}
           {imagenSvg === "Modular5" && <SVGMODULAR5 fill={color} />}
           {imagenSvg === "Modular6" && <SVG30 fill={color} />}
+          {imagenSvg === "Modular8" && <SVGMODULAR8 fill={color} />}
           {imagenSvg === "Modular9" && <SVGMODULAR9 fill={color} />}
         </ImgSvg>
       </div>
@@ -88,4 +90,4 @@ const ConfiguradorFormatosTine = () => {
     </AppIntercambiador>
   );
 };
-export default ConfiguradorFormatosTine;
+export default Configurador1Tline;

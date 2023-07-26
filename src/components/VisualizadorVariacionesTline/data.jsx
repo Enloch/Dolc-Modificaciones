@@ -280,6 +280,19 @@ export const FormatoModular6 = [
   { id: "White", imagen: WhiteModular6, formato: "Modular6" },
 ];
 
+import CreamModular8 from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/MODULAR 8/CREAM_MODULAR 8.webp";
+import EarthModular8 from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/MODULAR 8/EARTH_MODULAR 8.webp";
+import GreyModular8 from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/MODULAR 8/GREY_MODULAR 8.webp";
+import ShadowModular8 from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/MODULAR 8/SHADOW_MODULAR 8.webp";
+import WhiteModular8 from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/MODULAR 8/WHITE_MODULAR 8.webp";
+
+export const FormatoModular8 = [
+  { id: "Cream", imagen: CreamModular8, formato: "Modular8" },
+  { id: "Earth", imagen: EarthModular8, formato: "Modular8" },
+  { id: "Grey", imagen: GreyModular8, formato: "Modular8" },
+  { id: "Shadow", imagen: ShadowModular8, formato: "Modular8" },
+  { id: "White", imagen: WhiteModular8, formato: "Modular8" },
+];
 import CreamModular9 from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/MODULAR 9/CREAM_MODULAR 9.webp";
 import EarthModular9 from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/MODULAR 9/EARTH_MODULAR 9.webp";
 import GreyModular9 from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/MODULAR 9/GREY_MODULAR 9.webp";
@@ -309,6 +322,7 @@ import BronceModulo3 from "../../assets/images/DolckerTline/Diseno/Formato/PERFI
 import BronceModulo4 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/BRONCE/MODULAR 4.webp";
 import BronceModulo5 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/BRONCE/MODULAR 5.webp";
 import BronceModulo6 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/BRONCE/30.webp";
+import BronceModulo8 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/BRONCE/MODULAR 8.webp";
 import BronceModulo9 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/BRONCE/MODULAR 9.webp";
 
 export const Perfil_1_Bronce = [
@@ -325,6 +339,7 @@ export const Perfil_1_Bronce = [
   { id: "Bronce", imagen: BronceModulo4, formato: "Modulo4" },
   { id: "Bronce", imagen: BronceModulo5, formato: "Modulo5" },
   { id: "Bronce", imagen: BronceModulo6, formato: "Modulo6" },
+  { id: "Bronce", imagen: BronceModulo8, formato: "Modulo8" },
   { id: "Bronce", imagen: BronceModulo9, formato: "Modulo9" },
 ];
 
@@ -341,6 +356,7 @@ import BurdeosModulo3 from "../../assets/images/DolckerTline/Diseno/Formato/PERF
 import BurdeosModulo4 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/BURDEOS/MODULAR 4.webp";
 import BurdeosModulo5 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/BURDEOS/MODULAR 5.webp";
 import BurdeosModulo6 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/BURDEOS/30.webp";
+import BurdeosModulo8 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/BURDEOS/MODULAR 8.webp";
 import BurdeosModulo9 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/BURDEOS/MODULAR 9.webp";
 
 export const Perfil_1_Burdeos = [
@@ -357,6 +373,7 @@ export const Perfil_1_Burdeos = [
   { id: "Burdeos", imagen: BurdeosModulo4, formato: "Modulo4" },
   { id: "Burdeos", imagen: BurdeosModulo5, formato: "Modulo5" },
   { id: "Burdeos", imagen: BurdeosModulo6, formato: "Modulo6" },
+  { id: "Burdeos", imagen: BurdeosModulo8, formato: "Modulo8" },
   { id: "Burdeos", imagen: BurdeosModulo9, formato: "Modulo9" },
 ];
 
@@ -373,6 +390,7 @@ import InoxModulo3 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILE
 import InoxModulo4 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/INOX/MODULAR 4.webp";
 import InoxModulo5 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/INOX/MODULAR 5.webp";
 import InoxModulo6 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/INOX/30.webp";
+import InoxModulo8 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/INOX/MODULAR 8.webp";
 import InoxModulo9 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/INOX/MODULAR 9.webp";
 
 export const Perfil_1_Inox = [
@@ -389,6 +407,7 @@ export const Perfil_1_Inox = [
   { id: "Inox", imagen: InoxModulo4, formato: "Modulo4" },
   { id: "Inox", imagen: InoxModulo5, formato: "Modulo5" },
   { id: "Inox", imagen: InoxModulo6, formato: "Modulo6" },
+  { id: "Inox", imagen: InoxModulo8, formato: "Modulo8" },
   { id: "Inox", imagen: InoxModulo9, formato: "Modulo9" },
 ];
 
@@ -405,6 +424,7 @@ import NegroModulo3 from "../../assets/images/DolckerTline/Diseno/Formato/PERFIL
 import NegroModulo4 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/NEGRO/MODULAR 4.webp";
 import NegroModulo5 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/NEGRO/MODULAR 5.webp";
 import NegroModulo6 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/NEGRO/30.webp";
+import NegroModulo8 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/NEGRO/MODULAR 8.webp";
 import NegroModulo9 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/NEGRO/MODULAR 9.webp";
 
 export const Perfil_1_Negro = [
@@ -421,6 +441,7 @@ export const Perfil_1_Negro = [
   { id: "Negro", imagen: NegroModulo4, formato: "Modulo4" },
   { id: "Negro", imagen: NegroModulo5, formato: "Modulo5" },
   { id: "Negro", imagen: NegroModulo6, formato: "Modulo6" },
+  { id: "Negro", imagen: NegroModulo8, formato: "Modulo8" },
   { id: "Negro", imagen: NegroModulo9, formato: "Modulo9" },
 ];
 
@@ -437,6 +458,7 @@ import OroModulo3 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILER
 import OroModulo4 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/ORO/MODULAR 4.webp";
 import OroModulo5 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/ORO/MODULAR 5.webp";
 import OroModulo6 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/ORO/30.webp";
+import OroModulo8 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/ORO/MODULAR 8.webp";
 import OroModulo9 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/ORO/MODULAR 9.webp";
 
 export const Perfil_1_Oro = [
@@ -453,6 +475,7 @@ export const Perfil_1_Oro = [
   { id: "Oro", imagen: OroModulo4, formato: "Modulo4" },
   { id: "Oro", imagen: OroModulo5, formato: "Modulo5" },
   { id: "Oro", imagen: OroModulo6, formato: "Modulo6" },
+  { id: "Oro", imagen: OroModulo8, formato: "Modulo8" },
   { id: "Oro", imagen: OroModulo9, formato: "Modulo9" },
 ];
 
@@ -469,6 +492,7 @@ import PlataModulo3 from "../../assets/images/DolckerTline/Diseno/Formato/PERFIL
 import PlataModulo4 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/PLATA/MODULAR 4.webp";
 import PlataModulo5 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/PLATA/MODULAR 5.webp";
 import PlataModulo6 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/PLATA/30.webp";
+import PlataModulo8 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/PLATA/MODULAR 8.webp";
 import PlataModulo9 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/PLATA/MODULAR 9.webp";
 
 export const Perfil_1_Plata = [
@@ -485,6 +509,7 @@ export const Perfil_1_Plata = [
   { id: "Plata", imagen: PlataModulo4, formato: "Modulo4" },
   { id: "Plata", imagen: PlataModulo5, formato: "Modulo5" },
   { id: "Plata", imagen: PlataModulo6, formato: "Modulo6" },
+  { id: "Plata", imagen: PlataModulo8, formato: "Modulo8" },
   { id: "Plata", imagen: PlataModulo9, formato: "Modulo9" },
 ];
 
@@ -501,6 +526,7 @@ import EmberoModulo3 from "../../assets/images/DolckerTline/Diseno/Formato/PERFI
 import EmberoModulo4 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/EMBERO/MODULAR 4.webp";
 import EmberoModulo5 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/EMBERO/MODULAR 5.webp";
 import EmberoModulo6 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/EMBERO/30.webp";
+import EmberoModulo8 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/EMBERO/MODULAR 8.webp";
 import EmberoModulo9 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/EMBERO/MODULAR 9.webp";
 
 export const Perfil_1_Embero = [
@@ -517,6 +543,7 @@ export const Perfil_1_Embero = [
   { id: "Embero", imagen: EmberoModulo4, formato: "Modulo4" },
   { id: "Embero", imagen: EmberoModulo5, formato: "Modulo5" },
   { id: "Embero", imagen: EmberoModulo6, formato: "Modulo6" },
+  { id: "Embero", imagen: EmberoModulo8, formato: "Modulo8" },
   { id: "Embero", imagen: EmberoModulo9, formato: "Modulo9" },
 ];
 
@@ -533,6 +560,7 @@ import EmberoDoradoModulo3 from "../../assets/images/DolckerTline/Diseno/Formato
 import EmberoDoradoModulo4 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/EMBERO DORADO/MODULAR 4.webp";
 import EmberoDoradoModulo5 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/EMBERO DORADO/MODULAR 5.webp";
 import EmberoDoradoModulo6 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/EMBERO DORADO/30.webp";
+import EmberoDoradoModulo8 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/EMBERO DORADO/MODULAR 8.webp";
 import EmberoDoradoModulo9 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/EMBERO DORADO/MODULAR 9.webp";
 
 export const Perfil_1_Embero_Dorado = [
@@ -549,6 +577,7 @@ export const Perfil_1_Embero_Dorado = [
   { id: "EmberoDorado", imagen: EmberoDoradoModulo4, formato: "Modulo4" },
   { id: "EmberoDorado", imagen: EmberoDoradoModulo5, formato: "Modulo5" },
   { id: "EmberoDorado", imagen: EmberoDoradoModulo6, formato: "Modulo6" },
+  { id: "EmberoDorado", imagen: EmberoDoradoModulo8, formato: "Modulo8" },
   { id: "EmberoDorado", imagen: EmberoDoradoModulo9, formato: "Modulo9" },
 ];
 
@@ -565,6 +594,7 @@ import NogalModulo3 from "../../assets/images/DolckerTline/Diseno/Formato/PERFIL
 import NogalModulo4 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/NOGAL/MODULAR 4.webp";
 import NogalModulo5 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/NOGAL/MODULAR 5.webp";
 import NogalModulo6 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/NOGAL/30.webp";
+import NogalModulo8 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/NOGAL/MODULAR 8.webp";
 import NogalModulo9 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/NOGAL/MODULAR 9.webp";
 
 export const Perfil_1_Nogal = [
@@ -581,6 +611,7 @@ export const Perfil_1_Nogal = [
   { id: "Nogal", imagen: NogalModulo4, formato: "Modulo4" },
   { id: "Nogal", imagen: NogalModulo5, formato: "Modulo5" },
   { id: "Nogal", imagen: NogalModulo6, formato: "Modulo6" },
+  { id: "Nogal", imagen: NogalModulo8, formato: "Modulo8" },
   { id: "Nogal", imagen: NogalModulo9, formato: "Modulo9" },
 ];
 
@@ -597,6 +628,7 @@ import OlmoModulo3 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILE
 import OlmoModulo4 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/OLMO/MODULAR 4.webp";
 import OlmoModulo5 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/OLMO/MODULAR 5.webp";
 import OlmoModulo6 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/OLMO/30.webp";
+import OlmoModulo8 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/OLMO/MODULAR 8.webp";
 import OlmoModulo9 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/OLMO/MODULAR 9.webp";
 
 export const Perfil_1_Olmo = [
@@ -613,6 +645,7 @@ export const Perfil_1_Olmo = [
   { id: "Olmo", imagen: OlmoModulo4, formato: "Modulo4" },
   { id: "Olmo", imagen: OlmoModulo5, formato: "Modulo5" },
   { id: "Olmo", imagen: OlmoModulo6, formato: "Modulo6" },
+  { id: "Olmo", imagen: OlmoModulo8, formato: "Modulo8" },
   { id: "Olmo", imagen: OlmoModulo9, formato: "Modulo9" },
 ];
 
@@ -632,6 +665,7 @@ import RALModulo4 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILER
 import RALModulo5 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/60.svg";
 // import RALModulo5 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/MODULAR 5.svg";
 import RALModulo6 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/30.svg";
+import RALModulo8 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/80.svg";
 import RALModulo9 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/60.svg";
 // import RALModulo9 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/MODULAR 9.svg";
 
@@ -649,5 +683,6 @@ export const Perfil_1_RAL = [
   { id: "RAL", imagen: RALModulo4, formato: "Modulo4" },
   { id: "RAL", imagen: RALModulo5, formato: "Modulo5" },
   { id: "RAL", imagen: RALModulo6, formato: "Modulo6" },
+  { id: "RAL", imagen: RALModulo8, formato: "Modulo8" },
   { id: "RAL", imagen: RALModulo9, formato: "Modulo9" },
 ];
