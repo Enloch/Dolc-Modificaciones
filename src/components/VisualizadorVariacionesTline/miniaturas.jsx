@@ -12,29 +12,17 @@ export const MiniaturasColor = [
   { id: "White", imagen: Mini05, name: "White" },
 ];
 
-import Formato20x120 from "../../assets/icons/SelectoresFormato/120x20.svg";
-import Formato30x60 from "../../assets/icons/SelectoresFormato/60x30.svg";
-import Formato30x90 from "../../assets/icons/SelectoresFormato/90x30.svg";
-import Formato30x120 from "../../assets/icons/SelectoresFormato/120x30.svg";
-import Formato40x80 from "../../assets/icons/SelectoresFormato/80x40.svg";
-import Formato40x120 from "../../assets/icons/SelectoresFormato/120x40.svg";
-import Formato45x90 from "../../assets/icons/SelectoresFormato/90x45.svg";
-import Formato50x100 from "../../assets/icons/SelectoresFormato/100x50.svg";
-import Formato50x120 from "../../assets/icons/SelectoresFormato/120x50.svg";
 import Formato60x60 from "../../assets/icons/SelectoresFormato/60x60.svg";
-import Formato60x90 from "../../assets/icons/SelectoresFormato/90x60.svg";
+import Largo from "../../assets/icons/SelectoresFormato/h.svg";
 import Formato60x120 from "../../assets/icons/SelectoresFormato/120x60.svg";
 import Formato80x80 from "../../assets/icons/SelectoresFormato/80x80.svg";
-// { id: "20x120", imagen: Formato20x120, name: "20x120" },
-// { id: "30x60", imagen: Formato30x60, name: "30x60" },
-// { id: "30x90", imagen: Formato30x90, name: "30x90" },
-// { id: "30x120", imagen: Formato30x120, name: "30x120" },
-// { id: "40x80", imagen: Formato40x80, name: "40x80" },
-// { id: "40x120", imagen: Formato40x120, name: "40x120" },
-// { id: "45x90", imagen: Formato45x90, name: "45x90" },
-// { id: "50x100", imagen: Formato50x100, name: "50x100" },
-// { id: "50x120", imagen: Formato50x120, name: "50x120" },
-// { id: "60x90", imagen: Formato60x90, name: "60x90" },
+
+export const LargosLibres = {
+  id: "Largos libre",
+  imagen: Largo,
+  name: "Largos libre",
+};
+
 export const SelectoresFormato = [
   { id: "60x60", imagen: Formato60x60, name: "60x60" },
   { id: "60x120", imagen: Formato60x120, name: "60x120" },

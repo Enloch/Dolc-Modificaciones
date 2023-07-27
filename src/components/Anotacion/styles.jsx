@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { DISTANCES, GRID, TextSmall } from "../../global/GlobalStyles";
-import { column_3_span2, column_1_span2 } from "../../styles/grid";
+import { column_3_span2, column_1_span2 } from "../../styles/gridFinal";
 import { mediaQueryTablet } from "../../styles/sizes";
 
 const StyledAnotacion = styled.div`

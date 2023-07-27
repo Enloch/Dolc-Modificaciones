@@ -2,7 +2,7 @@ import Text from "../../../components/Text";
 import { Titulo, Titulo2 } from "../../../components/Titulos";
 import StyledSistemas, { Enlaces } from "./styles";
 import { COLORS } from "../../../global/GlobalStyles";
-import sistemas from "../../../assets/images/Dolckertline/7475.webp";
+import sistemas from "../../../assets/images/Dolckertline/Sistemas/sistemas.webp";
 import dolckerClip1 from "../../../assets/images/Dolckertline/detalles.jpg";
 import dolckerClip2 from "../../../assets/images/Dolckertline/detalles.jpg";
 
@@ -24,7 +24,7 @@ const SistemasTline = ({ id }) => {
         <ImageWithCaption
           src={sistemas}
           alt='Sistemas introducción'
-          caption='Render creado por 7475'
+          caption=''
           columnSpan='5'
         />
         <Enlaces>

@@ -25,48 +25,11 @@ import {
 } from "./styles";
 import {
   Fondos,
-  Horizontal,
   Vertical,
-  Perfil_1_Bronce,
-  Perfil_1_Burdeos,
-  Perfil_1_Inox,
-  Perfil_1_Negro,
-  Perfil_1_Oro,
-  Perfil_1_Plata,
-  Perfil_1_Embero,
-  Perfil_1_Embero_Dorado,
-  Perfil_1_Nogal,
-  Perfil_1_Olmo,
-  Perfil_2_Bronce,
-  Perfil_2_Burdeos,
-  Perfil_2_Inox,
-  Perfil_2_Negro,
-  Perfil_2_Oro,
-  Perfil_2_Plata,
-  Perfil_2_Embero,
-  Perfil_2_Embero_Dorado,
-  Perfil_2_Nogal,
-  Perfil_2_Olmo,
-  Perfil_3_Bronce,
-  Perfil_3_Burdeos,
-  Perfil_3_Inox,
-  Perfil_3_Negro,
-  Perfil_3_Oro,
-  Perfil_3_Plata,
-  Perfil_3_Embero,
-  Perfil_3_Embero_Dorado,
-  Perfil_3_Nogal,
-  Perfil_3_Olmo,
-  Perfil_4_Bronce,
-  Perfil_4_Burdeos,
-  Perfil_4_Inox,
-  Perfil_4_Negro,
-  Perfil_4_Oro,
-  Perfil_4_Plata,
-  Perfil_4_Embero,
-  Perfil_4_Embero_Dorado,
-  Perfil_4_Nogal,
-  Perfil_4_Olmo,
+  Perf1,
+  Perf2,
+  Perf3,
+  Perf4,
   Perfil_1_RAL,
 } from "./data";
 
@@ -108,20 +71,21 @@ const Menu = ({
   const handleFondoFormatos = (miniatura) => {
     let cambio = null;
     if (miniatura === "Cream") {
-      cambio = Fondos[0].imagen;
+      cambio = Vertical[0].imagen;
     }
     if (miniatura === "Earth") {
-      cambio = Fondos[1].imagen;
+      cambio = Vertical[1].imagen;
     }
     if (miniatura === "Grey") {
-      cambio = Fondos[2].imagen;
+      cambio = Vertical[2].imagen;
     }
     if (miniatura === "Shadow") {
-      cambio = Fondos[3].imagen;
+      cambio = Vertical[3].imagen;
     }
     if (miniatura === "White") {
-      cambio = Fondos[4].imagen;
+      cambio = Vertical[4].imagen;
     }
+    setPerfilSize("Vertical");
     // console.log("Que fondo?", cambio);
     setImagenFormato(cambio);
   };
@@ -134,205 +98,110 @@ const Menu = ({
         Shadow: Vertical[3].imagen,
         White: Vertical[4].imagen,
       },
-      Horizontal: {
-        Cream: Horizontal[0].imagen,
-        Earth: Horizontal[1].imagen,
-        Grey: Horizontal[2].imagen,
-        Shadow: Horizontal[3].imagen,
-        White: Horizontal[4].imagen,
-      },
     };
     const cambio = formatos[miniatura.id][colorFormato];
-    setPerfilSize(miniatura.id);
+    setPerfilSize("Vertical");
     setImagenFormato(cambio);
   };
   const handlePerfil = (miniatura) => {
     let cambio = null;
     if (seleccionPerfil === "Perfil1") {
-      if (perfilSize === "Horizontal") {
+      if (perfilSize === "Vertical") {
         if (miniatura.id === "Bronce") {
-          cambio = Perfil_1_Bronce[1].imagen;
+          cambio = Perf1[0].imagen;
         } else if (miniatura.id === "Burdeos") {
-          cambio = Perfil_1_Burdeos[1].imagen;
+          cambio = Perf1[1].imagen;
         } else if (miniatura.id === "Inox") {
-          cambio = Perfil_1_Inox[1].imagen;
+          cambio = Perf1[4].imagen;
         } else if (miniatura.id === "Negro") {
-          cambio = Perfil_1_Negro[1].imagen;
+          cambio = Perf1[5].imagen;
         } else if (miniatura.id === "Oro") {
-          cambio = Perfil_1_Oro[1].imagen;
+          cambio = Perf1[8].imagen;
         } else if (miniatura.id === "Plata") {
-          cambio = Perfil_1_Plata[1].imagen;
+          cambio = Perf1[9].imagen;
         } else if (miniatura.id === "Embero") {
-          cambio = Perfil_1_Embero[1].imagen;
+          cambio = Perf1[3].imagen;
         } else if (miniatura.id === "EmberoDorado") {
-          cambio = Perfil_1_Embero_Dorado[1].imagen;
+          cambio = Perf1[2].imagen;
         } else if (miniatura.id === "Nogal") {
-          cambio = Perfil_1_Nogal[1].imagen;
+          cambio = Perf1[6].imagen;
         } else if (miniatura.id === "Olmo") {
-          cambio = Perfil_1_Olmo[1].imagen;
-        }
-      } else if (perfilSize === "Vertical") {
-        if (miniatura.id === "Bronce") {
-          cambio = Perfil_1_Bronce[0].imagen;
-        } else if (miniatura.id === "Burdeos") {
-          cambio = Perfil_1_Burdeos[0].imagen;
-        } else if (miniatura.id === "Inox") {
-          cambio = Perfil_1_Inox[0].imagen;
-        } else if (miniatura.id === "Negro") {
-          cambio = Perfil_1_Negro[0].imagen;
-        } else if (miniatura.id === "Oro") {
-          cambio = Perfil_1_Oro[0].imagen;
-        } else if (miniatura.id === "Plata") {
-          cambio = Perfil_1_Plata[0].imagen;
-        } else if (miniatura.id === "Embero") {
-          cambio = Perfil_1_Embero[0].imagen;
-        } else if (miniatura.id === "EmberoDorado") {
-          cambio = Perfil_1_Embero_Dorado[0].imagen;
-        } else if (miniatura.id === "Nogal") {
-          cambio = Perfil_1_Nogal[0].imagen;
-        } else if (miniatura.id === "Olmo") {
-          cambio = Perfil_1_Olmo[0].imagen;
+          cambio = Perf1[7].imagen;
         }
       }
     }
     if (seleccionPerfil === "Perfil2") {
-      if (perfilSize === "Horizontal") {
+      if (perfilSize === "Vertical") {
         if (miniatura.id === "Bronce") {
-          cambio = Perfil_2_Bronce[1].imagen;
+          cambio = Perf2[0].imagen;
         } else if (miniatura.id === "Burdeos") {
-          cambio = Perfil_2_Burdeos[1].imagen;
+          cambio = Perf2[1].imagen;
         } else if (miniatura.id === "Inox") {
-          cambio = Perfil_2_Inox[1].imagen;
+          cambio = Perf2[4].imagen;
         } else if (miniatura.id === "Negro") {
-          cambio = Perfil_2_Negro[1].imagen;
+          cambio = Perf2[5].imagen;
         } else if (miniatura.id === "Oro") {
-          cambio = Perfil_2_Oro[1].imagen;
+          cambio = Perf2[8].imagen;
         } else if (miniatura.id === "Plata") {
-          cambio = Perfil_2_Plata[1].imagen;
+          cambio = Perf2[9].imagen;
         } else if (miniatura.id === "Embero") {
-          cambio = Perfil_2_Embero[1].imagen;
+          cambio = Perf2[3].imagen;
         } else if (miniatura.id === "EmberoDorado") {
-          cambio = Perfil_2_Embero_Dorado[1].imagen;
+          cambio = Perf2[2].imagen;
         } else if (miniatura.id === "Nogal") {
-          cambio = Perfil_2_Nogal[1].imagen;
+          cambio = Perf2[6].imagen;
         } else if (miniatura.id === "Olmo") {
-          cambio = Perfil_2_Olmo[1].imagen;
-        }
-      } else if (perfilSize === "Vertical") {
-        if (miniatura.id === "Bronce") {
-          cambio = Perfil_2_Bronce[0].imagen;
-        } else if (miniatura.id === "Burdeos") {
-          cambio = Perfil_2_Burdeos[0].imagen;
-        } else if (miniatura.id === "Inox") {
-          cambio = Perfil_2_Inox[0].imagen;
-        } else if (miniatura.id === "Negro") {
-          cambio = Perfil_2_Negro[0].imagen;
-        } else if (miniatura.id === "Oro") {
-          cambio = Perfil_2_Oro[0].imagen;
-        } else if (miniatura.id === "Plata") {
-          cambio = Perfil_2_Plata[0].imagen;
-        } else if (miniatura.id === "Embero") {
-          cambio = Perfil_2_Embero[0].imagen;
-        } else if (miniatura.id === "EmberoDorado") {
-          cambio = Perfil_2_Embero_Dorado[0].imagen;
-        } else if (miniatura.id === "Nogal") {
-          cambio = Perfil_2_Nogal[0].imagen;
-        } else if (miniatura.id === "Olmo") {
-          cambio = Perfil_2_Olmo[0].imagen;
+          cambio = Perf2[7].imagen;
         }
       }
     }
     if (seleccionPerfil === "Perfil3") {
-      if (perfilSize === "Horizontal") {
+      if (perfilSize === "Vertical") {
         if (miniatura.id === "Bronce") {
-          cambio = Perfil_3_Bronce[1].imagen;
+          cambio = Perf3[0].imagen;
         } else if (miniatura.id === "Burdeos") {
-          cambio = Perfil_3_Burdeos[1].imagen;
+          cambio = Perf3[1].imagen;
         } else if (miniatura.id === "Inox") {
-          cambio = Perfil_3_Inox[1].imagen;
+          cambio = Perf3[4].imagen;
         } else if (miniatura.id === "Negro") {
-          cambio = Perfil_3_Negro[1].imagen;
+          cambio = Perf3[5].imagen;
         } else if (miniatura.id === "Oro") {
-          cambio = Perfil_3_Oro[1].imagen;
+          cambio = Perf3[8].imagen;
         } else if (miniatura.id === "Plata") {
-          cambio = Perfil_3_Plata[1].imagen;
+          cambio = Perf3[9].imagen;
         } else if (miniatura.id === "Embero") {
-          cambio = Perfil_3_Embero[1].imagen;
+          cambio = Perf3[3].imagen;
         } else if (miniatura.id === "EmberoDorado") {
-          cambio = Perfil_3_Embero_Dorado[1].imagen;
+          cambio = Perf3[2].imagen;
         } else if (miniatura.id === "Nogal") {
-          cambio = Perfil_3_Nogal[1].imagen;
+          cambio = Perf3[6].imagen;
         } else if (miniatura.id === "Olmo") {
-          cambio = Perfil_3_Olmo[1].imagen;
-        }
-      } else if (perfilSize === "Vertical") {
-        if (miniatura.id === "Bronce") {
-          cambio = Perfil_3_Bronce[0].imagen;
-        } else if (miniatura.id === "Burdeos") {
-          cambio = Perfil_3_Burdeos[0].imagen;
-        } else if (miniatura.id === "Inox") {
-          cambio = Perfil_3_Inox[0].imagen;
-        } else if (miniatura.id === "Negro") {
-          cambio = Perfil_3_Negro[0].imagen;
-        } else if (miniatura.id === "Oro") {
-          cambio = Perfil_3_Oro[0].imagen;
-        } else if (miniatura.id === "Plata") {
-          cambio = Perfil_3_Plata[0].imagen;
-        } else if (miniatura.id === "Embero") {
-          cambio = Perfil_3_Embero[0].imagen;
-        } else if (miniatura.id === "EmberoDorado") {
-          cambio = Perfil_3_Embero_Dorado[0].imagen;
-        } else if (miniatura.id === "Nogal") {
-          cambio = Perfil_3_Nogal[0].imagen;
-        } else if (miniatura.id === "Olmo") {
-          cambio = Perfil_3_Olmo[0].imagen;
+          cambio = Perf3[7].imagen;
         }
       }
     }
     if (seleccionPerfil === "Perfil4") {
-      if (perfilSize === "Horizontal") {
+      if (perfilSize === "Vertical") {
         if (miniatura.id === "Bronce") {
-          cambio = Perfil_4_Bronce[1].imagen;
+          cambio = Perf4[0].imagen;
         } else if (miniatura.id === "Burdeos") {
-          cambio = Perfil_4_Burdeos[1].imagen;
+          cambio = Perf4[1].imagen;
         } else if (miniatura.id === "Inox") {
-          cambio = Perfil_4_Inox[1].imagen;
+          cambio = Perf4[4].imagen;
         } else if (miniatura.id === "Negro") {
-          cambio = Perfil_4_Negro[1].imagen;
+          cambio = Perf4[5].imagen;
         } else if (miniatura.id === "Oro") {
-          cambio = Perfil_4_Oro[1].imagen;
+          cambio = Perf4[8].imagen;
         } else if (miniatura.id === "Plata") {
-          cambio = Perfil_4_Plata[1].imagen;
+          cambio = Perf4[9].imagen;
         } else if (miniatura.id === "Embero") {
-          cambio = Perfil_4_Embero[1].imagen;
+          cambio = Perf4[3].imagen;
         } else if (miniatura.id === "EmberoDorado") {
-          cambio = Perfil_4_Embero_Dorado[1].imagen;
+          cambio = Perf4[2].imagen;
         } else if (miniatura.id === "Nogal") {
-          cambio = Perfil_4_Nogal[1].imagen;
+          cambio = Perf4[6].imagen;
         } else if (miniatura.id === "Olmo") {
-          cambio = Perfil_4_Olmo[1].imagen;
-        }
-      } else if (perfilSize === "Vertical") {
-        if (miniatura.id === "Bronce") {
-          cambio = Perfil_4_Bronce[0].imagen;
-        } else if (miniatura.id === "Burdeos") {
-          cambio = Perfil_4_Burdeos[0].imagen;
-        } else if (miniatura.id === "Inox") {
-          cambio = Perfil_4_Inox[0].imagen;
-        } else if (miniatura.id === "Negro") {
-          cambio = Perfil_4_Negro[0].imagen;
-        } else if (miniatura.id === "Oro") {
-          cambio = Perfil_4_Oro[0].imagen;
-        } else if (miniatura.id === "Plata") {
-          cambio = Perfil_4_Plata[0].imagen;
-        } else if (miniatura.id === "Embero") {
-          cambio = Perfil_4_Embero[0].imagen;
-        } else if (miniatura.id === "EmberoDorado") {
-          cambio = Perfil_4_Embero_Dorado[0].imagen;
-        } else if (miniatura.id === "Nogal") {
-          cambio = Perfil_4_Nogal[0].imagen;
-        } else if (miniatura.id === "Olmo") {
-          cambio = Perfil_4_Olmo[0].imagen;
+          cambio = Perf4[7].imagen;
         }
       }
     }
@@ -361,38 +230,19 @@ const Menu = ({
   };
   const handlePerfilBase = (miniatura) => {
     let cambio = null;
-    if (miniatura.id === "Perfil1") {
-      if (perfilSize === "Horizontal") {
-        cambio = Perfil_1_Inox[1].imagen;
-      }
-      if (perfilSize === "Vertical") {
-        cambio = Perfil_1_Inox[0].imagen;
-      }
+    if (miniatura.id === "Perfil1" && perfilSize === "Vertical") {
+      cambio = Perf1[4].imagen;
     }
-    if (miniatura.id === "Perfil2") {
-      if (perfilSize === "Horizontal") {
-        cambio = Perfil_2_Inox[1].imagen;
-      }
-      if (perfilSize === "Vertical") {
-        cambio = Perfil_2_Inox[0].imagen;
-      }
+    if (miniatura.id === "Perfil2" && perfilSize === "Vertical") {
+      cambio = Perf2[4].imagen;
     }
-    if (miniatura.id === "Perfil3") {
-      if (perfilSize === "Horizontal") {
-        cambio = Perfil_3_Inox[1].imagen;
-      }
-      if (perfilSize === "Vertical") {
-        cambio = Perfil_3_Inox[0].imagen;
-      }
+    if (miniatura.id === "Perfil3" && perfilSize === "Vertical") {
+      cambio = Perf3[4].imagen;
     }
-    if (miniatura.id === "Perfil4") {
-      if (perfilSize === "Horizontal") {
-        cambio = Perfil_4_Inox[1].imagen;
-      }
-      if (perfilSize === "Vertical") {
-        cambio = Perfil_4_Inox[0].imagen;
-      }
+    if (miniatura.id === "Perfil4" && perfilSize === "Vertical") {
+      cambio = Perf4[4].imagen;
     }
+
     setSeleccionPerfil(miniatura.id);
     setImagenPerfil(cambio);
   };
@@ -418,13 +268,13 @@ const Menu = ({
             ))}
           </ContenedorCirculos>
           <BotonMenu
-            onClick={() => (setMenuColorFormato(false), setMenuFormato(true))}
+            onClick={() => (setMenuColorFormato(false), setMenuPerfil(true))}
           >
             Siguiente
           </BotonMenu>
         </MenuCirculos>
       )}
-      {menuFormato && (
+      {/* {menuFormato && (
         <MenuRectangulos classname='Formatos'>
           <TituloMenu>Selecciona tu formato</TituloMenu>
           <ContenedorRectangulo>
@@ -450,7 +300,7 @@ const Menu = ({
             Atrás
           </BotonMenu>
         </MenuRectangulos>
-      )}
+      )} */}
       {menuPerfil && (
         <MenuRectangulos classname='Cenefas'>
           <TituloMenu>Cenefas</TituloMenu>
@@ -478,8 +328,8 @@ const Menu = ({
           </BotonMenu>
           <BotonMenu
             onClick={() => (
-              setMenuColorFormato(false),
-              setMenuFormato(true),
+              setMenuColorFormato(true),
+              setMenuFormato(false),
               setMenuPerfil(false),
               setImagenPerfil(null)
             )}

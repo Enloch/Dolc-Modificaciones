@@ -17,9 +17,9 @@ const AmbienteContainer = styled.div`
 
   ${StyledImageWithCaption} {
     img {
-      width: 100%;
-      height: clamp(24vh,80vh,100%);
-      /* height: clamp(500px, 46.875vw, 900px); */
+      width: auto;
+      /* height: 750px; */
+      height: clamp(500px, 46.875vw, 900px);
       object-fit: cover;
     }
   }

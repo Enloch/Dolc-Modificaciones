@@ -14,6 +14,20 @@ export const Fondos = [
   { id: "White", imagen: FondoWhite },
 ];
 
+import CreamLargo from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/Largos/CREAM.webp";
+import EarthLargo from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/Largos/EARTH.webp";
+import GreyLargo from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/Largos/GREY.webp";
+import ShadowLargo from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/Largos/SHADOW.webp";
+import WhiteLargo from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/Largos/WHITE.webp";
+
+export const Largos = [
+  { id: "Cream", imagen: CreamLargo, formato: "Largo" },
+  { id: "Earth", imagen: EarthLargo, formato: "Largo" },
+  { id: "Grey", imagen: GreyLargo, formato: "Largo" },
+  { id: "Shadow", imagen: ShadowLargo, formato: "Largo" },
+  { id: "White", imagen: WhiteLargo, formato: "Largo" },
+];
+
 import Cream20x120 from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/20x120/CREAM_20x120.webp";
 import Earth20x120 from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/20x120/EARTH_20x120.webp";
 import Grey20x120 from "../../assets/images/DolckerTline/Diseno/Formato/FONDOS/20x120/GREY_20x120.webp";

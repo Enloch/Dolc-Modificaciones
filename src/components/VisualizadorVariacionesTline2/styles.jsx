@@ -39,8 +39,8 @@ export const Icono = styled.img`
   top: 50%;
   left: 50%;
   width: 25px;
-  height: 25px;
-  z-index: 5;
+  height: 25px; 
+  z-index: 2;
   cursor: pointer;
   transition: 0.3s ease-in-out all;
   :hover {
@@ -54,7 +54,7 @@ export const AppMenu = styled.div`
   right: 0;
   height: 100%;
   width: 20%;
-  z-index: 10;
+  z-index: 2;
   background-color: #fff;
 `;
 

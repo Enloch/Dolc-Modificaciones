@@ -6,7 +6,7 @@ const BtnIndice = styled.img`
     position: fixed;
     top: ${GRID.verticalSpace};
     right: ${GRID.horizontalSpace};
-    z-index: 4;
+    z-index:999;
     width: 2rem;
     cursor: pointer;
     visibility: hidden;

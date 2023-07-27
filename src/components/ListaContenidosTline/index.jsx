@@ -11,9 +11,9 @@ const ListaContenidos = ({ en = false, isMenuDesplegable = false }) => {
         : useListaContenidos(contendiosJSON)
 
     return (
-        <StyledListaContenidos isMenuDesplegable={isMenuDesplegable}>
+        <StyledListawContenidos isMenuDesplegable={isMenuDesplegable}>
             <ul>{contenidos}</ul>
-        </StyledListaContenidos>
+        </StyledListawContenidos>
     )
 }
 

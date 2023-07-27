@@ -2,7 +2,7 @@ import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo } from "../../../components/Titulos";
 import { COLORS } from "../../../global/GlobalStyles";
 import StyledCaracteristicas from "./styles";
-import caracter1 from "../../../assets/images/Dolckertline/7475.webp";
+import caracter1 from "../../../assets/images/Dolckertline/Caracteristicas/caracteristicas.webp";
 import ImagenJorge from "../../../assets/images/Dolckertline/tablas.jpg";
 import ImagenConstructiva from "../../../assets/images/Dolckertline/tablas.jpg";
 import caracter2 from "../../../assets/icons/caracteristicas/caracteristicas_02.svg";
@@ -18,7 +18,7 @@ const CaracteristicasTline = ({ id }) => {
         <ImageWithCaption
           src={caracter1}
           alt='Render por parte de 7475'
-          caption='Render por parte de 7475'
+          caption=''
           columnSpan='6'
         />
         <Text>

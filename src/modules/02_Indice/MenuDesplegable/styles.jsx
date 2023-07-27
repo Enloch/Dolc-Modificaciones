@@ -8,7 +8,7 @@ const StyledMenuDesplegable = styled(Seccion)`
     top: 0;
     left: 0;
     right: 0;
-    z-index: 4;
+    z-index: 10;
 
     max-height: 100vh;
     overflow-y: scroll;

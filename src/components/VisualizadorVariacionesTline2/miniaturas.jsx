@@ -15,10 +15,12 @@ export const MiniaturasColor = [
 import Vertical from "../../assets/icons/vertical.svg";
 import Horizontal from "../../assets/icons/horizontal.svg";
 
-
 export const SelectoresFormato = [
-  { id: "Vertical", imagen: Vertical, name: "Vertical" },
-  { id: "Horizontal", imagen: Horizontal, name: "Horizontal" },
+  { id: "Vertical", imagen: Mini01, name: "Cream" },
+  { id: "Vertical", imagen: Mini02, name: "Earth" },
+  { id: "Vertical", imagen: Mini03, name: "Grey" },
+  { id: "Vertical", imagen: Mini04, name: "Shadow" },
+  { id: "Vertical", imagen: Mini05, name: "White" },
 ];
 
 import Modular5 from "../../assets/icons/SelectoresFormato/e.svg";

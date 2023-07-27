@@ -13,7 +13,7 @@ import {
   TABLET_SIZE,
 } from "../../../../global/GlobalStyles";
 import { mediaQueryMobile, mediaQueryTablet } from "../../../../styles/sizes";
-import AmbienteContainer from "../../../../components/AmbienteContainer";
+import AmbienteContainer from "../../../../components/AmbienteContainerTline";
 
 const StyledSerie = styled(Seccion)`
   row-gap: ${DISTANCES.medium};

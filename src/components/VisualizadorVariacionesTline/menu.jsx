@@ -8,6 +8,7 @@ import {
   Maderas,
   PerfilesMini,
   RALS,
+  LargosLibres,
 } from "./miniaturas";
 import {
   AppMenu,
@@ -25,6 +26,7 @@ import {
 } from "./styles";
 import {
   Fondos,
+  Largos,
   Formato20x120,
   Formato30x120,
   Formato30x60,
@@ -122,6 +124,13 @@ const Menu = ({
   };
   const handleImagenFormato = (miniatura) => {
     const formatos = {
+      "Largos libre": {
+        Cream: Largos[0].imagen,
+        Earth: Largos[1].imagen,
+        Grey: Largos[2].imagen,
+        Shadow: Largos[3].imagen,
+        White: Largos[4].imagen,
+      },
       "60x60": {
         Cream: Formato60x60[0].imagen,
         Earth: Formato60x60[1].imagen,
@@ -208,52 +217,72 @@ const Menu = ({
     let cambio = null;
 
     if (
-      (perfilSize === "60x60" || perfilSize === "60x120") &&
+      (perfilSize === "60x60" ||
+        perfilSize === "60x120" ||
+        perfilSize === "Largos libre") &&
       miniatura.id === "Bronce"
     ) {
       cambio = Perfil_1_Bronce[5].imagen;
     } else if (
-      (perfilSize === "60x60" || perfilSize === "60x120") &&
+      (perfilSize === "60x60" ||
+        perfilSize === "60x120" ||
+        perfilSize === "Largos libre") &&
       miniatura.id === "Burdeos"
     ) {
       cambio = Perfil_1_Burdeos[5].imagen;
     } else if (
-      (perfilSize === "60x60" || perfilSize === "60x120") &&
+      (perfilSize === "60x60" ||
+        perfilSize === "60x120" ||
+        perfilSize === "Largos libre") &&
       miniatura.id === "Inox"
     ) {
       cambio = Perfil_1_Inox[5].imagen;
     } else if (
-      (perfilSize === "60x60" || perfilSize === "60x120") &&
+      (perfilSize === "60x60" ||
+        perfilSize === "60x120" ||
+        perfilSize === "Largos libre") &&
       miniatura.id === "Negro"
     ) {
       cambio = Perfil_1_Negro[5].imagen;
     } else if (
-      (perfilSize === "60x60" || perfilSize === "60x120") &&
+      (perfilSize === "60x60" ||
+        perfilSize === "60x120" ||
+        perfilSize === "Largos libre") &&
       miniatura.id === "Oro"
     ) {
       cambio = Perfil_1_Oro[5].imagen;
     } else if (
-      (perfilSize === "60x60" || perfilSize === "60x120") &&
+      (perfilSize === "60x60" ||
+        perfilSize === "60x120" ||
+        perfilSize === "Largos libre") &&
       miniatura.id === "Plata"
     ) {
       cambio = Perfil_1_Plata[5].imagen;
     } else if (
-      (perfilSize === "60x60" || perfilSize === "60x120") &&
+      (perfilSize === "60x60" ||
+        perfilSize === "60x120" ||
+        perfilSize === "Largos libre") &&
       miniatura.id === "Embero"
     ) {
       cambio = Perfil_1_Embero[5].imagen;
     } else if (
-      (perfilSize === "60x60" || perfilSize === "60x120") &&
+      (perfilSize === "60x60" ||
+        perfilSize === "60x120" ||
+        perfilSize === "Largos libre") &&
       miniatura.id === "EmberoDorado"
     ) {
       cambio = Perfil_1_Embero_Dorado[5].imagen;
     } else if (
-      (perfilSize === "60x60" || perfilSize === "60x120") &&
+      (perfilSize === "60x60" ||
+        perfilSize === "60x120" ||
+        perfilSize === "Largos libre") &&
       miniatura.id === "Nogal"
     ) {
       cambio = Perfil_1_Nogal[5].imagen;
     } else if (
-      (perfilSize === "60x60" || perfilSize === "60x120") &&
+      (perfilSize === "60x60" ||
+        perfilSize === "60x120" ||
+        perfilSize === "Largos libre") &&
       miniatura.id === "Olmo"
     ) {
       cambio = Perfil_1_Olmo[5].imagen;
@@ -333,7 +362,9 @@ const Menu = ({
     // if (seleccionPerfil === "Perfil1") {
     // }
     if (
-      (perfilSize === "60x60" || perfilSize === "60x120") &&
+      (perfilSize === "60x60" ||
+        perfilSize === "60x120" ||
+        perfilSize === "Largos libre") &&
       miniatura.id === "RAL"
     ) {
       cambio = "60x60";
@@ -354,7 +385,11 @@ const Menu = ({
     // if (miniatura.id === "Perfil1") {
 
     // }
-    if (perfilSize === "60x60" || perfilSize === "60x120") {
+    if (
+      perfilSize === "60x60" ||
+      perfilSize === "60x120" ||
+      perfilSize === "Largos libre"
+    ) {
       cambio = Perfil_1_Inox[5].imagen;
     }
     if (perfilSize === "Modular4") {
@@ -451,6 +486,21 @@ const Menu = ({
             >
               <ImgRectangulos src={SelectoresModular[2].imagen} />
               <TextTextura>Multiformatos</TextTextura>
+            </TextureContainerRectangulo>
+            <TextureContainerRectangulo
+              onClick={() => (
+                setMenuColorFormato(false),
+                setMenuTipoFormato(false),
+                setMenuFormato(false),
+                setMenuMultiformato(false),
+                setImagenPerfil(null),
+                setMenuColorPerfil(true),
+                handleImagenFormato(LargosLibres),
+                handlePerfilBase()
+              )}
+            >
+              <ImgRectangulos src={LargosLibres.imagen} />
+              <TextTextura>Largos Libre</TextTextura>
             </TextureContainerRectangulo>
           </ContenedorRectangulo>
           <BotonMenu

@@ -14,11 +14,11 @@ export const Fondos = [
   { id: "White", imagen: FondoWhite },
 ];
 
-import CreamVertical from "../../assets/images/DolckerTline/Diseno/Formato2/REVESTIMIENTO/CREAM_VERTICAL.webp";
-import EarthVertical from "../../assets/images/DolckerTline/Diseno/Formato2/REVESTIMIENTO/EARTH_VERTICAL.webp";
-import GreyVertical from "../../assets/images/DolckerTline/Diseno/Formato2/REVESTIMIENTO/GREY_VERTICAL.webp";
-import ShadowVertical from "../../assets/images/DolckerTline/Diseno/Formato2/REVESTIMIENTO/SHADOW_VERTICAL.webp";
-import WhiteVertical from "../../assets/images/DolckerTline/Diseno/Formato2/REVESTIMIENTO/WHITE_VERTICAL.webp";
+import CreamVertical from "../../assets/images/DolckerTline/Diseno/Formato2/REVESTIMIENTO/REVESTIMIENTO_CREAM.webp";
+import EarthVertical from "../../assets/images/DolckerTline/Diseno/Formato2/REVESTIMIENTO/REVESTIMIENTO_EARTH.webp";
+import GreyVertical from "../../assets/images/DolckerTline/Diseno/Formato2/REVESTIMIENTO/REVESTIMIENTO_GREY.webp";
+import ShadowVertical from "../../assets/images/DolckerTline/Diseno/Formato2/REVESTIMIENTO/REVESTIMIENTO_SHADOW.webp";
+import WhiteVertical from "../../assets/images/DolckerTline/Diseno/Formato2/REVESTIMIENTO/REVESTIMIENTO_WHITE.webp";
 
 export const Vertical = [
   { id: "Cream", imagen: CreamVertical, formato: "Vertical" },
@@ -28,279 +28,104 @@ export const Vertical = [
   { id: "White", imagen: WhiteVertical, formato: "Vertical" },
 ];
 
-import CreamHorizontal from "../../assets/images/DolckerTline/Diseno/Formato2/REVESTIMIENTO/CREAM_HORIZONTAL.webp";
-import EarthHorizontal from "../../assets/images/DolckerTline/Diseno/Formato2/REVESTIMIENTO/EARTH_HORIZONTAL.webp";
-import GreyHorizontal from "../../assets/images/DolckerTline/Diseno/Formato2/REVESTIMIENTO/GREY_HORIZONTAL.webp";
-import ShadowHorizontal from "../../assets/images/DolckerTline/Diseno/Formato2/REVESTIMIENTO/SHADOW_HORIZONTAL.webp";
-import WhiteHorizontal from "../../assets/images/DolckerTline/Diseno/Formato2/REVESTIMIENTO/WHITE_HORIZONTAL.webp";
-
-export const Horizontal = [
-  { id: "Cream", imagen: CreamHorizontal, formato: "Horizontal" },
-  { id: "Earth", imagen: EarthHorizontal, formato: "Horizontal" },
-  { id: "Grey", imagen: GreyHorizontal, formato: "Horizontal" },
-  { id: "Shadow", imagen: ShadowHorizontal, formato: "Horizontal" },
-  { id: "White", imagen: WhiteHorizontal, formato: "Horizontal" },
-];
-
 //-------------------------------------- PERFILERIA 1 -------------------------------------------
 
-import BroncePerf1Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_VERTICAL_BRONCE.webp";
-import BroncePerf1Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_HORIZONTAL_BRONCE.webp";
-import BroncePerf2Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_VERTICAL_BRONCE.webp";
-import BroncePerf2Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_HORIZONTAL_BRONCE.webp";
-import BroncePerf3Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_VERTICAL_BRONCE.webp";
-import BroncePerf3Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_HORIZONTAL_BRONCE.webp";
-import BroncePerf4Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_VERTICAL_BRONCE.webp";
-import BroncePerf4Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_HORIZONTAL_BRONCE.webp";
+import BroncePerf1 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 1/PERFILERIA_1_BRONCE.webp";
+import BurdeosPerf1 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 1/PERFILERIA_1_BURDEOS.webp";
+import EmberoDoradoPerf1 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 1/PERFILERIA_1_EMBERO_DORADO.webp";
+import EmberoPerf1 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 1/PERFILERIA_1_EMBERO.webp";
+import InoxPerf1 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 1/PERFILERIA_1_INOX.webp";
+import NegroPerf1 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 1/PERFILERIA_1_NEGRO.webp";
+import NogalPerf1 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 1/PERFILERIA_1_NOGAL.webp";
+import OlmoPerf1 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 1/PERFILERIA_1_OLMO.webp";
+import OroPerf1 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 1/PERFILERIA_1_ORO.webp";
+import PlataPerf1 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 1/PERFILERIA_1_PLATA.webp";
 
-export const Perfil_1_Bronce = [
-  { id: "Bronce", imagen: BroncePerf1Vert, formato: "Vertical" },
-  { id: "Bronce", imagen: BroncePerf1Hor, formato: "Horizontal" },
+export const Perf1 = [
+  { id: "Bronce", imagen: BroncePerf1, formato: "Vertical" },
+  { id: "Burdeos", imagen: BurdeosPerf1, formato: "Vertical" },
+  { id: "EmberoDorado", imagen: EmberoDoradoPerf1, formato: "Vertical" },
+  { id: "Embero", imagen: EmberoPerf1, formato: "Vertical" },
+  { id: "Inox", imagen: InoxPerf1, formato: "Vertical" },
+  { id: "Negro", imagen: NegroPerf1, formato: "Vertical" },
+  { id: "Nogal", imagen: NogalPerf1, formato: "Vertical" },
+  { id: "Olmo", imagen: OlmoPerf1, formato: "Vertical" },
+  { id: "Oro", imagen: OroPerf1, formato: "Vertical" },
+  { id: "Plata", imagen: PlataPerf1, formato: "Vertical" },
 ];
-export const Perfil_2_Bronce = [
-  { id: "Bronce", imagen: BroncePerf2Vert, formato: "Vertical" },
-  { id: "Bronce", imagen: BroncePerf2Hor, formato: "Horizontal" },
-];
-export const Perfil_3_Bronce = [
-  { id: "Bronce", imagen: BroncePerf3Vert, formato: "Vertical" },
-  { id: "Bronce", imagen: BroncePerf3Hor, formato: "Horizontal" },
-];
-export const Perfil_4_Bronce = [
-  { id: "Bronce", imagen: BroncePerf4Vert, formato: "Vertical" },
-  { id: "Bronce", imagen: BroncePerf4Hor, formato: "Horizontal" },
-];
+//-------------------------------------- PERFILERIA 2 -------------------------------------------
 
-import BurdeosPerf1Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_VERTICAL_BURDEOS.webp";
-import BurdeosPerf1Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_HORIZONTAL_BURDEOS.webp";
-import BurdeosPerf2Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_VERTICAL_BURDEOS.webp";
-import BurdeosPerf2Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_HORIZONTAL_BURDEOS.webp";
-import BurdeosPerf3Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_VERTICAL_BURDEOS.webp";
-import BurdeosPerf3Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_HORIZONTAL_BURDEOS.webp";
-import BurdeosPerf4Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_VERTICAL_BURDEOS.webp";
-import BurdeosPerf4Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_HORIZONTAL_BURDEOS.webp";
+import BroncePerf2 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 2/PERFILERIA_2_BRONCE.webp";
+import BurdeosPerf2 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 2/PERFILERIA_2_BURDEOS.webp";
+import EmberoDoradoPerf2 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 2/PERFILERIA_2_EMBERO_DORADO.webp";
+import EmberoPerf2 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 2/PERFILERIA_2_EMBERO.webp";
+import InoxPerf2 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 2/PERFILERIA_2_INOX.webp";
+import NegroPerf2 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 2/PERFILERIA_2_NEGRO.webp";
+import NogalPerf2 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 2/PERFILERIA_2_NOGAL.webp";
+import OlmoPerf2 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 2/PERFILERIA_2_OLMO.webp";
+import OroPerf2 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 2/PERFILERIA_2_ORO.webp";
+import PlataPerf2 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 2/PERFILERIA_2_PLATA.webp";
 
-export const Perfil_1_Burdeos = [
-  { id: "Burdeos", imagen: BurdeosPerf1Vert, formato: "Vertical" },
-  { id: "Burdeos", imagen: BurdeosPerf1Hor, formato: "Horizontal" },
-];
-export const Perfil_2_Burdeos = [
-  { id: "Burdeos", imagen: BurdeosPerf2Vert, formato: "Vertical" },
-  { id: "Burdeos", imagen: BurdeosPerf2Hor, formato: "Horizontal" },
-];
-export const Perfil_3_Burdeos = [
-  { id: "Burdeos", imagen: BurdeosPerf3Vert, formato: "Vertical" },
-  { id: "Burdeos", imagen: BurdeosPerf3Hor, formato: "Horizontal" },
-];
-export const Perfil_4_Burdeos = [
-  { id: "Burdeos", imagen: BurdeosPerf4Vert, formato: "Vertical" },
-  { id: "Burdeos", imagen: BurdeosPerf4Hor, formato: "Horizontal" },
+export const Perf2 = [
+  { id: "Bronce", imagen: BroncePerf2, formato: "Vertical" },
+  { id: "Burdeos", imagen: BurdeosPerf2, formato: "Vertical" },
+  { id: "EmberoDorado", imagen: EmberoDoradoPerf2, formato: "Vertical" },
+  { id: "Embero", imagen: EmberoPerf2, formato: "Vertical" },
+  { id: "Inox", imagen: InoxPerf2, formato: "Vertical" },
+  { id: "Negro", imagen: NegroPerf2, formato: "Vertical" },
+  { id: "Nogal", imagen: NogalPerf2, formato: "Vertical" },
+  { id: "Olmo", imagen: OlmoPerf2, formato: "Vertical" },
+  { id: "Oro", imagen: OroPerf2, formato: "Vertical" },
+  { id: "Plata", imagen: PlataPerf2, formato: "Vertical" },
 ];
 
-import InoxPerf1Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_VERTICAL_INOX.webp";
-import InoxPerf1Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_HORIZONTAL_INOX.webp";
-import InoxPerf2Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_VERTICAL_INOX.webp";
-import InoxPerf2Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_HORIZONTAL_INOX.webp";
-import InoxPerf3Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_VERTICAL_INOX.webp";
-import InoxPerf3Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_HORIZONTAL_INOX.webp";
-import InoxPerf4Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_VERTICAL_INOX.webp";
-import InoxPerf4Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_HORIZONTAL_INOX.webp";
+import BroncePerf3 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 3/PERFILERIA_3_BRONCE.webp";
+import BurdeosPerf3 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 3/PERFILERIA_3_BURDEOS.webp";
+import EmberoDoradoPerf3 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 3/PERFILERIA_3_EMBERO_DORADO.webp";
+import EmberoPerf3 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 3/PERFILERIA_3_EMBERO.webp";
+import InoxPerf3 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 3/PERFILERIA_3_INOX.webp";
+import NegroPerf3 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 3/PERFILERIA_3_NEGRO.webp";
+import NogalPerf3 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 3/PERFILERIA_3_NOGAL.webp";
+import OlmoPerf3 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 3/PERFILERIA_3_OLMO.webp";
+import OroPerf3 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 3/PERFILERIA_3_ORO.webp";
+import PlataPerf3 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 3/PERFILERIA_3_PLATA.webp";
 
-export const Perfil_1_Inox = [
-  { id: "Inox", imagen: InoxPerf1Vert, formato: "Vertical" },
-  { id: "Inox", imagen: InoxPerf1Hor, formato: "Horizontal" },
+export const Perf3 = [
+  { id: "Bronce", imagen: BroncePerf3, formato: "Vertical" },
+  { id: "Burdeos", imagen: BurdeosPerf3, formato: "Vertical" },
+  { id: "EmberoDorado", imagen: EmberoDoradoPerf3, formato: "Vertical" },
+  { id: "Embero", imagen: EmberoPerf3, formato: "Vertical" },
+  { id: "Inox", imagen: InoxPerf3, formato: "Vertical" },
+  { id: "Negro", imagen: NegroPerf3, formato: "Vertical" },
+  { id: "Nogal", imagen: NogalPerf3, formato: "Vertical" },
+  { id: "Olmo", imagen: OlmoPerf3, formato: "Vertical" },
+  { id: "Oro", imagen: OroPerf3, formato: "Vertical" },
+  { id: "Plata", imagen: PlataPerf3, formato: "Vertical" },
 ];
-export const Perfil_2_Inox = [
-  { id: "Inox", imagen: InoxPerf2Vert, formato: "Vertical" },
-  { id: "Inox", imagen: InoxPerf2Hor, formato: "Horizontal" },
-];
-export const Perfil_3_Inox = [
-  { id: "Inox", imagen: InoxPerf3Vert, formato: "Vertical" },
-  { id: "Inox", imagen: InoxPerf3Hor, formato: "Horizontal" },
-];
-export const Perfil_4_Inox = [
-  { id: "Inox", imagen: InoxPerf4Vert, formato: "Vertical" },
-  { id: "Inox", imagen: InoxPerf4Hor, formato: "Horizontal" },
-];
+//-------------------------------------- PERFILERIA 4 -------------------------------------------
 
-import NegroPerf1Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_VERTICAL_NEGRO.webp";
-import NegroPerf1Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_HORIZONTAL_NEGRO.webp";
-import NegroPerf2Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_VERTICAL_NEGRO.webp";
-import NegroPerf2Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_HORIZONTAL_NEGRO.webp";
-import NegroPerf3Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_VERTICAL_NEGRO.webp";
-import NegroPerf3Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_HORIZONTAL_NEGRO.webp";
-import NegroPerf4Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_VERTICAL_NEGRO.webp";
-import NegroPerf4Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_HORIZONTAL_NEGRO.webp";
+import BroncePerf4 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 4/PERFILERIA_4_BRONCE.webp";
+import BurdeosPerf4 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 4/PERFILERIA_4_BURDEOS.webp";
+import EmberoDoradoPerf4 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 4/PERFILERIA_4_EMBERO_DORADO.webp";
+import EmberoPerf4 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 4/PERFILERIA_4_EMBERO.webp";
+import InoxPerf4 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 4/PERFILERIA_4_INOX.webp";
+import NegroPerf4 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 4/PERFILERIA_4_NEGRO.webp";
+import NogalPerf4 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 4/PERFILERIA_4_NOGAL.webp";
+import OlmoPerf4 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 4/PERFILERIA_4_OLMO.webp";
+import OroPerf4 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 4/PERFILERIA_4_ORO.webp";
+import PlataPerf4 from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERIA 4/PERFILERIA_4_PLATA.webp";
 
-export const Perfil_1_Negro = [
-  { id: "Negro", imagen: NegroPerf1Vert, formato: "Vertical" },
-  { id: "Negro", imagen: NegroPerf1Hor, formato: "Horizontal" },
-];
-export const Perfil_2_Negro = [
-  { id: "Negro", imagen: NegroPerf2Vert, formato: "Vertical" },
-  { id: "Negro", imagen: NegroPerf2Hor, formato: "Horizontal" },
-];
-export const Perfil_3_Negro = [
-  { id: "Negro", imagen: NegroPerf3Vert, formato: "Vertical" },
-  { id: "Negro", imagen: NegroPerf3Hor, formato: "Horizontal" },
-];
-export const Perfil_4_Negro = [
-  { id: "Negro", imagen: NegroPerf4Vert, formato: "Vertical" },
-  { id: "Negro", imagen: NegroPerf4Hor, formato: "Horizontal" },
-];
-
-import OroPerf1Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_VERTICAL_ORO.webp";
-import OroPerf1Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_HORIZONTAL_ORO.webp";
-import OroPerf2Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_VERTICAL_ORO.webp";
-import OroPerf2Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_HORIZONTAL_ORO.webp";
-import OroPerf3Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_VERTICAL_ORO.webp";
-import OroPerf3Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_HORIZONTAL_ORO.webp";
-import OroPerf4Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_VERTICAL_ORO.webp";
-import OroPerf4Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_HORIZONTAL_ORO.webp";
-
-export const Perfil_1_Oro = [
-  { id: "Oro", imagen: OroPerf1Vert, formato: "Vertical" },
-  { id: "Oro", imagen: OroPerf1Hor, formato: "Horizontal" },
-];
-export const Perfil_2_Oro = [
-  { id: "Oro", imagen: OroPerf2Vert, formato: "Vertical" },
-  { id: "Oro", imagen: OroPerf2Hor, formato: "Horizontal" },
-];
-export const Perfil_3_Oro = [
-  { id: "Oro", imagen: OroPerf3Vert, formato: "Vertical" },
-  { id: "Oro", imagen: OroPerf3Hor, formato: "Horizontal" },
-];
-export const Perfil_4_Oro = [
-  { id: "Oro", imagen: OroPerf4Vert, formato: "Vertical" },
-  { id: "Oro", imagen: OroPerf4Hor, formato: "Horizontal" },
-];
-
-import PlataPerf1Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_VERTICAL_PLATA.webp";
-import PlataPerf1Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_HORIZONTAL_PLATA.webp";
-import PlataPerf2Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_VERTICAL_PLATA.webp";
-import PlataPerf2Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_HORIZONTAL_PLATA.webp";
-import PlataPerf3Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_VERTICAL_PLATA.webp";
-import PlataPerf3Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_HORIZONTA_PLATA.webp";
-import PlataPerf4Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_VERTICAL_PLATA.webp";
-import PlataPerf4Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_HORIZONTAL_PLATA.webp";
-
-export const Perfil_1_Plata = [
-  { id: "Plata", imagen: PlataPerf1Vert, formato: "Vertical" },
-  { id: "Plata", imagen: PlataPerf1Hor, formato: "Horizontal" },
-];
-export const Perfil_2_Plata = [
-  { id: "Plata", imagen: PlataPerf2Vert, formato: "Vertical" },
-  { id: "Plata", imagen: PlataPerf2Hor, formato: "Horizontal" },
-];
-export const Perfil_3_Plata = [
-  { id: "Plata", imagen: PlataPerf3Vert, formato: "Vertical" },
-  { id: "Plata", imagen: PlataPerf3Hor, formato: "Horizontal" },
-];
-export const Perfil_4_Plata = [
-  { id: "Plata", imagen: PlataPerf4Vert, formato: "Vertical" },
-  { id: "Plata", imagen: PlataPerf4Hor, formato: "Horizontal" },
-];
-
-import EmberoPerf1Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_VERTICAL_EMBERO.webp";
-import EmberoPerf1Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_HORIZONTAL_EMBERO.webp";
-import EmberoPerf2Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_VERTICAL_EMBERO.webp";
-import EmberoPerf2Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_HORIZONTAL_EMBERO.webp";
-import EmberoPerf3Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_VERTICAL_EMBERO.webp";
-import EmberoPerf3Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_HORIZONTAL_EMBERO.webp";
-import EmberoPerf4Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_VERTICAL_EMBERO.webp";
-import EmberoPerf4Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_HORIZONTAL_EMBERO.webp";
-
-export const Perfil_1_Embero = [
-  { id: "Embero", imagen: EmberoPerf1Vert, formato: "Vertical" },
-  { id: "Embero", imagen: EmberoPerf1Hor, formato: "Horizontal" },
-];
-export const Perfil_2_Embero = [
-  { id: "Embero", imagen: EmberoPerf2Vert, formato: "Vertical" },
-  { id: "Embero", imagen: EmberoPerf2Hor, formato: "Horizontal" },
-];
-export const Perfil_3_Embero = [
-  { id: "Embero", imagen: EmberoPerf3Vert, formato: "Vertical" },
-  { id: "Embero", imagen: EmberoPerf3Hor, formato: "Horizontal" },
-];
-export const Perfil_4_Embero = [
-  { id: "Embero", imagen: EmberoPerf4Vert, formato: "Vertical" },
-  { id: "Embero", imagen: EmberoPerf4Hor, formato: "Horizontal" },
-];
-
-import EmberoDoradoPerf1Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_VERTICAL_EMBERO RUGOSO.webp";
-import EmberoDoradoPerf1Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_HORIZONTAL_EMBERO RUGOSO.webp";
-import EmberoDoradoPerf2Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_VERTICAL_EMBERO RUGOSO.webp";
-import EmberoDoradoPerf2Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_HORIZONTAL_EMBERO RUGOSO.webp";
-import EmberoDoradoPerf3Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_VERTICAL_EMBERO RUGOSO.webp";
-import EmberoDoradoPerf3Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_HORIZONTAL_EMBERO RUGOSO.webp";
-import EmberoDoradoPerf4Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_VERTICAL_EMBERO RUGOSO.webp";
-import EmberoDoradoPerf4Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_HORIZONTAL_EMBERO RUGOSO.webp";
-
-export const Perfil_1_Embero_Dorado = [
-  { id: "Embero", imagen: EmberoDoradoPerf1Vert, formato: "Vertical" },
-  { id: "Embero", imagen: EmberoDoradoPerf1Hor, formato: "Horizontal" },
-];
-export const Perfil_2_Embero_Dorado = [
-  { id: "Embero", imagen: EmberoDoradoPerf2Vert, formato: "Vertical" },
-  { id: "Embero", imagen: EmberoDoradoPerf2Hor, formato: "Horizontal" },
-];
-export const Perfil_3_Embero_Dorado = [
-  { id: "Embero", imagen: EmberoDoradoPerf3Vert, formato: "Vertical" },
-  { id: "Embero", imagen: EmberoDoradoPerf3Hor, formato: "Horizontal" },
-];
-export const Perfil_4_Embero_Dorado = [
-  { id: "Embero", imagen: EmberoDoradoPerf4Vert, formato: "Vertical" },
-  { id: "Embero", imagen: EmberoDoradoPerf4Hor, formato: "Horizontal" },
-];
-
-import NogalPerf1Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_VERTICAL_NOGAL.webp";
-import NogalPerf1Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_HORIZONTAL_NOGAL.webp";
-import NogalPerf2Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_VERTICAL_NOGAL.webp";
-import NogalPerf2Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_HORIZONTAL_NOGAL.webp";
-import NogalPerf3Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_VERTICAL_NOGAL.webp";
-import NogalPerf3Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_HORIZONTAL_NOGAL.webp";
-import NogalPerf4Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_VERTICAL_NOGAL.webp";
-import NogalPerf4Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_HORIZONTAL_NOGAL.webp";
-
-export const Perfil_1_Nogal = [
-  { id: "Nogal", imagen: NogalPerf1Vert, formato: "Vertical" },
-  { id: "Nogal", imagen: NogalPerf1Hor, formato: "Horizontal" },
-];
-export const Perfil_2_Nogal = [
-  { id: "Nogal", imagen: NogalPerf2Vert, formato: "Vertical" },
-  { id: "Nogal", imagen: NogalPerf2Hor, formato: "Horizontal" },
-];
-export const Perfil_3_Nogal = [
-  { id: "Nogal", imagen: NogalPerf3Vert, formato: "Vertical" },
-  { id: "Nogal", imagen: NogalPerf3Hor, formato: "Horizontal" },
-];
-export const Perfil_4_Nogal = [
-  { id: "Nogal", imagen: NogalPerf4Vert, formato: "Vertical" },
-  { id: "Nogal", imagen: NogalPerf4Hor, formato: "Horizontal" },
-];
-
-import OlmoPerf1Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_VERTICAL_Olmo.webp";
-import OlmoPerf1Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 1/PERFILERÍA 1_HORIZONTAL_Olmo.webp";
-import OlmoPerf2Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_VERTICAL_Olmo.webp";
-import OlmoPerf2Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 2/PERFILERÍA 2_HORIZONTAL_Olmo.webp";
-import OlmoPerf3Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_VERTICAL_Olmo.webp";
-import OlmoPerf3Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 3/PERFILERÍA 3_HORIZONTAL_Olmo.webp";
-import OlmoPerf4Vert from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_VERTICAL_Olmo.webp";
-import OlmoPerf4Hor from "../../assets/images/DolckerTline/Diseno/Formato2/PERFILERÍA 4/PERFILERÍA 4_HORIZONTAL_Olmo.webp";
-export const Perfil_1_Olmo = [
-  { id: "Olmo", imagen: OlmoPerf1Vert, formato: "Vertical" },
-  { id: "Olmo", imagen: OlmoPerf1Hor, formato: "Horizontal" },
-];
-export const Perfil_2_Olmo = [
-  { id: "Olmo", imagen: OlmoPerf2Vert, formato: "Vertical" },
-  { id: "Olmo", imagen: OlmoPerf2Hor, formato: "Horizontal" },
-];
-export const Perfil_3_Olmo = [
-  { id: "Olmo", imagen: OlmoPerf3Vert, formato: "Vertical" },
-  { id: "Olmo", imagen: OlmoPerf3Hor, formato: "Horizontal" },
-];
-export const Perfil_4_Olmo = [
-  { id: "Olmo", imagen: OlmoPerf4Vert, formato: "Vertical" },
-  { id: "Olmo", imagen: OlmoPerf4Hor, formato: "Horizontal" },
+export const Perf4 = [
+  { id: "Bronce", imagen: BroncePerf4, formato: "Vertical" },
+  { id: "Burdeos", imagen: BurdeosPerf4, formato: "Vertical" },
+  { id: "EmberoDorado", imagen: EmberoDoradoPerf4, formato: "Vertical" },
+  { id: "Embero", imagen: EmberoPerf4, formato: "Vertical" },
+  { id: "Inox", imagen: InoxPerf4, formato: "Vertical" },
+  { id: "Negro", imagen: NegroPerf4, formato: "Vertical" },
+  { id: "Nogal", imagen: NogalPerf4, formato: "Vertical" },
+  { id: "Olmo", imagen: OlmoPerf4, formato: "Vertical" },
+  { id: "Oro", imagen: OroPerf4, formato: "Vertical" },
+  { id: "Plata", imagen: PlataPerf4, formato: "Vertical" },
 ];
 
 import RAL20 from "../../assets/images/DolckerTline/Diseno/Formato/PERFILERIA 1/SVG/20.svg";

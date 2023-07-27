@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import AmbienteContainer from "../../../../components/AmbienteContainer";
+import AmbienteContainer from "../../../../components/AmbienteContainerTline";
 import Anotacion from "../../../../components/Anotacion";
 import Text from "../../../../components/Text";
 import { Titulo } from "../../../../components/Titulos";
