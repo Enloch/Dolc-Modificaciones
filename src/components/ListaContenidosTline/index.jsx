@@ -1,5 +1,5 @@
 import useListaContenidos from '../../hooks/useListaContenidosTline'
-import StyledListaContenidos from './styles'
+import StyledListaContenidos from "./styles";
 import { useContext } from 'react'
 import ListaContenidosContext from '../../contexts/ListaContenidosContextTline'
 import inglesLista from '../../utils/en/listaContenidos.json'
@@ -11,9 +11,9 @@ const ListaContenidos = ({ en = false, isMenuDesplegable = false }) => {
         : useListaContenidos(contendiosJSON)
 
     return (
-        <StyledListawContenidos isMenuDesplegable={isMenuDesplegable}>
+        <StyledListaContenidos isMenuDesplegable={isMenuDesplegable}>
             <ul>{contenidos}</ul>
-        </StyledListawContenidos>
+        </StyledListaContenidos>
     )
 }
 

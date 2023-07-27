@@ -5,8 +5,15 @@ import StyledCaracteristicas from "./styles";
 import caracter1 from "../../../assets/images/Dolckertline/Caracteristicas/caracteristicas.webp";
 import ImagenJorge from "../../../assets/images/Dolckertline/tablas.jpg";
 import ImagenConstructiva from "../../../assets/images/Dolckertline/tablas.jpg";
-import caracter2 from "../../../assets/icons/caracteristicas/caracteristicas_02.svg";
-import caracter3 from "../../../assets/icons/caracteristicas/caracteristicas_03.svg";
+import Cdim1 from "../../../assets/icons/caracteristicasTline/caracteristicas dimensionales 1.svg";
+import Cdim2 from "../../../assets/icons/caracteristicasTline/caracteristicas dimensionales 2.svg";
+import Cmec1 from "../../../assets/icons/caracteristicasTline/caracterisiticqas mecanicas 1.svg";
+import Cmec2 from "../../../assets/icons/caracteristicasTline/caracterisiticqas mecanicas 2.svg";
+import Chig1 from "../../../assets/icons/caracteristicasTline/caracteristicas higienicas 1.svg";
+import Chig2 from "../../../assets/icons/caracteristicasTline/caracteristicas higienicas 2.svg";
+import Norm1 from "../../../assets/icons/caracteristicasTline/normas complementarias 1.svg";
+import Norm2 from "../../../assets/icons/caracteristicasTline/normas complementarias 2.svg";
+
 import Text from "../../../components/Text";
 import Listado from "../../../components/Listado";
 
@@ -132,18 +139,61 @@ const CaracteristicasTline = ({ id }) => {
       <StyledCaracteristicas id={id[1]} backgroundColor={COLORS.gray02}>
         <Titulo>Datos técnicos</Titulo>
         <ImageWithCaption
-          src={ImagenJorge}
+          src={Cdim1}
           alt='Imágenes técnicas (Jorge)'
-          caption='Imágenes técnicas (Jorge)'
+          caption=''
           columnSpan='6'
+          isGray
+        />
+        <ImageWithCaption
+          src={Cmec1}
+          alt='Imágenes técnicas (Jorge)'
+          caption=''
+          columnSpan='6'
+          isGray
         />
         <Text>
           <strong>Textos (Jorge)</strong>
         </Text>
         <ImageWithCaption
-          src={ImagenJorge}
+          src={Chig1}
           alt='Imágenes técnicas (Jorge)'
-          caption='Imágenes técnicas (Jorge)'
+          caption=''
+          columnSpan='6'
+        />
+        <ImageWithCaption
+          src={Norm1}
+          alt='Imágenes técnicas (Jorge)'
+          caption=''
+          columnSpan='6'
+        />
+        <ImageWithCaption
+          src={Cdim2}
+          alt='Imágenes técnicas (Jorge)'
+          caption=''
+          columnSpan='6'
+          isGray
+        />
+        <ImageWithCaption
+          src={Cmec2}
+          alt='Imágenes técnicas (Jorge)'
+          caption=''
+          columnSpan='6'
+          isGray
+        />
+        <Text>
+          <strong>Textos (Jorge)</strong>
+        </Text>
+        <ImageWithCaption
+          src={Chig2}
+          alt='Imágenes técnicas (Jorge)'
+          caption=''
+          columnSpan='6'
+        />
+        <ImageWithCaption
+          src={Norm2}
+          alt='Imágenes técnicas (Jorge)'
+          caption=''
           columnSpan='6'
         />
       </StyledCaracteristicas>
