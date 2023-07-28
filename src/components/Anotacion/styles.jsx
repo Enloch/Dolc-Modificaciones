@@ -18,7 +18,7 @@ const StyledAnotacion = styled.div`
 
   img {
     position: absolute;
-    right: calc(100% + 0.8rem);
+    right: calc(100% + 0.4rem);
 
     min-width: 25px;
     width: auto;

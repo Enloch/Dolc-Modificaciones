@@ -21,6 +21,7 @@ export const column_5_span4 = column_start_end(5, "span 4");
 export const column_5_span3 = column_start_end(5, "span 3");
 export const column_3_span3 = column_start_end(3, "span 3");
 export const column_6_spanEnd = column_start_end(6, -1);
+export const column_3_spanEnd = column_start_end(3, -1);
 
 export const gridLayoutTemplate = (
   {

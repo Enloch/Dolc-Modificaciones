@@ -11,6 +11,7 @@ const DISTANCES = {
 };
 
 const TABLET_SIZE = "1080px";
+const MID_TABLET_SIZE = "1400px";
 const MOBILE_SIZE = "480px";
 
 const COLORS = {
@@ -33,6 +34,13 @@ const GRID = {
   verticalSpace: DISTANCES.long,
 };
 
+const Column3 = css`
+  grid-column: 3 / span end;
+
+  @media (max-width: ${MID_TABLET_SIZE}) {
+    grid-column: 1 / -1;
+  }
+`;
 const Column4 = css`
   grid-column: 5 / span 4;
 
@@ -72,13 +80,7 @@ const Column8 = css`
     grid-column: 1 / -1;
   }
 `;
-const Column3 = css`
-  grid-column: 3 / -1;
 
-  @media (max-width: ${TABLET_SIZE}) {
-    grid-column: 1 / -1;
-  }
-`;
 const Text = css`
   color: ${(props) => props.color || ""};
 `;
@@ -157,6 +159,8 @@ export {
   TextMedium,
   TextLarge,
   GridLayout,
+  MOBILE_SIZE,
+  MID_TABLET_SIZE,
   TABLET_SIZE,
   Column3,
   Column4,

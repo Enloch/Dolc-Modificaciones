@@ -1,8 +1,14 @@
 import styled from "styled-components";
-import { Column8 } from "../../global/GlobalStyles";
+import {
+  Column8,
+  TABLET_SIZE,
+  MOBILE_SIZE,
+  MID_TABLET_SIZE,
+  Column3,
+} from "../../global/GlobalStyles";
 
 export const AppIntercambiador = styled.div`
-  ${Column8}
+  ${Column3}
   position: relative;
 `;
 
@@ -56,6 +62,12 @@ export const AppMenu = styled.div`
   width: 20%;
   z-index: 10;
   background-color: #fff;
+  @media screen and (max-width: ${MID_TABLET_SIZE}) {
+    width: 40%;
+  }
+  @media screen and (max-width: ${MOBILE_SIZE}) {
+    width: 50%;
+  }
 `;
 
 export const MenuCirculos = styled.div`
@@ -78,6 +90,12 @@ export const ContenedorCirculos = styled.div`
   row-gap: 10px;
   column-gap: 10px;
   margin: 10px 0;
+  @media screen and (max-width: ${MID_TABLET_SIZE}) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media screen and (max-width: ${MOBILE_SIZE}) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 export const TextureContainer = styled.div`
