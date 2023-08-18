@@ -1,0 +1,95 @@
+[
+  {
+    "title": "Inicio",
+    "link": "/"
+  },
+  {
+    "title": "Dolcker Matrix soluciona",
+    "link": "#dolcker"
+  },
+  {
+    "title": "Ventajas del sistema Dolcker Matrix",
+    "link": "#ventajas"
+  },
+  {
+    "title": "Aplicaciones",
+    "subList": [
+      {
+        "title": "Aplicaciones",
+        "link": "#aplicaciones"
+      },
+      {
+        "title": "Rehabilitación",
+        "link": "#rehabilitacion"
+      },
+      {
+        "title": "Obra nueva",
+        "subList": [
+          {
+            "title": "Obra nueva",
+            "link": "#obra-nueva"
+          },
+          {
+            "title": "Fachadas",
+            "link": "#fachadas"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Diseño",
+    "subList": [
+      {
+        "title": "Diseño",
+        "link": "#diseno"
+      },
+      {
+        "title": "Formato",
+        "link": "#formato"
+      },
+      {
+        "title": "Acabados",
+        "link": "#acabados"
+      },
+      {
+        "title": "Espesores",
+        "link": "#espesores"
+      },
+      {
+        "title": "Series",
+        "link": "#series"
+      }
+    ]
+  },
+  {
+    "title": "Características",
+    "subList": [
+      {
+        "title": "Características técnicas",
+        "link": "#caracteristicas-especiales"
+      },
+      {
+        "title": "Datos técnicos",
+        "link": "#datos-tecnicos"
+      }
+    ]
+  },
+  {
+    "title": "Sistemas",
+    "subList": [
+      {
+        "title": "Sistemas",
+        "link": "#sistemas"
+      },
+      {
+        "title": "LINE",
+        "link": "#line-l"
+      }
+    ]
+  },
+  {
+    "title": "Descargas",
+    "link": "#descargas"
+  }
+]

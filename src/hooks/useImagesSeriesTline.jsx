@@ -28,7 +28,7 @@ const enlacesObj = [
     titulo: "DOLCKER & LINE BELLA",
     formato: "260x120/120x120/60x120/80x160/60x60",
     src: imagenesAmbiente[2],
-    id: "#bell",
+    id: "#bella",
     categoria: "Marmol",
   },
   {
