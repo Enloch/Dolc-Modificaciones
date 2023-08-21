@@ -16,7 +16,7 @@ import ranurado9 from "../../../assets/images/DolckerTline/Diseno/Espesores/Dolc
 import ranurado11 from "../../../assets/images/DolckerTline/Diseno/Espesores/Dolcker_espesor_11mm.jpg";
 import VisualizadorDesplazador from "../../../components/Tline/VisualizadorDesplazador";
 import IndiceSeries from "./05_1_IndiceSeries";
-import RotadorTline from "../../../components/Rotadores/Tline/Rotador";
+import RotadorMatrix from "../../../components/Rotadores/Matrix/Rotador";
 import Configurador1Tline from "../../../components/VisualizadorVariacionesTline";
 import Configurador2Tline from "../../../components/VisualizadorVariacionesTline2";
 
@@ -103,7 +103,7 @@ const DisenosTline = ({ id }) => {
           />
         </Anotaciones>
         <div className='rotador'>
-          <RotadorTline />
+          <RotadorMatrix />
         </div>
       </StyledDisenos>
       <StyledDisenos id={id[4]} backgroundColor={COLORS.gray01} isEspesores>
