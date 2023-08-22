@@ -2,94 +2,24 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { NombreMateriales } from "./Materiales";
 import { SketchPicker } from "react-color";
+import {
+  MenuContainer,
+  MenuContainer2,
+  MaterialButton,
+  MaterialImage,
+  MaterialTextContainer,
+  MaterialText,
+  ModelImage,
+  ModelButton,
+  Titulo,
+} from "./styles";
 import IconoRAL from "../../../assets/icons/RAL.png";
 
 import Perfil1 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL1.jpg";
 import Perfil2 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL2.jpg";
 import Perfil3 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL3.jpg";
 import Perfil4 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL4.jpg";
-const MenuContainer = styled.div`
-  width: 100%;
-  display: ${({ visible }) => (visible ? "grid" : "none")};
-  grid-template-columns: 1fr 1fr;
-  row-gap: 5px;
-  @media (max-width: 480px) {
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-`;
-// const MenuContainer = styled.div`
-//   width: 100%;
-//   display: ${({ visible }) => (visible ? "grid" : "none")};
-//   flex-direction: column;
-//   justify-content: center;
-//   flex-wrap: wrap;
-//   row-gap: 5px;
-//   @media (max-width: 480px) {
-//     flex-direction: row;
-//     justify-content: flex-start;
-//   }
-// `;
 
-const MenuContainer2 = styled.div`
-  width: 100%;
-  display: ${({ visible }) => (visible ? "flex" : "none")};
-  flex-direction: row;
-  flex-wrap: wrap;
-`;
-
-const MaterialButton = styled.button`
-  width: 70px;
-  height: 75px;
-  padding: 0;
-  background: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: none;
-`;
-
-const MaterialImage = styled.img`
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-`;
-const MaterialTextContainer = styled.div`
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: break-spaces;
-  margin-top: 2px;
-`;
-const MaterialText = styled.span`
-  font-size: 10px;
-`;
-
-const ModelButton = styled.button`
-  margin: 0 auto;
-  padding: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
-  width: auto;
-`;
-
-const ModelImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
-const Titulo = styled.h2`
-  cursor: pointer;
-  margin: 5px;
-  ::before {
-    content: ">  ";
-  }
-`;
 const Menu = ({
   handleModelChange,
   handleMaterialChange,
@@ -132,7 +62,6 @@ const Menu = ({
         <MenuContainer visible={showModelButtons}>
           <ModelButton
             onClick={() => {
-              handleModelChange("Modelo");
               handleToggleMaterialButtons();
             }}
           >

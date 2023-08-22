@@ -48,7 +48,7 @@ export const ImagenExpandir = styled.img`
   height: 100%;
 `;
 
-export const MenuContainer = styled.div`
+export const RotadorMenuContainer = styled.div`
   width: 33%;
   padding: 5px;
   background-color: #ffffff;
@@ -102,4 +102,87 @@ export const R360Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
+`;
+
+export const MenuContainer = styled.div`
+  width: 100%;
+  display: ${({ visible }) => (visible ? "grid" : "none")};
+  grid-template-columns: 1fr 1fr;
+  row-gap: 5px;
+  @media (max-width: 480px) {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+`;
+// export const MenuContainer = styled.div`
+//   width: 100%;
+//   display: ${({ visible }) => (visible ? "grid" : "none")};
+//   flex-direction: column;
+//   justify-content: center;
+//   flex-wrap: wrap;
+//   row-gap: 5px;
+//   @media (max-width: 480px) {
+//     flex-direction: row;
+//     justify-content: flex-start;
+//   }
+// `;
+
+export const MenuContainer2 = styled.div`
+  width: 100%;
+  display: ${({ visible }) => (visible ? "flex" : "none")};
+  flex-direction: row;
+  flex-wrap: wrap;
+`;
+
+export const MaterialButton = styled.button`
+  width: 70px;
+  height: 75px;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+`;
+
+export const MaterialImage = styled.img`
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+`;
+export const MaterialTextContainer = styled.div`
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: break-spaces;
+  margin-top: 2px;
+`;
+export const MaterialText = styled.span`
+  font-size: 10px;
+`;
+
+export const ModelButton = styled.button`
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: auto;
+`;
+
+export const ModelImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+export const Titulo = styled.h2`
+  cursor: pointer;
+  margin: 5px;
+  ::before {
+    content: ">  ";
+  }
 `;
