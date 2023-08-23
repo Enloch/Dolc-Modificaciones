@@ -29,6 +29,7 @@ export default function Rotador() {
   const [showIntro, setShowIntro] = useState(true);
   const [color, setColor] = useState("#ffffff0"); // Color blanco como color base predeterminado
   const [colorPickerActive, setColorPickerActive] = useState(false);
+  const [selectedMatrix, setSelectedMatrix] = useState(null);
 
   const handleIntroClick = () => {
     setShowIntro(false);
@@ -63,7 +64,7 @@ export default function Rotador() {
             position={[0, -1, 1]}
             rotation={[-Math.PI / 2, 0, 0]}
           />
-          <Environment files='/PBR_HDRI.hdr' blur={1}>
+          <Environment files='/Test.exr' blur={1}>
             <Lightformer
               form='rect' // circle | ring | rect (optional, default = rect)
               intensity={1} // power level (optional = 1)
@@ -82,15 +83,14 @@ export default function Rotador() {
             position={[0, -0.1, 0]}
             frames={1}
           />
-
           <Modelo
             material={materialIndex}
             metalness={materialIndex}
             roughness={materialIndex}
             color={color}
             colorPickerActive={colorPickerActive} // Pasar el estado colorPickerActive al componente Model1
+            selectedMatrix={selectedMatrix} // Pass selectedMatrix to Modelo
           />
-
           <OrbitControls
             maxPolarAngle={1.6}
             minDistance={0.2}
@@ -100,7 +100,6 @@ export default function Rotador() {
           />
         </Canvas>
       </CanvasContainer>
-
       <RotadorMenuContainer visible={isMenuOpen}>
         <Menu
           handleMaterialChange={setMaterialIndex}
@@ -108,6 +107,7 @@ export default function Rotador() {
           setColor={setColor}
           colorPickerActive={colorPickerActive} // Pasar el estado colorPickerActive al componente Menu
           setColorPickerActive={setColorPickerActive} // Pasar el callback setColorPickerActive al componente Menu
+          setSelectedMatrix={setSelectedMatrix} // Pass setSelectedMatrix to Menu
         />
       </RotadorMenuContainer>
     </ContRotador>
