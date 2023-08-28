@@ -1,13 +1,13 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
-import imgSeleccionar from "../../assets/images/DolckerTline/Series/GRAVEL/DOLCKER GRAVEL materiales seleccion.webp";
-import InteractivoImg from "../../assets/images/DolckerTline/Interactivofachada.jpg";
-import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
+import imgSeleccionar from "../../assets/images/DolckertTline/Series/GRAVEL/DOLCKER GRAVEL materiales seleccion.webp";
+import InteractivoImg from "../../assets/images/DolckertTline/Interactivofachada.jpg";
+import MuestraImg from "../../assets/images/DolckertTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
-  "../../assets/images/DolckerTline/Series/GRAVEL/AMBIENTES/**"
+  "../../assets/images/DolckertTline/Series/GRAVEL/AMBIENTES/**"
 );
 
 const muestrasImports = import.meta.globEager(
-  "../../assets/images/DolckerTline/Series/GRAVEL/DESPIECE/**"
+  "../../assets/images/DolckertTline/Series/GRAVEL/DESPIECE/**"
 );
 
 const acabadosImports = import.meta.globEager("../../assets/icons/acabados/**");

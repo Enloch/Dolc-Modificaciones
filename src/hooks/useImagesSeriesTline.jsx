@@ -2,9 +2,9 @@
 import { Children } from "react";
 import getDataFromModules from "../helpers/getDataFromModules";
 import Enlace from "../modules/06_Diseno/06_1_IndiceSeries/Enlace";
-import img1 from "../assets/images/DolckerTline/ranurado11mm.webp";
+import img1 from "../assets/images/DolckertTline/ranurado11mm.webp";
 const imagenesAmbienteImports = import.meta.globEager(
-  "../assets/images/DolckerTline/Series/**/EJEMPLO/**"
+  "../assets/images/DolckertTline/Series/**/EJEMPLO/**"
 );
 
 const imagenesAmbiente = getDataFromModules(imagenesAmbienteImports);

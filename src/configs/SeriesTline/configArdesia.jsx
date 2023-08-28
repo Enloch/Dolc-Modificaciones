@@ -1,11 +1,11 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
-import imgSeleccionar from "../../assets/images/DolckerTline/Series/ARDESIA/DOLCKER CR ARDESIA materiales seleccion.webp";
-import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
+import imgSeleccionar from "../../assets/images/DolckertTline/Series/ARDESIA/DOLCKER CR ARDESIA materiales seleccion.webp";
+import MuestraImg from "../../assets/images/DolckertTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
-  "../../assets/images/DolckerTline/Series/ARDESIA/AMBIENTES/**"
+  "../../assets/images/DolckertTline/Series/ARDESIA/AMBIENTES/**"
 );
 const muestrasImports = import.meta.globEager(
-  "../../assets/images/DolckerTline/Series/ARDESIA/DESPIECE/**"
+  "../../assets/images/DolckertTline/Series/ARDESIA/DESPIECE/**"
 );
 const acabadosImports = import.meta.globEager("../../assets/icons/acabados/**");
 

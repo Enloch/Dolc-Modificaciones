@@ -1,13 +1,13 @@
 import getDataFromModules from "../helpers/getDataFromModules";
 
 const flamed = import.meta.globEager(
-    "../assets/images/DolckerTline/Diseno/Acabados/RENDER FLAMED/**"
+    "../assets/images/DolckertTline/Diseno/Acabados/RENDER FLAMED/**"
   ),
   pulido = import.meta.globEager(
-    "../assets/images/DolckerTline/Diseno/Acabados/RENDER PULIDO/**"
+    "../assets/images/DolckertTline/Diseno/Acabados/RENDER PULIDO/**"
   ),
   mate = import.meta.globEager(
-    "../assets/images/DolckerTline/Diseno/Acabados/RENDER MATE/**"
+    "../assets/images/DolckertTline/Diseno/Acabados/RENDER MATE/**"
   );
 
 const flamedImports = getDataFromModules(flamed),

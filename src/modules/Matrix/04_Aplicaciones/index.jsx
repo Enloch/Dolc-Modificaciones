@@ -2,11 +2,11 @@ import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo, Titulo2, Titulo3 } from "../../../components/Titulos";
 import { COLORS, DISTANCES } from "../../../global/GlobalStyles";
 import StyledAplicaciones from "./styles";
-import img1 from "../../../assets/images/DolckerTline/Aplicaciones/catalogo3-1-9.webp";
-import img2 from "../../../assets/images/DolckerTline/Aplicaciones/catalogo3-1-10.webp";
-import img3 from "../../../assets/images/DolckerTline/Aplicaciones/catalogo3-1-11.webp";
-import img4 from "../../../assets/images/DolckerTline/Aplicaciones/catalogo3-1-12.webp";
-import img5 from "../../../assets/images/DolckerTline/arquitecto.webp";
+import img1 from "../../../assets/images/DolckertTline/Aplicaciones/catalogo3-1-9.webp";
+import img2 from "../../../assets/images/DolckertTline/Aplicaciones/catalogo3-1-10.webp";
+import img3 from "../../../assets/images/DolckertTline/Aplicaciones/catalogo3-1-11.webp";
+import img4 from "../../../assets/images/DolckertTline/Aplicaciones/catalogo3-1-12.webp";
+import img5 from "../../../assets/images/DolckertTline/arquitecto.webp";
 import Cita from "../../../components/Cita";
 
 const AplicacionesTline = ({ id }) => {

@@ -1,13 +1,13 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
-import imgSeleccionar from "../../assets/images/DolckerTline/Series/CAPRI/DOLCKER CAPRI materiales seleccion WEB.webp";
-import InteractivoImg from "../../assets/images/DolckerTline/Interactivofachada.jpg";
-import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
+import imgSeleccionar from "../../assets/images/DolckertTline/Series/CAPRI/DOLCKER CAPRI materiales seleccion WEB.webp";
+import InteractivoImg from "../../assets/images/DolckertTline/Interactivofachada.jpg";
+import MuestraImg from "../../assets/images/DolckertTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
-  "../../assets/images/DolckerTline/Series/CAPRI/AMBIENTES/**"
+  "../../assets/images/DolckertTline/Series/CAPRI/AMBIENTES/**"
 );
 
 const muestrasImports = import.meta.globEager(
-  "../../assets/images/DolckerTline/Series/CAPRI/DESPIECE/**"
+  "../../assets/images/DolckertTline/Series/CAPRI/DESPIECE/**"
 );
 
 const acabadosImports = import.meta.globEager("../../assets/icons/acabados/**");

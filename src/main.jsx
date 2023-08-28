@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import FachadaVentilada from "./pages/catalogos/FachadaVentilada";
-import DolckerTLine from "./pages/catalogos/DolckerTLine";
+import DolckertTline from "./pages/catalogos/DolckertTline";
 import DolckerMatrix from "./pages/catalogos/DolckerMatrix";
 import DolckerG10 from "./pages/catalogos/DolckerG10";
 import Escamas from "./pages/catalogos/Escamas";
@@ -35,7 +35,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <Routes>
         <Route path='/dolcker-system' element={<FachadaVentilada />} />
-        <Route path='/dolcker-tline' element={<DolckerTLine />} />
+        <Route path='/dolcker-tline' element={<DolckertTline />} />
         <Route path='/dolcker-matrix' element={<DolckerMatrix />} />
         <Route path='/dolcker-G10' element={<DolckerG10 />} />
         <Route path='/dolcker-escamas' element={<Escamas />} />

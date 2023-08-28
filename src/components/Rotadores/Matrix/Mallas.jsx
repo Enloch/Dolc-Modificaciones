@@ -1,4 +1,4 @@
-import Perfil1 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL1.jpg";
+import Perfil1 from "../../../assets/images/DolckertTline/Diseno/Formato/MINIATURAS/PERFIL1.jpg";
 export const Mallas = {
   1: {
     matrices: [

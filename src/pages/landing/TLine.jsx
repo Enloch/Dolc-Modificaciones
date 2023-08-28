@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import fondo from "../../assets/images/Inicio/landing2.jpg";
 
-const DolckerTline = () => {
+const DolckertTline = () => {
   return (
     <Container>
       <Wrapper>
@@ -23,7 +23,7 @@ const DolckerTline = () => {
   );
 };
 
-export default DolckerTline;
+export default DolckertTline;
 
 const Container = styled.div`
   /* min-height: 100vh; */

@@ -1,13 +1,13 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
-import imgSeleccionar from "../../assets/images/DolckerTline/Series/NIKEA/DOLCKER NIKEA materiales seleccion.webp";
+import imgSeleccionar from "../../assets/images/DolckertTline/Series/NIKEA/DOLCKER NIKEA materiales seleccion.webp";
 
-import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
+import MuestraImg from "../../assets/images/DolckertTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
-  "../../assets/images/DolckerTline/Series/NIKEA/AMBIENTES/**"
+  "../../assets/images/DolckertTline/Series/NIKEA/AMBIENTES/**"
 );
 
 const muestrasImports = import.meta.globEager(
-  "../../assets/images/DolckerTline/Series/NIKEA/DESPIECE/**"
+  "../../assets/images/DolckertTline/Series/NIKEA/DESPIECE/**"
 );
 
 const acabadosImports = import.meta.globEager("../../assets/icons/acabados/**");

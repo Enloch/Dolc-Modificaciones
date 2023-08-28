@@ -1,8 +1,8 @@
-import Mini01 from "../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/GRAVEL CREAM.webp";
-import Mini02 from "../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/GRAVEL EARTH.webp";
-import Mini03 from "../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/GRAVEL GREY.webp";
-import Mini04 from "../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/GRAVEL SHADOW.webp";
-import Mini05 from "../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/GRAVEL WHITE.webp";
+import Mini01 from "../../assets/images/DolckertTline/Diseno/Formato/MINIATURAS/GRAVEL CREAM.webp";
+import Mini02 from "../../assets/images/DolckertTline/Diseno/Formato/MINIATURAS/GRAVEL EARTH.webp";
+import Mini03 from "../../assets/images/DolckertTline/Diseno/Formato/MINIATURAS/GRAVEL GREY.webp";
+import Mini04 from "../../assets/images/DolckertTline/Diseno/Formato/MINIATURAS/GRAVEL SHADOW.webp";
+import Mini05 from "../../assets/images/DolckertTline/Diseno/Formato/MINIATURAS/GRAVEL WHITE.webp";
 
 export const MiniaturasColor = [
   { id: "Cream", imagen: Mini01, name: "Cream" },
@@ -60,10 +60,10 @@ export const Maderas = [
   { id: "Olmo", imagen: OlmoRugosoMini, name: "Olmo" },
 ];
 
-import Perfil1 from "../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL1.jpg";
-import Perfil2 from "../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL2.jpg";
-import Perfil3 from "../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL3.jpg";
-import Perfil4 from "../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL4.jpg";
+import Perfil1 from "../../assets/images/DolckertTline/Diseno/Formato/MINIATURAS/PERFIL1.jpg";
+import Perfil2 from "../../assets/images/DolckertTline/Diseno/Formato/MINIATURAS/PERFIL2.jpg";
+import Perfil3 from "../../assets/images/DolckertTline/Diseno/Formato/MINIATURAS/PERFIL3.jpg";
+import Perfil4 from "../../assets/images/DolckertTline/Diseno/Formato/MINIATURAS/PERFIL4.jpg";
 
 export const PerfilesMini = [
   { id: "Perfil1", imagen: Perfil1, name: "Perfil 1" },

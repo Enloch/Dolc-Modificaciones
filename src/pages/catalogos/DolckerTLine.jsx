@@ -6,14 +6,14 @@ import {
   CaracteristicasTline as Caracteristicas,
   DescargasTline as Descargas,
   DisenosTline as Disenos,
-  DolckerTline as Dolcker,
+  DolckertTline as Dolcker,
   Final,
   IndiceTline as Indice,
   SistemasTline as Sistemas,
   VentajasTline as Ventajas,
 } from "../../modules";
 
-const DolckerTLine = () => {
+const DolckertTline = () => {
   const indiceRef = useRef();
   const [showButton, setShowButton] = useState(false);
 
@@ -68,7 +68,7 @@ const DolckerTLine = () => {
   );
 };
 
-export default DolckerTLine;
+export default DolckertTline;
 
 const StyledButton = styled.button`
   position: fixed;

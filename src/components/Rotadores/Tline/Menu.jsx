@@ -4,10 +4,10 @@ import { NombreMateriales } from "./Materiales";
 import { SketchPicker } from "react-color";
 import IconoRAL from "../../../assets/icons/RAL.png";
 
-import Perfil1 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL1.jpg";
-import Perfil2 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL2.jpg";
-import Perfil3 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL3.jpg";
-import Perfil4 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL4.jpg";
+import Perfil1 from "../../../assets/images/DolckertTline/Diseno/Formato/MINIATURAS/PERFIL1.jpg";
+import Perfil2 from "../../../assets/images/DolckertTline/Diseno/Formato/MINIATURAS/PERFIL2.jpg";
+import Perfil3 from "../../../assets/images/DolckertTline/Diseno/Formato/MINIATURAS/PERFIL3.jpg";
+import Perfil4 from "../../../assets/images/DolckertTline/Diseno/Formato/MINIATURAS/PERFIL4.jpg";
 const MenuContainer = styled.div`
   width: 100%;
   display: ${({ visible }) => (visible ? "grid" : "none")};
