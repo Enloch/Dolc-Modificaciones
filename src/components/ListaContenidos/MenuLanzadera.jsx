@@ -1,5 +1,5 @@
 import useListaContenidos from "../../hooks/useListaContenidos";
-import menuLanzaderaFr from "../../utils/fr/menuLanzaderaFR.jsx";
+import menuLanzaderaFr from "../../utils/fr/menuLanzaderaFr";
 import menuLanzaderaEn from "../../utils/en/menuLanzaderaEn";
 import menuLanzadera from "../../utils/menuLanzadera";
 import StyledListaContenidos from "./styles";
