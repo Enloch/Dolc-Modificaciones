@@ -1,13 +1,13 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
-import imgSeleccionar from "../../assets/images/DolckertTline/Series/INVICTUS/DOLCKER INVICTUS materiales seleccion_WEBP.webp";
-import InteractivoImg from "../../assets/images/DolckertTline/Interactivofachada.jpg";
-import MuestraImg from "../../assets/images/DolckertTline/ranurado11mm.webp";
+import imgSeleccionar from "../../assets/images/DolckerTline/Series/INVICTUS/DOLCKER INVICTUS materiales seleccion_WEBP.webp";
+import InteractivoImg from "../../assets/images/DolckerTline/Interactivofachada.jpg";
+import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
-  "../../assets/images/DolckertTline/Series/INVICTUS/AMBIENTES/**"
+  "../../assets/images/DolckerTline/Series/INVICTUS/AMBIENTES/**"
 );
 
 const muestrasImports = import.meta.globEager(
-  "../../assets/images/DolckertTline/Series/INVICTUS/DESPIECE/**"
+  "../../assets/images/DolckerTline/Series/INVICTUS/DESPIECE/**"
 );
 
 const acabadosImports = import.meta.globEager("../../assets/icons/acabados/**");

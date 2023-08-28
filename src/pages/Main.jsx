@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import DolkSystem from "./landing/DolkSystem";
 import Navbar from "../components/NavBar";
 import Logo from "../assets/images/Inicio/logo.png";
-import DolckertTline from "./landing/TLine";
+import DolckerTline from "./landing/TLine";
 import G10 from "./landing/G10";
 
 const Main = () => {
@@ -29,7 +29,7 @@ const Main = () => {
       <div ref={dolckerSystemRef}>
         <DolkSystem id='dolcker-system' />
       </div>
-      {/* <DolckertTline /> */}
+      {/* <DolckerTline /> */}
       <Footer />
     </>
   );

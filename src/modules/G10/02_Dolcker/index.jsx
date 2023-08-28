@@ -3,8 +3,8 @@ import { Titulo } from "../../../components/Titulos";
 import StyledDolcker from "./styles";
 import { COLORS } from "../../../global/GlobalStyles";
 
-import img2 from "../../../assets/images/DolckertTline/jorgeobra.jpg";
-import img3 from "../../../assets/images/DolckertTline/arquitecto.webp";
+import img2 from "../../../assets/images/DolckerTline/jorgeobra.jpg";
+import img3 from "../../../assets/images/DolckerTline/arquitecto.webp";
 import VisualizadorNota from "../../../components/VisualizadorNota";
 import Text from "../../../components/Text";
 

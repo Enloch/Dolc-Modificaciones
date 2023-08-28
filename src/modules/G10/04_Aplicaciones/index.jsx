@@ -2,11 +2,11 @@ import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo, Titulo2, Titulo3 } from "../../../components/Titulos";
 import { COLORS, DISTANCES } from "../../../global/GlobalStyles";
 import StyledAplicaciones from "./styles";
-import img1 from "../../../assets/images/DolckertTline/arquitecto.webp";
-import img2 from "../../../assets/images/DolckertTline/arquitecto.webp";
-import img3 from "../../../assets/images/DolckertTline/jorgeobra.jpg";
-import img4 from "../../../assets/images/DolckertTline/arquitecto.webp";
-import img5 from "../../../assets/images/DolckertTline/arquitecto.webp";
+import img1 from "../../../assets/images/DolckerTline/arquitecto.webp";
+import img2 from "../../../assets/images/DolckerTline/arquitecto.webp";
+import img3 from "../../../assets/images/DolckerTline/jorgeobra.jpg";
+import img4 from "../../../assets/images/DolckerTline/arquitecto.webp";
+import img5 from "../../../assets/images/DolckerTline/arquitecto.webp";
 import Cita from "../../../components/Cita";
 
 const Aplicaciones = ({ id }) => {

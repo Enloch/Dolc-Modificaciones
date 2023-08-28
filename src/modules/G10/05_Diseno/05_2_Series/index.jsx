@@ -24,7 +24,7 @@ import indicadoresFormato from "../../../../configs/configVolumenVariacion";
 import { useListaCambios } from "../../../../contexts/MultipleOptionsContext";
 import Anotaciones from "../../../../components/Anotacion/Anotaciones";
 import ImageWithCaption from "../../../../components/ImageWithCaption";
-import configfachadaimg from "../../../../assets/images/DolckertTline/configcenefas.jpg";
+import configfachadaimg from "../../../../assets/images/DolckerTline/configcenefas.jpg";
 import { useRef } from "react";
 import createPDF from "../../../../utils/createPDF";
 

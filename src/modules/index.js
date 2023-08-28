@@ -24,7 +24,7 @@ export { default as SistemasEsc } from "./Escamas/Escamas07_Sistemas";
 export { default as DescargasEsc } from "./Escamas/Escamas08_Descargas";
 // Tline
 export { default as IndiceTline } from "./Tline/01_Inicio";
-export { default as DolckertTline } from "./Tline/02_Dolcker";
+export { default as DolckerTline } from "./Tline/02_Dolcker";
 export { default as VentajasTline } from "./Tline/03_Ventajas";
 export { default as AplicacionesTline } from "./Tline/04_Aplicaciones";
 export { default as DisenosTline } from "./Tline/05_Diseno";

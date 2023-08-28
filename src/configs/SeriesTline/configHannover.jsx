@@ -1,13 +1,13 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
-import imgSeleccionar from "../../assets/images/DolckertTline/Series/HANNOVER/DOLCKER HANNOVER materiales seleccion_WEBP.webp";
-import InteractivoImg from "../../assets/images/DolckertTline/Interactivofachada.jpg";
-import MuestraImg from "../../assets/images/DolckertTline/ranurado11mm.webp";
+import imgSeleccionar from "../../assets/images/DolckerTline/Series/HANNOVER/DOLCKER HANNOVER materiales seleccion_WEBP.webp";
+import InteractivoImg from "../../assets/images/DolckerTline/Interactivofachada.jpg";
+import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
-  "../../assets/images/DolckertTline/Series/HANNOVER/AMBIENTES/**"
+  "../../assets/images/DolckerTline/Series/HANNOVER/AMBIENTES/**"
 );
 
 const muestrasImports = import.meta.globEager(
-  "../../assets/images/DolckertTline/Series/HANNOVER/DESPIECE/**"
+  "../../assets/images/DolckerTline/Series/HANNOVER/DESPIECE/**"
 );
 
 const acabadosImports = import.meta.globEager("../../assets/icons/acabados/**");

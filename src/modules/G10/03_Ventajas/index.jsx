@@ -1,7 +1,7 @@
 import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo } from "../../../components/Titulos";
 import StyledVentajas from "./styles";
-import img1 from "../../../assets/images/DolckertTline/7475.webp";
+import img1 from "../../../assets/images/DolckerTline/7475.webp";
 import Text from "../../../components/Text";
 import { COLORS } from "../../../global/GlobalStyles";
 import Listado from "../../../components/Listado";

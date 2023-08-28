@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import StyledVisualizadorDesplazador from "./styles";
-import acabados from "../../../assets/images/DolckertTline/Diseno/Acabados/acabados.webp";
+import acabados from "../../../assets/images/DolckerTline/Diseno/Acabados/acabados.webp";
 import useConfigDesplazador from "../../../hooks/Tline/useConfigDesplazador";
 import Indicador from "./Indicador";
 

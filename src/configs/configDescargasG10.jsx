@@ -1,4 +1,4 @@
-import imagen from "../assets/images/DolckertTline/ranurado11mm.webp";
+import imagen from "../assets/images/DolckerTline/ranurado11mm.webp";
 const downloadImgImport = import.meta.globEager(
   "../assets/images/Descargas/**"
 );

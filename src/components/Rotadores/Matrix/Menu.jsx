@@ -16,10 +16,10 @@ import {
 import IconoRAL from "../../../assets/icons/RAL.png";
 import { Mallas } from "./Mallas";
 
-import Perfil1 from "../../../assets/images/DolckertTline/Diseno/Formato/MINIATURAS/PERFIL1.jpg";
-import Perfil2 from "../../../assets/images/DolckertTline/Diseno/Formato/MINIATURAS/PERFIL2.jpg";
-import Perfil3 from "../../../assets/images/DolckertTline/Diseno/Formato/MINIATURAS/PERFIL3.jpg";
-import Perfil4 from "../../../assets/images/DolckertTline/Diseno/Formato/MINIATURAS/PERFIL4.jpg";
+import Perfil1 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL1.jpg";
+import Perfil2 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL2.jpg";
+import Perfil3 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL3.jpg";
+import Perfil4 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL4.jpg";
 
 const Menu = ({
   handleModelChange,

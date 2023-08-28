@@ -26,7 +26,7 @@ const MainEn = () => {
       <div ref={dolckerSystemRef}>
         <DolkSystem id='dolcker-system' />
       </div>
-      {/* <DolckertTline /> */}
+      {/* <DolckerTline /> */}
       <Footer />
     </>
   );

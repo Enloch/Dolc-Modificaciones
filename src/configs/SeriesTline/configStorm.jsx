@@ -1,12 +1,12 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
-import imgSeleccionar from "../../assets/images/DolckertTline/Series/STORM/DOLCKER STORM materiales seleccion.webp";
-import MuestraImg from "../../assets/images/DolckertTline/ranurado11mm.webp";
+import imgSeleccionar from "../../assets/images/DolckerTline/Series/STORM/DOLCKER STORM materiales seleccion.webp";
+import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
-  "../../assets/images/DolckertTline/Series/STORM/AMBIENTES/**"
+  "../../assets/images/DolckerTline/Series/STORM/AMBIENTES/**"
 );
 
 const muestrasImports = import.meta.globEager(
-  "../../assets/images/DolckertTline/Series/STORM/DESPIECE/**"
+  "../../assets/images/DolckerTline/Series/STORM/DESPIECE/**"
 );
 
 const acabadosImports = import.meta.globEager("../../assets/icons/acabados/**");
