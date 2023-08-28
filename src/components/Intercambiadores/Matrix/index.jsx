@@ -73,8 +73,8 @@ export default function Intercambiador() {
             position={[-0.368, 0.438, 3.611]}
             rotation={[0.843, 0.365, -0.149]}
           />
-          <Environment files='/Test.exr' blur={1}></Environment>
-          <ambientLight intensity={0.3} />
+          {/* <Environment files='/Test.exr' blur={1}></Environment> */}
+          {/* <ambientLight intensity={0.3} /> */}
           <ContactShadows
             opacity={0.5}
             scale={4}
