@@ -13,17 +13,13 @@ import VisualizadorRotador from "../../../components/VisualizadorRotador";
 import config from "../../../configs/configPiezasEspeciales";
 import configAcabados from "../../../configs/configAcabados";
 import Series from "./05_2_Series";
-import img2 from "../../../assets/images/Diseno/Espesores/img1.webp";
-import img3 from "../../../assets/images/Diseno/Espesores/img2.webp";
 import ranurado11 from "../../../assets/images/DolckerTline/ranurado11mm.webp";
 import ranurado14 from "../../../assets/images/DolckerTline/ranurado11mm.webp";
 import ranurado20 from "../../../assets/images/DolckerTline/ranurado11mm.webp";
 import VisualizadorDesplazador from "../../../components/VisualizadorDesplazador";
 import Text from "../../../components/Text";
 import IndiceSeries from "./05_1_IndiceSeries";
-import Intercambiador from "../../../assets/images/DolckerTline/intercambiador.jpg";
 import ConfiguradorImg from "../../../assets/images/DolckerTline/formatoscolor.webp";
-import interactivoImg from "../../../assets/images/DolckerTline/interactivo.webp";
 import rotadorImg from "../../../assets/images/DolckerTline/config.jpg";
 
 const Disenos = ({ id }) => {
