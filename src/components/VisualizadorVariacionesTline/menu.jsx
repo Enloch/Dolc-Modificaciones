@@ -27,25 +27,9 @@ import {
 import {
   Fondos,
   Largos,
-  Formato20x120,
-  Formato30x120,
-  Formato30x60,
-  Formato30x90,
-  Formato40x120,
-  Formato40x80,
-  Formato45x90,
-  Formato50x100,
-  Formato50x120,
   Formato60x60,
   Formato60x120,
-  Formato60x90,
-  Formato80x80,
-  FormatoModular1,
-  FormatoModular2,
-  FormatoModular3,
   FormatoModular4,
-  FormatoModular5,
-  FormatoModular6,
   FormatoModular8,
   FormatoModular9,
   Perfil_1_Bronce,
@@ -58,7 +42,6 @@ import {
   Perfil_1_Embero_Dorado,
   Perfil_1_Nogal,
   Perfil_1_Olmo,
-  Perfil_1_RAL,
 } from "./data";
 
 const Menu = ({

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { NombreMateriales } from "./Materiales";
 import { SketchPicker } from "react-color";
 import {
@@ -13,13 +12,7 @@ import {
   ModelButton,
   Titulo,
 } from "./styles";
-import IconoRAL from "../../../assets/icons/RAL.png";
 import { Mallas } from "./Mallas";
-
-import Perfil1 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL1.jpg";
-import Perfil2 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL2.jpg";
-import Perfil3 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL3.jpg";
-import Perfil4 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL4.jpg";
 
 const Menu = ({
   handleModelChange,
@@ -30,14 +23,25 @@ const Menu = ({
   setColorPickerActive,
   setSelectedMatrix,
 }) => {
-  const [showModelButtons, setShowModelButtons] = useState(true);
+  const [showCategoryButtons, setShowCategoryButtons] = useState(true);
+  const [showModelButtons, setShowModelButtons] = useState(false);
   const [showMaterialButtons, setShowMaterialButtons] = useState(false);
   const [showMetales, setShowMetales] = useState(false);
   const [showMaderas, setShowMaderas] = useState(false);
   const [showColorPicker, setShowColorPicker] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(null);
 
+  const handleModels = () => {
+    setShowCategoryButtons(false);
+    setShowModelButtons(true);
+    setShowMaterialButtons(false);
+    setShowMetales(false); // Ocultar los botones de metales
+    setShowMaderas(false); // Ocultar los botones de maderas
+    setShowColorPicker(false); // Ocultar el color picker
+    setColorPickerActive(false); // Establecer colorPickerActive en false al seleccionar un material
+  };
   const handleToggleMaterialButtons = (matrix) => {
+    setShowCategoryButtons(false);
     setShowModelButtons(false);
     setShowMaterialButtons(!showMaterialButtons);
     setShowMetales(true); // Mostrar los botones de metales
@@ -48,7 +52,8 @@ const Menu = ({
   };
 
   const handleHideButtons = () => {
-    setShowModelButtons(true);
+    setShowCategoryButtons(true);
+    setShowModelButtons(false);
     setShowMaterialButtons(false);
     setShowMetales(false); // Ocultar los botones de metales
     setShowMaderas(false); // Ocultar los botones de maderas
@@ -62,10 +67,13 @@ const Menu = ({
 
   return (
     <div>
-      {showModelButtons && (
-        <MenuContainer visible={showModelButtons}>
+      {showCategoryButtons && (
+        <MenuContainer visible={showCategoryButtons}>
           {Object.keys(Mallas).map((category, i) => (
-            <ModelButton key={i} onClick={() => setSelectedCategory(category)}>
+            <ModelButton
+              key={i}
+              onClick={() => (setSelectedCategory(category), handleModels())}
+            >
               {`Category ${category}`}
               <ModelImage
                 src={Mallas[category].image}
@@ -75,16 +83,19 @@ const Menu = ({
           ))}
         </MenuContainer>
       )}
-      {selectedCategory &&
-        Mallas[selectedCategory].matrices.map((matrix, i) => (
-          <ModelButton
-            key={i}
-            onClick={() => handleToggleMaterialButtons(matrix)}
-          >
-            {matrix.name}
-            <ModelImage src={matrix.image} alt={matrix.name} />
-          </ModelButton>
-        ))}
+      {selectedCategory && (
+        <MenuContainer visible={showModelButtons}>
+          {Mallas[selectedCategory].matrices.map((matrix, i) => (
+            <ModelButton
+              key={i}
+              onClick={() => handleToggleMaterialButtons(matrix)}
+            >
+              {matrix.name}
+              <ModelImage src={matrix.image} alt={matrix.name} />
+            </ModelButton>
+          ))}
+        </MenuContainer>
+      )}
       {showMaterialButtons && (
         <>
           <Titulo onClick={handleHideButtons}>Volver a Modelos</Titulo>

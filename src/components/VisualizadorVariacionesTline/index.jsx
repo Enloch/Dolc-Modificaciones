@@ -8,7 +8,7 @@ import {
   Icono,
 } from "./styles";
 import Indicador from "../../assets/icons/open-indicator.svg";
-import { Fondo, Formato20x120, Perfil_1_Bronce } from "./data";
+import { Fondo } from "./data";
 import {
   SVG20,
   SVG30,

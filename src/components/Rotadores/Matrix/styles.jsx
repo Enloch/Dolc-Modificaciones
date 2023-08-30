@@ -171,13 +171,14 @@ export const ModelButton = styled.button`
   border: none;
   background: none;
   cursor: pointer;
-  width: auto;
+  width: 80%;
+  min-height: 60px;
 `;
 
 export const ModelImage = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
 `;
 export const Titulo = styled.h2`
   cursor: pointer;
