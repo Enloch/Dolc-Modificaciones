@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
+import { useControls } from "leva";
 import {
   OrbitControls,
   PerspectiveCamera,
@@ -8,6 +9,7 @@ import {
   useEnvironment,
   Lightformer,
   Sky,
+  RandomizedLight,
 } from "@react-three/drei";
 import { Modelo } from "./MatrixIntercambiador";
 import {
@@ -41,6 +43,23 @@ export default function Intercambiador() {
   const handleExpandClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const {
+    lightX,
+    lightY,
+    lightZ,
+    rotationX,
+    rotationY,
+    rotationZ,
+    Intensidad,
+  } = useControls({
+    lightX: { value: 0, min: -50, max: 50 },
+    lightY: { value: 4.205, min: -50, max: 50 },
+    lightZ: { value: 12, min: 1, max: 100 },
+    Intensidad: { value: 1, min: 0, max: 3, step: 0.1 },
+    // rotationX: { value: 0, min: -1, max: 1 },
+    // rotationY: { value: 0, min: -1, max: 1 },
+    // rotationZ: { value: 0, min: -1, max: 1 },
+  });
   return (
     <ContRotador>
       {/* <BotonExpandir onClick={handleExpandClick}>
@@ -58,32 +77,33 @@ export default function Intercambiador() {
             </IntroContent>
           </IntroContainer>
         )} */}
-        <Canvas linear flat style={{ position: "relative", top: 0, left: 0 }}>
-          <Sky
+        <Canvas
+          style={{ position: "relative", top: 0, left: 0 }}
+          shadows='percentage'
+        >
+          {/* <Sky
             distance={450000}
             sunPosition={[0, 1, 0]}
             inclination={0}
             azimuth={0.25}
-          />
+          /> */}
           <PerspectiveCamera
             makeDefault
-            far={1000}
+            far={50}
             near={0.1}
             fov={25.361}
             position={[-0.368, 0.438, 3.611]}
             rotation={[0.843, 0.365, -0.149]}
           />
-          {/* <Environment files='/Test.exr' blur={1}></Environment> */}
+          <Environment files='/PBR_HDRI.hdr' />
           {/* <ambientLight intensity={0.3} /> */}
-          <ContactShadows
-            opacity={0.5}
-            scale={4}
-            blur={1}
-            far={1}
-            resolution={256}
-            color='#000000'
-            position={[0, -0.1, 0]}
-            frames={1}
+          <directionalLight
+            intensity={Intensidad}
+            castShadow
+            decay={2}
+            position={[lightX, lightY, lightZ]}
+            rotation={[0, 0, 0.4]}
+            shadowMapWidth={2048}
           />
           <Modelo
             material={materialIndex}

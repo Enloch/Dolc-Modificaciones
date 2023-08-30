@@ -14,10 +14,13 @@
   "dependencies": {
     "@react-three/drei": "^9.74.6",
     "@react-three/fiber": "^8.13.0",
+    "@types/react": "^18.2.8",
+    "@types/three": "^0.152.1",
     "framer-motion": "^10.12.4",
     "gh-pages": "^4.0.0",
     "gltfjsx": "^6.2.11",
     "jspdf": "2.5.1",
+    "leva": "^0.9.35",
     "r3f-perf": "^7.1.2",
     "react": "^18.2.0",
     "react-color": "^2.19.3",
@@ -30,9 +33,7 @@
     "save": "^2.9.0",
     "save-dev": "^0.0.1-security",
     "styled-components": "5.3.3",
-    "three": "^0.153.0",
-    "@types/react": "^18.2.8",
-    "@types/three": "^0.152.1"
+    "three": "^0.153.0"
   },
   "devDependencies": {
     "@types/react": "17.0.41",

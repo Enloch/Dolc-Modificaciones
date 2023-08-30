@@ -22,7 +22,7 @@ export const CanvasContainer = styled.div`
   width: 100%;
   /* width: ${({ visible }) => (visible ? "75%" : "100%")}; */
   height: 100%;
-  cursor: all-scroll;
+  /* cursor: all-scroll; */
   @media screen and (max-width: 1080px) {
     width: 66%;
   }
