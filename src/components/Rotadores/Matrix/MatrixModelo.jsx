@@ -50,4 +50,4 @@ export function Modelo({
     </group>
   );
 }
-useGLTF.preload("/modelos/MatrixRotador.glb");
+// useGLTF.preload("/modelos/MatrixRotador.glb");

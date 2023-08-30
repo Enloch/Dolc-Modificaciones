@@ -489,4 +489,4 @@ export function Modelo(props) {
     </group>
   );
 }
-useGLTF.preload("/modelos/MatrixIntercambiador.gltf");
+// useGLTF.preload("/modelos/MatrixIntercambiador.gltf");
