@@ -1,6 +1,6 @@
 import { Titulo } from "../../../../components/Titulos";
 import { COLORS } from "../../../../global/GlobalStyles";
-import useImagesSeries from "../../../../hooks/useImagesSeriesTline";
+import useImagesSeries from "../../../../hooks/useImagesSeriesMatrix";
 import StyledIndiceSeries from "./styles";
 import React, { useState } from "react";
 
@@ -18,9 +18,9 @@ const IndiceSeries = ({ id, queSerieActiva }) => {
         backgroundColor={COLORS.gray02}
         style={{ paddingBottom: "0", rowGap: "20px" }}
       >
-        <Titulo style={{ paddingBottom: "0" }}>SERIES</Titulo>
+        <Titulo style={{ paddingBottom: "0" }}>Familias</Titulo>
         <select value={categoria} onChange={handleCategoriaChange}>
-          <option value='Todas'>Todas las series</option>
+          <option value='Todas'>Todas las familias</option>
           <option value='Piedra'>Piedra</option>
           <option value='Cemento'>Cemento</option>
           <option value='Marmol'>Mármol</option>

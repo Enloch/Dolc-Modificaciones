@@ -52,11 +52,12 @@ export const RotadorMenuContainer = styled.div`
   width: 33%;
   padding: 5px;
   background-color: #ffffff;
+  max-height: 100vh;
   height: 100%;
   border-left: 1px solid #e0e0e0;
   /* width: ${({ visible }) => (visible ? "25%" : "0")}; */
   /* display: ${({ visible }) => (visible ? "block" : "none")}; */
-
+  overflow-y: auto;
   @media (max-width: 480px) {
     width: 100%;
     padding: 5px;
@@ -106,26 +107,15 @@ export const R360Image = styled.img`
 
 export const MenuContainer = styled.div`
   width: 100%;
+  height: 100%;
   display: ${({ visible }) => (visible ? "grid" : "none")};
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   row-gap: 5px;
   @media (max-width: 480px) {
     flex-direction: row;
     justify-content: flex-start;
   }
 `;
-// export const MenuContainer = styled.div`
-//   width: 100%;
-//   display: ${({ visible }) => (visible ? "grid" : "none")};
-//   flex-direction: column;
-//   justify-content: center;
-//   flex-wrap: wrap;
-//   row-gap: 5px;
-//   @media (max-width: 480px) {
-//     flex-direction: row;
-//     justify-content: flex-start;
-//   }
-// `;
 
 export const MenuContainer2 = styled.div`
   width: 100%;
@@ -165,19 +155,28 @@ export const MaterialText = styled.span`
   font-size: 10px;
 `;
 
-export const ModelButton = styled.button`
-  margin: 0 auto;
+export const CategoryButton = styled.h2`
+  cursor: pointer;
+  margin: 5px;
+  ::before {
+    content: ">  ";
+  }
+`;
+
+export const ModelTitulo = styled.h3`
+  margin: 10px auto 10px 20px;
   padding: 0;
   border: none;
   background: none;
-  cursor: pointer;
-  width: 80%;
+  width: 100%;
   min-height: 60px;
+  text-align: left;
 `;
 
 export const ModelImage = styled.img`
-  width: 100%;
+  width: 80%;
   height: 100%;
+
   /* object-fit: cover; */
 `;
 export const Titulo = styled.h2`

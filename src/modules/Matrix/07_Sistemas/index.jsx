@@ -32,16 +32,16 @@ const SistemasTline = ({ id }) => {
             <a href={"#" + id[1]}>
               Sistema
               <br />
-              <strong>LINE</strong>
+              <strong>MATRIX</strong>
             </a>
           </li>
         </Enlaces>
       </StyledSistemas>
 
       <StyledSistemas id={id[1]}>
-        <Titulo2>LINE</Titulo2>
+        <Titulo2>MATRIX</Titulo2>
         <Text>
-          El sistema DOLCKER LINE para fachadas de cerámica tipo dolcker es un
+          El sistema DOLCKER MATRIX para fachadas de cerámica tipo dolcker es un
           sistema con perfilería de alta inercia y doble seguridad. Todos y cada
           uno de los elementos que componen este sistema están fabricados con
           materias primas de máxima calidad. Se trata de un sistema de fijación

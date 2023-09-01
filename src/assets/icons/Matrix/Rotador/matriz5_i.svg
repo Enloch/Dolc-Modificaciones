@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.24 7.76">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: .1px;
+      }
+    </style>
+  </defs>
+  <g id="_0" data-name="0">
+    <g>
+      <g id="LWPOLYLINE">
+        <path class="cls-1" d="m41.11,6.1c.06,0,.1.04.1.1v.23c0,.06.04.1.1.1h1.78c.06,0,.1.04.1.1v.43c0,.14-.11.25-.25.25h0c-.14,0-.25-.11-.25-.25v-.18h-1.75c-.06,0-.1-.04-.1-.1v-.2c0-.06-.04-.1-.1-.1h-18.2c-.06,0-.1.04-.1.1v.41c0,.06.04.1.1.1h.36c.06,0,.1.04.1.1v.43c0,.06-.04.1-.1.1h-1.43c-.06,0-.1-.04-.1-.1v-.43c0-.06.04-.1.1-.1h.49c.06,0,.1-.04.1-.1v-.41c0-.06-.04-.1-.1-.1H6.36s-.98,0-.98,0c-.06,0-.1.04-.1.1v1.04c0,.06-.04.1-.1.1H.15c-.06,0-.1-.04-.1-.1v-.18c0-.06.04-.1.1-.1h1.05l.05.03.05-.03h3.51c.06,0,.1-.04.1-.1v-.66c0-.06-.04-.1-.1-.1h-1.74c-.06,0-.1-.04-.1-.1v-.18c0-.06.04-.1.1-.1h4.3"/>
+      </g>
+      <g id="LWPOLYLINE-2" data-name="LWPOLYLINE">
+        <line class="cls-1" x1="10.38" y1="6.1" x2="16.96" y2="6.1"/>
+      </g>
+      <g id="LWPOLYLINE-3" data-name="LWPOLYLINE">
+        <line class="cls-1" x1="19.97" y1="6.1" x2="26.55" y2="6.1"/>
+      </g>
+      <g id="LWPOLYLINE-4" data-name="LWPOLYLINE">
+        <line class="cls-1" x1="29.57" y1="6.1" x2="36.15" y2="6.1"/>
+      </g>
+      <g id="LWPOLYLINE-5" data-name="LWPOLYLINE">
+        <line class="cls-1" x1="39.16" y1="6.1" x2="41.11" y2="6.1"/>
+      </g>
+      <g id="ARC">
+        <path class="cls-1" d="m10.38,6.1c1.57-.83,2.16-2.78,1.33-4.34S8.93-.41,7.36.43c-1.57.83-2.16,2.78-1.33,4.34.3.56.76,1.03,1.33,1.33"/>
+      </g>
+      <g id="CIRCLE">
+        <circle class="cls-1" cx="8.87" cy="3.26" r="2.83"/>
+      </g>
+      <g id="ARC-2" data-name="ARC">
+        <path class="cls-1" d="m19.97,6.1c1.57-.83,2.16-2.78,1.33-4.34-.83-1.57-2.78-2.16-4.34-1.33-1.57.83-2.16,2.78-1.33,4.34.3.56.76,1.03,1.33,1.33"/>
+      </g>
+      <g id="CIRCLE-2" data-name="CIRCLE">
+        <circle class="cls-1" cx="18.46" cy="3.26" r="2.83"/>
+      </g>
+      <g id="ARC-3" data-name="ARC">
+        <path class="cls-1" d="m29.57,6.1c1.57-.83,2.16-2.78,1.33-4.34s-2.78-2.16-4.34-1.33-2.16,2.78-1.33,4.34c.3.56.76,1.03,1.33,1.33"/>
+      </g>
+      <g id="CIRCLE-3" data-name="CIRCLE">
+        <circle class="cls-1" cx="28.06" cy="3.26" r="2.83"/>
+      </g>
+      <g id="ARC-4" data-name="ARC">
+        <path class="cls-1" d="m39.16,6.1c1.57-.83,2.16-2.78,1.33-4.34s-2.78-2.16-4.34-1.33-2.16,2.78-1.33,4.34c.3.56.76,1.03,1.33,1.33"/>
+      </g>
+      <g id="CIRCLE-4" data-name="CIRCLE">
+        <circle class="cls-1" cx="37.65" cy="3.26" r="2.83"/>
+      </g>
+    </g>
+  </g>
+</svg>

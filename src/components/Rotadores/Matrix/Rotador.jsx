@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   OrbitControls,
@@ -57,7 +57,12 @@ export default function Rotador() {
             </IntroContent>
           </IntroContainer>
         )}
-        <Canvas linear flat style={{ position: "relative", top: 0, left: 0 }}>
+        <Canvas
+          linear
+          flat
+          style={{ position: "relative", top: 0, left: 0 }}
+          shadowMap
+        >
           <PerspectiveCamera
             makeDefault
             fov={50}
@@ -72,7 +77,8 @@ export default function Rotador() {
               scale={[10, 5]} // Scale it any way you prefer (optional = [1, 1])
             />
           </Environment>
-          <ambientLight intensity={0.3} />
+          {/* <ambientLight intensity={0.3} /> */}
+          <pointLight position={[0, 0, 10]} intensity={0.01} castShadow />
           <ContactShadows
             opacity={0.5}
             scale={4}
@@ -80,17 +86,19 @@ export default function Rotador() {
             far={1}
             resolution={256}
             color='#000000'
-            position={[0, -0.1, 0]}
-            frames={1}
+            position={[0, 0, 0]}
+            frames={2}
           />
-          <Modelo
-            material={materialIndex}
-            metalness={materialIndex}
-            roughness={materialIndex}
-            color={color}
-            colorPickerActive={colorPickerActive} // Pasar el estado colorPickerActive al componente Model1
-            selectedMatrix={selectedMatrix} // Pass selectedMatrix to Modelo
-          />
+          <Suspense fallback={null}>
+            <Modelo
+              material={materialIndex}
+              metalness={materialIndex}
+              roughness={materialIndex}
+              color={color}
+              colorPickerActive={colorPickerActive} // Pasar el estado colorPickerActive al componente Model1
+              selectedMatrix={selectedMatrix} // Pass selectedMatrix to Modelo
+            />
+          </Suspense>
           <OrbitControls
             maxPolarAngle={1.6}
             minDistance={0.2}

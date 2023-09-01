@@ -10,7 +10,6 @@ export function Modelo({
   selectedMatrix,
   ...props
 }) {
-
   const Acabados = Materiales.map((material) => useTexture(material.map));
   const Metalizado = MaterialesMetalizados.map((metal) => metal.metalness);
   const Aspereza = MaterialesMetalizados.map((aspereza) => aspereza.roughness);
@@ -26,7 +25,8 @@ export function Modelo({
   }, [selectedMatrix]);
   const geometry1 = nodes[selectedGeometry1]?.geometry;
   const geometry2 = nodes[selectedGeometry2]?.geometry;
-
+  console.log("geometry1: ", selectedGeometry1);
+  console.log("geometry2: ", selectedGeometry2);
   return (
     <group {...props} dispose={null}>
       <mesh castShadow receiveShadow geometry={geometry1}>
@@ -38,7 +38,7 @@ export function Modelo({
             color={null}
           />
         ) : (
-          <meshStandardMaterial color={color} metalness='0.5' />
+          <meshStandardMaterial color={color} metalness='0.5' roughness='0.5' />
         )}
       </mesh>
       <mesh

@@ -10,6 +10,8 @@ import {
   Lightformer,
   Sky,
   RandomizedLight,
+  AccumulativeShadows,
+  SoftShadows,
 } from "@react-three/drei";
 import { Modelo } from "./MatrixIntercambiador";
 import {
@@ -52,10 +54,10 @@ export default function Intercambiador() {
     rotationZ,
     Intensidad,
   } = useControls({
-    lightX: { value: 0, min: -50, max: 50 },
-    lightY: { value: 4.205, min: -50, max: 50 },
-    lightZ: { value: 12, min: 1, max: 100 },
-    Intensidad: { value: 1, min: 0, max: 3, step: 0.1 },
+    lightX: { value: 0, min: -50, max: 50, step: 0.1 },
+    lightY: { value: 4.205, min: -50, max: 50, step: 0.1 },
+    lightZ: { value: 12, min: 1, max: 100, step: 0.1 },
+    Intensidad: { value: 0.5, min: 0, max: 3, step: 0.1 },
     // rotationX: { value: 0, min: -1, max: 1 },
     // rotationY: { value: 0, min: -1, max: 1 },
     // rotationZ: { value: 0, min: -1, max: 1 },
@@ -78,8 +80,15 @@ export default function Intercambiador() {
           </IntroContainer>
         )} */}
         <Canvas
+          colorManagement
+          shadowMap
+          shadows 
           style={{ position: "relative", top: 0, left: 0 }}
-          shadows='percentage'
+          camera={{
+            position: [2.777, -1.686, 3.611],
+            rotation: [0.843, 0.365, -0.149],
+            fov: 25.361,
+          }}
         >
           {/* <Sky
             distance={450000}
@@ -87,38 +96,42 @@ export default function Intercambiador() {
             inclination={0}
             azimuth={0.25}
           /> */}
-          <PerspectiveCamera
-            makeDefault
-            far={50}
-            near={0.1}
-            fov={25.361}
-            position={[-0.368, 0.438, 3.611]}
-            rotation={[0.843, 0.365, -0.149]}
-          />
-          <Environment files='/PBR_HDRI.hdr' />
+          {/* <Environment files='/Test.hdr' background /> */}
           {/* <ambientLight intensity={0.3} /> */}
           <directionalLight
+            name='Sun'
             intensity={Intensidad}
-            castShadow
             decay={2}
+            castShadow={true}
             position={[lightX, lightY, lightZ]}
-            rotation={[0, 0, 0.4]}
-            shadowMapWidth={2048}
+            rotation={[-0.256, -0.335, 0.318]}
           />
-          <Modelo
-            material={materialIndex}
-            metalness={materialIndex}
-            roughness={materialIndex}
-            color={color}
-            colorPickerActive={colorPickerActive} // Pasar el estado colorPickerActive al componente Model1
-            selectedMatrix={selectedMatrix} // Pass selectedMatrix to Modelo
-          />
-          {/* <OrbitControls
-            maxPolarAngle={1.6}
-            minDistance={0.2}
-            maxDistance={0.6}
-            enableZoom={true}
-            enablePan={false}
+          <Modelo />
+          <AccumulativeShadows
+            resolution={1024}
+            frames={100}
+            colorBlend={1.5}
+            alphaTest={0.85}
+            opacity={1.65}
+            scale={6}
+          >
+            <RandomizedLight
+              radius={3}
+              ambient={0.6}
+              position={[-10, 5, 15]}
+              bias={0.001}
+              size={1}
+              mapSize={1024}
+            />
+          </AccumulativeShadows>
+          {/* <SoftShadows /> */}
+          {/*
+          <OrbitControls
+          // maxPolarAngle={1.6}
+          // minDistance={0.2}
+          // maxDistance={0.6}
+          // enableZoom={true}
+          // enablePan={false}
           /> */}
         </Canvas>
       </CanvasContainer>

@@ -9,60 +9,40 @@ import { useGLTF, PerspectiveCamera, useTexture } from "@react-three/drei";
 
 export function Modelo(props) {
   const { nodes, materials } = useGLTF("/modelos/MatrixIntercambiador.glb");
-  let material = useTexture("/texturas/OroMate.webp");
   return (
     <group {...props} dispose={null}>
-      {/* <PerspectiveCamera
-        name='Camera'
-        makeDefault={false}
-        far={1000}
-        near={0.1}
-        fov={25.361}
-        position={[-0.368, 0.438, 3.611]}
-        rotation={[0.843, 0.365, -0.149]}
-      /> */}
+      <group position={[0.558, 4.322, -1.586]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Mesh.geometry}
+          material={materials.PaletteMaterial003}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Mesh_1.geometry}
+          material={materials.PaletteMaterial004}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Mesh_2.geometry}
+          material={materials.PaletteMaterial001}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Mesh_3.geometry}
+          material={materials.PaletteMaterial002}
+        />
+      </group>
       <mesh
-        name='matriz3_k_v_2'
         castShadow
         receiveShadow
-        geometry={nodes.matriz3_k_v_2.geometry}
-      >
-        <meshStandardMaterial map={material} />
-      </mesh>
-      {/* <directionalLight
-        name='Sun'
-        intensity={1366}
-        decay={2}
-        position={[0, 4.205, 9.22]}
-        rotation={[-0.081, -0.376, 0.4]}
-      /> */}
-      <mesh
-        name='Mesh'
-        castShadow
-        receiveShadow
-        geometry={nodes.Mesh.geometry}
-        material={materials.PaletteMaterial003}
-      />
-      <mesh
-        name='Mesh_1'
-        castShadow
-        receiveShadow
-        geometry={nodes.Mesh_1.geometry}
-        material={materials.PaletteMaterial004}
-      />
-      <mesh
-        name='Mesh_2'
-        castShadow
-        receiveShadow
-        geometry={nodes.Mesh_2.geometry}
-        material={materials.PaletteMaterial001}
-      />
-      <mesh
-        name='Mesh_3'
-        castShadow
-        receiveShadow
-        geometry={nodes.Mesh_3.geometry}
-        material={materials.PaletteMaterial002}
+        geometry={nodes.matriz3_k_v_1.geometry}
+        material={materials.Base1}
+        position={[-3.711, 3.525, -1.407]}
       />
     </group>
   );

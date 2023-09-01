@@ -77,20 +77,6 @@ const DisenosTline = ({ id }) => {
         <Configurador1Tline />
       </StyledDisenos>
       <StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Acabados Cerámica</Titulo2>
-        <Anotaciones>
-          <Anotacion
-            type='normal'
-            text='Pulsa en el punto para ver todas las posibilidades de piezas especiales'
-          />
-          <Anotacion
-            type='swipe'
-            text='Desliza con el ratón o el dedo para apreciar la textura'
-          />
-        </Anotaciones>
-        <VisualizadorDesplazador config={configAcabados} />
-      </StyledDisenos>
-      <StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
         <Titulo2>Acabados y Perfiles de Cenefas</Titulo2>
         <Anotaciones>
           <Anotacion
@@ -106,47 +92,8 @@ const DisenosTline = ({ id }) => {
           <RotadorMatrix />
         </div>
       </StyledDisenos>
-      <StyledDisenos id={id[4]} backgroundColor={COLORS.gray01} isEspesores>
-        <Titulo2>Espesores</Titulo2>
-        <div className='espesor espesor-1'>
-          <img src={ranurado6} alt='' />
-          <ul>
-            <strong>TC 6 / 6 mm.</strong>
-            <li>Suelo</li>
-            <li>Techo</li>
-            <li>Fachada</li>
-            <li>Recerco</li>
-          </ul>
-        </div>
-        <div className='espesor espesor-2'>
-          <img src={ranurado9} alt='' />
-          <ul>
-            <strong>TC 9 / 9 mm.</strong>
-            <li>Suelo</li>
-            <li>Techo</li>
-            <li>Fachada</li>
-            <li>Recerco</li>
-          </ul>
-        </div>
-        <div className='espesor espesor-3'>
-          <img src={ranurado11} alt='' />
-          <ul>
-            <strong>TC 11 / 11 mm.</strong>
-            <li>Suelo</li>
-            <li>Techo</li>
-            <li>Fachada</li>
-            <li>Recerco</li>
-          </ul>
-        </div>
-      </StyledDisenos>
-
       <IndiceSeries id={id[6]} queSerieActiva={setSerieActiva} />
       <Series id={ids} serieActivaMostrar={serieActiva} />
-      <StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
-        {/* <Titulo2>Formato</Titulo2> */}
-        <Anotacion {...propsFormato.anotacion} />
-        <Configurador2Tline />
-      </StyledDisenos>
     </>
   );
 };

@@ -9,7 +9,7 @@ import Listado from "../../../components/Listado";
 const VentajasTline = ({ id }) => {
   return (
     <StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-      <Titulo>Ventajas del sistema Dolcker T-LINE</Titulo>
+      <Titulo>Ventajas del sistema Dolcker Matrix</Titulo>
       <ImageWithCaption
         src={img1}
         alt='Imagen de Ventajas 1'
