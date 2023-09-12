@@ -7,7 +7,10 @@ import {
   ContactShadows,
   useEnvironment,
   Lightformer,
+  useHelper,
 } from "@react-three/drei";
+import { useControls } from "leva";
+
 import { Modelo } from "./MatrixModelo";
 import {
   ContRotador,
@@ -24,6 +27,7 @@ import Menu from "./Menu";
 import R360 from "../../../assets/icons/360.svg";
 import IconoAbrir from "../../../assets/icons/open-indicator.svg";
 import IconoCerrar from "../../../assets/icons/close-indicator.svg";
+
 export default function Rotador() {
   const [materialIndex, setMaterialIndex] = useState(0);
   const [showIntro, setShowIntro] = useState(true);
@@ -57,28 +61,29 @@ export default function Rotador() {
             </IntroContent>
           </IntroContainer>
         )}
-        <Canvas
-          linear
-          flat
-          style={{ position: "relative", top: 0, left: 0 }}
-          shadowMap
-        >
+        <Canvas linear style={{ position: "relative", top: 0, left: 0 }}>
           <PerspectiveCamera
             makeDefault
             fov={50}
             position={[0, -1, 1]}
             rotation={[-Math.PI / 2, 0, 0]}
           />
-          <Environment files='/Test.exr' blur={1}>
+          {/* <Environment files='/Test.exr' blur={1} >
             <Lightformer
               form='rect' // circle | ring | rect (optional, default = rect)
               intensity={1} // power level (optional = 1)
               color='white' // (optional = white)
               scale={[10, 5]} // Scale it any way you prefer (optional = [1, 1])
+
             />
-          </Environment>
-          {/* <ambientLight intensity={0.3} /> */}
-          <pointLight position={[0, 0, 10]} intensity={0.01} castShadow />
+          </Environment> */}
+          <hemisphereLight intensity={0.35} />
+          <ambientLight intensity={0.2} />
+          <pointLight position={[10, 0, 10]} intensity={0.75} castShadow />
+          <pointLight position={[-10, 0, 10]} intensity={0.75} castShadow />
+          <pointLight position={[0, 0, 10]} intensity={0.25} castShadow />
+          <pointLight position={[0, 0, -10]} intensity={1} castShadow />
+
           <ContactShadows
             opacity={0.5}
             scale={4}

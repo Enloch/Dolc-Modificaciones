@@ -10,6 +10,7 @@ export function Modelo({
   selectedMatrix,
   ...props
 }) {
+  const Bump = useTexture("/texturas/brushed.jpg");
   const Acabados = Materiales.map((material) => useTexture(material.map));
   const Metalizado = MaterialesMetalizados.map((metal) => metal.metalness);
   const Aspereza = MaterialesMetalizados.map((aspereza) => aspereza.roughness);
@@ -35,7 +36,7 @@ export function Modelo({
             map={Acabados[material]}
             roughness={Aspereza[material]}
             metalness={Metalizado[material]}
-            color={null}
+            color={"#FFFFFF"}
           />
         ) : (
           <meshStandardMaterial color={color} metalness='0.5' roughness='0.5' />

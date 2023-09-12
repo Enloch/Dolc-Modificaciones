@@ -69,7 +69,7 @@ export const Materiales = [
   { map: EmberoTexturaRugoso },
 ];
 export const MaterialesMetalizados = [
-  { name: PlataMate, roughness: "0.65", metalness: "0.75" },
+  { name: PlataMate, roughness: "0.65", metalness: "0.1" },
   { name: PlataGrata, roughness: "0.6", metalness: "0.6" },
   { name: PlataGrataRFP, roughness: "0.55", metalness: "0.75" },
   { name: PlataBrillo, roughness: "0.35", metalness: "0.85" },
