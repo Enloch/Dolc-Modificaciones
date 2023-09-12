@@ -6,9 +6,12 @@ Files: public/modelos/MatrixIntercambiador.gltf [28.94MB] >/modelos MatrixInterc
 
 import React, { useRef } from "react";
 import { useGLTF, PerspectiveCamera, useTexture } from "@react-three/drei";
-
+import * as THREE from "three";
 export function Modelo(props) {
   const { nodes, materials } = useGLTF("/modelos/MatrixIntercambiador.glb");
+  Object.values(materials).forEach((material) => {
+    material.side = THREE.FrontSide;
+  });
   return (
     <group {...props} dispose={null}>
       <group position={[0.558, 4.322, -1.586]}>

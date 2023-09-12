@@ -6,7 +6,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Base(props) {
-  const { nodes, materials } = useGLTF("/modelos/CajaIntercambiador.gltf");
+  const { nodes, materials } = useGLTF("/modelos/Base.gltf");
   return (
     <group {...props} dispose={null}>
       <group position={[0.558, 4.322, -1.586]}>
@@ -45,4 +45,4 @@ export function Base(props) {
   );
 }
 
-useGLTF.preload("/modelos/CajaIntercambiador.gltf");
+useGLTF.preload("/modelos/Base.gltf");
