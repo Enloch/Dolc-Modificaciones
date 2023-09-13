@@ -20,6 +20,29 @@ import OlmoRugoso from "/texturas/Matrix/OlmoRugoso.webp";
 import NogalRugoso from "/texturas/Matrix/NogalRugoso.webp";
 import EmberoDoradoRugoso from "/texturas/Matrix/EmberoDoradoRugoso.webp";
 import EmberoTexturaRugoso from "/texturas/Matrix/EmberoTexturaRugoso.webp";
+
+import PlataMateHorizontal from "/texturas/PlataMate.webp";
+import PlataGrataHorizontal from "/texturas/PlataGrata.webp";
+import PlataGrataRFPHorizontal from "/texturas/PlataGrata.webp";
+import PlataBrilloHorizontal from "/texturas/PlataBrillo.webp";
+import OroMateHorizontal from "/texturas/OroMate.webp";
+import OroGrataHorizontal from "/texturas/OroGrata.webp";
+import OroGrataRFPHorizontal from "/texturas/OroGrata.webp";
+import BronceMateHorizontal from "/texturas/BronceMate.webp";
+import BronceGrataHorizontal from "/texturas/BronceGrata.webp";
+import BronceGrataRFPHorizontal from "/texturas/BronceGrata.webp";
+import InoxMateHorizontal from "/texturas/InoxMate.webp";
+import InoxGrataHorizontal from "/texturas/InoxGrata.webp";
+import InoxGrataRFPHorizontal from "/texturas/InoxGrata.webp";
+import BurdeosMateHorizontal from "/texturas/BurdeosMate.webp";
+import BurdeosGrataHorizontal from "/texturas/BurdeosGrata.webp";
+import BurdeosGrataRFPHorizontal from "/texturas/BurdeosGrata.webp";
+import NegroGrataHorizontal from "/texturas/NegroGrata.webp";
+import NegroGrataRFPHorizontal from "/texturas/NegroGrata.webp";
+import OlmoRugosoHorizontal from "/texturas/OlmoRugoso.webp";
+import NogalRugosoHorizontal from "/texturas/NogalRugoso.webp";
+import EmberoDoradoRugosoHorizontal from "/texturas/EmberoDoradoRugoso.webp";
+import EmberoTexturaRugosoHorizontal from "/texturas/EmberoTexturaRugoso.webp";
 //minis
 import PlataMateMini from "/texturasmini/PlataMate.jpg";
 import PlataGrataMini from "/texturasmini/PlataGrata.jpg";
@@ -91,6 +114,31 @@ export const MaterialesMetalizados = [
   { name: NogalRugoso, roughness: "0.6", metalness: "0.2" },
   { name: EmberoDoradoRugoso, roughness: "0.6", metalness: "0.2" },
   { name: EmberoTexturaRugoso, roughness: "0.6", metalness: "0.2" },
+];
+
+export const MaterialesMetalizadosHorizontal = [
+  { name: PlataMateHorizontal, roughness: "0.65", metalness: "0.75" },
+  { name: PlataGrataHorizontal, roughness: "0.6", metalness: "0.6" },
+  { name: PlataGrataRFPHorizontal, roughness: "0.55", metalness: "0.75" },
+  { name: PlataBrilloHorizontal, roughness: "0.35", metalness: "0.85" },
+  { name: OroMateHorizontal, roughness: "0.65", metalness: "0.75" },
+  { name: OroGrataHorizontal, roughness: "0.6", metalness: "0.6" },
+  { name: OroGrataRFPHorizontal, roughness: "0.55", metalness: "0.75" },
+  { name: BronceMateHorizontal, roughness: "0.65", metalness: "0.75" },
+  { name: BronceGrataHorizontal, roughness: "0.6", metalness: "0.6" },
+  { name: BronceGrataRFPHorizontal, roughness: "0.55", metalness: "0.75" },
+  { name: InoxMateHorizontal, roughness: "0.65", metalness: "0.75" },
+  { name: InoxGrataHorizontal, roughness: "0.6", metalness: "0.6" },
+  { name: InoxGrataRFPHorizontal, roughness: "0.55", metalness: "0.75" },
+  { name: BurdeosMateHorizontal, roughness: "0.65", metalness: "0.75" },
+  { name: BurdeosGrataHorizontal, roughness: "0.6", metalness: "0.6" },
+  { name: BurdeosGrataRFPHorizontal, roughness: "0.55", metalness: "0.75" },
+  { name: NegroGrataHorizontal, roughness: "0.6", metalness: "0.6" },
+  { name: NegroGrataRFPHorizontal, roughness: "0.55", metalness: "0.75" },
+  { name: OlmoRugosoHorizontal, roughness: "0.6", metalness: "0.2" },
+  { name: NogalRugosoHorizontal, roughness: "0.6", metalness: "0.2" },
+  { name: EmberoDoradoRugosoHorizontal, roughness: "0.6", metalness: "0.2" },
+  { name: EmberoTexturaRugosoHorizontal, roughness: "0.6", metalness: "0.2" },
 ];
 export const NombreMateriales = [
   { nombre: "Plata Mate", textura: PlataMateMini, tipo: "metal" },
