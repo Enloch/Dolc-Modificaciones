@@ -15,20 +15,11 @@ import {
   ContRotador,
   CanvasContainer,
   RotadorMenuContainer,
-  IntroContainer,
-  IntroContent,
-  IntroImage,
-  IntroText,
-  BotonExpandir,
-  ImagenExpandir,
-  MenuContainer,
   MenuContainer2,
   MaterialButton,
   MaterialImage,
   MaterialTextContainer,
   MaterialText,
-  ModelImage,
-  ModelTitulo,
   Titulo,
 } from "./styles";
 // import Menu from "./Menu";
@@ -83,7 +74,7 @@ export default function Intercambiador() {
     }
   }, [modelType]);
   const [selectedModel, setSelectedModel] = useState("matriz3_j_v_");
-  const applyChanges = () => {
+  const limpiarCambios = () => {
     // Por ahora, esta función solo limpia la selección.
     // Si necesitas realizar alguna otra acción cuando se aplican los cambios, puedes agregarla aquí.
     setSelectedIndices([]);
@@ -174,78 +165,72 @@ export default function Intercambiador() {
             </option>
           ))}
         </select>
-        {selectedIndices && selectedIndices.length > 0 && (
-          <div>
-            <select onChange={(e) => setSelectedModel(e.target.value)}>
-              {modelType === "vertical"
-                ? modelVerticalOptions.map((option, index) => (
-                    <option key={index} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))
-                : modelHorizontalOptions.map((option, index) => (
-                    <option key={index} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-            </select>
-            <div className='metales'>
-              <Titulo
-                onClick={() => (
-                  setShowMetales(!showMetales),
-                  setShowMaderas(false),
-                  setShowColorPicker(false),
-                  setColorPickerActive(false)
-                )}
-              >
-                Metales
-              </Titulo>
-              <MenuContainer2 visible={showMetales}>
-                {NombreMateriales.slice(0, 18).map((material, index) => (
-                  <MaterialButton
-                    key={index}
-                    onClick={() => handleMaterialChange(index)}
-                  >
-                    <MaterialImage
-                      src={material.textura}
-                      alt={`Material ${material.nombre}`}
-                    />
-                    <MaterialTextContainer>
-                      <MaterialText>{material.nombre}</MaterialText>
-                    </MaterialTextContainer>
-                  </MaterialButton>
+        <div>
+          <select onChange={(e) => setSelectedModel(e.target.value)}>
+            {modelType === "vertical"
+              ? modelVerticalOptions.map((option, index) => (
+                  <option key={index} value={option.value}>
+                    {option.label}
+                  </option>
+                ))
+              : modelHorizontalOptions.map((option, index) => (
+                  <option key={index} value={option.value}>
+                    {option.label}
+                  </option>
                 ))}
-              </MenuContainer2>
-              <Titulo
-                onClick={() => (
-                  setShowMaderas(!showMaderas),
-                  setShowMetales(false),
-                  setShowColorPicker(false),
-                  setColorPickerActive(false)
-                )}
-              >
-                Maderas
-              </Titulo>
-              <MenuContainer2 visible={showMaderas}>
-                {NombreMateriales.slice(18, 22).map((material, index) => (
-                  <MaterialButton
-                    key={index}
-                    onClick={() => handleMaterialChange(index + 18)}
-                  >
-                    <MaterialImage
-                      src={material.textura}
-                      alt={`Material ${material.nombre}`}
-                    />
-                    <MaterialTextContainer>
-                      <MaterialText>{material.nombre}</MaterialText>
-                    </MaterialTextContainer>
-                  </MaterialButton>
-                ))}
-              </MenuContainer2>
-            </div>
-            <button onClick={applyChanges}>Limpiar Cambios</button>
+          </select>
+          <div className='metales'>
+            <Titulo
+              onClick={() => (
+                setShowMetales(!showMetales),
+                setShowMaderas(false)
+              )}
+            >
+              Metales
+            </Titulo>
+            <MenuContainer2 visible={showMetales}>
+              {NombreMateriales.slice(0, 18).map((material, index) => (
+                <MaterialButton
+                  key={index}
+                  onClick={() => handleMaterialChange(index)}
+                >
+                  <MaterialImage
+                    src={material.textura}
+                    alt={`Material ${material.nombre}`}
+                  />
+                  <MaterialTextContainer>
+                    <MaterialText>{material.nombre}</MaterialText>
+                  </MaterialTextContainer>
+                </MaterialButton>
+              ))}
+            </MenuContainer2>
+            <Titulo
+              onClick={() => (
+                setShowMaderas(!showMaderas),
+                setShowMetales(false)
+              )}
+            >
+              Maderas
+            </Titulo>
+            <MenuContainer2 visible={showMaderas}>
+              {NombreMateriales.slice(18, 22).map((material, index) => (
+                <MaterialButton
+                  key={index}
+                  onClick={() => handleMaterialChange(index + 18)}
+                >
+                  <MaterialImage
+                    src={material.textura}
+                    alt={`Material ${material.nombre}`}
+                  />
+                  <MaterialTextContainer>
+                    <MaterialText>{material.nombre}</MaterialText>
+                  </MaterialTextContainer>
+                </MaterialButton>
+              ))}
+            </MenuContainer2>
           </div>
-        )}
+          <button onClick={limpiarCambios}>Limpiar Cambios</button>
+        </div>
       </RotadorMenuContainer>
     </ContRotador>
   );
