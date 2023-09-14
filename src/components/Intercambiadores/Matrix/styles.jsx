@@ -174,6 +174,16 @@ export const ModelButton = styled.button`
   width: auto;
 `;
 
+export const ModelTitulo = styled.h3`
+  margin: 10px auto 10px 20px;
+  padding: 0;
+  border: none;
+  background: none;
+  width: 100%;
+  min-height: 60px;
+  text-align: left;
+`;
+
 export const ModelImage = styled.img`
   width: 100%;
   height: 100%;

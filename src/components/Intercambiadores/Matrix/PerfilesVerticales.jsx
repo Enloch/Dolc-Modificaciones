@@ -9,7 +9,9 @@ export function PerfilesVerticales({
   setSelectedIndices,
   selectedMetalness,
   selectedRoughness,
+  selectedColor,
 }) {
+  console.log("Material?", selectedMaterial);
   const { nodes: nodesA } = useGLTF(
     "/modelos/Matrix/Vertical/Matriz3_A_Vert.gltf"
   );
@@ -22,7 +24,8 @@ export function PerfilesVerticales({
   const { nodes: nodesD } = useGLTF(
     "/modelos/Matrix/Vertical/Matriz1_B_Vert.gltf"
   );
-  const colorMap = useTexture("/texturas/Matrix/BurdeosMate.webp");
+  const BaseMap = useTexture("/texturas/BurdeosMate.jpg");
+  const SwappMap = useTexture("/texturas/Blanco.jpg");
   const ApplyMap = useTexture(selectedMaterial);
 
   const onMeshClick = (event, name) => {
@@ -67,7 +70,9 @@ export function PerfilesVerticales({
               targetNodes = nodesA;
           }
           // Determina el color en función del estado de "hover"
-          const meshColor = hoveredMeshes[name] ? "red" : "white";
+          const meshColor = hoveredMeshes[name] ? "red" : selectedColor;
+          const meshColorUnder = hoveredMeshes[name] ? "red" : "white";
+          const mapStatus = hoveredMeshes[name] ? SwappMap : BaseMap;
           const isClicked = selectedIndices.includes(name);
           const geometry = isClicked
             ? targetNodes[`${selectedModel}${name.split("_v_")[1]}`].geometry
@@ -80,8 +85,8 @@ export function PerfilesVerticales({
                 roughness: selectedRoughness,
               }
             : {
-                color: meshColor, // Añade el color aquí
-                map: colorMap,
+                color: meshColorUnder, // Añade el color aquí
+                map: mapStatus,
               };
 
           return (

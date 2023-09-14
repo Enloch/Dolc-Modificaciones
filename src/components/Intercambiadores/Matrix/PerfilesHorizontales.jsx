@@ -9,6 +9,7 @@ export function PerfilesHorizontales({
   setSelectedIndices,
   selectedMetalness,
   selectedRoughness,
+  selectedColor,
 }) {
   console.log("Modelo?", selectedModel);
   const { nodes: nodesA } = useGLTF(
@@ -23,7 +24,8 @@ export function PerfilesHorizontales({
   const { nodes: nodesD } = useGLTF(
     "/modelos/Matrix/Horizontal/Matriz4_B_Hor.gltf"
   );
-  const colorMap = useTexture("/texturas/BurdeosMate.webp");
+  const BaseMap = useTexture("/texturas/BurdeosMate.jpg");
+  const SwappMap = useTexture("/texturas/Blanco.jpg");
   const ApplyMap = useTexture(selectedMaterial);
 
   const onMeshClick = (event, name) => {
@@ -69,7 +71,9 @@ export function PerfilesHorizontales({
               targetNodes = nodesA;
           }
 
-          const meshColor = hoveredMeshes[name] ? "red" : "white";
+          const meshColor = hoveredMeshes[name] ? "red" : selectedColor;
+          const meshColorUnder = hoveredMeshes[name] ? "red" : "white";
+          const mapStatus = hoveredMeshes[name] ? SwappMap : BaseMap;
           const isClicked = selectedIndices.includes(name);
           const geometry = isClicked
             ? targetNodes[`${selectedModel}${name.split("_h_")[1]}`].geometry
@@ -82,8 +86,8 @@ export function PerfilesHorizontales({
                 roughness: selectedRoughness,
               }
             : {
-                color: meshColor, // Añade el color aquí
-                map: colorMap,
+                color: meshColorUnder, // Añade el color aquí
+                map: mapStatus,
               };
 
           return (

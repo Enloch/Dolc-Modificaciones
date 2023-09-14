@@ -21,6 +21,15 @@ import {
   IntroText,
   BotonExpandir,
   ImagenExpandir,
+  MenuContainer,
+  MenuContainer2,
+  MaterialButton,
+  MaterialImage,
+  MaterialTextContainer,
+  MaterialText,
+  ModelImage,
+  ModelTitulo,
+  Titulo,
 } from "./styles";
 // import Menu from "./Menu";
 import {
@@ -62,6 +71,9 @@ export default function Intercambiador() {
   const [selectedRoughness, setSelectedRoughness] = useState(
     initialMaterials[16].roughness
   );
+  const [selectedColor, setSelectedColor] = useState(
+    initialMaterials[16].color
+  );
   const [selectedIndices, setSelectedIndices] = useState([]);
   useEffect(() => {
     if (modelType === "vertical") {
@@ -77,6 +89,24 @@ export default function Intercambiador() {
     setSelectedIndices([]);
   };
   const [dpr, setDpr] = useState(1.5);
+  const [showMetales, setShowMetales] = useState(false);
+  const [showMaderas, setShowMaderas] = useState(false);
+  const [showColorPicker, setShowColorPicker] = useState(false);
+  const handleMaterialChange = (index) => {
+    const materials =
+      modelType === "vertical"
+        ? MaterialesMetalizados
+        : MaterialesMetalizadosHorizontal;
+    setSelectedMaterial(materials[index].name);
+    setSelectedMetalness(materials[index].metalness);
+    setSelectedRoughness(materials[index].roughness);
+    setSelectedColor(materials[index].color);
+  };
+
+  const handleColorChange = (color) => {
+    // Aquí puedes manejar el cambio de color según lo necesites
+    setSelectedColor(color.hex); // ejemplo si usas la librería 'react-color' y necesitas el color en formato hexadecimal
+  };
   return (
     <ContRotador>
       <CanvasContainer>
@@ -120,6 +150,7 @@ export default function Intercambiador() {
                 setSelectedIndices={setSelectedIndices}
                 selectedMetalness={selectedMetalness}
                 selectedRoughness={selectedRoughness}
+                selectedColor={selectedColor}
               />
             ) : (
               <PerfilesHorizontales
@@ -129,6 +160,7 @@ export default function Intercambiador() {
                 setSelectedIndices={setSelectedIndices}
                 selectedMetalness={selectedMetalness}
                 selectedRoughness={selectedRoughness}
+                selectedColor={selectedColor}
               />
             )}
           </Suspense>
@@ -157,23 +189,60 @@ export default function Intercambiador() {
                     </option>
                   ))}
             </select>
-            <select
-              onChange={(e) => {
-                const materials =
-                  modelType === "vertical"
-                    ? MaterialesMetalizados
-                    : MaterialesMetalizadosHorizontal;
-                setSelectedMaterial(materials[e.target.value].name);
-                setSelectedMetalness(materials[e.target.value].metalness);
-                setSelectedRoughness(materials[e.target.value].roughness);
-              }}
-            >
-              {NombreMateriales.map((material, index) => (
-                <option key={index} value={index}>
-                  {material.nombre}
-                </option>
-              ))}
-            </select>
+            <div className='metales'>
+              <Titulo
+                onClick={() => (
+                  setShowMetales(!showMetales),
+                  setShowMaderas(false),
+                  setShowColorPicker(false),
+                  setColorPickerActive(false)
+                )}
+              >
+                Metales
+              </Titulo>
+              <MenuContainer2 visible={showMetales}>
+                {NombreMateriales.slice(0, 18).map((material, index) => (
+                  <MaterialButton
+                    key={index}
+                    onClick={() => handleMaterialChange(index)}
+                  >
+                    <MaterialImage
+                      src={material.textura}
+                      alt={`Material ${material.nombre}`}
+                    />
+                    <MaterialTextContainer>
+                      <MaterialText>{material.nombre}</MaterialText>
+                    </MaterialTextContainer>
+                  </MaterialButton>
+                ))}
+              </MenuContainer2>
+              <Titulo
+                onClick={() => (
+                  setShowMaderas(!showMaderas),
+                  setShowMetales(false),
+                  setShowColorPicker(false),
+                  setColorPickerActive(false)
+                )}
+              >
+                Maderas
+              </Titulo>
+              <MenuContainer2 visible={showMaderas}>
+                {NombreMateriales.slice(18, 22).map((material, index) => (
+                  <MaterialButton
+                    key={index}
+                    onClick={() => handleMaterialChange(index + 18)}
+                  >
+                    <MaterialImage
+                      src={material.textura}
+                      alt={`Material ${material.nombre}`}
+                    />
+                    <MaterialTextContainer>
+                      <MaterialText>{material.nombre}</MaterialText>
+                    </MaterialTextContainer>
+                  </MaterialButton>
+                ))}
+              </MenuContainer2>
+            </div>
             <button onClick={applyChanges}>Limpiar Cambios</button>
           </div>
         )}
