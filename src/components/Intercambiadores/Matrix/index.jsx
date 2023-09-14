@@ -89,7 +89,7 @@ export default function Intercambiador() {
     setSelectedIndices([]);
   };
   const [dpr, setDpr] = useState(1.5);
-  const [showMetales, setShowMetales] = useState(false);
+  const [showMetales, setShowMetales] = useState(true);
   const [showMaderas, setShowMaderas] = useState(false);
   const [showColorPicker, setShowColorPicker] = useState(false);
   const handleMaterialChange = (index) => {
