@@ -56,7 +56,7 @@ export default function Rotador() {
             </IntroContent>
           </IntroContainer>
         )}
-        <Canvas linear flat style={{ position: "relative", top: 0, left: 0 }}>
+        <Canvas flat style={{ position: "relative", top: 0, left: 0 }}>
           <PerspectiveCamera makeDefault fov={50} position={[0, -1, 1]} />
           <Environment files='/StudioE2.hdr' />
           <ambientLight intensity={0.3} />

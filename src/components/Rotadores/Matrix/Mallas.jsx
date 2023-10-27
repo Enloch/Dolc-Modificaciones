@@ -9,6 +9,15 @@ import Matriz2b from "../../../assets/icons/Matrix/Rotador/matriz2_b.svg";
 import Matriz2c from "../../../assets/icons/Matrix/Rotador/matriz2_c.svg";
 import Matriz2d from "../../../assets/icons/Matrix/Rotador/matriz2_d.svg";
 import Matriz2e from "../../../assets/icons/Matrix/Rotador/matriz2_e.svg";
+import Matriz2f from "../../../assets/icons/Matrix/Rotador/matriz2_f.svg";
+import Matriz2g from "../../../assets/icons/Matrix/Rotador/matriz2_g.svg";
+import Matriz2h from "../../../assets/icons/Matrix/Rotador/matriz2_h.svg";
+import Matriz2i from "../../../assets/icons/Matrix/Rotador/matriz2_i.svg";
+import Matriz2j from "../../../assets/icons/Matrix/Rotador/matriz2_j.svg";
+import Matriz2k from "../../../assets/icons/Matrix/Rotador/matriz2_k.svg";
+import Matriz2l from "../../../assets/icons/Matrix/Rotador/matriz2_l.svg";
+import Matriz2m from "../../../assets/icons/Matrix/Rotador/matriz2_m.svg";
+import Matriz2n from "../../../assets/icons/Matrix/Rotador/matriz2_n.svg";
 //Matriz 3
 import Matriz3a from "../../../assets/icons/Matrix/Rotador/matriz3_a.svg";
 import Matriz3b from "../../../assets/icons/Matrix/Rotador/matriz3_b.svg";
@@ -31,8 +40,7 @@ import Matriz3r from "../../../assets/icons/Matrix/Rotador/matriz3_r.svg";
 import Matriz3s from "../../../assets/icons/Matrix/Rotador/matriz3_s.svg";
 import Matriz3t from "../../../assets/icons/Matrix/Rotador/matriz3_t.svg";
 //Matriz 4
-import Matriz4a from "../../../assets/icons/Matrix/Rotador/matriz4_a.svg";
-import Matriz4b from "../../../assets/icons/Matrix/Rotador/matriz4_b.svg";
+
 //Matriz 5
 import Matriz5a from "../../../assets/icons/Matrix/Rotador/matriz5_a.svg";
 import Matriz5b from "../../../assets/icons/Matrix/Rotador/matriz5_b.svg";
@@ -55,8 +63,6 @@ import Matriz5r from "../../../assets/icons/Matrix/Rotador/matriz5_r.svg";
 import Matriz5s from "../../../assets/icons/Matrix/Rotador/matriz5_s.svg";
 import Matriz5t from "../../../assets/icons/Matrix/Rotador/matriz5_t.svg";
 //Matriz 6
-import Matriz6a from "../../../assets/icons/Matrix/Rotador/matriz6_a.svg";
-import Matriz6b from "../../../assets/icons/Matrix/Rotador/matriz6_b.svg";
 //Matriz 7
 import Matriz7a from "../../../assets/icons/Matrix/Rotador/matriz7_a.svg";
 import Matriz7b from "../../../assets/icons/Matrix/Rotador/matriz7_b.svg";
@@ -78,34 +84,147 @@ import Matriz7q from "../../../assets/icons/Matrix/Rotador/matriz7_q.svg";
 import Matriz7r from "../../../assets/icons/Matrix/Rotador/matriz7_r.svg";
 import Matriz7s from "../../../assets/icons/Matrix/Rotador/matriz7_s.svg";
 import Matriz7t from "../../../assets/icons/Matrix/Rotador/matriz7_t.svg";
-//Matriz 8
-import Matriz8a from "../../../assets/icons/Matrix/Rotador/matriz8_a.svg";
-import Matriz8b from "../../../assets/icons/Matrix/Rotador/matriz8_b.svg";
-//Matriz 9
-import Matriz9a from "../../../assets/icons/Matrix/Rotador/matriz9_a.svg";
-import Matriz9b from "../../../assets/icons/Matrix/Rotador/matriz9_b.svg";
-import Matriz9c from "../../../assets/icons/Matrix/Rotador/matriz9_c.svg";
-import Matriz9d from "../../../assets/icons/Matrix/Rotador/matriz9_d.svg";
-import Matriz9e from "../../../assets/icons/Matrix/Rotador/matriz9_e.svg";
-import Matriz9f from "../../../assets/icons/Matrix/Rotador/matriz9_f.svg";
+//windx
+import Windxa from "../../../assets/icons/Matrix/Rotador/matrix9_a.svg";
+import Windxb from "../../../assets/icons/Matrix/Rotador/matrix9_b.svg";
+import Windxc from "../../../assets/icons/Matrix/Rotador/matrix9_c.svg";
+import Windxd from "../../../assets/icons/Matrix/Rotador/matrix9_d.svg";
+import Windxe from "../../../assets/icons/Matrix/Rotador/matrix9_e.svg";
+import Windxf from "../../../assets/icons/Matrix/Rotador/matrix9_f.svg";
+import Windxg from "../../../assets/icons/Matrix/Rotador/matrix9_g.svg";
+import Windxh from "../../../assets/icons/Matrix/Rotador/matrix9_h.svg";
+import Windxi from "../../../assets/icons/Matrix/Rotador/matrix9_i.svg";
+import Windxj from "../../../assets/icons/Matrix/Rotador/matrix9_j.svg";
+import Windxk from "../../../assets/icons/Matrix/Rotador/matrix9_k.svg";
+import Windxl from "../../../assets/icons/Matrix/Rotador/matrix9_l.svg";
+import Windxm from "../../../assets/icons/Matrix/Rotador/matrix9_m.svg";
+import Windxn from "../../../assets/icons/Matrix/Rotador/matrix9_n.svg";
+import Windxo from "../../../assets/icons/Matrix/Rotador/matrix9_o.svg";
+import Windxp from "../../../assets/icons/Matrix/Rotador/matrix9_p.svg";
+import Windxq from "../../../assets/icons/Matrix/Rotador/matrix9_q.svg";
+import Windxr from "../../../assets/icons/Matrix/Rotador/matrix9_r.svg";
+import Windxs from "../../../assets/icons/Matrix/Rotador/matrix9_s.svg";
+import Windxt from "../../../assets/icons/Matrix/Rotador/matrix9_t.svg";
+//Displax
+import Displaxa from "../../../assets/icons/Matrix/Rotador/matrix11_a.svg";
+import Displaxb from "../../../assets/icons/Matrix/Rotador/matrix11_b.svg";
+import Displaxc from "../../../assets/icons/Matrix/Rotador/matrix11_c.svg";
+import Displaxd from "../../../assets/icons/Matrix/Rotador/matrix11_d.svg";
+import Displaxe from "../../../assets/icons/Matrix/Rotador/matrix11_e.svg";
+import Displaxf from "../../../assets/icons/Matrix/Rotador/matrix11_f.svg";
+import Displaxg from "../../../assets/icons/Matrix/Rotador/matrix11_g.svg";
+import Displaxh from "../../../assets/icons/Matrix/Rotador/matrix11_h.svg";
+import Displaxi from "../../../assets/icons/Matrix/Rotador/matrix11_i.svg";
+import Displaxj from "../../../assets/icons/Matrix/Rotador/matrix11_j.svg";
+import Displaxk from "../../../assets/icons/Matrix/Rotador/matrix11_k.svg";
+import Displaxl from "../../../assets/icons/Matrix/Rotador/matrix11_l.svg";
+import Displaxm from "../../../assets/icons/Matrix/Rotador/matrix11_m.svg";
+import Displaxn from "../../../assets/icons/Matrix/Rotador/matrix11_n.svg";
+import Displaxo from "../../../assets/icons/Matrix/Rotador/matrix11_o.svg";
+//Tecnux
+import Tecnuxa from "../../../assets/icons/Matrix/Rotador/matrix13_a.svg";
+import Tecnuxb from "../../../assets/icons/Matrix/Rotador/matrix13_b.svg";
+import Tecnuxc from "../../../assets/icons/Matrix/Rotador/matrix13_c.svg";
+import Tecnuxd from "../../../assets/icons/Matrix/Rotador/matrix13_d.svg";
+import Tecnuxe from "../../../assets/icons/Matrix/Rotador/matrix13_e.svg";
+import Tecnuxf from "../../../assets/icons/Matrix/Rotador/matrix13_f.svg";
+import Tecnuxg from "../../../assets/icons/Matrix/Rotador/matrix13_g.svg";
+import Tecnuxh from "../../../assets/icons/Matrix/Rotador/matrix13_h.svg";
+import Tecnuxi from "../../../assets/icons/Matrix/Rotador/matrix13_i.svg";
+import Tecnuxj from "../../../assets/icons/Matrix/Rotador/matrix13_j.svg";
+import Tecnuxk from "../../../assets/icons/Matrix/Rotador/matrix13_k.svg";
+import Tecnuxl from "../../../assets/icons/Matrix/Rotador/matrix13_l.svg";
+import Tecnuxm from "../../../assets/icons/Matrix/Rotador/matrix13_m.svg";
+
+
 
 export const Mallas = {
   1: {
     matrices: [
       {
         geometries: ["matriz1_a_1", "matriz1_a_2"],
-        name: "matriz1_a",
+        name: "Planex1_a",
         image: Matriz1a,
       },
       {
         geometries: ["matriz1_b_1", "matriz1_b_2"],
-        name: "matriz1_b",
+        name: "Planex1_b",
         image: Matriz1b,
       },
       {
         geometries: ["matriz1_c_1", "matriz1_c_2"],
-        name: "matriz1_c",
+        name: "Planex1_c",
         image: Matriz1c,
+      },
+      {
+        geometries: ["matriz2_a_1", "matriz2_a_2"],
+        name: "Planex2_a",
+        image: Matriz2a,
+      },
+      {
+        geometries: ["matriz2_b_1", "matriz2_b_2"],
+        name: "Planex2_b",
+        image: Matriz2b,
+      },
+      {
+        geometries: ["matriz2_c_1", "matriz2_c_2"],
+        name: "Planex2_c",
+        image: Matriz2c,
+      },
+      {
+        geometries: ["matriz2_d_1", "matriz2_d_2"],
+        name: "Planex2_d",
+        image: Matriz2d,
+      },
+      {
+        geometries: ["matriz2_e_1", "matriz2_e_2"],
+        name: "Planex2_e",
+        image: Matriz2e,
+      },
+      {
+        geometries: ["matriz2_f_1", "matriz2_f_2"],
+        name: "Planex2_f",
+        image: Matriz2f,
+      },
+      {
+        geometries: ["matriz2_g_1", "matriz2_g_2"],
+        name: "Planex2_g",
+        image: Matriz2g,
+      },
+      {
+        geometries: ["matriz2_h_1", "matriz2_h_2"],
+        name: "Planex2_h",
+        image: Matriz2h,
+      },
+      {
+        geometries: ["matriz2_i_1", "matriz2_i_2"],
+        name: "Planex2_i",
+        image: Matriz2i,
+      },
+      {
+        geometries: ["matriz2_j_1", "matriz2_j_2"],
+        name: "Planex2_j",
+        image: Matriz2j,
+      },
+      {
+        geometries: ["matriz2_k_1", "matriz2_k_2"],
+        name: "Planex2_k",
+        image: Matriz2k,
+      },
+      {
+        geometries: ["matriz2_l_1", "matriz2_l_2"],
+        name: "Planex2_l",
+        image: Matriz2l,
+      },
+      {
+        geometries: ["matriz2_m_1", "matriz2_m_2"],
+        name: "Planex2_m",
+        image: Matriz2m,
+      },
+      {
+        geometries: ["matriz2_n_1", "matriz2_n_2"],
+        name: "Planex2_n",
+        image: Matriz2n,
       },
     ],
     image: Perfil1,
@@ -113,179 +232,209 @@ export const Mallas = {
   2: {
     matrices: [
       {
-        geometries: ["matriz2_a_1", "matriz2_a_2"],
-        name: "matriz2_a",
-        image: Matriz2a,
+        geometries: ["matriz3_a_1", "matriz3_a_2"],
+        name: "Tubex_a",
+        image: Matriz3a,
       },
       {
-        geometries: ["matriz2_b_1", "matriz2_b_2"],
-        name: "matriz2_b",
-        image: Matriz2b,
+        geometries: ["matriz3_b_1", "matriz3_b_2"],
+        name: "Tubex_b",
+        image: Matriz3b,
       },
       {
-        geometries: ["matriz2_c_1", "matriz2_c_2"],
-        name: "matriz2_c",
-        image: Matriz2c,
+        geometries: ["matriz3_c_1", "matriz3_c_2"],
+        name: "Tubex_c",
+        image: Matriz3c,
       },
       {
-        geometries: ["matriz2_d_1", "matriz2_d_2"],
-        name: "matriz2_d",
-        image: Matriz2d,
+        geometries: ["matriz3_d_1", "matriz3_d_2"],
+        name: "Tubex_d",
+        image: Matriz3d,
       },
       {
-        geometries: ["matriz2_e_1", "matriz2_e_2"],
-        name: "matriz2_e",
-        image: Matriz2e,
+        geometries: ["matriz3_e_1", "matriz3_e_2"],
+        name: "Tubex_e",
+        image: Matriz3e,
       },
-      // {
-      //   geometries: ["matriz2_f_1", "matriz2_f_2"],
-      //   name: "matriz2_f",
-      //   image: "",
-      // },
-      // {
-      //   geometries: ["matriz2_g_1", "matriz2_g_2"],
-      //   name: "matriz2_g",
-      //   image: "",
-      // },
-      // {
-      //   geometries: ["matriz2_h_1", "matriz2_h_2"],
-      //   name: "matriz2_h",
-      //   image: "",
-      // },
-      // {
-      //   geometries: ["matriz2_i_1", "matriz2_i_2"],
-      //   name: "matriz2_i",
-      //   image: "",
-      // },
-      // {
-      //   geometries: ["matriz2_j_1", "matriz2_j_2"],
-      //   name: "matriz2_j",
-      //   image: "",
-      // },
-      // {
-      //   geometries: ["matriz2_k_1", "matriz2_k_2"],
-      //   name: "matriz2_k",
-      //   image: "",
-      // },
-      // {
-      //   geometries: ["matriz2_l_1", "matriz2_l_2"],
-      //   name: "matriz2_l",
-      //   image: "",
-      // },
-      // {
-      //   geometries: ["matriz2_m_1", "matriz2_m_2"],
-      //   name: "matriz2_m",
-      //   image: "",
-      // },
-      // {
-      //   geometries: ["matriz2_n_1", "matriz2_n_2"],
-      //   name: "matriz2_n",
-      //   image: "",
-      // },
+      {
+        geometries: ["matriz3_f_1", "matriz3_f_2"],
+        name: "Tubex_f",
+        image: Matriz3f,
+      },
+      {
+        geometries: ["matriz3_g_1", "matriz3_g_2"],
+        name: "Tubex_g",
+        image: Matriz3g,
+      },
+      {
+        geometries: ["matriz3_h_1", "matriz3_h_2"],
+        name: "Tubex_h",
+        image: Matriz3h,
+      },
+      {
+        geometries: ["matriz3_i_1", "matriz3_i_2"],
+        name: "Tubex_i",
+        image: Matriz3i,
+      },
+      {
+        geometries: ["matriz3_j_1", "matriz3_j_2"],
+        name: "Tubex_j",
+        image: Matriz3j,
+      },
+      {
+        geometries: ["matriz3_k_1", "matriz3_k_2"],
+        name: "Tubex_k",
+        image: Matriz3k,
+      },
+      {
+        geometries: ["matriz3_l_1", "matriz3_l_2"],
+        name: "Tubex_l",
+        image: Matriz3l,
+      },
+      {
+        geometries: ["matriz3_m_1", "matriz3_m_2"],
+        name: "Tubex_m",
+        image: Matriz3m,
+      },
+      {
+        geometries: ["matriz3_n_1", "matriz3_n_2"],
+        name: "Tubex_n",
+        image: Matriz3n,
+      },
+      {
+        geometries: ["matriz3_o_1", "matriz3_o_2"],
+        name: "Tubex_o",
+        image: Matriz3o,
+      },
+      {
+        geometries: ["matriz3_p_1", "matriz3_p_2"],
+        name: "Tubex_p",
+        image: Matriz3p,
+      },
+      {
+        geometries: ["matriz3_q_1", "matriz3_q_2"],
+        name: "Tubex_q",
+        image: Matriz3q,
+      },
+      {
+        geometries: ["matriz3_r_1", "matriz3_r_2"],
+        name: "Tubex_r",
+        image: Matriz3r,
+      },
+      {
+        geometries: ["matriz3_s_1", "matriz3_s_2"],
+        name: "Tubex_s",
+        image: Matriz3s,
+      },
+      {
+        geometries: ["matriz3_t_1", "matriz3_t_2"],
+        name: "Tubex_t",
+        image: Matriz3t,
+      },
     ],
     image: Perfil1,
   },
   3: {
     matrices: [
       {
-        geometries: ["matriz3_a_1", "matriz3_a_2"],
-        name: "matriz3_a",
-        image: Matriz3a,
+        geometries: ["matriz5_a_1", "matriz5_a_2"],
+        name: "Vivex_a",
+        image: Matriz5a,
       },
       {
-        geometries: ["matriz3_b_1", "matriz3_b_2"],
-        name: "matriz3_b",
-        image: Matriz3b,
+        geometries: ["matriz5_b_1", "matriz5_b_2"],
+        name: "Vivex_b",
+        image: Matriz5b,
       },
       {
-        geometries: ["matriz3_c_1", "matriz3_c_2"],
-        name: "matriz3_c",
-        image: Matriz3c,
+        geometries: ["matriz5_c_1", "matriz5_c_2"],
+        name: "Vivex_c",
+        image: Matriz5c,
       },
       {
-        geometries: ["matriz3_d_1", "matriz3_d_2"],
-        name: "matriz3_d",
-        image: Matriz3d,
+        geometries: ["matriz5_d_1", "matriz5_d_2"],
+        name: "Vivex_d",
+        image: Matriz5d,
       },
       {
-        geometries: ["matriz3_e_1", "matriz3_e_2"],
-        name: "matriz3_e",
-        image: Matriz3e,
+        geometries: ["matriz5_e_1", "matriz5_e_2"],
+        name: "Vivex_e",
+        image: Matriz5e,
       },
       {
-        geometries: ["matriz3_f_1", "matriz3_f_2"],
-        name: "matriz3_f",
-        image: Matriz3f,
+        geometries: ["matriz5_f_1", "matriz5_f_2"],
+        name: "Vivex_f",
+        image: Matriz5f,
       },
       {
-        geometries: ["matriz3_g_1", "matriz3_g_2"],
-        name: "matriz3_g",
-        image: Matriz3g,
+        geometries: ["matriz5_g_1", "matriz5_g_2"],
+        name: "Vivex_g",
+        image: Matriz5g,
       },
       {
-        geometries: ["matriz3_h_1", "matriz3_h_2"],
-        name: "matriz3_h",
-        image: Matriz3h,
+        geometries: ["matriz5_h_1", "matriz5_h_2"],
+        name: "Vivex_h",
+        image: Matriz5h,
       },
       {
-        geometries: ["matriz3_i_1", "matriz3_i_2"],
-        name: "matriz3_i",
-        image: Matriz3i,
+        geometries: ["matriz5_i_1", "matriz5_i_2"],
+        name: "Vivex_i",
+        image: Matriz5i,
       },
       {
-        geometries: ["matriz3_j_1", "matriz3_j_2"],
-        name: "matriz3_j",
-        image: Matriz3j,
+        geometries: ["matriz5_j_1", "matriz5_j_2"],
+        name: "Vivex_j",
+        image: Matriz5j,
       },
       {
-        geometries: ["matriz3_k_1", "matriz3_k_2"],
-        name: "matriz3_k",
-        image: Matriz3k,
+        geometries: ["matriz5_k_1", "matriz5_k_2"],
+        name: "Vivex_k",
+        image: Matriz5k,
       },
       {
-        geometries: ["matriz3_l_1", "matriz3_l_2"],
-        name: "matriz3_l",
-        image: Matriz3l,
+        geometries: ["matriz5_l_1", "matriz5_l_2"],
+        name: "Vivex_l",
+        image: Matriz5l,
       },
       {
-        geometries: ["matriz3_m_1", "matriz3_m_2"],
-        name: "matriz3_m",
-        image: Matriz3m,
+        geometries: ["matriz5_m_1", "matriz5_m_2"],
+        name: "Vivex_m",
+        image: Matriz5m,
       },
       {
-        geometries: ["matriz3_n_1", "matriz3_n_2"],
-        name: "matriz3_n",
-        image: Matriz3n,
+        geometries: ["matriz5_n_1", "matriz5_n_2"],
+        name: "Vivex_n",
+        image: Matriz5n,
       },
       {
-        geometries: ["matriz3_o_1", "matriz3_o_2"],
-        name: "matriz3_o",
-        image: Matriz3o,
+        geometries: ["matriz5_o_1", "matriz5_o_2"],
+        name: "Vivex_o",
+        image: Matriz5o,
       },
       {
-        geometries: ["matriz3_p_1", "matriz3_p_2"],
-        name: "matriz3_p",
-        image: Matriz3p,
+        geometries: ["matriz5_p_1", "matriz5_p_2"],
+        name: "Vivex_p",
+        image: Matriz5p,
       },
       {
-        geometries: ["matriz3_q_1", "matriz3_q_2"],
-        name: "matriz3_q",
-        image: Matriz3q,
+        geometries: ["matriz5_q_1", "matriz5_q_2"],
+        name: "Vivex_q",
+        image: Matriz5q,
       },
       {
-        geometries: ["matriz3_r_1", "matriz3_r_2"],
-        name: "matriz3_r",
-        image: Matriz3r,
+        geometries: ["matriz5_r_1", "matriz5_r_2"],
+        name: "Vivex_r",
+        image: Matriz5r,
       },
       {
-        geometries: ["matriz3_s_1", "matriz3_s_2"],
-        name: "matriz3_s",
-        image: Matriz3s,
+        geometries: ["matriz5_s_1", "matriz5_s_2"],
+        name: "Vivex_s",
+        image: Matriz5s,
       },
       {
-        geometries: ["matriz3_t_1", "matriz3_t_2"],
-        name: "matriz3_t",
-        image: Matriz3t,
+        geometries: ["matriz5_t_1", "matriz5_t_2"],
+        name: "Vivex_t",
+        image: Matriz5t,
       },
     ],
     image: Perfil1,
@@ -293,14 +442,104 @@ export const Mallas = {
   4: {
     matrices: [
       {
-        geometries: ["matriz4_a_1", "matriz4_a_2"],
-        name: "matriz4_a",
-        image: Matriz4a,
+        geometries: ["matriz7_a_1", "matriz7_a_2"],
+        name: "Vertex_a",
+        image: Matriz7a,
       },
       {
-        geometries: ["matriz4_b_1", "matriz4_b_2"],
-        name: "matriz4_b",
-        image: Matriz4b,
+        geometries: ["matriz7_b_1", "matriz7_b_2"],
+        name: "Vertex_b",
+        image: Matriz7b,
+      },
+      {
+        geometries: ["matriz7_c_1", "matriz7_c_2"],
+        name: "Vertex_c",
+        image: Matriz7c,
+      },
+      {
+        geometries: ["matriz7_d_1", "matriz7_d_2"],
+        name: "Vertex_d",
+        image: Matriz7d,
+      },
+      {
+        geometries: ["matriz7_e_1", "matriz7_e_2"],
+        name: "Vertex_e",
+        image: Matriz7e,
+      },
+      {
+        geometries: ["matriz7_f_1", "matriz7_f_2"],
+        name: "Vertex_f",
+        image: Matriz7f,
+      },
+      {
+        geometries: ["matriz7_g_1", "matriz7_g_2"],
+        name: "Vertex_g",
+        image: Matriz7g,
+      },
+      {
+        geometries: ["matriz7_h_1", "matriz7_h_2"],
+        name: "Vertex_h",
+        image: Matriz7h,
+      },
+      {
+        geometries: ["matriz7_i_1", "matriz7_i_2"],
+        name: "Vertex_i",
+        image: Matriz7i,
+      },
+      {
+        geometries: ["matriz7_j_1", "matriz7_j_2"],
+        name: "Vertex_j",
+        image: Matriz7j,
+      },
+      {
+        geometries: ["matriz7_k_1", "matriz7_k_2"],
+        name: "Vertex_k",
+        image: Matriz7k,
+      },
+      {
+        geometries: ["matriz7_l_1", "matriz7_l_2"],
+        name: "Vertex_l",
+        image: Matriz7l,
+      },
+      {
+        geometries: ["matriz7_m_1", "matriz7_m_2"],
+        name: "Vertex_m",
+        image: Matriz7m,
+      },
+      {
+        geometries: ["matriz7_n_1", "matriz7_n_2"],
+        name: "Vertex_n",
+        image: Matriz7n,
+      },
+      {
+        geometries: ["matriz7_o_1", "matriz7_o_2"],
+        name: "Vertex_o",
+        image: Matriz7o,
+      },
+      {
+        geometries: ["matriz7_p_1", "matriz7_p_2"],
+        name: "Vertex_p",
+        image: Matriz7p,
+      },
+      {
+        geometries: ["matriz7_q_1", "matriz7_q_2"],
+        name: "Vertex_q",
+        image: Matriz7q,
+      },
+      {
+        geometries: ["matriz7_r_1", "matriz7_r_2"],
+        name: "Vertex_r",
+        image: Matriz7r,
+      },
+      {
+        geometries: ["matriz7_s_1", "matriz7_s_2"],
+        name: "Vertex_s",
+        image: Matriz7s,
+      },
+      {
+        geometries: ["matriz7_t_1", "matriz7_t_2"],
+        name: "Vertex_t",
+        image: Matriz7t,
       },
     ],
     image: "",
@@ -308,104 +547,104 @@ export const Mallas = {
   5: {
     matrices: [
       {
-        geometries: ["matriz5_a_1", "matriz5_a_2"],
-        name: "matriz5_a",
-        image: Matriz5a,
+        geometries: ["matriz9_1_1", "matriz9_1_2"],
+        name: "Windx_a",
+        image: Windxa,
       },
       {
-        geometries: ["matriz5_b_1", "matriz5_b_2"],
-        name: "matriz5_b",
-        image: Matriz5b,
+        geometries: ["matriz9_2_1", "matriz9_2_2"],
+        name: "Windx_b",
+        image: Windxb,
       },
       {
-        geometries: ["matriz5_c_1", "matriz5_c_2"],
-        name: "matriz5_c",
-        image: Matriz5c,
+        geometries: ["matriz9_3_1", "matriz9_3_2"],
+        name: "Windx_c",
+        image: Windxc,
       },
       {
-        geometries: ["matriz5_d_1", "matriz5_d_2"],
-        name: "matriz5_d",
-        image: Matriz5d,
+        geometries: ["matriz9_4_1", "matriz9_4_2"],
+        name: "Windx_d",
+        image: Windxd,
       },
       {
-        geometries: ["matriz5_e_1", "matriz5_e_2"],
-        name: "matriz5_e",
-        image: Matriz5e,
+        geometries: ["matriz9_5_1", "matriz9_5_2"],
+        name: "Windx_e",
+        image: Windxe,
       },
       {
-        geometries: ["matriz5_f_1", "matriz5_f_2"],
-        name: "matriz5_f",
-        image: Matriz5f,
+        geometries: ["matriz9_6_1", "matriz9_6_2"],
+        name: "Windx_f",
+        image: Windxf,
       },
       {
-        geometries: ["matriz5_g_1", "matriz5_g_2"],
-        name: "matriz5_g",
-        image: Matriz5g,
+        geometries: ["matriz9_7_1", "matriz9_7_2"],
+        name: "Windx_g",
+        image: Windxg,
       },
       {
-        geometries: ["matriz5_h_1", "matriz5_h_2"],
-        name: "matriz5_h",
-        image: Matriz5h,
+        geometries: ["matriz9_8_1", "matriz9_8_2"],
+        name: "Windx_h",
+        image: Windxh,
       },
       {
-        geometries: ["matriz5_i_1", "matriz5_i_2"],
-        name: "matriz5_i",
-        image: Matriz5i,
+        geometries: ["matriz9_9_1", "matriz9_9_2"],
+        name: "Windx_i",
+        image: Windxi,
       },
       {
-        geometries: ["matriz5_j_1", "matriz5_j_2"],
-        name: "matriz5_j",
-        image: Matriz5j,
+        geometries: ["matriz9_10_1", "matriz9_10_2"],
+        name: "Windx_j",
+        image: Windxj,
       },
       {
-        geometries: ["matriz5_k_1", "matriz5_k_2"],
-        name: "matriz5_k",
-        image: Matriz5k,
+        geometries: ["matriz9_11_1", "matriz9_11_2"],
+        name: "Windx_k",
+        image: Windxk,
       },
       {
-        geometries: ["matriz5_l_1", "matriz5_l_2"],
-        name: "matriz5_l",
-        image: Matriz5l,
+        geometries: ["matriz9_12_1", "matriz9_12_2"],
+        name: "Windx_l",
+        image: Windxl,
       },
       {
-        geometries: ["matriz5_m_1", "matriz5_m_2"],
-        name: "matriz5_m",
-        image: Matriz5m,
+        geometries: ["matriz9_13_1", "matriz9_13_2"],
+        name: "Windx_m",
+        image: Windxm,
       },
       {
-        geometries: ["matriz5_n_1", "matriz5_n_2"],
-        name: "matriz5_n",
-        image: Matriz5n,
+        geometries: ["matriz9_14_1", "matriz9_14_2"],
+        name: "Windx_n",
+        image: Windxn,
       },
       {
-        geometries: ["matriz5_o_1", "matriz5_o_2"],
-        name: "matriz5_o",
-        image: Matriz5o,
+        geometries: ["matriz9_15_1", "matriz9_15_2"],
+        name: "Windx_o",
+        image: Windxo,
       },
       {
-        geometries: ["matriz5_p_1", "matriz5_p_2"],
-        name: "matriz5_p",
-        image: Matriz5p,
+        geometries: ["matriz9_16_1", "matriz9_16_2"],
+        name: "Windx_p",
+        image: Windxp,
       },
       {
-        geometries: ["matriz5_q_1", "matriz5_q_2"],
-        name: "matriz5_q",
-        image: Matriz5q,
+        geometries: ["matriz9_17_1", "matriz9_17_2"],
+        name: "Windx_q",
+        image: Windxq,
       },
       {
-        geometries: ["matriz5_r_1", "matriz5_r_2"],
-        name: "matriz5_r",
-        image: Matriz5r,
+        geometries: ["matriz9_18_1", "matriz9_18_2"],
+        name: "Windx_r",
+        image: Windxr,
       },
       {
-        geometries: ["matriz5_s_1", "matriz5_s_2"],
-        name: "matriz5_s",
-        image: Matriz5s,
+        geometries: ["matriz9_19_1", "matriz9_19_2"],
+        name: "Windx_s",
+        image: Windxs,
       },
       {
-        geometries: ["matriz5_t_1", "matriz5_t_2"],
-        name: "matriz5_t",
-        image: Matriz5t,
+        geometries: ["matriz9_20_1", "matriz9_20_2"],
+        name: "Windx_t",
+        image: Windxt,
       },
     ],
     image: "",
@@ -413,14 +652,79 @@ export const Mallas = {
   6: {
     matrices: [
       {
-        geometries: ["matriz6_a_1", "matriz6_a_2"],
-        name: "matriz6_a",
-        image: Matriz6a,
+        geometries: ["matriz11_1_1", "matriz11_1_2"],
+        name: "Displax_a",
+        image: Displaxa,
       },
       {
-        geometries: ["matriz6_b_1", "matriz6_b_2"],
-        name: "matriz6_b",
-        image: Matriz6b,
+        geometries: ["matriz11_2_1", "matriz11_2_2"],
+        name: "Displax_b",
+        image: Displaxb,
+      },
+      {
+        geometries: ["matriz11_3_1", "matriz11_3_2"],
+        name: "Displax_c",
+        image: Displaxc,
+      },
+      {
+        geometries: ["matriz11_4_1", "matriz11_4_2"],
+        name: "Displax_d",
+        image: Displaxd,
+      },
+      {
+        geometries: ["matriz11_5_1", "matriz11_5_2"],
+        name: "Displax_e",
+        image: Displaxe,
+      },
+      {
+        geometries: ["matriz11_6_1", "matriz11_6_2"],
+        name: "Displax_f",
+        image: Displaxf,
+      },
+      {
+        geometries: ["matriz11_7_1", "matriz11_7_2"],
+        name: "Displax_g",
+        image: Displaxg,
+      },
+      {
+        geometries: ["matriz11_8_1", "matriz11_8_2"],
+        name: "Displax_h",
+        image: Displaxh,
+      },
+      {
+        geometries: ["matriz11_9_1", "matriz11_9_2"],
+        name: "Displax_i",
+        image: Displaxi,
+      },
+      {
+        geometries: ["matriz11_10_1", "matriz11_10_2"],
+        name: "Displax_j",
+        image: Displaxj,
+      },
+      {
+        geometries: ["matriz11_11_1", "matriz11_11_2"],
+        name: "Displax_k",
+        image: Displaxk,
+      },
+      {
+        geometries: ["matriz11_12_1", "matriz11_12_2"],
+        name: "Displax_l",
+        image: Displaxl,
+      },
+      {
+        geometries: ["matriz11_13_1", "matriz11_13_2"],
+        name: "Displax_m",
+        image: Displaxm,
+      },
+      {
+        geometries: ["matriz11_14_1", "matriz11_14_2"],
+        name: "Displax_n",
+        image: Displaxn,
+      },
+      {
+        geometries: ["matriz11_15_1", "matriz11_15_2"],
+        name: "Displax_o",
+        image: Displaxo,
       },
     ],
     image: "",
@@ -428,119 +732,69 @@ export const Mallas = {
   7: {
     matrices: [
       {
-        geometries: ["matriz7_a_1", "matriz7_a_2"],
-        name: "matriz7_a",
-        image: Matriz7a,
+        geometries: ["matriz12_1_1", "matriz12_1_2"],
+        name: "Tecnux_a",
+        image: Tecnuxa,
       },
       {
-        geometries: ["matriz7_b_1", "matriz7_b_2"],
-        name: "matriz7_b",
-        image: Matriz7b,
+        geometries: ["matriz12_2_1", "matriz12_2_2"],
+        name: "Tecnux_b",
+        image: Tecnuxb,
       },
       {
-        geometries: ["matriz7_c_1", "matriz7_c_2"],
-        name: "matriz7_c",
-        image: Matriz7c,
+        geometries: ["matriz12_3_1", "matriz12_3_2"],
+        name: "Tecnux_c",
+        image: Tecnuxc,
       },
       {
-        geometries: ["matriz7_d_1", "matriz7_d_2"],
-        name: "matriz7_d",
-        image: Matriz7d,
+        geometries: ["matriz12_4_1", "matriz12_4_2"],
+        name: "Tecnux_d",
+        image: Tecnuxd,
       },
       {
-        geometries: ["matriz7_e_1", "matriz7_e_2"],
-        name: "matriz7_e",
-        image: Matriz7e,
+        geometries: ["matriz12_5_1", "matriz12_5_2"],
+        name: "Tecnux_e",
+        image: Tecnuxe,
       },
       {
-        geometries: ["matriz7_f_1", "matriz7_f_2"],
-        name: "matriz7_f",
-        image: Matriz7f,
+        geometries: ["matriz12_6_1", "matriz12_6_2"],
+        name: "Tecnux_f",
+        image: Tecnuxf,
       },
       {
-        geometries: ["matriz7_g_1", "matriz7_g_2"],
-        name: "matriz7_g",
-        image: Matriz7g,
+        geometries: ["matriz12_7_1", "matriz12_7_2"],
+        name: "Tecnux_g",
+        image: Tecnuxg,
       },
       {
-        geometries: ["matriz7_h_1", "matriz7_h_2"],
-        name: "matriz7_h",
-        image: Matriz7h,
+        geometries: ["matriz12_8_1", "matriz12_8_2"],
+        name: "Tecnux_h",
+        image: Tecnuxh,
       },
       {
-        geometries: ["matriz7_i_1", "matriz7_i_2"],
-        name: "matriz7_i",
-        image: Matriz7i,
+        geometries: ["matriz12_9_1", "matriz12_9_2"],
+        name: "Tecnux_i",
+        image: Tecnuxi,
       },
       {
-        geometries: ["matriz7_j_1", "matriz7_j_2"],
-        name: "matriz7_j",
-        image: Matriz7j,
+        geometries: ["matriz12_10_1", "matriz12_10_2"],
+        name: "Tecnux_j",
+        image: Tecnuxj,
       },
       {
-        geometries: ["matriz7_k_1", "matriz7_k_2"],
-        name: "matriz7_k",
-        image: Matriz7k,
+        geometries: ["matriz12_11_1", "matriz12_11_2"],
+        name: "Tecnux_k",
+        image: Tecnuxk,
       },
       {
-        geometries: ["matriz7_l_1", "matriz7_l_2"],
-        name: "matriz7_l",
-        image: Matriz7l,
+        geometries: ["matriz12_12_1", "matriz12_12_2"],
+        name: "Tecnux_l",
+        image: Tecnuxl,
       },
       {
-        geometries: ["matriz7_m_1", "matriz7_m_2"],
-        name: "matriz7_m",
-        image: Matriz7m,
-      },
-      {
-        geometries: ["matriz7_n_1", "matriz7_n_2"],
-        name: "matriz7_n",
-        image: Matriz7n,
-      },
-      {
-        geometries: ["matriz7_o_1", "matriz7_o_2"],
-        name: "matriz7_o",
-        image: Matriz7o,
-      },
-      {
-        geometries: ["matriz7_p_1", "matriz7_p_2"],
-        name: "matriz7_p",
-        image: Matriz7p,
-      },
-      {
-        geometries: ["matriz7_q_1", "matriz7_q_2"],
-        name: "matriz7_q",
-        image: Matriz7q,
-      },
-      {
-        geometries: ["matriz7_r_1", "matriz7_r_2"],
-        name: "matriz7_r",
-        image: Matriz7r,
-      },
-      {
-        geometries: ["matriz7_s_1", "matriz7_s_2"],
-        name: "matriz7_s",
-        image: Matriz7s,
-      },
-      {
-        geometries: ["matriz7_t_1", "matriz7_t_2"],
-        name: "matriz7_t",
-        image: Matriz7t,
-      },
-    ],
-    image: "",
-  },
-  8: {
-    matrices: [
-      {
-        geometries: ["matriz8_a_1", "matriz8_a_2"],
-        name: "matriz8_a",
-        image: Matriz8a,
-      },
-      {
-        geometries: ["matriz8_b_1", "matriz8_b_2"],
-        name: "matriz8_b",
-        image: Matriz8b,
+        geometries: ["matriz12_13_1", "matriz12_13_2"],
+        name: "Tecnux_m",
+        image: Tecnuxm,
       },
     ],
     image: "",
@@ -1050,41 +1304,6 @@ export const Mallas = {
   //   ],
   //   image: "",
   // },
-  9: {
-    matrices: [
-      {
-        geometries: ["matriz15_1_1", "matriz15_1_2"],
-        name: "matriz9_1",
-        image: Matriz9a,
-      },
-      {
-        geometries: ["matriz15_2_1", "matriz15_2_2"],
-        name: "matriz9_2",
-        image: Matriz9b,
-      },
-      {
-        geometries: ["matriz15_3_1", "matriz15_3_2"],
-        name: "matriz9_3",
-        image: Matriz9c,
-      },
-      {
-        geometries: ["matriz15_4_1", "matriz15_4_2"],
-        name: "matriz9_4",
-        image: Matriz9d,
-      },
-      {
-        geometries: ["matriz15_5_1", "matriz15_5_2"],
-        name: "matriz9_5",
-        image: Matriz9e,
-      },
-      {
-        geometries: ["matriz15_5_1", "matriz15_5_2"],
-        name: "matriz9_5",
-        image: Matriz9f,
-      },
-    ],
-    image: "",
-  },
 };
 // const categorizedMeshes = {
 //   Categoria1: [

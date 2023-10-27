@@ -12,9 +12,10 @@ export function Modelo({
 }) {
   const Bump = useTexture("/texturas/brushed.jpg");
   const Acabados = Materiales.map((material) => useTexture(material.map));
+  console.log(Acabados[material]);
   const Metalizado = MaterialesMetalizados.map((metal) => metal.metalness);
   const Aspereza = MaterialesMetalizados.map((aspereza) => aspereza.roughness);
-  const { nodes, materials } = useGLTF("/modelos/MatrixRotador.glb");
+  const { nodes, materials } = useGLTF("/modelos/MatrixRotador.gltf");
   const [selectedGeometry1, setSelectedGeometry1] = useState("matriz3_m_1");
   const [selectedGeometry2, setSelectedGeometry2] = useState("matriz3_m_2");
   // Initialize state with the default geometries
@@ -39,7 +40,12 @@ export function Modelo({
             color={"#FFFFFF"}
           />
         ) : (
-          <meshStandardMaterial color={color} metalness='0.5' roughness='0.5' />
+          <meshStandardMaterial
+            color={color}
+            metalness='0.5'
+            roughness='0.5'
+            map={null}
+          />
         )}
       </mesh>
       <mesh

@@ -30,7 +30,7 @@ const Menu = ({
   const [showMetales, setShowMetales] = useState(false);
   const [showMaderas, setShowMaderas] = useState(false);
   const [showColorPicker, setShowColorPicker] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState("1");
+  const [selectedCategory, setSelectedCategory] = useState();
 
   const handleModels = () => {
     setShowCategoryButtons(true);
@@ -66,15 +66,15 @@ const Menu = ({
     handleMaterialChange(0); // Restablecer el material cuando se selecciona un color
   };
   const categoryButtons = [
-    { id: "1", label: "Category 1" },
-    { id: "2", label: "Category 2" },
-    { id: "3", label: "Category 3" },
-    { id: "4", label: "Category 4" },
-    { id: "5", label: "Category 5" },
-    { id: "6", label: "Category 6" },
-    { id: "7", label: "Category 7" },
-    { id: "8", label: "Category 8" },
-    { id: "9", label: "Category 9" },
+    { id: "1", label: "Planex" },
+    { id: "2", label: "Tubex" },
+    { id: "3", label: "Vivex" },
+    { id: "4", label: "Vertex" },
+    { id: "5", label: "Windx" },
+    { id: "6", label: "Displax" },
+    { id: "7", label: "Tecnux" },
+    // { id: "8", label: "Category 8" },
+    // { id: "9", label: "Category 9" },
   ];
   return (
     <div>
@@ -84,9 +84,16 @@ const Menu = ({
             {categoryButtons.map((category) => (
               <div key={category.id}>
                 <CategoryButton
-                  onClick={() => (
-                    setSelectedCategory(category.id), handleModels()
-                  )}
+                  onClick={() => {
+                    if (selectedCategory === category.id) {
+                      // Aquí reinicias los estados como necesites para cerrar la categoría
+                      setSelectedCategory(null);
+                      handleHideButtons(); // Si esta función oculta los elementos
+                    } else {
+                      setSelectedCategory(category.id);
+                      handleModels();
+                    }
+                  }}
                 >
                   {category.label}
                 </CategoryButton>

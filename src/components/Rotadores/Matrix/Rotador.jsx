@@ -1,16 +1,18 @@
-import React, { useState, useRef, Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
+import React, { useState, useRef, Suspense, useEffect } from "react";
+import { Canvas, useThree } from "@react-three/fiber";
 import {
   OrbitControls,
   PerspectiveCamera,
-  Environment,
   ContactShadows,
-  useEnvironment,
-  Lightformer,
-  useHelper,
+  Center,
 } from "@react-three/drei";
+import {
+  HueSaturation,
+  EffectComposer,
+  ToneMapping,
+} from "@react-three/postprocessing";
 import { useControls } from "leva";
-
+import * as THREE from "three";
 import { Modelo } from "./MatrixModelo";
 import {
   ContRotador,
@@ -34,13 +36,43 @@ export default function Rotador() {
   const [color, setColor] = useState("#ffffff0"); // Color blanco como color base predeterminado
   const [colorPickerActive, setColorPickerActive] = useState(false);
   const [selectedMatrix, setSelectedMatrix] = useState(null);
-
+  // const { hue, saturation, middleGrey, maxLuminance } = useControls({
+  //   middleGrey: {
+  //     min: 0,
+  //     max: 1,
+  //     value: 0.6,
+  //     step: 0.1,
+  //   },
+  //   maxLuminance: {
+  //     min: 0,
+  //     max: 64,
+  //     value: 16,
+  //     step: 1,
+  //   },
+  //   hue: {
+  //     value: 0,
+  //     min: -Math.PI,
+  //     max: Math.PI,
+  //     step: 0.05,
+  //   },
+  //   saturation: {
+  //     value: 0,
+  //     min: 0,
+  //     max: Math.PI,
+  //     step: 0.1,
+  //   },
+  // });
   const handleIntroClick = () => {
     setShowIntro(false);
   };
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuContainerRef = useRef(null);
-
+  const [models, setModels] = useState([]);
+  const addModel = (newModel) => {
+    if (models.length < 3) {
+      setModels([...models, newModel]);
+    }
+  };
   const handleExpandClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -61,49 +93,83 @@ export default function Rotador() {
             </IntroContent>
           </IntroContainer>
         )}
-        <Canvas linear style={{ position: "relative", top: 0, left: 0 }}>
+        <Canvas
+          shadows
+          flat
+          style={{ position: "relative", top: 0, left: 0 }}
+          gl={(gl) => {
+            gl.toneMapping = THREE.ACESFilmicToneMapping;
+            gl.toneMappingExposure = 0.8;
+            gl.outputEncoding = THREE.sRGBEncoding;
+          }}
+        >
           <PerspectiveCamera
             makeDefault
             fov={50}
             position={[0, -1, 1]}
             rotation={[-Math.PI / 2, 0, 0]}
           />
-          {/* <Environment files='/Test.exr' blur={1} >
-            <Lightformer
-              form='rect' // circle | ring | rect (optional, default = rect)
-              intensity={1} // power level (optional = 1)
-              color='white' // (optional = white)
-              scale={[10, 5]} // Scale it any way you prefer (optional = [1, 1])
 
-            />
-          </Environment> */}
-          <hemisphereLight intensity={0.35} />
-          <ambientLight intensity={0.2} />
-          <pointLight position={[10, 0, 10]} intensity={0.75} castShadow />
-          <pointLight position={[-10, 0, 10]} intensity={0.75} castShadow />
-          <pointLight position={[0, 0, 10]} intensity={0.25} castShadow />
-          <pointLight position={[0, 0, -10]} intensity={1} castShadow />
-
+          {/* <hemisphereLight intensity={0.35} /> */}
+          {/* <ambientLight intensity={1} /> */}
+          <pointLight
+            castShadow
+            shadow-bias={-0.1}
+            shadow-mapSize={[2048, 2048]}
+            position={[3, 0, 3]}
+            intensity={13}
+          />
+          <pointLight
+            castShadow
+            shadow-bias={-0.1}
+            position={[-3, 0, 3]}
+            intensity={13}
+          />
+          <pointLight
+            castShadow
+            shadow-bias={-0.1}
+            position={[0, 0, 3]}
+            intensity={13}
+          />
+          <pointLight
+            castShadow
+            shadow-bias={-0.1}
+            position={[0, 0, -3]}
+            intensity={13}
+          />
           <ContactShadows
             opacity={0.5}
-            scale={4}
+            scale={1}
             blur={1}
             far={1}
             resolution={256}
-            color='#000000'
-            position={[0, 0, 0]}
-            frames={2}
+            color='#0000001e'
+            position={[0, -0.09, 0]}
+            frames={1}
           />
-          <Suspense fallback={null}>
+          <Center>
             <Modelo
+              position={[0, 0, 0]} // posición modificada
               material={materialIndex}
               metalness={materialIndex}
               roughness={materialIndex}
               color={color}
-              colorPickerActive={colorPickerActive} // Pasar el estado colorPickerActive al componente Model1
-              selectedMatrix={selectedMatrix} // Pass selectedMatrix to Modelo
+              colorPickerActive={colorPickerActive}
+              selectedMatrix={selectedMatrix}
             />
-          </Suspense>
+            <Modelo
+              position={[0.15, 0, 0]} // posición modificada
+              material={materialIndex}
+              metalness={materialIndex}
+              roughness={materialIndex}
+              color={color}
+              colorPickerActive={colorPickerActive}
+              selectedMatrix={selectedMatrix}
+            />
+          </Center>
+          <EffectComposer>
+            <HueSaturation hue={-0.1} saturation={0.2} />
+          </EffectComposer>
           <OrbitControls
             maxPolarAngle={1.6}
             minDistance={0.2}

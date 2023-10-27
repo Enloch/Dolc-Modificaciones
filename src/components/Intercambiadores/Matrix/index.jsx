@@ -102,6 +102,7 @@ export default function Intercambiador() {
     <ContRotador>
       <CanvasContainer>
         <Canvas
+          dpr={dpr}
           frameloop='demand'
           shadows
           style={{ position: "relative", top: 0, left: 0 }}
@@ -182,8 +183,7 @@ export default function Intercambiador() {
           <div className='metales'>
             <Titulo
               onClick={() => (
-                setShowMetales(!showMetales),
-                setShowMaderas(false)
+                setShowMetales(!showMetales), setShowMaderas(false)
               )}
             >
               Metales
@@ -206,8 +206,7 @@ export default function Intercambiador() {
             </MenuContainer2>
             <Titulo
               onClick={() => (
-                setShowMaderas(!showMaderas),
-                setShowMetales(false)
+                setShowMaderas(!showMaderas), setShowMetales(false)
               )}
             >
               Maderas
