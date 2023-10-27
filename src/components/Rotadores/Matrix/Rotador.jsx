@@ -5,6 +5,8 @@ import {
   PerspectiveCamera,
   ContactShadows,
   Center,
+  AccumulativeShadows,
+  RandomizedLight,
 } from "@react-three/drei";
 import {
   HueSaturation,
@@ -137,16 +139,24 @@ export default function Rotador() {
             position={[0, 0, -3]}
             intensity={13}
           />
-          <ContactShadows
+          {/* <ContactShadows
             opacity={0.5}
-            scale={1}
+            scale={5}
             blur={1}
             far={1}
             resolution={256}
             color='#0000001e'
-            position={[0, -0.09, 0]}
+            position={[0, -0.12, 0]}
             frames={1}
-          />
+          /> */}
+          <AccumulativeShadows
+            temporal
+            position={[0, -0.15, 0]}
+            frames={100}
+            scale={2}
+          >
+            <RandomizedLight amount={8} position={[5, 5, -10]} />
+          </AccumulativeShadows>
           <Center>
             <Modelo
               position={[0, 0, 0]} // posición modificada
