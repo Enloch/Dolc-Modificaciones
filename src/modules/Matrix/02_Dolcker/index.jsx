@@ -34,11 +34,11 @@ const DolckerTline = ({ id }) => {
           caption='Sistema Matrix con grapa vista. Grapa y cara del perfíl interior lacado en el color de la cerámica.'
         />
         <Text>
-          El sistema DOLCKER & Matrix para fachadas de cerámica tipo Dolcker
-          line es un sistema con perfilería de alta inercia y doble seguridad.
-          Todos y cada uno de los elementos que componen este sistema están
-          fabricados con materias primas de máxima calidad.
-          <br />
+          SISTEMA MATRIX es un sistema de revestimiento de lamas de aluminio
+          para una colocacion cliplada de facil montaje. La gran variedad de
+          diseños, le confieren una gran versatilidad, para el diseño de
+          fachadas ventiladas, revestimientos interiores, paneles decorativos.
+          {/* <br />
           <br />
           <br />
           Se trata de un sistema de fijación mecánica de clip + fijación química
@@ -73,7 +73,7 @@ const DolckerTline = ({ id }) => {
           de fachada ya que es posible romper las juntas verticales. Estas
           juntas verticales se ven minimizadas a tan solo 1 mm potenciando de
           esta manera las juntas horizontales. La salida de la cerámica es entre
-          43-47 mm dependiendo del espesor de la cerámica escogida.
+          43-47 mm dependiendo del espesor de la cerámica escogida. */}
         </Text>
       </div>
       <VisualizadorNota {...propsVisualizador} />

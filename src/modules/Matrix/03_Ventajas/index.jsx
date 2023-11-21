@@ -17,25 +17,25 @@ const VentajasTline = ({ id }) => {
         columnSpan='6'
       />
       <Text>
-        Sistema dolcker line dispone de un desarrollo técnico de fijación oculta
-        en las piezas porcelanicas para poder clipar una cenefa lacada en
-        diferentes acabados
+        Sistema dolcker matrix dispone de un desarrollo técnico de fijación para
+        fachadas ventiladas mejorado, para adaptarse a las necesidades tanto
+        estéticas como funcionales del proyecto.
       </Text>
       <Listado>
+        <li>Sistema de fijación mecánica oculta + clipada</li>
         <li>Sistema desmontable</li>
         <li>
-          Clip correderos (seguridad para piezas de ariostamiento andamios)
+          Perfil de alumnio vertical o horizontal para disistinas colocaciones
         </li>
-        <li>Perfil continuo de gran inercia para soporte de grandes cargas</li>
+        <li>Posibilidad de fabricacion diferentes aleaciones de aluminio</li>
         <li>Sistema de libre colocación</li>
-        <li>Multitud de tamaños de piezas</li>
+        <li>Multitud de DISEÑOS de piezas</li>
         <li>Despiece a medida</li>
-        <li>Diferentes espesores de piezas (6, 9 y 11 mm)</li>
+        <li>Posibilidad de fabricacion lamas SEGUN DISEÑO</li>
         <li>Sistema desarrollado para cámaras de hasta 20 cm</li>
-        <li>Fabricación de piezas con texturas mate, flamed y honed</li>
+        <li>Piezas con ACABADOS solidos , metalicos , maderas , anodizados</li>
         <li>Montaje rápido y seguro</li>
         <li>Sistema versátil a la hora de diseñar la fachada</li>
-        <li>Sistema versátil en la decoración de las cenefas</li>
       </Listado>
     </StyledVentajas>
   );
