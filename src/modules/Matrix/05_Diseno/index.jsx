@@ -71,11 +71,11 @@ const DisenosTline = ({ id }) => {
           colorAutor={COLORS.gray05}
         />
       </StyledDisenos>
-      <StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
+      {/* <StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
         <Titulo2>Formato</Titulo2>
         <Anotacion {...propsFormato.anotacion} />
         <Configurador1Tline />
-      </StyledDisenos>
+      </StyledDisenos> */}
       <StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
         <Titulo2>Acabados y Perfiles de Cenefas</Titulo2>
         <Anotaciones>
@@ -89,7 +89,15 @@ const DisenosTline = ({ id }) => {
           />
         </Anotaciones>
         <div className='rotador'>
-          <RotadorMatrix />
+          {/* <RotadorMatrix /> */}
+          <iframe
+            src='https://matrix-rotador.vercel.app/'
+            width='100%'
+            height='100%'
+            title='RotadorMatrix'
+            frameborder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+          ></iframe>
         </div>
       </StyledDisenos>
       <IndiceSeries id={id[6]} queSerieActiva={setSerieActiva} />

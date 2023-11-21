@@ -33,7 +33,7 @@ const enlacesObj = [
   },
   {
     titulo: "DOLCKER & LINE BYB",
-    formato: "60x120/80x160/260x120/30x60/120x120/80x80/60x60/140x120/",
+    formato: "60x120/80x160/260x120/30x60/120x120/80x80/60x60",
     src: imagenesAmbiente[4],
     id: "#byb",
     categoria: "Monocolor",
@@ -82,7 +82,7 @@ const enlacesObj = [
   },
   {
     titulo: "DOLCKER & LINE GRAV",
-    formato: "120x120/25x75/30x60/40x120/60x120/60x60/75x150/75x75/90x90",
+    formato: "120x120/25x75/30x60/60x120/60x60/75x150/75x75/90x90",
     src: imagenesAmbiente[10],
     id: "#grav",
     categoria: "Cemento",
@@ -96,7 +96,7 @@ const enlacesObj = [
   },
   {
     titulo: "DOLCKER & LINE HAN",
-    formato: "60x120/60x60/80x80/80x160/60x90",
+    formato: "60x120/60x60/80x80/80x160",
     src: imagenesAmbiente[12],
     id: "#han",
     categoria: "Terrazo",
