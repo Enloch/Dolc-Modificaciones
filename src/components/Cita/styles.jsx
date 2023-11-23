@@ -6,7 +6,7 @@ const StyledCita = styled.div`
 
     display: flex;
     flex-direction: column;
-    gap: ${DISTANCES.small};
+    gap: 0.5em;
 `
 
 export default StyledCita

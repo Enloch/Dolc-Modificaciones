@@ -1,5 +1,6 @@
 import React, { useState, Suspense } from "react";
-import { NombreMateriales } from "./Materiales";
+import { useTexture } from "@react-three/drei";
+import { Materiales, NombreMateriales } from "./Materiales";
 import { SketchPicker } from "react-color";
 import {
   MenuContainer,
@@ -14,17 +15,61 @@ import {
   CategoryButton,
 } from "./styles";
 import { Mallas } from "./Mallas";
-
-const Menu = ({
-  handleModelChange,
-  handleMaterialChange,
-  color,
-  setColor,
-  colorPickerActive,
-  setColorPickerActive,
-  setSelectedMatrix,
-}) => {
-  const [showCategoryButtons, setShowCategoryButtons] = useState(true);
+import useStore from "./store";
+const Menu = ({ handleModelChange }) => {
+  const {
+    color,
+    color1,
+    color2,
+    color3,
+    color4,
+    color5,
+    color6,
+    setColor1,
+    setColor2,
+    setColor3,
+    setColor4,
+    setColor5,
+    setColor6,
+    colorPickerActive,
+    setColorPickerActive,
+    selectedMatrix,
+    materialIndex,
+    isMenuOpen,
+    setIsMenuOpen,
+    selectedModel1,
+    selectedModel2,
+    selectedModel3,
+    selectedModel4,
+    selectedModel5,
+    selectedModel6,
+    setSelectedModel1,
+    setSelectedModel2,
+    setSelectedModel3,
+    setSelectedModel4,
+    setSelectedModel5,
+    setSelectedModel6,
+    setSelectedMatrix1,
+    setSelectedMatrix2,
+    setSelectedMatrix3,
+    setSelectedMatrix4,
+    setSelectedMatrix5,
+    setSelectedMatrix6,
+    setMaterialIndex1,
+    setMaterialIndex2,
+    setMaterialIndex3,
+    setMaterialIndex4,
+    setMaterialIndex5,
+    setMaterialIndex6,
+    setMaterialSource1,
+    setMaterialSource2,
+    setMaterialSource3,
+    setMaterialSource4,
+    setMaterialSource5,
+    setMaterialSource6,
+  } = useStore();
+  const [menuInicial, setMenuicial] = useState(true);
+  const [showCategoryButtons, setShowCategoryButtons] = useState(false);
   const [showModelTitulos, setShowModelTitulos] = useState(false);
   const [showMaterialButtons, setShowMaterialButtons] = useState(false);
   const [showMetales, setShowMetales] = useState(false);
@@ -32,38 +77,150 @@ const Menu = ({
   const [showColorPicker, setShowColorPicker] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState();
 
-  const handleModels = () => {
-    setShowCategoryButtons(true);
-    setShowModelTitulos(true);
-    setShowMaterialButtons(false);
-    setShowMetales(false); // Ocultar los botones de metales
-    setShowMaderas(false); // Ocultar los botones de maderas
-    setShowColorPicker(false); // Ocultar el color picker
-    setColorPickerActive(false); // Establecer colorPickerActive en false al seleccionar un material
-  };
-  const handleToggleMaterialButtons = (matrix) => {
+  const handleInicio = () => {
+    setMenuicial(true);
     setShowCategoryButtons(false);
-    setShowModelTitulos(false);
-    setShowMaterialButtons(!showMaterialButtons);
-    setShowMetales(true); // Mostrar los botones de metales
-    setShowMaderas(false); // Ocultar los botones de maderas
-    setShowColorPicker(false); // Ocultar el color picker
-    setColorPickerActive(false); // Establecer colorPickerActive en false al seleccionar un material
-    setSelectedMatrix(matrix);
+    setShowMaterialButtons(false);
+    setShowMetales(false);
+    setShowMaderas(false);
+    setShowColorPicker(false);
+    setColorPickerActive(false);
   };
-
+  const handleModels = () => {
+    setMenuicial(false);
+    setShowCategoryButtons(true);
+    setShowMaterialButtons(false);
+    setShowMetales(false);
+    setShowMaderas(false);
+    setShowColorPicker(false);
+    setColorPickerActive(false);
+  };
+  const handleMaterials = () => {
+    setMenuicial(false);
+    setShowCategoryButtons(false);
+    setShowMaterialButtons(true);
+    setShowMetales(true);
+    setShowMaderas(false);
+    setShowColorPicker(false);
+    setColorPickerActive(false);
+  };
   const handleHideButtons = () => {
     setShowCategoryButtons(true);
-    setShowModelTitulos(false);
     setShowMaterialButtons(false);
-    setShowMetales(false); // Ocultar los botones de metales
-    setShowMaderas(false); // Ocultar los botones de maderas
-    setShowColorPicker(false); // Ocultar el color picker
+    setShowMetales(false);
+    setShowMaderas(false);
+    setShowColorPicker(false);
+  };
+  const handleToggleMaterialButtons = (matrix) => {
+    if (selectedModel1) {
+      setSelectedMatrix1(matrix);
+      setSelectedModel1(false);
+    }
+    if (selectedModel2) {
+      setSelectedMatrix2(matrix);
+      setSelectedModel2(false);
+    }
+    if (selectedModel3) {
+      setSelectedMatrix3(matrix);
+      setSelectedModel3(false);
+    }
+    if (selectedModel4) {
+      setSelectedMatrix4(matrix);
+      setSelectedModel4(false);
+    }
+    if (selectedModel5) {
+      setSelectedMatrix5(matrix);
+      setSelectedModel5(false);
+    }
+    if (selectedModel6) {
+      setSelectedMatrix6(matrix);
+      setSelectedModel6(false);
+    }
   };
 
+  const handleMaterialChange = (index) => {
+    if (selectedModel1) {
+      setMaterialIndex1(index);
+      setSelectedModel1(false);
+    }
+    if (selectedModel2) {
+      setMaterialIndex2(index);
+      setSelectedModel2(false);
+    }
+    if (selectedModel3) {
+      setMaterialIndex3(index);
+      setSelectedModel3(false);
+    }
+    if (selectedModel4) {
+      setMaterialIndex4(index);
+      setSelectedModel4(false);
+    }
+    if (selectedModel5) {
+      setMaterialIndex5(index);
+      setSelectedModel5(false);
+    }
+    if (selectedModel6) {
+      setMaterialIndex6(index);
+      setSelectedModel6(false);
+    }
+  };
   const handleColorChange = (newColor) => {
-    setColor(newColor.hex);
-    handleMaterialChange(0); // Restablecer el material cuando se selecciona un color
+    if (selectedModel1) {
+      setColor1(newColor.hex);
+      setMaterialSource1("colorPicker");
+      // handleMaterialChange(0); // Restablecer el material cuando se selecciona un color
+    }
+    if (selectedModel2) {
+      setColor2(newColor.hex);
+      setMaterialSource2("colorPicker");
+      // handleMaterialChange(0); // Restablecer el material cuando se selecciona un color
+    }
+    if (selectedModel3) {
+      setColor3(newColor.hex);
+      setMaterialSource3("colorPicker");
+      // handleMaterialChange(0); // Restablecer el material cuando se selecciona un color
+    }
+    if (selectedModel4) {
+      setColor4(newColor.hex);
+      setMaterialSource4("colorPicker");
+      // handleMaterialChange(0); // Restablecer el material cuando se selecciona un color
+    }
+    if (selectedModel5) {
+      setColor5(newColor.hex);
+      setMaterialSource5("colorPicker");
+      // handleMaterialChange(0); // Restablecer el material cuando se selecciona un color
+    }
+    if (selectedModel6) {
+      setColor6(newColor.hex);
+      setMaterialSource6("colorPicker");
+      // handleMaterialChange(0); // Restablecer el material cuando se selecciona un color
+    }
+  };
+  const handleMaterialsChange = (index) => {
+    if (selectedModel1) {
+      setMaterialSource1("materials");
+      handleMaterialChange(index);
+    }
+    if (selectedModel2) {
+      setMaterialSource2("materials");
+      handleMaterialChange(index);
+    }
+    if (selectedModel3) {
+      setMaterialSource3("materials");
+      handleMaterialChange(index);
+    }
+    if (selectedModel4) {
+      setMaterialSource4("materials");
+      handleMaterialChange(index);
+    }
+    if (selectedModel5) {
+      setMaterialSource5("materials");
+      handleMaterialChange(index);
+    }
+    if (selectedModel6) {
+      setMaterialSource6("materials");
+      handleMaterialChange(index);
+    }
   };
   const categoryButtons = [
     { id: "1", label: "Planex" },
@@ -76,11 +233,49 @@ const Menu = ({
     // { id: "8", label: "Category 8" },
     // { id: "9", label: "Category 9" },
   ];
+
   return (
     <div>
       <Suspense>
+        {menuInicial && (
+          <MenuContainer visible={menuInicial}>
+            <Titulo
+              onClick={handleModels}
+              style={{
+                fontWeight: "bold",
+                borderTop: "1px solid #343434",
+                padding: "10px 0px",
+                margin: "0px 5px",
+              }}
+            >
+              Selecciona matriz
+            </Titulo>
+            <Titulo
+              onClick={handleMaterials}
+              style={{
+                fontWeight: "bold",
+                borderTop: "1px solid #343434",
+                padding: "10px 0px",
+                margin: "0px 5px",
+              }}
+            >
+              Selecciona acabado
+            </Titulo>
+          </MenuContainer>
+        )}
         {showCategoryButtons && (
           <MenuContainer visible={showCategoryButtons}>
+            <Titulo
+              onClick={handleInicio}
+              style={{
+                fontWeight: "bold",
+                borderTop: "1px solid #343434",
+                borderBottom: "1px solid #343434",
+                padding: "10px 0px",
+              }}
+            >
+              Volver atrás
+            </Titulo>
             {categoryButtons.map((category) => (
               <div key={category.id}>
                 <CategoryButton
@@ -97,23 +292,31 @@ const Menu = ({
                 >
                   {category.label}
                 </CategoryButton>
-                {selectedCategory === category.id &&
-                  Mallas[selectedCategory].matrices.map((matrix, i) => (
-                    <div
-                      key={i}
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        cursor: "pointer",
-                      }}
-                      onClick={() => handleToggleMaterialButtons(matrix)}
-                    >
-                      <ModelTitulo>{matrix.name}</ModelTitulo>
-                      <ModelImage src={matrix.image} alt={matrix.name} />
-                    </div>
-                  ))}
+                <div
+                  style={{
+                    maxHeight: "45vh",
+                    overflowY: "auto",
+                    overflowX: "hidden",
+                  }}
+                >
+                  {selectedCategory === category.id &&
+                    Mallas[selectedCategory].matrices.map((matrix, i) => (
+                      <div
+                        key={i}
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => handleToggleMaterialButtons(matrix)}
+                      >
+                        <ModelTitulo>{matrix.name}</ModelTitulo>
+                        <ModelImage src={matrix.image} alt={matrix.name} />
+                      </div>
+                    ))}
+                </div>
               </div>
             ))}
           </MenuContainer>
@@ -121,7 +324,17 @@ const Menu = ({
 
         {showMaterialButtons && (
           <>
-            <Titulo onClick={handleHideButtons}>Volver a Modelos</Titulo>
+            <Titulo
+              onClick={handleInicio}
+              style={{
+                fontWeight: "bold",
+                borderTop: "1px solid #343434",
+                borderBottom: "1px solid #343434",
+                padding: "10px 0px",
+              }}
+            >
+              Volver atrás
+            </Titulo>
             <div className='metales'>
               <Titulo
                 onClick={() => (
@@ -137,7 +350,7 @@ const Menu = ({
                 {NombreMateriales.slice(0, 18).map((material, index) => (
                   <MaterialButton
                     key={index}
-                    onClick={() => handleMaterialChange(index)}
+                    onClick={() => handleMaterialsChange(index)}
                   >
                     <MaterialImage
                       src={material.textura}
@@ -163,7 +376,7 @@ const Menu = ({
                 {NombreMateriales.slice(18, 22).map((material, index) => (
                   <MaterialButton
                     key={index}
-                    onClick={() => handleMaterialChange(index + 18)}
+                    onClick={() => handleMaterialsChange(index + 18)}
                   >
                     <MaterialImage
                       src={material.textura}
@@ -185,8 +398,39 @@ const Menu = ({
               >
                 Sólidos
               </Titulo>
-              <MenuContainer2 visible={showColorPicker}>
-                <SketchPicker color={color} onChange={handleColorChange} />
+              <MenuContainer2
+                visible={showColorPicker}
+                onMouseUp={() => {
+                  if (
+                    selectedModel1 ||
+                    selectedModel2 ||
+                    selectedModel3 ||
+                    selectedModel4 ||
+                    selectedModel5 ||
+                    selectedModel6
+                  ) {
+                    handleMaterialChange(0);
+                  }
+                }}
+              >
+                <SketchPicker
+                  color={
+                    selectedModel1
+                      ? color1
+                      : selectedModel2
+                      ? color2
+                      : selectedModel3
+                      ? color3
+                      : selectedModel4
+                      ? color4
+                      : selectedModel5
+                      ? color5
+                      : selectedModel6
+                      ? color6
+                      : "#ffffff" // Un valor por defecto en caso de que ningún modelo esté seleccionado
+                  }
+                  onChange={handleColorChange}
+                />
               </MenuContainer2>
             </div>
           </>

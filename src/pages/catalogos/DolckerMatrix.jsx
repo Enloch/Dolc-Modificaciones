@@ -44,19 +44,13 @@ const DolckerMatrix = () => {
           "aplicaciones",
           "rehabilitacion",
           "obra-nueva",
-          "fachadas",
-          "terrazas",
+          "interiores",
         ]}
       />
       <Disenos
         id={[
           "diseno",
-          "formato",
-          "despiece",
-          "acabados",
-          "espesores",
-          "piezas",
-          "series",
+          "configurador",
         ]}
       />
       <Caracteristicas id={["caracteristicas-especiales", "datos-tecnicos"]} />

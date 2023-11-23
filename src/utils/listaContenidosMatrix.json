@@ -30,8 +30,8 @@
             "link": "#obra-nueva"
           },
           {
-            "title": "Fachadas",
-            "link": "#fachadas"
+            "title": "Interiores",
+            "link": "#interiores"
           }
         ]
       }
@@ -45,20 +45,8 @@
         "link": "#diseno"
       },
       {
-        "title": "Formato",
-        "link": "#formato"
-      },
-      {
-        "title": "Acabados",
-        "link": "#acabados"
-      },
-      {
-        "title": "Espesores",
-        "link": "#espesores"
-      },
-      {
-        "title": "Series",
-        "link": "#series"
+        "title": "Configurador",
+        "link": "#configurador"
       }
     ]
   },

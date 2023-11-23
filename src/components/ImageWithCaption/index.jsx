@@ -1,47 +1,47 @@
-import StyledImageWithCaption from './styles'
+import StyledImageWithCaption from "./styles";
 
 const ImageWithCaption = ({
-    src,
-    alt,
-    caption,
-    onClickFunc,
-    className,
-    columnSpan,
-    style,
-    mostrarCaption,
-    isGray = false,
+  src,
+  alt,
+  caption,
+  onClickFunc,
+  className,
+  columnSpan,
+  style,
+  mostrarCaption,
+  isGray = false,
 }) => {
-    if (!caption && !mostrarCaption)
-        return (
-            <StyledImageWithCaption
-                className={className}
-                style={style}
-                columnSpan={columnSpan}
-            >
-                <img
-                    src={src}
-                    alt={alt}
-                    onClick={onClickFunc}
-                    className={isGray ? 'gray' : ''}
-                />
-            </StyledImageWithCaption>
-        )
-
+  if (!caption && !mostrarCaption)
     return (
-        <StyledImageWithCaption
-            className={className}
-            style={style}
-            columnSpan={columnSpan}
-        >
-            <img
-                src={src}
-                alt={alt}
-                onClick={onClickFunc}
-                className={isGray ? 'gray' : ''}
-            />
-            <figcaption>{caption || '-'}</figcaption>
-        </StyledImageWithCaption>
-    )
-}
+      <StyledImageWithCaption
+        className={className}
+        style={style}
+        columnSpan={columnSpan}
+      >
+        <img
+          src={src}
+          alt={alt}
+          onClick={onClickFunc}
+          className={isGray ? "gray" : ""}
+        />
+      </StyledImageWithCaption>
+    );
 
-export default ImageWithCaption
+  return (
+    <StyledImageWithCaption
+      className={className}
+      style={style}
+      columnSpan={columnSpan}
+    >
+      <img
+        src={src}
+        alt={alt}
+        onClick={onClickFunc}
+        className={isGray ? "gray" : ""}
+      />
+      <figcaption>{caption || "-"}</figcaption>
+    </StyledImageWithCaption>
+  );
+};
+
+export default ImageWithCaption;

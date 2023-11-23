@@ -51,7 +51,7 @@ const DolckerTline = () => {
       <Disenos
         id={[
           "diseno",
-          "formato",
+          "configurador",
           "despiece",
           "acabados",
           "espesores",

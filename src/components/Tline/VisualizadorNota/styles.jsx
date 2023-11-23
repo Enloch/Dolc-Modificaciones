@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { COLORS, DISTANCES } from "../../../global/GlobalStyles";
-import { column_5_span8 } from "../../../styles/grid";
+import { column_5_span6 } from "../../../styles/grid";
 
 const StyledVisualizadorNota = styled.div`
-  ${column_5_span8}
+  ${column_5_span6}
 
   position: relative;
 
@@ -25,9 +25,8 @@ const StyledVisualizadorNota = styled.div`
 
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 
-    padding: ${DISTANCES.small} ${DISTANCES.medium};
+    padding: 1rem 1rem;
 
     background-color: ${COLORS.gray01};
     opacity: 0;
@@ -36,8 +35,8 @@ const StyledVisualizadorNota = styled.div`
     transition: visibility 0.3s, opacity 0.3s;
 
     img {
-      height: 6rem;
-      width: 6rem;
+      height: 4rem;
+      width: 4rem;
     }
 
     .visualizador-nota,
@@ -45,12 +44,15 @@ const StyledVisualizadorNota = styled.div`
       animation: slide-right-fade-in 0.3s;
       animation-fill-mode: forwards;
     }
+    p {
+      font-size: 12px;
+    }
   }
 
   @keyframes slide-right-fade-in {
     0% {
       opacity: 0;
-      transform: translateX(40px);
+      transform: translateX(30px);
     }
 
     100% {

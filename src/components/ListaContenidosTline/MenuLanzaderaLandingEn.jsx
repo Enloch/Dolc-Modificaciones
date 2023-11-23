@@ -15,7 +15,7 @@ import Imagen8 from "../../assets/images/Novedades/8.webp";
 import Imagen9 from "../../assets/images/Novedades/9.webp";
 import Imagen10 from "../../assets/images/Novedades/10.webp";
 import Imagen11 from "../../assets/images/Novedades/11.webp";
-import Imagen12 from "../../assets/images/Novedades/12.webp";
+import Imagen12 from "../../assets/images/Noveades/12.webp";
 import Imagen13 from "../../assets/images/Novedades/13.webp";
 import Imagen14 from "../../assets/images/Novedades/14.webp";
 

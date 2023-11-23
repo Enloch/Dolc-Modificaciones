@@ -2,7 +2,7 @@ import Text from "../../../components/Text";
 import { Titulo, Titulo2 } from "../../../components/Titulos";
 import StyledSistemas, { Enlaces } from "./styles";
 import { COLORS } from "../../../global/GlobalStyles";
-import sistemas from "../../../assets/images/DolckerTline/Sistemas/sistemas.webp";
+import sistemas from "../../../assets/images/DolckerMatrix/temporal.webp";
 import dolckerClip1 from "../../../assets/images/DolckerTline/detalles.jpg";
 import dolckerClip2 from "../../../assets/images/DolckerTline/detalles.jpg";
 

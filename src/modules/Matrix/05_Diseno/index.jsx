@@ -4,22 +4,12 @@ import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo, Titulo2 } from "../../../components/Titulos";
 import { COLORS } from "../../../global/GlobalStyles";
 import StyledDisenos from "./styles";
-import img1 from "../../../assets/images/DolckerTline/Diseno/catalogo3-1-14.webp";
+import img1 from "../../../assets/images/DolckerMatrix/Diseno/catalogo3-1-14.jpg";
 import fondo from "../../../assets/images/Diseno/Formato/fondo.webp";
 import indicadoresFormato from "../../../utils/indicadoresFormato";
-import Anotacion from "../../../components/Anotacion";
-import Anotaciones from "../../../components/Anotacion/Anotaciones";
-import configAcabados from "../../../configs/configAcabadosTline";
-import Series from "./05_2_Series";
-import ranurado6 from "../../../assets/images/DolckerTline/Diseno/Espesores/Dolcker_espesor_6mm.jpg";
-import ranurado9 from "../../../assets/images/DolckerTline/Diseno/Espesores/Dolcker_espesor_9mm.jpg";
-import ranurado11 from "../../../assets/images/DolckerTline/Diseno/Espesores/Dolcker_espesor_11mm.jpg";
-import VisualizadorDesplazador from "../../../components/Tline/VisualizadorDesplazador";
-import IndiceSeries from "./05_1_IndiceSeries";
 import RotadorMatrix from "../../../components/Rotadores/Matrix/Rotador";
-import Configurador1Tline from "../../../components/VisualizadorVariacionesTline";
-import Configurador2Tline from "../../../components/VisualizadorVariacionesTline2";
-
+import IndiceSeries from "./05_1_IndiceSeries";
+import Series from "./05_2_Series";
 const DisenosTline = ({ id }) => {
   const ids = [
     "ard",
@@ -59,45 +49,17 @@ const DisenosTline = ({ id }) => {
     <>
       <StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
         <Titulo>Diseño</Titulo>
-        <ImageWithCaption
-          src={img1}
-          alt='Imagen de Diseños 1'
-          // caption='Arquitectos pasan la referencia'
-          columnSpan='6'
-        />
+        <ImageWithCaption src={img1} alt='Imagen de Diseños 1' columnSpan='6' />
         <Cita
-          cita='“La regla de la arquitectura es hacer las cosas con amor y obsesión en gran proporción.”'
-          author='Miguel Fisac (1913-2006)'
+          cita='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+          author='Autor '
           colorAutor={COLORS.gray05}
         />
       </StyledDisenos>
-      {/* <StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Formato</Titulo2>
-        <Anotacion {...propsFormato.anotacion} />
-        <Configurador1Tline />
-      </StyledDisenos> */}
-      <StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Acabados y Perfiles de Cenefas</Titulo2>
-        <Anotaciones>
-          <Anotacion
-            type='normal'
-            text='Pulsa en el punto para ver todas las posibilidades de piezas especiales'
-          />
-          <Anotacion
-            type='swipe'
-            text='Desliza con el ratón o el dedo para apreciar la textura'
-          />
-        </Anotaciones>
+      <StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
+        <Titulo2>Configurador</Titulo2>
         <div className='rotador'>
-          {/* <RotadorMatrix /> */}
-          <iframe
-            src='https://matrix-rotador.vercel.app/'
-            width='100%'
-            height='100%'
-            title='RotadorMatrix'
-            frameborder='0'
-            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          ></iframe>
+          <RotadorMatrix />
         </div>
       </StyledDisenos>
       <IndiceSeries id={id[6]} queSerieActiva={setSerieActiva} />

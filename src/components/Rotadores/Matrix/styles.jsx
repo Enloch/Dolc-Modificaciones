@@ -19,13 +19,9 @@ export const CanvasContainer = styled.div`
   position: relative;
   top: 0;
   left: 0;
-  width: 100%;
-  /* width: ${({ visible }) => (visible ? "75%" : "100%")}; */
+  width: ${({ visible }) => (visible ? "80%" : "100%")};
   height: 100%;
-  cursor: all-scroll;
-  @media screen and (max-width: 1080px) {
-    width: 66%;
-  }
+  grid-template-columns: 1fr 1fr;
   @media screen and (max-width: 480px) {
     width: 100%;
   }
@@ -49,13 +45,12 @@ export const ImagenExpandir = styled.img`
 `;
 
 export const RotadorMenuContainer = styled.div`
-  width: 33%;
-  padding: 5px;
+  /* width: 33%; */
+  padding: 15px 15px;
   background-color: #ffffff;
-  max-height: 100vh;
   height: 100%;
   border-left: 1px solid #e0e0e0;
-  /* width: ${({ visible }) => (visible ? "25%" : "0")}; */
+  width: ${({ visible }) => (visible ? "20%" : "0")};
   /* display: ${({ visible }) => (visible ? "block" : "none")}; */
   overflow-y: auto;
   @media (max-width: 480px) {
@@ -107,10 +102,11 @@ export const R360Image = styled.img`
 
 export const MenuContainer = styled.div`
   width: 100%;
-  height: 100%;
+  max-height: 100%;
   display: ${({ visible }) => (visible ? "grid" : "none")};
   grid-template-columns: 1fr;
   row-gap: 5px;
+  overflow-y: auto;
   @media (max-width: 480px) {
     flex-direction: row;
     justify-content: flex-start;
@@ -119,9 +115,11 @@ export const MenuContainer = styled.div`
 
 export const MenuContainer2 = styled.div`
   width: 100%;
+  max-height: 50vh;
   display: ${({ visible }) => (visible ? "flex" : "none")};
   flex-direction: row;
   flex-wrap: wrap;
+  overflow-y: auto;
 `;
 
 export const MaterialButton = styled.button`
@@ -163,19 +161,18 @@ export const CategoryButton = styled.h2`
   }
 `;
 
-export const ModelTitulo = styled.h3`
+export const ModelTitulo = styled.span`
   margin: 10px auto 10px 20px;
   padding: 0;
   border: none;
   background: none;
-  width: 100%;
-  min-height: 60px;
   text-align: left;
+  font-size: 12px;
 `;
 
 export const ModelImage = styled.img`
   width: 80%;
-  height: 100%;
+  height: 75%;
 
   /* object-fit: cover; */
 `;

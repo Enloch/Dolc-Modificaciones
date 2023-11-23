@@ -15,7 +15,7 @@ import {
 import { column_5_span7 } from "../../../styles/grid";
 
 const StyledDisenos = styled(Seccion)`
-  row-gap: ${DISTANCES.medium};
+  row-gap: ${DISTANCES.small};
 
   /* .espesores-ejemplos {
         ${column_5_span7}
@@ -31,7 +31,7 @@ const StyledDisenos = styled(Seccion)`
         }
     } */
   .rotador {
-    grid-column: 3 / -1;
+    grid-column: 5 / -1;
     background-color: #fff;
     height: 800px;
   }
@@ -73,8 +73,7 @@ const StyledDisenos = styled(Seccion)`
       props.isEspesores ? "grid-template-columns: repeat(3, 1fr);" : null}
     .rotador {
       grid-column: 1 / -1;
-      min-height: 375px;
-      height: auto;
+      height: 650px;
     }
     .espesor-1 {
       grid-column: 1 / span 1;

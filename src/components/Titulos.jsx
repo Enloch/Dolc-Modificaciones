@@ -12,9 +12,9 @@ const Titulo = styled.h2`
   }
 `;
 
-const Titulo2 = styled.h3`
+const Titulo2 = styled.h2`
   ${TextLarge}
-  /* font-weight: bold; */
+  font-weight: bold;
 
     a {
     text-decoration: none;

@@ -18,9 +18,10 @@ const StyledAnotacion = styled.div`
 
     img {
         position: absolute;
-        right: calc(100% + ${GRID.columnGap});
+        right: calc(100% + ${GRID.columnGap}/8);
 
-        min-width: 25px;
+        min-width: 40px;
+        min-height: 40px;
         width: auto;
         max-height: calc(2 * ${DISTANCES.small});
     }

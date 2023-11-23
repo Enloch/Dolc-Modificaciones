@@ -2,7 +2,7 @@ import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo } from "../../../components/Titulos";
 import { COLORS } from "../../../global/GlobalStyles";
 import StyledCaracteristicas from "./styles";
-import caracter1 from "../../../assets/images/DolckerTline/Caracteristicas/caracteristicas.webp";
+import caracter1 from "../../../assets/images/DolckerMatrix/temporal.webp";
 import ImagenJorge from "../../../assets/images/DolckerTline/tablas.jpg";
 import ImagenConstructiva from "../../../assets/images/DolckerTline/tablas.jpg";
 import Cdim1 from "../../../assets/icons/caracteristicasTline/caracteristicas dimensionales 1.svg";
@@ -138,25 +138,25 @@ const CaracteristicasTline = ({ id }) => {
       </StyledCaracteristicas>
       <StyledCaracteristicas id={id[1]} backgroundColor={COLORS.gray02}>
         <Titulo>Datos técnicos</Titulo>
-        <ImageWithCaption
-          src={Cdim1}
+        {/* <ImageWithCaption
+          src={caracter1}
           alt='Imágenes técnicas (Jorge)'
           caption=''
           columnSpan='6'
           isGray
         />
         <ImageWithCaption
-          src={Cmec1}
+          src={caracter1}
           alt='Imágenes técnicas (Jorge)'
           caption=''
           columnSpan='6'
           isGray
-        />
+        /> */}
         <Text>
           <strong>Textos (Jorge)</strong>
         </Text>
-        <ImageWithCaption
-          src={Chig1}
+        {/* <ImageWithCaption
+          src={caracter1}
           alt='Imágenes técnicas (Jorge)'
           caption=''
           columnSpan='6'
@@ -168,34 +168,34 @@ const CaracteristicasTline = ({ id }) => {
           columnSpan='6'
         />
         <ImageWithCaption
-          src={Cdim2}
+          src={caracter1}
           alt='Imágenes técnicas (Jorge)'
           caption=''
           columnSpan='6'
           isGray
         />
         <ImageWithCaption
-          src={Cmec2}
+          src={caracter1}
           alt='Imágenes técnicas (Jorge)'
           caption=''
           columnSpan='6'
           isGray
-        />
+        /> */}
         <Text>
           <strong>Textos (Jorge)</strong>
         </Text>
-        <ImageWithCaption
-          src={Chig2}
+        {/* <ImageWithCaption
+          src={caracter1}
           alt='Imágenes técnicas (Jorge)'
           caption=''
           columnSpan='6'
         />
         <ImageWithCaption
-          src={Norm2}
+          src={caracter1}
           alt='Imágenes técnicas (Jorge)'
           caption=''
           columnSpan='6'
-        />
+        /> */}
       </StyledCaracteristicas>
     </>
   );
