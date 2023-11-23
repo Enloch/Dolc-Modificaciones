@@ -233,6 +233,7 @@ const EscenaRotador = ({
         position={[0, 0, 1]}
         near={0.1}
         far={20}
+        zoom={0.95}
       />
       <Luces />
       <Center rotation={[0, 0, rotation]}>

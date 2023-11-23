@@ -22,10 +22,37 @@ export const CanvasContainer = styled.div`
   width: ${({ visible }) => (visible ? "80%" : "100%")};
   height: 100%;
   grid-template-columns: 1fr 1fr;
-  @media screen and (max-width: 480px) {
+  @media (max-width: 1080px) {
+    width: ${({ visible }) => (visible ? "70%" : "100%")};
+  }
+  @media screen and (max-width: 600px) {
     width: 100%;
   }
 `;
+
+export const RotadorMenuContainer = styled.div`
+  /* width: 33%; */
+  padding: 15px 15px;
+  background-color: #ffffff;
+  height: 100%;
+  border-left: 1px solid #e0e0e0;
+  /* width: ${({ visible }) => (visible ? "20%" : "0")}; */
+  width: 20%;
+  display: ${({ visible }) => (visible ? "block" : "none")};
+  overflow-y: auto;
+  @media (max-width: 1080px) {
+    display: ${({ visible }) => (visible ? "block" : "none")};
+    width: 30%;
+  }
+  @media (max-width: 600px) {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border-left: none;
+    border-top: 1px solid #e0e0e0;
+  }
+`;
+
 export const BotonExpandir = styled.a`
   display: none;
   position: absolute;
@@ -42,23 +69,6 @@ export const BotonExpandir = styled.a`
 export const ImagenExpandir = styled.img`
   width: 100%;
   height: 100%;
-`;
-
-export const RotadorMenuContainer = styled.div`
-  /* width: 33%; */
-  padding: 15px 15px;
-  background-color: #ffffff;
-  height: 100%;
-  border-left: 1px solid #e0e0e0;
-  width: ${({ visible }) => (visible ? "20%" : "0")};
-  /* display: ${({ visible }) => (visible ? "block" : "none")}; */
-  overflow-y: auto;
-  @media (max-width: 480px) {
-    width: 100%;
-    padding: 5px;
-    border-left: none;
-    border-top: 1px solid #e0e0e0;
-  }
 `;
 
 export const IntroContainer = styled.div`

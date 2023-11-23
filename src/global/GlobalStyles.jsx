@@ -12,7 +12,7 @@ const DISTANCES = {
 
 const TABLET_SIZE = "1080px";
 const MID_TABLET_SIZE = "1400px";
-const MOBILE_SIZE = "480px";
+const MOBILE_SIZE = "600px";
 
 const COLORS = {
   green: " #00BFA6",

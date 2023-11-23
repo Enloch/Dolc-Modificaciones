@@ -158,7 +158,6 @@ export function Fachada(props) {
           {/* {console.log(index, malla.posicion)} */}
         </mesh>
       ))}
-
       <mesh
         castShadow
         receiveShadow
@@ -170,87 +169,73 @@ export function Fachada(props) {
         receiveShadow
         geometry={nodes.Lamas1.geometry}
         material={materials.MarcoVentana}
-        position={[-2.65, 0.055, 0.031]}
-        scale={0.9}
-      >
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Marco1.geometry}
-          material={materials.MarcoVentana}
-          position={[0, 0, -0.081]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Ventana3_1.geometry}
-          material={materials.MarcoVentana}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Ventana3_2.geometry}
-          material={materials["Glass Smoked"]}
-        />
-      </mesh>
-      <group position={[0, 0.047, -0.003]} scale={0.9}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Ventana3_1.geometry}
-          material={materials.MarcoVentana}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Ventana3_2.geometry}
-          material={materials["Glass Smoked"]}
-        />
-      </group>
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Marco1.geometry}
+        material={materials.MarcoVentana}
+      />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Lamas2.geometry}
         material={materials.MarcoVentana}
-        position={[0, 0.047, -0.003]}
-        scale={0.9}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Marco2.geometry}
         material={materials.MarcoVentana}
-        position={[0, 0.047, -0.057]}
-        scale={0.9}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Lamas3.geometry}
         material={materials.MarcoVentana}
-        position={[2.651, 0.048, 0.031]}
-        scale={0.9}
-      >
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Marco3.geometry}
-          material={materials.MarcoVentana}
-          position={[0, 0, -0.081]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Ventana3_1.geometry}
-          material={materials.MarcoVentana}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Ventana3_2.geometry}
-          material={materials["Glass Smoked"]}
-        />
-      </mesh>
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Marco3.geometry}
+        material={materials.MarcoVentana}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Ventana3001.geometry}
+        material={materials.MarcoVentana}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Ventana3001_1.geometry}
+        material={materials["Glass Smoked"]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Ventana3_1.geometry}
+        material={materials.MarcoVentana}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Ventana3_2.geometry}
+        material={materials["Glass Smoked"]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Ventana3002.geometry}
+        material={materials.MarcoVentana}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Ventana3002_1.geometry}
+        material={materials["Glass Smoked"]}
+      />
     </group>
   );
 }

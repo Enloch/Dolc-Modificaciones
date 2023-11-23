@@ -3,6 +3,7 @@ import { Children } from "react";
 import getDataFromModules from "../helpers/getDataFromModules";
 import Enlace from "../modules/06_Diseno/06_1_IndiceSeries/Enlace";
 import img1 from "../assets/images/DolckerTline/ranurado11mm.webp";
+import tubex from "../assets/images/DolckerMatrix/Series/Previo perfil Matrix.jpg";
 const imagenesAmbienteImports = import.meta.globEager(
   "../assets/images/DolckerTline/Series/**/EJEMPLO/**"
 );
@@ -12,86 +13,57 @@ const imagenesAmbiente =
   "https://dummyimage.com/600x400/000/fff&text=+IMAGEN+FAMILIA";
 const enlacesObj = [
   {
-    titulo: "DOLCKER & MATRIX FAMILIA 1",
+    titulo: "PLANEX",
     formato: "TipologiaFormato",
     src: imagenesAmbiente,
-    id: "#ard",
-    categoria: "Piedra",
+    id: "#PLANEX",
   },
   {
-    titulo: "DOLCKER & MATRIX FAMILIA 2",
+    titulo: "TUBEX",
     formato: "TipologiaFormato",
-    src: imagenesAmbiente,
+    src: tubex,
     id: "#balm",
-    categoria: "Piedra",
   },
   {
-    titulo: "DOLCKER & MATRIX FAMILIA 3",
+    titulo: "VIVEX",
     formato: "TipologiaFormato",
     src: imagenesAmbiente,
     id: "#bella",
-    categoria: "Marmol",
   },
   {
-    titulo: "DOLCKER & MATRIX FAMILIA 4",
+    titulo: "VERTEX",
     formato: "TipologiaFormato",
     src: imagenesAmbiente,
     id: "#byb",
-    categoria: "Monocolor",
   },
   {
-    titulo: "DOLCKER & MATRIX FAMILIA 5",
+    titulo: "WINDX",
     formato: "TipologiaFormato",
     src: imagenesAmbiente,
     id: "#brun",
-    categoria: "Piedra",
   },
   {
-    titulo: "DOLCKER & MATRIX FAMILIA 6",
+    titulo: "DISPLAX",
     formato: "TipologiaFormato",
     src: imagenesAmbiente,
     id: "#cap",
-    categoria: "Piedra",
   },
   {
-    titulo: "DOLCKER & MATRIX FAMILIA 7",
+    titulo: "TECNUX",
     formato: "TipologiaFormato",
     src: imagenesAmbiente,
     id: "#cor",
-    categoria: "Cemento",
-  },
-  {
-    titulo: "DOLCKER & MATRIX FAMILIA 8",
-    formato: "TipologiaFormato",
-    src: imagenesAmbiente,
-    id: "#crom",
-    categoria: "Piedra",
-  },
-  {
-    titulo: "DOLCKER & MATRIX FAMILIA 9",
-    formato: "TipologiaFormato",
-    src: imagenesAmbiente,
-    id: "#dom",
-    categoria: "Piedra",
   },
 ];
 
-const useImagesSeries = (categoria, queSerieActiva) => {
+const useImagesSeries = (queSerieActiva) => {
   // Filtra los enlaces de acuerdo a la categoría seleccionada
-  const enlacesFiltrados = enlacesObj.filter((enlace) => {
-    if (categoria === "Todas") {
-      return true; // Mostrar todas las categorías
-    } else {
-      return enlace.categoria === categoria; // Mostrar solo la categoría seleccionada
-    }
-  });
   const handleSerieChange = (event, id) => {
     // event.preventDefault();
     queSerieActiva(id);
-    console.log("Indice serie serie activa?", id);
   };
   return Children.toArray(
-    enlacesFiltrados.map(({ titulo, src, id, formato }) => {
+    enlacesObj.map(({ titulo, src, id, formato }) => {
       return (
         <Enlace
           href={id}
@@ -100,9 +72,9 @@ const useImagesSeries = (categoria, queSerieActiva) => {
         >
           <img src={src} alt={titulo + " ejemplo"} />
           <span style={{ margin: "0" }}>{titulo}</span>
-          <span className='formatos' style={{ margin: "0" }}>
+          {/* <span className='formatos' style={{ margin: "0" }}>
             {formato}
-          </span>
+          </span> */}
         </Enlace>
       );
     })

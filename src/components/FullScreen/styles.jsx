@@ -8,7 +8,7 @@ const StyledFullScreen = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 5;
+  z-index: 1000;
 
   display: ${(props) => props.display};
   justify-content: center;

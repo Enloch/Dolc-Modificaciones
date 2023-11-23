@@ -162,88 +162,82 @@ export function FachadaHorizontal(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Ventana3001.geometry}
-        material={materials["MarcoVentana.001"]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Ventana3001_1.geometry}
-        material={materials["Glass Smoked.001"]}
+        geometry={nodes.Box006.geometry}
+        material={materials.MarcoVentana}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Marco2.geometry}
-        material={materials["MarcoVentana.001"]}
-        position={[0, 0, -0.081]}
+        material={materials.MarcoVentana}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Lamas3.geometry}
-        material={materials["FUSTA 1.001"]}
-        position={[2.651, 0, 0.031]}
+        material={materials.MarcoVentana}
       >
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Marco3.geometry}
-          material={materials["MarcoVentana.001"]}
-          position={[0, 0, -0.081]}
+          material={materials.MarcoVentana}
         />
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Ventana3001.geometry}
-          material={materials["MarcoVentana.001"]}
+          geometry={nodes.Ventana3002.geometry}
+          material={materials.MarcoVentana}
         />
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Ventana3001_1.geometry}
-          material={materials["Glass Smoked.001"]}
+          geometry={nodes.Ventana3002_1.geometry}
+          material={materials["Glass Smoked"]}
         />
       </mesh>
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Lamas2.geometry}
-        material={materials["FUSTA 1.001"]}
-        position={[0, 0, -0.003]}
+        material={materials.MarcoVentana}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Lamas1.geometry}
-        material={materials["FUSTA 1.001"]}
-        position={[-2.65, 0, 0.031]}
+        material={materials.MarcoVentana}
       >
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Marco1.geometry}
-          material={materials["MarcoVentana.001"]}
-          position={[0, 0, -0.081]}
+          material={materials.MarcoVentana}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Ventana3001.geometry}
-          material={materials["MarcoVentana.001"]}
+          material={materials.MarcoVentana}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Ventana3001_1.geometry}
-          material={materials["Glass Smoked.001"]}
+          material={materials["Glass Smoked"]}
         />
       </mesh>
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Box006.geometry}
-        material={materials["MarcoVentana.001"]}
+        geometry={nodes.Ventana3_1.geometry}
+        material={materials.MarcoVentana}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Ventana3_2.geometry}
+        material={materials["Glass Smoked"]}
       />
     </group>
   );

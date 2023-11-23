@@ -45,7 +45,7 @@ export const gridLayoutTemplate = (
 const SECCION_GRID = {
   numColumns: 12,
   columnGap: DISTANCES.small,
-  rowGap: DISTANCES.medium,
+  rowGap: DISTANCES.small,
   horizontalSpace: `clamp(${DISTANCES.small}, 2.604vw, ${DISTANCES.medium})`,
   verticalSpace: DISTANCES.medium,
 };
