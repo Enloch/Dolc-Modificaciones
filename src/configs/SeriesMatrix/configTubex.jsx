@@ -18,6 +18,8 @@ import Tubex3q from "../../assets/images/DolckerMatrix/Series/TUBEX/matriz3_q.jp
 import Tubex3r from "../../assets/images/DolckerMatrix/Series/TUBEX/matriz3_r.jpg";
 import Tubex3s from "../../assets/images/DolckerMatrix/Series/TUBEX/matriz3_s.jpg";
 import Tubex3t from "../../assets/images/DolckerMatrix/Series/TUBEX/matriz3_t.jpg";
+import Tubex3u from "../../assets/images/DolckerMatrix/Series/TUBEX/matriz4_a.jpg";
+import Tubex3v from "../../assets/images/DolckerMatrix/Series/TUBEX/matriz4_b.jpg";
 
 export const configTubex = [
   { id: "1", img: Tubex3a, title: "Tubex A" },
@@ -40,4 +42,6 @@ export const configTubex = [
   { id: "18", img: Tubex3r, title: "Tubex R" },
   { id: "19", img: Tubex3s, title: "Tubex S" },
   { id: "20", img: Tubex3t, title: "Tubex T" },
+  { id: "21", img: Tubex3u, title: "Tubex U" },
+  { id: "22", img: Tubex3v, title: "Tubex V" },
 ];

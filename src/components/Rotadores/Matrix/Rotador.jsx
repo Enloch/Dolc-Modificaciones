@@ -37,7 +37,9 @@ import { Fachada } from "./ModeloFachada";
 import useStore from "./store";
 import { SpotLightComponent, Box } from "./Spotlight";
 import { FachadaHorizontal } from "./ModeloFachadaHorizontal";
-
+import Rotar from "../../../assets/icons/rotar.svg";
+import Front from "../../../assets/icons/front.svg";
+import Exit from "../../../assets/icons/exit.svg";
 export default function RotadorMatrix() {
   const {
     materialIndex,
@@ -94,6 +96,14 @@ export default function RotadorMatrix() {
   const resetRotation = () => {
     setRotada(false);
     setRotation(0);
+  };
+
+  const handleRotationClick = () => {
+    if (!rotada) {
+      rotateModels();
+    } else {
+      resetRotation();
+    }
   };
   const handleFachadaClick = () => {
     setFachadaVisible(!fachadaVisible);
@@ -181,35 +191,73 @@ export default function RotadorMatrix() {
           </Suspense>
         </Canvas>
         <Loader />
-        <div
-          style={{
-            position: "absolute",
-            bottom: "10px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            display: "flex",
-            gap: 10,
-          }}
-        >
-          {fachadaVisible === false && (
-            <button onClick={handleFachadaClick}>Fachada</button>
-          )}
-          {fachadaVisible === true && (
-            <button onClick={handleResetClick}>Reset</button>
-          )}
-          <button onClick={rotateModels}>Horizontal</button>
-          <button onClick={resetRotation}>Vertical</button>
-          {/* Slider para seleccionar la cantidad de modelos */}
-          {fachadaVisible === false && (
+        {fachadaVisible === false && (
+          <div
+            style={{
+              position: "absolute",
+              bottom: "10px",
+              left: "50%",
+              transform: "translateX(-50%)",
+              display: "flex",
+              alignItems: "center",
+              gap: "15px",
+              height: "45px",
+            }}
+          >
+            <a onClick={handleRotationClick} style={{ cursor: "pointer" }}>
+              <img src={Rotar} style={{ width: "45px" }} />
+            </a>
             <input
+              style={{
+                appearance: "none", // Esto es para asegurar que los estilos se apliquen correctamente en todos los navegadores
+                width: "100%", // Ajusta al ancho que prefieras
+                height: "3px", // Altura de la barra
+                background: "#292929", // Color de fondo de la barra (gris claro)
+                outline: "none", // Remueve el borde que aparece al hacer foco en algunos navegadores
+                opacity: "0.7", // Opacidad de la barra
+                transition: "opacity .2s", // Transición suave para la opacidad
+                borderRadius: "5px", // Bordes redondeados
+                // Estilos para el pulgar (la parte que se desliza)
+                WebkitSliderThumb: {
+                  appearance: "none",
+                  width: "25px",
+                  height: "25px",
+                  borderRadius: "50%",
+                  background: "#888", // Color del pulgar (gris)
+                  cursor: "pointer",
+                },
+              }}
               type='range'
               min='1'
               max='6'
               value={numModels}
               onChange={(e) => setNumModels(parseInt(e.target.value))}
             />
-          )}
-        </div>
+            <a onClick={handleFachadaClick} style={{ cursor: "pointer" }}>
+              <img src={Front} style={{ width: "45px" }} />
+            </a>
+          </div>
+        )}
+        {fachadaVisible === true && (
+          <div
+            style={{
+              position: "absolute",
+              top: "10px",
+              left:"20px",
+              display: "flex",
+              alignItems: "center",
+              gap: "25px",
+              height: "45px",
+            }}
+          >
+            <a onClick={handleRotationClick} style={{ cursor: "pointer" }}>
+              <img src={Rotar} style={{ width: "45px" }} />
+            </a>
+            <a onClick={handleResetClick} style={{ cursor: "pointer" }}>
+              <img src={Exit} style={{ width: "45px" }} />
+            </a>
+          </div>
+        )}
       </CanvasContainer>
       <RotadorMenuContainer visible={!fachadaVisible}>
         <Menu />

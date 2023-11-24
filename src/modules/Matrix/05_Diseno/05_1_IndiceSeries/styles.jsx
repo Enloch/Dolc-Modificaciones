@@ -141,3 +141,98 @@ export const StyledIndiceImagenes = styled(Seccion)`
   `)}
   } */
 `;
+export const StyledFamilia = styled.section`
+  background-color: #bfbfbf;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  padding: 0 clamp(1.563rem, 2.604vw, 3.125rem)
+    clamp(1.563rem, 2.604vw, 3.125rem) clamp(1.563rem, 2.604vw, 3.125rem);
+
+  @media (max-width: 1080px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+`;
+
+export const ContenedorTitulos = styled.div`
+  grid-row: 2;
+  grid-column: 5 / 6;
+  @media (max-width: 1080px) {
+    grid-column: 1 / 2;
+  }
+  @media (max-width: 600px) {
+    margin-top: 10px;
+    grid-row: 2;
+    grid-column: 1 / 1;
+  }
+`;
+
+export const TituloFamilia = styled.h2`
+  font-size: 16px;
+  line-height: clamp(25px, 1.51vw, 29px);
+  line-height: 19px;
+  cursor: pointer;
+  color: ${(props) => (props.activo ? "#000000" : "#8C8C8C")};
+  text-decoration: ${(props) => (props.activo ? "underline" : "none")};
+  text-decoration-thickness: ${(props) => (props.activo ? "1px" : "0")};
+  font-weight: ${(props) => (props.activo ? "600" : "400")};
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    font-weight: 600;
+    color: #000000;
+  }
+`;
+
+export const ContenedorTitulosColeccion = styled.div`
+  grid-row: 2;
+  grid-column: 6 / 7;
+  max-height: 462px;
+  overflow-y: auto;
+  @media (max-width: 1080px) {
+    grid-column: 2 / 3;
+  }
+  @media (max-width: 600px) {
+    margin-top: 10px;
+    grid-row: 2;
+    grid-column: 2 / 2;
+  }
+`;
+
+export const TituloColeccion = styled.h4`
+  font-size: clamp(14px, 0.833vw, 1rem);
+  line-height: clamp(18px, 1.1vw, 20px);
+  cursor: pointer;
+  color: ${(props) => (props.activo ? "#000000" : "#8C8C8C")};
+  text-decoration: ${(props) => (props.activo ? "underline" : "none")};
+  text-decoration-thickness: ${(props) => (props.activo ? "1px" : "0")};
+  font-weight: ${(props) => (props.activo ? "600" : "400")};
+  &:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    font-weight: 600;
+    color: #000000;
+  }
+`;
+
+export const ContenedorImagenes = styled.div`
+  grid-row: 2;
+  grid-column: 7 / 11;
+  @media (max-width: 1080px) {
+    grid-column: 3 / -1;
+  }
+  @media (max-width: 600px) {
+    grid-row: 1;
+    grid-column: 1 / -1;
+  }
+`;
+
+export const Imagen = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;

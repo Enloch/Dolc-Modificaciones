@@ -167,18 +167,6 @@ export function Fachada(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Lamas1.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Marco1.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
         geometry={nodes.Lamas2.geometry}
         material={materials.MarcoVentana}
       />
@@ -191,30 +179,6 @@ export function Fachada(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Lamas3.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Marco3.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Ventana3001.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Ventana3001_1.geometry}
-        material={materials["Glass Smoked"]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
         geometry={nodes.Ventana3_1.geometry}
         material={materials.MarcoVentana}
       />
@@ -222,18 +186,6 @@ export function Fachada(props) {
         castShadow
         receiveShadow
         geometry={nodes.Ventana3_2.geometry}
-        material={materials["Glass Smoked"]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Ventana3002.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Ventana3002_1.geometry}
         material={materials["Glass Smoked"]}
       />
     </group>

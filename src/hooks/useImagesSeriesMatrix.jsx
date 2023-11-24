@@ -3,10 +3,6 @@ import { Children } from "react";
 import getDataFromModules from "../helpers/getDataFromModules";
 import Enlace from "../modules/06_Diseno/06_1_IndiceSeries/Enlace";
 import img1 from "../assets/images/DolckerTline/ranurado11mm.webp";
-import tubex from "../assets/images/DolckerMatrix/Series/Previo perfil Matrix.jpg";
-const imagenesAmbienteImports = import.meta.globEager(
-  "../assets/images/DolckerTline/Series/**/EJEMPLO/**"
-);
 
 // const imagenesAmbiente = getDataFromModules(imagenesAmbienteImports);
 const imagenesAmbiente =
@@ -21,7 +17,7 @@ const enlacesObj = [
   {
     titulo: "TUBEX",
     formato: "TipologiaFormato",
-    src: tubex,
+    src: imagenesAmbiente,
     id: "#balm",
   },
   {
