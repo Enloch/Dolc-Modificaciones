@@ -142,7 +142,7 @@ export const StyledIndiceImagenes = styled(Seccion)`
   } */
 `;
 export const StyledFamilia = styled.section`
-  background-color: #bfbfbf;
+  background-color: #d9d9d9;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
@@ -191,7 +191,7 @@ export const TituloFamilia = styled.h2`
 export const ContenedorTitulosColeccion = styled.div`
   grid-row: 2;
   grid-column: 6 / 7;
-  max-height: 462px;
+  max-height: 460px;
   overflow-y: auto;
   @media (max-width: 1080px) {
     grid-column: 2 / 3;

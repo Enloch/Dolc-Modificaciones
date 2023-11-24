@@ -47,14 +47,13 @@ const DisenosTline = ({ id }) => {
           colorAutor={COLORS.gray05}
         />
       </StyledDisenos>
-      <StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
+      <IndiceSeries id={id[1]} queSerieActiva={setSerieActiva} />
+      <StyledDisenos id={id[2]} backgroundColor={COLORS.gray01}>
         <Titulo2>Configurador</Titulo2>
         <div className='rotador'>
           <RotadorMatrix />
         </div>
       </StyledDisenos>
-      <IndiceSeries id={id[6]} queSerieActiva={setSerieActiva} />
-      <Series id={ids} serieActivaMostrar={serieActiva} />
     </>
   );
 };

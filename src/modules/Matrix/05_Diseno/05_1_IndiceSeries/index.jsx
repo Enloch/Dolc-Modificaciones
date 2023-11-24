@@ -88,10 +88,10 @@ const IndiceSeries = ({ id, queSerieActiva }) => {
     <>
       <StyledIndiceSeries
         id={id}
-        backgroundColor={COLORS.gray03}
+        backgroundColor={COLORS.gray02}
         style={{ paddingBottom: "0", rowGap: "20px" }}
       >
-        <Titulo style={{ paddingBottom: "0" }}>Familias</Titulo>
+        <Titulo style={{ paddingBottom: "0" }}>Colecciones</Titulo>
       </StyledIndiceSeries>
       <StyledFamilia>
         <ContenedorTitulos>

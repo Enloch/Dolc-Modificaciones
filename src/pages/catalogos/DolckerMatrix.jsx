@@ -40,19 +40,9 @@ const DolckerMatrix = () => {
       <Dolcker id='dolcker' />
       <Ventajas id='ventajas' />
       <Aplicaciones
-        id={[
-          "aplicaciones",
-          "rehabilitacion",
-          "obra-nueva",
-          "interiores",
-        ]}
+        id={["aplicaciones", "rehabilitacion", "obra-nueva", "interiores"]}
       />
-      <Disenos
-        id={[
-          "diseno",
-          "configurador",
-        ]}
-      />
+      <Disenos id={["diseno", "colecciones", "configurador"]} />
       <Caracteristicas id={["caracteristicas-especiales", "datos-tecnicos"]} />
       <Sistemas
         id={[

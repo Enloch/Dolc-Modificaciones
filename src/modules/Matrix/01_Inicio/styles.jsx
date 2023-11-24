@@ -3,7 +3,7 @@ import Seccion from "../../../components/Seccion";
 import { TextMedium } from "../../../global/GlobalStyles";
 import { mediaQueryTablet } from "../../../styles/sizes";
 const StyledIndice = styled(Seccion)`
-  /* min-height: 100vh; */
+  min-height: 100vh;
   .flecha-indice {
     width: 25px;
     grid-column: 6;
