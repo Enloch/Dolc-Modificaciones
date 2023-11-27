@@ -91,16 +91,17 @@ export const Bloque1 = styled.div`
   margin: 0;
   flex-direction: row;
   flex-basis: 25%;
-  flex-grow: 0;
+  margin-left: 16px;
   max-width: 35%;
   display: flex;
   align-items: center;
   @media (max-width: 600px) {
+    margin-left: 16px;
     max-width: 85%;
     flex-basis: 85%;
   }
   @media (min-width: 900px) {
-    flex-basis: 35%;
+    flex-basis: 25%;
     max-width: 35%;
   }
   @media (min-width: 1200px) {
@@ -137,7 +138,7 @@ export const Bloque2 = styled.div`
     background-color: #fffcf5; // Añade tu color de fondo aquí
   }
   @media (min-width: 601px) {
-    flex-basis: 45%;
+    flex-basis: 50%;
     justify-content: flex-end;
   }
   @media (min-width: 900px) {

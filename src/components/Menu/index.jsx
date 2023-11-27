@@ -91,37 +91,18 @@ const Navbar = () => {
               />
             </a>
 
-            <Links href='/bipod'>
-              <svg
-                width='5'
-                height='5'
-                viewBox='0 0 12 12'
-                fill='#e42320'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <circle cx='6' cy='6' r='6' fill='#e42320'></circle>
-              </svg>
-              bipod
-            </Links>
-            <Links href='/biout'>
-              <svg
-                width='5'
-                height='5'
-                viewBox='0 0 12 12'
-                fill='#e42320'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <circle cx='6' cy='6' r='6' fill='#e42320'></circle>
-              </svg>
-              biout
-            </Links>
-            <Links>contacto</Links>
-            <Links href='/descargas'>descargas</Links>
+            <Links href='/quienes-somos'>Quienes somos</Links>
+            <Links href='/contacto'>Contacto</Links>
+            <Links href='/aviso-legal'>Legal</Links>
+            <Links href='/politica-privacidad'>Privacidad</Links>
             <div style={{ display: "flex", paddingTop: "30px" }}>
               <Links href='/'>ES</Links>
 
               <Links style={{ marginLeft: "20px" }} href='/en'>
                 EN
+              </Links>
+              <Links style={{ marginLeft: "40px" }} href='/FR'>
+                FR
               </Links>
             </div>
           </MobileMenu>

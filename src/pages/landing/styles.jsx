@@ -431,7 +431,7 @@ export const StyledImagenTexto = styled.div`
   @media (min-width: 600px) {
     flex-basis: 25%;
     flex-grow: 0;
-    max-width: 25%;
+    max-width: 100%;
   }
 
   @media (min-width: 900px) {

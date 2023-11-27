@@ -22,7 +22,8 @@ import {
   StyledTexto,
 } from "./styles";
 import { Titulo } from "../../components/Titulos";
-import System from "../../assets/images/Aplicaciones/catalogo3-1-12.webp";
+// import System from "../../assets/images/Aplicaciones/catalogo3-1-12.webp";
+import System from "../../assets/images/Inicio/inicio.jpg";
 import Tline from "../../assets/images/DolckerTline/Aplicaciones/catalogo3-1-11.webp";
 import Matrix from "../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-10.jpg";
 import Navbar from "../../components/Menu";
