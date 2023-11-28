@@ -3,7 +3,7 @@ import { Titulo, Titulo2, Titulo3 } from '../../../components/Titulos'
 import { COLORS, DISTANCES } from '../../../global/GlobalStyles'
 import StyledAplicaciones from './styles'
 import img1 from '../../../assets/images/Aplicaciones/catalogo3-1-9.webp'
-import img2 from '../../../assets/images/Aplicaciones/catalogo3-1-10.webp'
+import img2 from "../../../assets/images/Aplicaciones/catalogo3-1-10.jpg";
 import img3 from '../../../assets/images/Aplicaciones/catalogo3-1-11.webp'
 import img4 from '../../../assets/images/Aplicaciones/catalogo3-1-12.webp'
 import img5 from '../../../assets/images/Aplicaciones/catalogo3-1-13.webp'

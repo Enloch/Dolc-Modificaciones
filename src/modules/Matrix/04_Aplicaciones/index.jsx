@@ -2,7 +2,7 @@ import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo, Titulo2, Titulo3 } from "../../../components/Titulos";
 import { COLORS, DISTANCES } from "../../../global/GlobalStyles";
 import StyledAplicaciones from "./styles";
-import img1 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-9.webp";
+import img1 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-9.jpg";
 import img2 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-10.jpg";
 import img3 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-11.jpg";
 import img4 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-12.jpg";
@@ -26,8 +26,8 @@ const AplicacionesTline = ({ id }) => {
           columnSpan='6'
         />
         <Cita
-          cita='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-          author='Autor '
+          cita='Los detalles no son los detalles. Los detalles son el diseño.'
+          author='Charles Eames '
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
@@ -45,8 +45,8 @@ const AplicacionesTline = ({ id }) => {
           columnSpan='6'
         />
         <Cita
-          cita='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-          author='Autor '
+          cita='Lo funcional es mejor que lo bello, porque lo que funciona bien permanece en el tiempo.'
+          author='Ray Eames'
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
@@ -64,8 +64,8 @@ const AplicacionesTline = ({ id }) => {
           columnSpan='6'
         />
         <Cita
-          cita='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-          author='Autor '
+          cita='El espacio no tiene sentido sin luz. Un edificio habla a través del silencio de la percepción orquestada por la luz.'
+          author='Steven Holl'
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
@@ -75,18 +75,20 @@ const AplicacionesTline = ({ id }) => {
         backgroundColor={COLORS.gray01}
         rowGap={DISTANCES.small}
       >
-        <Titulo2 color={COLORS.gray08}>Interiores</Titulo2>
+        <Titulo2 color={COLORS.gray08}>Interiores</Titulo2> 
         <ImageWithCaptionSlider
           images={[
             {
               src: img4,
               alt: "Imagen de Aplicaciones 4",
-              caption: "Rellenar Informacion",
+              caption:
+                "La originalidad consiste en el retorno al origen; así pues, original es aquello que vuelve a la simplicidad de las primeras soluciones”. Antonio Gaudí.",
             },
             {
               src: img5, // Asegúrate de definir img5 en alguna parte de tu código
               alt: "Imagen de Aplicaciones 5",
-              caption: "Rellenar Información",
+              caption:
+                "La originalidad consiste en el retorno al origen; así pues, original es aquello que vuelve a la simplicidad de las primeras soluciones”. Antonio Gaudí.",
             },
             // ... puedes agregar más imágenes aquí
           ]}

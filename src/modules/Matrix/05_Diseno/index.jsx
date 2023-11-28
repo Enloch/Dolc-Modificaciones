@@ -42,8 +42,8 @@ const DisenosTline = ({ id }) => {
         <Titulo>Diseño</Titulo>
         <ImageWithCaption src={img1} alt='Imagen de Diseños 1' columnSpan='6' />
         <Cita
-          cita='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-          author='Autor '
+          cita='Proporcionar arquitectura significativa no es parodiar la historia, sino articularla.'
+          author='Daniel Libeskind'
           colorAutor={COLORS.gray05}
         />
       </StyledDisenos>

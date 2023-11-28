@@ -2,7 +2,7 @@ import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo } from "../../../components/Titulos";
 import { COLORS } from "../../../global/GlobalStyles";
 import StyledCaracteristicas from "./styles";
-import caracter1 from "../../../assets/images/DolckerMatrix/temporal.webp";
+import caracter1 from "../../../assets/images/DolckerMatrix/Caracteristicas/caracteristicas.jpg";
 import ImagenJorge from "../../../assets/images/DolckerTline/tablas.jpg";
 import ImagenConstructiva from "../../../assets/images/DolckerTline/tablas.jpg";
 import Cdim1 from "../../../assets/icons/caracteristicasTline/caracteristicas dimensionales 1.svg";
@@ -29,112 +29,119 @@ const CaracteristicasTline = ({ id }) => {
           columnSpan='6'
         />
         <Text>
-          Dolcker Line es un material compacto, resistente y caracterizado por
-          una porosidad casi inexistente y, por absorción del agua menor al 0,1
-          %
+          <strong>Resistencia y durabilidad</strong>
           <br />
           <br />
-          Su estructura vitrificada, con un grado bajo de porosidad, garantiza
-          una elevada impermeabilidad a suciedad y al hielo.
+          El <strong>aluminio extrusionado </strong>es conocido por su gran
+          resistencia estructural, lo que le{" "}
+          <strong>
+            permite soportar cargas y esfuerzos físicos sin deformarse.
+          </strong>
+          Esto lo convierte en un material ideal para aplicaciones en la
+          industria de la construcción, ya que puede resistir condiciones
+          adversas, como cambios de temperatura, humedad y corrosión.
           <br />
           <br />
-          Cuerpo pasta porcelánica.
+          Además de su resistencia, el aluminio extrusionado destaca por su
+          durabilidad a largo plazo. Su
+          <strong> capacidad para resistir la oxidación y la corrosión </strong>
+          garantiza una vida útil prolongada, lo que
+          <strong> reduce los costos de mantenimiento y reemplazo.</strong>
           <br />
           <br />
-          Las ventajas de un material único.
         </Text>
-        <Listado>
-          <li>
-            <strong>
-              Amplia gama de colores, formatos, espesores y acabados.
-            </strong>
-          </li>
-          <li>
-            <strong>Es antiácido.</strong> Es insensible a los ácidos más
-            difundidos (No resiste al ataque del ácido fluorhídrico).
-          </li>
-          <li>
-            <strong>Es resistente.</strong> Resistente a la abrasión y al
-            desgaste más que cualquier material natural.
-          </li>
-          <li>
-            <strong>No combustible.</strong> El material no se quema ni produce
-            gases o humos tóxico-nocivos en caso de incendio o exposición a las
-            llamas.
-          </li>
-          <li>
-            <strong>
-              No retiene sustancias orgánicas y bacterias, causa de alergias y
-              disturbios.
-            </strong>
-          </li>
-          <li>
-            <strong>Fácil de trabajar.</strong> El producto se presta a ser
-            trabajado (cortado, perforado, etc.) como la piedra natural para
-            satisfacer cualquier tipo de personalización.
-          </li>
-          <li>
-            <strong>Es Inatacable.</strong> Ningún problema con ollas calientes
-            o cigarrillos encendidos, que al contrario dañan la madera,
-            laminados plásticos o aglomerados con resinas.
-          </li>
-          <li>
-            <strong>Fácil de limpiar.</strong> Es posible utilizar detergentes
-            muy fuertes o disolventes sin el peligro de dañar el material.
-          </li>
-          <li>
-            <strong>Resistente al hielo.</strong> El material es resistente al
-            frío y al hielo.
-          </li>
-          <li>
-            <strong>Establo cromático.</strong> Los colores son totalmente
-            estables y no se alteran ni por la exposición al sol, ni a los
-            agentes atmosféricos, ni al smog.
-          </li>
-        </Listado>
         <Text>
-          <strong>ECOLÓGICO</strong>
+          <strong>Variedad de formas y perfiles</strong>
           <br />
           <br />
-          No contiene impermeabilizantes químicos, barnices o resinas, no emite
-          exhalaciones tampoco con el calor de una llama. Al contrario de
-          algunas piedras naturales no emana Radon u otros gases radioactivos y
-          no viene pulido con plomo. Se produce respetando el medio ambiente.
+          El<strong> proceso de extrusión del aluminio </strong>permite obtener
+          una amplia variedad de formas y
+          <strong> perfiles de aluminio extrusionado.</strong>
           <br />
           <br />
-          <strong>RESISTENCIA A LOS CAMBIOS BRUSCOS DE TEMPERATURA</strong>
+          Las piezas de aluminio extrusionado que se obtienen son de un
+          <strong> gran resistencia </strong>, con una forma perfecta y con un
+          riesgo muy bajo de salir de fábrica con imperfecciones o errores.
           <br />
           <br />
-          <strong>RESISTENCIA A LA FLEXIÓN CON CARGAS FIJAS Y ESTÁTICAS</strong>
+          Desde barras y tubos hasta perfiles complejos y personalizados,
+          <strong> el aluminio extrusionado ofrece versatilidad</strong> para
+          adaptarse a diferentes necesidades de diseño y aplicaciones
+          específicas
           <br />
           <br />
-          <strong>RESISTENCIA AL IMPACTO, A LA ABRASIÓN SEGURIDAD</strong>
+          Estos perfiles se pueden utilizar en la fabricación de{" "}
+          <strong>
+            persianas de aluminio extrusionado autoblocantes de seguridad
+          </strong>
+          , fachadas, entre otros. Los{" "}
+          <strong>
+            perfiles extrusionados de aluminio permiten dar flexibilidad y crear
+            soluciones a medida
+          </strong>
+          , adaptadas a los requisitos técnicos y estéticos de cada proyecto.
+          <br />
+          <br />
         </Text>
-        <Listado>
-          <li>Expansión por humedad insignificante</li>
-          <li>Incombustible</li>
-          <li>Ignífugo</li>
-          <li>Ausencia de peligro en caso de incendio</li>
-          <li>Seguridad eléctrica</li>
-        </Listado>
         <Text>
-          <strong>SALUD Y BIENESTAR</strong>
+          <strong>Ligero y resistente</strong>
+          <br />
+          <br />
+          En primer lugar, una de las principales propiedades del aluminio es su
+          ligereza. Esto no impide que ajustando la composición de su aleación
+          se puede lograr una gran resistencia y como resultado puede adaptarse
+          a casi cualquier aplicación.
+          <br />
+          <br />
         </Text>
-        <Listado>
-          <li>Carencia de olor propio o adquirido</li>
-          <li>Resistencia a la liberación de polvo propio</li>
-          <li>Facilidad de limpieza de polvo adquirido</li>
-          <li>Fácil limpieza y mantenimiento</li>
-          <li>
-            Es un producto que, por su capacidad de aislante eléctrico, evita la
-            captación de polvo ambiental eléctricamente activo
-          </li>
-          <li>Adecuado donde el uso de agua es abundante</li>
-          <li>
-            Es la instalación definitiva: no necesita ningún mantenimiento
-            después de su puesta en obra
-          </li>
-        </Listado>
+        <Text>
+          <strong>Mantenimiento 0</strong>
+          <br />
+          <br />
+          Mediante el proceso de acabado del aluminio, bien sea anodizado o
+          lacado, se confiere una protección importante frente a los agentes
+          agresivos atmosféricos. También se consiguen posibilidades decorativas
+          adaptadas al entorno o el diseño de las estructuras que lo componen.
+          Por tanto no requiere de mantenimiento específico, lo que conlleva un
+          ahorro de costes considerable.
+          <br />
+          <br />
+        </Text>
+        <Text>
+          <strong>Reciclable</strong>
+          <br />
+          <br />
+          El aluminio es un material totalmente reciclable y contribuye a
+          reducir el consumo energético en un 95%. Las características del
+          material reciclado no difieren de las del material proveniente del
+          mineral. Esta  alta capacidad de reciclaje tiene un valor de
+          sostenibilidad pera el medio ambiente.
+          <br />
+          <br />
+        </Text>
+        <Text>
+          <strong>Variedad de acabados</strong>
+          <br />
+          <br />
+          El aluminio es el material ideal para la creación de conceptos de
+          edificación contemporáneos. Tanto si se opta por un acabado de la
+          superficie lacado o anodizado, disfrutará de la belleza duradera de
+          las ventanas sin tener que invertir en pintura ni en barniz
+          <br />
+          <br />
+        </Text>
+        <Text>
+          <strong>Resistente a la corrosión</strong>
+          <br />
+          <br />
+          De forma natural, el aluminio genera una capa de óxido autoprotectora
+          que lo hace muy resistente a la corrosión.
+          <br />
+          <br />
+          Mediante procesos industriales controlados  se pueden aplicar
+          diferentes tipos de tratamiento de superficie para conseguir mejorar
+          aún más esta propiedad.
+        </Text>
       </StyledCaracteristicas>
       <StyledCaracteristicas id={id[1]} backgroundColor={COLORS.gray02}>
         <Titulo>Datos técnicos</Titulo>
