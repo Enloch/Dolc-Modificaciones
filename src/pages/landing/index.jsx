@@ -23,7 +23,7 @@ import {
 } from "./styles";
 import { Titulo } from "../../components/Titulos";
 // import System from "../../assets/images/Aplicaciones/catalogo3-1-12.webp";
-import System from "../../assets/images/Inicio/inicio.jpg";
+import System from "../../assets/images/Aplicaciones/catalogo3-1-12.webp";
 import Tline from "../../assets/images/DolckerTline/Aplicaciones/catalogo3-1-11.webp";
 import Matrix from "../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-10.jpg";
 import Navbar from "../../components/Menu";
@@ -70,7 +70,7 @@ export const Landing = () => {
                     >
                       <StyledImagen src={System} alt='System' />
                     </a>
-                      <StyledTexto>Dolcker System</StyledTexto>
+                    <StyledTexto>Dolcker System</StyledTexto>
                   </StyledImagenTexto>
                   <StyledImagenTexto>
                     <a
@@ -83,7 +83,7 @@ export const Landing = () => {
                     >
                       <StyledImagen src={Tline} alt='Tline' />
                     </a>
-                      <StyledTexto>Dolcker T-line</StyledTexto>
+                    <StyledTexto>Dolcker T-line</StyledTexto>
                   </StyledImagenTexto>
                   <StyledImagenTexto>
                     <a
@@ -96,7 +96,7 @@ export const Landing = () => {
                     >
                       <StyledImagen src={Matrix} alt='Matrix' />
                     </a>
-                      <StyledTexto>Dolcker Matrix</StyledTexto>
+                    <StyledTexto>Dolcker Matrix</StyledTexto>
                   </StyledImagenTexto>
                 </LimiteSubtitulos>
               </ContenedorSubtitulos>
