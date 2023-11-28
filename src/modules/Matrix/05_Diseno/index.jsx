@@ -10,7 +10,6 @@ import indicadoresFormato from "../../../utils/indicadoresFormato";
 import RotadorMatrix from "../../../components/Rotadores/Matrix/Rotador";
 import IndiceSeries from "./05_1_IndiceSeries";
 import Series from "./05_2_Series";
-import SerieModal from "./SeriesModal";
 const DisenosTline = ({ id }) => {
   const ids = [
     "ard",
@@ -37,7 +36,6 @@ const DisenosTline = ({ id }) => {
   const [serieActiva, setSerieActiva] = useState("");
   return (
     <>
-      <SerieModal />
       <StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
         <Titulo>Diseño</Titulo>
         <ImageWithCaption src={img1} alt='Imagen de Diseños 1' columnSpan='6' />

@@ -8,6 +8,7 @@ export { default as Caracteristicas } from "./07_Caracteristicas";
 export { default as Sistemas } from "./08_Sistemas";
 export { default as Descargas } from "./09_Descargas";
 export { default as Final } from "./10_Final";
+export { default as Galeria } from "./11_Galeria";
 export { default as Inicio } from "./Step/Step00_Introduccion";
 export { default as IndiceStep } from "./Step/Step01_Inicio";
 export { default as Dolcker_Step } from "./Step/Step02_Dolcker_Step";
