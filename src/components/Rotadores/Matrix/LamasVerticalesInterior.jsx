@@ -3,8 +3,9 @@ import { useGLTF } from "@react-three/drei";
 import { MaterialesMetalizados } from "./Materiales";
 import useStore from "./store"; // Importa la tienda Zustand
 import * as THREE from "three";
-export function Fachada(props) {
-  const { nodes, materials } = useGLTF("/modelos/MatrixFachada.glb");
+export function LamasVerticalesInterior(props) {
+  const { nodes, materials } = useGLTF("/modelos/LamasVerticalesInterior.glb");
+  const ref = useRef();
   const Metalizado = MaterialesMetalizados.map((metal) => metal.metalness);
   const Aspereza = MaterialesMetalizados.map((aspereza) => aspereza.roughness);
   const {
@@ -148,9 +149,8 @@ export function Fachada(props) {
 
   // Cortar el array a 45 elementos si excede
   const mallasFinales = mallasRepetidas.slice(0, 90);
-  console.log(mallasFinales);
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} >
       {mallasFinales.map((malla, index) => (
         <mesh
           castShadow
@@ -158,6 +158,9 @@ export function Fachada(props) {
           key={index}
           position={[malla.posicion, 0, 0]} // Ajustar la posición según la propiedad 'posicion'
           geometry={malla.geometria}
+          onCreated={({ mesh }) => {
+            mesh.layers.enable(1); // Asigna la malla a la capa 1
+          }}
         >
           {malla.colorActivo === "colorPicker" ? (
             <meshStandardMaterial
@@ -167,46 +170,15 @@ export function Fachada(props) {
               map={null}
             />
           ) : (
-            <meshPhysicalMaterial
+            <meshStandardMaterial
               map={malla.material}
               roughness={malla.aspereza}
               metalness={malla.metalizado}
               color={"#FFFFFF"}
             />
           )}
-          {/* {console.log(index, malla.posicion)} */}
         </mesh>
       ))}
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Box006.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Lamas2.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Marco2.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Ventana3.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Ventana3_1.geometry}
-        material={materials["Glass Smoked"]}
-      />
     </group>
   );
 }

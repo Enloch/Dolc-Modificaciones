@@ -3,8 +3,11 @@ import { useGLTF } from "@react-three/drei";
 import { MaterialesMetalizados } from "./Materiales";
 import useStore from "./store"; // Importa la tienda Zustand
 import * as THREE from "three";
-export function Fachada(props) {
-  const { nodes, materials } = useGLTF("/modelos/MatrixFachada.glb");
+export function LamasHorizontalesInterior(props) {
+  const { nodes, materials } = useGLTF(
+    "/modelos/LamasHorizontalesInterior.glb"
+  );
+  const ref = useRef();
   const Metalizado = MaterialesMetalizados.map((metal) => metal.metalness);
   const Aspereza = MaterialesMetalizados.map((aspereza) => aspereza.roughness);
   const {
@@ -53,6 +56,34 @@ export function Fachada(props) {
   const Geo1Model4 = nodes[selectedGeo1Model4]?.geometry;
   const Geo1Model5 = nodes[selectedGeo1Model5]?.geometry;
   const Geo1Model6 = nodes[selectedGeo1Model6]?.geometry;
+  // const rotacion = Math.PI / 2; // 90 grados en radianes
+
+  // // Si materialMalla1, materialMalla2, etc., son texturas
+  // if (materialMalla1 instanceof THREE.Texture) {
+  //   materialMalla1.rotation = rotacion;
+  //   materialMalla1.needsUpdate = true; // Indica que la textura ha sido actualizada
+  // }
+
+  // if (materialMalla2 instanceof THREE.Texture) {
+  //   materialMalla2.rotation = rotacion;
+  //   materialMalla2.needsUpdate = true;
+  // }
+  // if (materialMalla3 instanceof THREE.Texture) {
+  //   materialMalla3.rotation = rotacion;
+  //   materialMalla3.needsUpdate = true;
+  // }
+  // if (materialMalla4 instanceof THREE.Texture) {
+  //   materialMalla4.rotation = rotacion;
+  //   materialMalla4.needsUpdate = true;
+  // }
+  // if (materialMalla5 instanceof THREE.Texture) {
+  //   materialMalla5.rotation = rotacion;
+  //   materialMalla5.needsUpdate = true;
+  // }
+  // if (materialMalla6 instanceof THREE.Texture) {
+  //   materialMalla6.rotation = rotacion;
+  //   materialMalla6.needsUpdate = true;
+  // }
   const MallasVerticales = [
     {
       geometria: Geo1Model1,
@@ -118,11 +149,11 @@ export function Fachada(props) {
   let desplazamientoX = 0;
   const incrementoUV = 0.05; // Desplazamiento UV como fracción del ancho de la textura
 
-  while (mallasRepetidas.length < 90) {
+  while (mallasRepetidas.length < 35) {
     elementosIniciales.forEach((mallaOriginal) => {
       let nuevaMalla = { ...mallaOriginal, posicion: posicionAcumulada };
 
-      // Asumiendo que nuevaMalla.material es una textura
+      //Asumiendo que nuevaMalla.material es una textura
       if (nuevaMalla.material instanceof THREE.Texture) {
         // Clonar la textura para tener una instancia única por malla
         const texturaClonada = nuevaMalla.material.clone();
@@ -147,8 +178,7 @@ export function Fachada(props) {
   }
 
   // Cortar el array a 45 elementos si excede
-  const mallasFinales = mallasRepetidas.slice(0, 90);
-  console.log(mallasFinales);
+  const mallasFinales = mallasRepetidas.slice(0, 35);
   return (
     <group {...props} dispose={null}>
       {mallasFinales.map((malla, index) => (
@@ -156,8 +186,11 @@ export function Fachada(props) {
           castShadow
           receiveShadow
           key={index}
-          position={[malla.posicion, 0, 0]} // Ajustar la posición según la propiedad 'posicion'
+          position={[0, -malla.posicion, 0]} // Ajustar la posición según la propiedad 'posicion'
           geometry={malla.geometria}
+          onCreated={({ mesh }) => {
+            mesh.layers.enable(1); // Asigna la malla a la capa 1
+          }}
         >
           {malla.colorActivo === "colorPicker" ? (
             <meshStandardMaterial
@@ -167,46 +200,15 @@ export function Fachada(props) {
               map={null}
             />
           ) : (
-            <meshPhysicalMaterial
+            <meshStandardMaterial
               map={malla.material}
               roughness={malla.aspereza}
               metalness={malla.metalizado}
               color={"#FFFFFF"}
             />
           )}
-          {/* {console.log(index, malla.posicion)} */}
         </mesh>
       ))}
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Box006.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Lamas2.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Marco2.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Ventana3.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Ventana3_1.geometry}
-        material={materials["Glass Smoked"]}
-      />
     </group>
   );
 }

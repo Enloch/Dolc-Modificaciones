@@ -39,7 +39,11 @@ import { SpotLightComponent, Box } from "./Spotlight";
 import { FachadaHorizontal } from "./ModeloFachadaHorizontal";
 import Rotar from "../../../assets/icons/rotar.svg";
 import Front from "../../../assets/icons/front.svg";
+import Inside from "../../../assets/icons/inside.svg";
 import Exit from "../../../assets/icons/exit.svg";
+import { LamasHorizontalesInterior } from "./LamasHorizontalesInterior";
+import { LamasVerticalesInterior } from "./LamasVerticalesInterior";
+import { Interior } from "./ModeloInterior";
 export default function RotadorMatrix() {
   const {
     materialIndex,
@@ -85,6 +89,7 @@ export default function RotadorMatrix() {
   const [rotation, setRotation] = useState(0);
   const [fachadaVisible, setFachadaVisible] = useState(false);
   const [rotada, setRotada] = useState(false);
+  const [esInterior, setEsInterior] = useState(false);
 
   // Función para rotar los modelos
   const rotateModels = () => {
@@ -106,7 +111,12 @@ export default function RotadorMatrix() {
     }
   };
   const handleFachadaClick = () => {
-    setFachadaVisible(!fachadaVisible);
+    setFachadaVisible(true);
+    setEsInterior(false);
+  };
+  const handleInteriorClick = () => {
+    setFachadaVisible(true);
+    setEsInterior(true);
   };
   const handleResetClick = () => {
     setFachadaVisible(!fachadaVisible);
@@ -158,6 +168,7 @@ export default function RotadorMatrix() {
             gl.outputEncoding = THREE.sRGBEncoding;
           }}
         >
+          <CameraAdjuster />
           <Suspense fallback={null}>
             {fachadaVisible === false && (
               <>
@@ -182,10 +193,12 @@ export default function RotadorMatrix() {
             )}
             {fachadaVisible === true && (
               <>
-                <EscenaFachada rotada={rotada} />
-                <EffectComposer>
+                {esInterior === true && <EscenaInterior rotada={rotada} />}
+                {esInterior === false && <EscenaFachada rotada={rotada} />}
+
+                {/* <EffectComposer>
                   <HueSaturation hue={-0.12} saturation={0.2} />
-                </EffectComposer>
+                </EffectComposer> */}
               </>
             )}
           </Suspense>
@@ -236,6 +249,9 @@ export default function RotadorMatrix() {
             <a onClick={handleFachadaClick} style={{ cursor: "pointer" }}>
               <img src={Front} style={{ width: "45px" }} />
             </a>
+            <a onClick={handleInteriorClick} style={{ cursor: "pointer" }}>
+              <img src={Inside} style={{ width: "45px" }} />
+            </a>
           </div>
         )}
         {fachadaVisible === true && (
@@ -243,7 +259,7 @@ export default function RotadorMatrix() {
             style={{
               position: "absolute",
               top: "10px",
-              left:"20px",
+              left: "20px",
               display: "flex",
               alignItems: "center",
               gap: "25px",
@@ -265,7 +281,16 @@ export default function RotadorMatrix() {
     </ContRotador>
   );
 }
+const CameraAdjuster = () => {
+  const { camera, size } = useThree();
 
+  useEffect(() => {
+    camera.aspect = size.width / size.height;
+    camera.updateProjectionMatrix();
+  }, [camera, size.width, size.height]);
+
+  return null;
+};
 const EscenaRotador = ({
   numModels,
   modelPositions,
@@ -342,26 +367,40 @@ const EscenaRotador = ({
     </>
   );
 };
-
+const Luces = () => {
+  const Intensidad = 9;
+  return (
+    <>
+      <pointLight
+        castShadow
+        shadow-bias={-0.0001}
+        shadow-mapSize={[2048, 2048]}
+        position={[3, 0, 3]}
+        intensity={9}
+      />
+      <pointLight
+        castShadow
+        shadow-bias={-0.0001}
+        position={[-3, 0, 3]}
+        intensity={9}
+      />
+      <pointLight
+        castShadow
+        shadow-bias={-0.0001}
+        position={[0, 0, 3]}
+        intensity={9}
+      />
+      <pointLight
+        castShadow
+        shadow-bias={-0.0001}
+        position={[0, 0, -3]}
+        intensity={9}
+      />
+    </>
+  );
+};
 const EscenaFachada = ({ rotada }) => {
   const fustrum = 10;
-  // const { posicion, hdri, desactivar, intensity } = useControls({
-  //   Entorno: folder({
-  //     desactivar: true,
-  //     hdri: "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/rosendal_mountain_midmorning_1k.hdr",
-  //   }),
-  //   posicion: {
-  //     x: 10,
-  //     y: 5,
-  //     z: 20,
-  //   },
-  //   intensity: {
-  //     value: 2.5,
-  //     min: 0,
-  //     max: 10,
-  //     step: 0.1,
-  //   },
-  // });
 
   return (
     <>
@@ -403,35 +442,76 @@ const EscenaFachada = ({ rotada }) => {
     </>
   );
 };
-const Luces = () => {
-  const Intensidad = 9;
+
+const EscenaInterior = ({ rotada }) => {
+  const { size } = useThree();
+  const aspect = size.width / size.height;
+
+  // Ajusta el campo de visión en función del aspecto del canvas
+  const fov = aspect > 1 ? 41 : 41 / aspect;
+  const fustrum = 10;
+  const lightRef = useRef();
+  const targetRef = useRef(new THREE.Object3D());
+
+  const { scene } = useThree();
+
+  useEffect(() => {
+    const light = lightRef.current;
+    const targetObject = targetRef.current;
+
+    if (light && targetObject) {
+      scene.add(targetObject);
+      light.target = targetObject;
+    }
+  }, [scene]);
   return (
     <>
-      <pointLight
+      {/* <primitive object={targetRef.current} position={[0, 2,0]} /> */}
+      <directionalLight
+        // ref={lightRef}
+        position={[-4.7, 1, 6]}
         castShadow
-        shadow-bias={-0.0001}
-        shadow-mapSize={[2048, 2048]}
-        position={[3, 0, 3]}
-        intensity={9}
+        intensity={3.7}
+        shadow-bias={-0.00001}
+        shadow-mapSize={8192}
+      >
+        <orthographicCamera
+          attach='shadow-camera'
+          args={[-fustrum, fustrum, fustrum, -fustrum, 0.001, 100]}
+        />
+      </directionalLight>
+      <PerspectiveCamera
+        makeDefault={true}
+        far={30}
+        near={0.1}
+        fov={fov}
+        position={[0, 2.038, 5.249]}
       />
-      <pointLight
-        castShadow
-        shadow-bias={-0.0001}
-        position={[-3, 0, 3]}
-        intensity={9}
-      />
-      <pointLight
-        castShadow
-        shadow-bias={-0.0001}
-        position={[0, 0, 3]}
-        intensity={9}
-      />
-      <pointLight
-        castShadow
-        shadow-bias={-0.0001}
-        position={[0, 0, -3]}
-        intensity={9}
-      />
+      {!rotada ? <LamasVertical /> : <LamasHorizontal />}
+      <ParedInterior />
+    </>
+  );
+};
+
+const LamasHorizontal = () => {
+  return (
+    <>
+      <LamasHorizontalesInterior />
+    </>
+  );
+};
+
+const LamasVertical = () => {
+  return (
+    <>
+      <LamasVerticalesInterior />
+    </>
+  );
+};
+const ParedInterior = () => {
+  return (
+    <>
+      <Interior />
     </>
   );
 };

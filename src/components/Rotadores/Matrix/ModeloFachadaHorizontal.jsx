@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useGLTF, PerspectiveCamera } from "@react-three/drei";
 import { MaterialesMetalizados } from "./Materiales";
 import useStore from "./store"; // Importa la tienda Zustand
+import * as THREE from "three";
 export function FachadaHorizontal(props) {
   const { nodes, materials } = useGLTF("/modelos/MatrixFachadaH.glb");
   const Metalizado = MaterialesMetalizados.map((metal) => metal.metalness);
@@ -114,16 +115,34 @@ export function FachadaHorizontal(props) {
   // Crear un nuevo array para contener hasta 45 elementos
   const mallasRepetidas = [];
   let posicionAcumulada = 0;
+  let desplazamientoX = 0;
+  const incrementoUV = 0.05; // Desplazamiento UV como fracción del ancho de la textura
 
   while (mallasRepetidas.length < 40) {
-    elementosIniciales.forEach((malla, index) => {
-      let nuevaMalla = {
-        ...malla,
-        posicion: posicionAcumulada,
-      };
+    elementosIniciales.forEach((mallaOriginal) => {
+      let nuevaMalla = { ...mallaOriginal, posicion: posicionAcumulada };
 
+      //Asumiendo que nuevaMalla.material es una textura
+      if (nuevaMalla.material instanceof THREE.Texture) {
+        // Clonar la textura para tener una instancia única por malla
+        const texturaClonada = nuevaMalla.material.clone();
+        texturaClonada.needsUpdate = true; // Indica que la textura ha sido actualizada
+
+        // Aplicar el desplazamiento UV
+        texturaClonada.offset.set(desplazamientoX, 0);
+
+        // Asignar la textura clonada a la malla
+        nuevaMalla.material = texturaClonada;
+      }
       mallasRepetidas.push(nuevaMalla);
-      posicionAcumulada += malla.posicion;
+      posicionAcumulada += mallaOriginal.posicion;
+
+      // Incrementar el desplazamiento UV para la siguiente malla
+      if (desplazamientoX + incrementoUV > 1) {
+        desplazamientoX = 0;
+      } else {
+        desplazamientoX += incrementoUV;
+      }
     });
   }
 
@@ -162,12 +181,6 @@ export function FachadaHorizontal(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Box006.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
         geometry={nodes.Marco2.geometry}
         material={materials.MarcoVentana}
       />
@@ -180,13 +193,19 @@ export function FachadaHorizontal(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Ventana3_1.geometry}
+        geometry={nodes.Box006.geometry}
         material={materials.MarcoVentana}
       />
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Ventana3_2.geometry}
+        geometry={nodes.Ventana3.geometry}
+        material={materials.MarcoVentana}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Ventana3_1.geometry}
         material={materials["Glass Smoked"]}
       />
     </group>
