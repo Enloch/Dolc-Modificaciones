@@ -4,6 +4,7 @@ import { COLORS, DISTANCES } from "../../../global/GlobalStyles";
 import StyledAplicaciones from "./styles";
 import img1 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-9.jpg";
 import img2 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-10.jpg";
+import logos from "../../../assets/images/DolckerMatrix/Aplicaciones/logos.gif";
 import img3 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-11.jpg";
 import img4 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-12.jpg";
 import img5 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-13.jpg";
@@ -39,7 +40,7 @@ const AplicacionesTline = ({ id }) => {
       >
         <Titulo2 color={COLORS.gray08}>Rehabilitación</Titulo2>
         <ImageWithCaption
-          src={img2}
+          src={logos}
           alt='Imagen de Aplicaciones 1'
           caption=''
           columnSpan='6'
@@ -75,7 +76,7 @@ const AplicacionesTline = ({ id }) => {
         backgroundColor={COLORS.gray01}
         rowGap={DISTANCES.small}
       >
-        <Titulo2 color={COLORS.gray08}>Interiores</Titulo2> 
+        <Titulo2 color={COLORS.gray08}>Interiores</Titulo2>
         <ImageWithCaptionSlider
           images={[
             {
