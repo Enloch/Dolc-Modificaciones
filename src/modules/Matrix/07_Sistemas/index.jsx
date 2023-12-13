@@ -80,7 +80,7 @@ const SistemasTline = ({ id }) => {
           juntas verticales se ven minimizadas a tan solo 1 mm potenciando de
           esta manera las juntas horizontales.
         </Text>
-        <ImageWithCaption
+        {/* <ImageWithCaption
           src={dolckerClip1}
           alt='Dolcker-clip demostración'
           caption='Imágen demostración (Jorge)'
@@ -93,7 +93,7 @@ const SistemasTline = ({ id }) => {
           caption='Imágen tabla (Jorge)'
           columnSpan='8'
           isGray
-        />
+        /> */}
       </StyledSistemas>
     </>
   );

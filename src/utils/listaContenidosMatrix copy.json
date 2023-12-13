@@ -60,7 +60,28 @@
       {
         "title": "Características técnicas",
         "link": "#caracteristicas-especiales"
+      },
+      {
+        "title": "Datos técnicos",
+        "link": "#datos-tecnicos"
       }
     ]
+  },
+  {
+    "title": "Sistemas",
+    "subList": [
+      {
+        "title": "Sistemas",
+        "link": "#sistemas"
+      },
+      {
+        "title": "LINE",
+        "link": "#line-l"
+      }
+    ]
+  },
+  {
+    "title": "Descargas",
+    "link": "#descargas"
   }
 ]

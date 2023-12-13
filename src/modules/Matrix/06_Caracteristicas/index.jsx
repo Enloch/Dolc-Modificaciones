@@ -143,8 +143,8 @@ const CaracteristicasTline = ({ id }) => {
           aún más esta propiedad.
         </Text>
       </StyledCaracteristicas>
-      <StyledCaracteristicas id={id[1]} backgroundColor={COLORS.gray02}>
-        <Titulo>Datos técnicos</Titulo>
+      {/* <StyledCaracteristicas id={id[1]} backgroundColor={COLORS.gray02}> */}
+        {/* <Titulo>Datos técnicos</Titulo> */}
         {/* <ImageWithCaption
           src={caracter1}
           alt='Imágenes técnicas (Jorge)'
@@ -159,9 +159,9 @@ const CaracteristicasTline = ({ id }) => {
           columnSpan='6'
           isGray
         /> */}
-        <Text>
+        {/* <Text>
           <strong>Textos (Jorge)</strong>
-        </Text>
+        </Text> */}
         {/* <ImageWithCaption
           src={caracter1}
           alt='Imágenes técnicas (Jorge)'
@@ -188,9 +188,9 @@ const CaracteristicasTline = ({ id }) => {
           columnSpan='6'
           isGray
         /> */}
-        <Text>
+        {/* <Text>
           <strong>Textos (Jorge)</strong>
-        </Text>
+        </Text> */}
         {/* <ImageWithCaption
           src={caracter1}
           alt='Imágenes técnicas (Jorge)'
@@ -203,7 +203,7 @@ const CaracteristicasTline = ({ id }) => {
           caption=''
           columnSpan='6'
         /> */}
-      </StyledCaracteristicas>
+      {/* </StyledCaracteristicas> */}
     </>
   );
 };

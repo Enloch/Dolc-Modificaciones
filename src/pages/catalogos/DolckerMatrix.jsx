@@ -44,7 +44,7 @@ const DolckerMatrix = () => {
       />
       <Disenos id={["diseno", "colecciones", "configurador"]} />
       <Caracteristicas id={["caracteristicas-especiales", "datos-tecnicos"]} />
-      <Sistemas
+      {/* <Sistemas
         id={[
           "sistemas",
           "dolcker-and-clip",
@@ -52,8 +52,8 @@ const DolckerMatrix = () => {
           "dol-tc14",
           "dol-hc20",
         ]}
-      />
-      <Descargas id='descargas' />
+      /> */}
+      {/* <Descargas id='descargas' /> */}
       <Final />
       {showButton && <StyledButton onClick={handleGoToIndice}>^</StyledButton>}
     </MultipleOptionsProvider>
