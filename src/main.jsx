@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import FachadaVentilada from "./pages/catalogos/FachadaVentilada";
 import DolckerTline from "./pages/catalogos/DolckerTLine";
 import DolckerMatrix from "./pages/catalogos/DolckerMatrix";
+import DolckerLeiva from "./pages/catalogos/DolckerLeiva";
 import DolckerG10 from "./pages/catalogos/DolckerG10";
 import Escamas from "./pages/catalogos/Escamas";
 // import FontStyles from './global/FontStyles'
@@ -37,6 +38,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path='/dolcker-system' element={<FachadaVentilada />} />
         <Route path='/dolcker-tline' element={<DolckerTline />} />
         <Route path='/dolcker-matrix' element={<DolckerMatrix />} />
+        <Route path='/dolcker-leiva' element={<DolckerLeiva />} />
         <Route path='/dolcker-G10' element={<DolckerG10 />} />
         <Route path='/dolcker-escamas' element={<Escamas />} />
         <Route path='/cambios-pendientes' element={<PaginaImagenes />} />

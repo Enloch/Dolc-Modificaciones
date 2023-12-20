@@ -1436,6 +1436,7 @@ export const Mallas = {
     ],
     image: "",
   },
+
   // 9: {
   //   matrices: [
   //     {

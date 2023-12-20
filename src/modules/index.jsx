@@ -50,3 +50,12 @@ export { default as DisenosMatrix } from "./Matrix/05_Diseno";
 export { default as CaracteristicasMatrix } from "./Matrix/06_Caracteristicas";
 export { default as SistemasMatrix } from "./Matrix/07_Sistemas";
 export { default as DescargasMatrix } from "./Matrix/08_Descargas";
+//Leiva
+export { default as IndiceLeiva } from "./Leiva/01_Inicio";
+export { default as DolckerLeiva } from "./Leiva/02_Dolcker";
+export { default as VentajasLeiva } from "./Leiva/03_Ventajas";
+export { default as AplicacionesLeiva } from "./Leiva/04_Aplicaciones";
+export { default as DisenosLeiva } from "./Leiva/05_Diseno";
+export { default as CaracteristicasLeiva } from "./Leiva/06_Caracteristicas";
+export { default as SistemasLeiva } from "./Leiva/07_Sistemas";
+export { default as DescargasLeiva } from "./Leiva/08_Descargas";
