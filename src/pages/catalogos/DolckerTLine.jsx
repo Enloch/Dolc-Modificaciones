@@ -61,7 +61,7 @@ const DolckerTline = () => {
       />
       <Caracteristicas id={["caracteristicas-especiales", "datos-tecnicos"]} />
       <Sistemas id={["sistemas", "line"]} />
-      <Descargas id='descargas' />
+      {/* <Descargas id='descargas' /> */}
       <Final />
       {showButton && <StyledButton onClick={handleGoToIndice}>^</StyledButton>}
     </MultipleOptionsProvider>
