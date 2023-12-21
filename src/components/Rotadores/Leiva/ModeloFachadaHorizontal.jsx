@@ -4,7 +4,9 @@ import { MaterialesMetalizados } from "./Materiales";
 import useStore from "./store"; // Importa la tienda Zustand
 import * as THREE from "three";
 export function FachadaHorizontal(props) {
-  const { nodes, materials } = useGLTF("/modelos/MatrixFachadaH.glb");
+  const { nodes, materials } = useGLTF(
+    "/modelos/Leiva/Leiva Fachada Horizontal.glb"
+  );
   const Metalizado = MaterialesMetalizados.map((metal) => metal.metalness);
   const Aspereza = MaterialesMetalizados.map((aspereza) => aspereza.roughness);
   const {
@@ -150,64 +152,67 @@ export function FachadaHorizontal(props) {
   const mallasFinales = mallasRepetidas.slice(0, 40);
 
   return (
-    <group {...props} dispose={null}>
-      {mallasFinales.map((malla, index) => (
+    <>
+      <group {...props} dispose={null} renderOrder={-1000}>
+        {mallasFinales.map((malla, index) => (
+          <mesh
+            castShadow
+            receiveShadow
+            key={index}
+            position={[0, -malla.posicion, 0]} // Ajustar la posición según la propiedad 'posicion'
+            geometry={malla.geometria}
+          >
+            {malla.colorActivo === "colorPicker" ? (
+              <meshStandardMaterial
+                color={malla.color}
+                metalness='0.5'
+                roughness='0.5'
+                map={null}
+              />
+            ) : (
+              <meshPhysicalMaterial
+                map={malla.material}
+                roughness={malla.aspereza}
+                metalness={malla.metalizado}
+                color={"#FFFFFF"}
+              />
+            )}
+            {/* {console.log(index, malla.posicion)} */}
+          </mesh>
+        ))}
+      </group>
+      <group renderOrder={1} position={[0, 0, 0.02]}>
         <mesh
           castShadow
           receiveShadow
-          key={index}
-          position={[0, -malla.posicion, 0]} // Ajustar la posición según la propiedad 'posicion'
-          geometry={malla.geometria}
-        >
-          {malla.colorActivo === "colorPicker" ? (
-            <meshStandardMaterial
-              color={malla.color}
-              metalness='0.5'
-              roughness='0.5'
-              map={null}
-            />
-          ) : (
-            <meshPhysicalMaterial
-              map={malla.material}
-              roughness={malla.aspereza}
-              metalness={malla.metalizado}
-              color={"#FFFFFF"}
-            />
-          )}
-          {/* {console.log(index, malla.posicion)} */}
-        </mesh>
-      ))}
-
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Marco2.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Lamas2.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Box006.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Ventana3.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Ventana3_1.geometry}
-        material={materials["Glass Smoked"]}
-      />
-    </group>
+          geometry={nodes.Marco2.geometry}
+          material={materials.MarcoVentana}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Lamas2.geometry}
+          material={materials.MarcoVentana}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Box006.geometry}
+          material={materials.MarcoVentana}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Ventana3.geometry}
+          material={materials.MarcoVentana}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Ventana3_1.geometry}
+          material={materials["Glass Smoked"]}
+        />
+      </group>
+    </>
   );
 }

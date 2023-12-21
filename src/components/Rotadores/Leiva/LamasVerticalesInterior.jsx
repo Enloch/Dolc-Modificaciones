@@ -4,7 +4,9 @@ import { MaterialesMetalizados } from "./Materiales";
 import useStore from "./store"; // Importa la tienda Zustand
 import * as THREE from "three";
 export function LamasVerticalesInterior(props) {
-  const { nodes, materials } = useGLTF("/modelos/LamasVerticalesInterior.glb");
+  const { nodes, materials } = useGLTF(
+    "/modelos/Leiva/Leiva Fachada Vertical.glb"
+  );
   const ref = useRef();
   const Metalizado = MaterialesMetalizados.map((metal) => metal.metalness);
   const Aspereza = MaterialesMetalizados.map((aspereza) => aspereza.roughness);
@@ -150,7 +152,7 @@ export function LamasVerticalesInterior(props) {
   // Cortar el array a 45 elementos si excede
   const mallasFinales = mallasRepetidas.slice(0, 90);
   return (
-    <group {...props} dispose={null} >
+    <group {...props} dispose={null}>
       {mallasFinales.map((malla, index) => (
         <mesh
           castShadow

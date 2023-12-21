@@ -7,7 +7,7 @@ import StyledDisenos from "./styles";
 import img1 from "../../../assets/images/DolckerMatrix/Diseno/catalogo3-1-14.jpg";
 import fondo from "../../../assets/images/Diseno/Formato/fondo.webp";
 import indicadoresFormato from "../../../utils/indicadoresFormato";
-import RotadorMatrix from "../../../components/Rotadores/Matrix/Rotador";
+import RotadorLeiva from "../../../components/Rotadores/Leiva/Rotador";
 import IndiceSeries from "./05_1_IndiceSeries";
 import Series from "./05_2_Series";
 import Reemplazo from "../../../assets/images/DolckerMatrix/temporal.webp";
@@ -44,17 +44,13 @@ const DisenosTline = ({ id }) => {
           alt='Imagen de Diseños 1'
           columnSpan='6'
         />
-        <Cita
-          cita='Cita'
-          author='Autor'
-          colorAutor={COLORS.gray05}
-        />
+        <Cita cita='Cita' author='Autor' colorAutor={COLORS.gray05} />
       </StyledDisenos>
       <IndiceSeries id={id[1]} queSerieActiva={setSerieActiva} />
       <StyledDisenos id={id[2]} backgroundColor={COLORS.gray01}>
         <Titulo2>Configurador</Titulo2>
         <div className='rotador'>
-          <RotadorMatrix />
+          <RotadorLeiva />
         </div>
       </StyledDisenos>
     </>

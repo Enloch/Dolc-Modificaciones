@@ -17,7 +17,7 @@ import {
 } from "@react-three/postprocessing";
 import { folder, useControls } from "leva";
 import * as THREE from "three";
-import { Modelo } from "./MatrixModelo";
+import { Modelo } from "./LeivaModelo";
 import {
   ContRotador,
   CanvasContainer,
@@ -44,7 +44,7 @@ import Exit from "../../../assets/icons/exit.svg";
 import { LamasHorizontalesInterior } from "./LamasHorizontalesInterior";
 import { LamasVerticalesInterior } from "./LamasVerticalesInterior";
 import { Interior } from "./ModeloInterior";
-export default function RotadorMatrix() {
+export default function RotadorLeiva() {
   const {
     materialIndex,
     showIntro,
