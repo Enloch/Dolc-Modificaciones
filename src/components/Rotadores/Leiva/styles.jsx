@@ -16,6 +16,7 @@ export const ContRotador = styled.div`
 `;
 
 export const CanvasContainer = styled.div`
+  aspect-ratio: 16/9;
   position: relative;
   top: 0;
   left: 0;

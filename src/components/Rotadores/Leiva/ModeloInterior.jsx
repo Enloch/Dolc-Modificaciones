@@ -14,7 +14,7 @@ export function Interior(props) {
   }, [materials]);
 
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} position={[0, 0, -0.2]}>
       <mesh
         geometry={nodes.Dormitorio_copia.geometry}
         material={materials["Dormitorio copia"]}
