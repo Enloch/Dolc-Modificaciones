@@ -323,14 +323,14 @@ const EscenaRotador = ({
         {numModels > 2 && (
           <Modelo
             modelId={3}
-            position={[modelPositions[0] + modelPositions[1], 0, 0]} // posición modificada
+            position={[modelPositions[0] + modelPositions[0], 0, 0]} // posición modificada
           />
         )}
         {numModels > 3 && (
           <Modelo
             modelId={4}
             position={[
-              modelPositions[0] + modelPositions[1] + modelPositions[2],
+              modelPositions[0] + modelPositions[0] + modelPositions[0],
               0,
               0,
             ]} // posición modificada
@@ -341,9 +341,9 @@ const EscenaRotador = ({
             modelId={5}
             position={[
               modelPositions[0] +
-                modelPositions[1] +
-                modelPositions[2] +
-                modelPositions[3],
+                modelPositions[0] +
+                modelPositions[0] +
+                modelPositions[0],
               0,
               0,
             ]} // posición modificada
@@ -354,10 +354,10 @@ const EscenaRotador = ({
             modelId={6}
             position={[
               modelPositions[0] +
-                modelPositions[1] +
-                modelPositions[2] +
-                modelPositions[3] +
-                modelPositions[4],
+                modelPositions[0] +
+                modelPositions[0] +
+                modelPositions[0] +
+                modelPositions[0],
               0,
               0,
             ]} // posición modificada

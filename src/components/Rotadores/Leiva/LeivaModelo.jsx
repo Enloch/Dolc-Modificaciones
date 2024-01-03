@@ -100,21 +100,21 @@ export function Modelo({ modelId, ...props }) {
     if (modelId === 1 && selectedMatrix1?.geometries) {
       setSelectedGeo1Model1(selectedMatrix1.geometries[0]);
       setSelectedGeo2Model1(selectedMatrix1.geometries[1]);
-    } else if (modelId === 2 && selectedMatrix2?.geometries) {
-      setSelectedGeo1Model2(selectedMatrix2.geometries[0]);
-      setSelectedGeo2Model2(selectedMatrix2.geometries[1]);
-    } else if (modelId === 3 && selectedMatrix3?.geometries) {
-      setSelectedGeo1Model3(selectedMatrix3.geometries[0]);
-      setSelectedGeo2Model3(selectedMatrix3.geometries[1]);
-    } else if (modelId === 4 && selectedMatrix4?.geometries) {
-      setSelectedGeo1Model4(selectedMatrix4.geometries[0]);
-      setSelectedGeo2Model4(selectedMatrix4.geometries[1]);
-    } else if (modelId === 5 && selectedMatrix5?.geometries) {
-      setSelectedGeo1Model5(selectedMatrix5.geometries[0]);
-      setSelectedGeo2Model5(selectedMatrix5.geometries[1]);
-    } else if (modelId === 6 && selectedMatrix6?.geometries) {
-      setSelectedGeo1Model6(selectedMatrix6.geometries[0]);
-      setSelectedGeo2Model6(selectedMatrix6.geometries[1]);
+    } else if (modelId === 2 && selectedMatrix1?.geometries) {
+      setSelectedGeo1Model2(selectedMatrix1.geometries[0]);
+      setSelectedGeo2Model2(selectedMatrix1.geometries[1]);
+    } else if (modelId === 3 && selectedMatrix1?.geometries) {
+      setSelectedGeo1Model3(selectedMatrix1.geometries[0]);
+      setSelectedGeo2Model3(selectedMatrix1.geometries[1]);
+    } else if (modelId === 4 && selectedMatrix1?.geometries) {
+      setSelectedGeo1Model4(selectedMatrix1.geometries[0]);
+      setSelectedGeo2Model4(selectedMatrix1.geometries[1]);
+    } else if (modelId === 5 && selectedMatrix1?.geometries) {
+      setSelectedGeo1Model5(selectedMatrix1.geometries[0]);
+      setSelectedGeo2Model5(selectedMatrix1.geometries[1]);
+    } else if (modelId === 6 && selectedMatrix1?.geometries) {
+      setSelectedGeo1Model6(selectedMatrix1.geometries[0]);
+      setSelectedGeo2Model6(selectedMatrix1.geometries[1]);
     }
   }, [
     modelId,
@@ -127,16 +127,16 @@ export function Modelo({ modelId, ...props }) {
   ]);
   const Geo1Model1 = nodes[selectedGeo1Model1]?.geometry;
   const Geo2Model1 = nodes[selectedGeo2Model1]?.geometry;
-  const Geo1Model2 = nodes[selectedGeo1Model2]?.geometry;
-  const Geo2Model2 = nodes[selectedGeo2Model2]?.geometry;
-  const Geo1Model3 = nodes[selectedGeo1Model3]?.geometry;
-  const Geo2Model3 = nodes[selectedGeo2Model3]?.geometry;
-  const Geo1Model4 = nodes[selectedGeo1Model4]?.geometry;
-  const Geo2Model4 = nodes[selectedGeo2Model4]?.geometry;
-  const Geo1Model5 = nodes[selectedGeo1Model5]?.geometry;
-  const Geo2Model5 = nodes[selectedGeo2Model5]?.geometry;
-  const Geo1Model6 = nodes[selectedGeo1Model6]?.geometry;
-  const Geo2Model6 = nodes[selectedGeo2Model6]?.geometry;
+  const Geo1Model2 = nodes[selectedGeo1Model1]?.geometry;
+  const Geo2Model2 = nodes[selectedGeo2Model1]?.geometry;
+  const Geo1Model3 = nodes[selectedGeo1Model1]?.geometry;
+  const Geo2Model3 = nodes[selectedGeo2Model1]?.geometry;
+  const Geo1Model4 = nodes[selectedGeo1Model1]?.geometry;
+  const Geo2Model4 = nodes[selectedGeo2Model1]?.geometry;
+  const Geo1Model5 = nodes[selectedGeo1Model1]?.geometry;
+  const Geo2Model5 = nodes[selectedGeo2Model1]?.geometry;
+  const Geo1Model6 = nodes[selectedGeo1Model1]?.geometry;
+  const Geo2Model6 = nodes[selectedGeo2Model1]?.geometry;
   useEffect(() => {
     setMaterialMalla1(Acabados[materialIndex1]);
     setMaterialMalla2(Acabados[materialIndex2]);

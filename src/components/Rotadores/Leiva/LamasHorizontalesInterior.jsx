@@ -51,11 +51,11 @@ export function LamasHorizontalesInterior(props) {
     materialIndex6,
   } = useStore();
   const Geo1Model1 = nodes[selectedGeo1Model1]?.geometry;
-  const Geo1Model2 = nodes[selectedGeo1Model2]?.geometry;
-  const Geo1Model3 = nodes[selectedGeo1Model3]?.geometry;
-  const Geo1Model4 = nodes[selectedGeo1Model4]?.geometry;
-  const Geo1Model5 = nodes[selectedGeo1Model5]?.geometry;
-  const Geo1Model6 = nodes[selectedGeo1Model6]?.geometry;
+  const Geo1Model2 = nodes[selectedGeo1Model1]?.geometry;
+  const Geo1Model3 = nodes[selectedGeo1Model1]?.geometry;
+  const Geo1Model4 = nodes[selectedGeo1Model1]?.geometry;
+  const Geo1Model5 = nodes[selectedGeo1Model1]?.geometry;
+  const Geo1Model6 = nodes[selectedGeo1Model1]?.geometry;
   // const rotacion = Math.PI / 2; // 90 grados en radianes
 
   // // Si materialMalla1, materialMalla2, etc., son texturas
@@ -100,7 +100,7 @@ export function LamasHorizontalesInterior(props) {
       metalizado: Metalizado[materialIndex2],
       aspereza: Aspereza[materialIndex2],
       color: color2,
-      posicion: selectedMatrix2.posicion,
+      posicion: selectedMatrix1.posicion,
       colorActivo: materialSource2,
     },
     {
@@ -109,7 +109,7 @@ export function LamasHorizontalesInterior(props) {
       metalizado: Metalizado[materialIndex3],
       aspereza: Aspereza[materialIndex3],
       color: color3,
-      posicion: selectedMatrix3.posicion,
+      posicion: selectedMatrix1.posicion,
       colorActivo: materialSource3,
     },
     {
@@ -118,7 +118,7 @@ export function LamasHorizontalesInterior(props) {
       metalizado: Metalizado[materialIndex4],
       aspereza: Aspereza[materialIndex4],
       color: color4,
-      posicion: selectedMatrix4.posicion,
+      posicion: selectedMatrix1.posicion,
       colorActivo: materialSource4,
     },
     {
@@ -127,7 +127,7 @@ export function LamasHorizontalesInterior(props) {
       metalizado: Metalizado[materialIndex5],
       aspereza: Aspereza[materialIndex5],
       color: color5,
-      posicion: selectedMatrix5.posicion,
+      posicion: selectedMatrix1.posicion,
       colorActivo: materialSource5,
     },
     {
@@ -136,7 +136,7 @@ export function LamasHorizontalesInterior(props) {
       metalizado: Metalizado[materialIndex6],
       aspereza: Aspereza[materialIndex6],
       color: color6,
-      posicion: selectedMatrix6.posicion,
+      posicion: selectedMatrix1.posicion,
       colorActivo: materialSource6,
     },
   ];

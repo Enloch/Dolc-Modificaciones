@@ -117,23 +117,23 @@ const Menu = ({ handleModelChange }) => {
       setSelectedModel1(false);
     }
     if (selectedModel2) {
-      setSelectedMatrix2(matrix);
+      setSelectedMatrix1(matrix);
       setSelectedModel2(false);
     }
     if (selectedModel3) {
-      setSelectedMatrix3(matrix);
+      setSelectedMatrix1(matrix);
       setSelectedModel3(false);
     }
     if (selectedModel4) {
-      setSelectedMatrix4(matrix);
+      setSelectedMatrix1(matrix);
       setSelectedModel4(false);
     }
     if (selectedModel5) {
-      setSelectedMatrix5(matrix);
+      setSelectedMatrix1(matrix);
       setSelectedModel5(false);
     }
     if (selectedModel6) {
-      setSelectedMatrix6(matrix);
+      setSelectedMatrix1(matrix);
       setSelectedModel6(false);
     }
   };
@@ -222,9 +222,7 @@ const Menu = ({ handleModelChange }) => {
       handleMaterialChange(index);
     }
   };
-  const categoryButtons = [
-    { id: "1", label: "Planex" },
-  ];
+  const categoryButtons = [{ id: "1", label: "Leiva" }];
 
   return (
     <div>
