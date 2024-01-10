@@ -157,6 +157,11 @@ export function LamasHorizontalesInterior(props) {
       if (nuevaMalla.material instanceof THREE.Texture) {
         // Clonar la textura para tener una instancia única por malla
         const texturaClonada = nuevaMalla.material.clone();
+        // Aplicar el desplazamiento UV
+        texturaClonada.offset.set(desplazamientoX, desplazamientoX);
+        texturaClonada.wrapS = THREE.MirroredRepeatWrapping;
+        texturaClonada.wrapT = THREE.MirroredRepeatWrapping;
+        texturaClonada.repeat.set(3, 3);
         texturaClonada.needsUpdate = true; // Indica que la textura ha sido actualizada
 
         // Aplicar el desplazamiento UV

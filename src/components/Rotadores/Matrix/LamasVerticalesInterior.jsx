@@ -127,10 +127,11 @@ export function LamasVerticalesInterior(props) {
       if (nuevaMalla.material instanceof THREE.Texture) {
         // Clonar la textura para tener una instancia única por malla
         const texturaClonada = nuevaMalla.material.clone();
-        texturaClonada.needsUpdate = true; // Indica que la textura ha sido actualizada
-
         // Aplicar el desplazamiento UV
-        texturaClonada.offset.set(desplazamientoX, 0);
+        texturaClonada.offset.set(desplazamientoX, desplazamientoX);
+        texturaClonada.wrapS = THREE.MirroredRepeatWrapping;
+        texturaClonada.wrapT = THREE.MirroredRepeatWrapping;
+        texturaClonada.needsUpdate = true; // Indica que la textura ha sido actualizada
 
         // Asignar la textura clonada a la malla
         nuevaMalla.material = texturaClonada;
@@ -150,7 +151,7 @@ export function LamasVerticalesInterior(props) {
   // Cortar el array a 45 elementos si excede
   const mallasFinales = mallasRepetidas.slice(0, 90);
   return (
-    <group {...props} dispose={null} >
+    <group {...props} dispose={null}>
       {mallasFinales.map((malla, index) => (
         <mesh
           castShadow

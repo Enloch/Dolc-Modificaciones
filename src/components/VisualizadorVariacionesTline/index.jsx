@@ -31,7 +31,6 @@ const Configurador1Tline = () => {
   const [perfilSize, setPerfilSize] = useState(null);
   const [presionado, setPresionado] = useState(false);
   const [color, setColor] = useState("#c83636"); // Estado para almacenar el color, inicializado en negro (#000000)
-  // console.log("Imagen SVG?", imagenSvg);
   const handleColorChange = (newColor) => {
     setColor(newColor);
   };

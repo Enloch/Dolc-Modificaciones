@@ -11,7 +11,6 @@ export function PerfilesVerticales({
   selectedRoughness,
   selectedColor,
 }) {
-  console.log("Material?", selectedMaterial);
   const { nodes: nodesA } = useGLTF(
     "/modelos/Matrix/Vertical/Matriz3_A_Vert.gltf"
   );

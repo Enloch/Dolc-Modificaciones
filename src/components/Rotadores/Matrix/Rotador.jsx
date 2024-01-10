@@ -44,6 +44,11 @@ import Exit from "../../../assets/icons/exit.svg";
 import { LamasHorizontalesInterior } from "./LamasHorizontalesInterior";
 import { LamasVerticalesInterior } from "./LamasVerticalesInterior";
 import { Interior } from "./ModeloInterior";
+import {
+  EscenaRotador as LeivaEscenaRotador,
+  EscenaFachada as LeivaEscenaFachada,
+  EscenaInterior as LeivaEscenaInterior,
+} from "../Leiva/Rotador";
 export default function RotadorMatrix() {
   const {
     materialIndex,
@@ -61,6 +66,7 @@ export default function RotadorMatrix() {
     setIsMenuOpen,
     numModels,
     setNumModels,
+    leivaSelected,
   } = useStore();
 
   const handleIntroClick = () => {
@@ -79,7 +85,6 @@ export default function RotadorMatrix() {
     const sum = array.reduce((acc, val) => acc + val, 0);
     return sum / array.length;
   };
-  // console.log(modelPositions);
   const handleExpandClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -134,15 +139,9 @@ export default function RotadorMatrix() {
 
     setTargetValue(newTargetValue);
   }, [numModels, rotation, cameraPosition]); // Dependencias del efecto
-  console.log(fachadaVisible);
+
   return (
     <ContRotador>
-      {/* <BotonExpandir onClick={handleExpandClick}>
-        <ImagenExpandir
-          src={isMenuOpen ? IconoAbrir : IconoCerrar}
-          alt='Rotador'
-        />
-      </BotonExpandir> */}
       <CanvasContainer visible={!fachadaVisible}>
         {showIntro && (
           <IntroContainer onClick={handleIntroClick}>
@@ -172,6 +171,7 @@ export default function RotadorMatrix() {
           <Suspense fallback={null}>
             {fachadaVisible === false && (
               <>
+                {/* {leivaSelected === true && <LeivaEscenaRotador />} */}
                 <EscenaRotador
                   materialIndex={materialIndex}
                   numModels={numModels}
@@ -191,14 +191,13 @@ export default function RotadorMatrix() {
                 </EffectComposer>
               </>
             )}
-            {fachadaVisible === true && (
+            {fachadaVisible && (
               <>
-                {esInterior === true && <EscenaInterior rotada={rotada} />}
-                {esInterior === false && <EscenaFachada rotada={rotada} />}
-
-                {/* <EffectComposer>
-                  <HueSaturation hue={-0.12} saturation={0.2} />
-                </EffectComposer> */}
+                {/* {leivaSelected && esInterior && (
+                  <LeivaEscenaInterior rotada={rotada} />
+                )} */}
+                {esInterior && <EscenaInterior rotada={rotada} />}
+                {!esInterior && <EscenaFachada rotada={rotada} />}
               </>
             )}
           </Suspense>

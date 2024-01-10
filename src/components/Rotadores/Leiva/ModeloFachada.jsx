@@ -150,7 +150,6 @@ export function Fachada(props) {
 
   // Cortar el array a 45 elementos si excede
   const mallasFinales = mallasRepetidas.slice(0, 90);
-  console.log(mallasFinales);
   return (
     <>
       <group {...props} dispose={null} renderOrder={-1000}>
@@ -177,7 +176,6 @@ export function Fachada(props) {
                 color={"#FFFFFF"}
               />
             )}
-            {/* {console.log(index, malla.posicion)} */}
           </mesh>
         ))}
       </group>

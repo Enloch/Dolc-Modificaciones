@@ -11,7 +11,6 @@ export function PerfilesHorizontales({
   selectedRoughness,
   selectedColor,
 }) {
-  console.log("Modelo?", selectedModel);
   const { nodes: nodesA } = useGLTF(
     "/modelos/Matrix/Horizontal/Matriz3_A_Hor.gltf"
   );

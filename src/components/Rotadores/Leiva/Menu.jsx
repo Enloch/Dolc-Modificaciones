@@ -222,7 +222,7 @@ const Menu = ({ handleModelChange }) => {
       handleMaterialChange(index);
     }
   };
-  const categoryButtons = [{ id: "1", label: "Leiva" }];
+  const categoryButtons = [{ id: "8", label: "Leiva" }];
 
   return (
     <div>

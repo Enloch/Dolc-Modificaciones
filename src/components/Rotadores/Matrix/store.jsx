@@ -59,6 +59,7 @@ const useStore = create((set) => ({
   selectedGeo2Model5: "matriz3_m_2",
   selectedGeo1Model6: "matriz3_m_1",
   selectedGeo2Model6: "matriz3_m_2",
+  leivaSelected: false,
 
   // Acciones para actualizar los estados generales
   setMaterialIndex1: (index) => set({ materialIndex1: index }),
@@ -114,6 +115,7 @@ const useStore = create((set) => ({
   setSelectedGeo2Model5: (geo) => set({ selectedGeo2Model5: geo }),
   setSelectedGeo1Model6: (geo) => set({ selectedGeo1Model6: geo }),
   setSelectedGeo2Model6: (geo) => set({ selectedGeo2Model6: geo }),
+  setLeivaSelected: (selected) => set({ leivaSelected: selected }),
 }));
 
 export default useStore;

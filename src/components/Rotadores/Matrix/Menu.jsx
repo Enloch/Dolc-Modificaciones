@@ -1,4 +1,4 @@
-import React, { useState, Suspense } from "react";
+import React, { useState, Suspense, useEffect } from "react";
 import { useTexture } from "@react-three/drei";
 import { Materiales, NombreMateriales } from "./Materiales";
 import { SketchPicker } from "react-color";
@@ -67,6 +67,8 @@ const Menu = ({ handleModelChange }) => {
     setMaterialSource4,
     setMaterialSource5,
     setMaterialSource6,
+    leivaSelected,
+    setLeivaSelected,
   } = useStore();
   const [menuInicial, setMenuicial] = useState(true);
   const [showCategoryButtons, setShowCategoryButtons] = useState(false);
@@ -76,7 +78,7 @@ const Menu = ({ handleModelChange }) => {
   const [showMaderas, setShowMaderas] = useState(false);
   const [showColorPicker, setShowColorPicker] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState();
-
+  const [prevLeivaSelected, setPrevLeivaSelected] = useState(leivaSelected);
   const handleInicio = () => {
     setMenuicial(true);
     setShowCategoryButtons(false);
@@ -111,30 +113,77 @@ const Menu = ({ handleModelChange }) => {
     setShowMaderas(false);
     setShowColorPicker(false);
   };
+  useEffect(() => {
+    if (prevLeivaSelected && !leivaSelected) {
+      // Esta lógica se ejecutará solo cuando leivaSelected cambie de true a false
+      setSelectedMatrix1(Mallas[2].matrices[13]);
+      setSelectedMatrix2(Mallas[2].matrices[13]);
+      setSelectedMatrix3(Mallas[2].matrices[13]);
+      setSelectedMatrix4(Mallas[2].matrices[13]);
+      setSelectedMatrix5(Mallas[2].matrices[13]);
+      setSelectedMatrix6(Mallas[2].matrices[13]);
+    }
+    // Actualizar prevLeivaSelected para la próxima renderización
+    setPrevLeivaSelected(leivaSelected);
+  }, [leivaSelected]); // Este efecto se ejecutará cada vez que leivaSelected cambie
+
   const handleToggleMaterialButtons = (matrix) => {
-    if (selectedModel1) {
+    if (leivaSelected === true) {
       setSelectedMatrix1(matrix);
-      setSelectedModel1(false);
-    }
-    if (selectedModel2) {
       setSelectedMatrix2(matrix);
-      setSelectedModel2(false);
-    }
-    if (selectedModel3) {
       setSelectedMatrix3(matrix);
-      setSelectedModel3(false);
-    }
-    if (selectedModel4) {
       setSelectedMatrix4(matrix);
-      setSelectedModel4(false);
-    }
-    if (selectedModel5) {
       setSelectedMatrix5(matrix);
-      setSelectedModel5(false);
-    }
-    if (selectedModel6) {
       setSelectedMatrix6(matrix);
-      setSelectedModel6(false);
+      if (selectedModel1) {
+        setSelectedMatrix1(matrix);
+        setSelectedModel1(false);
+      }
+      if (selectedModel2) {
+        setSelectedMatrix1(matrix);
+        setSelectedModel2(false);
+      }
+      if (selectedModel3) {
+        setSelectedMatrix1(matrix);
+        setSelectedModel3(false);
+      }
+      if (selectedModel4) {
+        setSelectedMatrix1(matrix);
+        setSelectedModel4(false);
+      }
+      if (selectedModel5) {
+        setSelectedMatrix1(matrix);
+        setSelectedModel5(false);
+      }
+      if (selectedModel6) {
+        setSelectedMatrix1(matrix);
+        setSelectedModel6(false);
+      }
+    } else {
+      if (selectedModel1) {
+        setSelectedMatrix1(matrix);
+        setSelectedModel1(false);
+      }
+      if (selectedModel2) {
+        setSelectedMatrix2(matrix);
+        setSelectedModel2(false);
+      }
+      if (selectedModel3) {
+        setSelectedMatrix3(matrix);
+        setSelectedModel3(false);
+      }
+      if (selectedModel4) {
+        setSelectedMatrix4(matrix);
+        setSelectedModel4(false);
+      }
+      if (selectedModel5) {
+        setSelectedMatrix5(matrix);
+        setSelectedModel5(false);
+      }
+      if (selectedModel6) {
+        setSelectedMatrix6(matrix);
+        setSelectedModel6(false);
+      }
     }
   };
 
@@ -222,6 +271,7 @@ const Menu = ({ handleModelChange }) => {
       handleMaterialChange(index);
     }
   };
+
   const categoryButtons = [
     { id: "1", label: "Planex" },
     { id: "2", label: "Tubex" },
@@ -230,8 +280,7 @@ const Menu = ({ handleModelChange }) => {
     { id: "5", label: "Windx" },
     { id: "6", label: "Displax" },
     { id: "7", label: "Tecnux" },
-    // { id: "8", label: "Category 8" },
-    // { id: "9", label: "Category 9" },
+    { id: "8", label: "Leiva" },
   ];
 
   return (
@@ -281,12 +330,13 @@ const Menu = ({ handleModelChange }) => {
                 <CategoryButton
                   onClick={() => {
                     if (selectedCategory === category.id) {
-                      // Aquí reinicias los estados como necesites para cerrar la categoría
                       setSelectedCategory(null);
-                      handleHideButtons(); // Si esta función oculta los elementos
+                      handleHideButtons();
+                      setLeivaSelected(false); // Establece en false si se cierra la categoría
                     } else {
                       setSelectedCategory(category.id);
                       handleModels();
+                      setLeivaSelected(category.id === "8"); // Establece en true si la categoría es Leiva
                     }
                   }}
                 >

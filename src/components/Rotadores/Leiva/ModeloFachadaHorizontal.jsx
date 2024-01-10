@@ -177,7 +177,6 @@ export function FachadaHorizontal(props) {
                 color={"#FFFFFF"}
               />
             )}
-            {/* {console.log(index, malla.posicion)} */}
           </mesh>
         ))}
       </group>

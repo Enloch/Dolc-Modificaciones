@@ -157,7 +157,6 @@ const useImagesSeries = (categoria, queSerieActiva) => {
   const handleSerieChange = (event, id) => {
     // event.preventDefault();
     queSerieActiva(id);
-    console.log("Indice serie serie activa?", id);
   };
   return Children.toArray(
     enlacesFiltrados.map(({ titulo, src, id, formato }) => {

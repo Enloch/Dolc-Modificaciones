@@ -61,12 +61,6 @@ const Menu = ({
   const [seleccionPerfil, setSeleccionPerfil] = useState(null);
   const [colorFormato, setColorFormato] = useState(false);
   const [colorPerfil, setColorPerfil] = useState(false);
-  // console.log("img formato:", imagenFormato);
-  // console.log("tamaño perfil:", perfilSize);
-  // console.log("color RAL:", color);
-  // console.log("Color PErfil?:", colorPerfil);
-  // console.log("color perfil:", imagenSvg);
-  // console.log("Color perfil:", colorPerfil);
 
   const handleFondoFormatos = (miniatura) => {
     let cambio = null;
@@ -86,7 +80,6 @@ const Menu = ({
       cambio = Vertical[4].imagen;
     }
     setPerfilSize("Vertical");
-    // console.log("Que fondo?", cambio);
     setImagenFormato(cambio);
   };
   const handleImagenFormato = (miniatura) => {
@@ -209,9 +202,6 @@ const Menu = ({
   };
   const handleRAL = (miniatura) => {
     let cambio = null;
-    console.log("Que hay aqui?", miniatura.id);
-    console.log("Color PErfil?:", colorPerfil);
-    console.log("tamaño perfil:", perfilSize);
     // if (seleccionPerfil === "Perfil1") {
     // }
     if (

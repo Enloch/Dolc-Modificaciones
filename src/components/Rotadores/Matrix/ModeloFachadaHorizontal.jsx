@@ -118,7 +118,7 @@ export function FachadaHorizontal(props) {
   let desplazamientoX = 0;
   const incrementoUV = 0.05; // Desplazamiento UV como fracción del ancho de la textura
 
-  while (mallasRepetidas.length < 40) {
+  while (mallasRepetidas.length < 75) {
     elementosIniciales.forEach((mallaOriginal) => {
       let nuevaMalla = { ...mallaOriginal, posicion: posicionAcumulada };
 
@@ -126,11 +126,12 @@ export function FachadaHorizontal(props) {
       if (nuevaMalla.material instanceof THREE.Texture) {
         // Clonar la textura para tener una instancia única por malla
         const texturaClonada = nuevaMalla.material.clone();
-        texturaClonada.needsUpdate = true; // Indica que la textura ha sido actualizada
-
         // Aplicar el desplazamiento UV
-        texturaClonada.offset.set(desplazamientoX, 0);
-
+        texturaClonada.offset.set(desplazamientoX, desplazamientoX);
+        texturaClonada.wrapS = THREE.MirroredRepeatWrapping;
+        texturaClonada.wrapT = THREE.MirroredRepeatWrapping;
+        texturaClonada.repeat.set(3, 3);
+        texturaClonada.needsUpdate = true; // Indica que la textura ha sido actualizada
         // Asignar la textura clonada a la malla
         nuevaMalla.material = texturaClonada;
       }
@@ -147,7 +148,7 @@ export function FachadaHorizontal(props) {
   }
 
   // Cortar el array a 45 elementos si excede
-  const mallasFinales = mallasRepetidas.slice(0, 40);
+  const mallasFinales = mallasRepetidas.slice(0, 75);
 
   return (
     <group {...props} dispose={null}>
@@ -174,7 +175,6 @@ export function FachadaHorizontal(props) {
               color={"#FFFFFF"}
             />
           )}
-          {/* {console.log(index, malla.posicion)} */}
         </mesh>
       ))}
 

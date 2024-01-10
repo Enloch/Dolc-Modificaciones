@@ -79,7 +79,6 @@ export default function RotadorLeiva() {
     const sum = array.reduce((acc, val) => acc + val, 0);
     return sum / array.length;
   };
-  // console.log(modelPositions);
   const handleExpandClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -134,15 +133,9 @@ export default function RotadorLeiva() {
 
     setTargetValue(newTargetValue);
   }, [numModels, rotation, cameraPosition]); // Dependencias del efecto
-  console.log(fachadaVisible);
+
   return (
     <ContRotador>
-      {/* <BotonExpandir onClick={handleExpandClick}>
-        <ImagenExpandir
-          src={isMenuOpen ? IconoAbrir : IconoCerrar}
-          alt='Rotador'
-        />
-      </BotonExpandir> */}
       <CanvasContainer visible={!fachadaVisible}>
         {showIntro && (
           <IntroContainer onClick={handleIntroClick}>
@@ -195,10 +188,6 @@ export default function RotadorLeiva() {
               <>
                 {esInterior === true && <EscenaInterior rotada={rotada} />}
                 {esInterior === false && <EscenaFachada rotada={rotada} />}
-
-                {/* <EffectComposer>
-                  <HueSaturation hue={-0.12} saturation={0.2} />
-                </EffectComposer> */}
               </>
             )}
           </Suspense>
@@ -291,7 +280,7 @@ const CameraAdjuster = () => {
 
   return null;
 };
-const EscenaRotador = ({
+export const EscenaRotador = ({
   numModels,
   modelPositions,
   cameraPosition,
@@ -399,7 +388,7 @@ const Luces = () => {
     </>
   );
 };
-const EscenaFachada = ({ rotada }) => {
+export const EscenaFachada = ({ rotada }) => {
   const fustrum = 10;
 
   return (
@@ -443,7 +432,7 @@ const EscenaFachada = ({ rotada }) => {
   );
 };
 
-const EscenaInterior = ({ rotada }) => {
+export const EscenaInterior = ({ rotada }) => {
   const { size } = useThree();
   const aspect = size.width / size.height;
 
@@ -493,7 +482,7 @@ const EscenaInterior = ({ rotada }) => {
   );
 };
 
-const LamasHorizontal = () => {
+export const LamasHorizontal = () => {
   return (
     <>
       <LamasHorizontalesInterior />
@@ -501,14 +490,14 @@ const LamasHorizontal = () => {
   );
 };
 
-const LamasVertical = () => {
+export const LamasVertical = () => {
   return (
     <>
       <LamasVerticalesInterior />
     </>
   );
 };
-const ParedInterior = () => {
+export const ParedInterior = () => {
   return (
     <>
       <Interior />

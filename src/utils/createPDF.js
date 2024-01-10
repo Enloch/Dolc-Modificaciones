@@ -43,8 +43,6 @@ sistemas@dolcker.es`,
       const imgAux = new Image();
       imgAux.src = children[i].src;
 
-      console.log(children[i]);
-
       doc.addImage(imgAux, "png", 664, 163, 1200, 830, "", "FAST"); // Agrega la imagen al documento en la posición especificada
     }
   }
