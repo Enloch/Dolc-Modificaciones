@@ -5,6 +5,7 @@ import Vertex from "../../assets/images/DolckerMatrix/Series/Familias/Vertex.jpg
 import Windx from "../../assets/images/DolckerMatrix/Series/Familias/Windx.jpg";
 import Displax from "../../assets/images/DolckerMatrix/Series/Familias/Displax.jpg";
 import Tecnux from "../../assets/images/DolckerMatrix/Series/Familias/Tecnux.jpg";
+import Leiva from "../../assets/images/DolckerMatrix/Series/Familias/Leiva.jpg";
 
 import { configPlanex } from "./configPlanex";
 import { configTubex } from "./configTubex";
@@ -13,6 +14,7 @@ import { configVertex } from "./configVertex";
 import { configWindx } from "./configWindx";
 import { configDisplax } from "./configDisplax";
 import { configTecnux } from "./configTecnux";
+import { configLeiva } from "./configLeiva";
 
 export const Familias = [
   { id: 1, Titulo: "Planex", Imagen: Planex },
@@ -22,6 +24,7 @@ export const Familias = [
   { id: 5, Titulo: "Windx", Imagen: Windx },
   { id: 6, Titulo: "Displax", Imagen: Displax },
   { id: 7, Titulo: "Tecnux", Imagen: Tecnux },
+  { id: 8, Titulo: "Leiva", Imagen: Leiva },
 ];
 
 export const configFamilias = [
@@ -32,4 +35,5 @@ export const configFamilias = [
   { id: 5, config: configWindx },
   { id: 6, config: configDisplax },
   { id: 7, config: configTecnux },
+  { id: 8, config: configLeiva },
 ];
