@@ -82,12 +82,12 @@ const configArdesia = {
       titulo: "Dolcker & Line Silver",
     },
   ],
-  acabados: [
-    {
-      imagen: MuestraImg,
-      titulo: "Nombre acabado",
-    },
-  ],
+  // acabados: [
+  //   {
+  //     imagen: MuestraImg,
+  //     titulo: "Nombre acabado",
+  //   },
+  // ],
 };
 
 export default configArdesia;

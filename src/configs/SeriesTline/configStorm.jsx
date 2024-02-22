@@ -17,7 +17,8 @@ const acabados = getDataFromModules(acabadosImports);
 
 const configStorm = {
   titulo: "Dolcker & Line Stor",
-  descripcion: "Texto Jorge.",
+  descripcion:
+    "Luz y serenidad se fusionan en esta propuesta llenando los espacios. La superficie, de una suave textura similar al mármol, refleja la luz de forma natural, creando una atmósfera etérea y relajante. Los colores aportan pureza y amplitud, mientras que las texturas evocan la calma y la tranquilidad. La colección es ideal para crear ambientes minimalistas, modernos y versátiles.",
   imgSeleccionar,
   indicadores: [
     {
@@ -83,12 +84,12 @@ const configStorm = {
       titulo: "Dolcker & Line White",
     },
   ],
-  acabados: [
-    {
-      imagen: MuestraImg,
-      titulo: "Nombre acabado",
-    },
-  ],
+  // acabados: [
+  //   {
+  //     imagen: MuestraImg,
+  //     titulo: "Nombre acabado",
+  //   },
+  // ],
 };
 
 export default configStorm;

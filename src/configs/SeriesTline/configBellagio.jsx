@@ -37,12 +37,12 @@ const configBellagio = {
       titulo: "Dolcker & Line Natural",
     },
   ],
-  acabados: [
-    {
-      imagen: MuestraImg,
-      titulo: "Nombre acabado",
-    },
-  ],
+  // acabados: [
+  //   {
+  //     imagen: MuestraImg,
+  //     titulo: "Nombre acabado",
+  //   },
+  // ],
 };
 
 export default configBellagio;

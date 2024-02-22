@@ -18,7 +18,8 @@ const acabados = getDataFromModules(acabadosImports);
 
 const configNikea = {
   titulo: "Dolcker & Line Nik",
-  descripcion: "Texto Jorge.",
+  descripcion:
+    "Un legado para el futuro, inversión atemporal que se transmite creando un legado duradero y lleno de significado. Inspiración sin límites y belleza son una fuente de inspiración inagotable para arquitectos, diseñadores y artistas. Un material que despierta la creatividad y permite crear espacios únicos.",
   imgSeleccionar,
   indicadores: [
     {
@@ -36,12 +37,12 @@ const configNikea = {
       titulo: "Dolcker & Line Nik",
     },
   ],
-  acabados: [
-    {
-      imagen: MuestraImg,
-      titulo: "Nombre acabado",
-    },
-  ],
+  // acabados: [
+  //   {
+  //     imagen: MuestraImg,
+  //     titulo: "Nombre acabado",
+  //   },
+  // ],
 };
 
 export default configNikea;

@@ -18,7 +18,8 @@ const acabados = getDataFromModules(acabadosImports);
 
 const configUnik = {
   titulo: "Dolcker & LineDolcker & Line  Uni",
-  descripcion: "Texto Jorge.",
+  descripcion:
+    "Superficies con luz propia, texturas rugosas que invitan al tacto, relieves y ondulaciones que evocan paisajes naturales, un sinfín de sensaciones para enriquecer los espacios. Carácter inimitable donde cada pieza es única e irrepetible, con sus propias vetas, inclusiones y tonalidades. Un sello distintivo que aporta exclusividad y personalidad a cualquier proyecto.",
   imgSeleccionar,
   indicadores: [
     {
@@ -48,12 +49,12 @@ const configUnik = {
       titulo: "Dolcker & Line Ivory Natural",
     },
   ],
-  acabados: [
-    {
-      imagen: MuestraImg,
-      titulo: "Nombre acabado",
-    },
-  ],
+  // acabados: [
+  //   {
+  //     imagen: MuestraImg,
+  //     titulo: "Nombre acabado",
+  //   },
+  // ],
 };
 
 export default configUnik;

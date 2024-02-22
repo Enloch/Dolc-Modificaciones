@@ -17,7 +17,8 @@ const acabados = getDataFromModules(acabadosImports);
 
 const configByb = {
   titulo: "Dolcker & Line ByB",
-  descripcion: "Texto Jorge.",
+  descripcion:
+    "Diálogo con la arquitectura en una serie que se integra a la perfección en cualquier estilo, desde el clásico hasta el vanguardista, creando una armonía entre la construcción y el entorno. Material resistente al paso del tiempo, capaz de soportar el uso y desgaste diario sin perder su belleza. Una inversión que se revaloriza con el tiempo, sin olvidar sostenibilidad y respeto.",
   imgSeleccionar,
   indicadores: [
     {
@@ -47,12 +48,12 @@ const configByb = {
       titulo: "Dolcker & Line Blanco Natural",
     },
   ],
-  acabados: [
-    {
-      imagen: MuestraImg,
-      titulo: "Nombre acabado",
-    },
-  ],
+  // acabados: [
+  //   {
+  //     imagen: MuestraImg,
+  //     titulo: "Nombre acabado",
+  //   },
+  // ],
 };
 
 export default configByb;

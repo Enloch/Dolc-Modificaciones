@@ -18,7 +18,8 @@ const acabados = getDataFromModules(acabadosImports);
 
 const configHabitat = {
   titulo: "Dolcker & LineDolcker & Line  Habi",
-  descripcion: "Texto Jorge.",
+  descripcion:
+    "Armonía natural inspirada en la paleta de la naturaleza, la colección ofrece una gama de colores cálidos y texturas suaves. Los acabados invitan al tacto, creando ambientes acogedores y llenos de paz. La colección se adapta a estilos decorativos diversos, creando una atmósfera cálida y natural.",
   imgSeleccionar,
   indicadores: [
     {
@@ -49,12 +50,12 @@ const configHabitat = {
       titulo: "Dolcker & Line Taupe",
     },
   ],
-  acabados: [
-    {
-      imagen: MuestraImg,
-      titulo: "Nombre acabado",
-    },
-  ],
+  // acabados: [
+  //   {
+  //     imagen: MuestraImg,
+  //     titulo: "Nombre acabado",
+  //   },
+  // ],
 };
 
 export default configHabitat;

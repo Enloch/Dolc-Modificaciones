@@ -18,7 +18,8 @@ const acabados = getDataFromModules(acabadosImports);
 
 const configStoneland = {
   titulo: "Dolcker & Line Stone",
-  descripcion: "Texto Jorge.",
+  descripcion:
+    "El diseño sobrio y elegante de la colección la convierte en una apuesta segura para el futuro. Los colores neutros y las texturas naturales nunca pasarán de moda, adaptándose a las nuevas tendencias decorativas. La colección es ideal para quienes buscan un estilo clásico y atemporal que perdure en el tiempo.",
   imgSeleccionar,
   indicadores: [
     {
@@ -60,12 +61,12 @@ const configStoneland = {
       titulo: "Dolcker & Line Pearl",
     },
   ],
-  acabados: [
-    {
-      imagen: MuestraImg,
-      titulo: "Nombre acabado",
-    },
-  ],
+  // acabados: [
+  //   {
+  //     imagen: MuestraImg,
+  //     titulo: "Nombre acabado",
+  //   },
+  // ],
 };
 
 export default configStoneland;

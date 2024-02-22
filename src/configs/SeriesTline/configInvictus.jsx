@@ -18,7 +18,8 @@ const acabados = getDataFromModules(acabadosImports);
 
 const configInvictus = {
   titulo: "Dolcker & Line Inv",
-  descripcion: "Texto Jorge.",
+  descripcion:
+    "Una invitación a viajar sin necesidad de movernos de nuestro lugar. Es un oasis de paz en medio del bullicio del mundo, un lugar donde refugiarse y encontrar la calma. Esta serie captura un instante, un momento de quietud y armonía, un recordatorio de la belleza que existe en el mundo exterior. Es una invitación a la contemplación, a apreciar la naturaleza y a conectar con nuestro interior.",
   imgSeleccionar,
   indicadores: [
     {

@@ -18,7 +18,8 @@ const acabados = getDataFromModules(acabadosImports);
 
 const configHannover = {
   titulo: "Dolcker & Line Han",
-  descripcion: "Texto Jorge.",
+  descripcion:
+    "La serie nos invita a reflexionar sobre la importancia de los pequeños detalles, de la belleza que nos rodea y de la necesidad de encontrar momentos de paz en nuestro día a día. La fluidez y el dinamismo es un símbolo de apertura al mundo, de conexión con la naturaleza y de búsqueda de la belleza. Es un desafío a la rigidez de la arquitectura tradicional. Su diseño crea una sensación de movimiento y dinamismo, como si la estructura estuviera en constante transformación. ",
   imgSeleccionar,
   indicadores: [
     {

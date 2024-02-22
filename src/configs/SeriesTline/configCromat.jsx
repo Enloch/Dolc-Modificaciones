@@ -18,7 +18,8 @@ const acabados = getDataFromModules(acabadosImports);
 
 const configCromat = {
   titulo: "Dolcker & LineDolcker & Line  Crom",
-  descripcion: "Texto Jorge.",
+  descripcion:
+    "La colección está diseñada para crear ambientes que favorecen el bienestar y la armonía. Los colores y texturas transmiten tranquilidad y paz, ideales para escapar del estrés del día a día. Con esta serie se trata de crear un material natural que crea una atmósfera saludable y confortable, ideal para mejorar el bienestar y la calidad de vida.",
   imgSeleccionar,
   indicadores: [
     {
@@ -84,12 +85,12 @@ const configCromat = {
       titulo: "Dolcker & Line Perla",
     },
   ],
-  acabados: [
-    {
-      imagen: MuestraImg,
-      titulo: "Nombre acabado",
-    },
-  ],
+  // acabados: [
+  //   {
+  //     imagen: MuestraImg,
+  //     titulo: "Nombre acabado",
+  //   },
+  // ],
 };
 
 export default configCromat;

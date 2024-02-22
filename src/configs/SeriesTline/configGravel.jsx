@@ -18,7 +18,8 @@ const acabados = getDataFromModules(acabadosImports);
 
 const configGravel = {
   titulo: "Dolcker & LineDolcker & Line  Grav",
-  descripcion: "Texto Jorge.",
+  descripcion:
+    "Sutileza cromática y contrastes ligeros definen esta colección, donde la sofisticación se expresa en tonos pálidos y profundos. Los colores, lejos de estridencias, se integran a la arquitectura, creando espacios de serena elegancia. La paleta cromática se inspira en la naturaleza y las superficies, de textura suave y aterciopelada, reflejan la luz de forma natural, creando una atmósfera etérea y relajante.",
   imgSeleccionar,
   indicadores: [
     {
@@ -96,12 +97,12 @@ const configGravel = {
       titulo: "Dolcker & Line White",
     },
   ],
-  acabados: [
-    {
-      imagen: MuestraImg,
-      titulo: "Nombre acabado",
-    },
-  ],
+  // acabados: [
+  //   {
+  //     imagen: MuestraImg,
+  //     titulo: "Nombre acabado",
+  //   },
+  // ],
 };
 
 export default configGravel;

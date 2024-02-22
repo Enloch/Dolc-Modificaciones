@@ -18,7 +18,8 @@ const acabados = getDataFromModules(acabadosImports);
 
 const configKursaal = {
   titulo: "Dolcker & Line Kur",
-  descripcion: "Texto Jorge.",
+  descripcion:
+    "Como un elemento que conecta el interior con el exterior, creando un diálogo armonioso entre la arquitectura y el entorno natural se presenta esta serie. Un espacio donde la naturaleza se convierte en protagonista, un libro abierto que narra la historia de la tierra, sus capas geológicas y los procesos de transformación que la han moldeado. Un viaje fascinante a través del tiempo.",
   imgSeleccionar,
   indicadores: [
     {
@@ -96,12 +97,12 @@ const configKursaal = {
       titulo: "Dolcker & Line Slate",
     },
   ],
-  acabados: [
-    {
-      imagen: MuestraImg,
-      titulo: "Nombre acabado",
-    },
-  ],
+  // acabados: [
+  //   {
+  //     imagen: MuestraImg,
+  //     titulo: "Nombre acabado",
+  //   },
+  // ],
 };
 
 export default configKursaal;

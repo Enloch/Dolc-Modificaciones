@@ -18,7 +18,8 @@ const acabados = getDataFromModules(acabadosImports);
 
 const configCapri = {
   titulo: "Dolcker & LineDolcker & Line  Cap",
-  descripcion: "Texto Jorge.",
+  descripcion:
+    "La colección no solo es visualmente atractiva, sino que también ofrece una experiencia sensorial única al tacto. Su textura natural invita a la caricia, creando una conexión profunda con la naturaleza. Crea tus espacios con alma, impregnándolos de una energía especial que conecta con la esencia de la tierra. Un refugio para el cuerpo y el espíritu.",
   imgSeleccionar,
   indicadores: [
     {
@@ -60,12 +61,12 @@ const configCapri = {
       titulo: "Dolcker & Line Grey",
     },
   ],
-  acabados: [
-    {
-      imagen: MuestraImg,
-      titulo: "Nombre acabado",
-    },
-  ],
+  // acabados: [
+  //   {
+  //     imagen: MuestraImg,
+  //     titulo: "Nombre acabado",
+  //   },
+  // ],
 };
 
 export default configCapri;

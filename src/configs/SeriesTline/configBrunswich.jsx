@@ -18,7 +18,8 @@ const acabados = getDataFromModules(acabadosImports);
 
 const configBrunswich = {
   titulo: "Dolcker & LineDolcker & Line  Brun",
-  descripcion: "Texto Jorge.",
+  descripcion:
+    "Versatilidad sin límites adaptable a cualquier espacio, un material versátil que permite dar rienda suelta a la creatividad. Calidez natural, historia y tradición. Un legado histórico que se reinventa en cada proyecto contemporáneo dando como resultado lujo atemporal y elegancia natural que aportan sofisticación. Un material que aporta distinción y valor a cualquier espacio.",
   imgSeleccionar,
   indicadores: [
     {
@@ -48,12 +49,12 @@ const configBrunswich = {
       titulo: "Dolcker & Line Ceniza",
     },
   ],
-  acabados: [
-    {
-      imagen: MuestraImg,
-      titulo: "Nombre acabado",
-    },
-  ],
+  // acabados: [
+  //   {
+  //     imagen: MuestraImg,
+  //     titulo: "Nombre acabado",
+  //   },
+  // ],
 };
 
 export default configBrunswich;

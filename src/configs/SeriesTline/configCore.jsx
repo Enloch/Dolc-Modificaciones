@@ -18,7 +18,8 @@ const acabados = getDataFromModules(acabadosImports);
 
 const conficCore = {
   titulo: "Dolcker & LineDolcker & Line  Cor",
-  descripcion: "Texto Jorge.",
+  descripcion:
+    "La colección ofrece un lienzo en blanco sobre el que plasmar tu creatividad fusionando colores, texturas y formatos para crear espacios que reflejen tu personalidad y estilo. La colección combina la innovación tecnológica con la tradición artesanal, dando como resultado un producto único y de alta calidad. Un producto innovador que te permite estar a la vanguardia movido solamente por la pasión por el diseño y la búsqueda de la excelencia, que se traduce en entornos únicos y llenos de personalidad.",
   imgSeleccionar,
   indicadores: [
     {
@@ -96,12 +97,12 @@ const conficCore = {
       titulo: "Dolcker & Line Tortora",
     },
   ],
-  acabados: [
-    {
-      imagen: MuestraImg,
-      titulo: "Nombre acabado",
-    },
-  ],
+  // acabados: [
+  //   {
+  //     imagen: MuestraImg,
+  //     titulo: "Nombre acabado",
+  //   },
+  // ],
 };
 
 export default conficCore;

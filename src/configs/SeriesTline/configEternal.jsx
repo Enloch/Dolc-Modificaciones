@@ -18,7 +18,8 @@ const acabados = getDataFromModules(acabadosImports);
 
 const configEternal = {
   titulo: "Dolcker & LineDolcker & Line  Eter",
-  descripcion: "Texto Jorge.",
+  descripcion:
+    "Carácter único en cada pieza de la colección que poseen una personalidad propia, gracias a las variaciones naturales del material. Las vetas y texturas crean un mosaico único e irrepetible, ideal para quienes buscan distinción. La colección se adapta a espacios donde se busca un toque de originalidad y exclusividad.",
   imgSeleccionar,
   indicadores: [
     {
@@ -72,12 +73,12 @@ const configEternal = {
       titulo: "Dolcker & Line Taupe Natural",
     },
   ],
-  acabados: [
-    {
-      imagen: MuestraImg,
-      titulo: "Nombre acabado",
-    },
-  ],
+  // acabados: [
+  //   {
+  //     imagen: MuestraImg,
+  //     titulo: "Nombre acabado",
+  //   },
+  // ],
 };
 
 export default configEternal;

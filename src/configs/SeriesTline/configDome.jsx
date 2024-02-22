@@ -18,7 +18,8 @@ const acabados = getDataFromModules(acabadosImports);
 
 const configDome = {
   titulo: "Dolcker & LineDolcker & Line  Dom",
-  descripcion: "Texto Jorge.",
+  descripcion:
+    "La textura suave y la calidez de los materiales invitan al tacto, creando una experiencia sensorial única. Cada espacio se convierte en un refugio donde relajarse y disfrutar del confort. La cerámica ofrece una experiencia sensorial agradable, tanto visual como táctil, que crea una atmósfera acogedora y relajante.",
   imgSeleccionar,
   indicadores: [
     {
@@ -72,12 +73,12 @@ const configDome = {
       titulo: "Dolcker & Line Nut",
     },
   ],
-  acabados: [
-    {
-      imagen: MuestraImg,
-      titulo: "Nombre acabado",
-    },
-  ],
+  // acabados: [
+  //   {
+  //     imagen: MuestraImg,
+  //     titulo: "Nombre acabado",
+  //   },
+  // ],
 };
 
 export default configDome;
