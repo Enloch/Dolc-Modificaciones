@@ -44,6 +44,7 @@ import Exit from "../../../assets/icons/exit.svg";
 import { LamasHorizontalesInterior } from "./LamasHorizontalesInterior";
 import { LamasVerticalesInterior } from "./LamasVerticalesInterior";
 import { Interior } from "./ModeloInterior";
+import { Perf } from "r3f-perf";
 import {
   EscenaRotador as LeivaEscenaRotador,
   EscenaFachada as LeivaEscenaFachada,
@@ -151,57 +152,61 @@ export default function RotadorMatrix() {
             </IntroContent>
           </IntroContainer>
         )}
-        <Canvas
-          shadows={"soft"}
-          flat
-          style={{
-            position: "relative",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-          }}
-          gl={(gl) => {
-            gl.toneMapping = THREE.ACESFilmicToneMapping;
-            gl.toneMappingExposure = 0.8;
-            gl.outputEncoding = THREE.sRGBEncoding;
-          }}
-        >
-          <CameraAdjuster />
-          <Suspense fallback={null}>
-            {fachadaVisible === false && (
-              <>
-                {/* {leivaSelected === true && <LeivaEscenaRotador />} */}
-                <EscenaRotador
-                  materialIndex={materialIndex}
-                  numModels={numModels}
-                  modelPositions={modelPositions}
-                  rotation={rotation}
-                  targetValue={targetValue}
-                />
-                <OrbitControls
-                  target={targetValue}
-                  minDistance={0.3}
-                  maxDistance={0.85 + cameraPosition}
-                  enableZoom={true}
-                  enablePan={false}
-                />
-                <EffectComposer>
-                  <HueSaturation hue={-0.12} saturation={0.4} />
-                </EffectComposer>
-              </>
-            )}
-            {fachadaVisible && (
-              <>
-                {/* {leivaSelected && esInterior && (
+        <Suspense fallback={null}>
+          <Canvas
+            frameloop='demand'
+            shadows={"soft"}
+            flat
+            style={{
+              position: "relative",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+            }}
+            gl={(gl) => {
+              gl.toneMapping = THREE.ACESFilmicToneMapping;
+              gl.toneMappingExposure = 0.8;
+              gl.outputEncoding = THREE.sRGBEncoding;
+            }}
+          >
+            {/* <Perf /> */}
+            <CameraAdjuster />
+            <Suspense fallback={null}>
+              {fachadaVisible === false && (
+                <>
+                  {/* {leivaSelected === true && <LeivaEscenaRotador />} */}
+                  <EscenaRotador
+                    materialIndex={materialIndex}
+                    numModels={numModels}
+                    modelPositions={modelPositions}
+                    rotation={rotation}
+                    targetValue={targetValue}
+                  />
+                  <OrbitControls
+                    target={targetValue}
+                    minDistance={0.3}
+                    maxDistance={0.85 + cameraPosition}
+                    enableZoom={true}
+                    enablePan={false}
+                  />
+                  <EffectComposer>
+                    <HueSaturation hue={-0.12} saturation={0.4} />
+                  </EffectComposer>
+                </>
+              )}
+              {fachadaVisible && (
+                <>
+                  {/* {leivaSelected && esInterior && (
                   <LeivaEscenaInterior rotada={rotada} />
                 )} */}
-                {esInterior && <EscenaInterior rotada={rotada} />}
-                {!esInterior && <EscenaFachada rotada={rotada} />}
-              </>
-            )}
-          </Suspense>
-        </Canvas>
+                  {esInterior && <EscenaInterior rotada={rotada} />}
+                  {!esInterior && <EscenaFachada rotada={rotada} />}
+                </>
+              )}
+            </Suspense>
+          </Canvas>
+        </Suspense>
         <Loader />
         {fachadaVisible === false && (
           <div
@@ -371,26 +376,26 @@ const Luces = () => {
   return (
     <>
       <pointLight
-        castShadow
+        // castShadow
         shadow-bias={-0.0001}
         shadow-mapSize={[2048, 2048]}
         position={[3, 0, 3]}
         intensity={9}
       />
       <pointLight
-        castShadow
+        // castShadow
         shadow-bias={-0.0001}
         position={[-3, 0, 3]}
         intensity={9}
       />
       <pointLight
-        castShadow
+        // castShadow
         shadow-bias={-0.0001}
         position={[0, 0, 3]}
         intensity={9}
       />
       <pointLight
-        castShadow
+        // castShadow
         shadow-bias={-0.0001}
         position={[0, 0, -3]}
         intensity={9}
@@ -423,7 +428,7 @@ const EscenaFachada = ({ rotada }) => {
         intensity={2.5}
         // intensity={3}
         shadow-bias={-0.0001}
-        shadow-mapSize={8192}
+        shadow-mapSize={1024}
       >
         <orthographicCamera
           attach='shadow-camera'
@@ -471,8 +476,8 @@ const EscenaInterior = ({ rotada }) => {
         position={[-4.7, 1, 6]}
         castShadow
         intensity={3.7}
-        shadow-bias={-0.00001}
-        shadow-mapSize={8192}
+        shadow-bias={-0.0004}
+        shadow-mapSize={1024}
       >
         <orthographicCamera
           attach='shadow-camera'
