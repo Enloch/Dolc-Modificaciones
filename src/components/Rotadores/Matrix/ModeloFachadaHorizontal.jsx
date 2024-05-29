@@ -4,7 +4,9 @@ import { MaterialesMetalizados } from "./Materiales";
 import useStore from "./store"; // Importa la tienda Zustand
 import * as THREE from "three";
 export function FachadaHorizontal(props) {
-  const { nodes, materials } = useGLTF("/modelos/MatrixFachadaH.glb");
+  const { nodes, materials } = useGLTF(
+    "/modelos/MatrixFachadaH.glb"
+  );
   const Metalizado = MaterialesMetalizados.map((metal) => metal.metalness);
   const Aspereza = MaterialesMetalizados.map((aspereza) => aspereza.roughness);
   const {

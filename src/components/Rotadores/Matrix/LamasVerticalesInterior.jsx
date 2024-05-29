@@ -4,7 +4,9 @@ import { MaterialesMetalizados } from "./Materiales";
 import useStore from "./store"; // Importa la tienda Zustand
 import * as THREE from "three";
 export function LamasVerticalesInterior(props) {
-  const { nodes, materials } = useGLTF("/modelos/LamasVerticalesInterior.glb");
+  const { nodes, materials } = useGLTF(
+    "/modelos/LamasVerticalesInterior-transformed.glb"
+  );
   const ref = useRef();
   const Metalizado = MaterialesMetalizados.map((metal) => metal.metalness);
   const Aspereza = MaterialesMetalizados.map((aspereza) => aspereza.roughness);

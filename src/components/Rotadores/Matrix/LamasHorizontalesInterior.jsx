@@ -5,7 +5,7 @@ import useStore from "./store"; // Importa la tienda Zustand
 import * as THREE from "three";
 export function LamasHorizontalesInterior(props) {
   const { nodes, materials } = useGLTF(
-    "/modelos/LamasHorizontalesInterior.glb"
+    "/modelos/LamasHorizontalesInterior-transformed.glb"
   );
   const ref = useRef();
   const Metalizado = MaterialesMetalizados.map((metal) => metal.metalness);

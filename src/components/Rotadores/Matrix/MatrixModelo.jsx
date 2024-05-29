@@ -93,7 +93,9 @@ export function Modelo({ modelId, ...props }) {
   const Acabados = Materiales.map((material) => useTexture(material.map));
   const Metalizado = MaterialesMetalizados.map((metal) => metal.metalness);
   const Aspereza = MaterialesMetalizados.map((aspereza) => aspereza.roughness);
-  const { nodes, materials } = useGLTF("/modelos/MatrixRotador.glb");
+  const { nodes, materials } = useGLTF(
+    "/modelos/MatrixRotador.glb"
+  );
 
   // Initialize state with the default geometries
   useEffect(() => {
@@ -153,21 +155,21 @@ export function Modelo({ modelId, ...props }) {
     materialIndex6,
   ]);
   useEffect(() => {
-  const handleClick = (event) => {
-    if (event.target === ref1.current) {
-      setSelectedModel1((prevSelected) => !prevSelected);
-    } else if (event.target === ref2.current) {
-      setSelectedModel2((prevSelected) => !prevSelected);
-    } else if (event.target === ref3.current) {
-      setSelectedModel3((prevSelected) => !prevSelected);
-    } else if (event.target === ref4.current) {
-      setSelectedModel4((prevSelected) => !prevSelected);
-    } else if (event.target === ref5.current) {
-      setSelectedModel5((prevSelected) => !prevSelected);
-    } else if (event.target === ref6.current) {
-      setSelectedModel6((prevSelected) => !prevSelected);
-    }
-  };
+    const handleClick = (event) => {
+      if (event.target === ref1.current) {
+        setSelectedModel1((prevSelected) => !prevSelected);
+      } else if (event.target === ref2.current) {
+        setSelectedModel2((prevSelected) => !prevSelected);
+      } else if (event.target === ref3.current) {
+        setSelectedModel3((prevSelected) => !prevSelected);
+      } else if (event.target === ref4.current) {
+        setSelectedModel4((prevSelected) => !prevSelected);
+      } else if (event.target === ref5.current) {
+        setSelectedModel5((prevSelected) => !prevSelected);
+      } else if (event.target === ref6.current) {
+        setSelectedModel6((prevSelected) => !prevSelected);
+      }
+    };
 
     gl.domElement.addEventListener("pointerdown", handleClick);
 
