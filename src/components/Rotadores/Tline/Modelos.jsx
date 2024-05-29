@@ -47,7 +47,7 @@ export function Model1({
     </group>
   );
 }
-useGLTF.preload("/modelos/Cenefa01.gltf");
+
 export function Model2({
   material,
   metalness,
@@ -94,7 +94,7 @@ export function Model2({
   );
 }
 
-useGLTF.preload("/modelos/Cenefa02.gltf");
+
 
 export function Model3({
   material,
@@ -143,7 +143,7 @@ export function Model3({
   );
 }
 
-useGLTF.preload("/modelos/Cenefa03.gltf");
+
 
 export function Model4({
   material,
@@ -191,5 +191,3 @@ export function Model4({
     </group>
   );
 }
-
-useGLTF.preload("/modelos/Cenefa04.gltf");

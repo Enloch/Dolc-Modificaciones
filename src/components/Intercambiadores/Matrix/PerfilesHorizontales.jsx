@@ -108,8 +108,3 @@ export function PerfilesHorizontales({
     </group>
   );
 }
-
-useGLTF.preload("/modelos/Matrix/Horizontal/Matriz3_A_Hor.gltf");
-useGLTF.preload("/modelos/Matrix/Horizontal/Matriz3_J_Hor.gltf");
-useGLTF.preload("/modelos/Matrix/Horizontal/Matriz4_A_Hor.gltf");
-useGLTF.preload("/modelos/Matrix/Horizontal/Matriz4_B_Hor.gltf");

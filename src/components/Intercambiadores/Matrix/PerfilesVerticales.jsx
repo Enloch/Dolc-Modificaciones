@@ -107,8 +107,3 @@ export function PerfilesVerticales({
     </group>
   );
 }
-
-useGLTF.preload("/modelos/Matrix/Matriz1_A_Vert.gltf");
-useGLTF.preload("/modelos/Matrix/Matriz1_B_Vert.gltf");
-useGLTF.preload("/modelos/Matrix/Matriz3_A_Vert.gltf");
-useGLTF.preload("/modelos/Matrix/Matriz3_J_Vert.gltf");

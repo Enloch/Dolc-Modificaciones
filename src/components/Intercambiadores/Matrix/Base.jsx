@@ -45,4 +45,3 @@ export function Base(props) {
   );
 }
 
-useGLTF.preload("/modelos/Base.gltf");
