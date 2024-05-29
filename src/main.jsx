@@ -27,7 +27,6 @@ import ContactoFr from "./pages/fr/Contacto";
 import PoliticaPrivacidadFr from "./pages/fr/PoliticaPrivacidad";
 import AvisoLegalFr from "./pages/fr/AvisoLegal";
 import QuienesSomosFr from "./pages/fr/QuienesSomos";
-import Intercambiador from "./components/Intercambiadores/Matrix";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
     <ResetStyles />
@@ -67,7 +66,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           path='/fr/politica-privacidad'
           element={<PoliticaPrivacidadFr />}
         />
-        <Route path='/intercambiador' element={<Intercambiador />} />
       </Routes>
     </BrowserRouter>
   </>

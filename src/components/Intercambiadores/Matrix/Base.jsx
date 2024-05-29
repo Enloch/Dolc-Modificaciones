@@ -6,7 +6,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Base(props) {
-  const { nodes, materials } = useGLTF("/modelos/Base.gltf");
+  const { nodes, materials } = useGLTF("/modelos/Base-transformed.glb");
   return (
     <group {...props} dispose={null}>
       <group position={[0.558, 4.322, -1.586]}>
@@ -14,34 +14,33 @@ export function Base(props) {
           castShadow
           receiveShadow
           geometry={nodes.Mesh.geometry}
-          material={materials["Concrete Weathered12"]}
+          material={materials.PaletteMaterial001}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Mesh_1.geometry}
-          material={materials["Concrete Weathered1"]}
+          material={materials.PaletteMaterial002}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Mesh_2.geometry}
-          material={materials["Concrete Floor Satin"]}
+          material={materials.PaletteMaterial003}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Mesh_3.geometry}
-          material={materials["marc finestra1"]}
+          material={materials.PaletteMaterial004}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Mesh_4.geometry}
-          material={materials["Glass Smoked"]}
+          material={materials.PaletteMaterial005}
         />
       </group>
     </group>
   );
 }
-
