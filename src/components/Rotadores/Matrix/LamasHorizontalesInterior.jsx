@@ -1,12 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useGLTF } from "@react-three/drei";
-import { MaterialesMetalizados } from "./Materiales";
-import useStore from "./store"; // Importa la tienda Zustand
-import * as THREE from "three";
+import React, { useEffect, useRef, useState } from 'react';
+import { useGLTF } from '@react-three/drei';
+import { MaterialesMetalizados } from './Materiales';
+import useStore from './store'; // Importa la tienda Zustand
+import * as THREE from 'three';
 export function LamasHorizontalesInterior(props) {
-  const { nodes, materials } = useGLTF(
-    "/modelos/LamasHorizontalesInterior-transformed.glb"
-  );
+  const { nodes, materials } = useGLTF('/modelos/LamasHorizontalesInterior.glb');
   const ref = useRef();
   const Metalizado = MaterialesMetalizados.map((metal) => metal.metalness);
   const Aspereza = MaterialesMetalizados.map((aspereza) => aspereza.roughness);
@@ -195,9 +193,8 @@ export function LamasHorizontalesInterior(props) {
           geometry={malla.geometria}
           onCreated={({ mesh }) => {
             mesh.layers.enable(1); // Asigna la malla a la capa 1
-          }}
-        >
-          {malla.colorActivo === "colorPicker" ? (
+          }}>
+          {malla.colorActivo === 'colorPicker' ? (
             <meshStandardMaterial
               color={malla.color}
               metalness='0.5'
@@ -209,7 +206,7 @@ export function LamasHorizontalesInterior(props) {
               map={malla.material}
               roughness={malla.aspereza}
               metalness={malla.metalizado}
-              color={"#FFFFFF"}
+              color={'#FFFFFF'}
             />
           )}
         </mesh>
