@@ -175,7 +175,6 @@ export default function RotadorMatrix() {
             <Suspense fallback={null}>
               {fachadaVisible === false && (
                 <>
-                  {/* {leivaSelected === true && <LeivaEscenaRotador />} */}
                   <EscenaRotador
                     materialIndex={materialIndex}
                     numModels={numModels}
@@ -197,9 +196,6 @@ export default function RotadorMatrix() {
               )}
               {fachadaVisible && (
                 <>
-                  {/* {leivaSelected && esInterior && (
-                  <LeivaEscenaInterior rotada={rotada} />
-                )} */}
                   {esInterior && <EscenaInterior rotada={rotada} />}
                   {!esInterior && <EscenaFachada rotada={rotada} />}
                 </>

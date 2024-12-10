@@ -1,7 +1,7 @@
-import React, { useState, Suspense, useEffect } from "react";
-import { useTexture } from "@react-three/drei";
-import { Materiales, NombreMateriales } from "./Materiales";
-import { SketchPicker } from "react-color";
+import React, { useState, Suspense, useEffect } from 'react';
+import { useTexture } from '@react-three/drei';
+import { Materiales, NombreMateriales } from './Materiales';
+import { SketchPicker } from 'react-color';
 import {
   MenuContainer,
   MenuContainer2,
@@ -13,9 +13,9 @@ import {
   ModelTitulo,
   Titulo,
   CategoryButton,
-} from "./styles";
-import { Mallas } from "./Mallas";
-import useStore from "./store";
+} from './styles';
+import { Mallas } from './Mallas';
+import useStore from './store';
 const Menu = ({ handleModelChange }) => {
   const {
     color,
@@ -37,6 +37,12 @@ const Menu = ({ handleModelChange }) => {
     materialIndex,
     isMenuOpen,
     setIsMenuOpen,
+    selectedMatrix1,
+    selectedMatrix2,
+    selectedMatrix3,
+    selectedMatrix4,
+    selectedMatrix5,
+    selectedMatrix6,
     selectedModel1,
     selectedModel2,
     selectedModel3,
@@ -128,38 +134,77 @@ const Menu = ({ handleModelChange }) => {
   }, [leivaSelected]); // Este efecto se ejecutará cada vez que leivaSelected cambie
 
   const handleToggleMaterialButtons = (matrix) => {
+    console.log('matrix', matrix);
+
     if (leivaSelected === true) {
-      setSelectedMatrix1(matrix);
-      setSelectedMatrix2(matrix);
-      setSelectedMatrix3(matrix);
-      setSelectedMatrix4(matrix);
-      setSelectedMatrix5(matrix);
-      setSelectedMatrix6(matrix);
-      if (selectedModel1) {
+      if (matrix.name === 'Leiva_8' || matrix.name === 'Leiva_9') {
+        // Para Leiva_8 y Leiva_9, actualizamos solo las matrices seleccionadas
+        // manteniendo la capacidad de selección múltiple
+        if (selectedModel1) {
+          setSelectedMatrix1(matrix);
+        }
+        if (selectedModel2) {
+          setSelectedMatrix2(matrix);
+        }
+        if (selectedModel3) {
+          setSelectedMatrix3(matrix);
+        }
+        if (selectedModel4) {
+          setSelectedMatrix4(matrix);
+        }
+        if (selectedModel5) {
+          setSelectedMatrix5(matrix);
+        }
+        if (selectedModel6) {
+          setSelectedMatrix6(matrix);
+        }
+
+        // Verificamos que todas las matrices existentes sean Leiva_8 o Leiva_9
+        if (selectedMatrix1 && !['Leiva_8', 'Leiva_9'].includes(selectedMatrix1.name)) {
+          setSelectedMatrix1(matrix);
+        }
+        if (selectedMatrix2 && !['Leiva_8', 'Leiva_9'].includes(selectedMatrix2.name)) {
+          setSelectedMatrix2(matrix);
+        }
+        if (selectedMatrix3 && !['Leiva_8', 'Leiva_9'].includes(selectedMatrix3.name)) {
+          setSelectedMatrix3(matrix);
+        }
+        if (selectedMatrix4 && !['Leiva_8', 'Leiva_9'].includes(selectedMatrix4.name)) {
+          setSelectedMatrix4(matrix);
+        }
+        if (selectedMatrix5 && !['Leiva_8', 'Leiva_9'].includes(selectedMatrix5.name)) {
+          setSelectedMatrix5(matrix);
+        }
+        if (selectedMatrix6 && !['Leiva_8', 'Leiva_9'].includes(selectedMatrix6.name)) {
+          setSelectedMatrix6(matrix);
+        }
+
+        // Reseteamos los estados de selección después de aplicar los cambios
+        if (selectedModel1) setSelectedModel1(false);
+        if (selectedModel2) setSelectedModel2(false);
+        if (selectedModel3) setSelectedModel3(false);
+        if (selectedModel4) setSelectedModel4(false);
+        if (selectedModel5) setSelectedModel5(false);
+        if (selectedModel6) setSelectedModel6(false);
+      } else {
+        // Para otros modelos Leiva, aplicamos a todas las matrices
         setSelectedMatrix1(matrix);
-        setSelectedModel1(false);
-      }
-      if (selectedModel2) {
-        setSelectedMatrix1(matrix);
-        setSelectedModel2(false);
-      }
-      if (selectedModel3) {
-        setSelectedMatrix1(matrix);
-        setSelectedModel3(false);
-      }
-      if (selectedModel4) {
-        setSelectedMatrix1(matrix);
-        setSelectedModel4(false);
-      }
-      if (selectedModel5) {
-        setSelectedMatrix1(matrix);
-        setSelectedModel5(false);
-      }
-      if (selectedModel6) {
-        setSelectedMatrix1(matrix);
-        setSelectedModel6(false);
+        setSelectedMatrix2(matrix);
+        setSelectedMatrix3(matrix);
+        setSelectedMatrix4(matrix);
+        setSelectedMatrix5(matrix);
+        setSelectedMatrix6(matrix);
+
+        // Reseteamos todos los estados de selección
+        if (selectedModel1) setSelectedModel1(false);
+        if (selectedModel2) setSelectedModel2(false);
+        if (selectedModel3) setSelectedModel3(false);
+        if (selectedModel4) setSelectedModel4(false);
+        if (selectedModel5) setSelectedModel5(false);
+        if (selectedModel6) setSelectedModel6(false);
       }
     } else {
+      // Para no-Leiva, actualizamos solo las matrices seleccionadas
       if (selectedModel1) {
         setSelectedMatrix1(matrix);
         setSelectedModel1(false);
@@ -186,7 +231,6 @@ const Menu = ({ handleModelChange }) => {
       }
     }
   };
-
   const handleMaterialChange = (index) => {
     if (selectedModel1) {
       setMaterialIndex1(index);
@@ -216,71 +260,71 @@ const Menu = ({ handleModelChange }) => {
   const handleColorChange = (newColor) => {
     if (selectedModel1) {
       setColor1(newColor.hex);
-      setMaterialSource1("colorPicker");
+      setMaterialSource1('colorPicker');
       // handleMaterialChange(0); // Restablecer el material cuando se selecciona un color
     }
     if (selectedModel2) {
       setColor2(newColor.hex);
-      setMaterialSource2("colorPicker");
+      setMaterialSource2('colorPicker');
       // handleMaterialChange(0); // Restablecer el material cuando se selecciona un color
     }
     if (selectedModel3) {
       setColor3(newColor.hex);
-      setMaterialSource3("colorPicker");
+      setMaterialSource3('colorPicker');
       // handleMaterialChange(0); // Restablecer el material cuando se selecciona un color
     }
     if (selectedModel4) {
       setColor4(newColor.hex);
-      setMaterialSource4("colorPicker");
+      setMaterialSource4('colorPicker');
       // handleMaterialChange(0); // Restablecer el material cuando se selecciona un color
     }
     if (selectedModel5) {
       setColor5(newColor.hex);
-      setMaterialSource5("colorPicker");
+      setMaterialSource5('colorPicker');
       // handleMaterialChange(0); // Restablecer el material cuando se selecciona un color
     }
     if (selectedModel6) {
       setColor6(newColor.hex);
-      setMaterialSource6("colorPicker");
+      setMaterialSource6('colorPicker');
       // handleMaterialChange(0); // Restablecer el material cuando se selecciona un color
     }
   };
   const handleMaterialsChange = (index) => {
     if (selectedModel1) {
-      setMaterialSource1("materials");
+      setMaterialSource1('materials');
       handleMaterialChange(index);
     }
     if (selectedModel2) {
-      setMaterialSource2("materials");
+      setMaterialSource2('materials');
       handleMaterialChange(index);
     }
     if (selectedModel3) {
-      setMaterialSource3("materials");
+      setMaterialSource3('materials');
       handleMaterialChange(index);
     }
     if (selectedModel4) {
-      setMaterialSource4("materials");
+      setMaterialSource4('materials');
       handleMaterialChange(index);
     }
     if (selectedModel5) {
-      setMaterialSource5("materials");
+      setMaterialSource5('materials');
       handleMaterialChange(index);
     }
     if (selectedModel6) {
-      setMaterialSource6("materials");
+      setMaterialSource6('materials');
       handleMaterialChange(index);
     }
   };
 
   const categoryButtons = [
-    { id: "1", label: "Planex" },
-    { id: "2", label: "Tubex" },
-    { id: "3", label: "Vivex" },
-    { id: "4", label: "Vertex" },
-    { id: "5", label: "Windx" },
-    { id: "6", label: "Displax" },
-    { id: "7", label: "Tecnux" },
-    { id: "8", label: "Leiva" },
+    { id: '1', label: 'Planex' },
+    { id: '2', label: 'Tubex' },
+    { id: '3', label: 'Vivex' },
+    { id: '4', label: 'Vertex' },
+    { id: '5', label: 'Windx' },
+    { id: '6', label: 'Displax' },
+    { id: '7', label: 'Tecnux' },
+    { id: '8', label: 'Leiva' },
   ];
 
   return (
@@ -291,23 +335,21 @@ const Menu = ({ handleModelChange }) => {
             <Titulo
               onClick={handleModels}
               style={{
-                fontWeight: "bold",
-                borderTop: "1px solid #343434",
-                padding: "10px 0px",
-                margin: "0px 5px",
-              }}
-            >
+                fontWeight: 'bold',
+                borderTop: '1px solid #343434',
+                padding: '10px 0px',
+                margin: '0px 5px',
+              }}>
               Selecciona matriz
             </Titulo>
             <Titulo
               onClick={handleMaterials}
               style={{
-                fontWeight: "bold",
-                borderTop: "1px solid #343434",
-                padding: "10px 0px",
-                margin: "0px 5px",
-              }}
-            >
+                fontWeight: 'bold',
+                borderTop: '1px solid #343434',
+                padding: '10px 0px',
+                margin: '0px 5px',
+              }}>
               Selecciona acabado
             </Titulo>
           </MenuContainer>
@@ -317,12 +359,11 @@ const Menu = ({ handleModelChange }) => {
             <Titulo
               onClick={handleInicio}
               style={{
-                fontWeight: "bold",
-                borderTop: "1px solid #343434",
-                borderBottom: "1px solid #343434",
-                padding: "10px 0px",
-              }}
-            >
+                fontWeight: 'bold',
+                borderTop: '1px solid #343434',
+                borderBottom: '1px solid #343434',
+                padding: '10px 0px',
+              }}>
               Volver atrás
             </Titulo>
             {categoryButtons.map((category) => (
@@ -336,32 +377,29 @@ const Menu = ({ handleModelChange }) => {
                     } else {
                       setSelectedCategory(category.id);
                       handleModels();
-                      setLeivaSelected(category.id === "8"); // Establece en true si la categoría es Leiva
+                      setLeivaSelected(category.id === '8'); // Establece en true si la categoría es Leiva
                     }
-                  }}
-                >
+                  }}>
                   {category.label}
                 </CategoryButton>
                 <div
                   style={{
-                    maxHeight: "45vh",
-                    overflowY: "auto",
-                    overflowX: "hidden",
-                  }}
-                >
+                    maxHeight: '45vh',
+                    overflowY: 'auto',
+                    overflowX: 'hidden',
+                  }}>
                   {selectedCategory === category.id &&
                     Mallas[selectedCategory].matrices.map((matrix, i) => (
                       <div
                         key={i}
                         style={{
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "center",
-                          alignItems: "center",
-                          cursor: "pointer",
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          cursor: 'pointer',
                         }}
-                        onClick={() => handleToggleMaterialButtons(matrix)}
-                      >
+                        onClick={() => handleToggleMaterialButtons(matrix)}>
                         <ModelTitulo>{matrix.name}</ModelTitulo>
                         <ModelImage src={matrix.image} alt={matrix.name} />
                       </div>
@@ -377,12 +415,11 @@ const Menu = ({ handleModelChange }) => {
             <Titulo
               onClick={handleInicio}
               style={{
-                fontWeight: "bold",
-                borderTop: "1px solid #343434",
-                borderBottom: "1px solid #343434",
-                padding: "10px 0px",
-              }}
-            >
+                fontWeight: 'bold',
+                borderTop: '1px solid #343434',
+                borderBottom: '1px solid #343434',
+                padding: '10px 0px',
+              }}>
               Volver atrás
             </Titulo>
             <div className='metales'>
@@ -392,16 +429,12 @@ const Menu = ({ handleModelChange }) => {
                   setShowMaderas(false),
                   setShowColorPicker(false),
                   setColorPickerActive(false)
-                )}
-              >
+                )}>
                 Metales
               </Titulo>
               <MenuContainer2 visible={showMaterialButtons && showMetales}>
                 {NombreMateriales.slice(0, 18).map((material, index) => (
-                  <MaterialButton
-                    key={index}
-                    onClick={() => handleMaterialsChange(index)}
-                  >
+                  <MaterialButton key={index} onClick={() => handleMaterialsChange(index)}>
                     <MaterialImage
                       src={material.textura}
                       alt={`Material ${material.nombre}`}
@@ -418,16 +451,14 @@ const Menu = ({ handleModelChange }) => {
                   setShowMetales(false),
                   setShowColorPicker(false),
                   setColorPickerActive(false)
-                )}
-              >
+                )}>
                 Maderas
               </Titulo>
               <MenuContainer2 visible={showMaterialButtons && showMaderas}>
                 {NombreMateriales.slice(18, 22).map((material, index) => (
                   <MaterialButton
                     key={index}
-                    onClick={() => handleMaterialsChange(index + 18)}
-                  >
+                    onClick={() => handleMaterialsChange(index + 18)}>
                     <MaterialImage
                       src={material.textura}
                       alt={`Material ${material.nombre}`}
@@ -444,8 +475,7 @@ const Menu = ({ handleModelChange }) => {
                   setColorPickerActive(true),
                   setShowMetales(false),
                   setShowMaderas(false)
-                )}
-              >
+                )}>
                 Sólidos
               </Titulo>
               <MenuContainer2
@@ -461,8 +491,7 @@ const Menu = ({ handleModelChange }) => {
                   ) {
                     handleMaterialChange(0);
                   }
-                }}
-              >
+                }}>
                 <SketchPicker
                   color={
                     selectedModel1
@@ -477,7 +506,7 @@ const Menu = ({ handleModelChange }) => {
                       ? color5
                       : selectedModel6
                       ? color6
-                      : "#ffffff" // Un valor por defecto en caso de que ningún modelo esté seleccionado
+                      : '#ffffff' // Un valor por defecto en caso de que ningún modelo esté seleccionado
                   }
                   onChange={handleColorChange}
                 />
