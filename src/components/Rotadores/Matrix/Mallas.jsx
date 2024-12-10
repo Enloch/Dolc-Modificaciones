@@ -191,8 +191,8 @@ import Leiva4 from '../../../assets/icons/Matrix/Rotador/leiva4.svg';
 import Leiva5 from '../../../assets/icons/Matrix/Rotador/leiva5.svg';
 import Leiva6 from '../../../assets/icons/Matrix/Rotador/leiva6.svg';
 import Leiva7 from '../../../assets/icons/Matrix/Rotador/leiva7.svg';
-import Leiva8 from '../../../assets/icons/Matrix/Rotador/leiva7.svg';
-import Leiva9 from '../../../assets/icons/Matrix/Rotador/leiva7.svg';
+import Leiva8 from '../../../assets/icons/Matrix/Rotador/leiva8.svg';
+import Leiva9 from '../../../assets/icons/Matrix/Rotador/leiva9.svg';
 const PrecargaImg = [
   Matriz1a,
   Matriz1b,
