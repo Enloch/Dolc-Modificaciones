@@ -14,6 +14,7 @@ import Planex3m from '../../assets/images/DolckerMatrix/Series/PLANEX/matriz2_j.
 import Planex3n from '../../assets/images/DolckerMatrix/Series/PLANEX/matriz2_k.jpg';
 import Planex3o from '../../assets/images/DolckerMatrix/Series/PLANEX/matriz2_l.jpg';
 import Planex3p from '../../assets/images/DolckerMatrix/Series/PLANEX/matriz2_m.jpg';
+import Planex3q from '../../assets/images/DolckerMatrix/Series/PLANEX/matriz2_n.jpg';
 
 export const configPlanex = [
   { id: '1', img: Planex3a, title: 'Planex A' },
@@ -32,4 +33,5 @@ export const configPlanex = [
   { id: '14', img: Planex3n, title: 'Planex N' },
   { id: '15', img: Planex3o, title: 'Planex O' },
   { id: '16', img: Planex3p, title: 'Planex P' },
+  { id: '17', img: Planex3q, title: 'Planex Q' },
 ];

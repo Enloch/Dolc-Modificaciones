@@ -1,5 +1,5 @@
-import React, { useState, useRef, Suspense, useEffect } from "react";
-import { Canvas, useThree } from "@react-three/fiber";
+import React, { useState, useRef, Suspense, useEffect } from 'react';
+import { Canvas, useThree } from '@react-three/fiber';
 import {
   OrbitControls,
   PerspectiveCamera,
@@ -9,15 +9,11 @@ import {
   Sky,
   Loader,
   Grid,
-} from "@react-three/drei";
-import {
-  HueSaturation,
-  EffectComposer,
-  ToneMapping,
-} from "@react-three/postprocessing";
-import { folder, useControls } from "leva";
-import * as THREE from "three";
-import { Modelo } from "./MatrixModelo";
+} from '@react-three/drei';
+import { HueSaturation, EffectComposer, ToneMapping } from '@react-three/postprocessing';
+import { folder, useControls } from 'leva';
+import * as THREE from 'three';
+import { Modelo } from './MatrixModelo';
 import {
   ContRotador,
   CanvasContainer,
@@ -28,28 +24,28 @@ import {
   IntroText,
   BotonExpandir,
   ImagenExpandir,
-} from "./styles";
-import Menu from "./Menu";
-import R360 from "../../../assets/icons/360.svg";
-import IconoAbrir from "../../../assets/icons/open-indicator.svg";
-import IconoCerrar from "../../../assets/icons/close-indicator.svg";
-import { Fachada } from "./ModeloFachada";
-import useStore from "./store";
-import { SpotLightComponent, Box } from "./Spotlight";
-import { FachadaHorizontal } from "./ModeloFachadaHorizontal";
-import Rotar from "../../../assets/icons/rotar.svg";
-import Front from "../../../assets/icons/front.svg";
-import Inside from "../../../assets/icons/inside.svg";
-import Exit from "../../../assets/icons/exit.svg";
-import { LamasHorizontalesInterior } from "./LamasHorizontalesInterior";
-import { LamasVerticalesInterior } from "./LamasVerticalesInterior";
-import { Interior } from "./ModeloInterior";
-import { Perf } from "r3f-perf";
+} from './styles';
+import Menu from './Menu';
+import R360 from '../../../assets/icons/360.svg';
+import IconoAbrir from '../../../assets/icons/open-indicator.svg';
+import IconoCerrar from '../../../assets/icons/close-indicator.svg';
+import { Fachada } from './ModeloFachada';
+import useStore from './store';
+import { SpotLightComponent, Box } from './Spotlight';
+import { FachadaHorizontal } from './ModeloFachadaHorizontal';
+import Rotar from '../../../assets/icons/rotar.svg';
+import Front from '../../../assets/icons/front.svg';
+import Inside from '../../../assets/icons/inside.svg';
+import Exit from '../../../assets/icons/exit.svg';
+import { LamasHorizontalesInterior } from './LamasHorizontalesInterior';
+import { LamasVerticalesInterior } from './LamasVerticalesInterior';
+import { Interior } from './ModeloInterior';
+import { Perf } from 'r3f-perf';
 import {
   EscenaRotador as LeivaEscenaRotador,
   EscenaFachada as LeivaEscenaFachada,
   EscenaInterior as LeivaEscenaInterior,
-} from "../Leiva/Rotador";
+} from '../Leiva/Rotador';
 export default function RotadorMatrix() {
   const {
     materialIndex,
@@ -155,21 +151,20 @@ export default function RotadorMatrix() {
         <Suspense fallback={null}>
           <Canvas
             frameloop='demand'
-            shadows={"soft"}
+            shadows={'soft'}
             flat
             style={{
-              position: "relative",
+              position: 'relative',
               top: 0,
               left: 0,
-              width: "100%",
-              height: "100%",
+              width: '100%',
+              height: '100%',
             }}
             gl={(gl) => {
               gl.toneMapping = THREE.ACESFilmicToneMapping;
               gl.toneMappingExposure = 0.8;
               gl.outputEncoding = THREE.sRGBEncoding;
-            }}
-          >
+            }}>
             {/* <Perf /> */}
             <CameraAdjuster />
             <Suspense fallback={null}>
@@ -207,37 +202,36 @@ export default function RotadorMatrix() {
         {fachadaVisible === false && (
           <div
             style={{
-              position: "absolute",
-              bottom: "10px",
-              left: "50%",
-              transform: "translateX(-50%)",
-              display: "flex",
-              alignItems: "center",
-              gap: "15px",
-              height: "45px",
-            }}
-          >
-            <a onClick={handleRotationClick} style={{ cursor: "pointer" }}>
-              <img src={Rotar} style={{ width: "45px" }} />
+              position: 'absolute',
+              bottom: '10px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '15px',
+              height: '45px',
+            }}>
+            <a onClick={handleRotationClick} style={{ cursor: 'pointer' }}>
+              <img src={Rotar} style={{ width: '45px' }} />
             </a>
             <input
               style={{
-                appearance: "none", // Esto es para asegurar que los estilos se apliquen correctamente en todos los navegadores
-                width: "100%", // Ajusta al ancho que prefieras
-                height: "3px", // Altura de la barra
-                background: "#292929", // Color de fondo de la barra (gris claro)
-                outline: "none", // Remueve el borde que aparece al hacer foco en algunos navegadores
-                opacity: "0.7", // Opacidad de la barra
-                transition: "opacity .2s", // Transición suave para la opacidad
-                borderRadius: "5px", // Bordes redondeados
+                appearance: 'none', // Esto es para asegurar que los estilos se apliquen correctamente en todos los navegadores
+                width: '100%', // Ajusta al ancho que prefieras
+                height: '3px', // Altura de la barra
+                background: '#292929', // Color de fondo de la barra (gris claro)
+                outline: 'none', // Remueve el borde que aparece al hacer foco en algunos navegadores
+                opacity: '0.7', // Opacidad de la barra
+                transition: 'opacity .2s', // Transición suave para la opacidad
+                borderRadius: '5px', // Bordes redondeados
                 // Estilos para el pulgar (la parte que se desliza)
                 WebkitSliderThumb: {
-                  appearance: "none",
-                  width: "25px",
-                  height: "25px",
-                  borderRadius: "50%",
-                  background: "#888", // Color del pulgar (gris)
-                  cursor: "pointer",
+                  appearance: 'none',
+                  width: '25px',
+                  height: '25px',
+                  borderRadius: '50%',
+                  background: '#888', // Color del pulgar (gris)
+                  cursor: 'pointer',
                 },
               }}
               type='range'
@@ -246,31 +240,30 @@ export default function RotadorMatrix() {
               value={numModels}
               onChange={(e) => setNumModels(parseInt(e.target.value))}
             />
-            <a onClick={handleFachadaClick} style={{ cursor: "pointer" }}>
-              <img src={Front} style={{ width: "45px" }} />
+            <a onClick={handleFachadaClick} style={{ cursor: 'pointer' }}>
+              <img src={Front} style={{ width: '45px' }} />
             </a>
-            <a onClick={handleInteriorClick} style={{ cursor: "pointer" }}>
-              <img src={Inside} style={{ width: "45px" }} />
+            <a onClick={handleInteriorClick} style={{ cursor: 'pointer' }}>
+              <img src={Inside} style={{ width: '45px' }} />
             </a>
           </div>
         )}
         {fachadaVisible === true && (
           <div
             style={{
-              position: "absolute",
-              top: "10px",
-              left: "20px",
-              display: "flex",
-              alignItems: "center",
-              gap: "25px",
-              height: "45px",
-            }}
-          >
-            <a onClick={handleRotationClick} style={{ cursor: "pointer" }}>
-              <img src={Rotar} style={{ width: "45px" }} />
+              position: 'absolute',
+              top: '10px',
+              left: '20px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '25px',
+              height: '45px',
+            }}>
+            <a onClick={handleRotationClick} style={{ cursor: 'pointer' }}>
+              <img src={Rotar} style={{ width: '45px' }} />
             </a>
-            <a onClick={handleResetClick} style={{ cursor: "pointer" }}>
-              <img src={Exit} style={{ width: "45px" }} />
+            <a onClick={handleResetClick} style={{ cursor: 'pointer' }}>
+              <img src={Exit} style={{ width: '45px' }} />
             </a>
           </div>
         )}
@@ -329,21 +322,14 @@ const EscenaRotador = ({
         {numModels > 3 && (
           <Modelo
             modelId={4}
-            position={[
-              modelPositions[0] + modelPositions[1] + modelPositions[2],
-              0,
-              0,
-            ]} // posición modificada
+            position={[modelPositions[0] + modelPositions[1] + modelPositions[2], 0, 0]} // posición modificada
           />
         )}
         {numModels > 4 && (
           <Modelo
             modelId={5}
             position={[
-              modelPositions[0] +
-                modelPositions[1] +
-                modelPositions[2] +
-                modelPositions[3],
+              modelPositions[0] + modelPositions[1] + modelPositions[2] + modelPositions[3],
               0,
               0,
             ]} // posición modificada
@@ -424,19 +410,13 @@ const EscenaFachada = ({ rotada }) => {
         intensity={2.5}
         // intensity={3}
         shadow-bias={-0.0001}
-        shadow-mapSize={1024}
-      >
+        shadow-mapSize={1024}>
         <orthographicCamera
           attach='shadow-camera'
           args={[-fustrum, fustrum, fustrum, -fustrum, 0.001, 100]}
         />
       </directionalLight>
-      <Sky
-        distance={10000}
-        rayleigh={4}
-        sunPosition={[6, 2, 4]}
-        turbidity={20}
-      />
+      <Sky distance={10000} rayleigh={4} sunPosition={[6, 2, 4]} turbidity={20} />
 
       {!rotada ? <Fachada /> : <FachadaHorizontal />}
     </>
@@ -473,8 +453,7 @@ const EscenaInterior = ({ rotada }) => {
         castShadow
         intensity={3.7}
         shadow-bias={-0.0004}
-        shadow-mapSize={1024}
-      >
+        shadow-mapSize={1024}>
         <orthographicCamera
           attach='shadow-camera'
           args={[-fustrum, fustrum, fustrum, -fustrum, 0.001, 100]}
