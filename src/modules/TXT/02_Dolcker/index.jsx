@@ -24,9 +24,9 @@ const DolckerTline = ({ id }) => {
       <Titulo>Dolcker TXT soluciona</Titulo>
       <div className='dolcker-info'>
         <ImageWithCaption
-          src={Reemplazo}
+          src={img2}
           alt='Imagen Dolcker 2'
-          caption='Sistema Matrix con matrices de aluminio extruido.'
+          caption='Sistema TXT con perfiles de aluminio.'
         />
 
         <Text>

@@ -23,9 +23,8 @@ export const StyledGaleria = styled(Seccion)`
 
 export const StyledSlider = styled.div`
   .image-gallery-slide .image-gallery-image {
-    max-width: 100%; // Limita el ancho máximo
-    height: 50vh; // Limita la altura máxima
-    object-fit: contain; // Asegura que la imagen se ajuste dentro del contenedor
+    max-width: 100%;
+    object-fit: contain;
   }
 `;
 

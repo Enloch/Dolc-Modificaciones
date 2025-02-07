@@ -51,7 +51,7 @@ const DisenosTline = ({ id }) => {
           <ImageGallery
             items={imagenesGaleria}
             showPlayButton={false}
-            showFullscreenButton={false}
+            showFullscreenButton={true}
             showThumbnails={true}
             autoPlay={true}
             showBullets={true}
