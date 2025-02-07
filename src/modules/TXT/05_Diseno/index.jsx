@@ -4,13 +4,13 @@ import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo, Titulo2 } from "../../../components/Titulos";
 import { COLORS } from "../../../global/GlobalStyles";
 import StyledDisenos from "./styles";
-import img1 from "../../../assets/images/DolckerMatrix/Diseno/catalogo3-1-14.jpg";
+import img1 from "../../../assets/images/DolckerTXT/Diseno/catalogo3-1-14.jpg";
 import fondo from "../../../assets/images/Diseno/Formato/fondo.webp";
 import indicadoresFormato from "../../../utils/indicadoresFormato";
 import RotadorLeiva from "../../../components/Rotadores/Leiva/Rotador";
 import IndiceSeries from "./05_1_IndiceSeries";
 import Series from "./05_2_Series";
-import Reemplazo from "../../../assets/images/DolckerMatrix/temporal.webp";
+import Reemplazo from "../../../assets/images/DolckerTXT/temporal.webp";
 const DisenosTline = ({ id }) => {
   const ids = [
     "ard",
@@ -40,7 +40,7 @@ const DisenosTline = ({ id }) => {
       <StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
         <Titulo>Diseño</Titulo>
         <ImageWithCaption
-          src={Reemplazo}
+          src={img1}
           alt='Imagen de Diseños 1'
           columnSpan='6'
         />

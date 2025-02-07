@@ -2,15 +2,15 @@ import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo, Titulo2, Titulo3 } from "../../../components/Titulos";
 import { COLORS, DISTANCES } from "../../../global/GlobalStyles";
 import StyledAplicaciones from "./styles";
-import img1 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-9.jpg";
-import img2 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-10.jpg";
-import logos from "../../../assets/images/DolckerMatrix/Aplicaciones/logos.gif";
-import img3 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-11.jpg";
-import img4 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-12.jpg";
-import img5 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-13.jpg";
+import img1 from "../../../assets/images/DolckerTXT/Aplicaciones/catalogo3-1-9.jpg";
+import img2 from "../../../assets/images/DolckerTXT/Aplicaciones/catalogo3-1-10.jpg";
+import logos from "../../../assets/images/DolckerTXT/Aplicaciones/logos.gif";
+import img3 from "../../../assets/images/DolckerTXT/Aplicaciones/catalogo3-1-11.jpg";
+import img4 from "../../../assets/images/DolckerTXT/Aplicaciones/catalogo3-1-12.jpg";
+import img5 from "../../../assets/images/DolckerTXT/Aplicaciones/catalogo3-1-13.jpg";
 import Cita from "../../../components/Cita";
 import ImageWithCaptionSlider from "../../../components/ImageWithCaptionSlider";
-import Reemplazo from "../../../assets/images/DolckerMatrix/temporal.webp";
+import Reemplazo from "../../../assets/images/DolckerTXT/temporal.webp";
 const AplicacionesTline = ({ id }) => {
   return (
     <>
@@ -21,7 +21,7 @@ const AplicacionesTline = ({ id }) => {
       >
         <Titulo color={COLORS.gray08}>Aplicaciones</Titulo>
         <ImageWithCaption
-          src={Reemplazo}
+          src={img1}
           alt='Imagen de Aplicaciones 1'
           caption=''
           columnSpan='6'
@@ -40,7 +40,7 @@ const AplicacionesTline = ({ id }) => {
       >
         <Titulo2 color={COLORS.gray08}>Rehabilitación</Titulo2>
         <ImageWithCaption
-          src={Reemplazo}
+          src={img2}
           alt='Imagen de Aplicaciones 1'
           caption=''
           columnSpan='6'
@@ -59,7 +59,7 @@ const AplicacionesTline = ({ id }) => {
       >
         <Titulo2 color={COLORS.gray08}>Obra nueva</Titulo2>
         <ImageWithCaption
-          src={Reemplazo}
+          src={img3}
           alt='Imagen de Aplicaciones 1'
           //   caption='Jorge dará la referencia o imágen.'
           columnSpan='6'
