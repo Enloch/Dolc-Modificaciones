@@ -47,8 +47,9 @@ const DolckerTXT = () => {
       <Sistemas
         id={[
           "sistemas",
-          "dol-tc11",
-          "dol-tc14",
+          "txt-tc14-esquina",
+          "txt-tc14-recerco",
+          "txt-tc14-leyenda",
         ]}
       />
       {/* <Descargas id='descargas' /> */}

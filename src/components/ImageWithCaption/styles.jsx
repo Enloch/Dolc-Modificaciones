@@ -11,7 +11,7 @@ import {
 const StyledImageWithCaption = styled.figure`
     display: flex;
     flex-direction: column;
-    gap: ${DISTANCES.small};
+    gap: 1rem;
 
     ${props => {
         if (props.columnSpan === '8') return column_5_span8

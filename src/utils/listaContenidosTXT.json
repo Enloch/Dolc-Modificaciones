@@ -53,8 +53,16 @@
         "link": "#sistemas"
       },
       {
-        "title": "TXT-TC14",
-        "link": "#txt-tc14"
+        "title": "TXT-TC14 Esquina",
+        "link": "#txt-tc14-esquina"
+      },
+      {
+        "title": "TXT-TC14 Recerco",
+        "link": "#txt-tc14-recerco"
+      },
+      {
+        "title": "TXT-TC14 Leyenda",
+        "link": "#txt-tc14-leyenda"
       }
     ]
   },

@@ -28,17 +28,6 @@ export const Enlaces = styled.ul`
     }
 `
 
-const StyledSistemas = styled(Seccion)`
-    ${Enlaces} {
-        ${column_5_span8}
-    }
-    ${Text} {
-        ${column_5_span8}
-    }
-`
-
-export default StyledSistemas
-
 export const StyledGrid = styled.div`
     margin: 0 auto 25px auto;
     ${gridLayoutTemplate({
@@ -55,3 +44,32 @@ export const StyledGrid = styled.div`
         })}
     `)}
 `
+
+export const LegendList = styled.div`
+  column-count: 2;
+  column-gap: 2rem;
+  margin: 1rem 0;
+  
+  p {
+    margin: 0.5rem 0;
+    break-inside: avoid-column;
+  }
+
+  @media (max-width: 768px) {
+    column-count: 1;
+  }
+`
+
+const StyledSistemas = styled(Seccion)`
+    ${StyledGrid} {
+        ${column_5_span8}
+    }
+    ${Enlaces} {
+        ${column_5_span8}
+    }
+    ${Text} {
+        ${column_5_span8}
+    }
+`
+
+export default StyledSistemas

@@ -4,7 +4,7 @@ import FachadaVentilada from "./pages/catalogos/FachadaVentilada";
 import DolckerTline from "./pages/catalogos/DolckerTLine";
 import DolckerMatrix from "./pages/catalogos/DolckerMatrix";
 import DolckerLeiva from "./pages/catalogos/DolckerLeiva";
-import DolckerTXT from "./pages/catalogos/DolckerTxT";
+import DolckerTXT from "./pages/catalogos/DolckerTXT";
 import DolckerG10 from "./pages/catalogos/DolckerG10";
 import Escamas from "./pages/catalogos/Escamas";
 // import FontStyles from './global/FontStyles'

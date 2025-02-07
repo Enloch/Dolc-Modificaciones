@@ -15,7 +15,7 @@ const DolckerTline = ({ id }) => {
     text: "Pasa el ratón por los puntos para ver la información",
     type: "normal",
     indicadores: config,
-    imgBackground: Reemplazo,
+    imgBackground: img3,
     alt: "Imagen de fondo con indicadores",
   };
 
