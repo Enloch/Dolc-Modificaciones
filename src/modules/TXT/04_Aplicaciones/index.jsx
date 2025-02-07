@@ -22,13 +22,13 @@ const AplicacionesTline = ({ id }) => {
         <Titulo color={COLORS.gray08}>Aplicaciones</Titulo>
         <ImageWithCaption
           src={img1}
-          alt='Imagen de Aplicaciones 1'
-          caption=''
-          columnSpan='6'
+          alt="Imagen de Aplicaciones 1"
+          caption=""
+          columnSpan="6"
         />
         <Cita
-          cita='Cita'
-          author='autor'
+          cita="Cita"
+          author="autor"
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
@@ -41,13 +41,13 @@ const AplicacionesTline = ({ id }) => {
         <Titulo2 color={COLORS.gray08}>Rehabilitación</Titulo2>
         <ImageWithCaption
           src={img2}
-          alt='Imagen de Aplicaciones 1'
-          caption=''
-          columnSpan='6'
+          alt="Imagen de Aplicaciones 1"
+          caption=""
+          columnSpan="6"
         />
         <Cita
-          cita='Cita'
-          author='autor'
+          cita="Cita"
+          author="autor"
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
@@ -60,40 +60,15 @@ const AplicacionesTline = ({ id }) => {
         <Titulo2 color={COLORS.gray08}>Obra nueva</Titulo2>
         <ImageWithCaption
           src={img3}
-          alt='Imagen de Aplicaciones 1'
+          alt="Imagen de Aplicaciones 1"
           //   caption='Jorge dará la referencia o imágen.'
-          columnSpan='6'
+          columnSpan="6"
         />
         <Cita
-          cita='Cita'
-          author='autor'
+          cita="Cita"
+          author="autor"
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
-        />
-      </StyledAplicaciones>
-      <StyledAplicaciones
-        id={id[3]}
-        backgroundColor={COLORS.gray01}
-        rowGap={DISTANCES.small}
-      >
-        <Titulo2 color={COLORS.gray08}>Interiores</Titulo2>
-        <ImageWithCaptionSlider
-          images={[
-            {
-              src: Reemplazo,
-              alt: "Imagen de Aplicaciones 4",
-              caption:
-                "Cita",
-            },
-            {
-              src: Reemplazo, // Asegúrate de definir img5 en alguna parte de tu código
-              alt: "Imagen de Aplicaciones 5",
-              caption:
-                "Cita",
-            },
-            // ... puedes agregar más imágenes aquí
-          ]}
-          columnSpan='6'
         />
       </StyledAplicaciones>
     </>

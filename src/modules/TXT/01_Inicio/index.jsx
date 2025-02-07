@@ -5,7 +5,7 @@ import { StyledIndice } from "./styles";
 import flecha from "../../../assets/icons/flechita.svg";
 import { BsMouse } from "react-icons/bs";
 import scrollTo from "../../../helpers/scrollTo";
-import useMenuDesplegable from "../../../hooks/useMenuDesplegable";
+import useMenuDesplegable from "../../../hooks/useMenuDesplegableTXT";
 import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 // Define la animación para la flecha

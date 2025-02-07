@@ -46,7 +46,7 @@ const DisenosTline = ({ id }) => {
         />
         <Cita cita='Cita' author='Autor' colorAutor={COLORS.gray05} />
       </StyledDisenos>
-      <IndiceSeries id={id[1]} queSerieActiva={setSerieActiva} />
+      {/* <IndiceSeries id={id[1]} queSerieActiva={setSerieActiva} /> */}
       <StyledDisenos id={id[2]} backgroundColor={COLORS.gray01}>
         <Titulo2>Configurador</Titulo2>
         <div className='rotador'>

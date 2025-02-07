@@ -24,16 +24,7 @@
       },
       {
         "title": "Obra nueva",
-        "subList": [
-          {
-            "title": "Obra nueva",
-            "link": "#obra-nueva"
-          },
-          {
-            "title": "Interiores",
-            "link": "#interiores"
-          }
-        ]
+        "link": "#obra-nueva"
       }
     ]
   },
@@ -45,8 +36,8 @@
         "link": "#diseno"
       },
       {
-        "title": "Colecciones",
-        "link": "#colecciones"
+        "title": "Espesores",
+        "link": "#espesores"
       },
       {
         "title": "Configurador",

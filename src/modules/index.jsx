@@ -68,3 +68,4 @@ export { default as DisenosTXT } from "./TXT/05_Diseno";
 export { default as CaracteristicasTXT } from "./TXT/06_Caracteristicas";
 export { default as SistemasTXT } from "./TXT/07_Sistemas";
 export { default as DescargasTXT } from "./TXT/08_Descargas";
+export { default as GaleriaTXT } from "./TXT/11_Galeria";

@@ -11,6 +11,7 @@ import {
   IndiceTXT as Indice,
   SistemasTXT as Sistemas,
   VentajasTXT as Ventajas,
+  GaleriaTXT as Galeria,
 } from "../../modules";
 
 const DolckerTXT = () => {
@@ -40,9 +41,9 @@ const DolckerTXT = () => {
       <Dolcker id='dolcker' />
       <Ventajas id='ventajas' />
       <Aplicaciones
-        id={["aplicaciones", "rehabilitacion", "obra-nueva", "interiores"]}
+        id={["aplicaciones", "rehabilitacion", "obra-nueva"]}
       />
-      <Disenos id={["diseno", "colecciones", "configurador"]} />
+      <Disenos id={["diseno","formato", "configurador"]} />
       <Caracteristicas id={["caracteristicas-especiales", "datos-tecnicos"]} />
       <Sistemas
         id={[
@@ -54,6 +55,7 @@ const DolckerTXT = () => {
         ]}
       />
       {/* <Descargas id='descargas' /> */}
+      <Galeria id='galeria' />
       <Final />
       {showButton && <StyledButton onClick={handleGoToIndice}>^</StyledButton>}
     </MultipleOptionsProvider>
