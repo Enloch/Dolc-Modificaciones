@@ -27,8 +27,8 @@ const AplicacionesTline = ({ id }) => {
           columnSpan="6"
         />
         <Cita
-          cita="Cita"
-          author="autor"
+          cita="La arquitectura debe ser la expresión de nuestro tiempo, pero también debe ser intemporal."
+          author=" Daniel Libeskind"
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
@@ -46,8 +46,8 @@ const AplicacionesTline = ({ id }) => {
           columnSpan="6"
         />
         <Cita
-          cita="Cita"
-          author="autor"
+          cita="El diseño urbano es el arte de crear lugares que sean habitables, funcionales y hermosos"
+          author="Jan Gehlr"
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
@@ -61,12 +61,12 @@ const AplicacionesTline = ({ id }) => {
         <ImageWithCaption
           src={img3}
           alt="Imagen de Aplicaciones 1"
-          //   caption='Jorge dará la referencia o imágen.'
+          //   caption='Jorge dará la referencia o imágen.' 
           columnSpan="6"
         />
         <Cita
-          cita="Cita"
-          author="autor"
+          cita="La ciudad del futuro debe ser una ciudad para todos."
+          author="Le Corbusier"
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
