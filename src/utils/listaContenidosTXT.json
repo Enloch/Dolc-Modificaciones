@@ -46,12 +46,20 @@
     ]
   },
   {
-    "title": "Características",
+    "title": "Sistemas",
     "subList": [
       {
-        "title": "Características técnicas",
-        "link": "#caracteristicas-especiales"
+        "title": "Sistemas",
+        "link": "#sistemas"
+      },
+      {
+        "title": "Dol-TC11",
+        "link": "#dol-tc11"
       }
     ]
+  },
+  {
+    "title": "Descargas",
+    "link": "#descargas"
   }
 ]

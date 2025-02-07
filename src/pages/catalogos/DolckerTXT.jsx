@@ -44,18 +44,14 @@ const DolckerTXT = () => {
         id={["aplicaciones", "rehabilitacion", "obra-nueva"]}
       />
       <Disenos id={["diseno","formato", "configurador"]} />
-      <Caracteristicas id={["caracteristicas-especiales", "datos-tecnicos"]} />
       <Sistemas
         id={[
           "sistemas",
-          "dolcker-and-clip",
           "dol-tc11",
           "dol-tc14",
-          "dol-hc20",
         ]}
       />
       {/* <Descargas id='descargas' /> */}
-      <Galeria id='galeria' />
       <Final />
       {showButton && <StyledButton onClick={handleGoToIndice}>^</StyledButton>}
     </MultipleOptionsProvider>
