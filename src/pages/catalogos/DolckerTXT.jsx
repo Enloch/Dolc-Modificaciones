@@ -43,7 +43,7 @@ const DolckerTXT = () => {
       <Aplicaciones
         id={["aplicaciones", "rehabilitacion", "obra-nueva"]}
       />
-      <Disenos id={["diseno","formato", "configurador"]} />
+      <Disenos id={["diseno","espesores", "configurador"]} />
       <Sistemas
         id={[
           "sistemas",

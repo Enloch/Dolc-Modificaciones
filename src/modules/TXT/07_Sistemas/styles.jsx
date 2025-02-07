@@ -33,8 +33,25 @@ const StyledSistemas = styled(Seccion)`
         ${column_5_span8}
     }
     ${Text} {
-        ${column_5_span6}
+        ${column_5_span8}
     }
 `
 
 export default StyledSistemas
+
+export const StyledGrid = styled.div`
+    margin: 0 auto 25px auto;
+    ${gridLayoutTemplate({
+        numColumns: 3,
+        columnGap: DISTANCES.small,
+        rowGap: DISTANCES.small,
+    })}
+
+    ${mediaQueryTablet(css`
+        ${gridLayoutTemplate({
+            numColumns: 1,
+            columnGap: DISTANCES.small,
+            rowGap: DISTANCES.small,
+        })}
+    `)}
+`

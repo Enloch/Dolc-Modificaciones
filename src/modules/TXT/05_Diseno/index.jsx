@@ -45,7 +45,7 @@ const DisenosTline = ({ id }) => {
   const [serieActiva, setSerieActiva] = useState("");
   return (
     <>
-       <StyledGaleria id={id} backgroundColor={COLORS.gray02}>
+       <StyledGaleria id={id[0]} backgroundColor={COLORS.gray02}>
         <Titulo>Diseño</Titulo>
         <StyledSlider className='Slider'>
           <ImageGallery
@@ -61,7 +61,7 @@ const DisenosTline = ({ id }) => {
           />
         </StyledSlider>
       </StyledGaleria>
-      <StyledDisenos id={id[4]} backgroundColor={COLORS.gray01} isEspesores>
+      <StyledDisenos id={id[1]} backgroundColor={COLORS.gray01} isEspesores>
         <Titulo2>Espesores</Titulo2>
         <div className='espesor espesor-1'>
           <img src={ranurado6} alt='' />
