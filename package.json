@@ -18,7 +18,7 @@
     "@types/react": "^18.2.8",
     "@types/three": "^0.152.1",
     "framer-motion": "^10.12.4",
-    "gh-pages": "^4.0.0",
+    "gh-pages": "^6.3.0",
     "gltfjsx": "^6.2.11",
     "jspdf": "2.5.1",
     "leva": "^0.9.35",
