@@ -149,41 +149,41 @@ const SistemasTline = ({ id }) => {
         <Titulo2>TXT-TC14<br />Leyenda</Titulo2>
         <Text>
           <LegendList>
-            <p>01 Muro de obra o de hormigón</p>
-            <p>02 Recubrimiento</p>
-            <p>03 Aislamiento</p>
-            <p>04 Cámara deaire ventilada</p>
-            <p>05 Perfil T vertical</p>
-            <p>06 Ménsula</p>
-            <p>07 Taco de Nylon</p>
-            <p>08 Tornillo autotaladrante</p>
-            <p>09 Cerámica Dolcker</p>
-            <p>10 Perfil Dolcker cuadrado</p>
-            <p>11 Perfil Dolcker TXT</p>
-            <p>12 Tornillo autotaladrante cabeza plana</p>
-            <p>13 Fijación química</p>
-            <p>14 Anclaje expansivo INOX</p>
-            <p>15 Perfil Dolcker terminación</p>
-            <p>16 Lámina Kerdi</p>
-            <p>17 Arandela</p>
-            <p>18 Panel Composite</p>
-            <p>19 Cerámica</p>
-            <p>20 Media grapa</p>
-            <p>21 Grapa</p>
-            <p>22 Sikatack panel</p>
-            <p>23 Cinta doble cara</p>
-            <p>24 Angular</p>
-            <p>25 Taco clavo</p>
-            <p>26 Extrusionado</p>
-            <p>27 Sellado ventana</p>
-            <p>28 Rejilla Aluminio perforada</p>
-            <p>29 Lámina impermeabilizante</p>
-            <p>30 Chapa de Aluminio plegada lacada</p>
-            <p>31 Perfil F extrusionado</p>
-            <p>32 Separador</p>
-            <p>33 Poliestireno expandido</p>
-            <p>34 Tornillo autotaladrante cabeza plana</p>
-            <p>35 Cenefa decorativa</p>
+            <p data-number="01">Muro de obra o de hormigón</p>
+            <p data-number="02">Recubrimiento</p>
+            <p data-number="03">Aislamiento</p>
+            <p data-number="04">Cámara deaire ventilada</p>
+            <p data-number="05">Perfil T vertical</p>
+            <p data-number="06">Ménsula</p>
+            <p data-number="07">Taco de Nylon</p>
+            <p data-number="08">Tornillo autotaladrante</p>
+            <p data-number="09">Cerámica Dolcker</p>
+            <p data-number="10">Perfil Dolcker cuadrado</p>
+            <p data-number="11">Perfil Dolcker TXT</p>
+            <p data-number="12">Tornillo autotaladrante cabeza plana</p>
+            <p data-number="13">Fijación química</p>
+            <p data-number="14">Anclaje expansivo INOX</p>
+            <p data-number="15">Perfil Dolcker terminación</p>
+            <p data-number="16">Lámina Kerdi</p>
+            <p data-number="17">Arandela</p>
+            <p data-number="18">Panel Composite</p>
+            <p data-number="19">Cerámica</p>
+            <p data-number="20">Media grapa</p>
+            <p data-number="21">Grapa</p>
+            <p data-number="22">Sikatack panel</p>
+            <p data-number="23">Cinta doble cara</p>
+            <p data-number="24">Angular</p>
+            <p data-number="25">Taco clavo</p>
+            <p data-number="26">Extrusionado</p>
+            <p data-number="27">Sellado ventana</p>
+            <p data-number="28">Rejilla Aluminio perforada</p>
+            <p data-number="29">Lámina impermeabilizante</p>
+            <p data-number="30">Chapa de Aluminio plegada lacada</p>
+            <p data-number="31">Perfil F extrusionado</p>
+            <p data-number="32">Separador</p>
+            <p data-number="33">Poliestireno expandido</p>
+            <p data-number="34">Tornillo autotaladrante cabeza plana</p>
+            <p data-number="35">Cenefa decorativa</p>
           </LegendList>
         </Text>
       </StyledSistemas>

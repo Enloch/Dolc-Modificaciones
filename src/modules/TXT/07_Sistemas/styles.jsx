@@ -51,8 +51,18 @@ export const LegendList = styled.div`
   margin: 1rem 0;
   
   p {
-    margin: 0.5rem 0;
+    margin: 0;
+    padding: 10px 0;
+    border-top: 1px solid black;
     break-inside: avoid-column;
+    display: flex;
+    gap: 1rem;
+
+    &::before {
+      content: attr(data-number);
+      font-weight: bold;
+      min-width: 2rem;
+    }
   }
 
   @media (max-width: 768px) {

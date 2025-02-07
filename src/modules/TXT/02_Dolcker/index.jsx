@@ -2,13 +2,13 @@ import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo } from "../../../components/Titulos";
 import StyledDolcker from "./styles";
 import { COLORS } from "../../../global/GlobalStyles";
-import Reemplazo from "../../../assets/images/DolckerMatrix/temporal.webp";
-import img2 from "../../../assets/images/DolckerMatrix/Dolcker/catalogo3-1-5.jpg";
-import img3 from "../../../assets/images/DolckerMatrix/Dolcker/catalogo3-1-7.jpg";
-import VisualizadorNota from "../../../components/Tline/VisualizadorNota";
+import Reemplazo from "../../../assets/images/DolckerTXT/temporal.webp";
+import img2 from "../../../assets/images/DolckerTXT/Dolcker/catalogo3-1-5.jpg";
+import img3 from "../../../assets/images/DolckerTXT/Dolcker/catalogo3-1-7.jpg";
+import VisualizadorNota from "../../../components/TXT/VisualizadorNota";
 import Text from "../../../components/Text";
 
-import config from "../../../configs/configDolckerTline";
+import config from "../../../configs/configDolckerTXT";
 
 const DolckerTline = ({ id }) => {
   const propsVisualizador = {
