@@ -1,4 +1,4 @@
-import ListaContenidos from "../../../components/ListaContenidosMatrix";
+import ListaContenidos from "../../../components/ListaContenidosTXT";
 import { Titulo } from "../../../components/Titulos";
 import { COLORS } from "../../../global/GlobalStyles";
 import { StyledIndice } from "./styles";
@@ -40,7 +40,7 @@ const Indice = ({ indiceRef }) => {
   return (
     <>
       <StyledIndice backgroundColor={COLORS.gray06} ref={indiceRef} id='indice'>
-        <Titulo color={COLORS.gray01}>Dolcker MATRIX</Titulo>
+        <Titulo color={COLORS.gray01}>Dolcker TXT</Titulo>
         <ListaContenidos />
         <AnimatedArrow
           size={32}
