@@ -1,12 +1,10 @@
-import ListaContenidos from "../../../components/ListaContenidosLeiva";
+import ListaContenidos from "../../../components/ListaContenidosMatrixDecor";
 import { Titulo } from "../../../components/Titulos";
 import { COLORS } from "../../../global/GlobalStyles";
 import { StyledIndice } from "./styles";
-import flecha from "../../../assets/icons/flechita.svg";
 import { BsMouse } from "react-icons/bs";
 import scrollTo from "../../../helpers/scrollTo";
 import useMenuDesplegable from "../../../hooks/useMenuDesplegable";
-import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 // Define la animación para la flecha
 const pulse = keyframes`
@@ -40,7 +38,7 @@ const Indice = ({ indiceRef }) => {
   return (
     <>
       <StyledIndice backgroundColor={COLORS.gray06} ref={indiceRef} id='indice'>
-        <Titulo color={COLORS.gray01}>Dolcker LEIVA</Titulo>
+        <Titulo color={COLORS.gray01}>Dolcker MATRIX DECOR</Titulo>
         <ListaContenidos />
         <AnimatedArrow
           size={32}
@@ -49,12 +47,12 @@ const Indice = ({ indiceRef }) => {
           className='flecha-indice'
           onClick={handleClickFlecha}
         />
-        <div className='idiomas'>
+        {/* <div className='idiomas'>
           <Link to='/dolcker-system' className='seleccionado'>
             ES
           </Link>
           <Link to='/en/dolcker-system'>EN</Link>
-        </div>
+        </div> */}
       </StyledIndice>
       {menuDesplegable}
       {btnIndice}

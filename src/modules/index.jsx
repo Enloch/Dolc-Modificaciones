@@ -69,3 +69,12 @@ export { default as CaracteristicasTXT } from "./TXT/06_Caracteristicas";
 export { default as SistemasTXT } from "./TXT/07_Sistemas";
 export { default as DescargasTXT } from "./TXT/08_Descargas";
 export { default as GaleriaTXT } from "./TXT/11_Galeria";
+//MatrixDecor 
+export { default as IndiceDecor } from "./Matrix_Decor/01_Inicio";
+export { default as DolckerDecor } from "./Matrix_Decor/02_Dolcker";
+export { default as VentajasDecor } from "./Matrix_Decor/03_Ventajas";
+export { default as AplicacionesDecor } from "./Matrix_Decor/04_Aplicaciones";
+export { default as DisenosDecor } from "./Matrix_Decor/05_Diseno";
+export { default as CaracteristicasDecor } from "./Matrix_Decor/06_Caracteristicas";
+export { default as SistemasDecor } from "./Matrix_Decor/07_Sistemas";
+export { default as DescargasDecor } from "./Matrix_Decor/08_Descargas";

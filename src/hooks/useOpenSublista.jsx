@@ -33,7 +33,7 @@ const useOpenSublista = (ref, parents) => {
 
             ref.current.style.maxHeight = '0px'
         }
-    }, [isOpen])
+    }, [isOpen, ref, parents])
 
     return {
         isOpen,

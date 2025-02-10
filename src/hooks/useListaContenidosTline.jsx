@@ -8,7 +8,6 @@ const useListaContenidos = (
     isReactRouter = false
 ) => {
     let elementos = []
-
     elementosJSON.map(elemento => {
         if (elemento.subList === undefined) {
             elementos.push(
@@ -44,3 +43,4 @@ const useListaContenidos = (
 }
 
 export default useListaContenidos
+

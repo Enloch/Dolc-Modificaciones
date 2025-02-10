@@ -10,7 +10,7 @@ import img4 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-
 import img5 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-13.jpg";
 import Cita from "../../../components/Cita";
 import ImageWithCaptionSlider from "../../../components/ImageWithCaptionSlider";
-import Reemplazo from "../../../assets/images/DolckerMatrix/temporal.webp";
+
 const AplicacionesTline = ({ id }) => {
   return (
     <>
@@ -21,14 +21,14 @@ const AplicacionesTline = ({ id }) => {
       >
         <Titulo color={COLORS.gray08}>Aplicaciones</Titulo>
         <ImageWithCaption
-          src={Reemplazo}
+          src={img1}
           alt='Imagen de Aplicaciones 1'
           caption=''
           columnSpan='6'
         />
         <Cita
-          cita='Cita'
-          author='autor'
+          cita='Los detalles no son los detalles. Los detalles son el diseño.'
+          author='Charles Eames '
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
@@ -40,14 +40,14 @@ const AplicacionesTline = ({ id }) => {
       >
         <Titulo2 color={COLORS.gray08}>Rehabilitación</Titulo2>
         <ImageWithCaption
-          src={Reemplazo}
+          src={logos}
           alt='Imagen de Aplicaciones 1'
           caption=''
           columnSpan='6'
         />
         <Cita
-          cita='Cita'
-          author='autor'
+          cita='Lo funcional es mejor que lo bello, porque lo que funciona bien permanece en el tiempo.'
+          author='Ray Eames'
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
@@ -59,14 +59,14 @@ const AplicacionesTline = ({ id }) => {
       >
         <Titulo2 color={COLORS.gray08}>Obra nueva</Titulo2>
         <ImageWithCaption
-          src={Reemplazo}
+          src={img3}
           alt='Imagen de Aplicaciones 1'
           //   caption='Jorge dará la referencia o imágen.'
           columnSpan='6'
         />
         <Cita
-          cita='Cita'
-          author='autor'
+          cita='El espacio no tiene sentido sin luz. Un edificio habla a través del silencio de la percepción orquestada por la luz.'
+          author='Steven Holl'
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
@@ -80,16 +80,16 @@ const AplicacionesTline = ({ id }) => {
         <ImageWithCaptionSlider
           images={[
             {
-              src: Reemplazo,
+              src: img4,
               alt: "Imagen de Aplicaciones 4",
               caption:
-                "Cita",
+                "La originalidad consiste en el retorno al origen; así pues, original es aquello que vuelve a la simplicidad de las primeras soluciones”. Antonio Gaudí.",
             },
             {
-              src: Reemplazo, // Asegúrate de definir img5 en alguna parte de tu código
+              src: img5, // Asegúrate de definir img5 en alguna parte de tu código
               alt: "Imagen de Aplicaciones 5",
               caption:
-                "Cita",
+                "La originalidad consiste en el retorno al origen; así pues, original es aquello que vuelve a la simplicidad de las primeras soluciones”. Antonio Gaudí.",
             },
             // ... puedes agregar más imágenes aquí
           ]}

@@ -1,7 +1,7 @@
 import useListaContenidos from "../../hooks/useListaContenidosTline";
 import StyledListaContenidos from "./styles";
 import { useContext } from "react";
-import ListaContenidosContext from "../../contexts/ListaContenidosContextMatrix";
+import ListaContenidosContext from "../../contexts/ListaContenidosContextMatrixDecor";
 import inglesLista from "../../utils/en/listaContenidos.json";
 
 const ListaContenidos = ({ en = false, isMenuDesplegable = false }) => {

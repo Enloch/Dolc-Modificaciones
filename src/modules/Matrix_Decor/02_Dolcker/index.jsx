@@ -2,20 +2,19 @@ import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo } from "../../../components/Titulos";
 import StyledDolcker from "./styles";
 import { COLORS } from "../../../global/GlobalStyles";
-import Reemplazo from "../../../assets/images/DolckerMatrix/temporal.webp";
 import img2 from "../../../assets/images/DolckerMatrix/Dolcker/catalogo3-1-5.jpg";
 import img3 from "../../../assets/images/DolckerMatrix/Dolcker/catalogo3-1-7.jpg";
 import VisualizadorNota from "../../../components/Tline/VisualizadorNota";
 import Text from "../../../components/Text";
 
-import config from "../../../configs/configDolckerTline";
+import config from "../../../configs/configDolckerMatrix";
 
 const DolckerTline = ({ id }) => {
   const propsVisualizador = {
     text: "Pasa el ratón por los puntos para ver la información",
     type: "normal",
     indicadores: config,
-    imgBackground: Reemplazo,
+    imgBackground: img3,
     alt: "Imagen de fondo con indicadores",
   };
 
@@ -24,16 +23,16 @@ const DolckerTline = ({ id }) => {
       <Titulo>Dolcker Matrix soluciona</Titulo>
       <div className='dolcker-info'>
         <ImageWithCaption
-          src={Reemplazo}
+          src={img2}
           alt='Imagen Dolcker 2'
           caption='Sistema Matrix con matrices de aluminio extruido.'
         />
 
         <Text>
-          textos Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-          illo rerum repellendus molestiae id quisquam nemo illum provident,
-          aliquid animi quo ipsum ex voluptatibus odio inventore iste
-          consectetur sunt consequuntur?
+          SISTEMA MATRIX es un sistema de revestimiento de lamas de aluminio
+          para una colocacion cliplada de facil montaje. La gran variedad de
+          diseños, le confieren una gran versatilidad, para el diseño de
+          fachadas ventiladas, revestimientos interiores, paneles decorativos.
         </Text>
       </div>
       <VisualizadorNota {...propsVisualizador} />
