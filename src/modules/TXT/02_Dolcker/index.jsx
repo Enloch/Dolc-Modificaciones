@@ -33,13 +33,15 @@ const DolckerTline = ({ id }) => {
         Innovacion en fachadas ventiladas.
         <br/>
         <br/>
-        La nueva línea de fachadas ventiladas Dolcker TXT está diseñada para ofrecer versatilidad, eficiencia y un diseño innovador, adaptándose a las exigencias arquitectónicas más vanguardistas. Su estructura modular y sus diferentes opciones de fijación permiten configuraciones personalizadas que garantizan un resultado estético y funcional de alto nivel.
+        La nueva línea de fachadas ventiladas Dolcker TXT está diseñada para ofrecer versatilidad, eficiencia y un diseño innovador, adaptándose a las exigencias arquitectónicas más vanguardistas.
+        <br/>
+        Su estructura modular y sus diferentes opciones de fijación permiten configuraciones personalizadas que garantizan un resultado estético y funcional de alto nivel.
         </Text>
       </div>
       <VisualizadorNota {...propsVisualizador} />
-      <Text>
+      {/* <Text>
         <br />
-      </Text>
+      </Text> */}
     </StyledDolcker>
   );
 };

@@ -11,27 +11,54 @@ const VentajasTline = ({ id }) => {
       <Titulo>Ventajas del sistema Dolcker TXT</Titulo>
       <ImageWithCaption
         src={img1}
-        alt='Imagen de Ventajas 1'
-        caption=''
-        columnSpan='6'
+        alt="Imagen de Ventajas 1"
+        caption=""
+        columnSpan="6"
       />
       <Text>
-      Diseño, innovación y funcionalidad en un solo sistema para fachadas ventiladas.
+        Diseño, innovación y funcionalidad en un solo sistema para fachadas
+        ventiladas.
       </Text>
       <Listado>
-        <li>Fijación técnica mejorada: Adaptable a las necesidades estéticas y funcionales de cada proyecto.</li>
-        <li>Sistema de fijación mecánica: Opción de fijación oculta o vista combinada con fijación elástica.</li>
-        <li>Perfiles diseñados para un sistema de libre colocación, brindando flexibilidad total en el diseño.</li>
-        <li>Versatilidad dimensional: Piezas en múltiples tamaños, espesores de 6, 9, 11 y 14 mm, y despiece a medida.</li>
-        <li>Cámaras de hasta 20 cm, optimizando la eficiencia térmica y acústica.</li>
-        <li>Acabados premium: Piezas con canto oculto lacado y texturas mate, flamed y honed.</li>
-        <li>Montaje rápido y seguro, optimizando tiempos de instalación.</li>
-        <li>Creatividad sin límites: Sistema con múltiples formas de colocación, permitiendo diseños innovadores con volúmenes y paños únicos.</li>
-        <li>Perfilería personalizable: Lacado en colores RAL, imitaciones madera y opciones anodizadas.</li>
-        <li>Opciones de fijación: Colocación con grapa vista o grapa oculta, según el estilo del proyecto.</li>
+        <li>
+          <strong>Fijación técnica mejorada:</strong> Adaptable a las
+          necesidades estéticas y funcionales de cada proyecto.
+        </li>
+        <li>
+          <strong>Sistema de fijación mecánica:</strong> Opción de fijación
+          oculta o vista combinada con fijación elástica.
+        </li>
+        <li>
+          Perfiles diseñados para un <strong>sistema de libre colocación</strong>, brindando
+          flexibilidad total en el diseño.
+        </li>
+        <li>
+        <strong>Versatilidad dimensional:</strong> Piezas en múltiples tamaños, espesores de 6,
+          9, 11 y 14 mm, y despiece a medida.
+        </li>
+        <li>
+          Cámaras de hasta 20 cm, optimizando la <strong>eficiencia térmica y acústica.</strong>
+        </li>
+        <li>
+        <strong>Acabados premium:</strong> Piezas con canto oculto lacado y texturas mate,
+          flamed y honed.
+        </li>
+        <li><strong>Montaje rápido y seguro</strong>, optimizando tiempos de instalación.</li>
+        <li>
+        <strong>Creatividad sin límites:</strong> Sistema con múltiples formas de colocación,
+          permitiendo diseños innovadores con volúmenes y paños únicos.
+        </li>
+        <li>
+        <strong>Perfilería personalizable:</strong> Lacado en colores RAL, imitaciones madera y
+          opciones anodizadas.
+        </li>
+        <li>
+          <strong>Opciones de fijación:</strong> Colocación con grapa vista o grapa oculta,
+          según el estilo del proyecto.
+        </li>
       </Listado>
       <Text>
-      Más que un revestimiento, una solución que transforma la arquitectura.
+        Más que un revestimiento, una solución que transforma la arquitectura.
       </Text>
     </StyledVentajas>
   );
