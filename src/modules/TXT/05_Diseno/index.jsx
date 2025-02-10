@@ -1,6 +1,3 @@
-import { useState } from "react";
-import Cita from "../../../components/Cita";
-import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo, Titulo2 } from "../../../components/Titulos";
 import { COLORS } from "../../../global/GlobalStyles";
 import StyledDisenos from "./styles";
@@ -15,37 +12,15 @@ const imagenesGaleria = Object.keys(images).map((key) => ({
   thumbnail: images[key].default,
 }));
 
-import RotadorLeiva from "../../../components/Rotadores/Leiva/Rotador";
 import ranurado6 from "../../../assets/images/Diseno/Espesores/ranurado6mm.webp";
 import ranurado11 from "../../../assets/images/Diseno/Espesores/ranurado11mm.webp";
 import ranurado14 from "../../../assets/images/Diseno/Espesores/ranurado14.webp";
 const DisenosTline = ({ id }) => {
-  const ids = [
-    "ard",
-    "balm",
-    "bella",
-    "brun",
-    "byb",
-    "cap",
-    "cor",
-    "crom",
-    "dom",
-    "eter",
-    "grav",
-    "habi",
-    "han",
-    "inv",
-    "kur",
-    "nik",
-    "stone",
-    "stor",
-    "uni",
-  ];
 
-  const [serieActiva, setSerieActiva] = useState("");
+
   return (
     <>
-       <StyledGaleria id={id[0]} backgroundColor={COLORS.gray02}>
+      <StyledGaleria id={id[0]} backgroundColor={COLORS.gray02}>
         <Titulo>Diseño</Titulo>
         <StyledSlider className='Slider'>
           <ImageGallery
@@ -67,20 +42,57 @@ const DisenosTline = ({ id }) => {
           <img src={ranurado6} alt='' />
           <ul>
             <strong>TC 6 / 6 mm.</strong>
-            <li>Fachada</li>
+            <li>120x120 cm</li>
+            <li>160x160 cm</li>
+            <li>100x50 cm</li>
+            <li>100x50 cm</li>
+            <li>120x280 cm</li>
+            <li>Corte a medida</li><li>Fachada</li>
           </ul>
         </div>
         <div className='espesor espesor-2'>
-          <img src={ranurado11} alt='' />
+          <img src={ranurado6} alt='' />
           <ul>
-            <strong>TC 11 / 11 mm.</strong>
-            <li>Fachada</li>
+            <strong>TC 9 / 9 mm.</strong>
+            <li>120x60 cm</li>
+            <li>60x60 cm</li>
+            <li>75x150 cm</li>
+            <li>75x75 cm</li>
+            <li>100x100 cm</li>
+            <li>100x50 cm</li>
+            <li>90x90 cm</li>
+            <li>80x80 cm</li>
+            <li>90x45 cm</li>
+            <li>160x80 cm</li>
+            <li>160x160 cm</li>
+            <li>Corte a medida</li><li>Fachada</li>
           </ul>
         </div>
         <div className='espesor espesor-3'>
+          <img src={ranurado11} alt='' />
+          <ul>
+            <strong>TC 11 / 11 mm.</strong>
+            <li>60x60 cm</li>
+            <li>90x60 cm</li>
+            <li>80x80 cm</li>
+            <li>120x60 cm</li>
+            <li>100x50 cm</li>
+            <li>90x45 cm</li>
+            <li>Corte a medida</li>
+            <li>Fachada</li>
+          </ul>
+        </div>
+        <div className='espesor espesor-4'>
           <img src={ranurado14} alt='' />
           <ul>
             <strong>TC 14 / 14 mm.</strong>
+            <li>60x60 cm</li>
+            <li>90x60 cm</li>
+            <li>80x80 cm</li>
+            <li>120x60 cm</li>
+            <li>100x50 cm</li>
+            <li>90x45 cm</li>
+            <li>Corte a medida</li>
             <li>Fachada</li>
           </ul>
         </div>

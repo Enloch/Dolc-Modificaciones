@@ -77,6 +77,9 @@ const StyledDisenos = styled(Seccion)`
   .espesor-3 {
     grid-column: 9 / span 2;
   }
+  .espesor-4 {
+    grid-column: 11 / span 2;
+  }
 
   @media (max-width: ${TABLET_SIZE}) {
     > * {

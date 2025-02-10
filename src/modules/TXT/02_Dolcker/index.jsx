@@ -30,17 +30,10 @@ const DolckerTline = ({ id }) => {
         />
 
         <Text>
-        Un nuevo concepto en fachadas ventiladas.
+        Innovacion en fachadas ventiladas.
         <br/>
         <br/>
-        Con su innovador sistema de revestimiento  Dolcker combinado con perfiles de aluminio, Dolcker TX redefine el diseño arquitectónico, permitiendo:
-        <br/>
-        <br/>
-        Volúmenes personalizados que transforman la percepción del espacio
-        <br/>
-        Diferentes paños y dimensiones para jugar con formas y sombras únicas
-        <br/>
-        Total libertad creativa para diseñadores y técnicos
+        La nueva línea de fachadas ventiladas Dolcker TXT está diseñada para ofrecer versatilidad, eficiencia y un diseño innovador, adaptándose a las exigencias arquitectónicas más vanguardistas. Su estructura modular y sus diferentes opciones de fijación permiten configuraciones personalizadas que garantizan un resultado estético y funcional de alto nivel.
         </Text>
       </div>
       <VisualizadorNota {...propsVisualizador} />
