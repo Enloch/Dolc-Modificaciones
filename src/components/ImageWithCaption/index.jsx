@@ -22,7 +22,7 @@ const ImageWithCaption = ({
           src={src}
           alt={alt}
           onClick={onClickFunc}
-          // className={isGray ? "gray" : ""}
+          className={isGray ? "gray" : ""}
         />
       </StyledImageWithCaption>
     );
@@ -37,7 +37,7 @@ const ImageWithCaption = ({
         src={src}
         alt={alt}
         onClick={onClickFunc}
-        // className={isGray ? "gray" : ""}
+        className={isGray ? "gray" : ""}
       />
       <figcaption>{caption || "-"}</figcaption>
     </StyledImageWithCaption>

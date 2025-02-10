@@ -13,7 +13,7 @@ import {
   TABLET_SIZE,
   MOBILE_SIZE,
 } from "../../../global/GlobalStyles";
-import { column_5_span7,column_5_span6 } from "../../../styles/grid";
+import { column_5_span7, column_5_span6 } from "../../../styles/grid";
 
 export const StyledGaleria = styled(Seccion)`
   .Slider {
@@ -87,7 +87,7 @@ const StyledDisenos = styled(Seccion)`
     }
 
     ${(props) =>
-      props.isEspesores ? "grid-template-columns: repeat(3, 1fr);" : null}
+      props.isEspesores ? "grid-template-columns: repeat(4, 1fr);" : null}
     .rotador {
       grid-column: 1 / -1;
       height: 60vh;
@@ -103,6 +103,9 @@ const StyledDisenos = styled(Seccion)`
     .espesor-3 {
       grid-column: 3 / span 1;
     }
+    .espesor-4 {
+      grid-column: 4 / span 1;
+    }
   }
   @media (max-width: ${MOBILE_SIZE}) {
     > * {
@@ -116,15 +119,18 @@ const StyledDisenos = styled(Seccion)`
       height: 100vh;
     }
     .espesor-1 {
-      grid-column: 1 / span 1;
+      grid-column: 1 / -1;
     }
 
     .espesor-2 {
-      grid-column: 2 / span 1;
+      grid-column: 1 / -1;
     }
 
     .espesor-3 {
-      grid-column: 3 / span 1;
+      grid-column: 1 / -1;
+    }
+    .espesor-4 {
+      grid-column: 1 / -1;
     }
   }
   ${StyledVisualizadorVariaciones}, ${StyledVisualizadorRotador} {

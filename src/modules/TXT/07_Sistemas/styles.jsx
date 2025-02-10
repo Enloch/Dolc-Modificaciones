@@ -74,6 +74,9 @@ const StyledSistemas = styled(Seccion)`
     ${StyledGrid} {
         ${column_5_span8}
     }
+    ${LegendList} {
+        ${column_5_span8}
+    }
     ${Enlaces} {
         ${column_5_span8}
     }

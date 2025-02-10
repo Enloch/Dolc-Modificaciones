@@ -147,7 +147,7 @@ const SistemasTline = ({ id }) => {
       </StyledSistemas>
       <StyledSistemas id={id[3]}>
         <Titulo2>TXT-TC14<br />Leyenda</Titulo2>
-        <Text>
+       
           <LegendList>
             <p data-number="01">Muro de obra o de hormigón</p>
             <p data-number="02">Recubrimiento</p>
@@ -185,7 +185,7 @@ const SistemasTline = ({ id }) => {
             <p data-number="34">Tornillo autotaladrante cabeza plana</p>
             <p data-number="35">Cenefa decorativa</p>
           </LegendList>
-        </Text>
+       
       </StyledSistemas>
     </>
   );
