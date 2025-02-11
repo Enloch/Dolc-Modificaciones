@@ -11,49 +11,26 @@ import RotadorMatrix from "../../../components/Rotadores/Matrix/Rotador";
 import IndiceSeries from "./05_1_IndiceSeries";
 import Series from "./05_2_Series";
 const DisenosTline = ({ id }) => {
-  const ids = [
-    "ard",
-    "balm",
-    "bella",
-    "brun",
-    "byb",
-    "cap",
-    "cor",
-    "crom",
-    "dom",
-    "eter",
-    "grav",
-    "habi",
-    "han",
-    "inv",
-    "kur",
-    "nik",
-    "stone",
-    "stor",
-    "uni",
-  ];
-
-  const [serieActiva, setSerieActiva] = useState("");
-  return (
-    <>
-      <StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
-        <Titulo>Diseño</Titulo>
-        <ImageWithCaption src={img1} alt='Imagen de Diseños 1' columnSpan='6' />
-        <Cita
-          cita='Proporcionar arquitectura significativa no es parodiar la historia, sino articularla.'
-          author='Daniel Libeskind'
-          colorAutor={COLORS.gray05}
-        />
-      </StyledDisenos>
-      <IndiceSeries id={id[1]} queSerieActiva={setSerieActiva} />
-      <StyledDisenos id={id[2]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Configurador</Titulo2>
-        <div className='rotador'>
-          <RotadorMatrix />
-        </div>
-      </StyledDisenos>
-    </>
-  );
+	return (
+		<>
+			<StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
+				<Titulo>Diseño</Titulo>
+				<ImageWithCaption src={img1} alt="Imagen de Diseños 1" columnSpan="6" />
+				<Cita
+					cita="Proporcionar arquitectura significativa no es parodiar la historia, sino articularla."
+					author="Daniel Libeskind"
+					colorAutor={COLORS.gray04}
+				/>
+			</StyledDisenos>
+			<IndiceSeries id={id[1]} />
+			<StyledDisenos id={id[2]} backgroundColor={COLORS.gray01}>
+				<Titulo2>Configurador</Titulo2>
+				<div className="rotador">
+					<RotadorMatrix />
+				</div>
+			</StyledDisenos>
+		</>
+	);
 };
 
 export default DisenosTline;
