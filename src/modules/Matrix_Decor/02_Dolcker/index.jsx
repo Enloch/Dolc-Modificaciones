@@ -27,13 +27,35 @@ const DolckerTline = ({ id }) => {
 					alt="Imagen Dolcker 2"
 					caption="Sistema Matrix Decor con matrices de aluminio extruido."
 				/>
-
 				<Text>
-					SISTEMA MATRIX DECOR es un sistema de revestimiento de lamas de
-					aluminio para una colocacion cliplada de facil montaje. La gran
-					variedad de diseños, le confieren una gran versatilidad, para el
-					diseño de fachadas ventiladas, revestimientos interiores, paneles
-					decorativos.
+					SISTEMA MATRIX DECOR es un innovador sistema de revestimiento con
+					lamas de aluminio de instalación <strong>cliplada</strong>, que
+					garantiza un montaje rápido y eficiente.
+					<br />
+					<br />
+					Gracias a su <strong>gran variedad de diseños</strong>, MATRIX DECOR
+					ofrece una versatilidad excepcional para la creación de espacios
+					únicos en:
+					<br />
+					<br />
+					<strong>• Revestimientos interiores</strong>
+					<br />
+					<strong>• Paneles decorativos</strong>
+					<br />
+					<strong>• Baños, salones y portales</strong>
+					<br />
+					<strong>• Espacios comerciales y de oficina</strong>
+					<br />
+					<br />
+					<strong>Diseña sin límites</strong>
+					<br />
+					<br />
+					Elige entre una amplia gama de <strong>formas y colores</strong> para
+					personalizar cada detalle y transformar cualquier ambiente con un
+					estilo sofisticado y funcional.
+					<br />
+					<br />
+					Con SISTEMA MATRIX DECOR, el diseño se adapta a tu creatividad.
 				</Text>
 			</div>
 			<VisualizadorNota {...propsVisualizador} />
