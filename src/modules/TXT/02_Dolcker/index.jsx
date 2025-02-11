@@ -14,90 +14,87 @@ import { useState } from "react";
 import config from "../../../configs/configDolckerTXT";
 
 const DolckerTline = ({ id }) => {
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [selectedCaption, setSelectedCaption] = useState("");
+	const [selectedImage, setSelectedImage] = useState(null);
+	const [selectedCaption, setSelectedCaption] = useState("");
 
-  const openModal = (imageSrc, caption) => {
-    setSelectedImage(imageSrc);
-    setSelectedCaption(caption);
-  };
+	const openModal = (imageSrc, caption) => {
+		setSelectedImage(imageSrc);
+		setSelectedCaption(caption);
+	};
 
-  const closeModal = () => {
-    setSelectedImage(null);
-    setSelectedCaption("");
-  };
+	const closeModal = () => {
+		setSelectedImage(null);
+		setSelectedCaption("");
+	};
 
-  const propsVisualizador = {
-    text: "Pasa el ratón por los puntos para ver la información",
-    type: "normal",
-    indicadores: config,
-    imgBackground: img4,
-    alt: "Imagen de fondo con indicadores",
-  };
+	const propsVisualizador = {
+		text: "Pasa el ratón por los puntos para ver la información",
+		type: "normal",
+		indicadores: config,
+		imgBackground: img4,
+		alt: "Imagen de fondo con indicadores",
+	};
 
-  return (
-    <>
-      <Modal
-        isOpen={selectedImage !== null}
-        onClose={closeModal}
-        caption={selectedCaption}
-      >
-        <img src={selectedImage} alt="Ampliada" />
-      </Modal>
-      <StyledDolcker id={id} backgroundColor={COLORS.gray03}>
-        <Titulo>Dolcker TXT soluciona</Titulo>
-        <div className="dolcker-info">
-          <ImageWithCaption
-            src={img1}
-            alt="Imagen Dolcker 2"
-            caption="Sistema TXT 11"
-            onClickFunc={() => openModal(img1, "Sistema TXT 11")}
-          />
-          <ImageWithCaption
-            src={img2}
-            alt="Imagen Dolcker 2"
-            caption="Sistema TXT 12"
-            onClickFunc={() => openModal(img2, "Sistema TXT 12")}
-          />
-          <ImageWithCaption
-            src={img3}
-            alt="Imagen Dolcker 2"
-            caption="Sistema TXT 13"
-            onClickFunc={() => openModal(img3, "Sistema TXT 13")}
-          />
-          <Text>
-            Innovacion en fachadas ventiladas.
-            <br />
-            <br />
-            La nueva línea de fachadas ventiladas Dolcker TXT está diseñada para
-            ofrecer versatilidad, eficiencia y un diseño innovador, adaptándose
-            a las exigencias arquitectónicas más vanguardistas.
-            <br />
-            <br />
-            Su estructura modular y sus diferentes opciones de fijación permiten
-            configuraciones personalizadas que garantizan un resultado estético
-            y funcional de alto nivel.
-          </Text>
-          <Text>
-            • TXT 11 – Sistema modular estándar con perfiles de aluminio vistos
-            en secciones verticales continuas, proporcionando una estética
-            uniforme y ordenada.
-            <br />
-            <br />
-            • TXT 12 – Sistema modular estándar con perfiles de aluminio vistos
-            en secciones discontinuas, generando un efecto visual dinámico y
-            contemporáneo.
-            <br />
-            <br />• TXT 13 – Sistema con perfilería vertical de diferentes
-            secciones y volúmenes, ideal para configuraciones personalizadas que
-            aportan profundidad y carácter a la fachada.
-          </Text>
-        </div>
+	return (
+		<>
+			<Modal
+				isOpen={selectedImage !== null}
+				onClose={closeModal}
+				caption={selectedCaption}
+			>
+				<img src={selectedImage} alt="Ampliada" />
+			</Modal>
+			<StyledDolcker id={id} backgroundColor={COLORS.gray03}>
+				<Titulo>Dolcker TXT soluciona</Titulo>
+				<div className="dolcker-info">
+					<ImageWithCaption
+						src={img1}
+						alt="Imagen Dolcker 2"
+						caption="Sistema TXT 11"
+						onClickFunc={() => openModal(img1, "Sistema TXT 11")}
+					/>
+					<ImageWithCaption
+						src={img2}
+						alt="Imagen Dolcker 2"
+						caption="Sistema TXT 12"
+						onClickFunc={() => openModal(img2, "Sistema TXT 12")}
+					/>
+					<ImageWithCaption
+						src={img3}
+						alt="Imagen Dolcker 2"
+						caption="Sistema TXT 13"
+						onClickFunc={() => openModal(img3, "Sistema TXT 13")}
+					/>
+					<Text>
+						Innovacion en fachadas ventiladas.
+						<br />
+						<br />
+						La nueva línea de fachadas ventiladas Dolcker TXT está diseñada para
+						ofrecer versatilidad, eficiencia y un diseño innovador, adaptándose
+						a las exigencias arquitectónicas más vanguardistas.
+						<br />
+						<br />
+						Su estructura modular y sus diferentes opciones de fijación permiten
+						configuraciones personalizadas que garantizan un resultado estético
+						y funcional de alto nivel.
+					</Text>
+					<Text>
+						• TXT 11 – Fachadas con alineaciones de revestimiento diferenciadas,
+						destacando una junta vertical lacada en el color elegido por el
+						diseñador.
+						<br />
+						<br />
+						• TXT 12 – Fachadas diseñadas para resaltar volúmenes distintivos.
+						<br />
+						<br />• TXT 13 – Fachadas que incorporan perfiles estratégicos para
+						generar sombras y potenciar la volumetría.
+					</Text>
+				</div>
 
-        <VisualizadorNota {...propsVisualizador} />
-      </StyledDolcker>
-    </>
-  );
+				<VisualizadorNota {...propsVisualizador} />
+			</StyledDolcker>
+		</>
+	);
 };
 
 export default DolckerTline;

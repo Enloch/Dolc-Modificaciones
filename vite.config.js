@@ -6,11 +6,13 @@ export default defineConfig({
   plugins: [
     react({
       // Add this line
-
       include: "**/*.jsx",
     }),
   ],
   server: {
     host: true,
+  },
+  build: {
+    chunkSizeWarningLimit: 1600,
   },
 });
