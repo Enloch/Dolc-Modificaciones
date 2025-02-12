@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.33 8.59">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: .1px;
+      }
+    </style>
+  </defs>
+  <g id="_0" data-name="0">
+    <g>
+      <g id="LWPOLYLINE">
+        <path class="cls-1" d="m40.3,6.92v.33c0,.06.04.1.1.1h1.78c.06,0,.1.04.1.1v.43c0,.14-.11.25-.25.25h0c-.14,0-.25-.11-.25-.25v-.18h-1.75c-.06,0-.1-.04-.1-.1v-.3"/>
+      </g>
+      <g id="LWPOLYLINE-2" data-name="LWPOLYLINE">
+        <path class="cls-1" d="m22.55,3.97v3.85c0,.06.04.1.1.1h.36c.06,0,.1.04.1.1v.43c0,.06-.04.1-.1.1h-1.43c-.06,0-.1-.04-.1-.1v-.43c0-.06.04-.1.1-.1h.49c.06,0,.1-.04.1-.1v-3.99"/>
+      </g>
+      <g id="LWPOLYLINE-3" data-name="LWPOLYLINE">
+        <path class="cls-1" d="m7.02,6.92v.28c0,.06-.04.1-.1.1h-1.54c-.06,0-.1.04-.1.1v1.04c0,.06-.04.1-.1.1H.15c-.06,0-.1-.04-.1-.1v-.18c0-.06.04-.1.1-.1h1.05l.05.03.05-.03h3.51c.06,0,.1-.04.1-.1v-.66c0-.06-.04-.1-.1-.1h-1.74c-.06,0-.1-.04-.1-.1v-.18c0-.06.04-.1.1-.1h3.58"/>
+      </g>
+      <g id="POINT">
+        <line class="cls-1" x1="40.3" y1="6.92" x2="40.3" y2="6.92"/>
+      </g>
+      <g id="LWPOLYLINE-4" data-name="LWPOLYLINE">
+        <path class="cls-1" d="m6.64,6.92c0-1.17.3-2.33.87-3.35C9.36.26,13.55-.93,16.86.92c7.19,3.91,15.25,5.97,23.44,6"/>
+      </g>
+      <g id="LWPOLYLINE-5" data-name="LWPOLYLINE">
+        <path class="cls-1" d="m7.02,6.92c0-1.11.28-2.2.83-3.17C9.59.62,13.55-.5,16.68,1.25c1.78.97,3.61,1.82,5.49,2.57"/>
+      </g>
+      <g id="LWPOLYLINE-6" data-name="LWPOLYLINE">
+        <path class="cls-1" d="m22.55,3.97c5.55,2.14,11.43,3.27,17.37,3.33"/>
+      </g>
+    </g>
+  </g>
+</svg>

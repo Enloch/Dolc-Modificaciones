@@ -4,10 +4,10 @@ import StyledDolcker from "./styles";
 import { COLORS } from "../../../global/GlobalStyles";
 import img2 from "../../../assets/images/DolckerMatrixDecor/Dolcker/catalogo3-1-5.jpg";
 import img3 from "../../../assets/images/DolckerMatrixDecor/Dolcker/catalogo3-1-7.jpg";
-import VisualizadorNota from "../../../components/Tline/VisualizadorNota";
+import VisualizadorNota from "../../../components/Tline/VisualizadorTest";
 import Text from "../../../components/Text";
 
-import config from "../../../configs/configDolckerMatrix";
+import config from "../../../configs/configDolckerMatrixDecor";
 
 const DolckerTline = ({ id }) => {
 	const propsVisualizador = {

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Capa_2"
+   data-name="Capa 2"
+   viewBox="0 0 20.5 3.86"
+   version="1.1"
+   sodipodi:docname="matrix11_a.svg"
+   width="20.5"
+   height="3.8599999"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview12"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="52.877419"
+     inkscape:cx="19.375"
+     inkscape:cy="1.9384456"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Capa_2" />
+  <defs
+     id="defs1">
+    <style
+       id="style1">
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: .05px;
+      }
+    </style>
+  </defs>
+  <g
+     id="Capa_1-2"
+     data-name="Capa 1"
+     transform="translate(-0.005,0.005)">
+    <g
+       id="g12">
+      <polyline
+         class="cls-1"
+         points="12.26 .23 10.64 3.05 10.64 3.08 10.64 3.51 10.64 3.54 10.67 3.54 10.86 3.54 10.89 3.57 10.92 3.6 10.92 3.8 10.89 3.83 10.86 3.83 10.2 3.83 10.17 3.83 10.14 3.83 10.14 3.8 10.14 3.6 10.14 3.57 10.17 3.57 10.17 3.54 10.2 3.54 10.41 3.54 10.44 3.54 10.47 3.54 10.47 3.51 10.47 3.3 10.47 3.26 10.44 3.26 10.41 3.26 3 3.26 2.54 3.26 2.51 3.26 2.51 3.3 2.48 3.3 2.48 3.8 2.48 3.83 2.45 3.83 2.3 3.83 .05 3.83 .03 3.83 .03 3.8 .03 3.72 .03 3.69 .05 3.69 .05 3.66 .23 3.66 .57 3.66 .57 3.69 .6 3.66 2.28 3.66 2.3 3.66 2.3 3.63 2.3 3.3 2.3 3.26 2.28 3.26 1.44 3.26 1.41 3.26 1.41 3.23 1.41 3.2 1.41 3.11 1.41 3.08 1.44 3.08 3 3.08 10.41 3.08 10.44 3.08 10.44 3.05 12.17 .05"
+         id="polyline1" />
+      <polyline
+         class="cls-1"
+         points="13.98 .11 12.29 3 12.29 3.03 12.29 3.05 12.32 3.05 12.32 3.08 12.35 3.08 19.5 3.08 19.53 3.08 19.55 3.08 19.55 3.11 19.55 3.23 19.55 3.26 19.58 3.26 19.58 3.3 20.45 3.3 20.48 3.3 20.48 3.33 20.48 3.54 20.48 3.57 20.48 3.6 20.45 3.6 20.45 3.63 20.42 3.63 20.42 3.66 20.39 3.66 20.36 3.66"
+         id="polyline2" />
+      <polyline
+         class="cls-1"
+         points="13.67 .3 12.03 3.14 12.03 3.2 12.03 3.23 12.05 3.23 12.05 3.26 19.32 3.26 19.35 3.26 19.38 3.26 19.38 3.3 19.38 3.42 19.38 3.45 19.41 3.45 19.44 3.45 20.25 3.45 20.25 3.54 20.25 3.57 20.28 3.57 20.28 3.6 20.3 3.63 20.33 3.66 20.36 3.66"
+         id="polyline3" />
+      <path
+         class="cls-1"
+         d="m 12.19,0.03 c 0,0 -0.03,0 -0.04,0.02"
+         id="path3" />
+      <path
+         class="cls-1"
+         d="m 13.97,0.09 c 0,0 0,-0.03 0,-0.05 0,-0.01 -0.02,-0.02 -0.04,-0.02"
+         id="path4" />
+      <path
+         class="cls-1"
+         d="m 13.64,0.27 c 0,0 0,-0.03 0,-0.04 0,-0.01 -0.02,-0.02 -0.04,-0.02"
+         id="path5" />
+      <line
+         class="cls-1"
+         x1="12.2"
+         y1="0.050000001"
+         x2="13.95"
+         y2="0.050000001"
+         id="line5" />
+      <line
+         class="cls-1"
+         x1="12.32"
+         y1="0.23"
+         x2="13.61"
+         y2="0.23"
+         id="line6" />
+      <path
+         class="cls-1"
+         d="m 12.31,0.2 c 0,0 -0.03,0 -0.04,0.02"
+         id="path6" />
+    </g>
+  </g>
+</svg>
