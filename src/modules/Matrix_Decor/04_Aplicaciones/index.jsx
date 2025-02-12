@@ -14,7 +14,7 @@ import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 
 const imagesBaño = import.meta.globEager(
-	"../../../assets/images/GaleriaDecor/Baño/*"
+	"../../../assets/images/GaleriaDecor/Bano/*"
 );
 const imagesPortales = import.meta.globEager(
 	"../../../assets/images/GaleriaDecor/Portales/*"
@@ -37,21 +37,6 @@ const imagenesGaleriaEspacios = Object.keys(imagesEspacios).map((key) => ({
 	original: imagesEspacios[key].default,
 	thumbnail: imagesEspacios[key].default,
 }));
-const imagenesGaleria = [
-	{
-		original: "https://picsum.photos/id/1018/1000/600/",
-		thumbnail: "https://picsum.photos/id/1018/250/150/",
-	},
-	{
-		original: "https://picsum.photos/id/1015/1000/600/",
-		thumbnail: "https://picsum.photos/id/1015/250/150/",
-	},
-	{
-		original: "https://picsum.photos/id/1019/1000/600/",
-		thumbnail: "https://picsum.photos/id/1019/250/150/",
-	},
-];
-
 const AplicacionesTline = ({ id }) => {
 	return (
 		<>
