@@ -2,8 +2,8 @@ import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo } from "../../../components/Titulos";
 import StyledDolcker from "./styles";
 import { COLORS } from "../../../global/GlobalStyles";
-import img2 from "../../../assets/images/DolckerMatrix/Dolcker/catalogo3-1-5.jpg";
-import img3 from "../../../assets/images/DolckerMatrix/Dolcker/catalogo3-1-7.jpg";
+import img2 from "../../../assets/images/DolckerMatrixDecor/Dolcker/catalogo3-1-5.jpg";
+import img3 from "../../../assets/images/DolckerMatrixDecor/Dolcker/catalogo3-1-7.jpg";
 import VisualizadorNota from "../../../components/Tline/VisualizadorNota";
 import Text from "../../../components/Text";
 

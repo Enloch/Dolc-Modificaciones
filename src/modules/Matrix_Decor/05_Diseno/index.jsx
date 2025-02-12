@@ -4,7 +4,7 @@ import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo, Titulo2 } from "../../../components/Titulos";
 import { COLORS } from "../../../global/GlobalStyles";
 import StyledDisenos, { StyledGaleria, StyledSlider } from "./styles";
-import img1 from "../../../assets/images/DolckerMatrix/Diseno/catalogo3-1-14.jpg";
+import img1 from "../../../assets/images/DolckerMatrixDecor/Diseno/catalogo3-1-14.jpg";
 import fondo from "../../../assets/images/Diseno/Formato/fondo.webp";
 import indicadoresFormato from "../../../utils/indicadoresFormato";
 import RotadorMatrix from "../../../components/Rotadores/MatrixDecor/Rotador";
