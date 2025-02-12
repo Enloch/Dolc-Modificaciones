@@ -1,3 +1,4 @@
+import React from "react";
 import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo } from "../../../components/Titulos";
 import StyledVentajas from "./styles";

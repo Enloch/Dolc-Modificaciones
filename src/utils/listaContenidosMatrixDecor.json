@@ -1,66 +1,62 @@
 [
-  {
-    "title": "Inicio",
-    "link": "/"
-  },
-  {
-    "title": "Dolcker Matrix Decor soluciona",
-    "link": "#dolcker"
-  },
-  {
-    "title": "Ventajas del sistema Dolcker Matrix Decor",
-    "link": "#ventajas"
-  },
-  {
-    "title": "Aplicaciones",
-    "subList": [
-      {
-        "title": "Aplicaciones",
-        "link": "#aplicaciones"
-      },
-      {
-        "title": "Rehabilitación",
-        "link": "#rehabilitacion"
-      },
-      {
-        "title": "Obra nueva",
-        "subList": [
-          {
-            "title": "Obra nueva",
-            "link": "#obra-nueva"
-          },
-          {
-            "title": "Interiores",
-            "link": "#interiores"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "title": "Diseño",
-    "subList": [
-      {
-        "title": "Diseño",
-        "link": "#diseno"
-      },
-      {
-        "title": "Colecciones",
-        "link": "#colecciones"
-      },
-      {
-        "title": "Configurador",
-        "link": "#configurador"
-      }
-    ]
-  },
-  {
-    "title": "Características",
-    "subList": [
-      {
-        "title": "Características técnicas",
-        "link": "#caracteristicas-especiales"
-      }
-    ]
-  }
+	{
+		"title": "Inicio",
+		"link": "/"
+	},
+	{
+		"title": "Dolcker Matrix Decor soluciona",
+		"link": "#dolcker"
+	},
+	{
+		"title": "Ventajas del sistema Dolcker Matrix Decor",
+		"link": "#ventajas"
+	},
+	{
+		"title": "Aplicaciones",
+		"subList": [
+			{
+				"title": "Aplicaciones",
+				"link": "#aplicaciones"
+			},
+			{
+				"title": "Portales",
+				"link": "#portales"
+			},
+
+			{
+				"title": "Baño",
+				"link": "#bano"
+			},
+			{
+				"title": "Espacios",
+				"link": "#espacios"
+			}
+		]
+	},
+	{
+		"title": "Diseño",
+		"subList": [
+			{
+				"title": "Diseño",
+				"link": "#diseno"
+			},
+			{
+				"title": "Colecciones",
+				"link": "#colecciones"
+			},
+			{
+				"title": "Configurador",
+				"link": "#configurador"
+			}
+		]
+	},
+	{
+		"title": "Características",
+		"subList": [
+			{
+				"title": "Características técnicas",
+				"link": "#caracteristicas-especiales"
+			}
+		]
+	}
 ]
