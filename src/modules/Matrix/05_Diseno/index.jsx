@@ -10,7 +10,17 @@ import indicadoresFormato from "../../../utils/indicadoresFormato";
 import RotadorMatrix from "../../../components/Rotadores/Matrix/Rotador";
 import IndiceSeries from "./05_1_IndiceSeries";
 import Series from "./05_2_Series";
+import ImageGallery from "react-image-gallery";
+import { StyledGaleria, StyledSlider } from "./styles";
 const DisenosTline = ({ id }) => {
+	const imagesDiseño = import.meta.globEager(
+		"../../../assets/images/GaleriaMatrix/Diseño/*"
+	);
+	const imagenesGaleria = Object.keys(imagesDiseño).map((key) => ({
+		original: imagesDiseño[key].default,
+		thumbnail: imagesDiseño[key].default,
+	}));
+
 	return (
 		<>
 			<StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
@@ -22,6 +32,21 @@ const DisenosTline = ({ id }) => {
 					colorAutor={COLORS.gray04}
 				/>
 			</StyledDisenos>
+			<StyledGaleria id="galeria-interiores" backgroundColor={COLORS.gray02}>
+				<StyledSlider className="Slider">
+					<ImageGallery
+						items={imagenesGaleria}
+						showPlayButton={false}
+						showFullscreenButton={true}
+						showThumbnails={true}
+						autoPlay={true}
+						showBullets={true}
+						showNav={false}
+						lazyLoad={true}
+						slideDuration={450}
+					/>
+				</StyledSlider>
+			</StyledGaleria>
 			<IndiceSeries id={id[1]} />
 			<StyledDisenos id={id[2]} backgroundColor={COLORS.gray01}>
 				<Titulo2>Configurador</Titulo2>

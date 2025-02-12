@@ -10,8 +10,35 @@ import img4 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-
 import img5 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-13.jpg";
 import Cita from "../../../components/Cita";
 import ImageWithCaptionSlider from "../../../components/ImageWithCaptionSlider";
-
+import ImageGallery from "react-image-gallery";
+import { StyledGaleria, StyledSlider } from "./styles";
 const AplicacionesTline = ({ id }) => {
+	const imagesRehabilitar = import.meta.globEager(
+		"../../../assets/images/GaleriaMatrix/Rehabilitar/*"
+	);
+	const imagesObra = import.meta.globEager(
+		"../../../assets/images/GaleriaMatrix/Obra/*"
+	);
+	const imagesExterior = import.meta.globEager(
+		"../../../assets/images/GaleriaMatrix/Exterior/*"
+	);
+
+	const imagesGaleriaRehabilitar = Object.keys(imagesRehabilitar).map(
+		(key) => ({
+			original: imagesRehabilitar[key].default,
+			thumbnail: imagesRehabilitar[key].default,
+		})
+	);
+
+	const imagenesGaleriaObra = Object.keys(imagesObra).map((key) => ({
+		original: imagesObra[key].default,
+		thumbnail: imagesObra[key].default,
+	}));
+
+	const imagenesGaleriaExterior = Object.keys(imagesExterior).map((key) => ({
+		original: imagesExterior[key].default,
+		thumbnail: imagesExterior[key].default,
+	}));
 	return (
 		<>
 			<StyledAplicaciones
@@ -52,6 +79,21 @@ const AplicacionesTline = ({ id }) => {
 					colorAutor={COLORS.gray04}
 				/>
 			</StyledAplicaciones>
+			<StyledGaleria id="galeria-obra-nueva" backgroundColor={COLORS.gray01}>
+				<StyledSlider className="Slider">
+					<ImageGallery
+						items={imagesGaleriaRehabilitar}
+						showPlayButton={false}
+						showFullscreenButton={true}
+						showThumbnails={true}
+						autoPlay={true}
+						showBullets={true}
+						showNav={false}
+						lazyLoad={true}
+						slideDuration={450}
+					/>
+				</StyledSlider>
+			</StyledGaleria>
 			<StyledAplicaciones
 				id={id[2]}
 				backgroundColor={COLORS.gray01}
@@ -71,31 +113,49 @@ const AplicacionesTline = ({ id }) => {
 					colorAutor={COLORS.gray04}
 				/>
 			</StyledAplicaciones>
+			<StyledGaleria id="galeria-obra-nueva" backgroundColor={COLORS.gray01}>
+				<StyledSlider className="Slider">
+					<ImageGallery
+						items={imagenesGaleriaObra}
+						showPlayButton={false}
+						showFullscreenButton={true}
+						showThumbnails={true}
+						autoPlay={true}
+						showBullets={true}
+						showNav={false}
+						lazyLoad={true}
+						slideDuration={450}
+					/>
+				</StyledSlider>
+			</StyledGaleria>
 			<StyledAplicaciones
 				id={id[3]}
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.small}
 			>
 				<Titulo2 color={COLORS.gray08}>Exteriores</Titulo2>
-				<ImageWithCaptionSlider
-					images={[
-						{
-							src: img4,
-							alt: "Imagen de Aplicaciones 4",
-							caption:
-								"La originalidad consiste en el retorno al origen; así pues, original es aquello que vuelve a la simplicidad de las primeras soluciones”. Antonio Gaudí.",
-						},
-						{
-							src: img5, // Asegúrate de definir img5 en alguna parte de tu código
-							alt: "Imagen de Aplicaciones 5",
-							caption:
-								"La originalidad consiste en el retorno al origen; así pues, original es aquello que vuelve a la simplicidad de las primeras soluciones”. Antonio Gaudí.",
-						},
-						// ... puedes agregar más imágenes aquí
-					]}
+				<ImageWithCaption
+					src={img5}
+					alt="Imagen de Aplicaciones 1"
+					//   caption='Jorge dará la referencia o imágen.'
 					columnSpan="6"
 				/>
 			</StyledAplicaciones>
+			<StyledGaleria id="galeria-obra-nueva" backgroundColor={COLORS.gray01}>
+				<StyledSlider className="Slider">
+					<ImageGallery
+						items={imagenesGaleriaExterior}
+						showPlayButton={false}
+						showFullscreenButton={true}
+						showThumbnails={true}
+						autoPlay={true}
+						showBullets={true}
+						showNav={false}
+						lazyLoad={true}
+						slideDuration={450}
+					/>
+				</StyledSlider>
+			</StyledGaleria>
 		</>
 	);
 };

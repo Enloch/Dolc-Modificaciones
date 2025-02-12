@@ -7,7 +7,7 @@ const piezas = getDataFromModules(piezasImport);
 const config = [
 	{
 		top: "50%",
-		left: "22%",
+		left: "39%",
 		content: {
 			imgSrc: piezas[0],
 			title: "Esquina",
@@ -15,8 +15,8 @@ const config = [
 	},
 
 	{
-		top: "71%",
-		left: "32%",
+		top: "77%",
+		left: "75%",
 		content: {
 			imgSrc: piezas[1],
 			title: "Zocalo LED",
@@ -30,14 +30,22 @@ const config = [
 			title: "Matriz 1",
 		},
 	},
-	//   {
-	//     top: "70.3%",
-	//     left: "77.3%",
-	//     content: {
-	//       imgSrc: piezas[2],
-	//       title: "Esquina b",
-	//     },
-	//   },
+	{
+		top: "60%",
+		left: "25%",
+		content: {
+			imgSrc: piezas[3],
+			title: "Matriz 2",
+		},
+	},
+	{
+		top: "33%",
+		left: "33%",
+		content: {
+			imgSrc: piezas[4],
+			title: "LED Vertical",
+		},
+	},
 
 	// {
 	// 	top: "48%",
