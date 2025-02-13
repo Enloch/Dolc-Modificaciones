@@ -109,7 +109,7 @@ export const Landing = () => {
 												>
 													<StyledImagen src={image.src} alt={image.title} />
 												</a>
-												<StyledSubTexto>{image.subtitle}</StyledSubTexto>
+												{/* <StyledSubTexto>{image.subtitle}</StyledSubTexto> */}
 												<StyledTexto>{image.title}</StyledTexto>
 											</StyledImagenTexto>
 										))}

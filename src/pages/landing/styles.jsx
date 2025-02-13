@@ -178,9 +178,11 @@ export const LimiteSubtitulos = styled.div`
 	position: relative;
 	@media (min-width: 0px) {
 		flex-direction: column;
+		align-items: center;
 	}
 	@media (min-width: 900px) {
 		flex-direction: row;
+		align-items: flex-start;
 	}
 `;
 export const Subtitulo = styled.p`
@@ -206,6 +208,7 @@ export const Subtitulo = styled.p`
 export const Caja25Flex = styled.div`
 	box-sizing: border-box;
 	margin: 0;
+	display: flex;
 	flex-direction: row;
 	flex-basis: 25%;
 	flex-grow: 0;
@@ -217,6 +220,7 @@ export const Caja25Flex = styled.div`
 		flex-basis: 25%;
 		flex-grow: 0;
 		max-width: 25%;
+	
 	}
 
 	@media (min-width: 900px) {
@@ -246,7 +250,6 @@ export const Caja75Flex = styled.div`
 
 	/* flex-direction: row; */
 	flex-basis: 75%;
-	max-width: 75%;
 	/* padding-left: 16px; */
 	/* @media (min-width: 0px) {
     flex-basis: 100%;
@@ -421,26 +424,25 @@ export const ContSliderPequeño = styled.div`
 export const StyledImagenTexto = styled.div`
 	box-sizing: border-box;
 	margin: 0;
-	flex-direction: row;
-	flex-basis: 25%;
-	flex-grow: 0;
-	max-width: 25%;
-	padding-top: 16px;
-	padding-left: 16px;
-	max-width: none;
 	display: flex;
 	flex-direction: column;
+	row-gap: 8px;
+	flex-basis: 100%;
+	flex-grow: 0;
+	max-width: 95%;
+	padding-top: 16px;
+	padding-left: 16px;
 
 	@media (min-width: 600px) {
-		flex-basis: 25%;
+		flex-basis: 100%;
 		flex-grow: 0;
-		max-width: 100%;
+		max-width: 95%;
 	}
 
 	@media (min-width: 900px) {
-		flex-basis: 25%;
+		flex-basis: 100%;
 		flex-grow: 0;
-		max-width: 25%;
+		max-width: 100%;
 	}
 
 	@media (min-width: 1200px) {
@@ -489,7 +491,6 @@ export const StyledImagen = styled.img`
 `;
 
 export const StyledTexto = styled.p`
-	margin: 2% 0 0 0;
 	padding: 0;
 	text-align: left;
 	font-size: clamp(16px, 4vw, 18px);
