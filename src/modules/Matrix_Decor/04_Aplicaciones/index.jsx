@@ -4,7 +4,7 @@ import { COLORS, DISTANCES } from "../../../global/GlobalStyles";
 import StyledAplicaciones from "./styles";
 import img1 from "../../../assets/images/DolckerMatrixDecor/Aplicaciones/catalogo3-1-9.jpg";
 import img2 from "../../../assets/images/DolckerMatrixDecor/Aplicaciones/catalogo3-1-10.jpg";
-import logos from "../../../assets/images/DolckerMatrixDecor/Aplicaciones/logos.gif";
+import portales from "../../../assets/images/DolckerMatrixDecor/Aplicaciones/catalogo4-1-10.jpg";
 import img3 from "../../../assets/images/DolckerMatrixDecor/Aplicaciones/catalogo3-1-11.jpg";
 import img4 from "../../../assets/images/DolckerMatrixDecor/Aplicaciones/catalogo3-1-12.jpg";
 import img5 from "../../../assets/images/DolckerMatrixDecor/Aplicaciones/catalogo3-1-13.jpg";
@@ -67,7 +67,7 @@ const AplicacionesTline = ({ id }) => {
 			>
 				<Titulo2 color={COLORS.gray08}>Portales</Titulo2>
 				<ImageWithCaption
-					src={logos}
+					src={portales}
 					alt="Imagen de Aplicaciones 1"
 					caption=""
 					columnSpan="6"
@@ -134,23 +134,17 @@ const AplicacionesTline = ({ id }) => {
 				rowGap={DISTANCES.small}
 			>
 				<Titulo2 color={COLORS.gray08}>Espacios</Titulo2>
-				<ImageWithCaptionSlider
-					images={[
-						{
-							src: img4,
-							alt: "Imagen de Aplicaciones 4",
-							caption:
-								"La originalidad consiste en el retorno al origen; así pues, original es aquello que vuelve a la simplicidad de las primeras soluciones”. Antonio Gaudí.",
-						},
-						{
-							src: img5, // Asegúrate de definir img5 en alguna parte de tu código
-							alt: "Imagen de Aplicaciones 5",
-							caption:
-								"La originalidad consiste en el retorno al origen; así pues, original es aquello que vuelve a la simplicidad de las primeras soluciones”. Antonio Gaudí.",
-						},
-						// ... puedes agregar más imágenes aquí
-					]}
+				<ImageWithCaption
+					src={img4}
+					alt="Imagen de Aplicaciones 1"
+					//   caption='Jorge dará la referencia o imágen.'
 					columnSpan="6"
+				/>
+				<Cita
+					cita="La originalidad consiste en el retorno al origen; así pues, original es aquello que vuelve a la simplicidad de las primeras soluciones."
+					author="Antonio Gaudí"
+					colorCita={COLORS.gray08}
+					colorAutor={COLORS.gray04}
 				/>
 			</StyledAplicaciones>
 			<StyledGaleria id="galeria-interiores" backgroundColor={COLORS.gray01}>
