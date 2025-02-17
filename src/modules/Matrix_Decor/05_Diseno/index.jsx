@@ -38,7 +38,7 @@ const DisenosTline = ({ id }) => {
 						items={imagenesGaleria}
 						showPlayButton={false}
 						showFullscreenButton={true}
-						showThumbnails={true}
+						showThumbnails={false}
 						autoPlay={true}
 						showBullets={true}
 						showNav={false}

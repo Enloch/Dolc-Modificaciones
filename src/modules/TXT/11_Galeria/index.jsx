@@ -21,7 +21,7 @@ const Galeria = ({ id }) => {
             items={imagenesGaleria}
             showPlayButton={false}
             showFullscreenButton={false}
-            showThumbnails={true}
+            showThumbnails={false}
             autoPlay={true}
             showBullets={true}
             showNav={false}

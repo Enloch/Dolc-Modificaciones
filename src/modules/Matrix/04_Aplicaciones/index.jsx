@@ -85,7 +85,7 @@ const AplicacionesTline = ({ id }) => {
 						items={imagesGaleriaRehabilitar}
 						showPlayButton={false}
 						showFullscreenButton={true}
-						showThumbnails={true}
+						showThumbnails={false}
 						autoPlay={true}
 						showBullets={true}
 						showNav={false}
@@ -119,7 +119,7 @@ const AplicacionesTline = ({ id }) => {
 						items={imagenesGaleriaObra}
 						showPlayButton={false}
 						showFullscreenButton={true}
-						showThumbnails={true}
+						showThumbnails={false}
 						autoPlay={true}
 						showBullets={true}
 						showNav={false}
@@ -147,7 +147,7 @@ const AplicacionesTline = ({ id }) => {
 						items={imagenesGaleriaExterior}
 						showPlayButton={false}
 						showFullscreenButton={true}
-						showThumbnails={true}
+						showThumbnails={false}
 						autoPlay={true}
 						showBullets={true}
 						showNav={false}

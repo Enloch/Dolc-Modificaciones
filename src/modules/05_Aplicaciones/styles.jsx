@@ -2,13 +2,22 @@ import styled from "styled-components";
 import StyledCita from "../../components/Cita/styles";
 import StyledImageWithCaption from "../../components/ImageWithCaption/styles";
 import Seccion from "../../components/Seccion";
-import { Column6 } from "../../global/GlobalStyles";
-import { column_5_span6 } from "../../styles/grid";
+import { Column6, MOBILE_SIZE, TABLET_SIZE } from "../../global/GlobalStyles";
 
 export const StyledGaleria = styled(Seccion)`
 	.Slider {
-		${column_5_span6}
+		${Column6}
 	}
+		@media (max-width: ${TABLET_SIZE}) {
+			.Slider {
+				${Column6}
+			}
+		}
+		@media (max-width: ${MOBILE_SIZE}) {
+			.Slider {
+				${Column6}
+			}
+		}
 `;
 export const StyledSlider = styled.div`
 	.image-gallery-slide .image-gallery-image {

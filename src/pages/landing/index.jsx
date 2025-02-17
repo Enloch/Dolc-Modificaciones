@@ -24,7 +24,7 @@ import {
 } from "./styles";
 import { Titulo } from "../../components/Titulos";
 import System from "../../assets/images/Inicio/inicio.jpg";
-import Tline from "../../assets/images/DolckerTline/Aplicaciones/catalogo3-1-11.webp";
+import Tline from "../../assets/images/DolckerTline/tline.jpg";
 import Matrix from "../../assets/images/DolckerMatrix/facade.jpg";
 import Decor from "../..//assets/images/DolckerMatrixDecor/decor.jpg";
 import TXT from "../../assets/images/DolckerTXT/txt.jpg";

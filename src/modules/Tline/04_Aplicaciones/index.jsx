@@ -8,8 +8,19 @@ import img3 from "../../../assets/images/DolckerTline/Aplicaciones/catalogo3-1-1
 import img4 from "../../../assets/images/DolckerTline/Aplicaciones/catalogo3-1-12.webp";
 import img5 from "../../../assets/images/DolckerTline/arquitecto.webp";
 import Cita from "../../../components/Cita";
-
+import ImageGallery from "react-image-gallery";
+import { StyledGaleria, StyledSlider } from "./styles";
 const AplicacionesTline = ({ id }) => {
+  const imagesAplicaciones = import.meta.globEager(
+		"../../../assets/images/GaleriaTline/aplicaciones/*"
+	);
+	const imagesGaleriaAplicaciones = Object.keys(imagesAplicaciones).map(
+		(key) => ({
+			original: imagesAplicaciones[key].default,
+			thumbnail: imagesAplicaciones[key].default,
+		})
+	);
+
   return (
     <>
       <StyledAplicaciones
@@ -31,6 +42,21 @@ const AplicacionesTline = ({ id }) => {
           colorAutor={COLORS.gray04}
         />
       </StyledAplicaciones>
+      <StyledGaleria id="galeria-aplicaciones" backgroundColor={COLORS.gray02}>
+				<StyledSlider className="Slider">
+					<ImageGallery
+						items={imagesGaleriaAplicaciones}
+						showPlayButton={false}
+						showFullscreenButton={true}
+						showThumbnails={false}
+						autoPlay={true}
+						showBullets={false}
+						showNav={true}
+						lazyLoad={true}
+						slideDuration={450}
+					/>
+				</StyledSlider>
+			</StyledGaleria>
       <StyledAplicaciones
         id={id[1]}
         backgroundColor={COLORS.gray01}

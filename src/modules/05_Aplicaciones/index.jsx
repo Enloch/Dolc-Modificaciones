@@ -20,6 +20,17 @@ const Aplicaciones = ({ id }) => {
 			thumbnail: imagesRehabilitar[key].default,
 		})
 	);
+
+
+	const imagesobra = import.meta.globEager(
+		"../../assets/images/GaleriaSystem/obra/*"
+	);
+	const imagesGaleriaObra = Object.keys(imagesobra).map(
+		(key) => ({
+			original: imagesobra[key].default,
+			thumbnail: imagesobra[key].default,
+		})
+	);
 	return (
 		<>
 			<StyledAplicaciones
@@ -41,16 +52,16 @@ const Aplicaciones = ({ id }) => {
 					colorAutor={COLORS.gray04}
 				/>
 			</StyledAplicaciones>
-			<StyledGaleria id="galeria-obra-nueva" backgroundColor={COLORS.gray02}>
+			<StyledGaleria id="galeria-aplicaciones" backgroundColor={COLORS.gray02}>
 				<StyledSlider className="Slider">
 					<ImageGallery
 						items={imagesGaleriaRehabilitar}
 						showPlayButton={false}
 						showFullscreenButton={true}
-						showThumbnails={true}
+						showThumbnails={false}
 						autoPlay={true}
 						showBullets={false}
-						showNav={false}
+						showNav={true}
 						lazyLoad={true}
 						slideDuration={450}
 					/>
@@ -94,6 +105,21 @@ const Aplicaciones = ({ id }) => {
 					colorAutor={COLORS.gray04}
 				/>
 			</StyledAplicaciones>
+			<StyledGaleria id="galeria-obra-nueva" backgroundColor={COLORS.gray02}>
+				<StyledSlider className="Slider">
+					<ImageGallery
+						items={imagesGaleriaObra}
+						showPlayButton={false}
+						showFullscreenButton={true}
+						showThumbnails={false}
+						autoPlay={true}
+						showBullets={false}
+						showNav={true}
+						lazyLoad={true}
+						slideDuration={450}
+					/>
+				</StyledSlider>
+			</StyledGaleria>
 			<StyledAplicaciones
 				id={id[3]}
 				backgroundColor={COLORS.gray01}
