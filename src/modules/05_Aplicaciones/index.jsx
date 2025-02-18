@@ -2,9 +2,9 @@ import ImageWithCaption from "../../components/ImageWithCaption";
 import { Titulo, Titulo2, Titulo3 } from "../../components/Titulos";
 import { COLORS, DISTANCES } from "../../global/GlobalStyles";
 import StyledAplicaciones from "./styles";
-import img1 from "../../assets/images/Aplicaciones/catalogo3-1-9.webp";
+import img1 from "../../assets/images/Aplicaciones/catalogo3-1-9.jpg";
 import img2 from "../../assets/images/Aplicaciones/catalogo3-1-10.jpg";
-import img3 from "../../assets/images/Aplicaciones/catalogo3-1-11.webp";
+import img3 from "../../assets/images/Aplicaciones/catalogo3-1-11.jpg";
 import img4 from "../../assets/images/Aplicaciones/2.jpg";
 import img5 from "../../assets/images/Aplicaciones/catalogo3-1-13.webp";
 import Cita from "../../components/Cita";
@@ -105,7 +105,7 @@ const Aplicaciones = ({ id }) => {
 					colorAutor={COLORS.gray04}
 				/>
 			</StyledAplicaciones>
-			<StyledGaleria id="galeria-obra-nueva" backgroundColor={COLORS.gray02}>
+			<StyledGaleria id="galeria-obra-nueva" backgroundColor={COLORS.gray01}>
 				<StyledSlider className="Slider">
 					<ImageGallery
 						items={imagesGaleriaObra}
