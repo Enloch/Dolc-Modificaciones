@@ -23,25 +23,53 @@ const SistemasTline = ({ id }) => {
         <Titulo>Sistema constructivos</Titulo>
         <ImageWithCaption
           src={sistemas}
-          alt='Sistemas introducción'
-          caption=''
-          columnSpan='5'
+          alt="Sistemas introducción"
+          caption=""
+          columnSpan="5"
         />
         <Enlaces>
           <li>
             <a href={"#" + id[1]}>
               Sistema
               <br />
-              <strong>LINE</strong>
+              <strong>T-LINE</strong>
+            </a>
+          </li>
+          <li>
+            <a href={"#" + id[2]}>
+              Sistema
+              <br />
+              <strong>T-Line Clip 10</strong>
+            </a>
+          </li>
+          <li>
+            <a href={"#" + id[3]}>
+              Sistema
+              <br />
+              <strong>T-Line Clip 20</strong>
+            </a>
+          </li>
+          <li>
+            <a href={"#" + id[4]}>
+              Sistema
+              <br />
+              <strong>T-Line T10</strong>
+            </a>
+          </li>
+          <li>
+            <a href={"#" + id[5]}>
+              Sistema
+              <br />
+              <strong>T-Line T20</strong>
             </a>
           </li>
         </Enlaces>
       </StyledSistemas>
 
       <StyledSistemas id={id[1]}>
-        <Titulo2>LINE</Titulo2>
+        <Titulo2>T-Line T10</Titulo2>
         <Text>
-          El sistema DOLCKER LINE para fachadas de cerámica tipo dolcker es un
+          El sistema DOLCKER T-INE para fachadas de cerámica tipo dolcker es un
           sistema con perfilería de alta inercia y doble seguridad. Todos y cada
           uno de los elementos que componen este sistema están fabricados con
           materias primas de máxima calidad. Se trata de un sistema de fijación
@@ -94,6 +122,38 @@ const SistemasTline = ({ id }) => {
           columnSpan='8'
           isGray
         /> */}
+      </StyledSistemas>
+      <StyledSistemas id={id[2]}>
+        <Titulo2>T-Line Clip 10</Titulo2>
+        <Text>
+          Sistema de fachada compuesto por el perfil Dolcker Clip y un perfil
+          decorativo lacado, diseñado para su instalación mediante clipado en un
+          sistema de ranurado continuo.
+        </Text>
+      </StyledSistemas>
+      <StyledSistemas id={id[3]}>
+        <Titulo2>T-Line Clip 20:</Titulo2>
+        <Text>
+          Sistema de fachada con perfil Dolcker Clip y perfil decorativo lacado,
+          diseñado para fijación mediante clipado con anclaje de grapa vista,
+          proporcionando una solución estética y funcional.
+        </Text>
+      </StyledSistemas>
+      <StyledSistemas id={id[4]}>
+        <Titulo2>T-Line T10:</Titulo2>
+        <Text>
+          Perfil decorativo lacado fijado al sistema de fachada mediante
+          fijación mecánica oculta, garantizando un acabado limpio y sin
+          elementos visibles en la superficie.
+        </Text>
+      </StyledSistemas>
+      <StyledSistemas id={id[5]}>
+        <Titulo2>T-Line T20</Titulo2>
+        <Text>
+          Perfil decorativo lacado fijado al sistema de fachada con fijación
+          mecánica vista, ofreciendo una solución robusta y con un diseño
+          industrial moderno.
+        </Text>
       </StyledSistemas>
     </>
   );

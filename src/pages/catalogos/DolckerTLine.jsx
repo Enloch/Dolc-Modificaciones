@@ -60,7 +60,16 @@ const DolckerTline = () => {
 				]}
 			/>
 			<Caracteristicas id={["caracteristicas-especiales", "datos-tecnicos"]} />
-			<Sistemas id={["sistemas", "line"]} />
+			<Sistemas
+				id={[
+					"sistemas",
+					"t-line",
+					"t-line-clip-10",
+					"t-line-clip-20",
+					"t-line-t10",
+					"t-line-t20",
+				]}
+			/>
 			{/* <Descargas id='descargas' /> */}
 			<Final />
 			{showButton && (
