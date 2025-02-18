@@ -4,15 +4,15 @@ const piezas = getDataFromModules(piezasImport)
 
 const config = [
     {
-        top: '32%',
-        left: '62%',
+        top: '26%',
+        left: '64%',
         content: {
             imgSrc: piezas[4],
             title: 'Recercos',
         },
     },
     {
-        top: '8%',
+        top: '13%',
         left: '32%',
         content: {
             imgSrc: piezas[6],
@@ -20,7 +20,7 @@ const config = [
         },
     },
     {
-        top: '50%',
+        top: '48%',
         left: '77.3%',
         content: {
             imgSrc: piezas[3],
@@ -35,24 +35,24 @@ const config = [
             title: 'Esquina cerámica',
         },
     },
+    // {
+    //     top: '23%',
+    //     left: '89%',
+    //     content: {
+    //         imgSrc: piezas[5],
+    //         title: 'Rejilla techo',
+    //     },
+    // },
+    // {
+    //     top: '95%',
+    //     left: '33%',
+    //     content: {
+    //         imgSrc: piezas[0],
+    //         title: 'Arranque',
+    //     },
+    // },
     {
-        top: '23%',
-        left: '89%',
-        content: {
-            imgSrc: piezas[5],
-            title: 'Rejilla techo',
-        },
-    },
-    {
-        top: '95%',
-        left: '33%',
-        content: {
-            imgSrc: piezas[0],
-            title: 'Arranque',
-        },
-    },
-    {
-        top: '56%',
+        top: '54.5%',
         left: '50%',
         content: {
             imgSrc: piezas[1],
