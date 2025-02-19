@@ -3,8 +3,8 @@ import { Titulo } from '../../../components/Titulos';
 import StyledDolcker from './styles';
 import { COLORS } from '../../../global/GlobalStyles';
 
-import img2 from '../../../assets/images/T5/Dolcker/catalogo3-1-5.webp';
-import img3 from '../../../assets/images/DolckerTline/arquitecto.webp';
+import img2 from '../../../assets/images/Dolcker/catalogo3-1-5.webp';
+import img3 from '../../../assets/images/T5/Dolcker/catalogo3-1-7.jpg';
 import VisualizadorNota from '../../../components/VisualizadorNota';
 import Text from '../../../components/Text';
 
@@ -30,10 +30,15 @@ const Dolcker = ({ id }) => {
 '
         />
         <Text>
-          El sistema Dolcker T5 está diseñado para ofrecer fachadas ventiladas
-          de alta calidad, combinando eficiencia energética, resistencia y estética. Su
-          tecnología de fijación química combinada con grapas ofrece soluciones adaptadas a
-          diferentes requerimientos arquitectónicos, garantizando seguridad y durabilidad.
+          Dolcker T5 XL Porcelánico: innovación y diseño para fachadas ventiladas de última
+          generación.
+          <br />
+          <br />
+          El sistema Dolcker T5 XL Porcelánico está diseñado para ofrecer fachadas
+          ventiladas de alta calidad, combinando eficiencia energética, resistencia y
+          estética. Su tecnología de fijación química combinada con grapas ofrece soluciones
+          adaptadas a diferentes requerimientos arquitectónicos, garantizando seguridad y
+          durabilidad.
         </Text>
       </div>
       <VisualizadorNota {...propsVisualizador} />

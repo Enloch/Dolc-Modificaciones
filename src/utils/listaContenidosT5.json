@@ -4,12 +4,33 @@
     "link": "/"
   },
   {
-    "title": "Dolcker T5 soluciona",
+    "title": "Dolcker T5 XL PORCELANICO soluciona",
     "link": "#dolcker"
   },
   {
-    "title": "Ventajas del sistema Dolcker T5",
+    "title": "Ventajas del sistema Dolcker T5 XL PORCELANICO",
     "link": "#ventajas"
+  },
+  {
+    "title": "Sistemas",
+    "subList": [
+      {
+        "title": "Sistemas",
+        "link": "#sistemas"
+      },
+      {
+        "title": "T5 GO",
+        "link": "#t5-go"
+      },
+      {
+        "title": "T5 GV",
+        "link": "#t5-gv"
+      },
+      {
+        "title": "T5 PLUS",
+        "link": "#t5-plus"
+      }
+    ]
   },
   {
     "title": "Aplicaciones",
@@ -171,31 +192,6 @@
       {
         "title": "Datos técnicos",
         "link": "#datos-tecnicos"
-      }
-    ]
-  },
-  {
-    "title": "Sistemas",
-    "subList": [
-      {
-        "title": "Sistemas",
-        "link": "#sistemas"
-      },
-      {
-        "title": "Dolcker & Clip",
-        "link": "#dolcker-and-clip"
-      },
-      {
-        "title": "Dol-TC11",
-        "link": "#dol-tc11"
-      },
-      {
-        "title": "Dol-TC14",
-        "link": "#dol-tc14"
-      },
-      {
-        "title": "Dol-HC20",
-        "link": "#dol-hc20"
       }
     ]
   },

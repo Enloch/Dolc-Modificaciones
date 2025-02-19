@@ -29,7 +29,7 @@ import Matrix from "../../assets/images/DolckerMatrix/facade.jpg";
 import Decor from "../..//assets/images/DolckerMatrixDecor/decor.jpg";
 import TXT from "../../assets/images/DolckerTXT/txt.jpg";
 import Navbar from "../../components/Menu";
-
+import T5 from "../../assets/images/T5/IMG_3280.jpg";
 export const Landing = () => {
 	const imageData = [
 		{
@@ -63,6 +63,12 @@ export const Landing = () => {
 			title: "Dolcker TXT",
 			subtitle: "Solución modular de diseño para fachadas ventiladas",
 			link: "dolcker-txt",
+		},
+		{
+			src: T5,
+			title: "Dolcker T5 XL Porcelánico",
+			subtitle: "Sistema de fachada ventilada con perfilería de aluminio",
+			link: "dolcker-t5",
 		},
 	];
 

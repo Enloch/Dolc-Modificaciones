@@ -39,7 +39,7 @@ const Indice = ({ indiceRef }) => {
   return (
     <>
       <StyledIndice backgroundColor={COLORS.gray06} ref={indiceRef} id='indice'>
-        <Titulo color={COLORS.gray01}>Dolcker XL Porcelánico</Titulo>
+        <Titulo color={COLORS.gray01}>Dolcker T5 XL Porcelánico</Titulo>
         <ListaContenidos />
         <AnimatedArrow
           size={32}
