@@ -17,29 +17,92 @@ const Ventajas = ({ id }) => {
         columnSpan='6'
       />
       <Text>
-        Dispone de un desarrollo técnico de fijación química combinada con grapas para
-        fachadas mejorado, para adaptarse tanto a las necesidades estéticas como funcionales
-        del proyecto.
+        Ventajas del Sistema de Fachadas Ventiladas y T5 con Revestimientos de Porcelánico
+        de Gran Formato
+        <br />
+        <br />
+        Las fachadas ventiladas con revestimientos de porcelánico de gran formato ofrecen
+        una solución innovadora y altamente eficiente para la construcción y rehabilitación
+        de edificios. La combinación con sistemas de fijación química optimiza la
+        instalación y el rendimiento del sistema, proporcionando beneficios clave en
+        términos de durabilidad, eficiencia energética y diseño.
       </Text>
       <Listado>
+        <strong>Máxima Durabilidad</strong>
+        <br />
+        <br />
+        El porcelánico de gran formato, combinado con un sistema de fijación química,
+        garantiza una resistencia superior a los impactos, agentes químicos y condiciones
+        climáticas extremas. Gracias a su baja porosidad, el material es altamente
+        resistente a la humedad, la radiación UV y los cambios bruscos de temperatura,
+        evitando degradación, fisuras o desprendimientos a lo largo del tiempo
+        <br />
+        <br />
+        <li>Inmunidad frente a productos químicos agresivos y contaminación ambiental.</li>
         <li>
-          <strong>Máxima durabilidad:</strong> Resistencia a impactos, agentes químicos y
-          climatología adversa.
+          Comportamiento óptimo en zonas con climas extremos (altas temperaturas, heladas,
+          lluvias ácidas, etc.).
         </li>
+      </Listado>
+      <Listado>
+        <strong>Eficiencia Energética</strong>
+        <br />
+        <br />
+        El sistema de fachada ventilada crea una cámara de aire que mejora el aislamiento
+        térmico y acústico del edificio. Este efecto reduce la transmisión de calor en
+        verano y minimiza las pérdidas térmicas en invierno, optimizando el consumo
+        energético y mejorando el confort interior.
+        <br />
+        <br />
         <li>
-          <strong>Eficiencia energética:</strong> Contribuye al aislamiento térmico y
-          acústico del edificio.
+          Contribución a la sostenibilidad y eficiencia del edificio, alineándose con
+          estándares de construcción ecológica.
         </li>
+      </Listado>
+      <Listado>
+        <strong>Versatilidad de Diseño</strong>
+        <br />
+        <br />
+        El porcelánico de gran formato está disponible en una amplia variedad de acabados,
+        colores y texturas, permitiendo diseñar fachadas modernas y sofisticadas. Su
+        capacidad de imitar materiales naturales como piedra, madera o mármol ofrece una
+        estética premium sin comprometer la durabilidad y el mantenimiento.
+        <br />
+        <br />
         <li>
-          <strong>Versatilidad de diseño:</strong> Gran variedad de acabados y formatos.
+          Diversidad de formatos y espesores que se adaptan a distintas soluciones
+          arquitectónicas.
         </li>
+        <li>Posibilidad de personalización según los requerimientos del proyecto.</li>
+        <li>Acabados de alta gama con un impacto visual atractivo y elegante.</li>
+      </Listado>
+      <Listado>
+        <strong>Montaje Rápido y Seguro</strong>
+        <br />
+        <br />
+        La fijación química permite una instalación eficiente, evitando perforaciones y
+        reduciendo los tiempos de montaje. Además, garantiza una adhesión homogénea y
+        segura, minimizando riesgos de desprendimiento y ofreciendo una solución
+        estructuralmente estable.
+        <br />
+        <br />
+        <li>Sistemas de fijación adaptados a cada necesidad y tipo de proyecto.</li>
+        <li>Menor tiempo de instalación en comparación con sistemas tradicionales.</li>
+      </Listado>
+      <Listado>
+        <strong>Bajo Mantenimiento</strong>
+        <br />
+        <br />
+        El porcelánico es un material de fácil limpieza y alta resistencia al paso del
+        tiempo. No requiere tratamientos especiales ni repintados periódicos, lo que reduce
+        los costos de mantenimiento a largo plazo.
+        <br />
+        <br />
+        <li>Superficie no porosa que evita la acumulación de suciedad y moho.</li>
+        <li>Fácil limpieza con agua y detergentes neutros.</li>
         <li>
-          <strong>Montaje rápido y seguro:</strong> Diferentes opciones de fijación
-          adaptadas a cada necesidad.
-        </li>
-        <li>
-          <strong>Bajo mantenimiento: </strong>Fácil limpieza y resistencia al paso del
-          tiempo.
+          Mantenimiento prácticamente nulo, conservando su estética y funcionalidad durante
+          décadas.
         </li>
       </Listado>
     </StyledVentajas>

@@ -12,27 +12,6 @@
     "link": "#ventajas"
   },
   {
-    "title": "Sistemas",
-    "subList": [
-      {
-        "title": "Sistemas",
-        "link": "#sistemas"
-      },
-      {
-        "title": "T5 GO",
-        "link": "#t5-go"
-      },
-      {
-        "title": "T5 GV",
-        "link": "#t5-gv"
-      },
-      {
-        "title": "T5 PLUS",
-        "link": "#t5-plus"
-      }
-    ]
-  },
-  {
     "title": "Aplicaciones",
     "subList": [
       {
@@ -192,6 +171,27 @@
       {
         "title": "Datos técnicos",
         "link": "#datos-tecnicos"
+      }
+    ]
+  },
+  {
+    "title": "Sistemas",
+    "subList": [
+      {
+        "title": "Sistemas",
+        "link": "#sistemas"
+      },
+      {
+        "title": "T5 GO",
+        "link": "#t5-go"
+      },
+      {
+        "title": "T5 GV",
+        "link": "#t5-gv"
+      },
+      {
+        "title": "T5 PLUS",
+        "link": "#t5-plus"
       }
     ]
   },

@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components";
-import { DISTANCES, GRID, TextSmall } from "../../global/GlobalStyles";
-import { column_3_span2, column_1_span2 } from "../../styles/gridFinal";
-import { mediaQueryTablet } from "../../styles/sizes";
+import styled, { css } from 'styled-components';
+import { DISTANCES, GRID, TextSmall } from '../../global/GlobalStyles';
+import { column_3_span2, column_1_span2 } from '../../styles/gridFinal';
+import { mediaQueryTablet } from '../../styles/sizes';
 
 const StyledAnotacion = styled.div`
   ${column_1_span2}
@@ -14,7 +14,7 @@ const StyledAnotacion = styled.div`
 
   ${TextSmall}
 
-  cursor: ${({ onClick }) => (onClick !== undefined ? "pointer" : "default")};
+  cursor: ${({ onClick }) => (onClick !== undefined ? 'pointer' : 'default')};
 
   img {
     position: absolute;
