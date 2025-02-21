@@ -1,63 +1,77 @@
-import React, { useRef, useState, useEffect } from 'react';
-import MultipleOptionsProvider from '../../contexts/MultipleOptionsContext';
-import styled from 'styled-components';
+import React, { useRef, useState, useEffect } from "react";
+import MultipleOptionsProvider from "../../contexts/MultipleOptionsContext";
+import styled from "styled-components";
 import {
-  AplicacionesT5 as Aplicaciones,
-  CaracteristicasT5 as Caracteristicas,
-  DescargasT5 as Descargas,
-  DisenosT5 as Disenos,
-  DolckerT5 as Dolcker,
-  Final,
-  IndiceT5 as Indice,
-  SistemasT5 as Sistemas,
-  VentajasT5 as Ventajas,
-} from '../../modules';
+	AplicacionesT5 as Aplicaciones,
+	CaracteristicasT5 as Caracteristicas,
+	DescargasT5 as Descargas,
+	DisenosT5 as Disenos,
+	DolckerT5 as Dolcker,
+	Final,
+	IndiceT5 as Indice,
+	SistemasT5 as Sistemas,
+	VentajasT5 as Ventajas,
+} from "../../modules";
 
 const DolckerT5 = () => {
-  const indiceRef = useRef();
-  const [showButton, setShowButton] = useState(false);
+	const indiceRef = useRef();
+	const [showButton, setShowButton] = useState(false);
 
-  const handleGoToIndice = () => {
-    indiceRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
+	const handleGoToIndice = () => {
+		indiceRef.current.scrollIntoView({ behavior: "smooth" });
+	};
 
-  const handleScroll = () => {
-    const scrollTop = window.scrollY;
-    const dolckerOffsetTop = document.getElementById('dolcker').offsetTop;
-    setShowButton(scrollTop > dolckerOffsetTop);
-  };
+	const handleScroll = () => {
+		const scrollTop = window.scrollY;
+		const dolckerOffsetTop = document.getElementById("dolcker").offsetTop;
+		setShowButton(scrollTop > dolckerOffsetTop);
+	};
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
 
-  return (
-    <MultipleOptionsProvider>
-      <Indice id='indice' indiceRef={indiceRef} />
-      <Dolcker id='dolcker' />
-      <Ventajas id='ventajas' />
-      <Aplicaciones
-        id={['aplicaciones', 'rehabilitacion', 'obra-nueva', 'fachadas', 'terrazas']}
-      />
-      <Disenos
-        id={['diseno', 'formato', 'despiece', 'acabados', 'espesores', 'piezas', 'series']}
-      />
-      <Caracteristicas id={['caracteristicas-especiales', 'datos-tecnicos']} />
-      <Sistemas id={['sistemas', 't5-go', 't5-gv', 't5-plus']} />
-      <Descargas id='descargas' />
-      <Final />
-      {showButton && (
-        <StyledButton onClick={handleGoToIndice}>
-          <span role='img' aria-label='up arrow'>
-            &#8593;
-          </span>
-        </StyledButton>
-      )}
-    </MultipleOptionsProvider>
-  );
+	return (
+		<MultipleOptionsProvider>
+			<Indice id="indice" indiceRef={indiceRef} />
+			<Dolcker id="dolcker" />
+			<Ventajas id="ventajas" />
+			<Aplicaciones
+				id={[
+					"aplicaciones",
+					"rehabilitacion",
+					"obra-nueva",
+					"fachadas",
+					"terrazas",
+				]}
+			/>
+			<Disenos
+				id={[
+					"diseno",
+					"formato",
+					"despiece",
+					"acabados",
+					"espesores",
+					"piezas",
+					"series",
+				]}
+			/>
+			<Caracteristicas id={["caracteristicas-especiales", "datos-tecnicos"]} />
+			<Sistemas id={["sistemas", "t5-go", "t5-gv", "t5-plus"]} />
+			<Descargas id="descargas" />
+			<Final />
+			{showButton && (
+				<StyledButton onClick={handleGoToIndice}>
+					<span role="img" aria-label="up arrow">
+						&#8593;
+					</span>
+				</StyledButton>
+			)}
+		</MultipleOptionsProvider>
+	);
 };
 
 export default DolckerT5;
