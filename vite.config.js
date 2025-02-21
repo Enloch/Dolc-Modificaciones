@@ -6,7 +6,7 @@ export default defineConfig({
 	plugins: [
 		react({
 			// Add this line
-			include: "**/*.{jsx,svg,png,jpg,gif}",
+			include: "**/*.{jsx,svg,png,jpg,gif,webp}",
 		}),
 	],
 	server: {
