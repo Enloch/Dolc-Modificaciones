@@ -21,7 +21,7 @@ const Dolcker = ({ id }) => {
 
 	return (
 		<StyledDolcker id={id} backgroundColor={COLORS.gray03}>
-			<Titulo>Dolcker T5 XL PORCELÁNICO soluciona</Titulo>
+			<Titulo>Dolcker T5 XL soluciona</Titulo>
 			<div className="dolcker-info">
 				<ImageWithCaption
 					src={img2}
@@ -30,8 +30,8 @@ const Dolcker = ({ id }) => {
 "
 				/>
 				<Text>
-					Dolcker T5 XL Porcelánico: innovación y diseño para fachadas
-					ventiladas de última generación.
+					Dolcker T5 XL: innovación y diseño para fachadas ventiladas de última
+					generación.
 					<br />
 					<br />
 					El <strong>Sistema DOL-T5 XL</strong> es una solución avanzada para

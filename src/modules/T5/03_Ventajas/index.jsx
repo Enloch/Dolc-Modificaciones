@@ -9,7 +9,7 @@ import Listado from "../../../components/Listado";
 const Ventajas = ({ id }) => {
 	return (
 		<StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-			<Titulo>Ventajas del sistema Dolcker T5 XL Porcelánico</Titulo>
+			<Titulo>Ventajas del sistema Dolcker T5 XL</Titulo>
 			<ImageWithCaption
 				src={img1}
 				alt="Imagen de Ventajas 1"

@@ -63,7 +63,7 @@ const Aplicaciones = ({ id }) => {
 				</StyledSlider>
 			</StyledGaleria>
 			<StyledGaleria id="galeria-decor" backgroundColor={COLORS.gray02s}>
-				<Titulo color={COLORS.gray08}>T5 XL PORCELANICO DECOR</Titulo>
+				<Titulo color={COLORS.gray08}>T5 XL DECOR</Titulo>
 				<StyledSlider className="Slider">
 					<ImageGallery
 						items={imagenesDeco}
