@@ -13,9 +13,7 @@ import VisualizadorRotador from "../../../components/VisualizadorRotador";
 import config from "../../../configs/configPiezasEspeciales";
 import configAcabados from "../../../configs/configAcabados";
 import Series from "./05_2_Series";
-import ranurado11 from "../../../assets/images/DolckerTline/ranurado11mm.webp";
-import ranurado14 from "../../../assets/images/DolckerTline/ranurado11mm.webp";
-import ranurado20 from "../../../assets/images/DolckerTline/ranurado11mm.webp";
+import ranurado5 from "../../../assets/images/T5/Diseno/Espesores/Dolcker_espesor_6mm.jpg";
 import VisualizadorDesplazador from "../../../components/VisualizadorDesplazador";
 import Text from "../../../components/Text";
 import IndiceSeries from "./05_1_IndiceSeries";
@@ -79,29 +77,9 @@ const Disenos = ({ id }) => {
 			<StyledDisenos id={id[4]} backgroundColor={COLORS.gray01} isEspesores>
 				<Titulo2>Espesores</Titulo2>
 				<div className="espesor espesor-1">
-					<img src={ranurado11} alt="" />
+					<img src={ranurado5} alt="" />
 					<ul>
-						<strong>TC 9 / 9 mm.</strong>
-						<li>Suelo</li>
-						<li>Techo</li>
-						<li>Fachada</li>
-						<li>Recerco</li>
-					</ul>
-				</div>
-				<div className="espesor espesor-2">
-					<img src={ranurado14} alt="" />
-					<ul>
-						<strong>TC 10 / 10 mm.</strong>
-						<li>Suelo</li>
-						<li>Techo</li>
-						<li>Fachada</li>
-						<li>Recerco</li>
-					</ul>
-				</div>
-				<div className="espesor espesor-3">
-					<img src={ranurado20} alt="" />
-					<ul>
-						<strong>TC 11 / 11 mm.</strong>
+						<strong>TC 5 / 5 mm.</strong>
 						<li>Suelo</li>
 						<li>Techo</li>
 						<li>Fachada</li>
