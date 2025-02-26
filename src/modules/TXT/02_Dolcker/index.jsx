@@ -4,7 +4,7 @@ import StyledDolcker from "./styles";
 import { COLORS } from "../../../global/GlobalStyles";
 import img1 from "../../../assets/images/DolckerTXT/Dolcker/catalogo3-1-4.jpg";
 import img2 from "../../../assets/images/DolckerTXT/Dolcker/catalogo3-1-5.jpg";
-import img3 from "../../../assets/images/DolckerTXT/Dolcker/catalogo3-1-6.jpg";
+import img3 from "../../../assets/images/DolckerTXT/Dolcker/catalogo3-1-6 copia.jpg";
 import img4 from "../../../assets/images/DolckerTXT/Dolcker/catalogo3-1-7.jpg";
 import VisualizadorNota from "../../../components/TXT/VisualizadorNota";
 import Text from "../../../components/Text";
@@ -48,10 +48,10 @@ const DolckerTline = ({ id }) => {
 				<Titulo>Dolcker TXT soluciona</Titulo>
 				<div className="dolcker-info">
 					<ImageWithCaption
-						src={img1}
+						src={img3}
 						alt="Imagen Dolcker 2"
 						caption="Sistema TXT 11"
-						onClickFunc={() => openModal(img1, "Sistema TXT 11")}
+						onClickFunc={() => openModal(img3, "Sistema TXT 11")}
 					/>
 					<ImageWithCaption
 						src={img2}
@@ -60,10 +60,10 @@ const DolckerTline = ({ id }) => {
 						onClickFunc={() => openModal(img2, "Sistema TXT 12")}
 					/>
 					<ImageWithCaption
-						src={img3}
+						src={img1}
 						alt="Imagen Dolcker 2"
 						caption="Sistema TXT 13"
-						onClickFunc={() => openModal(img3, "Sistema TXT 13")}
+						onClickFunc={() => openModal(img1, "Sistema TXT 13")}
 					/>
 					<Text>
 						Innovacion en fachadas ventiladas.
