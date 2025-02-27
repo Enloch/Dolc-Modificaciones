@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Text from "../../../components/Text";
 import { Titulo, Titulo2 } from "../../../components/Titulos";
 import StyledSistemas, { Enlaces } from "./styles";
@@ -15,8 +16,23 @@ import tc142 from "../../../assets/images/DolckerTline/detalles.jpg";
 import hc201 from "../../../assets/images/DolckerTline/detalles.jpg";
 import hc202 from "../../../assets/images/DolckerTline/detalles.jpg";
 import ImageWithCaption from "../../../components/ImageWithCaption";
-
+import IMG1 from "../../../assets/images/GaleriaT5/inicio/Detalles tecnicos web T5 XL GO_WEB.jpg";
+import IMG2 from "../../../assets/images/GaleriaT5/inicio/Detalles tecnicos web T5 XL GV_WEB.jpg";
+import IMG3 from "../../../assets/images/GaleriaT5/inicio/Detalles tecnicos web T5 XL SUPER PLUS_WEB.jpg";
+import Modal from "../../../components/Modal";
 const Sistemas = ({ id }) => {
+	const [selectedImage, setSelectedImage] = useState(null);
+	const [selectedCaption, setSelectedCaption] = useState("");
+
+	const openModal = (imageSrc, caption) => {
+		setSelectedImage(imageSrc);
+		setSelectedCaption(caption);
+	};
+
+	const closeModal = () => {
+		setSelectedImage(null);
+		setSelectedCaption("");
+	};
 	return (
 		<>
 			<StyledSistemas id={id[0]} backgroundColor={COLORS.gray02}>
@@ -25,7 +41,7 @@ const Sistemas = ({ id }) => {
 					src={sistemas}
 					alt="Sistemas introducción"
 					// caption="cita"
-					columnSpan="5"
+					columnSpan="6"
 				/>
 				<Enlaces>
 					<li>
@@ -70,18 +86,17 @@ const Sistemas = ({ id }) => {
 					</li>
 				</Text>
 				<ImageWithCaption
-					src={dolckerClip1}
+					src={IMG1}
 					alt="Dolcker-clip demostración"
-					caption="Imágen demostración"
-					columnSpan="5"
-					isGray
+					columnSpan="6"
+					caption="Detalles tecnicos web T5 XL GO"
+					onClickFunc={() => openModal(IMG1, "Detalles tecnicos web T5 XL GO")}
 				/>
 				<ImageWithCaption
 					src={dolckerClip2}
 					alt="Dolcker-clip tabla"
 					caption="Imágen tabla"
-					columnSpan="8"
-					isGray
+					columnSpan="6"
 				/>
 			</StyledSistemas>
 
@@ -99,18 +114,17 @@ const Sistemas = ({ id }) => {
 					</li>
 				</Text>
 				<ImageWithCaption
-					src={dolckerClip1}
+					src={IMG2}
 					alt="Dolcker-clip demostración"
-					caption="Imágen demostración"
-					columnSpan="5"
-					isGray
+					columnSpan="6"
+					caption="Detalles tecnicos web T5 XL GV"
+					onClickFunc={() => openModal(IMG2, "Detalles tecnicos web T5 XL GV")}
 				/>
 				<ImageWithCaption
 					src={dolckerClip2}
 					alt="Dolcker-clip tabla"
 					caption="Imágen tabla"
-					columnSpan="8"
-					isGray
+					columnSpan="6"
 				/>
 			</StyledSistemas>
 
@@ -135,20 +149,28 @@ const Sistemas = ({ id }) => {
 					</li>
 				</Text>
 				<ImageWithCaption
-					src={dolckerClip1}
+					src={IMG3}
 					alt="Dolcker-clip demostración"
-					caption="Imágen demostración"
-					columnSpan="5"
-					isGray
+					columnSpan="6"
+					caption="Detalles tecnicos web T5 XL PLUS"
+					onClickFunc={() =>
+						openModal(IMG3, "Detalles tecnicos web T5 XL PLUS")
+					}
 				/>
 				<ImageWithCaption
 					src={dolckerClip2}
 					alt="Dolcker-clip tabla"
 					caption="Imágen tabla"
-					columnSpan="8"
-					isGray
+					columnSpan="6"
 				/>
 			</StyledSistemas>
+			<Modal
+				isOpen={selectedImage !== null}
+				onClose={closeModal}
+				caption={selectedCaption}
+			>
+				<img src={selectedImage} alt="Ampliada" />
+			</Modal>
 		</>
 	);
 };

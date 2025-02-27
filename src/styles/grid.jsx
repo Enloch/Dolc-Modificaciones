@@ -2,10 +2,10 @@ import { css } from "styled-components";
 import { DISTANCES, mediaQueryMobile, mediaQueryTablet } from "./sizes";
 
 export const column_start_end = (start = "auto", end = "auto") => css`
-  grid-column: ${start} / ${end};
-  ${mediaQueryTablet(css`
-    grid-column: 1 / -1;
-  `)}
+	grid-column: ${start} / ${end};
+	${mediaQueryTablet(css`
+		grid-column: 1 / -1;
+	`)}
 `;
 export const column_total = column_start_end(1, -1);
 
@@ -24,48 +24,48 @@ export const column_6_spanEnd = column_start_end(6, -1);
 export const column_3_spanEnd = column_start_end(3, -1);
 
 export const gridLayoutTemplate = (
-  {
-    numColumns = 1,
-    columnGap = "normal",
-    rowGap = "normal",
-    horizontalSpace = 0,
-    verticalSpace = 0,
-  },
-  ...moreStyles
+	{
+		numColumns = 1,
+		columnGap = "normal",
+		rowGap = "normal",
+		horizontalSpace = 0,
+		verticalSpace = 0,
+	},
+	...moreStyles
 ) => css`
-  display: grid;
-  grid-template-columns: repeat(${numColumns}, 1fr);
-  column-gap: ${columnGap};
-  row-gap: ${rowGap};
-  padding: ${verticalSpace} ${horizontalSpace};
+	display: grid;
+	grid-template-columns: repeat(${numColumns}, 1fr);
+	column-gap: ${columnGap};
+	row-gap: ${rowGap};
+	padding: ${verticalSpace} ${horizontalSpace};
 
-  ${moreStyles}
+	${moreStyles}
 `;
 
 const SECCION_GRID = {
-  numColumns: 12,
-  columnGap: DISTANCES.small,
-  rowGap: DISTANCES.small,
-  horizontalSpace: `clamp(${DISTANCES.small}, 2.604vw, ${DISTANCES.medium})`,
-  verticalSpace: DISTANCES.medium,
+	numColumns: 12,
+	columnGap: DISTANCES.small,
+	rowGap: DISTANCES.small,
+	horizontalSpace: `clamp(${DISTANCES.small}, 2.604vw, ${DISTANCES.medium})`,
+	verticalSpace: DISTANCES.medium,
 };
 
 export const seccionLayout = gridLayoutTemplate(
-  SECCION_GRID,
-  mediaQueryTablet(css`
-    grid-template-columns: repeat(4, 1fr);
-  `)
+	SECCION_GRID,
+	mediaQueryTablet(css`
+		grid-template-columns: repeat(4, 1fr);
+	`)
 );
 
 const DOWNLOAD_GRID = {
-  numColumns: 4,
-  columnGap: DISTANCES.small,
-  rowGap: DISTANCES.medium,
+	numColumns: 4,
+	columnGap: DISTANCES.small,
+	rowGap: DISTANCES.medium,
 };
 
 export const downloadLayout = gridLayoutTemplate(
-  DOWNLOAD_GRID,
-  mediaQueryMobile(css`
-    grid-template-columns: repeat(2, 1fr);
-  `)
+	DOWNLOAD_GRID,
+	mediaQueryMobile(css`
+		grid-template-columns: repeat(2, 1fr);
+	`)
 );

@@ -2,18 +2,13 @@ import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo } from "../../../components/Titulos";
 import StyledDolcker from "./styles";
 import { COLORS } from "../../../global/GlobalStyles";
-import { useState } from "react";
-import IMG1 from "../../../assets/images/GaleriaT5/inicio/Detalles tecnicos web T5 XL GO_WEB.jpg";
-import IMG2 from "../../../assets/images/GaleriaT5/inicio/Detalles tecnicos web T5 XL GV_WEB.jpg";
-import IMG3 from "../../../assets/images/GaleriaT5/inicio/Detalles tecnicos web T5 XL SUPER PLUS_WEB.jpg";
-
+import img1 from "../../../assets/images/DolckerTline/arquitecto.webp";
 import img2 from "../../../assets/images/Dolcker/catalogo3-1-5.webp";
 import img3 from "../../../assets/images/T5/Dolcker/catalogo3-1-7.jpg";
 import VisualizadorNota from "../../../components/TXT/VisualizadorNota";
 import Text from "../../../components/Text";
 
 import config from "../../../configs/configDolckerT5";
-import Modal from "../../../components/Modal";
 
 const Dolcker = ({ id }) => {
 	const propsVisualizador = {
@@ -23,46 +18,16 @@ const Dolcker = ({ id }) => {
 		imgBackground: img3,
 		alt: "Imagen de fondo con indicadores",
 	};
-	const [selectedImage, setSelectedImage] = useState(null);
-	const [selectedCaption, setSelectedCaption] = useState("");
 
-	const openModal = (imageSrc, caption) => {
-		setSelectedImage(imageSrc);
-		setSelectedCaption(caption);
-	};
-
-	const closeModal = () => {
-		setSelectedImage(null);
-		setSelectedCaption("");
-	};
 	return (
 		<>
 			<StyledDolcker id={id} backgroundColor={COLORS.gray03}>
 				<Titulo>Dolcker T5 XL soluciona</Titulo>
 				<div className="dolcker-info">
 					<ImageWithCaption
-						src={IMG1}
+						src={img1}
 						alt="Imagen Dolcker 2"
-						caption="Detalles tecnicos web T5 XL GO"
-						onClickFunc={() =>
-							openModal(IMG1, "Detalles tecnicos web T5 XL GO")
-						}
-					/>
-					<ImageWithCaption
-						src={IMG2}
-						alt="Imagen Dolcker 2"
-						caption="Detalles tecnicos web T5 XL GV"
-						onClickFunc={() =>
-							openModal(IMG2, "Detalles tecnicos web T5 XL GV")
-						}
-					/>
-					<ImageWithCaption
-						src={IMG3}
-						alt="Imagen Dolcker 2"
-						caption="Detalles tecnicos web T5 XL SUPER PLUS"
-						onClickFunc={() =>
-							openModal(IMG3, "Detalles tecnicos web T5 XL SUPER PLUS")
-						}
+						caption="Ejemplo de Sistemas Dolcker T5 XL"
 					/>
 					<Text>
 						Dolcker T5 XL: innovación y diseño para fachadas ventiladas de
@@ -136,13 +101,6 @@ const Dolcker = ({ id }) => {
         -Fachada {'( dibujo técnico/croquis por parte del arquitecto)'} */}
 				</Text>
 			</StyledDolcker>
-			<Modal
-				isOpen={selectedImage !== null}
-				onClose={closeModal}
-				caption={selectedCaption}
-			>
-				<img src={selectedImage} alt="Ampliada" />
-			</Modal>
 		</>
 	);
 };
