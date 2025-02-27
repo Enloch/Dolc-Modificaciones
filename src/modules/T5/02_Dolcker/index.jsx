@@ -2,7 +2,7 @@ import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo } from "../../../components/Titulos";
 import StyledDolcker from "./styles";
 import { COLORS } from "../../../global/GlobalStyles";
-import img1 from "../../../assets/images/DolckerTline/arquitecto.webp";
+import img1 from "../../../assets/images/T5/Dolcker/catalogo3-1-4.jpg";
 import img2 from "../../../assets/images/Dolcker/catalogo3-1-5.webp";
 import img3 from "../../../assets/images/T5/Dolcker/catalogo3-1-7.jpg";
 import VisualizadorNota from "../../../components/TXT/VisualizadorNota";
