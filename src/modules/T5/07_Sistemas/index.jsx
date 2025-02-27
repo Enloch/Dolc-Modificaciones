@@ -89,8 +89,8 @@ const Sistemas = ({ id }) => {
 					src={IMG1}
 					alt="Dolcker-clip demostración"
 					columnSpan="6"
-					caption="Detalles tecnicos web T5 XL GO"
-					onClickFunc={() => openModal(IMG1, "Detalles tecnicos web T5 XL GO")}
+					caption="Detalles tecnicos T5 XL GO"
+					onClickFunc={() => openModal(IMG1, "Detalles tecnicos T5 XL GO")}
 				/>
 				<ImageWithCaption
 					src={dolckerClip2}
@@ -117,8 +117,8 @@ const Sistemas = ({ id }) => {
 					src={IMG2}
 					alt="Dolcker-clip demostración"
 					columnSpan="6"
-					caption="Detalles tecnicos web T5 XL GV"
-					onClickFunc={() => openModal(IMG2, "Detalles tecnicos web T5 XL GV")}
+					caption="Detalles tecnicos T5 XL GV"
+					onClickFunc={() => openModal(IMG2, "Detalles tecnicos T5 XL GV")}
 				/>
 				<ImageWithCaption
 					src={dolckerClip2}
@@ -152,10 +152,8 @@ const Sistemas = ({ id }) => {
 					src={IMG3}
 					alt="Dolcker-clip demostración"
 					columnSpan="6"
-					caption="Detalles tecnicos web T5 XL PLUS"
-					onClickFunc={() =>
-						openModal(IMG3, "Detalles tecnicos web T5 XL PLUS")
-					}
+					caption="Detalles tecnicos T5 XL PLUS"
+					onClickFunc={() => openModal(IMG3, "Detalles tecnicos T5 XL PLUS")}
 				/>
 				<ImageWithCaption
 					src={dolckerClip2}

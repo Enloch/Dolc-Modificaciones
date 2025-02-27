@@ -1,35 +1,35 @@
-import styled from 'styled-components'
-import { TextMedium } from '../../../global/GlobalStyles'
+import styled from "styled-components";
+import { TextMedium, Column6 } from "../../../global/GlobalStyles";
 import { column_3_spanEnd, column_5_span8 } from "../../../styles/grid";
-import { DISTANCES } from '../../../styles/sizes'
-import wipe from '../../../assets/icons/wipe.svg'
+import { DISTANCES } from "../../../styles/sizes";
+import wipe from "../../../assets/icons/wipe.svg";
 
 const StyledVisualizadorDesplazador = styled.div`
-  ${column_3_spanEnd}
-  position: relative;
+	${Column6}
+	position: relative;
 
-  .indicadores {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 2;
-  }
+	.indicadores {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 2;
+	}
 
-  .desplazador {
-    cursor: url(${wipe}), col-resize;
-  }
+	.desplazador {
+		cursor: url(${wipe}), col-resize;
+	}
 
-  > span {
-    ${TextMedium}
-    position: absolute;
-    top: ${DISTANCES.medium};
-    left: ${DISTANCES.medium};
-    z-index: 2;
-    //color: white;
-    //mix-blend-mode: difference;
-  }
+	> span {
+		${TextMedium}
+		position: absolute;
+		top: ${DISTANCES.medium};
+		left: ${DISTANCES.medium};
+		z-index: 2;
+		//color: white;
+		//mix-blend-mode: difference;
+	}
 `;
 
-export default StyledVisualizadorDesplazador
+export default StyledVisualizadorDesplazador;
