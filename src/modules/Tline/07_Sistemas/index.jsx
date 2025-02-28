@@ -9,6 +9,8 @@ import ImageWithCaption from "../../../components/ImageWithCaption";
 import img1 from "../../../assets/images/DolckerTline/Sistemas/DOLCKER_T-LINE SOLUCIONA GRAPA.jpg";
 import img2 from "../../../assets/images/DolckerTline/Sistemas/RENDER CLIP LINE 10 copia.jpg";
 import img3 from "../../../assets/images/DolckerTline/Sistemas/RENDER SISTEMA CLIP 14 copia.jpg";
+import img4 from "../../../assets/images/DolckerTline/Sistemas/Dolcker TLine T10 detalle tecnico_web.jpg";
+import img5 from "../../../assets/images/DolckerTline/Sistemas/Dolcker TLine T20 detalle tecnico_web.jpg";
 const SistemasTline = ({ id }) => {
 	const [selectedImage, setSelectedImage] = useState(null);
 	const [selectedCaption, setSelectedCaption] = useState("");
@@ -129,12 +131,12 @@ const SistemasTline = ({ id }) => {
 					sistema de ranurado continuo.
 				</Text>
 				<ImageWithCaption
-					src={img2}
+					src={img3}
 					alt="Dolcker-clip demostración"
 					columnSpan="6"
 					caption="Detalles tecnicos T-Line Clip 10"
 					onClickFunc={() =>
-						openModal(img2, "Detalles tecnicos T-Line Clip 10")
+						openModal(img3, "Detalles tecnicos T-Line Clip 10")
 					}
 				/>
 			</StyledSistemas>
@@ -146,12 +148,21 @@ const SistemasTline = ({ id }) => {
 					proporcionando una solución estética y funcional.
 				</Text>
 				<ImageWithCaption
-					src={img3}
+					src={img2}
 					alt="Dolcker-clip demostración"
 					columnSpan="6"
 					caption="Detalles tecnicos T-Line Clip 20"
 					onClickFunc={() =>
-						openModal(img3, "Detalles tecnicos T-Line Clip 20")
+						openModal(img2, "Detalles tecnicos T-Line Clip 20")
+					}
+				/>
+				<ImageWithCaption
+					src={img1}
+					alt="Dolcker-clip demostración"
+					columnSpan="6"
+					caption="Detalles tecnicos T-Line Clip 20 sin perfil"
+					onClickFunc={() =>
+						openModal(img1, "Detalles tecnicos T-Line Clip 20 sin perfil")
 					}
 				/>
 			</StyledSistemas>
@@ -163,11 +174,11 @@ const SistemasTline = ({ id }) => {
 					elementos visibles en la superficie.
 				</Text>
 				<ImageWithCaption
-					src={img1}
+					src={img4}
 					alt="Dolcker-clip demostración"
 					columnSpan="6"
 					caption="Detalles tecnicos T-Line T10"
-					onClickFunc={() => openModal(img1, "Detalles tecnicos T-Line T10")}
+					onClickFunc={() => openModal(img4, "Detalles tecnicos T-Line T10")}
 				/>
 			</StyledSistemas>
 			<StyledSistemas id={id[5]}>
@@ -177,6 +188,13 @@ const SistemasTline = ({ id }) => {
 					mecánica vista, ofreciendo una solución robusta y con un diseño
 					industrial moderno.
 				</Text>
+				<ImageWithCaption
+					src={img5}
+					alt="Dolcker-clip demostración"
+					columnSpan="6"
+					caption="Detalles tecnicos T-Line T20"
+					onClickFunc={() => openModal(img5, "Detalles tecnicos T-Line T20")}
+				/>
 			</StyledSistemas>
 			<Modal
 				isOpen={selectedImage !== null}

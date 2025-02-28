@@ -1,12 +1,12 @@
-import styled from 'styled-components'
-import { TextMedium } from '../global/GlobalStyles'
+import styled from "styled-components";
+import { TextMedium } from "../global/GlobalStyles";
 
 const Text = styled.p`
-    ${TextMedium}
+	${TextMedium}
 
-    a {
-        color: inherit;
-    }
-`
+	a {
+		color: inherit;
+	}
+`;
 
-export default Text
+export default Text;

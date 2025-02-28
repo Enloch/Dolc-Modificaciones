@@ -19,6 +19,7 @@ import Text from "../../../components/Text";
 import IndiceSeries from "./05_1_IndiceSeries";
 import ConfiguradorImg from "../../../assets/images/DolckerTline/formatoscolor.webp";
 import rotadorImg from "../../../assets/images/DolckerTline/config.jpg";
+import acabados from "../../../assets/images/T5/Diseno/Acabados/Dolcker enmallados T5_web.jpg";
 
 const Disenos = ({ id }) => {
 	const propsFormato = {
@@ -63,16 +64,48 @@ const Disenos = ({ id }) => {
 			<StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
 				<Titulo2>Acabados Cerámica</Titulo2>
 				<Anotaciones>
-					<Anotacion
-						type="normal"
-						text="Pulsa en el punto para ver todas las posibilidades de piezas especiales"
-					/>
-					<Anotacion
-						type="swipe"
-						text="Desliza con el ratón o el dedo para apreciar la textura"
-					/>
+					<Text>
+						El enmallado en la parte trasera del porcelánico de gran formato es
+						una malla de fibra de vidrio adherida con resina a la cara posterior
+						de la losa. Su propósito es reforzar la resistencia mecánica del
+						material, reduciendo el riesgo de fracturas y facilitando su
+						manipulación, transporte e instalación.
+						<br />
+						<br />
+						<strong>
+							Beneficios del enmallado en porcelánico de gran formato:
+						</strong>
+						<br />
+						<br />
+						1. Mayor resistencia a la rotura: La fibra de vidrio ayuda a evitar
+						que la pieza se quiebre con facilidad, especialmente durante el
+						corte o la instalación.
+						<br />
+						<br />
+						2. Seguridad en la manipulación: Reduce el riesgo de desprendimiento
+						de fragmentos en caso de rotura.
+						<br />
+						<br />
+						3. Facilita la instalación: En algunos casos, mejora la adherencia
+						con ciertos adhesivos y morteros.
+						<br />
+						<br />
+						4. Compensación de tensiones: Ayuda a absorber pequeñas tensiones
+						mecánicas que pueden surgir por variaciones térmicas o flexión del
+						soporte.
+						<br />
+						<br />
+						Este tipo de refuerzo es común en losas porcelánicas ultrafinas y en
+						piezas de gran formato que requieren mayor integridad estructural
+						debido a su tamaño
+					</Text>
 				</Anotaciones>
-				<VisualizadorDesplazador config={configAcabados} />
+				<ImageWithCaption
+					src={acabados}
+					alt="enmallado"
+					caption="(De arriba a abajo)Sin malla, malla continua, malla discontinua"
+					columnSpan="6"
+				/>
 			</StyledDisenos>
 			<StyledDisenos id={id[4]} backgroundColor={COLORS.gray01} isEspesores>
 				<Titulo2>Espesores</Titulo2>

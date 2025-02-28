@@ -5,19 +5,22 @@ import pdf from "../../assets/icons/generate-pdf.svg";
 import StyledAnotacion from "./styles";
 
 const Anotacion = ({ type, text, className, onClick }) => {
-  const types = {
-    click,
-    normal,
-    swipe,
-    pdf,
-  };
+	const types = {
+		click,
+		normal,
+		swipe,
+		pdf,
+		none: "none",
+	};
 
-  return (
-    <StyledAnotacion className={className} onClick={onClick}>
-      <img src={types[type]} alt={"Icono de " + type} />
-      {text}
-    </StyledAnotacion>
-  );
+	return (
+		<StyledAnotacion className={className} onClick={onClick}>
+			{types[type] != "none" && (
+				<img src={types[type]} alt={"Icono de " + type} />
+			)}
+			{text}
+		</StyledAnotacion>
+	);
 };
 
 export default Anotacion;
