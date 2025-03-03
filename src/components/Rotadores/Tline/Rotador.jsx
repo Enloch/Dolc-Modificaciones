@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useMemo, lazy, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
 	OrbitControls,
@@ -22,22 +22,69 @@ import Menu from "./Menu";
 import R360 from "../../../assets/icons/360.svg";
 import IconoAbrir from "../../../assets/icons/open-indicator.svg";
 import IconoCerrar from "../../../assets/icons/close-indicator.svg";
+
+// Componente para renderizar el modelo seleccionado
+const ModelRenderer = ({
+	modelName,
+	materialIndex,
+	color,
+	colorPickerActive,
+}) => {
+	// Usar un objeto para mapear nombres de modelos a componentes
+	const modelComponents = {
+		"Modelo 1": Model1,
+		"Modelo 2": Model2,
+		"Modelo 3": Model3,
+		"Modelo 4": Model4,
+	};
+
+	// Obtener el componente del modelo seleccionado
+	const SelectedModel = modelComponents[modelName];
+
+	if (!SelectedModel) return null;
+
+	return (
+		<SelectedModel
+			material={materialIndex}
+			color={color}
+			colorPickerActive={colorPickerActive}
+		/>
+	);
+};
+
 export default function Rotador() {
 	const [model, setModel] = useState("Modelo 1");
 	const [materialIndex, setMaterialIndex] = useState(0);
 	const [showIntro, setShowIntro] = useState(true);
-	const [color, setColor] = useState("#ffffff0"); // Color blanco como color base predeterminado
+	const [color, setColor] = useState("#ffffff"); // Color blanco como color base predeterminado
 	const [colorPickerActive, setColorPickerActive] = useState(false);
-
-	const handleIntroClick = () => {
-		setShowIntro(false);
-	};
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const menuContainerRef = useRef(null);
 
-	const handleExpandClick = () => {
-		setIsMenuOpen(!isMenuOpen);
-	};
+	const handleIntroClick = () => setShowIntro(false);
+	const handleExpandClick = () => setIsMenuOpen(!isMenuOpen);
+
+	// Memoizar las propiedades de la cámara para evitar recálculos innecesarios
+	const cameraProps = useMemo(
+		() => ({
+			fov: 50,
+			position: [0, -1, 1],
+			near: 0.01,
+			far: 10,
+		}),
+		[]
+	);
+
+	// Memoizar las propiedades de OrbitControls
+	const orbitControlsProps = useMemo(
+		() => ({
+			maxPolarAngle: 1.6,
+			minDistance: 0.2,
+			maxDistance: 0.6,
+			enableZoom: true,
+			enablePan: false,
+		}),
+		[]
+	);
 
 	return (
 		<ContRotador>
@@ -47,6 +94,7 @@ export default function Rotador() {
 					alt="Rotador"
 				/>
 			</BotonExpandir>
+
 			<CanvasContainer visible={isMenuOpen}>
 				{showIntro && (
 					<IntroContainer onClick={handleIntroClick}>
@@ -56,8 +104,9 @@ export default function Rotador() {
 						</IntroContent>
 					</IntroContainer>
 				)}
+
 				<Canvas style={{ position: "relative", top: 0, left: 0 }}>
-					<PerspectiveCamera makeDefault fov={50} position={[0, -1, 1]} />
+					<PerspectiveCamera makeDefault {...cameraProps} />
 					<Environment files="/StudioE2.hdr" />
 					<ambientLight intensity={0.3} />
 					<ContactShadows
@@ -70,50 +119,17 @@ export default function Rotador() {
 						position={[0, -0.09, 0]}
 						frames={1}
 					/>
-					{model === "Modelo 1" && (
-						<Model1
-							material={materialIndex}
-							metalness={materialIndex}
-							roughness={materialIndex}
-							color={color}
-							colorPickerActive={colorPickerActive} // Pasar el estado colorPickerActive al componente Model1
-						/>
-					)}
-					{model === "Modelo 2" && (
-						<Model2
-							material={materialIndex}
-							metalness={materialIndex}
-							roughness={materialIndex}
-							color={color}
-							colorPickerActive={colorPickerActive}
-						/>
-					)}
-					{model === "Modelo 3" && (
-						<Model3
-							material={materialIndex}
-							metalness={materialIndex}
-							roughness={materialIndex}
-							color={color}
-							colorPickerActive={colorPickerActive}
-						/>
-					)}
-					{model === "Modelo 4" && (
-						<Model4
-							material={materialIndex}
-							metalness={materialIndex}
-							roughness={materialIndex}
-							color={color}
-							colorPickerActive={colorPickerActive}
-						/>
-					)}
 
-					<OrbitControls
-						maxPolarAngle={1.6}
-						minDistance={0.2}
-						maxDistance={0.6}
-						enableZoom={true}
-						enablePan={false}
-					/>
+					<Suspense fallback={null}>
+						<ModelRenderer
+							modelName={model}
+							materialIndex={materialIndex}
+							color={color}
+							colorPickerActive={colorPickerActive}
+						/>
+					</Suspense>
+
+					<OrbitControls {...orbitControlsProps} />
 				</Canvas>
 			</CanvasContainer>
 
@@ -123,8 +139,8 @@ export default function Rotador() {
 					handleMaterialChange={setMaterialIndex}
 					color={color}
 					setColor={setColor}
-					colorPickerActive={colorPickerActive} // Pasar el estado colorPickerActive al componente Menu
-					setColorPickerActive={setColorPickerActive} // Pasar el callback setColorPickerActive al componente Menu
+					colorPickerActive={colorPickerActive}
+					setColorPickerActive={setColorPickerActive}
 				/>
 			</MenuContainer>
 		</ContRotador>

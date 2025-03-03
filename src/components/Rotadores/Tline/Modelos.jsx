@@ -1,188 +1,145 @@
-import React, { memo } from "react";
+import React, { memo, useMemo } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 import { Materiales, MaterialesMetalizados } from "./Materiales";
 
-export function Model1({
-	material,
-	metalness,
-	roughness,
-	color,
-	colorPickerActive,
-	...props
-}) {
-	const Acabados = Materiales.map((material) => useTexture(material.map));
-	const Metalizado = MaterialesMetalizados.map((metal) => metal.metalness);
-	const Aspereza = MaterialesMetalizados.map((aspereza) => aspereza.roughness);
-	const { nodes, materials } = useGLTF("/modelos/CF_L_CAVITY.glb");
+// Componente base para todos los modelos
+const ModelBase = memo(
+	({
+		material,
+		color,
+		colorPickerActive,
+		nodes,
+		materials,
+		geometryName,
+		geometryAluminio,
+		meshName,
+		...props
+	}) => {
+		// Cargar texturas fuera de useMemo
+		const texturas = Materiales.map((mat) => mat.map);
+		const acabados = useTexture(texturas);
 
-	if (colorPickerActive) {
-		material = null;
+		// Ahora useMemo solo procesa los datos, no llama hooks
+		const Acabados = useMemo(() => acabados, [acabados]);
+		const Metalizado = useMemo(
+			() => MaterialesMetalizados.map((metal) => metal.metalness),
+			[]
+		);
+		const Aspereza = useMemo(
+			() => MaterialesMetalizados.map((aspereza) => aspereza.roughness),
+			[]
+		);
+
+		// Si el selector de color está activo, no usamos material
+		const activeMaterial = colorPickerActive ? null : material;
+
+		return (
+			<group {...props} dispose={null}>
+				<mesh
+					name={meshName}
+					castShadow
+					receiveShadow
+					geometry={nodes[geometryName].geometry}
+				>
+					{!colorPickerActive ? (
+						<meshStandardMaterial
+							map={Acabados[activeMaterial]}
+							roughness={Aspereza[activeMaterial]}
+							metalness={Metalizado[activeMaterial]}
+							color={null}
+						/>
+					) : (
+						<meshBasicMaterial color={color} metalness={0.5} />
+					)}
+				</mesh>
+				<mesh
+					castShadow
+					receiveShadow
+					geometry={nodes[geometryAluminio].geometry}
+					material={materials.Aluminio}
+				/>
+			</group>
+		);
 	}
-	return (
-		<group {...props} dispose={null}>
-			<mesh
-				name="Material_01"
-				castShadow
-				receiveShadow
-				geometry={nodes.CF_L_CAVITY_01_1.geometry}
-			>
-				{!colorPickerActive ? (
-					<meshStandardMaterial
-						map={Acabados[material]}
-						roughness={Aspereza[material]}
-						metalness={Metalizado[material]}
-						color={null}
-					/>
-				) : (
-					<meshBasicMaterial color={color} metalness="0.5" />
-				)}
-			</mesh>
-			<mesh
-				castShadow
-				receiveShadow
-				geometry={nodes.CF_L_CAVITY_01_2.geometry}
-				material={materials.Aluminio}
+);
+
+// Modelos específicos que utilizan el componente base
+export const Model1 = memo(
+	({ material, color, colorPickerActive, ...props }) => {
+		const { nodes, materials } = useGLTF("/modelos/CF_L_CAVITY.glb");
+
+		return (
+			<ModelBase
+				material={material}
+				color={color}
+				colorPickerActive={colorPickerActive}
+				nodes={nodes}
+				materials={materials}
+				geometryName="CF_L_CAVITY_01_1"
+				geometryAluminio="CF_L_CAVITY_01_2"
+				meshName="Material_01"
+				{...props}
 			/>
-		</group>
-	);
-}
-
-export function Model2({
-	material,
-	metalness,
-	roughness,
-	color,
-	colorPickerActive,
-	...props
-}) {
-	const Acabados = Materiales.map((material) => useTexture(material.map));
-	const Metalizado = MaterialesMetalizados.map((metal) => metal.metalness);
-	const Aspereza = MaterialesMetalizados.map((aspereza) => aspereza.roughness);
-	const { nodes, materials } = useGLTF("/modelos/Cenefa02.gltf");
-
-	if (colorPickerActive) {
-		material = null;
+		);
 	}
-	return (
-		<group {...props} dispose={null}>
-			<mesh
-				name="Material_02"
-				castShadow
-				receiveShadow
-				geometry={nodes.Material_02.geometry}
-			>
-				{!colorPickerActive ? (
-					<meshStandardMaterial
-						map={Acabados[material]}
-						roughness={Aspereza[material]}
-						metalness={Metalizado[material]}
-						color={null}
-					/>
-				) : (
-					<meshBasicMaterial color={color} metalness="0.5" />
-				)}
-			</mesh>
-			<mesh
-				name="Material_02_1"
-				castShadow
-				receiveShadow
-				geometry={nodes.Material_02_1.geometry}
-				material={materials.Aluminio}
+);
+
+export const Model2 = memo(
+	({ material, color, colorPickerActive, ...props }) => {
+		const { nodes, materials } = useGLTF("/modelos/Cenefa02.gltf");
+
+		return (
+			<ModelBase
+				material={material}
+				color={color}
+				colorPickerActive={colorPickerActive}
+				nodes={nodes}
+				materials={materials}
+				geometryName="Material_02"
+				geometryAluminio="Material_02_1"
+				meshName="Material_02"
+				{...props}
 			/>
-		</group>
-	);
-}
-
-export function Model3({
-	material,
-	metalness,
-	roughness,
-	color,
-	colorPickerActive,
-	...props
-}) {
-	const Acabados = Materiales.map((material) => useTexture(material.map));
-	const Metalizado = MaterialesMetalizados.map((metal) => metal.metalness);
-	const Aspereza = MaterialesMetalizados.map((aspereza) => aspereza.roughness);
-	const { nodes, materials } = useGLTF("/modelos/Cenefa03.gltf");
-
-	if (colorPickerActive) {
-		material = null;
+		);
 	}
+);
 
-	return (
-		<group {...props} dispose={null}>
-			<mesh
-				name="Material_03"
-				castShadow
-				receiveShadow
-				geometry={nodes.Material_03.geometry}
-			>
-				{!colorPickerActive ? (
-					<meshStandardMaterial
-						map={Acabados[material]}
-						roughness={Aspereza[material]}
-						metalness={Metalizado[material]}
-						color={null}
-					/>
-				) : (
-					<meshBasicMaterial color={color} metalness="0.5" />
-				)}
-			</mesh>
-			<mesh
-				name="Material_03_1"
-				castShadow
-				receiveShadow
-				geometry={nodes.Material_03_1.geometry}
-				material={materials.Aluminio}
+export const Model3 = memo(
+	({ material, color, colorPickerActive, ...props }) => {
+		const { nodes, materials } = useGLTF("/modelos/Cenefa03.gltf");
+
+		return (
+			<ModelBase
+				material={material}
+				color={color}
+				colorPickerActive={colorPickerActive}
+				nodes={nodes}
+				materials={materials}
+				geometryName="Material_03"
+				geometryAluminio="Material_03_1"
+				meshName="Material_03"
+				{...props}
 			/>
-		</group>
-	);
-}
-
-export function Model4({
-	material,
-	metalness,
-	roughness,
-	color,
-	colorPickerActive,
-	...props
-}) {
-	const Acabados = Materiales.map((material) => useTexture(material.map));
-	const Metalizado = MaterialesMetalizados.map((metal) => metal.metalness);
-	const Aspereza = MaterialesMetalizados.map((aspereza) => aspereza.roughness);
-	const { nodes, materials } = useGLTF("/modelos/Cenefa04.gltf");
-
-	if (colorPickerActive) {
-		material = null;
+		);
 	}
+);
 
-	return (
-		<group {...props} dispose={null}>
-			<mesh
-				name="Material_04"
-				castShadow
-				receiveShadow
-				geometry={nodes.Material_04.geometry}
-			>
-				{!colorPickerActive ? (
-					<meshStandardMaterial
-						map={Acabados[material]}
-						roughness={Aspereza[material]}
-						metalness={Metalizado[material]}
-						color={null}
-					/>
-				) : (
-					<meshBasicMaterial color={color} metalness="0.5" />
-				)}
-			</mesh>
-			<mesh
-				name="Material_04_1"
-				castShadow
-				receiveShadow
-				geometry={nodes.Material_04_1.geometry}
-				material={materials.Aluminio}
+export const Model4 = memo(
+	({ material, color, colorPickerActive, ...props }) => {
+		const { nodes, materials } = useGLTF("/modelos/Cenefa04.gltf");
+
+		return (
+			<ModelBase
+				material={material}
+				color={color}
+				colorPickerActive={colorPickerActive}
+				nodes={nodes}
+				materials={materials}
+				geometryName="Material_04"
+				geometryAluminio="Material_04_1"
+				meshName="Material_04"
+				{...props}
 			/>
-		</group>
-	);
-}
+		);
+	}
+);
