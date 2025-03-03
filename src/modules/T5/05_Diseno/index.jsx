@@ -13,7 +13,9 @@ import VisualizadorRotador from "../../../components/VisualizadorRotador";
 import config from "../../../configs/configPiezasEspeciales";
 import configAcabados from "../../../configs/configAcabados";
 import Series from "./05_2_Series";
-import ranurado5 from "../../../assets/images/T5/Diseno/Espesores/Dolcker_espesor_6mm.jpg";
+import ranurado3 from "../../../assets/images/T5/Diseno/Espesores/Dolcker_espesor_6mm.jpg";
+import ranurado5 from "../../../assets/images/T5/Diseno/Espesores/Dolcker_espesor_9mm.jpg";
+import ranurado8 from "../../../assets/images/T5/Diseno/Espesores/Dolcker_espesor_11mm.jpg";
 import VisualizadorDesplazador from "../../../components/VisualizadorDesplazador";
 import Text from "../../../components/Text";
 import IndiceSeries from "./05_1_IndiceSeries";
@@ -97,7 +99,7 @@ const Disenos = ({ id }) => {
 						<br />
 						Este tipo de refuerzo es común en losas porcelánicas ultrafinas y en
 						piezas de gran formato que requieren mayor integridad estructural
-						debido a su tamaño
+						debido a su tamaño
 					</Text>
 				</Anotaciones>
 				<ImageWithCaption
@@ -110,9 +112,29 @@ const Disenos = ({ id }) => {
 			<StyledDisenos id={id[4]} backgroundColor={COLORS.gray01} isEspesores>
 				<Titulo2>Espesores</Titulo2>
 				<div className="espesor espesor-1">
+					<img src={ranurado3} alt="" />
+					<ul>
+						<strong>TC 5 / 3 mm.</strong>
+						<li>Suelo</li>
+						<li>Techo</li>
+						<li>Fachada</li>
+						<li>Recerco</li>
+					</ul>
+				</div>
+				<div className="espesor espesor-2">
 					<img src={ranurado5} alt="" />
 					<ul>
-						<strong>TC 5 / 5 mm.</strong>
+						<strong>TC 5 / 5.6 mm.</strong>
+						<li>Suelo</li>
+						<li>Techo</li>
+						<li>Fachada</li>
+						<li>Recerco</li>
+					</ul>
+				</div>
+				<div className="espesor espesor-3">
+					<img src={ranurado8} alt="" />
+					<ul>
+						<strong>TC 5 / 8 mm.</strong>
 						<li>Suelo</li>
 						<li>Techo</li>
 						<li>Fachada</li>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import StyledVisualizadorDesplazador from "./styles";
-import acabados from "../../assets/images/T5/Diseno/Acabados/Dolcker enmallados T5_web.jpg";
+import acabados from "../../assets/images/Diseno/Acabados/acabados.webp";
 import useConfigDesplazador from "../../hooks/useConfigDesplazador";
 import Indicador from "./Indicador";
 
