@@ -53,7 +53,7 @@ const DolckerT5 = () => {
 					"diseno",
 					"formato",
 					"despiece",
-					"acabados",
+					"mallas-de-seguridad",
 					"espesores",
 					"piezas",
 					"series",

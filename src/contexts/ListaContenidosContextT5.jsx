@@ -1,5 +1,5 @@
-import { createContext } from 'react';
-import listaContenidosJSON from '../utils/listaContenidosT5.json';
+import { createContext } from "react";
+import listaContenidosJSON from "../utils/listaContenidosT5.json";
 
 const ListaContenidosContext = createContext(listaContenidosJSON);
 

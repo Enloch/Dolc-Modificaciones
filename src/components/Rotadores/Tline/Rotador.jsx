@@ -5,7 +5,14 @@ import {
 	PerspectiveCamera,
 	Environment,
 	ContactShadows,
+	Gltf,
+	useGLTF,
 } from "@react-three/drei";
+import {
+	EffectComposer,
+	ToneMapping,
+	Bloom,
+} from "@react-three/postprocessing";
 import { Model1, Model2, Model3, Model4 } from "./Modelos";
 import {
 	ContRotador,
@@ -22,7 +29,7 @@ import Menu from "./Menu";
 import R360 from "../../../assets/icons/360.svg";
 import IconoAbrir from "../../../assets/icons/open-indicator.svg";
 import IconoCerrar from "../../../assets/icons/close-indicator.svg";
-
+import { MeshPhysicalMaterial } from "three";
 // Componente para renderizar el modelo seleccionado
 const ModelRenderer = ({
 	modelName,
@@ -62,7 +69,8 @@ export default function Rotador() {
 
 	const handleIntroClick = () => setShowIntro(false);
 	const handleExpandClick = () => setIsMenuOpen(!isMenuOpen);
-
+	let grados = 270;
+	let radianes = grados * (Math.PI / 180);
 	// Memoizar las propiedades de la cámara para evitar recálculos innecesarios
 	const cameraProps = useMemo(
 		() => ({
@@ -104,33 +112,60 @@ export default function Rotador() {
 						</IntroContent>
 					</IntroContainer>
 				)}
-
-				<Canvas style={{ position: "relative", top: 0, left: 0 }}>
-					<PerspectiveCamera makeDefault {...cameraProps} />
-					<Environment files="/StudioE2.hdr" />
-					<ambientLight intensity={0.3} />
-
-					<Suspense fallback={null}>
-						<ModelRenderer
-							modelName={model}
-							materialIndex={materialIndex}
-							color={color}
-							colorPickerActive={colorPickerActive}
+				<Suspense fallback={null}>
+					<Canvas
+						flat
+						gl={{ antialias: false }}
+						style={{ position: "relative", top: 0, left: 0 }}
+					>
+						<PerspectiveCamera makeDefault {...cameraProps} />
+						<Environment
+							files="/StudioE2.hdr"
+							// files="/HDRI/neutral.hdr"
+							// background
+							backgroundRotation={[0, radianes, 0]}
 						/>
-						<ContactShadows
-							opacity={0.5}
-							scale={1}
-							blur={1}
-							far={1}
-							resolution={256}
-							color="#0000001e"
-							position={[0, -0.09, 0]}
-							frames={1}
-						/>
-					</Suspense>
-
-					<OrbitControls {...orbitControlsProps} />
-				</Canvas>
+						<ambientLight intensity={0.3} />
+						<Suspense fallback={null}>
+							<ContactShadows
+								opacity={0.5}
+								scale={1}
+								blur={1}
+								far={1}
+								resolution={256}
+								color="#0000001e"
+								position={[0, -0.09, 0]}
+								frames={1}
+								key={model} // Añadir key para forzar la actualización cuando cambia el modelo
+							/>
+							<ModelRenderer
+								modelName={model}
+								materialIndex={materialIndex}
+								color={color}
+								colorPickerActive={colorPickerActive}
+							/>
+							{/* <ModelTest /> */}
+							{/* <Gltf src={mod} /> */}
+						</Suspense>
+						<OrbitControls {...orbitControlsProps} />
+						<Suspense fallback={null}>
+							<EffectComposer disableNormalPass multisampling={4}>
+								{/** The bloom pass is what will create glow, always set the threshold to 1,
+								 * nothing will glow except materials without tonemapping whose colors leave RGB 0-1 **/}
+								<Bloom mipmapBlur luminanceThreshold={1} />
+								<ToneMapping
+									adaptive
+									resolution={256}
+									middleGrey={0.5}
+									maxLuminance={16.0}
+									averageLuminance={1.0}
+									adaptationRate={1.0}
+									type={ToneMapping.ACESFilmicToneMapping}
+								/>
+							</EffectComposer>
+						</Suspense>
+					</Canvas>
+				</Suspense>
 			</CanvasContainer>
 
 			<MenuContainer visible={isMenuOpen}>
@@ -144,5 +179,52 @@ export default function Rotador() {
 				/>
 			</MenuContainer>
 		</ContRotador>
+	);
+}
+export function ModelTest(props) {
+	const { nodes, materials } = useGLTF("/modelos/CF_L_LUX_02.glb");
+	return (
+		<group {...props} dispose={null}>
+			<mesh
+				castShadow
+				receiveShadow
+				geometry={nodes.CF_L_LUX_01_1.geometry}
+				material={materials.Base}
+			/>
+			<mesh
+				castShadow
+				receiveShadow
+				geometry={nodes.CF_L_LUX_01_2.geometry}
+				material={materials.Aluminio}
+			/>
+			<mesh
+				castShadow
+				receiveShadow
+				geometry={nodes.CF_L_LUX_01_3.geometry}
+				material={materials.Emisivo}
+				// material-emissiveIntensity={10}
+			>
+				<meshStandardMaterial
+					emissive="#FF0000" // Color del brillo
+					emissiveIntensity={10} // Intensidad del brillo
+				/>
+			</mesh>
+			<mesh
+				castShadow
+				receiveShadow
+				geometry={nodes.CF_L_LUX_01_4.geometry}
+				// material={materials.Metacrilato}
+			>
+				<meshPhysicalMaterial
+					transmission={1} // Activa la transmisión de luz (1 = completamente transparente)
+					ior={1.5} // Índice de refracción (1.5 es común para vidrio)
+					thickness={0.015} // Grosor del material (ajusta según el modelo)
+					roughness={0.3} // Superficie lisa (0 = completamente liso)
+					clearcoat={0} // Capa transparente adicional
+					clearcoatRoughness={0} // Superficie lisa para la capa transparente
+					color="#CCCCCC" // Color base del material
+				/>
+			</mesh>
+		</group>
 	);
 }

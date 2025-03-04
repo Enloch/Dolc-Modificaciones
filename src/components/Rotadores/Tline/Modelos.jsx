@@ -1,6 +1,7 @@
 import React, { memo, useMemo } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 import { Materiales, MaterialesMetalizados } from "./Materiales";
+import { MeshPhysicalMaterial, MeshStandardMaterial } from "three";
 
 // Componente base para todos los modelos
 const ModelBase = memo(
@@ -42,14 +43,19 @@ const ModelBase = memo(
 					geometry={nodes[geometryName].geometry}
 				>
 					{!colorPickerActive ? (
-						<meshStandardMaterial
+						<meshPhysicalMaterial
 							map={Acabados[activeMaterial]}
 							roughness={Aspereza[activeMaterial]}
 							metalness={Metalizado[activeMaterial]}
 							color={null}
 						/>
 					) : (
-						<meshBasicMaterial color={color} metalness={0.5} />
+						<meshStandardMaterial
+							color={color}
+							metalness={0.5}
+							roughness={0.5}
+							map={null}
+						/>
 					)}
 				</mesh>
 				<mesh
@@ -66,7 +72,7 @@ const ModelBase = memo(
 // Modelos específicos que utilizan el componente base
 export const Model1 = memo(
 	({ material, color, colorPickerActive, ...props }) => {
-		const { nodes, materials } = useGLTF("/modelos/CF_L_CAVITY.glb");
+		const { nodes, materials } = useGLTF("/modelos/Cenefa01.gltf");
 
 		return (
 			<ModelBase
@@ -75,8 +81,8 @@ export const Model1 = memo(
 				colorPickerActive={colorPickerActive}
 				nodes={nodes}
 				materials={materials}
-				geometryName="CF_L_CAVITY_01_1"
-				geometryAluminio="CF_L_CAVITY_01_2"
+				geometryName="Material_01"
+				geometryAluminio="Material_01_1"
 				meshName="Material_01"
 				{...props}
 			/>

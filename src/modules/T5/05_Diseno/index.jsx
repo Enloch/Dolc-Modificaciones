@@ -64,7 +64,7 @@ const Disenos = ({ id }) => {
 				/>
 			</StyledDisenos>
 			<StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
-				<Titulo2>Acabados Cerámica</Titulo2>
+				<Titulo2>Malla de seguridad</Titulo2>
 				<Anotaciones>
 					<Text>
 						El enmallado en la parte trasera del porcelánico de gran formato es
