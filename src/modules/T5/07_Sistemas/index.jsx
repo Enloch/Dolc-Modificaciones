@@ -156,6 +156,13 @@ const Sistemas = ({ id }) => {
 					onClickFunc={() => openModal(IMG3, "Detalles tecnicos T5 XL PLUS")}
 				/>
 				<ImageWithCaption
+					src={IMG1}
+					alt="Dolcker-clip demostración"
+					columnSpan="6"
+					caption="Detalles de arranque T5 XL PLUS"
+					onClickFunc={() => openModal(IMG1, "Detalles de arranque T5 XL PLUS")}
+				/>
+				<ImageWithCaption
 					src={dolckerClip2}
 					alt="Dolcker-clip tabla"
 					caption="Imágen tabla"
