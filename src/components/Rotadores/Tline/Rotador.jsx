@@ -109,16 +109,6 @@ export default function Rotador() {
 					<PerspectiveCamera makeDefault {...cameraProps} />
 					<Environment files="/StudioE2.hdr" />
 					<ambientLight intensity={0.3} />
-					<ContactShadows
-						opacity={0.5}
-						scale={1}
-						blur={1}
-						far={1}
-						resolution={256}
-						color="#0000001e"
-						position={[0, -0.09, 0]}
-						frames={1}
-					/>
 
 					<Suspense fallback={null}>
 						<ModelRenderer
@@ -126,6 +116,16 @@ export default function Rotador() {
 							materialIndex={materialIndex}
 							color={color}
 							colorPickerActive={colorPickerActive}
+						/>
+						<ContactShadows
+							opacity={0.5}
+							scale={1}
+							blur={1}
+							far={1}
+							resolution={256}
+							color="#0000001e"
+							position={[0, -0.09, 0]}
+							frames={1}
 						/>
 					</Suspense>
 
