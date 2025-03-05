@@ -123,30 +123,30 @@ export default function Rotador() {
 							files="/StudioE2.hdr"
 							// files="/HDRI/neutral.hdr"
 							// background
-							backgroundRotation={[0, radianes, 0]}
+							// backgroundRotation={[0, radianes, 0]}
 						/>
-						<ambientLight intensity={0.3} />
-						<Suspense fallback={null}>
-							<ContactShadows
-								opacity={0.5}
-								scale={1}
-								blur={1}
-								far={1}
-								resolution={256}
-								color="#000000"
-								position={[0, -0.09, 0]}
-								frames={1}
-								key={model} // Añadir key para forzar la actualización cuando cambia el modelo
-							/>
-							<ModelRenderer
-								modelName={model}
-								materialIndex={materialIndex}
-								color={color}
-								colorPickerActive={colorPickerActive}
-							/>
-							{/* <ModelTest /> */}
-							{/* <Gltf src={mod} /> */}
-						</Suspense>
+						{/* <ambientLight intensity={0.3} /> */}
+
+						<ModelRenderer
+							modelName={model}
+							materialIndex={materialIndex}
+							color={color}
+							colorPickerActive={colorPickerActive}
+						/>
+						{/* <ModelTest /> */}
+						{/* <Gltf src={mod} /> */}
+
+						<ContactShadows
+							opacity={0.5}
+							scale={1}
+							blur={1}
+							far={1}
+							resolution={256}
+							color="#000000"
+							position={[0, -0.09, 0]}
+							frames={1}
+							key={model} // Añadir key para forzar la actualización cuando cambia el modelo
+						/>
 						<OrbitControls {...orbitControlsProps} />
 						<Suspense fallback={null}>
 							<EffectComposer disableNormalPass multisampling={4}>
@@ -160,7 +160,7 @@ export default function Rotador() {
 									maxLuminance={16.0}
 									averageLuminance={1.0}
 									adaptationRate={1.0}
-									type={ToneMapping.ACESFilmicToneMapping}
+									// type={ToneMapping.ACESFilmicToneMapping}
 								/>
 							</EffectComposer>
 						</Suspense>

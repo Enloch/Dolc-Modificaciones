@@ -6,6 +6,7 @@ import modelConfig, {
 	CATEGORIES,
 	LED_TYPES,
 	getModelsByType,
+	getModelById,
 } from "./modelosConfig";
 
 // Import MUI components
@@ -106,8 +107,11 @@ const Menu = ({
 
 	// Handle model selection
 	const handleModelSelect = (modelId) => {
+		// Get the model configuration to check if it's a LED model
+		const modelConfig = getModelById(modelId);
+
 		// Change the model first
-		handleModelChange(modelId);
+		handleModelChange(modelId, modelConfig?.hasEmisivo || false);
 		// Then set the material to ensure it's applied to the new model
 		handleMaterialChange(0);
 		setCurrentView("materials");

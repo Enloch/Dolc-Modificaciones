@@ -109,8 +109,8 @@ const ModelBase = memo(
 				{hasEmisivo && emisivoGeometry && (
 					<mesh castShadow receiveShadow geometry={emisivoGeometry}>
 						<meshStandardMaterial
-							emissive={emisiveColor || "#E0E0E0"}
-							emissiveIntensity={emisiveIntensity || 2}
+							emissive={emisiveColor}
+							emissiveIntensity={emisiveIntensity}
 						/>
 					</mesh>
 				)}

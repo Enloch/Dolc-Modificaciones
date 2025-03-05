@@ -24,12 +24,16 @@ import {
 	IntroText,
 	BotonExpandir,
 	ImagenExpandir,
+	LedToggleButton,
 } from "./styles";
 import Menu from "./Menu";
 import R360 from "../../../assets/icons/360.svg";
 import IconoAbrir from "../../../assets/icons/open-indicator.svg";
 import IconoCerrar from "../../../assets/icons/close-indicator.svg";
+import IconoLedOn from "../../../assets/icons/led-on.svg"; // Update the import statement for the LED on icon
+import IconoLedOff from "../../../assets/icons/led-off.svg"; // Update the import statement for the LED off icon
 import { MeshPhysicalMaterial } from "three";
+import { getModelById } from "./modelosConfig";
 
 // Componente para renderizar el modelo seleccionado
 const ModelRenderer = ({
@@ -39,6 +43,7 @@ const ModelRenderer = ({
 	colorPickerActive,
 	emisiveColor,
 	emisiveIntensity,
+	ledActive,
 }) => {
 	// Asegurar que siempre hay un material válido
 	const safeMaterialIndex = materialIndex !== undefined ? materialIndex : 0;
@@ -50,7 +55,7 @@ const ModelRenderer = ({
 			color={color}
 			colorPickerActive={colorPickerActive}
 			emisiveColor={emisiveColor}
-			emisiveIntensity={emisiveIntensity}
+			emisiveIntensity={ledActive ? emisiveIntensity : 0}
 		/>
 	);
 };
@@ -68,11 +73,34 @@ export default function Rotador() {
 	// Estado para propiedades emisivas
 	const [emisiveColor, setEmisiveColor] = useState("#FFFFFF");
 	const [emisiveIntensity, setEmisiveIntensity] = useState(4);
+	// Estado para el LED encendido/apagado
+	const [ledActive, setLedActive] = useState(true);
+	// Estado para saber si el modelo actual es un modelo LED
+	const [isCurrentModelLed, setIsCurrentModelLed] = useState(true); // Por defecto true porque el modelo inicial es LED
 
 	const handleIntroClick = () => setShowIntro(false);
 	const handleExpandClick = () => setIsMenuOpen(!isMenuOpen);
 	let grados = 270;
 	let radianes = grados * (Math.PI / 180);
+
+	// Función para manejar el cambio de modelo
+	const handleModelChange = (modelId, isLedModel) => {
+		setModel(modelId);
+		setIsCurrentModelLed(isLedModel);
+		// Si es un modelo LED, asegurarse de que el LED esté encendido por defecto
+		if (isLedModel) {
+			setLedActive(true);
+			updateEmisiveIntensity(4); // Restablecer la intensidad emisiva
+		}
+	};
+
+	// Función para alternar el estado del LED
+	const toggleLed = () => {
+		const newLedState = !ledActive;
+		setLedActive(newLedState);
+		// Actualizar la intensidad emisiva (0 para apagado, 4 para encendido)
+		updateEmisiveIntensity(newLedState ? 2 : 0);
+	};
 
 	// Memoizar las propiedades de la cámara para evitar recálculos innecesarios
 	const cameraProps = useMemo(
@@ -124,6 +152,16 @@ export default function Rotador() {
 				/>
 			</BotonExpandir>
 
+			{/* Botón de encendido/apagado del LED (solo visible para modelos LED) */}
+			{isCurrentModelLed && (
+				<LedToggleButton onClick={toggleLed} active={ledActive}>
+					<img
+						src={ledActive ? IconoLedOn : IconoLedOff}
+						alt={ledActive ? "Apagar LED" : "Encender LED"}
+					/>
+				</LedToggleButton>
+			)}
+
 			<CanvasContainer visible={isMenuOpen}>
 				{showIntro && (
 					<IntroContainer onClick={handleIntroClick}>
@@ -171,6 +209,7 @@ export default function Rotador() {
 								colorPickerActive={colorPickerActive}
 								emisiveColor={emisiveColor}
 								emisiveIntensity={emisiveIntensity}
+								ledActive={ledActive}
 							/>
 						</Suspense>
 						<OrbitControls {...orbitControlsProps} />
@@ -196,7 +235,7 @@ export default function Rotador() {
 
 			<MenuContainer visible={isMenuOpen}>
 				<Menu
-					handleModelChange={setModel}
+					handleModelChange={handleModelChange}
 					handleMaterialChange={setMaterialIndex}
 					color={color}
 					setColor={setColor}
