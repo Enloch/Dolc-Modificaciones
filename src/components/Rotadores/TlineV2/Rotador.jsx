@@ -40,10 +40,13 @@ const ModelRenderer = ({
 	emisiveColor,
 	emisiveIntensity,
 }) => {
+	// Asegurar que siempre hay un material válido
+	const safeMaterialIndex = materialIndex !== undefined ? materialIndex : 0;
+
 	return (
 		<DynamicModel
 			modelId={modelName}
-			material={materialIndex}
+			material={safeMaterialIndex}
 			color={color}
 			colorPickerActive={colorPickerActive}
 			emisiveColor={emisiveColor}
@@ -138,7 +141,7 @@ export default function Rotador() {
 							position: "relative",
 							top: 0,
 							left: 0,
-							background: "#B4B4B4FF",
+							background: "#E7E7E7FF",
 						}}
 					>
 						<PerspectiveCamera makeDefault {...cameraProps} />
@@ -148,7 +151,7 @@ export default function Rotador() {
 							// background
 							backgroundRotation={[0, radianes, 0]}
 						/>
-						<ambientLight intensity={0.3} />
+						<ambientLight intensity={1} />
 						<Suspense fallback={null}>
 							<ContactShadows
 								opacity={0.5}
@@ -183,7 +186,7 @@ export default function Rotador() {
 									maxLuminance={16.0}
 									averageLuminance={1.0}
 									adaptationRate={1.0}
-									type={ToneMapping.ACESFilmicToneMapping}
+									// type={ToneMapping.ACESFilmicToneMapping}
 								/>
 							</EffectComposer>
 						</Suspense>

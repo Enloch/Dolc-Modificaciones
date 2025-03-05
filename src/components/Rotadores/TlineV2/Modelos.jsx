@@ -1,4 +1,4 @@
-import React, { memo, useMemo, Suspense } from "react";
+import React, { memo, useMemo, Suspense, useState, useFrame } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 import { Materiales, MaterialesMetalizados } from "./Materiales";
 import { MeshPhysicalMaterial, MeshStandardMaterial } from "three";
@@ -20,6 +20,12 @@ const ModelBase = memo(
 		emisiveIntensity = 1,
 		...props
 	}) => {
+		// Verificar que nodes y geometryNames existen
+		if (!nodes || !geometryNames) {
+			console.error(`Nodes or geometryNames missing for model ${meshName}`);
+			return null;
+		}
+
 		// Cargar texturas fuera de useMemo
 		const texturas = Materiales.map((mat) => mat.map);
 		const acabados = useTexture(texturas);
@@ -35,10 +41,10 @@ const ModelBase = memo(
 			[]
 		);
 
-		// Si el selector de color está activo, no usamos material
+		// Si el selector de color estu00e1 activo, no usamos material
 		const activeMaterial = colorPickerActive ? null : material;
 
-		// Verificar si los nodos y geometrías existen
+		// Verificar si los nodos y geometru00edas existen
 		const baseGeometry =
 			nodes && geometryNames?.base && nodes[geometryNames.base]?.geometry;
 		const aluminioGeometry =
@@ -56,14 +62,17 @@ const ModelBase = memo(
 			geometryNames?.metacrilato &&
 			nodes[geometryNames.metacrilato]?.geometry;
 
-		// Si no hay geometría base, mostrar un mensaje de error y retornar null
+		// Si no hay geometru00eda base, mostrar un mensaje de error y retornar null
 		if (!baseGeometry) {
 			console.error(
-				`Geometría base no encontrada para el modelo ${meshName}. Nodos disponibles:`,
-				nodes
+				`Geometru00eda base no encontrada para el modelo ${meshName}. Nodos disponibles:`,
+				nodes ? Object.keys(nodes) : "nodes is undefined"
 			);
 			return null;
 		}
+
+		// Verificar si las texturas estu00e1n cargadas
+		const texturesLoaded = Acabados && Acabados[activeMaterial];
 
 		return (
 			<group {...props} dispose={null}>
@@ -71,10 +80,10 @@ const ModelBase = memo(
 				<mesh name={meshName} castShadow receiveShadow geometry={baseGeometry}>
 					{!colorPickerActive ? (
 						<meshPhysicalMaterial
-							map={Acabados[activeMaterial]}
-							roughness={Aspereza[activeMaterial]}
-							metalness={Metalizado[activeMaterial]}
-							color={null}
+							map={texturesLoaded ? Acabados[activeMaterial] : null}
+							roughness={texturesLoaded ? Aspereza[activeMaterial] : 0.5}
+							metalness={texturesLoaded ? Metalizado[activeMaterial] : 0.5}
+							color={texturesLoaded ? null : "#cccccc"}
 						/>
 					) : (
 						<meshStandardMaterial
@@ -99,7 +108,10 @@ const ModelBase = memo(
 				{/* Emisivo mesh - only for LED models */}
 				{hasEmisivo && emisivoGeometry && (
 					<mesh castShadow receiveShadow geometry={emisivoGeometry}>
-						<meshStandardMaterial emissive={"#E0E0E0"} emissiveIntensity={2} />
+						<meshStandardMaterial
+							emissive={emisiveColor || "#E0E0E0"}
+							emissiveIntensity={emisiveIntensity || 2}
+						/>
 					</mesh>
 				)}
 
@@ -141,27 +153,15 @@ export const ModeloGenerico = memo(
 			return null;
 		}
 
-		// Load the model with error handling
-		let nodes, materials;
-		try {
-			// Preload the model to ensure it's in the cache
-			useGLTF.preload(modelConfig.path);
+		// Preload the model to ensure it's in the cache
+		useGLTF.preload(modelConfig.path);
 
-			// Now load the model
-			const result = useGLTF(modelConfig.path);
-			nodes = result.nodes;
-			materials = result.materials;
+		// Load the model directly
+		const { nodes, materials } = useGLTF(modelConfig.path);
 
-			if (!nodes) {
-				console.error(
-					`Model loaded but nodes are undefined for ${modelId} at path ${modelConfig.path}`
-				);
-				return null;
-			}
-		} catch (error) {
+		if (!nodes) {
 			console.error(
-				`Error loading model ${modelId} from path ${modelConfig.path}:`,
-				error
+				`Model loaded but nodes are undefined for ${modelId} at path ${modelConfig.path}`
 			);
 			return null;
 		}
@@ -199,6 +199,36 @@ export const ModeloGenerico = memo(
 	}
 );
 
+// Error boundary component for model loading errors
+class ModelErrorBoundary extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = { hasError: false, error: null };
+	}
+
+	static getDerivedStateFromError(error) {
+		return { hasError: true, error };
+	}
+
+	componentDidCatch(error, errorInfo) {
+		console.error("Model loading error:", error, errorInfo);
+	}
+
+	render() {
+		if (this.state.hasError) {
+			// Render fallback UI
+			return (
+				<mesh>
+					<boxGeometry args={[0.3, 0.3, 0.3]} />
+					<meshStandardMaterial color="#ff0000" />
+				</mesh>
+			);
+		}
+
+		return this.props.children;
+	}
+}
+
 // Dynamic model loader - updated to use ModeloGenerico
 export const DynamicModel = memo(
 	({
@@ -210,26 +240,32 @@ export const DynamicModel = memo(
 		emisiveIntensity,
 		...props
 	}) => {
-		// Simple loading placeholder
-		const LoadingPlaceholder = () => (
-			<mesh>
-				<boxGeometry args={[0.3, 0.3, 0.3]} />
-				<meshStandardMaterial color="#cccccc" />
-			</mesh>
-		);
+		// Improved loading placeholder with animation
+		const LoadingPlaceholder = () => {
+			const [rotation, setRotation] = useState({ x: 0, y: 0 });
+
+			return (
+				<mesh rotation={[rotation.x, rotation.y, 0]}>
+					<boxGeometry args={[0.3, 0.3, 0.3]} />
+					<meshStandardMaterial color="#888888" />
+				</mesh>
+			);
+		};
 
 		return (
-			<Suspense fallback={<LoadingPlaceholder />}>
-				<ModeloGenerico
-					modelId={modelId}
-					material={material}
-					color={color}
-					colorPickerActive={colorPickerActive}
-					emisiveColor={emisiveColor}
-					emisiveIntensity={emisiveIntensity}
-					{...props}
-				/>
-			</Suspense>
+			<ModelErrorBoundary>
+				<Suspense fallback={<LoadingPlaceholder />}>
+					<ModeloGenerico
+						modelId={modelId}
+						material={material}
+						color={color}
+						colorPickerActive={colorPickerActive}
+						emisiveColor={emisiveColor}
+						emisiveIntensity={emisiveIntensity}
+						{...props}
+					/>
+				</Suspense>
+			</ModelErrorBoundary>
 		);
 	}
 );

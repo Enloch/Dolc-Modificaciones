@@ -106,10 +106,10 @@ const Menu = ({
 
 	// Handle model selection
 	const handleModelSelect = (modelId) => {
-		// First set the material to ensure it's ready when the model loads
-		handleMaterialChange(0);
-		// Then change the model
+		// Change the model first
 		handleModelChange(modelId);
+		// Then set the material to ensure it's applied to the new model
+		handleMaterialChange(0);
 		setCurrentView("materials");
 	};
 
