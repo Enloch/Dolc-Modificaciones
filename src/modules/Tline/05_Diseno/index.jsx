@@ -16,7 +16,7 @@ import ranurado9 from "../../../assets/images/DolckerTline/Diseno/Espesores/Dolc
 import ranurado11 from "../../../assets/images/DolckerTline/Diseno/Espesores/Dolcker_espesor_11mm.jpg";
 import VisualizadorDesplazador from "../../../components/Tline/VisualizadorDesplazador";
 import IndiceSeries from "./05_1_IndiceSeries";
-import RotadorTline from "../../../components/Rotadores/Tline/Rotador";
+import RotadorTline from "../../../components/Rotadores/TlineV2/Rotador";
 import Configurador1Tline from "../../../components/VisualizadorVariacionesTline";
 import Configurador2Tline from "../../../components/VisualizadorVariacionesTline2";
 
