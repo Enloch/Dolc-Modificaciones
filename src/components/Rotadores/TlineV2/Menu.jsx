@@ -15,7 +15,7 @@ import {
 	Typography,
 	Tabs,
 	Tab,
-	Grid,
+	Grid2,
 	Button,
 	Card,
 	CardContent,
@@ -53,13 +53,15 @@ const MaterialImage = muiStyled("img")({
 });
 
 const MaterialText = muiStyled(Typography)({
-	fontSize: 10,
+	fontSize: 8,
 	textAlign: "center",
 	marginTop: 2,
 	maxWidth: 65,
+	minHeight: 65,
 	overflow: "hidden",
 	textOverflow: "ellipsis",
-	whiteSpace: "nowrap",
+	whiteSpace: "wrap",
+	color: "#000",
 });
 
 const ModelCard = muiStyled(Card)(({ theme }) => ({
@@ -69,11 +71,13 @@ const ModelCard = muiStyled(Card)(({ theme }) => ({
 	"&:hover": {
 		transform: "scale(1.03)",
 	},
+	width: 100,
 }));
 
 const ModelCardMedia = muiStyled(CardMedia)({
-	height: 120,
-	backgroundSize: "cover",
+	height: 60,
+	width: "100",
+	backgroundSize: "contain",
 });
 
 const StyledTab = muiStyled(Tab)({
@@ -166,9 +170,9 @@ const Menu = ({
 			</Box>
 
 			<Box sx={{ maxHeight: "70vh", overflow: "auto", p: 1 }}>
-				<Grid container spacing={1}>
+				<Grid2 container spacing={1}>
 					{currentModels.map((model) => (
-						<Grid item xs={6} sm={4} key={model.id}>
+						<Grid2 item xs={6} sm={4} key={model.id}>
 							<ModelCard onClick={() => handleModelSelect(model.id)}>
 								<ModelCardMedia image={model.image} title={model.name} />
 								<CardContent sx={{ p: 1 }}>
@@ -177,9 +181,9 @@ const Menu = ({
 									</Typography>
 								</CardContent>
 							</ModelCard>
-						</Grid>
+						</Grid2>
 					))}
-				</Grid>
+				</Grid2>
 			</Box>
 		</Box>
 	);

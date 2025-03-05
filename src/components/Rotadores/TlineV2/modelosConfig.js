@@ -1,8 +1,9 @@
 // Import model thumbnails
-import Perfil1 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/CF-L-VERTEX_01.svg";
-import Perfil2 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL2.jpg";
-import Perfil3 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL3.jpg";
-import Perfil4 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL4.jpg";
+// Remove hardcoded imports as we'll use dynamic paths
+// import Perfil1 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/CF-L-VERTEX_01.svg";
+// import Perfil2 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL2.jpg";
+// import Perfil3 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL3.jpg";
+// import Perfil4 from "../../../assets/images/DolckerTline/Diseno/Formato/MINIATURAS/PERFIL4.jpg";
 
 // Define model types
 export const MODEL_TYPES = {
@@ -72,18 +73,26 @@ const generateModelConfigs = (category, ledType, family, count, image) => {
 		const num = i.toString().padStart(2, "0");
 		const id = `CF_${category === CATEGORIES.SG ? "SG" : "L"}_${family}_${num}`;
 
+		// Generate the icon path based on category and LED type
+		const iconFolder =
+			category === CATEGORIES.SG
+				? isLed
+					? "ICONO-SG-LED"
+					: "ICONO-SG-SINLED"
+				: isLed
+					? "ICONO-CG-LED"
+					: "ICONO-CF-SINLED";
+
+		// Generate the SVG filename based on the model ID
+		const svgFileName = `CF-${category === CATEGORIES.SG ? "SG" : "L"}-${family}_${num}.svg`;
+
+		// Full path to the SVG icon
+		const iconPath = `/modelos/Tline/${category}/${iconFolder}/${svgFileName}`;
+
 		models.push({
 			id,
 			name: `${family} ${num}`,
-			image:
-				image ||
-				(i % 4 === 1
-					? Perfil1
-					: i % 4 === 2
-						? Perfil2
-						: i % 4 === 3
-							? Perfil3
-							: Perfil4),
+			image: image || iconPath,
 			path: `/modelos/Tline/${category}/${ledType}/${id}.glb`,
 			...template,
 		});
