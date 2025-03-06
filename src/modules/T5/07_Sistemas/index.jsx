@@ -169,6 +169,56 @@ const Sistemas = ({ id }) => {
 					columnSpan="6"
 				/>
 			</StyledSistemas>
+			<StyledSistemas>
+				<Titulo2>GRAPAS T5 XL</Titulo2>
+				<Text>
+					<strong>Punto de Dilatación en Grapa Cerámica grapas T5 XL</strong>
+					<br />
+					<br />
+					El sistema T5 XL de fachadas cerámicas de formato grande, donde las
+					piezas se fijan con adhesivos estructurales y se complementan con
+					grapas metálicas de sustentación y retención, requiere prever puntos
+					de dilatación para absorber los movimientos generados por los cambios
+					de temperatura y humedad.
+					<br />
+					<br />
+					Para ello, las grapas TX 5 * disponen tanto de puntos fijos y colisos,
+					como de un espacio entre la pestaña de la grapa prptegido que permite
+					la dilatación del porcelánico.
+					<br />
+					<br />
+					<strong>1. Fijación de la Grapa y su Función en la Dilatación</strong>
+					La grapa debe permitir un cierto grado de movilidad, evitando la
+					generación de puntos rígidos que impidan la expansión y contracción
+					natural de la cerámica. Esto es clave para evitar tensiones internas
+					que puedan provocar fisuras o desprendimientos en el sistema de
+					revestimiento.
+					<br />
+					<br />
+					<strong>
+						2. Importancia del Punto de Dilatación en Grapa Cerámica
+					</strong>
+					<br />
+					<br />
+					<li>
+						<strong>Prevención de fisuras y desprendimientos:</strong> La
+						cerámica experimenta variaciones dimensionales con los cambios de
+						temperatura. Si no se respeta un espacio de dilatación adecuado,
+						pueden generarse esfuerzos que comprometan su estabilidad.
+					</li>
+					<li>
+						<strong>Durabilidad del sistema:</strong> Una planificación correcta
+						de las juntas de dilatación garantiza la resistencia y longevidad
+						del revestimiento, evitando fallos prematuros.
+					</li>
+					<li>
+						<strong>Facilidad de instalación y mantenimiento:</strong> El
+						espacio de dilatación facilita la correcta colocación de las piezas,
+						permitiendo reemplazos o ajustes sin afectar el comportamiento
+						general del sistema.
+					</li>
+				</Text>
+			</StyledSistemas>
 			<Modal
 				isOpen={selectedImage !== null}
 				onClose={closeModal}
