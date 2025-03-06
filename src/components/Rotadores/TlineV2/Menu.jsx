@@ -33,6 +33,9 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
+// Import global styles
+import { COLORS } from "../../../global/GlobalStyles";
+
 // Styled components using MUI's styled API
 const MaterialButton = muiStyled(Button)(({ theme }) => ({
 	width: 70,
@@ -80,10 +83,26 @@ const ModelCardMedia = muiStyled(CardMedia)({
 	backgroundSize: "contain",
 });
 
-const StyledTab = muiStyled(Tab)({
+const StyledTab = muiStyled(Tab)(({ theme }) => ({
 	minWidth: "auto",
 	fontSize: "0.8rem",
-});
+	color: COLORS.gray06,
+	"&.Mui-selected": {
+		color: COLORS.gray08,
+		fontWeight: "bold",
+	},
+	"&:hover": {
+		color: COLORS.gray07,
+		transition: "color 0.2s ease-in-out",
+	},
+}));
+
+const StyledTabs = muiStyled(Tabs)(({ theme }) => ({
+	"& .MuiTabs-indicator": {
+		backgroundColor: COLORS.gray08, // Black indicator line
+		height: 2,
+	},
+}));
 
 const Menu = ({
 	handleModelChange,
@@ -146,7 +165,7 @@ const Menu = ({
 	const renderModelsView = () => (
 		<Box>
 			<Box sx={{ borderBottom: 1, borderColor: "divider", mb: 2 }}>
-				<Tabs
+				<StyledTabs
 					value={selectedCategory}
 					onChange={handleCategoryChange}
 					variant="fullWidth"
@@ -154,11 +173,11 @@ const Menu = ({
 				>
 					<StyledTab label="CG" value={CATEGORIES.CG} />
 					<StyledTab label="SG" value={CATEGORIES.SG} />
-				</Tabs>
+				</StyledTabs>
 			</Box>
 
 			<Box sx={{ borderBottom: 1, borderColor: "divider", mb: 2 }}>
-				<Tabs
+				<StyledTabs
 					value={selectedType}
 					onChange={handleTypeChange}
 					variant="fullWidth"
@@ -166,7 +185,7 @@ const Menu = ({
 				>
 					<StyledTab label="LED" value={LED_TYPES.LED} />
 					<StyledTab label="NO LED" value={LED_TYPES.NOLED} />
-				</Tabs>
+				</StyledTabs>
 			</Box>
 
 			<Box sx={{ maxHeight: "70vh", overflow: "auto", p: 1 }}>

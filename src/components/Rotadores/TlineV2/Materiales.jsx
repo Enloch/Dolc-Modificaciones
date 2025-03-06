@@ -46,219 +46,221 @@ import EmberoTexturaRugosoMini from "/texturasmini/EmberoTexturaRugoso.jpg";
 
 // Definición unificada de materiales para mejorar la consistencia y mantenibilidad
 const materialesData = [
-  {
-    id: 0,
-    nombre: "Plata Mate",
-    map: PlataMate,
-    textura: PlataMateMini,
-    tipo: "metal",
-    roughness: "0.65",
-    metalness: "0.75"
-  },
-  {
-    id: 1,
-    nombre: "Plata Grata",
-    map: PlataGrata,
-    textura: PlataGrataMini,
-    tipo: "metal",
-    roughness: "0.6",
-    metalness: "0.6"
-  },
-  {
-    id: 2,
-    nombre: "Plata Grata REP.",
-    map: PlataGrataRFP,
-    textura: PlataGrataRFPMini,
-    tipo: "metal",
-    roughness: "0.55",
-    metalness: "0.75"
-  },
-  {
-    id: 3,
-    nombre: "Plata Brillo",
-    map: PlataBrillo,
-    textura: PlataBrilloMini,
-    tipo: "metal",
-    roughness: "0.35",
-    metalness: "1"
-  },
-  {
-    id: 4,
-    nombre: "Oro Mate",
-    map: OroMate,
-    textura: OroMateMini,
-    tipo: "metal",
-    roughness: "0.65",
-    metalness: "0.75"
-  },
-  {
-    id: 5,
-    nombre: "Oro Grata",
-    map: OroGrata,
-    textura: OroGrataMini,
-    tipo: "metal",
-    roughness: "0.6",
-    metalness: "0.6"
-  },
-  {
-    id: 6,
-    nombre: "Oro Grata REF",
-    map: OroGrataRFP,
-    textura: OroGrataRFPMini,
-    tipo: "metal",
-    roughness: "0.55",
-    metalness: "0.75"
-  },
-  {
-    id: 7,
-    nombre: "Bronce Mate",
-    map: BronceMate,
-    textura: BronceMateMini,
-    tipo: "metal",
-    roughness: "0.65",
-    metalness: "0.75"
-  },
-  {
-    id: 8,
-    nombre: "Bronce Grata",
-    map: BronceGrata,
-    textura: BronceGrataMini,
-    tipo: "metal",
-    roughness: "0.6",
-    metalness: "0.6"
-  },
-  {
-    id: 9,
-    nombre: "Bronce Grata REF",
-    map: BronceGrataRFP,
-    textura: BronceGrataRFPMini,
-    tipo: "metal",
-    roughness: "0.55",
-    metalness: "0.75"
-  },
-  {
-    id: 10,
-    nombre: "Inox Mate",
-    map: InoxMate,
-    textura: InoxMateMini,
-    tipo: "metal",
-    roughness: "0.65",
-    metalness: "0.75"
-  },
-  {
-    id: 11,
-    nombre: "Inox Grata",
-    map: InoxGrata,
-    textura: InoxGrataMini,
-    tipo: "metal",
-    roughness: "0.6",
-    metalness: "0.6"
-  },
-  {
-    id: 12,
-    nombre: "Inox Grata REF",
-    map: InoxGrataRFP,
-    textura: InoxGrataRFPMini,
-    tipo: "metal",
-    roughness: "0.55",
-    metalness: "0.75"
-  },
-  {
-    id: 13,
-    nombre: "Burdeos Mate",
-    map: BurdeosMate,
-    textura: BurdeosMateMini,
-    tipo: "metal",
-    roughness: "0.65",
-    metalness: "1"
-  },
-  {
-    id: 14,
-    nombre: "Burdeos Grata",
-    map: BurdeosGrata,
-    textura: BurdeosGrataMini,
-    tipo: "metal",
-    roughness: "0.6",
-    metalness: "1"
-  },
-  {
-    id: 15,
-    nombre: "Burdeos Grata REF",
-    map: BurdeosGrataRFP,
-    textura: BurdeosGrataRFPMini,
-    tipo: "metal",
-    roughness: "0.55",
-    metalness: "0.75"
-  },
-  {
-    id: 16,
-    nombre: "Negro Grata",
-    map: NegroGrata,
-    textura: NegroGrataMini,
-    tipo: "metal",
-    roughness: "0.6",
-    metalness: "0.6"
-  },
-  {
-    id: 17,
-    nombre: "Negro Grata REF",
-    map: NegroGrataRFP,
-    textura: NegroGrataRFPMini,
-    tipo: "metal",
-    roughness: "0.55",
-    metalness: "0.75"
-  },
-  {
-    id: 18,
-    nombre: "BASR01-01",
-    map: OlmoRugoso,
-    textura: OlmoRugosoMini,
-    tipo: "madera",
-    roughness: "0.6",
-    metalness: "0.2"
-  },
-  {
-    id: 19,
-    nombre: "BASR03-02",
-    map: NogalRugoso,
-    textura: NogalRugosoMini,
-    tipo: "madera",
-    roughness: "0.6",
-    metalness: "0.2"
-  },
-  {
-    id: 20,
-    nombre: "BASR03-04",
-    map: EmberoDoradoRugoso,
-    textura: EmberoDoradoRugosoMini,
-    tipo: "madera",
-    roughness: "0.6",
-    metalness: "0.2"
-  },
-  {
-    id: 21,
-    nombre: "BASR04-01",
-    map: EmberoTexturaRugoso,
-    textura: EmberoTexturaRugosoMini,
-    tipo: "madera",
-    roughness: "0.6",
-    metalness: "0.2"
-  },
+	{
+		id: 0,
+		nombre: "Plata Mate",
+		map: PlataMate,
+		textura: PlataMateMini,
+		tipo: "metal",
+		roughness: "0.65",
+		metalness: "0.75",
+	},
+	{
+		id: 1,
+		nombre: "Plata Grata",
+		map: PlataGrata,
+		textura: PlataGrataMini,
+		tipo: "metal",
+		roughness: "0.6",
+		metalness: "0.6",
+	},
+	{
+		id: 2,
+		nombre: "Plata Grata REP.",
+		map: PlataGrataRFP,
+		textura: PlataGrataRFPMini,
+		tipo: "metal",
+		roughness: "0.55",
+		metalness: "0.75",
+	},
+	{
+		id: 3,
+		nombre: "Plata Brillo",
+		map: PlataBrillo,
+		textura: PlataBrilloMini,
+		tipo: "metal",
+		roughness: "0.35",
+		metalness: "1",
+	},
+	{
+		id: 4,
+		nombre: "Oro Mate",
+		map: OroMate,
+		textura: OroMateMini,
+		tipo: "metal",
+		roughness: "0.65",
+		metalness: "0.75",
+	},
+	{
+		id: 5,
+		nombre: "Oro Grata",
+		map: OroGrata,
+		textura: OroGrataMini,
+		tipo: "metal",
+		roughness: "0.6",
+		metalness: "0.6",
+	},
+	{
+		id: 6,
+		nombre: "Oro Grata REF",
+		map: OroGrataRFP,
+		textura: OroGrataRFPMini,
+		tipo: "metal",
+		roughness: "0.55",
+		metalness: "0.75",
+	},
+	{
+		id: 7,
+		nombre: "Bronce Mate",
+		map: BronceMate,
+		textura: BronceMateMini,
+		tipo: "metal",
+		roughness: "0.65",
+		metalness: "0.75",
+	},
+	{
+		id: 8,
+		nombre: "Bronce Grata",
+		map: BronceGrata,
+		textura: BronceGrataMini,
+		tipo: "metal",
+		roughness: "0.6",
+		metalness: "0.6",
+	},
+	{
+		id: 9,
+		nombre: "Bronce Grata REF",
+		map: BronceGrataRFP,
+		textura: BronceGrataRFPMini,
+		tipo: "metal",
+		roughness: "0.55",
+		metalness: "0.75",
+	},
+	{
+		id: 10,
+		nombre: "Inox Mate",
+		map: InoxMate,
+		textura: InoxMateMini,
+		tipo: "metal",
+		roughness: "0.65",
+		metalness: "0.75",
+	},
+	{
+		id: 11,
+		nombre: "Inox Grata",
+		map: InoxGrata,
+		textura: InoxGrataMini,
+		tipo: "metal",
+		roughness: "0.6",
+		metalness: "0.6",
+	},
+	{
+		id: 12,
+		nombre: "Inox Grata REF",
+		map: InoxGrataRFP,
+		textura: InoxGrataRFPMini,
+		tipo: "metal",
+		roughness: "0.55",
+		metalness: "0.75",
+	},
+	{
+		id: 13,
+		nombre: "Burdeos Mate",
+		map: BurdeosMate,
+		textura: BurdeosMateMini,
+		tipo: "metal",
+		roughness: "0.65",
+		metalness: "1",
+	},
+	{
+		id: 14,
+		nombre: "Burdeos Grata",
+		map: BurdeosGrata,
+		textura: BurdeosGrataMini,
+		tipo: "metal",
+		roughness: "0.6",
+		metalness: "1",
+	},
+	{
+		id: 15,
+		nombre: "Burdeos Grata REF",
+		map: BurdeosGrataRFP,
+		textura: BurdeosGrataRFPMini,
+		tipo: "metal",
+		roughness: "0.55",
+		metalness: "0.75",
+	},
+	{
+		id: 16,
+		nombre: "Negro Grata",
+		map: NegroGrata,
+		textura: NegroGrataMini,
+		tipo: "metal",
+		roughness: "0.6",
+		metalness: "0.6",
+	},
+	{
+		id: 17,
+		nombre: "Negro Grata REF",
+		map: NegroGrataRFP,
+		textura: NegroGrataRFPMini,
+		tipo: "metal",
+		roughness: "0.55",
+		metalness: "0.75",
+	},
+	{
+		id: 18,
+		nombre: "BASR01-01",
+		map: OlmoRugoso,
+		textura: OlmoRugosoMini,
+		tipo: "madera",
+		roughness: "0.6",
+		metalness: "0.2",
+	},
+	{
+		id: 19,
+		nombre: "BASR03-02",
+		map: NogalRugoso,
+		textura: NogalRugosoMini,
+		tipo: "madera",
+		roughness: "0.6",
+		metalness: "0.2",
+	},
+	{
+		id: 20,
+		nombre: "BASR03-04",
+		map: EmberoDoradoRugoso,
+		textura: EmberoDoradoRugosoMini,
+		tipo: "madera",
+		roughness: "0.6",
+		metalness: "0.2",
+	},
+	{
+		id: 21,
+		nombre: "BASR04-01",
+		map: EmberoTexturaRugoso,
+		textura: EmberoTexturaRugosoMini,
+		tipo: "madera",
+		roughness: "0.6",
+		metalness: "0.2",
+	},
 ];
 
 // Exportar las estructuras de datos derivadas para mantener compatibilidad con el código existente
-export const Materiales = materialesData.map(material => ({ map: material.map }));
-
-export const MaterialesMetalizados = materialesData.map(material => ({
-  name: material.map,
-  roughness: material.roughness,
-  metalness: material.metalness
+export const Materiales = materialesData.map((material) => ({
+	map: material.map,
 }));
 
-export const NombreMateriales = materialesData.map(material => ({
-  nombre: material.nombre,
-  textura: material.textura,
-  tipo: material.tipo
+export const MaterialesMetalizados = materialesData.map((material) => ({
+	name: material.map,
+	roughness: material.roughness,
+	metalness: material.metalness,
+}));
+
+export const NombreMateriales = materialesData.map((material) => ({
+	nombre: material.nombre,
+	textura: material.textura,
+	tipo: material.tipo,
 }));
 
 // Exportar la estructura completa para uso futuro

@@ -189,7 +189,7 @@ export default function Rotador() {
 							// background
 							backgroundRotation={[0, radianes, 0]}
 						/>
-						<ambientLight intensity={1} />
+						<ambientLight intensity={0.3} />
 						<Suspense fallback={null}>
 							<ContactShadows
 								opacity={0.5}

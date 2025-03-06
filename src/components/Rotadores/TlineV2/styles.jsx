@@ -28,8 +28,10 @@ export const CanvasContainer = styled.div`
 	}
 	@media screen and (max-width: 480px) {
 		width: 100%;
+		height: 400px; /* Aumentado de 100% a una altura fija más grande para móvil */
 	}
 `;
+
 export const BotonExpandir = styled.a`
 	display: none;
 	position: absolute;

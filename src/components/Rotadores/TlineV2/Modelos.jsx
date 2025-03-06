@@ -1,7 +1,12 @@
 import React, { memo, useMemo, Suspense, useState, useFrame } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 import { Materiales, MaterialesMetalizados } from "./Materiales";
-import { MeshPhysicalMaterial, MeshStandardMaterial } from "three";
+import {
+	RepeatWrapping,
+	NearestFilter,
+	LinearMipMapLinearFilter,
+	SRGBColorSpace,
+} from "three";
 import { getModelById } from "./modelosConfig";
 
 // Componente base para todos los modelos
@@ -74,6 +79,25 @@ const ModelBase = memo(
 		// Verificar si las texturas estu00e1n cargadas
 		const texturesLoaded = Acabados && Acabados[activeMaterial];
 
+		// Configurar repetición de texturas para hacerlas seamless
+		useMemo(() => {
+			if (texturesLoaded) {
+				// Aplicar repetición a todas las texturas
+				Acabados.forEach((texture) => {
+					if (texture) {
+						texture.minFilter = LinearMipMapLinearFilter;
+						texture.magFilter = NearestFilter;
+						texture.wrapS = RepeatWrapping;
+						texture.wrapT = RepeatWrapping;
+						texture.repeat.set(0.5, 0.5);
+						texture.anisotropy = 16;
+						texture.colorSpace = SRGBColorSpace;
+						texture.needsUpdate = true;
+					}
+				});
+			}
+		}, [texturesLoaded, Acabados]);
+
 		return (
 			<group {...props} dispose={null}>
 				{/* Base material mesh */}
@@ -84,6 +108,8 @@ const ModelBase = memo(
 							roughness={texturesLoaded ? Aspereza[activeMaterial] : 0.5}
 							metalness={texturesLoaded ? Metalizado[activeMaterial] : 0.5}
 							color={texturesLoaded ? null : "#cccccc"}
+							map-anisotropy={16}
+							map-encoding={SRGBColorSpace}
 						/>
 					) : (
 						<meshStandardMaterial
