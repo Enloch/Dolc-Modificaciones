@@ -89,8 +89,8 @@ const ModelBase = memo(
 						texture.magFilter = NearestFilter;
 						texture.wrapS = RepeatWrapping;
 						texture.wrapT = RepeatWrapping;
-						texture.repeat.set(0.5, 0.5);
-						texture.anisotropy = 16;
+						texture.repeat.set(0.5, 1);
+						texture.anisotropy = 4;
 						texture.colorSpace = SRGBColorSpace;
 						texture.needsUpdate = true;
 					}
