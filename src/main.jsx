@@ -24,7 +24,6 @@ import Contacto from './pages/Contacto';
 import PaginaImagenes from './pages/PaginaImagen';
 import MainFr from './pages/fr/MainFr';
 import FachadaVentiladaFr from './pages/fr/catalogos/FachadaVentiladaFr';
-
 import ContactoFr from './pages/fr/Contacto';
 import PoliticaPrivacidadFr from './pages/fr/PoliticaPrivacidad';
 import AvisoLegalFr from './pages/fr/AvisoLegal';

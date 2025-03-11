@@ -140,7 +140,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         font-size: ${FONT_SIZE_DEFAULT};
-        /* font-family: ${FONT_FAMILY}; */
+        font-family: ${FONT_FAMILY};
     }
 
     strong {

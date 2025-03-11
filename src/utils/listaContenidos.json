@@ -174,10 +174,7 @@
       }
     ]
   },
-  {
-    "title": "Galeria de proyectos",
-    "link": "#galeria"
-  },
+
   {
     "title": "Sistemas",
     "subList": [
@@ -202,6 +199,10 @@
         "link": "#dol-hc20"
       }
     ]
+  },
+  {
+    "title": "Galeria de proyectos",
+    "link": "#galeria"
   },
   {
     "title": "Descargas",
