@@ -18,6 +18,11 @@ import recercoTC14_60 from "../../../assets/images/DolckerTXT/Sistemas/RECERCO T
 import ImageWithCaption from "../../../components/ImageWithCaption";
 import Reemplazo from "../../../assets/images/DolckerMatrix/temporal.webp";
 import { useState } from "react";
+
+import txt11 from "../../../assets/images/DolckerTXT/Caracteristicas/Detalle TXT11.jpg";
+import txt12 from "../../../assets/images/DolckerTXT/Caracteristicas/Detalle TXT12.jpg";
+import txt13 from "../../../assets/images/DolckerTXT/Caracteristicas/Detalle TXT13.jpg";
+
 import Modal from "../../../components/Modal";
 
 const SistemasTline = ({ id }) => {
@@ -53,26 +58,81 @@ const SistemasTline = ({ id }) => {
             <a href={"#" + id[1]}>
               Sistema
               <br />
-              <strong>TXT-TC14 Detalles esquina</strong>
+              <strong>TXT-11</strong>
             </a>
           </li>
           <li>
             <a href={"#" + id[2]}>
               Sistema
               <br />
-              <strong>TXT-TC14 Detalles recerco</strong>
+              <strong>TXT-12</strong>
             </a>
           </li>
           <li>
             <a href={"#" + id[3]}>
+              Sistema
+              <br />
+              <strong>TXT-13</strong>
+            </a>
+          </li>
+          <li>
+            <a href={"#" + id[4]}>
+              Sistema
+              <br />
+              <strong>TXT-TC14 Detalles esquina</strong>
+            </a>
+          </li>
+          <li>
+            <a href={"#" + id[5]}>
+              Sistema
+              <br />
+              <strong>TXT-TC14 Detalles recerco</strong>
+            </a>
+          </li>
+          <li>
+            <a href={"#" + id[6]}>
               <br />
               <strong>TXT-TC14 Leyenda</strong>
             </a>
           </li>
         </Enlaces>
       </StyledSistemas>
-
       <StyledSistemas id={id[1]}>
+				<Titulo2>TXT-11</Titulo2>
+				<Text>
+        Fachadas con alineaciones de revestimiento diferenciadas, destacando una junta vertical lacada en el color elegido por el diseñador.
+				</Text>
+				<ImageWithCaption
+					src={txt11}
+					alt="Dolcker-clip demostración"
+					columnSpan="6"
+					caption="Detalles tecnicos TXT-11"
+				/>
+			</StyledSistemas>
+      <StyledSistemas id={id[2]}>
+				<Titulo2>TXT-12</Titulo2>
+				<Text>
+        Fachadas diseñadas para resaltar volúmenes distintivos.</Text>
+				<ImageWithCaption
+					src={txt12}
+					alt="Dolcker-clip demostración"
+					columnSpan="6"
+					caption="Detalles tecnicos TXT-12"
+				/>
+			</StyledSistemas>
+      <StyledSistemas id={id[3]}>
+				<Titulo2>TXT-13</Titulo2>
+				<Text>
+        Fachadas que incorporan perfiles estratégicos para generar sombras y potenciar la volumetría.
+				</Text>
+				<ImageWithCaption
+					src={txt13}
+					alt="Dolcker-clip demostración"
+					columnSpan="6"
+					caption="Detalles tecnicos TXT-13"
+				/>
+			</StyledSistemas>
+      <StyledSistemas id={id[4]}>
         <Titulo2>TXT-TC14<br />Detalles esquina</Titulo2>
         <StyledGrid>
           <ImageWithCaption
@@ -119,7 +179,7 @@ const SistemasTline = ({ id }) => {
           />
         </StyledGrid>
       </StyledSistemas>
-      <StyledSistemas id={id[2]}>
+      <StyledSistemas id={id[5]}>
         <Titulo2>TXT-TC14<br />Detalles recerco</Titulo2>
         <StyledGrid>
           <ImageWithCaption
@@ -145,7 +205,7 @@ const SistemasTline = ({ id }) => {
           />
         </StyledGrid>
       </StyledSistemas>
-      <StyledSistemas id={id[3]}>
+      <StyledSistemas id={id[6]}>
         <Titulo2>TXT-TC14<br />Leyenda</Titulo2>
        
           <LegendList>

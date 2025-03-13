@@ -68,7 +68,7 @@ export const Landing = () => {
 			src: T5,
 			title: "Dolcker T5 XL",
 			subtitle: "Sistema de fachada ventilada con perfilería de aluminio",
-			link: "",
+			link: "dolcker-t5",
 		},
 	];
 

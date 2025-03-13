@@ -42,9 +42,13 @@ const DolckerTXT = () => {
 			<Ventajas id="ventajas" />
 			<Aplicaciones id={["aplicaciones", "rehabilitacion", "obra-nueva"]} />
 			<Disenos id={["diseno", "espesores", "configurador"]} />
+			{/* <Caracteristicas id={["caracteristicas-especiales", "datos-tecnicos"]} /> */}
 			<Sistemas
 				id={[
 					"sistemas",
+					"txt-11",
+					"txt-12",
+					"txt-13",
 					"txt-tc14-esquina",
 					"txt-tc14-recerco",
 					"txt-tc14-leyenda",

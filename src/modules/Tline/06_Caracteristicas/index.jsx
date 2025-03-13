@@ -152,7 +152,7 @@ const CaracteristicasTline = ({ id }) => {
           siguientes características declaradas por el fabricante:
           <br />
           <br />
-          <span
+          {/* <span
             onClick={() => setShowDatosTecnicos(!showDatosTecnicos)}
             style={{
               cursor: "pointer",
@@ -165,10 +165,10 @@ const CaracteristicasTline = ({ id }) => {
                 ? "Para mostrar las características presione aquí"
                 : "Oculta las tablas"}
             </strong>
-          </span>
+          </span> */}
         </Text>
 
-        {showDatosTecnicos && (
+        {/* {showDatosTecnicos && ( */}
           <>
             <Box sx={{ width: "100%", overflow: "auto", mt: 3 }}>
               <TableContainer component={Paper}>
@@ -695,7 +695,7 @@ const CaracteristicasTline = ({ id }) => {
               </TableContainer>
             </Box>
           </>
-        )}
+        {/* )} */}
       </StyledCaracteristicas>
     </>
   );

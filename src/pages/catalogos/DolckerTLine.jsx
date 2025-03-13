@@ -70,7 +70,7 @@ const DolckerTline = () => {
 					"t-line-t20",
 				]}
 			/>
-			{/* <Descargas id='descargas' /> */}
+			<Descargas id='descargas' />
 			<Final />
 			{showButton && (
 				<StyledButton onClick={handleGoToIndice}>

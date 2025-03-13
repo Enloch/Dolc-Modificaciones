@@ -149,7 +149,7 @@ const Caracteristicas = ({ id }) => {
           siguientes características declaradas por el fabricante:
           <br />
           <br />
-          <span
+          {/* <span
             onClick={() => setShowDatosTecnicos(!showDatosTecnicos)}
             style={{
               cursor: "pointer",
@@ -162,9 +162,9 @@ const Caracteristicas = ({ id }) => {
                 ? "Para mostrar las características presione aquí"
                 : "Oculta las tablas"}
             </strong>
-          </span>
+          </span> */}
         </Text>
-        {showDatosTecnicos && (
+        {/* {showDatosTecnicos && ( */}
           <>
             <Box sx={{ width: "100%", overflow: "auto", mt: 3 }}>
               <TableContainer component={Paper}>
@@ -658,7 +658,7 @@ const Caracteristicas = ({ id }) => {
 							
             </Box>
           </>
-        )}
+        {/* )} */}
       </StyledCaracteristicas>
     </>
   );

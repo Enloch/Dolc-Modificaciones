@@ -24,85 +24,76 @@ const StyledDolcker = styled(Seccion)`
     ${StyledVisualizadorNota} {
       grid-row-start: 4 !important;
     }
-  }@media (max-width: ${TABLET_SIZE}) {
-    ${StyledImageWithCaption}:nth-of-type(1) {
-      grid-column: 1 / -1;
-    }
-  
-    > p {
-      grid-column: 1 / -1;
-    }
-    ${StyledImageWithCaption}:nth-of-type(2) {
-      grid-column: 1 / -1;
-    }
-  
-    > p {
-      grid-column: 1 / -1;
-    }
-    ${StyledImageWithCaption}:nth-of-type(3) {
-      grid-column: 1 / -1;
-    }
-  
-    > p {
-      grid-column: 1 / -1;
-    }
   }
 
   .dolcker-info {
     ${Column8}
 
     ${GridLayout}
-        grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     row-gap: ${DISTANCES.medium};
 
-    ${StyledImageWithCaption}:nth-of-type(1) {
-      grid-column: 1 / span 3;
+    /* Estilos dinámicos basados en el número de imágenes */
+    /* Para 1 imagen */
+    &:has(${StyledImageWithCaption}:nth-of-type(1):last-of-type) {
+      ${StyledImageWithCaption}:nth-of-type(1) {
+        grid-column: 1 / span 7;
+      }
+
+      > p:nth-of-type(n) {
+        grid-column: 1 / span 7;
+      }
     }
 
-    > p {
-      grid-column: 1 / span 2;
-    }
-    ${StyledImageWithCaption}:nth-of-type(2) {
-      grid-column: 4 / span 3;
+    /* Para 2 imágenes */
+    &:has(${StyledImageWithCaption}:nth-of-type(2):last-of-type) {
+      ${StyledImageWithCaption}:nth-of-type(1) {
+        grid-column: 1 / span 4;
+      }
+
+      ${StyledImageWithCaption}:nth-of-type(2) {
+        grid-column: 5 / span 5;
+      }
+
+      > p:nth-of-type(1) {
+        grid-column: 1 / span 9;
+      }
     }
 
-    > p {
-      grid-column: 3 / span 2;
-    }
-    ${StyledImageWithCaption}:nth-of-type(3) {
-      grid-column: 7 / span 3;
-    }
+    /* Para 3 imágenes (mantiene el diseño original) */
+    &:has(${StyledImageWithCaption}:nth-of-type(3):last-of-type) {
+      ${StyledImageWithCaption}:nth-of-type(1) {
+        grid-column: 1 / span 3;
+      }
 
-    > p {
-      grid-column: 1 / span 6;
+      ${StyledImageWithCaption}:nth-of-type(2) {
+        grid-column: 4 / span 3;
+      }
+
+      ${StyledImageWithCaption}:nth-of-type(3) {
+        grid-column: 7 / span 3;
+      }
+
+      > p:nth-of-type(1) {
+        grid-column: 1 / span 6;
+      }
+
+      > p:nth-of-type(2) {
+        grid-column: 1 / span 9;
+      }
     }
 
     @media (max-width: ${TABLET_SIZE}) {
-      ${StyledImageWithCaption}:nth-of-type(1) {
-        grid-column: 1 / -1;
+      ${StyledImageWithCaption} {
+        grid-column: 1 / -1 !important;
       }
 
       > p {
-        grid-column: 1 / -1;
-      }
-      ${StyledImageWithCaption}:nth-of-type(2) {
-        grid-column: 1 / -1;
-      }
-
-      > p {
-        grid-column: 1 / -1;
-      }
-      ${StyledImageWithCaption}:nth-of-type(3) {
-        grid-column: 1 / -1;
-      }
-
-      > p {
-        grid-column: 1 / -1;
+        grid-column: 1 / -1 !important;
       }
     }
   }
   
-
   ${StyledAnotacion} {
     grid-row-start: 2;
   }

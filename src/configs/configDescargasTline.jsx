@@ -1,6 +1,6 @@
-import imagen from "../assets/images/DolckerTline/ranurado11mm.webp";
+import imagen from "../assets/images/DolckerTline/Descargas/portada.jpg";
 const downloadImgImport = import.meta.globEager(
-  "../assets/images/Descargas/**"
+  "../assets/images/DolckerTline/Descargas/**"
 );
 
 const downloadImgSrc = {};
@@ -13,12 +13,12 @@ for (const path in downloadImgImport) {
 
 const configDescargas = [
   {
-    // path: '/downloads/Catalogo general Dolcker.pdf',
-    imgSrc: downloadImgSrc["Catalogo general Dolcker"],
-    title: "Catálogo general - Arquitecto da Catálogo",
-    fileName: "Dolcker T-LINE - Arquitecto da Catálogo",
+    path: '/downloads/CATALOGO SISTEMA LINE.pdf',
+    imgSrc: imagen,
+    title: "Catálogo sistema",
+    fileName: "Dolcker T-LINE",
     fileType: "pdf",
-    size: "8,4 MB",
+    size: "3,12 MB",
   },
   // {
   //     path: '/downloads/Sistema Dolcker clip.pdf',

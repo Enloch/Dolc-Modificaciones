@@ -3,8 +3,6 @@ import { Titulo } from "../../../components/Titulos";
 import StyledDolcker from "./styles";
 import { COLORS } from "../../../global/GlobalStyles";
 import img1 from "../../../assets/images/DolckerTXT/Dolcker/catalogo3-1-4.jpg";
-import img2 from "../../../assets/images/DolckerTXT/Dolcker/catalogo3-1-5.jpg";
-import img3 from "../../../assets/images/DolckerTXT/Dolcker/catalogo3-1-6.jpg";
 import img4 from "../../../assets/images/DolckerTXT/Dolcker/catalogo3-1-7.jpg";
 import VisualizadorNota from "../../../components/TXT/VisualizadorNota";
 import Text from "../../../components/Text";
@@ -47,7 +45,7 @@ const DolckerTline = ({ id }) => {
 			<StyledDolcker id={id} backgroundColor={COLORS.gray03}>
 				<Titulo>Dolcker TXT soluciona</Titulo>
 				<div className="dolcker-info">
-					<ImageWithCaption
+					{/* <ImageWithCaption
 						src={img3}
 						alt="Imagen Dolcker 2"
 						caption="Sistema TXT 11"
@@ -64,6 +62,11 @@ const DolckerTline = ({ id }) => {
 						alt="Imagen Dolcker 2"
 						caption="Sistema TXT 13"
 						onClickFunc={() => openModal(img1, "Sistema TXT 13")}
+					/> */}
+					<ImageWithCaption
+						src={img1}
+						alt="Imagen Dolcker 2"
+						caption="Sistema TXT en acabdo naranja"
 					/>
 					<Text>
 						Innovacion en fachadas ventiladas.
@@ -78,7 +81,7 @@ const DolckerTline = ({ id }) => {
 						configuraciones personalizadas que garantizan un resultado estético
 						y funcional de alto nivel.
 					</Text>
-					<Text>
+					{/* <Text>
 						• TXT 11 – Fachadas con alineaciones de revestimiento diferenciadas,
 						destacando una junta vertical lacada en el color elegido por el
 						diseñador.
@@ -88,7 +91,7 @@ const DolckerTline = ({ id }) => {
 						<br />
 						<br />• TXT 13 – Fachadas que incorporan perfiles estratégicos para
 						generar sombras y potenciar la volumetría.
-					</Text>
+					</Text> */}
 				</div>
 
 				<VisualizadorNota {...propsVisualizador} />
