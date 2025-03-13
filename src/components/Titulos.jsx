@@ -5,6 +5,7 @@ const Titulo = styled.h2`
 	${TextLarge}
 	font-weight: bold;
 	text-transform: uppercase;
+	font-family: ${props => props.fontFamily || 'inherit'};
 
 	a {
 		text-decoration: none;
