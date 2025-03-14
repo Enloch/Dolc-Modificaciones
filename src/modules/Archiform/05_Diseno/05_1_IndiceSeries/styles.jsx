@@ -7,7 +7,7 @@ import Enlace from './Enlace'
 
 const SyledIndiceSeries = styled(Seccion)`
     ${Titulo2} {
-        ${column_5_span7}
+        ${column_total}
     }
 
     ${Enlace}, > .enlace {

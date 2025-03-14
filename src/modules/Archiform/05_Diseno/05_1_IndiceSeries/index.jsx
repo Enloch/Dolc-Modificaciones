@@ -7,7 +7,7 @@ const IndiceSeries = ({ id }) => {
     const enlacesSeries = useImagesSeries()
 
     return (
-        <StyledIndiceSeries id={id} backgroundColor={COLORS.gray02}>
+        <StyledIndiceSeries id={id} backgroundColor={COLORS.gray03}>
             <Titulo2>SERIES</Titulo2>
             {enlacesSeries}
         </StyledIndiceSeries>

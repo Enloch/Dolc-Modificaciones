@@ -15,7 +15,7 @@ const Anotaciones = styled.div`
 
     ${StyledAnotacion} {
         padding-bottom: 0;
-        flex: 1 1 $img-height;
+        flex: 1 1 auto;
     }
 `
 

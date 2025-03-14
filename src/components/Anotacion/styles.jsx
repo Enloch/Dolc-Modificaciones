@@ -1,39 +1,40 @@
-import styled, { css } from "styled-components";
-import { DISTANCES, GRID, TextSmall } from "../../global/GlobalStyles";
-import { column_3_span2, column_1_span2 } from "../../styles/gridFinal";
-import { mediaQueryTablet } from "../../styles/sizes";
+import styled, { css } from 'styled-components'
+import { DISTANCES, GRID, TextSmall } from '../../global/GlobalStyles'
+import { mediaQueryTablet } from '../../styles/sizes'
 
 const StyledAnotacion = styled.div`
-	${column_3_span2}
+    /* Explicitly set grid-column for better cross-browser compatibility */
+    grid-column: 3 / span 2;
+    
+    display: flex;
+    align-items: flex-end;
 
-	display: flex;
-	align-items: flex-end;
+    position: relative;
+    padding-bottom: 1rem;
 
-	position: relative;
-	padding-bottom: 1rem;
+    ${TextSmall}
 
-	${TextSmall}
+    cursor: ${({ onClick }) => (onClick !== undefined ? 'pointer' : 'default')};
 
-	cursor: ${({ onClick }) => (onClick !== undefined ? "pointer" : "default")};
+    img {
+        position: absolute;
+        right: calc(100% + ${GRID.columnGap});
 
-	img {
-		position: absolute;
-		right: calc(100% + 0.4rem);
+        min-width: 25px;
+        width: auto;
+        max-height: calc(2 * ${DISTANCES.small});
+    }
 
-		min-width: 25px;
-		width: auto;
-		max-height: calc(2 * ${DISTANCES.small});
-	}
+    ${mediaQueryTablet(css`
+        grid-column: 1 / -1;
+        gap: ${GRID.columnGap};
+        padding-bottom: 0 !important;
 
-	${mediaQueryTablet(css`
-		gap: ${GRID.columnGap};
-		padding-bottom: 0 !important;
+        img {
+            position: relative;
+            right: auto;
+        }
+    `)}
+`
 
-		img {
-			position: relative;
-			right: auto;
-		}
-	`)}
-`;
-
-export default StyledAnotacion;
+export default StyledAnotacion

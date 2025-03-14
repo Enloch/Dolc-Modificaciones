@@ -29,7 +29,7 @@ const StyledSerie = styled(Seccion)`
   }
 
   > ${Text} {
-    ${Column3}
+    ${Column8}
   }
 
   > ${Text}.text-descripcion {
@@ -46,7 +46,7 @@ const StyledSerie = styled(Seccion)`
 
   .muestra-container {
     grid-row: 3;
-    ${Column3}
+    ${Column8}
 
     ${GridLayout}
     row-gap: ${DISTANCES.small};
@@ -67,7 +67,7 @@ const StyledSerie = styled(Seccion)`
 
   .acabado-container {
     grid-row: 5;
-    ${Column3}
+    ${Column8}
 
     ${GridLayout}
     grid-template-columns: repeat(8, 1fr);
