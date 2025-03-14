@@ -87,3 +87,12 @@ export { default as DisenosT5 } from './T5/05_Diseno';
 export { default as CaracteristicasT5 } from './T5/06_Caracteristicas';
 export { default as SistemasT5 } from './T5/07_Sistemas';
 export { default as DescargasT5 } from './T5/08_Descargas';
+//Archiform
+export { default as IndiceArchiform } from './Archiform/01_Inicio';
+export { default as DolckerArchiform } from './Archiform/02_Dolcker';
+export { default as VentajasArchiform } from './Archiform/03_Ventajas';
+export { default as AplicacionesArchiform } from './Archiform/04_Aplicaciones';
+export { default as DisenosArchiform } from './Archiform/05_Diseno';
+export { default as CaracteristicasArchiform } from './Archiform/06_Caracteristicas';
+export { default as SistemasArchiform } from './Archiform/07_Sistemas';
+export { default as DescargasArchiform } from './Archiform/08_Descargas';
