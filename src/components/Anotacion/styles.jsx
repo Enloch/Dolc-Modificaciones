@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components'
 import { DISTANCES, GRID, TextSmall } from '../../global/GlobalStyles'
+import { column_3_span2 } from '../../styles/grid'
 import { mediaQueryTablet } from '../../styles/sizes'
 
 const StyledAnotacion = styled.div`
-    /* Explicitly set grid-column for better cross-browser compatibility */
-    grid-column: 3 / span 2;
-    
+    ${column_3_span2}
+
     display: flex;
     align-items: flex-end;
 
@@ -26,7 +26,6 @@ const StyledAnotacion = styled.div`
     }
 
     ${mediaQueryTablet(css`
-        grid-column: 1 / -1;
         gap: ${GRID.columnGap};
         padding-bottom: 0 !important;
 

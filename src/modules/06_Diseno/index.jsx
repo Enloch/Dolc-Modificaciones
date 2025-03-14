@@ -13,8 +13,6 @@ import VisualizadorRotador from "../../components/VisualizadorRotador";
 import config from "../../configs/configPiezasEspeciales";
 import configAcabados from "../../configs/configAcabados";
 import Series from "./06_2_Series";
-import img2 from "../../assets/images/Diseno/Espesores/img1.webp";
-import img3 from "../../assets/images/Diseno/Espesores/img2.webp";
 import ranurado11 from "../../assets/images/Diseno/Espesores/ranurado11mm.webp";
 import ranurado14 from "../../assets/images/Diseno/Espesores/ranurado14.webp";
 import ranurado20 from "../../assets/images/Diseno/Espesores/ranurado20.webp";

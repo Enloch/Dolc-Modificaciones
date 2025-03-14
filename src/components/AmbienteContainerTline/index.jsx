@@ -1,15 +1,16 @@
 import styled from "styled-components";
-import StyledImageWithCaption from "../ImageWithCaption/styles";
-import { COLORS, Column3 } from "../../global/GlobalStyles";
+import StyledImageWithCaption from "../../components/ImageWithCaption/styles";
+import { COLORS, TABLET_SIZE, MOBILE_SIZE } from "../../global/GlobalStyles";
 import { column_5_span8 } from "../../styles/grid";
 import { DISTANCES } from "../../styles/sizes";
 import SeleccionarMuestra from "./SeleccionarMuestra";
 
 const AmbienteContainer = styled.div`
-  ${Column3}
-  display:grid;
-  grid-template-columns: 3fr 1fr;
-  /* gap: ${DISTANCES.small}; */
+  ${column_5_span8}
+
+  display: flex;
+  align-items: flex-start;
+  gap: ${DISTANCES.small};
 
   margin-right: clamp(-${DISTANCES.medium}, -2.604vw, -${DISTANCES.small});
   overflow-x: auto;
@@ -17,9 +18,17 @@ const AmbienteContainer = styled.div`
   ${StyledImageWithCaption} {
     img {
       width: 100%;
-      height: clamp(24vh, 80vh, 100%);
-      /* height: clamp(500px, 46.875vw, 900px); */
+      height: clamp(500px, 46.875vw, 900px);
       object-fit: cover;
+
+      @media (max-width: ${TABLET_SIZE}) {
+        width: auto;
+        object-fit: cover;
+      }
+
+      @media (max-width: ${MOBILE_SIZE}) {
+        object-fit: cover;
+      }
     }
   }
 

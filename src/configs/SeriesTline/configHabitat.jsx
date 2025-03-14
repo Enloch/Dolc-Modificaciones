@@ -31,7 +31,7 @@ const configHabitat = {
       },
     },
     {
-      top: "45%",
+      top: "55%",
       left: "20%",
       ambiente: {
         imagen: ambientes[1],

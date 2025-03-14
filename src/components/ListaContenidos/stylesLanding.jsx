@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components'
 import { GRID, TextMedium, COLORS } from '../../global/GlobalStyles'
 import {
-    column_3_span3,
-    column_6_spanEnd,
     column_5_span7,
 } from '../../styles/grid'
 import { mediaQueryTablet } from '../../styles/sizes'

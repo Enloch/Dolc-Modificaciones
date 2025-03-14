@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import Anotaciones from "../../../../components/Anotacion/Anotaciones";
 import StyledAnotacion from "../../../../components/Anotacion/styles";
-import Seccion from "../../../../components/SeccionTest";
+import Seccion from "../../../../components/Seccion";
 import Text from "../../../../components/Text";
 import { Titulo } from "../../../../components/Titulos";
 import {
