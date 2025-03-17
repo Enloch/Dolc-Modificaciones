@@ -11,8 +11,10 @@ import Cita from "../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 const Aplicaciones = ({ id }) => {
-	const imagesRehabilitar = import.meta.globEager(
-		"../../assets/images/GaleriaSystem/*"
+	// Actualizado para usar import.meta.glob con eager: true en lugar de globEager
+	const imagesRehabilitar = import.meta.glob(
+		"../../assets/images/GaleriaSystem/*",
+		{ eager: true }
 	);
 	const imagesGaleriaRehabilitar = Object.keys(imagesRehabilitar).map(
 		(key) => ({
@@ -22,8 +24,10 @@ const Aplicaciones = ({ id }) => {
 	);
 
 
-	const imagesobra = import.meta.globEager(
-		"../../assets/images/GaleriaSystem/obra/*"
+	// Actualizado para usar import.meta.glob con eager: true en lugar de globEager
+	const imagesobra = import.meta.glob(
+		"../../assets/images/GaleriaSystem/obra/*",
+		{ eager: true }
 	);
 	const imagesGaleriaObra = Object.keys(imagesobra).map(
 		(key) => ({

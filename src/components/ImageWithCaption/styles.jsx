@@ -30,6 +30,24 @@ const StyledImageWithCaption = styled.figure`
     .gray {
         filter: grayscale(1);
     }
+    
+    /* Estilo para el mensaje de error cuando una imagen no se carga */
+    .image-error {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 200px;
+        background-color: ${COLORS.gray02};
+        border: 1px solid ${COLORS.gray03};
+        border-radius: 4px;
+        padding: ${DISTANCES.small};
+        
+        p {
+            ${TextSmall}
+            color: ${COLORS.gray06};
+            text-align: center;
+        }
+    }
 `
 
 export default StyledImageWithCaption
