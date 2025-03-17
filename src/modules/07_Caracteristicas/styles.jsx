@@ -3,7 +3,7 @@ import Seccion from '../../components/Seccion'
 import Text from '../../components/Text'
 import { column_5_span4, column_5_span6 } from '../../styles/grid'
 import { mediaQueryTablet, mediaQueryMobile } from '../../styles/sizes'
-
+import {COLORS} from '../../global/GlobalStyles'
 const StyledCaracteristicas = styled(Seccion)`
     ${Text} {
         ${column_5_span4}
@@ -29,7 +29,7 @@ const StyledCaracteristicas = styled(Seccion)`
     }
     
     .MuiTableHead-root {
-        background-color: #cecece;
+        background-color: ${COLORS.gray03};
     }
     
     .MuiTableCell-root {

@@ -17,10 +17,20 @@ import {
   Paper,
   Box,
   Typography,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
 } from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Caracteristicas = ({ id }) => {
-  const [showDatosTecnicos, setShowDatosTecnicos] = useState(false);
+  // Estado para controlar qué acordeón está expandido
+  const [expandedPanel, setExpandedPanel] = useState(false);
+
+  // Función para manejar el cambio de acordeón
+  const handleAccordionChange = (panel) => (event, isExpanded) => {
+    setExpandedPanel(isExpanded ? panel : false);
+  };
 
   return (
     <>
@@ -149,516 +159,605 @@ const Caracteristicas = ({ id }) => {
           siguientes características declaradas por el fabricante:
           <br />
           <br />
-          {/* <span
-            onClick={() => setShowDatosTecnicos(!showDatosTecnicos)}
-            style={{
-              cursor: "pointer",
-              color: COLORS.primary,
-              textDecoration: "underline",
-            }}
-          >
-            <strong>
-              {!showDatosTecnicos
-                ? "Para mostrar las características presione aquí"
-                : "Oculta las tablas"}
-            </strong>
-          </span> */}
         </Text>
-        {/* {showDatosTecnicos && ( */}
-          <>
-            <Box sx={{ width: "100%", overflow: "auto", mt: 3 }}>
-              <TableContainer component={Paper}>
-                <Table aria-label="tabla de características dimensionales">
-                  <TableHead>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        CARACTERÍSTICAS DIMENSIONALES
-                        <br />
-                        DIMENSIONAL CHARACTERISTICS
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        UNE EN-14411 (1)
-                        <br />
-                        ISO 13006 ANEXO G
-                      </TableCell>
-                      <TableCell
-                        align="center"
-                        colSpan={3}
-                        sx={{ padding: "10px 10px" }}
-                      >
-                        DOLCKER VALORES PRIMERA CALIDAD / DOLCKER VALUES 1ST
-                        QUALITY
-                        <TableRow>
-                          <TableCell
-                            align="center"
-                            sx={{ padding: "10px 10px" }}
-                          >
-                            SATINADO 60X120 11,5 MM
-                            <br />
-                            CALIBRE 1 597,2 X 1197,3
-                          </TableCell>
-                          <TableCell
-                            align="center"
-                            sx={{ padding: "10px 10px" }}
-                          >
-                            MATE 60X120 14 MM
-                            <br />
-                            CALIBRE 1 597,2 X 1197,3
-                          </TableCell>
-                          <TableCell
-                            align="center"
-                            sx={{ padding: "10px 10px" }}
-                          >
-                            RÚSTICO 60X120 14MM
-                            <br />
-                            CALIBRE 5 600,4 X 1200,4
-                          </TableCell>
-                        </TableRow>
-                      </TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        LONGITUD
-                        <br />
-                        LENGTH AND WIDTH
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        2
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        0,6%
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,2%
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,2%
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        ESPESOR
-                        <br />
-                        THICKNESS
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        2
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        5%
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 5,0%
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 5,0%
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        RECTITUD DE LOS LADOS
-                        <br />
-                        WARPAGE OF EDGES
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        2
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        0,5%
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,2%
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,2%
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        ORTOGONALIDAD
-                        <br />
-                        WEDGING
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        3
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        0,5%
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,25%
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,25%
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        CURVATURA CENTRAL Y LATERAL
-                        <br />
-                        CENTRAL AND EDGE CURVATURE
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        2
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        0,5%
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,2%
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,2%
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        ALABEO
-                        <br />
-                        WARPAGE
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        2
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        0,5%
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,2%
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,2%
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        ABSORCIÓN DE AGUA
-                        <br />
-                        WATER ABSORPTION
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        3
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ≤ 0,5% MAX 0,6 %
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ≤ 0,1%
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ≤ 0,1%
-                      </TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </TableContainer>
-              <TableContainer component={Paper} sx={{ mt: 4 }}>
-                <Table aria-label="tabla de características mecánicas">
-                  <TableHead>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        CARACTERÍSTICAS MECÁNICAS
-                        <br />
-                        MECHANICAL CHARACTERISTICS
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        UNE EN-14411 (1)
-                        <br />
-                        ISO 13006 ANEXO G
-                      </TableCell>
-                      <TableCell
-                        align="center"
-                        colSpan={3}
-                        sx={{ padding: "10px 10px" }}
-                      >
-                        DOLCKER VALORES PRIMERA CALIDAD / DOLCKER VALUES 1ST
-                        QUALITY
-                        <TableRow>
-                          <TableCell
-                            align="center"
-                            sx={{ padding: "10px 10px" }}
-                          >
-                            SATINADO 60X120 11,5 MM
-                          </TableCell>
-                          <TableCell
-                            align="center"
-                            sx={{ padding: "10px 10px" }}
-                          >
-                            MATE 60X120 14 MM
-                          </TableCell>
-                          <TableCell
-                            align="center"
-                            sx={{ padding: "10px 10px" }}
-                          >
-                            RÚSTICO 60X120 14MM
-                          </TableCell>
-                        </TableRow>
-                      </TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        FUERZA DE ROTURA
-                        <br />
-                        BREAKING STRENGTH
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                       4
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        1.300 N
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ≥ 2.000 N
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ≥ 12.000 N
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        RESISTENCIA A LA FLEXIÓN
-                        <br />
-                        BENDING STRENGTH
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        4
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ≥ 35 N/MM2
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ≥ 42 N/MMu00b2
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ≥ 50 N/MMu00b2
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        RESISTENCIA AL IMPACTO
-                        <br />
-                        IMPACT RESISTANCE
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        5
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        MD
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        0,85
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        0,81
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        RESISTENCIA A LA ABRASIÓN PROFUNDA
-                        <br />
-                        DEEP ABRASION RESISTANCE
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        6
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        &lt; 175 MM3
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        &lt; 145 MMu00b3
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        &lt; 145 MMu00b3
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        DILATACIÓN TÉRMICA LINEAL
-                        <br />
-                        LINEAR THERMAL-EXPANSION
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        6
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        MD
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        &lt; 7,5X10-6 u00baC-1
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        &lt; 7,5X10-6 u00baC-1
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        CHOQUE TÉRMICO
-                        <br />
-                        THERMAL SHOCK
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        9
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        MD
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        RESISTE
-                        <br />
-                        RESISTS
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        RESISTE
-                        <br />
-                        RESISTS
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        RESISTENCIA AL HIELO
-                        <br />
-                        FROST RESISTANCE
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        12
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        EXIGIDO
-                        <br />
-                        REQUIRED
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        RESISTE
-                        <br />
-                        RESISTS
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        RESISTE
-                        <br />
-                        RESISTS
-                      </TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </TableContainer>
-              <TableContainer component={Paper} sx={{ mt: 4 }}>
-                <Table aria-label="tabla de características higiénicas">
-                  <TableHead>
-                    <TableRow>
-                      <TableCell sx={{  padding: '10px 10px' }}>
-                        CARACTERÍSTICAS HIGIÉNICAS<br />
-                        HYGIENIC CHARACTERISTICS
-                      </TableCell>
-                      <TableCell align="center" sx={{  padding: '10px 10px' }}>
-                        UNE-EN-ISO 10545<br />
-                        Test Nº
-                      </TableCell>
-                      <TableCell align="center" sx={{  padding: '10px 10px' }}>
-                        UNE-EN-14411(1)<br />
-                        ISO 13006<br />
-                        Anexo G
-                      </TableCell>
-                      <TableCell align="center" colSpan={3} sx={{  padding: '10px 10px' }}>
-                        DOLCKER VALORES PRIMERA CALIDAD / DOLCKER VALUES 1ST QUALITY
-                        <TableRow>
-                      <TableCell align="center" sx={{  padding: '10px 10px' }}>
-                        SATINADO 60X120 11,5 MM<br />
-                        Calibre: 1<br />
-                        597,2x1197,3
-                      </TableCell>
-                      <TableCell align="center" sx={{  padding: '10px 10px' }}>
-                        MATE 60X120 14 MM<br />
-                        Calibre: 1<br />
-                        597,2x1197,3
-                      </TableCell>
-                      <TableCell align="center" sx={{  padding: '10px 10px' }}>
-                        RÚSTICO 60X120 20MM<br />
-                        Calibre: 5<br />
-                        600,4x1200,4
-                      </TableCell>
-                    </TableRow>
-                      </TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    <TableRow>
-                    
-                      <TableCell sx={{ padding: '10px 10px' }}>
-                        ÁCIDOS BAJA CONCENTRACIÓN<br />
-                        LOW CONCENTRATION ACIDS
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>13</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>MD</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>CLASE LA</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>CLASE LA</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>CLASE LA</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: '10px 10px' }}>
-                        ÁCIDOS ALTA CONCENTRACIÓN<br />
-                        HIGH CONCENTRATION ACIDS
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>13</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>MD</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>CLASE HA</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>CLASE HA</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>CLASE HA</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: '10px 10px' }}>
-                        BASES BAJA CONCENTRACIÓN<br />
-                        LOW CONCENTRATION ALKALI
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>13</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>MD</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>CLASE LA</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>CLASE LA</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>CLASE LA</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: '10px 10px' }}>
-                        BASES ALTA CONCENTRACIÓN<br />
-                        HIGH CONCENTRATION ALKALI
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>13</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>MD</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>CLASE HA</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>CLASE HA</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>CLASE HA</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: '10px 10px' }}>
-                        RESISTENCIA A LAS MANCHAS<br />
-                        STAIN RESISTANCE
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>14</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>MD</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>4</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>4</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>4</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: '10px 10px' }}>
-                        PRODUCTOS DOMÉSTICOS DE LIMPIEZA Y SALES DE PISCINA<br />
-                        HOUSEHOLD DETERGENTS AND ADDITIVES FOR SWIMMING-POOLS
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>13</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>Mínimo UB<br />Minimum UB</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>CLASE LA</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>CLASE LA</TableCell>
-                      <TableCell align="center" sx={{ padding: '10px 10px' }}>CLASE LA</TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </TableContainer>
-							
-            </Box>
-          </>
-        {/* )} */}
+        <>
+          <Box sx={{ width: "100%", overflow: "auto", mt: 1 }}>
+            <Accordion 
+              expanded={expandedPanel === 'panel1'} 
+              onChange={handleAccordionChange('panel1')}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                sx={{ backgroundColor: COLORS.gray03, color: 'black' }}
+              >
+                <Typography>CARACTERÍSTICAS DIMENSIONALES / DIMENSIONAL CHARACTERISTICS</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <TableContainer component={Paper}>
+                  <Table aria-label="tabla de características dimensionales">
+                    <TableHead>
+                      <TableRow>
+                        <TableCell sx={{ padding: "10px 10px" }}>
+                          CARACTERÍSTICAS DIMENSIONALES
+                          <br />
+                          DIMENSIONAL CHARACTERISTICS
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          UNE EN-14411 (1)
+                          <br />
+                          ISO 13006 ANEXO G
+                        </TableCell>
+                        <TableCell
+                          align="center"
+                          colSpan={3}
+                          sx={{ padding: "10px 10px" }}
+                        >
+                          DOLCKER VALORES PRIMERA CALIDAD / DOLCKER VALUES 1ST
+                          QUALITY
+                          <TableRow>
+                            <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                              SATINADO 60X120 11,5 MM
+                              <br />
+                              CALIBRE 1 597,2 X 1197,3
+                            </TableCell>
+                            <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                              MATE 60X120 14 MM
+                              <br />
+                              CALIBRE 1 597,2 X 1197,3
+                            </TableCell>
+                            <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                              RÚSTICO 60X120 14MM
+                              <br />
+                              CALIBRE 5 600,4 X 1200,4
+                            </TableCell>
+                          </TableRow>
+                        </TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      <TableRow>
+                        <TableCell sx={{ padding: "10px 10px" }}>
+                          LONGITUD
+                          <br />
+                          LENGTH AND WIDTH
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          2
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          0,6%
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          ± 0,2%
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          ± 0,2%
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell sx={{ padding: "10px 10px" }}>
+                          ESPESOR
+                          <br />
+                          THICKNESS
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          2
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          5%
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          ± 5,0%
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          ± 5,0%
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell sx={{ padding: "10px 10px" }}>
+                          RECTITUD DE LOS LADOS
+                          <br />
+                          WARPAGE OF EDGES
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          2
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          0,5%
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          ± 0,2%
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          ± 0,2%
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell sx={{ padding: "10px 10px" }}>
+                          ORTOGONALIDAD
+                          <br />
+                          WEDGING
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          3
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          0,5%
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          ± 0,25%
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          ± 0,25%
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell sx={{ padding: "10px 10px" }}>
+                          CURVATURA CENTRAL Y LATERAL
+                          <br />
+                          CENTRAL AND EDGE CURVATURE
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          2
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          0,5%
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          ± 0,2%
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          ± 0,2%
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell sx={{ padding: "10px 10px" }}>
+                          ALABEO
+                          <br />
+                          WARPAGE
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          2
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          0,5%
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          ± 0,2%
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          ± 0,2%
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell sx={{ padding: "10px 10px" }}>
+                          ABSORCIÓN DE AGUA
+                          <br />
+                          WATER ABSORPTION
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          3
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          ≤ 0,5% MAX 0,6 %
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          ≤ 0,1%
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          ≤ 0,1%
+                        </TableCell>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion 
+              expanded={expandedPanel === 'panel2'} 
+              onChange={handleAccordionChange('panel2')}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+                sx={{ backgroundColor: COLORS.gray03, color: 'black' }}
+              >
+                <Typography>CARACTERÍSTICAS MECÁNICAS / MECHANICAL CHARACTERISTICS</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+            <TableContainer component={Paper} sx={{ mt: 4 }}>
+              <Table aria-label="tabla de características mecánicas">
+                <TableHead>
+                  <TableRow>
+                    <TableCell sx={{ padding: "10px 10px" }}>
+                      CARACTERÍSTICAS MECÁNICAS
+                      <br />
+                      MECHANICAL CHARACTERISTICS
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      UNE EN-14411 (1)
+                      <br />
+                      ISO 13006 ANEXO G
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      colSpan={3}
+                      sx={{ padding: "10px 10px" }}
+                    >
+                      DOLCKER VALORES PRIMERA CALIDAD / DOLCKER VALUES 1ST
+                      QUALITY
+                      <TableRow>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          SATINADO 60X120 11,5 MM
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          MATE 60X120 14 MM
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          RÚSTICO 60X120 14MM
+                        </TableCell>
+                      </TableRow>
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  <TableRow>
+                    <TableCell sx={{ padding: "10px 10px" }}>
+                      FUERZA DE ROTURA
+                      <br />
+                      BREAKING STRENGTH
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      4
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      1.300 N
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      ≥ 2.000 N
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      ≥ 12.000 N
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell sx={{ padding: "10px 10px" }}>
+                      RESISTENCIA A LA FLEXIÓN
+                      <br />
+                      BENDING STRENGTH
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      4
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      ≥ 35 N/MM2
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      ≥ 42 N/MMu00b2
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      ≥ 50 N/MMu00b2
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell sx={{ padding: "10px 10px" }}>
+                      RESISTENCIA AL IMPACTO
+                      <br />
+                      IMPACT RESISTANCE
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      5
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      MD
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      0,85
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      0,81
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell sx={{ padding: "10px 10px" }}>
+                      RESISTENCIA A LA ABRASIÓN PROFUNDA
+                      <br />
+                      DEEP ABRASION RESISTANCE
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      6
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      &lt; 175 MM3
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      &lt; 145 MMu00b3
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      &lt; 145 MMu00b3
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell sx={{ padding: "10px 10px" }}>
+                      DILATACIÓN TÉRMICA LINEAL
+                      <br />
+                      LINEAR THERMAL-EXPANSION
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      6
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      MD
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      &lt; 7,5X10-6 u00baC-1
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      &lt; 7,5X10-6 u00baC-1
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell sx={{ padding: "10px 10px" }}>
+                      CHOQUE TÉRMICO
+                      <br />
+                      THERMAL SHOCK
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      9
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      MD
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      RESISTE
+                      <br />
+                      RESISTS
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      RESISTE
+                      <br />
+                      RESISTS
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell sx={{ padding: "10px 10px" }}>
+                      RESISTENCIA AL HIELO
+                      <br />
+                      FROST RESISTANCE
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      12
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      EXIGIDO
+                      <br />
+                      REQUIRED
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      RESISTE
+                      <br />
+                      RESISTS
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      RESISTE
+                      <br />
+                      RESISTS
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </TableContainer>
+            </AccordionDetails>
+            </Accordion>
+            <Accordion 
+              expanded={expandedPanel === 'panel3'} 
+              onChange={handleAccordionChange('panel3')}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel3a-content"
+                id="panel3a-header"
+                sx={{ backgroundColor: COLORS.gray03, color: 'black' }}
+              >
+                <Typography>CARACTERÍSTICAS HIGIÉNICAS / HYGIENIC CHARACTERISTICS</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+            <TableContainer component={Paper} sx={{ mt: 4 }}>
+              <Table aria-label="tabla de características higiénicas">
+                <TableHead>
+                  <TableRow>
+                    <TableCell sx={{ padding: "10px 10px" }}>
+                      CARACTERÍSTICAS HIGIÉNICAS
+                      <br />
+                      HYGIENIC CHARACTERISTICS
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      UNE-EN-ISO 10545
+                      <br />
+                      Test Nº
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      UNE-EN-14411(1)
+                      <br />
+                      ISO 13006
+                      <br />
+                      Anexo G
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      colSpan={3}
+                      sx={{ padding: "10px 10px" }}
+                    >
+                      DOLCKER VALORES PRIMERA CALIDAD / DOLCKER VALUES 1ST
+                      QUALITY
+                      <TableRow>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          SATINADO 60X120 11,5 MM
+                          <br />
+                          Calibre: 1<br />
+                          597,2x1197,3
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          MATE 60X120 14 MM
+                          <br />
+                          Calibre: 1<br />
+                          597,2x1197,3
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          RÚSTICO 60X120 20MM
+                          <br />
+                          Calibre: 5<br />
+                          600,4x1200,4
+                        </TableCell>
+                      </TableRow>
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  <TableRow>
+                    <TableCell sx={{ padding: "10px 10px" }}>
+                      ÁCIDOS BAJA CONCENTRACIÓN
+                      <br />
+                      LOW CONCENTRATION ACIDS
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      13
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      MD
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      CLASE LA
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      CLASE LA
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      CLASE LA
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell sx={{ padding: "10px 10px" }}>
+                      ÁCIDOS ALTA CONCENTRACIÓN
+                      <br />
+                      HIGH CONCENTRATION ACIDS
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      13
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      MD
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      CLASE HA
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      CLASE HA
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      CLASE HA
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell sx={{ padding: "10px 10px" }}>
+                      BASES BAJA CONCENTRACIÓN
+                      <br />
+                      LOW CONCENTRATION ALKALI
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      13
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      MD
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      CLASE LA
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      CLASE LA
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      CLASE LA
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell sx={{ padding: "10px 10px" }}>
+                      BASES ALTA CONCENTRACIÓN
+                      <br />
+                      HIGH CONCENTRATION ALKALI
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      13
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      MD
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      CLASE HA
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      CLASE HA
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      CLASE HA
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell sx={{ padding: "10px 10px" }}>
+                      RESISTENCIA A LAS MANCHAS
+                      <br />
+                      STAIN RESISTANCE
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      14
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      MD
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      4
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      4
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      4
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell sx={{ padding: "10px 10px" }}>
+                      PRODUCTOS DOMÉSTICOS DE LIMPIEZA Y SALES DE PISCINA
+                      <br />
+                      HOUSEHOLD DETERGENTS AND ADDITIVES FOR SWIMMING-POOLS
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      13
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      Mínimo UB
+                      <br />
+                      Minimum UB
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      CLASE LA
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      CLASE LA
+                    </TableCell>
+                    <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                      CLASE LA
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </TableContainer>
+            </AccordionDetails>
+            </Accordion>
+          </Box>
+        </>
       </StyledCaracteristicas>
     </>
   );
