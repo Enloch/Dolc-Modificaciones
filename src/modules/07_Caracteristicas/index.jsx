@@ -175,14 +175,29 @@ const Caracteristicas = ({ id }) => {
             <Accordion
               expanded={expandedPanel === "panel1"}
               onChange={handleAccordionChange("panel1")}
+              sx={{ 
+                mb: 2,
+                boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+                borderRadius: "4px",
+                '&.Mui-expanded': {
+                  margin: 0,
+                  marginBottom: 2
+                }
+              }}
             >
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
-                sx={{ backgroundColor: COLORS.gray03, color: "black" }}
+                sx={{ 
+                  backgroundColor: COLORS.gray03, 
+                  color: "black",
+                  '&.Mui-expanded': {
+                    minHeight: 48
+                  }
+                }}
               >
-                <Typography>
+                <Typography sx={{ fontWeight: 600 }}>
                   CARACTERÍSTICAS DIMENSIONALES / DIMENSIONAL CHARACTERISTICS
                 </Typography>
               </AccordionSummary>
@@ -264,7 +279,11 @@ const Caracteristicas = ({ id }) => {
                           <img
                             src={dimension1}
                             alt="dimension-longitud"
-                            style={{ width: "40px", height: "40px" }}
+                            style={{ 
+                              width: "40px", 
+                              height: "40px",
+                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                            }}
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
@@ -351,7 +370,11 @@ const Caracteristicas = ({ id }) => {
                           <img
                             src={dimension2}
                             alt="dimension-curvatura"
-                            style={{ width: "40px", height: "40px" }}
+                            style={{ 
+                              width: "40px", 
+                              height: "40px",
+                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                            }}
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
@@ -396,7 +419,11 @@ const Caracteristicas = ({ id }) => {
                           <img
                             src={dimension3}
                             alt="dimension-absorcion"
-                            style={{ width: "40px", height: "40px" }}
+                            style={{ 
+                              width: "40px", 
+                              height: "40px",
+                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                            }}
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
@@ -425,14 +452,29 @@ const Caracteristicas = ({ id }) => {
             <Accordion
               expanded={expandedPanel === "panel2"}
               onChange={handleAccordionChange("panel2")}
+              sx={{ 
+                mb: 2,
+                boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+                borderRadius: "4px",
+                '&.Mui-expanded': {
+                  margin: 0,
+                  marginBottom: 2
+                }
+              }}
             >
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel2a-content"
                 id="panel2a-header"
-                sx={{ backgroundColor: COLORS.gray03, color: "black" }}
+                sx={{ 
+                  backgroundColor: COLORS.gray03, 
+                  color: "black",
+                  '&.Mui-expanded': {
+                    minHeight: 48
+                  }
+                }}
               >
-                <Typography>
+                <Typography sx={{ fontWeight: 600 }}>
                   CARACTERÍSTICAS MECÁNICAS / MECHANICAL CHARACTERISTICS
                 </Typography>
               </AccordionSummary>
@@ -514,7 +556,11 @@ const Caracteristicas = ({ id }) => {
                           <img
                             src={mecanica1}
                             alt="mecanica-fuerza"
-                            style={{ width: "40px", height: "40px" }}
+                            style={{ 
+                              width: "40px", 
+                              height: "40px",
+                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                            }}
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
@@ -563,7 +609,11 @@ const Caracteristicas = ({ id }) => {
                           <img
                             src={mecanica2}
                             alt="mecanica-impacto"
-                            style={{ width: "40px", height: "40px" }}
+                            style={{ 
+                              width: "40px", 
+                              height: "40px",
+                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                            }}
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
@@ -593,7 +643,11 @@ const Caracteristicas = ({ id }) => {
                           <img
                             src={mecanica3}
                             alt="mecanica-abrasion"
-                            style={{ width: "40px", height: "40px" }}
+                            style={{ 
+                              width: "40px", 
+                              height: "40px",
+                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                            }}
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
@@ -623,7 +677,11 @@ const Caracteristicas = ({ id }) => {
                           <img
                             src={mecanica4}
                             alt="mecanica-dilatacion"
-                            style={{ width: "40px", height: "40px" }}
+                            style={{ 
+                              width: "40px", 
+                              height: "40px",
+                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                            }}
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
@@ -653,7 +711,11 @@ const Caracteristicas = ({ id }) => {
                           <img
                             src={mecanica5}
                             alt="mecanica-dilatacion"
-                            style={{ width: "40px", height: "40px" }}
+                            style={{ 
+                              width: "40px", 
+                              height: "40px",
+                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                            }}
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
@@ -687,7 +749,11 @@ const Caracteristicas = ({ id }) => {
                           <img
                             src={mecanica6}
                             alt="mecanica-dilatacion"
-                            style={{ width: "40px", height: "40px" }}
+                            style={{ 
+                              width: "40px", 
+                              height: "40px",
+                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                            }}
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
@@ -722,14 +788,29 @@ const Caracteristicas = ({ id }) => {
             <Accordion
               expanded={expandedPanel === "panel3"}
               onChange={handleAccordionChange("panel3")}
+              sx={{ 
+                mb: 2,
+                boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+                borderRadius: "4px",
+                '&.Mui-expanded': {
+                  margin: 0,
+                  marginBottom: 2
+                }
+              }}
             >
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel3a-content"
                 id="panel3a-header"
-                sx={{ backgroundColor: COLORS.gray03, color: "black" }}
+                sx={{ 
+                  backgroundColor: COLORS.gray03, 
+                  color: "black",
+                  '&.Mui-expanded': {
+                    minHeight: 48
+                  }
+                }}
               >
-                <Typography>
+                <Typography sx={{ fontWeight: 600 }}>
                   CARACTERÍSTICAS HIGIÉNICAS / HYGIENIC CHARACTERISTICS
                 </Typography>
               </AccordionSummary>
@@ -759,25 +840,36 @@ const Caracteristicas = ({ id }) => {
                           sx={{ width: "60px", padding: "10px 10px" }}
                         ></TableCell>
                         <TableCell
-                          rows={2}
-                          sx={{ width: "250px", padding: "10px 10px" }}
+                          sx={{ width: "180px", padding: "10px 10px" }}
                         >
                           CARACTERÍSTICAS HIGIÉNICAS
                           <br />
                           HYGIENIC CHARACTERISTICS
                         </TableCell>
-                        <TableCell  sx={{ width: "200px", padding: "10px 10px" }}  />
-                        <TableCell
-                          align="center"
-                          sx={{ width: "200px", padding: "10px 10px" }}
-                        >
-                          UNE-EN-ISO 10545 TEST Nº
+                        <TableCell sx={{ width: "220px", padding: "10px 10px" }}>
+                          TIPO DE ÁCIDO O BASE
+                          <br />
+                          TYPE OF ACID OR BASE
                         </TableCell>
                         <TableCell
                           align="center"
-                          sx={{ width: "200px", padding: "10px 10px" }}
+                          sx={{ width: "100px", padding: "10px 10px" }}
                         >
-                          UNE-EN-14411(1) ISO 13006 Anexo G ISO 13006 Annexe G
+                          UNE-EN-ISO
+                          <br />
+                          10545
+                          <br />
+                          Test Nº
+                        </TableCell>
+                        <TableCell
+                          align="center"
+                          sx={{ width: "100px", padding: "10px 10px" }}
+                        >
+                          UNE-EN-14411(1)
+                          <br />
+                          ISO 13006
+                          <br />
+                          Anexo G
                         </TableCell>
                         <TableCell
                           colSpan={3}
@@ -797,32 +889,61 @@ const Caracteristicas = ({ id }) => {
                         <TableCell></TableCell>
                         <TableCell
                           align="center"
-                          sx={{ width: "250px", padding: "10px 10px" }}
+                          sx={{ padding: "10px 10px" }}
                         >
-                          SATINADO 60X120 11,5mm Calibre: 1 597,2x1197,3
+                          SATINADO
+                          <br />
+                          60X120 11,5mm
+                          <br />
+                          Calibre: 1
+                          <br />
+                          597,2x1197,3
                         </TableCell>
                         <TableCell
                           align="center"
-                          sx={{ width: "250px", padding: "10px 10px" }}
+                          sx={{ padding: "10px 10px" }}
                         >
-                          MATE 60X120 14mm Calibre: 1 597,2x1197,3
+                          MATE
+                          <br />
+                          60X120 14mm
+                          <br />
+                          Calibre: 1
+                          <br />
+                          597,2x1197,3
                         </TableCell>
                         <TableCell
                           align="center"
-                          sx={{ width: "250px", padding: "10px 10px" }}
+                          sx={{ padding: "10px 10px" }}
                         >
-                          RUSTICO 60X120 20MM Calibre: 5 600,4x1200,4
+                          RÚSTICO
+                          <br />
+                          60X120 20MM
+                          <br />
+                          Calibre: 5
+                          <br />
+                          600,4x1200,4
                         </TableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody>
                       <TableRow>
-                        <TableCell></TableCell>
-                        <TableCell></TableCell>
-
-                        <TableCell
-                          sx={{ width: "220px", padding: "10px 10px" }}
-                        >
+                        <TableCell rowSpan={4} align="center" sx={{ padding: "5px" }}>
+                          <img
+                            src={higiene1}
+                            alt="higiene-resistencia-quimica"
+                            style={{ 
+                              width: "40px", 
+                              height: "40px",
+                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                            }}
+                          />
+                        </TableCell>
+                        <TableCell rowSpan={4} sx={{ padding: "10px 10px" }}>
+                          RESISTENCIA QUÍMICA
+                          <br />
+                          CHEMICAL RESISTANCE
+                        </TableCell>
+                        <TableCell sx={{ padding: "10px 10px" }}>
                           ÁCIDOS BAJA CONCENTRACIÓN
                           <br />
                           LOW CONCENTRATION ACIDS
@@ -844,20 +965,6 @@ const Caracteristicas = ({ id }) => {
                         </TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell align="center" sx={{ padding: "5px" }}>
-                          <img
-                            src={higiene1}
-                            alt="higiene-resistencia-quimica"
-                            style={{ width: "40px", height: "40px" }}
-                          />
-                        </TableCell>
-                        <TableCell
-                          sx={{ width: "180px", padding: "10px 10px" }}
-                        >
-                          RESISTENCIA QUÍMICA
-                          <br />
-                          CHEMICAL RESISTANCE
-                        </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
                           ÁCIDOS ALTA CONCENTRACIÓN
                           <br />
@@ -880,11 +987,6 @@ const Caracteristicas = ({ id }) => {
                         </TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell
-                          align="center"
-                          sx={{ padding: "5px" }}
-                        ></TableCell>
-                        <TableCell sx={{ padding: "10px 10px" }}></TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
                           BASES BAJA CONCENTRACIÓN
                           <br />
@@ -907,11 +1009,6 @@ const Caracteristicas = ({ id }) => {
                         </TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell
-                          align="center"
-                          sx={{ padding: "5px" }}
-                        ></TableCell>
-                        <TableCell sx={{ padding: "10px 10px" }}></TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
                           BASES ALTA CONCENTRACIÓN
                           <br />
@@ -938,12 +1035,14 @@ const Caracteristicas = ({ id }) => {
                           <img
                             src={higiene2}
                             alt="higiene-manchas"
-                            style={{ width: "40px", height: "40px" }}
+                            style={{ 
+                              width: "40px", 
+                              height: "40px",
+                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                            }}
                           />
                         </TableCell>
-                        <TableCell
-                          sx={{ width: "180px", padding: "10px 10px" }}
-                        >
+                        <TableCell sx={{ padding: "10px 10px" }}>
                           RESISTENCIA A LAS MANCHAS
                           <br />
                           STAINS RESISTANCE
@@ -970,14 +1069,15 @@ const Caracteristicas = ({ id }) => {
                           <img
                             src={higiene3}
                             alt="higiene-limpieza"
-                            style={{ width: "40px", height: "40px" }}
+                            style={{ 
+                              width: "40px", 
+                              height: "40px",
+                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                            }}
                           />
                         </TableCell>
-                        <TableCell
-                          sx={{ width: "180px", padding: "10px 10px" }}
-                        >
+                        <TableCell sx={{ padding: "10px 10px" }}>
                           PRODUCTOS DOMÉSTICOS DE LIMPIEZA Y SALES DE PISCINA
-                          <br />
                           <br />
                           HOUSEHOLD DETERGENTS AND ADDITIVES FOR SWIMMING-POOLS
                         </TableCell>
@@ -986,9 +1086,9 @@ const Caracteristicas = ({ id }) => {
                           13
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          Mínimo UB
+                          MÍNIMO UB
                           <br />
-                          Minimun UB
+                          MINIMUM UB
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
                           CLASE LA

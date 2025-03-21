@@ -6,6 +6,19 @@ import StyledCaracteristicas from "./styles";
 import caracter1 from "../../../assets/images/DolckerTline/Caracteristicas/caracteristicas.webp";
 import ImagenJorge from "../../../assets/images/DolckerTline/tablas.jpg";
 import ImagenConstructiva from "../../../assets/images/DolckerTline/tablas.jpg";
+// Importar iconos para las tablas
+import dimension1 from "../../../assets/icons/caracteristicas/medida1.svg";
+import dimension2 from "../../../assets/icons/caracteristicas/medida2.svg";
+import dimension3 from "../../../assets/icons/caracteristicas/medida3.svg";
+import mecanica1 from "../../../assets/icons/caracteristicas/mecanica1.svg";
+import mecanica2 from "../../../assets/icons/caracteristicas/mecanica2.svg";
+import mecanica3 from "../../../assets/icons/caracteristicas/mecanica3.svg";
+import mecanica4 from "../../../assets/icons/caracteristicas/mecanica4.svg";
+import mecanica5 from "../../../assets/icons/caracteristicas/mecanica5.svg";
+import mecanica6 from "../../../assets/icons/caracteristicas/mecanica6.svg";
+import higiene1 from "../../../assets/icons/caracteristicas/higiene1.svg";
+import higiene2 from "../../../assets/icons/caracteristicas/higiene2.svg";
+import higiene3 from "../../../assets/icons/caracteristicas/higiene3.svg";
 // Importar componentes de MUI
 import {
   Table,
@@ -20,9 +33,19 @@ import {
 } from "@mui/material";
 import Text from "../../../components/Text";
 import Listado from "../../../components/Listado";
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const CaracteristicasTline = ({ id }) => {
   const [showDatosTecnicos, setShowDatosTecnicos] = useState(false);
+  const [expandedPanel, setExpandedPanel] = useState("panel1");
+
+  const handleAccordionChange = (panel) => (event, isExpanded) => {
+    setExpandedPanel(isExpanded ? panel : false);
+  };
+
   return (
     <>
       <StyledCaracteristicas id={id[0]} backgroundColor={COLORS.gray02}>
@@ -150,552 +173,903 @@ const CaracteristicasTline = ({ id }) => {
           Las piezas de cerámica se clasifican como baldosas cerámicas prensadas
           en seco con baja absorción de agua según norma UNE-EN 14411, con las
           siguientes características declaradas por el fabricante:
-          <br />
-          <br />
-          {/* <span
-            onClick={() => setShowDatosTecnicos(!showDatosTecnicos)}
-            style={{
-              cursor: "pointer",
-              color: COLORS.primary,
-              textDecoration: "underline",
-            }}
-          >
-            <strong>
-              {!showDatosTecnicos
-                ? "Para mostrar las características presione aquí"
-                : "Oculta las tablas"}
-            </strong>
-          </span> */}
         </Text>
 
-        {/* {showDatosTecnicos && ( */}
-          <>
-            <Box sx={{ width: "100%", overflow: "auto", mt: 3 }}>
-              <TableContainer component={Paper}>
-                <Table aria-label="tabla de características dimensionales">
+        <Box sx={{ width: "100%", overflow: "auto", mt: 3 }}>
+          {/* Acordeón para características dimensionales */}
+          <Accordion
+            expanded={expandedPanel === "panel1"}
+            onChange={handleAccordionChange("panel1")}
+            sx={{ 
+              mb: 2,
+              boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+              borderRadius: "4px",
+              '&.Mui-expanded': {
+                margin: 0,
+                marginBottom: 2
+              }
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+              sx={{ 
+                backgroundColor: COLORS.gray03, 
+                color: "black",
+                '&.Mui-expanded': {
+                  minHeight: 48
+                }
+              }}
+            >
+              <Typography sx={{ fontWeight: 600 }}>
+                CARACTERÍSTICAS DIMENSIONALES / DIMENSIONAL CHARACTERISTICS
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <TableContainer 
+                component={Paper}
+                sx={{
+                  boxShadow: "none",
+                  borderRadius: "0",
+                  mt: 2,
+                  mb: 2
+                }}
+              >
+                <Table 
+                  aria-label="tabla de características dimensionales"
+                  sx={{
+                    tableLayout: "fixed",
+                    minWidth: 900,
+                    "& .MuiTableCell-root": {
+                      boxSizing: "border-box",
+                    },
+                  }}
+                >
                   <TableHead>
                     <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        CARACTERÍSTICAS DIMENSIONALES
-                        <br />
-                        DIMENSIONAL CHARACTERISTICS
+                      <TableCell sx={{ padding: "10px 10px", width: "60px" }}>
                       </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        UNE EN-14411 (1)
-                        <br />
-                        ISO 13006 ANEXO G
+                      <TableCell sx={{ padding: "10px 10px", width: "180px" }}>
+                        <Typography sx={{ fontWeight: 600 }}>
+                          CARACTERÍSTICAS DIMENSIONALES
+                          <br />
+                          DIMENSIONAL CHARACTERISTICS
+                        </Typography>
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px", width: "120px" }}>
+                        <Typography sx={{ fontWeight: 600 }}>
+                          UNE EN-14411 (1)
+                          <br />
+                          ISO 13006 ANEXO G
+                        </Typography>
                       </TableCell>
 
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        SATINADO 60X120 11,5 MM
-                        <br />
-                        CALIBRE 1 597,2 X 1197,3
+                        <Typography sx={{ fontWeight: 600 }}>
+                          SATINADO 60X120 11,5 MM
+                          <br />
+                          CALIBRE 1 597,2 X 1197,3
+                        </Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        MATE 60X120 14 MM
-                        <br />
-                        CALIBRE 1 597,2 X 1197,3
+                        <Typography sx={{ fontWeight: 600 }}>
+                          MATE 60X120 14 MM
+                          <br />
+                          CALIBRE 1 597,2 X 1197,3
+                        </Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        RÚSTICO 60X120 14MM
-                        <br />
-                        CALIBRE 5 600,4 X 1200,4
+                        <Typography sx={{ fontWeight: 600 }}>
+                          RÚSTICO 60X120 14MM
+                          <br />
+                          CALIBRE 5 600,4 X 1200,4
+                        </Typography>
                       </TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
                     <TableRow>
+                      <TableCell 
+                        rowSpan={4}
+                        align="center"
+                        sx={{ padding: "5px" }}
+                      >
+                        <img
+                          src={dimension1}
+                          alt="dimension-longitud"
+                          style={{ 
+                            width: "40px", 
+                            height: "40px",
+                            filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                          }}
+                        />
+                      </TableCell>
                       <TableCell sx={{ padding: "10px 10px" }}>
-                        LONGITUD
-                        <br />
-                        LENGTH AND WIDTH
+                        <Typography variant="body2">
+                          LONGITUD
+                          <br />
+                          LENGTH AND WIDTH
+                        </Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        2
+                        <Typography variant="body2">2</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        0,6%
+                        <Typography variant="body2">0,6%</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,2%
+                        <Typography variant="body2">± 0,2%</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,2%
+                        <Typography variant="body2">± 0,2%</Typography>
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell sx={{ padding: "10px 10px" }}>
-                        ESPESOR
-                        <br />
-                        THICKNESS
+                        <Typography variant="body2">
+                          ESPESOR
+                          <br />
+                          THICKNESS
+                        </Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        2
+                        <Typography variant="body2">2</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        5%
+                        <Typography variant="body2">5%</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 5,0%
+                        <Typography variant="body2">± 5,0%</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 5,0%
+                        <Typography variant="body2">± 5,0%</Typography>
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell sx={{ padding: "10px 10px" }}>
-                        RECTITUD DE LOS LADOS
-                        <br />
-                        WARPAGE OF EDGES
+                        <Typography variant="body2">
+                          RECTITUD DE LOS LADOS
+                          <br />
+                          WARPAGE OF EDGES
+                        </Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        2
+                        <Typography variant="body2">2</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        0,5%
+                        <Typography variant="body2">0,5%</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,2%
+                        <Typography variant="body2">± 0,2%</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,2%
+                        <Typography variant="body2">± 0,2%</Typography>
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell sx={{ padding: "10px 10px" }}>
-                        ORTOGONALIDAD
-                        <br />
-                        WEDGING
+                        <Typography variant="body2">
+                          ORTOGONALIDAD
+                          <br />
+                          WEDGING
+                        </Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        3
+                        <Typography variant="body2">3</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        0,5%
+                        <Typography variant="body2">0,5%</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,25%
+                        <Typography variant="body2">± 0,25%</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,25%
+                        <Typography variant="body2">± 0,25%</Typography>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                    <TableCell
+                          rowSpan={2}
+                          align="center"
+                          sx={{ padding: "5px" }}
+                        >
+                          <img
+                            src={dimension2}
+                            alt="dimension-curvatura"
+                            style={{ 
+                              width: "40px", 
+                              height: "40px",
+                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                            }}
+                          />
+                        </TableCell>
+                      <TableCell sx={{ padding: "10px 10px" }}>
+                        <Typography variant="body2">
+                          CURVATURA CENTRAL Y LATERAL
+                          <br />
+                          CENTRAL AND EDGE CURVATURE
+                        </Typography>
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        <Typography variant="body2">2</Typography>
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        <Typography variant="body2">0,5%</Typography>
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        <Typography variant="body2">± 0,2%</Typography>
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        <Typography variant="body2">± 0,2%</Typography>
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell sx={{ padding: "10px 10px" }}>
-                        CURVATURA CENTRAL Y LATERAL
-                        <br />
-                        CENTRAL AND EDGE CURVATURE
+                        <Typography variant="body2">
+                          ALABEO
+                          <br />
+                          WARPAGE
+                        </Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        2
+                        <Typography variant="body2">2</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        0,5%
+                        <Typography variant="body2">0,5%</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,2%
+                        <Typography variant="body2">± 0,2%</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,2%
+                        <Typography variant="body2">± 0,2%</Typography>
                       </TableCell>
                     </TableRow>
                     <TableRow>
+                    <TableCell
+                          align="center"
+                          sx={{ padding: "5px" }}
+                        >
+                          <img
+                            src={dimension3}
+                            alt="dimension-curvatura"
+                            style={{ 
+                              width: "40px", 
+                              height: "40px",
+                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                            }}
+                          />
+                        </TableCell>
                       <TableCell sx={{ padding: "10px 10px" }}>
-                        ALABEO
-                        <br />
-                        WARPAGE
+                        <Typography variant="body2">
+                          ABSORCIÓN DE AGUA
+                          <br />
+                          WATER ABSORPTION
+                        </Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        2
+                        <Typography variant="body2">3</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        0,5%
+                        <Typography variant="body2">≤ 0,5% MAX 0,6 %</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,2%
+                        <Typography variant="body2">≤ 0,1%</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ± 0,2%
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        ABSORCIÓN DE AGUA
-                        <br />
-                        WATER ABSORPTION
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        3
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ≤ 0,5% MAX 0,6 %
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ≤ 0,1%
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ≤ 0,1%
+                        <Typography variant="body2">≤ 0,1%</Typography>
                       </TableCell>
                     </TableRow>
                   </TableBody>
                 </Table>
               </TableContainer>
-              <TableContainer component={Paper} sx={{ mt: 4 }}>
-                <Table aria-label="tabla de características mecánicas">
+            </AccordionDetails>
+          </Accordion>
+          {/* Acordeón para características mecánicas */}
+          <Accordion
+            expanded={expandedPanel === "panel2"}
+            onChange={handleAccordionChange("panel2")}
+            sx={{ 
+              mb: 2,
+              boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+              borderRadius: "4px",
+              '&.Mui-expanded': {
+                margin: 0,
+                marginBottom: 2
+              }
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header"
+              sx={{ 
+                backgroundColor: COLORS.gray03, 
+                color: "black",
+                '&.Mui-expanded': {
+                  minHeight: 48
+                }
+              }}
+            >
+              <Typography sx={{ fontWeight: 600 }}>
+                CARACTERÍSTICAS MECÁNICAS / MECHANICAL CHARACTERISTICS
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <TableContainer 
+                component={Paper} 
+                sx={{ 
+                  boxShadow: "none",
+                  borderRadius: "0",
+                }}
+              >
+                <Table 
+                  aria-label="tabla de características mecánicas"
+                  sx={{
+                    tableLayout: "fixed",
+                    minWidth: 900,
+                    "& .MuiTableCell-root": {
+                      boxSizing: "border-box",
+                    },
+                  }}
+                >
                   <TableHead>
                     <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        CARACTERÍSTICAS MECÁNICAS
-                        <br />
-                        MECHANICAL CHARACTERISTICS
+                      <TableCell sx={{ padding: "10px 10px", width: "60px" }}>
                       </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        UNE EN-14411 (1)
-                        <br />
-                        ISO 13006 ANEXO G
+                      <TableCell sx={{ padding: "10px 10px", width: "180px" }}>
+                        <Typography sx={{ fontWeight: 600 }}>
+                          CARACTERÍSTICAS MECÁNICAS
+                          <br />
+                          MECHANICAL CHARACTERISTICS
+                        </Typography>
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px", width: "120px" }}>
+                        <Typography sx={{ fontWeight: 600 }}>
+                          UNE EN-14411 (1)
+                          <br />
+                          ISO 13006 ANEXO G
+                        </Typography>
                       </TableCell>
 
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        SATINADO 60X120 11,5 MM
+                        <Typography sx={{ fontWeight: 600 }}>
+                          SATINADO 60X120 11,5 MM
+                          <br />
+                          CALIBRE 1 597,2 X 1197,3
+                        </Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        MATE 60X120 14 MM
+                        <Typography sx={{ fontWeight: 600 }}>
+                          MATE 60X120 14 MM
+                          <br />
+                          CALIBRE 1 597,2 X 1197,3
+                        </Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        RÚSTICO 60X120 14MM
+                        <Typography sx={{ fontWeight: 600 }}>
+                          RÚSTICO 60X120 14MM
+                          <br />
+                          CALIBRE 5 600,4 X 1200,4
+                        </Typography>
                       </TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
                     <TableRow>
+                      <TableCell 
+                        rowSpan={2}
+                        align="center"
+                        sx={{ padding: "5px" }}
+                      >
+                        <img
+                          src={mecanica1}
+                          alt="caracteristicas-mecanicas"
+                          style={{ 
+                            width: "40px", 
+                            height: "40px",
+                            filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                          }}
+                        />
+                      </TableCell>
                       <TableCell sx={{ padding: "10px 10px" }}>
-                        RESISTENCIA A LA FLEXIÓN
-                        <br />
-                        BENDING STRENGTH
+                        <Typography variant="body2">
+                          CARGA DE ROTURA
+                          <br />
+                          BREAKING STRENGTH
+                        </Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        4
+                        <Typography variant="body2">6</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ≥ 35 N/MM2
+                        <Typography variant="body2">1300 N</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ≥ 42 N/MM²
+                        <Typography variant="body2">≥ 2000 N</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ≥ 50 N/MM²
+                        <Typography variant="body2">≥ 12000 N</Typography>
                       </TableCell>
                     </TableRow>
                     <TableRow>
+                   
                       <TableCell sx={{ padding: "10px 10px" }}>
-                        FUERZA DE ROTURA
-                        <br />
-                        BREAKING STRENGTH
+                        <Typography variant="body2">
+                          RESISTENCIA A FLEXIÓN
+                          <br />
+                          MODULUS OF RUPTURA
+                        </Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        4
+                        <Typography variant="body2">6</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        1.300 N
+                        <Typography variant="body2">35 N/mm²</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ≥ 2.000 N
+                        <Typography variant="body2">≥ 42 N/mm²</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        ≥ 12.000 N
+                        <Typography variant="body2">≥ 50 N/mm²</Typography>
                       </TableCell>
                     </TableRow>
                     <TableRow>
+                    <TableCell 
+                        align="center"
+                        sx={{ padding: "5px" }}
+                      >
+                        <img
+                          src={mecanica2}
+                          alt="caracteristicas-mecanicas"
+                          style={{ 
+                            width: "40px", 
+                            height: "40px",
+                            filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                          }}
+                        />
+                      </TableCell>
                       <TableCell sx={{ padding: "10px 10px" }}>
-                        RESISTENCIA AL IMPACTO
-                        <br />
-                        IMPACT RESISTANCE
+                        <Typography variant="body2">
+                          RESISTENCIA AL DESGASTE PROF.
+                          <br />
+                          DEEP ABRASION RESISTANCE
+                        </Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        5
+                        <Typography variant="body2">8</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        MD
+                        <Typography variant="body2">175 mm³</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        0,85
+                        <Typography variant="body2">&lt; 145 mm³</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        0,81
+                        <Typography variant="body2">&lt; 145 mm³</Typography>
                       </TableCell>
                     </TableRow>
                     <TableRow>
+                    <TableCell 
+                        align="center"
+                        sx={{ padding: "5px" }}
+                      >
+                        <img
+                          src={mecanica3}
+                          alt="caracteristicas-mecanicas"
+                          style={{ 
+                            width: "40px", 
+                            height: "40px",
+                            filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                          }}
+                        />
+                      </TableCell>
                       <TableCell sx={{ padding: "10px 10px" }}>
-                        RESISTENCIA A LA ABRASIÓN PROFUNDA
-                        <br />
-                        DEEP ABRASION RESISTANCE
+                        <Typography variant="body2">
+                          RESISTENCIA A LA ABRASIÓN SUP.
+                          <br />
+                          SURFACE ABRASION RESISTANCE
+                        </Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        6
+                        <Typography variant="body2">7</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        &lt; 175 MM3
+                        <Typography variant="body2">PEI 3-4</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        &lt; 145 MM³
+                        <Typography variant="body2">PEI 3-4</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        &lt; 145 MM³
+                        <Typography variant="body2">PEI 3-4</Typography>
                       </TableCell>
                     </TableRow>
                     <TableRow>
+                    <TableCell 
+                        align="center"
+                        sx={{ padding: "5px" }}
+                      >
+                        <img
+                          src={mecanica4}
+                          alt="caracteristicas-mecanicas"
+                          style={{ 
+                            width: "40px", 
+                            height: "40px",
+                            filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                          }}
+                        />
+                      </TableCell>
                       <TableCell sx={{ padding: "10px 10px" }}>
-                        DILATACIÓN TÉRMICA LINEAL
-                        <br />
-                        LINEAR THERMAL-EXPANSION
+                        <Typography variant="body2">
+                          COEFICIENTE DILATACIÓN TÉRMICA
+                          <br />
+                          THERMAL EXPANSION COEFFICIENT
+                        </Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        6
+                        <Typography variant="body2">9</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        MD
+                        <Typography variant="body2">7,4·10^(-6) /k</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        &lt; 7,5X10-6 °C-1
+                        <Typography variant="body2">7,4·10^(-6) /k</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        &lt; 7,5X10-6 °C-1
+                        <Typography variant="body2">7,4·10^(-6) /k</Typography>
                       </TableCell>
                     </TableRow>
                     <TableRow>
+                    <TableCell 
+                        align="center"
+                        sx={{ padding: "5px" }}
+                      >
+                        <img
+                          src={mecanica5}
+                          alt="caracteristicas-mecanicas"
+                          style={{ 
+                            width: "40px", 
+                            height: "40px",
+                            filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                          }}
+                        />
+                      </TableCell>
                       <TableCell sx={{ padding: "10px 10px" }}>
-                        CHOQUE TÉRMICO
-                        <br />
-                        THERMAL SHOCK
+                        <Typography variant="body2">
+                          RESISTENCIA AL CHOQUE TÉRMICO
+                          <br />
+                          THERMAL SHOCK RESISTANCE
+                        </Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        9
+                        <Typography variant="body2">10</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        MD
+                        <Typography variant="body2">RESISTENTE / RESISTANT</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        RESISTE
-                        <br />
-                        RESISTS
+                        <Typography variant="body2">RESISTENTE / RESISTANT</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        RESISTE
-                        <br />
-                        RESISTS
+                        <Typography variant="body2">RESISTENTE / RESISTANT</Typography>
                       </TableCell>
                     </TableRow>
                     <TableRow>
+                    <TableCell 
+                        align="center"
+                        sx={{ padding: "5px" }}
+                      >
+                        <img
+                          src={mecanica6}
+                          alt="caracteristicas-mecanicas"
+                          style={{ 
+                            width: "40px", 
+                            height: "40px",
+                            filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                          }}
+                        />
+                      </TableCell>
                       <TableCell sx={{ padding: "10px 10px" }}>
-                        RESISTENCIA AL HIELO
-                        <br />
-                        FROST RESISTANCE
+                        <Typography variant="body2">
+                          RESISTENCIA AL HIELO
+                          <br />
+                          FROST RESISTANCE
+                        </Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        12
+                        <Typography variant="body2">12</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        EXIGIDO
-                        <br />
-                        REQUIRED
+                        <Typography variant="body2">EXIGIDO</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        RESISTE
-                        <br />
-                        RESISTS
+                        <Typography variant="body2">RESISTENTE / RESISTANT</Typography>
                       </TableCell>
                       <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        RESISTE
-                        <br />
-                        RESISTS
+                        <Typography variant="body2">RESISTENTE / RESISTANT</Typography>
                       </TableCell>
                     </TableRow>
                   </TableBody>
                 </Table>
               </TableContainer>
-              <TableContainer component={Paper} sx={{ mt: 4 }}>
-                <Table aria-label="tabla de características higiénicas">
-                  <TableHead>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        CARACTERÍSTICAS HIGIÉNICAS
-                        <br />
-                        HYGIENIC CHARACTERISTICS
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        UNE-EN-ISO 10545
-                        <br />
-                        Test Nº
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        UNE-EN-14411(1)
-                        <br />
-                        ISO 13006
-                        <br />
-                        Anexo G
-                      </TableCell>
-
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        SATINADO 60X120 11,5 MM
-                        <br />
-                        Calibre: 1<br />
-                        597,2x1197,3
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        MATE 60X120 14 MM
-                        <br />
-                        Calibre: 1<br />
-                        597,2x1197,3
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        RÚSTICO 60X120 20MM
-                        <br />
-                        Calibre: 5<br />
-                        600,4x1200,4
-                      </TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        ÁCIDOS BAJA CONCENTRACIÓN
-                        <br />
-                        LOW CONCENTRATION ACIDS
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        13
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        MD
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        CLASE LA
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        CLASE LA
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        CLASE LA
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        ÁCIDOS ALTA CONCENTRACIÓN
-                        <br />
-                        HIGH CONCENTRATION ACIDS
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        13
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        MD
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        CLASE HA
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        CLASE HA
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        CLASE HA
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        BASES BAJA CONCENTRACIÓN
-                        <br />
-                        LOW CONCENTRATION ALKALI
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        13
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        MD
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        CLASE LA
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        CLASE LA
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        CLASE LA
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        BASES ALTA CONCENTRACIÓN
-                        <br />
-                        HIGH CONCENTRATION ALKALI
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        13
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        MD
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        CLASE HA
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        CLASE HA
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        CLASE HA
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        RESISTENCIA A LAS MANCHAS
-                        <br />
-                        STAIN RESISTANCE
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        14
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        MD
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        4
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        4
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        4
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell sx={{ padding: "10px 10px" }}>
-                        PRODUCTOS DOMÉSTICOS DE LIMPIEZA Y SALES DE PISCINA
-                        <br />
-                        HOUSEHOLD DETERGENTS AND ADDITIVES FOR SWIMMING-POOLS
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        13
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        Mínimo UB
-                        <br />
-                        Minimum UB
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        CLASE LA
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        CLASE LA
-                      </TableCell>
-                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                        CLASE LA
-                      </TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </Box>
-          </>
-        {/* )} */}
+            </AccordionDetails>
+          </Accordion>
+          {/* Acordeón para características higiénicas */}
+          <AccordionDetails>
+                <TableContainer
+                  component={Paper}
+                  sx={{
+                    mt: 4,
+                    overflowX: "auto",
+                    maxWidth: "100%",
+                    minWidth: "100%",
+                  }}
+                >
+                  <Table
+                    aria-label="tabla de características higiénicas"
+                    sx={{
+                      tableLayout: "fixed",
+                      minWidth: 900,
+                      "& .MuiTableCell-root": {
+                        boxSizing: "border-box",
+                      },
+                    }}
+                  >
+                    <TableHead>
+                      <TableRow>
+                        <TableCell
+                          sx={{ width: "60px", padding: "10px 10px" }}
+                        ></TableCell>
+                        <TableCell
+                          sx={{ width: "180px", padding: "10px 10px" }}
+                        >
+                          CARACTERÍSTICAS HIGIÉNICAS
+                          <br />
+                          HYGIENIC CHARACTERISTICS
+                        </TableCell>
+                        <TableCell sx={{ width: "220px", padding: "10px 10px" }}>
+                          TIPO DE ÁCIDO O BASE
+                          <br />
+                          TYPE OF ACID OR BASE
+                        </TableCell>
+                        <TableCell
+                          align="center"
+                          sx={{ width: "100px", padding: "10px 10px" }}
+                        >
+                          UNE-EN-ISO
+                          <br />
+                          10545
+                          <br />
+                          Test Nº
+                        </TableCell>
+                        <TableCell
+                          align="center"
+                          sx={{ width: "100px", padding: "10px 10px" }}
+                        >
+                          UNE-EN-14411(1)
+                          <br />
+                          ISO 13006
+                          <br />
+                          Anexo G
+                        </TableCell>
+                        <TableCell
+                          align="center"
+                          sx={{ padding: "10px 10px" }}
+                        >
+                          SATINADO
+                          <br />
+                          60X120 11,5mm
+                          <br />
+                          Calibre: 1
+                          <br />
+                          597,2x1197,3
+                        </TableCell>
+                        <TableCell
+                          align="center"
+                          sx={{ padding: "10px 10px" }}
+                        >
+                          MATE
+                          <br />
+                          60X120 14mm
+                          <br />
+                          Calibre: 1
+                          <br />
+                          597,2x1197,3
+                        </TableCell>
+                        <TableCell
+                          align="center"
+                          sx={{ padding: "10px 10px" }}
+                        >
+                          RÚSTICO
+                          <br />
+                          60X120 20MM
+                          <br />
+                          Calibre: 5
+                          <br />
+                          600,4x1200,4
+                        </TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      <TableRow>
+                        <TableCell rowSpan={4} align="center" sx={{ padding: "5px" }}>
+                          <img
+                            src={higiene1}
+                            alt="higiene-resistencia-quimica"
+                            style={{ 
+                              width: "40px", 
+                              height: "40px",
+                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                            }}
+                          />
+                        </TableCell>
+                        <TableCell rowSpan={4} sx={{ padding: "10px 10px" }}>
+                          RESISTENCIA QUÍMICA
+                          <br />
+                          CHEMICAL RESISTANCE
+                        </TableCell>
+                        <TableCell sx={{ padding: "10px 10px" }}>
+                          ÁCIDOS BAJA CONCENTRACIÓN
+                          <br />
+                          LOW CONCENTRATION ACIDS
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          13
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          MD
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          CLASE LA
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          CLASE LA
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          CLASE LA
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell sx={{ padding: "10px 10px" }}>
+                          ÁCIDOS ALTA CONCENTRACIÓN
+                          <br />
+                          HIGH CONCENTRATION ACIDS
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          13
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          MD
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          CLASE HA
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          CLASE HA
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          CLASE HA
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell sx={{ padding: "10px 10px" }}>
+                          BASES BAJA CONCENTRACIÓN
+                          <br />
+                          LOW CONCENTRATION ALKALI
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          13
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          MD
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          CLASE LA
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          CLASE LA
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          CLASE LA
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell sx={{ padding: "10px 10px" }}>
+                          BASES ALTA CONCENTRACIÓN
+                          <br />
+                          HIGH CONCENTRATION ALKALI
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          13
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          MD
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          CLASE HA
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          CLASE HA
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          CLASE HA
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell align="center" sx={{ padding: "5px" }}>
+                          <img
+                            src={higiene2}
+                            alt="higiene-manchas"
+                            style={{ 
+                              width: "40px", 
+                              height: "40px",
+                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                            }}
+                          />
+                        </TableCell>
+                        <TableCell sx={{ padding: "10px 10px" }}>
+                          RESISTENCIA A LAS MANCHAS
+                          <br />
+                          STAINS RESISTANCE
+                        </TableCell>
+                        <TableCell sx={{ padding: "10px 10px" }}></TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          14
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          MD
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          4
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          4
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          4
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell align="center" sx={{ padding: "5px" }}>
+                          <img
+                            src={higiene3}
+                            alt="higiene-limpieza"
+                            style={{ 
+                              width: "40px", 
+                              height: "40px",
+                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                            }}
+                          />
+                        </TableCell>
+                        <TableCell sx={{ padding: "10px 10px" }}>
+                          PRODUCTOS DOMÉSTICOS DE LIMPIEZA Y SALES DE PISCINA
+                          <br />
+                          HOUSEHOLD DETERGENTS AND ADDITIVES FOR SWIMMING-POOLS
+                        </TableCell>
+                        <TableCell sx={{ padding: "10px 10px" }}></TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          13
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          MÍNIMO UB
+                          <br />
+                          MINIMUM UB
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          CLASE LA
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          CLASE LA
+                        </TableCell>
+                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                          CLASE LA
+                        </TableCell>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+              </AccordionDetails>       
+        </Box>
       </StyledCaracteristicas>
     </>
   );
