@@ -40,7 +40,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const CaracteristicasTline = ({ id }) => {
   const [showDatosTecnicos, setShowDatosTecnicos] = useState(false);
-  const [expandedPanel, setExpandedPanel] = useState("panel1");
+  const [expandedPanel, setExpandedPanel] = useState(false);
 
   const handleAccordionChange = (panel) => (event, isExpanded) => {
     setExpandedPanel(isExpanded ? panel : false);
@@ -795,280 +795,310 @@ const CaracteristicasTline = ({ id }) => {
             </AccordionDetails>
           </Accordion>
           {/* Acordeón para características higiénicas */}
-          <AccordionDetails>
-                <TableContainer
-                  component={Paper}
+          <Accordion
+            expanded={expandedPanel === "panel3"}
+            onChange={handleAccordionChange("panel3")}
+            sx={{ 
+              mb: 2,
+              boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+              borderRadius: "4px",
+              '&.Mui-expanded': {
+                margin: 0,
+                marginBottom: 2
+              }
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel3a-content"
+              id="panel3a-header"
+              sx={{ 
+                backgroundColor: COLORS.gray03, 
+                color: "black",
+                '&.Mui-expanded': {
+                  minHeight: 48
+                }
+              }}
+            >
+              <Typography sx={{ fontWeight: 600 }}>
+                CARACTERÍSTICAS HIGIÉNICAS / HYGIENIC CHARACTERISTICS
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <TableContainer
+                component={Paper}
+                sx={{
+                  mt: 4,
+                  overflowX: "auto",
+                  maxWidth: "100%",
+                  minWidth: "100%",
+                }}
+              >
+                <Table
+                  aria-label="tabla de características higiénicas"
                   sx={{
-                    mt: 4,
-                    overflowX: "auto",
-                    maxWidth: "100%",
-                    minWidth: "100%",
+                    tableLayout: "fixed",
+                    minWidth: 900,
+                    "& .MuiTableCell-root": {
+                      boxSizing: "border-box",
+                    },
                   }}
                 >
-                  <Table
-                    aria-label="tabla de características higiénicas"
-                    sx={{
-                      tableLayout: "fixed",
-                      minWidth: 900,
-                      "& .MuiTableCell-root": {
-                        boxSizing: "border-box",
-                      },
-                    }}
-                  >
-                    <TableHead>
-                      <TableRow>
-                        <TableCell
-                          sx={{ width: "60px", padding: "10px 10px" }}
-                        ></TableCell>
-                        <TableCell
-                          sx={{ width: "180px", padding: "10px 10px" }}
-                        >
-                          CARACTERÍSTICAS HIGIÉNICAS
-                          <br />
-                          HYGIENIC CHARACTERISTICS
-                        </TableCell>
-                        <TableCell sx={{ width: "220px", padding: "10px 10px" }}>
-                          TIPO DE ÁCIDO O BASE
-                          <br />
-                          TYPE OF ACID OR BASE
-                        </TableCell>
-                        <TableCell
-                          align="center"
-                          sx={{ width: "100px", padding: "10px 10px" }}
-                        >
-                          UNE-EN-ISO
-                          <br />
-                          10545
-                          <br />
-                          Test Nº
-                        </TableCell>
-                        <TableCell
-                          align="center"
-                          sx={{ width: "100px", padding: "10px 10px" }}
-                        >
-                          UNE-EN-14411(1)
-                          <br />
-                          ISO 13006
-                          <br />
-                          Anexo G
-                        </TableCell>
-                        <TableCell
-                          align="center"
-                          sx={{ padding: "10px 10px" }}
-                        >
-                          SATINADO
-                          <br />
-                          60X120 11,5mm
-                          <br />
-                          Calibre: 1
-                          <br />
-                          597,2x1197,3
-                        </TableCell>
-                        <TableCell
-                          align="center"
-                          sx={{ padding: "10px 10px" }}
-                        >
-                          MATE
-                          <br />
-                          60X120 14mm
-                          <br />
-                          Calibre: 1
-                          <br />
-                          597,2x1197,3
-                        </TableCell>
-                        <TableCell
-                          align="center"
-                          sx={{ padding: "10px 10px" }}
-                        >
-                          RÚSTICO
-                          <br />
-                          60X120 20MM
-                          <br />
-                          Calibre: 5
-                          <br />
-                          600,4x1200,4
-                        </TableCell>
-                      </TableRow>
-                    </TableHead>
-                    <TableBody>
-                      <TableRow>
-                        <TableCell rowSpan={4} align="center" sx={{ padding: "5px" }}>
-                          <img
-                            src={higiene1}
-                            alt="higiene-resistencia-quimica"
-                            style={{ 
-                              width: "40px", 
-                              height: "40px",
-                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
-                            }}
-                          />
-                        </TableCell>
-                        <TableCell rowSpan={4} sx={{ padding: "10px 10px" }}>
-                          RESISTENCIA QUÍMICA
-                          <br />
-                          CHEMICAL RESISTANCE
-                        </TableCell>
-                        <TableCell sx={{ padding: "10px 10px" }}>
-                          ÁCIDOS BAJA CONCENTRACIÓN
-                          <br />
-                          LOW CONCENTRATION ACIDS
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          13
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          MD
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE LA
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE LA
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE LA
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell sx={{ padding: "10px 10px" }}>
-                          ÁCIDOS ALTA CONCENTRACIÓN
-                          <br />
-                          HIGH CONCENTRATION ACIDS
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          13
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          MD
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE HA
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE HA
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE HA
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell sx={{ padding: "10px 10px" }}>
-                          BASES BAJA CONCENTRACIÓN
-                          <br />
-                          LOW CONCENTRATION ALKALI
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          13
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          MD
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE LA
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE LA
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE LA
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell sx={{ padding: "10px 10px" }}>
-                          BASES ALTA CONCENTRACIÓN
-                          <br />
-                          HIGH CONCENTRATION ALKALI
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          13
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          MD
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE HA
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE HA
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE HA
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell align="center" sx={{ padding: "5px" }}>
-                          <img
-                            src={higiene2}
-                            alt="higiene-manchas"
-                            style={{ 
-                              width: "40px", 
-                              height: "40px",
-                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
-                            }}
-                          />
-                        </TableCell>
-                        <TableCell sx={{ padding: "10px 10px" }}>
-                          RESISTENCIA A LAS MANCHAS
-                          <br />
-                          STAINS RESISTANCE
-                        </TableCell>
-                        <TableCell sx={{ padding: "10px 10px" }}></TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          14
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          MD
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          4
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          4
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          4
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell align="center" sx={{ padding: "5px" }}>
-                          <img
-                            src={higiene3}
-                            alt="higiene-limpieza"
-                            style={{ 
-                              width: "40px", 
-                              height: "40px",
-                              filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
-                            }}
-                          />
-                        </TableCell>
-                        <TableCell sx={{ padding: "10px 10px" }}>
-                          PRODUCTOS DOMÉSTICOS DE LIMPIEZA Y SALES DE PISCINA
-                          <br />
-                          HOUSEHOLD DETERGENTS AND ADDITIVES FOR SWIMMING-POOLS
-                        </TableCell>
-                        <TableCell sx={{ padding: "10px 10px" }}></TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          13
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          MÍNIMO UB
-                          <br />
-                          MINIMUM UB
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE LA
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE LA
-                        </TableCell>
-                        <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE LA
-                        </TableCell>
-                      </TableRow>
-                    </TableBody>
-                  </Table>
-                </TableContainer>
-              </AccordionDetails>       
+                  <TableHead>
+                    <TableRow>
+                      <TableCell
+                        sx={{ width: "60px", padding: "10px 10px" }}
+                      ></TableCell>
+                      <TableCell
+                        sx={{ width: "180px", padding: "10px 10px" }}
+                      >
+                        CARACTERÍSTICAS HIGIÉNICAS
+                        <br />
+                        HYGIENIC CHARACTERISTICS
+                      </TableCell>
+                      <TableCell sx={{ width: "220px", padding: "10px 10px" }}>
+                        TIPO DE ÁCIDO O BASE
+                        <br />
+                        TYPE OF ACID OR BASE
+                      </TableCell>
+                      <TableCell
+                        align="center"
+                        sx={{ width: "100px", padding: "10px 10px" }}
+                      >
+                        UNE-EN-ISO
+                        <br />
+                        10545
+                        <br />
+                        Test Nº
+                      </TableCell>
+                      <TableCell
+                        align="center"
+                        sx={{ width: "100px", padding: "10px 10px" }}
+                      >
+                        UNE-EN-14411(1)
+                        <br />
+                        ISO 13006
+                        <br />
+                        Anexo G
+                      </TableCell>
+                      <TableCell
+                        align="center"
+                        sx={{ padding: "10px 10px" }}
+                      >
+                        SATINADO
+                        <br />
+                        60X120 11,5mm
+                        <br />
+                        Calibre: 1
+                        <br />
+                        597,2x1197,3
+                      </TableCell>
+                      <TableCell
+                        align="center"
+                        sx={{ padding: "10px 10px" }}
+                      >
+                        MATE
+                        <br />
+                        60X120 14mm
+                        <br />
+                        Calibre: 1
+                        <br />
+                        597,2x1197,3
+                      </TableCell>
+                      <TableCell
+                        align="center"
+                        sx={{ padding: "10px 10px" }}
+                      >
+                        RÚSTICO
+                        <br />
+                        60X120 20MM
+                        <br />
+                        Calibre: 5
+                        <br />
+                        600,4x1200,4
+                      </TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell rowSpan={4} align="center" sx={{ padding: "5px" }}>
+                        <img
+                          src={higiene1}
+                          alt="higiene-resistencia-quimica"
+                          style={{ 
+                            width: "40px", 
+                            height: "40px",
+                            filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                          }}
+                        />
+                      </TableCell>
+                      <TableCell rowSpan={4} sx={{ padding: "10px 10px" }}>
+                        RESISTENCIA QUÍMICA
+                        <br />
+                        CHEMICAL RESISTANCE
+                      </TableCell>
+                      <TableCell sx={{ padding: "10px 10px" }}>
+                        ÁCIDOS BAJA CONCENTRACIÓN
+                        <br />
+                        LOW CONCENTRATION ACIDS
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        13
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        MD
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        CLASE LA
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        CLASE LA
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        CLASE LA
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell sx={{ padding: "10px 10px" }}>
+                        ÁCIDOS ALTA CONCENTRACIÓN
+                        <br />
+                        HIGH CONCENTRATION ACIDS
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        13
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        MD
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        CLASE HA
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        CLASE HA
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        CLASE HA
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell sx={{ padding: "10px 10px" }}>
+                        BASES BAJA CONCENTRACIÓN
+                        <br />
+                        LOW CONCENTRATION ALKALI
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        13
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        MD
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        CLASE LA
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        CLASE LA
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        CLASE LA
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell sx={{ padding: "10px 10px" }}>
+                        BASES ALTA CONCENTRACIÓN
+                        <br />
+                        HIGH CONCENTRATION ALKALI
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        13
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        MD
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        CLASE HA
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        CLASE HA
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        CLASE HA
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell align="center" sx={{ padding: "5px" }}>
+                        <img
+                          src={higiene2}
+                          alt="higiene-manchas"
+                          style={{ 
+                            width: "40px", 
+                            height: "40px",
+                            filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                          }}
+                        />
+                      </TableCell>
+                      <TableCell sx={{ padding: "10px 10px" }}>
+                        RESISTENCIA A LAS MANCHAS
+                        <br />
+                        STAINS RESISTANCE
+                      </TableCell>
+                      <TableCell sx={{ padding: "10px 10px" }}></TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        14
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        MD
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        4
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        4
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        4
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell align="center" sx={{ padding: "5px" }}>
+                        <img
+                          src={higiene3}
+                          alt="higiene-limpieza"
+                          style={{ 
+                            width: "40px", 
+                            height: "40px",
+                            filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
+                          }}
+                        />
+                      </TableCell>
+                      <TableCell sx={{ padding: "10px 10px" }}>
+                        PRODUCTOS DOMÉSTICOS DE LIMPIEZA Y SALES DE PISCINA
+                        <br />
+                        HOUSEHOLD DETERGENTS AND ADDITIVES FOR SWIMMING-POOLS
+                      </TableCell>
+                      <TableCell sx={{ padding: "10px 10px" }}></TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        13
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        MÍNIMO UB
+                        <br />
+                        MINIMUM UB
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        CLASE LA
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        CLASE LA
+                      </TableCell>
+                      <TableCell align="center" sx={{ padding: "10px 10px" }}>
+                        CLASE LA
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </AccordionDetails>
+          </Accordion>
         </Box>
       </StyledCaracteristicas>
     </>
