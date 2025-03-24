@@ -10,6 +10,7 @@ import Escamas from './pages/catalogos/Escamas';
 import T5 from './pages/catalogos/DolckerT5';
 import DolckerArchiform from './pages/catalogos/DolckerArchiform';
 import DolckerAlumtech from './pages/catalogos/DolckerAlumtech';
+import DolckerVolum from './pages/catalogos/DolckerVolum';
 // import FontStyles from './global/FontStyles'
 import './assets/fonts/fonts.css';
 import GlobalStyles from './global/GlobalStyles';
@@ -46,6 +47,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/dolcker-t5' element={<T5 />} />
         <Route path='/dolcker-archiform' element={<DolckerArchiform />} />
         <Route path='/dolcker-alumtech' element={<DolckerAlumtech />} />
+        <Route path='/dolcker-volum' element={<DolckerVolum />} />
         <Route path='/dolcker-matrix-decor' element={<DolckerMatrixDecor />} />
         <Route path='/dolcker-G10' element={<DolckerG10 />} />
         <Route path='/dolcker-escamas' element={<Escamas />} />

@@ -19,95 +19,93 @@ import Imagen12 from "../../assets/images/Novedades/12.webp";
 import Imagen13 from "../../assets/images/Novedades/13.webp";
 import Imagen14 from "../../assets/images/Novedades/14.webp";
 
-const MenuLanzadera = ({ en = false }) => {
-  const contenidos = en
-    ? useListaContenidos(menuLanzaderaEn, [], true)
-    : useListaContenidos(menuLanzadera, [], true);
+const MenuLanzadera = () => {
+  const contenidos = useListaContenidos(menuLanzaderaEn, [], true);
 
   const miniaturas = [
     {
       id: 1,
       imagen: Imagen1,
       texto: "DO&BASALT",
-      enlace: "dolcker-system#basalt",
+      enlace: "en/dolcker-system#basalt",
     },
     {
       id: 2,
       imagen: Imagen2,
       texto: "DO&DOLM",
-      enlace: "dolcker-system#dolm",
+      enlace: "en/dolcker-system#dolm",
     },
     {
       id: 3,
       imagen: Imagen3,
       texto: "DO&DQUARTZ",
-      enlace: "dolcker-system#dquartz",
+      enlace: "en/dolcker-system#dquartz",
     },
     {
       id: 4,
       imagen: Imagen4,
       texto: "DO&MARBLE",
-      enlace: "dolcker-system#marble",
+      enlace: "en/dolcker-system#marble",
     },
     {
       id: 5,
       imagen: Imagen5,
       texto: "DO&STONE",
-      enlace: "dolcker-system#stone",
+      enlace: "en/dolcker-system#stone",
     },
     {
       id: 6,
       imagen: Imagen6,
       texto: "DO&QUARCITY",
-      enlace: "dolcker-system#quarcity",
+      enlace: "en/dolcker-system#quarcity",
     },
     {
       id: 7,
       imagen: Imagen7,
       texto: "DO&CRETE",
-      enlace: "dolcker-system#crete",
+      enlace: "en/dolcker-system#crete",
     },
     {
       id: 8,
       imagen: Imagen8,
       texto: "DO&PORTLAND",
-      enlace: "dolcker-system#portland",
+      enlace: "en/dolcker-system#portland",
     },
     {
       id: 9,
       imagen: Imagen9,
       texto: "DO&SPACE",
-      enlace: "dolcker-system#space",
+      enlace: "en/dolcker-system#space",
     },
     {
       id: 10,
       imagen: Imagen10,
       texto: "DO&TZMENT",
-      enlace: "dolcker-system#tzment",
+      enlace: "en/dolcker-system#tzment",
     },
     {
       id: 11,
       imagen: Imagen11,
       texto: "DO&WOOD",
-      enlace: "dolcker-system#wood",
+      enlace: "en/dolcker-system#wood",
     },
     {
       id: 12,
       imagen: Imagen12,
       texto: "DO&TERRAZO",
-      enlace: "dolcker-system#terrazo",
+      enlace: "en/dolcker-system#terrazo",
     },
     {
       id: 13,
       imagen: Imagen13,
       texto: "DO&ARQUITECT",
-      enlace: "dolcker-system#arquitect",
+      enlace: "en/dolcker-system#arquitect",
     },
     {
       id: 14,
       imagen: Imagen14,
       texto: "DO&VOLUMEN",
-      enlace: "dolcker-system#volumen",
+      enlace: "en/dolcker-system#volumen",
     },
   ];
 
@@ -118,7 +116,7 @@ const MenuLanzadera = ({ en = false }) => {
       </StyledListaContenidos>
       {/* <StyledMiniaturasContainer>
                 <div className='titulo'>
-                    <TituloSerie>NUESTRAS SERIES</TituloSerie>
+                    <TituloSerie>OUR SERIES</TituloSerie>
                 </div>
                 {miniaturas.map(miniatura => (
                     <Miniatura key={miniatura.id} miniatura={miniatura} />
