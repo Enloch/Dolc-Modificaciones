@@ -9,12 +9,7 @@ export { default as Sistemas } from './08_Sistemas';
 export { default as Descargas } from './09_Descargas';
 export { default as Final } from './10_Final';
 export { default as Galeria } from './11_Galeria';
-//Step
-export { default as Inicio } from './Step/Step00_Introduccion';
-export { default as IndiceStep } from './Step/Step01_Inicio';
-export { default as Dolcker_Step } from './Step/Step02_Dolcker_Step';
-export { default as VentajasStep } from './Step/Step03_Ventajas';
-export { default as AplicacionesStep } from './Step/Step04_Aplicaciones';
+//Escamas
 export { default as InicioEsc } from './Escamas/Escamas00_Introduccion';
 export { default as IndiceEsc } from './Escamas/Escamas01_Inicio';
 export { default as DolckerEsc } from './Escamas/Escamas02_Dolcker';
@@ -115,3 +110,12 @@ export { default as DisenosVolum } from './Volum/05_Diseno';
 export { default as CaracteristicasVolum } from './Volum/06_Caracteristicas';
 export { default as SistemasVolum } from './Volum/07_Sistemas';
 export { default as DescargasVolum } from './Volum/08_Descargas';
+//STEP
+export { default as IndiceStep } from './Step/01_Inicio';
+export { default as DolckerStep } from './Step/02_Dolcker';
+export { default as VentajasStep } from './Step/03_Ventajas';
+export { default as AplicacionesStep } from './Step/04_Aplicaciones';
+export { default as DisenosStep } from './Step/05_Diseno';
+export { default as CaracteristicasStep } from './Step/06_Caracteristicas';
+export { default as SistemasStep } from './Step/07_Sistemas';
+export { default as DescargasStep } from './Step/08_Descargas';
