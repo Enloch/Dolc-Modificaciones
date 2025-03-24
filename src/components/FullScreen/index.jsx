@@ -17,6 +17,7 @@ const FullScreen = ({
   const [initClientX, setInitClientX] = useState(0);
   const [initScrollLeft, setInitScrollLeft] = useState(0);
   const [desplazamiento, setDesplazamiento] = useState(0);
+  const [useContainedMode, setUseContainedMode] = useState(false);
 
   const [isShow, setIsShow] = useState(false);
   const [indiceSrc, setIndiceSrc] = useState(0);
@@ -25,6 +26,27 @@ const FullScreen = ({
   const imgsContainerRef = useRef();
 
   const imgsContainerId = "id-imgs";
+
+  useEffect(() => {
+    // Check screen size to determine display mode
+    const checkScreenSize = () => {
+      // For screens larger than 1440px width, use contained mode
+      if (window.innerWidth >= 1440) {
+        setUseContainedMode(true);
+      } else {
+        setUseContainedMode(false);
+      }
+    };
+
+    // Check on initial load
+    checkScreenSize();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', checkScreenSize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   useEffect(() => {
     if (Array.isArray(imgSrc)) {
@@ -84,7 +106,7 @@ const FullScreen = ({
           <img
             src={src}
             alt='Imagen a pantalla completa'
-            className='muestraFondo'
+            className={`muestraFondo ${useContainedMode ? 'contained' : ''}`}
           />
         );
       })
@@ -204,7 +226,7 @@ const FullScreen = ({
       <img
         src={imgSrc}
         alt='Imagen a pantalla completa'
-        className='muestraFondo'
+        className={`muestraFondo ${useContainedMode ? 'contained' : ''}`}
       />
       <span>{titulo}</span>
       <img
