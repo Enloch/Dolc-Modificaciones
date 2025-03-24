@@ -3,7 +3,7 @@ import ImageWithCaption from "../../../components/ImageWithCaption";
 import { Titulo } from "../../../components/Titulos";
 import { COLORS } from "../../../global/GlobalStyles";
 import StyledCaracteristicas from "./styles";
-import caracter1 from "../../../assets/images/DolckerTline/Caracteristicas/caracteristicas.webp";
+import caracter1 from "../../../assets/images/DolckerTline/Caracteristicas/IMG_5562.jpg";
 import ImagenJorge from "../../../assets/images/DolckerTline/tablas.jpg";
 import ImagenConstructiva from "../../../assets/images/DolckerTline/tablas.jpg";
 // Importar iconos para las tablas

@@ -1,19 +1,18 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, lazy, Suspense } from "react";
 import MultipleOptionsProvider from "../../contexts/MultipleOptionsContext";
 import styled from "styled-components";
-import {
-	Aplicaciones,
-	Caracteristicas,
-	Descargas,
-	Disenos,
-	Dolcker,
-	Final,
-	Indice,
-	Introduccion,
-	Sistemas,
-	Ventajas,
-	Galeria,
-} from "../../modules";
+
+const Aplicaciones = lazy(() => import("../../modules/05_Aplicaciones"));
+const Caracteristicas = lazy(() => import("../../modules/07_Caracteristicas"));
+const Descargas = lazy(() => import("../../modules/09_Descargas"));
+const Disenos = lazy(() => import("../../modules/06_Diseno"));
+const Dolcker = lazy(() => import("../../modules/03_Dolcker"));
+const Final = lazy(() => import("../../modules/10_Final"));
+const Indice = lazy(() => import("../../modules/02_Indice"));
+const Introduccion = lazy(() => import("../../modules/01_Introduccion"));
+const Sistemas = lazy(() => import("../../modules/08_Sistemas"));
+const Ventajas = lazy(() => import("../../modules/04_Ventajas"));
+const Galeria = lazy(() => import("../../modules/11_Galeria"));
 
 const FachadaVentilada = () => {
 	const indiceRef = useRef();
@@ -38,43 +37,45 @@ const FachadaVentilada = () => {
 
 	return (
 		<MultipleOptionsProvider>
-			{/* <Introduccion indiceRef={indiceRef} /> */}
-			<Indice id="indice" indiceRef={indiceRef} />
-			<Dolcker id="dolcker" />
-			<Ventajas id="ventajas" />
-			<Aplicaciones
-				id={[
-					"aplicaciones",
-					"rehabilitacion",
-					"obra-nueva",
-					"fachadas",
-					"terrazas",
-				]}
-			/>
-			<Disenos
-				id={[
-					"diseno",
-					"formato",
-					"despiece",
-					"acabados",
-					"espesores",
-					"piezas",
-					"series",
-				]}
-			/>
-			<Caracteristicas id={["caracteristicas-especiales", "datos-tecnicos"]} />
-			<Sistemas
-				id={[
-					"sistemas",
-					"dolcker-and-clip",
-					"dol-tc11",
-					"dol-tc14",
-					"dol-hc20",
-				]}
-			/>
-			<Galeria id="galeria" />
-			<Descargas id="descargas" />
-			<Final />
+			<Suspense fallback={<div>Cargando...</div>}>
+				{/* <Introduccion indiceRef={indiceRef} /> */}
+				<Indice id="indice" indiceRef={indiceRef} />
+				<Dolcker id="dolcker" />
+				<Ventajas id="ventajas" />
+				<Aplicaciones
+					id={[
+						"aplicaciones",
+						"rehabilitacion",
+						"obra-nueva",
+						"fachadas",
+						"terrazas",
+					]}
+				/>
+				<Disenos
+					id={[
+						"diseno",
+						"formato",
+						"despiece",
+						"acabados",
+						"espesores",
+						"piezas",
+						"series",
+					]}
+				/>
+				<Caracteristicas id={["caracteristicas-especiales", "datos-tecnicos"]} />
+				<Sistemas
+					id={[
+						"sistemas",
+						"dolcker-and-clip",
+						"dol-tc11",
+						"dol-tc14",
+						"dol-hc20",
+					]}
+				/>
+				<Galeria id="galeria" />
+				<Descargas id="descargas" />
+				<Final />
+			</Suspense>
 			{showButton && (
 				<StyledButton onClick={handleGoToIndice}>
 					<span role="img" aria-label="up arrow">
