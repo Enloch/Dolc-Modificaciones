@@ -38,55 +38,55 @@ const FachadaVentilada = () => {
   }, []);
 
   return (
-      <MultipleOptionsProvider>
-        <Suspense fallback={<Loader />}>
-          <Indice id="indice" indiceRef={indiceRef} />
-          <Dolcker id="dolcker" />
-          <Ventajas id="ventajas" />
-          <Aplicaciones
-            id={[
-              "aplicaciones",
-              "rehabilitacion",
-              "obra-nueva",
-              "fachadas",
-              "terrazas",
-            ]}
-          />
-          <Disenos
-            id={[
-              "diseno",
-              "formato",
-              "despiece",
-              "acabados",
-              "espesores",
-              "piezas",
-              "series",
-            ]}
-          />
-          <Caracteristicas
-            id={["caracteristicas-especiales", "datos-tecnicos"]}
-          />
-          <Sistemas
-            id={[
-              "sistemas",
-              "dolcker-and-clip",
-              "dol-tc11",
-              "dol-tc14",
-              "dol-hc20",
-            ]}
-          />
-          <Galeria id="galeria" />
-          <Descargas id="descargas" />
-          <Final />
-        </Suspense>
-        {showButton && (
-          <StyledButton onClick={handleGoToIndice}>
-            <span role="img" aria-label="up arrow">
-              &#8593;
-            </span>
-          </StyledButton>
-        )}
-      </MultipleOptionsProvider>
+    <MultipleOptionsProvider>
+      <Suspense fallback={<Loader />}>
+        <Indice id="indice" indiceRef={indiceRef} />
+        <Dolcker id="dolcker" />
+        <Ventajas id="ventajas" />
+        <Aplicaciones
+          id={[
+            "aplicaciones",
+            "rehabilitacion",
+            "obra-nueva",
+            "fachadas",
+            "terrazas",
+          ]}
+        />
+        <Disenos
+          id={[
+            "diseno",
+            "formato",
+            "despiece",
+            "acabados",
+            "espesores",
+            "piezas",
+            "series",
+          ]}
+        />
+        <Caracteristicas
+          id={["caracteristicas-especiales", "datos-tecnicos"]}
+        />
+        <Sistemas
+          id={[
+            "sistemas",
+            "dolcker-and-clip",
+            "dol-tc11",
+            "dol-tc14",
+            "dol-hc20",
+          ]}
+        />
+        <Galeria id="galeria" />
+        <Descargas id="descargas" />
+        <Final />
+      </Suspense>
+      {showButton && (
+        <StyledButton onClick={handleGoToIndice}>
+          <span role="img" aria-label="up arrow">
+            &#8593;
+          </span>
+        </StyledButton>
+      )}
+    </MultipleOptionsProvider>
   );
 };
 
