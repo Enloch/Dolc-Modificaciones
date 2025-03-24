@@ -9,6 +9,7 @@ import DolckerG10 from './pages/catalogos/DolckerG10';
 import Escamas from './pages/catalogos/Escamas';
 import T5 from './pages/catalogos/DolckerT5';
 import DolckerArchiform from './pages/catalogos/DolckerArchiform';
+import DolckerAlumtech from './pages/catalogos/DolckerAlumtech';
 // import FontStyles from './global/FontStyles'
 import './assets/fonts/fonts.css';
 import GlobalStyles from './global/GlobalStyles';
@@ -29,6 +30,7 @@ import ContactoFr from './pages/fr/Contacto';
 import PoliticaPrivacidadFr from './pages/fr/PoliticaPrivacidad';
 import AvisoLegalFr from './pages/fr/AvisoLegal';
 import QuienesSomosFr from './pages/fr/QuienesSomos';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
     <ResetStyles />
@@ -43,6 +45,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/dolcker-txt' element={<DolckerTXT />} />
         <Route path='/dolcker-t5' element={<T5 />} />
         <Route path='/dolcker-archiform' element={<DolckerArchiform />} />
+        <Route path='/dolcker-alumtech' element={<DolckerAlumtech />} />
         <Route path='/dolcker-matrix-decor' element={<DolckerMatrixDecor />} />
         <Route path='/dolcker-G10' element={<DolckerG10 />} />
         <Route path='/dolcker-escamas' element={<Escamas />} />

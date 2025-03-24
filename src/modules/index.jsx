@@ -97,3 +97,12 @@ export { default as DisenosArchiform } from './Archiform/05_Diseno';
 export { default as CaracteristicasArchiform } from './Archiform/06_Caracteristicas';
 export { default as SistemasArchiform } from './Archiform/07_Sistemas';
 export { default as DescargasArchiform } from './Archiform/08_Descargas';
+//ALUMTECH 
+export { default as IndiceAlumtech } from './Alumtech/01_Inicio';
+export { default as DolckerAlumtech } from './Alumtech/02_Dolcker';
+export { default as VentajasAlumtech } from './Alumtech/03_Ventajas';
+export { default as AplicacionesAlumtech } from './Alumtech/04_Aplicaciones';
+export { default as DisenosAlumtech } from './Alumtech/05_Diseno';
+export { default as CaracteristicasAlumtech } from './Alumtech/06_Caracteristicas';
+export { default as SistemasAlumtech } from './Alumtech/07_Sistemas';
+export { default as DescargasAlumtech } from './Alumtech/08_Descargas';

@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import listaContenidosJSON from "../utils/listaContenidosArchiform.json";
+import listaContenidosJSON from "../utils/listaContenidosAlumtech.json";
 
 const ListaContenidosContextLeiva = createContext(listaContenidosJSON);
 
