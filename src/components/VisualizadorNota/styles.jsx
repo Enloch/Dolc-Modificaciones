@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { COLORS, DISTANCES, Column8 } from '../../global/GlobalStyles';
+import { COLORS, DISTANCES, Column6 } from '../../global/GlobalStyles';
 import { column_5_span8 } from '../../styles/grid';
 
 const StyledVisualizadorNota = styled.div`
-    ${Column8}
+    ${Column6}
 
     position: relative;
 

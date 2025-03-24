@@ -4,21 +4,84 @@ import styled from "styled-components";
 import Preloader from "../../components/Preloader";
 import Loader from "../../components/Loader";
 
-const Aplicaciones = lazy(() => import("../../modules/05_Aplicaciones"));
-const Caracteristicas = lazy(() => import("../../modules/07_Caracteristicas"));
-const Descargas = lazy(() => import("../../modules/09_Descargas"));
-const Disenos = lazy(() => import("../../modules/06_Diseno"));
-const Dolcker = lazy(() => import("../../modules/03_Dolcker"));
-const Final = lazy(() => import("../../modules/10_Final"));
-const Indice = lazy(() => import("../../modules/02_Indice"));
-const Introduccion = lazy(() => import("../../modules/01_Introduccion"));
-const Sistemas = lazy(() => import("../../modules/08_Sistemas"));
-const Ventajas = lazy(() => import("../../modules/04_Ventajas"));
-const Galeria = lazy(() => import("../../modules/11_Galeria"));
+// Resource tracking for lazy-loaded components
+const createLoadTracker = () => {
+  const resources = [];
+  let totalResources = 11; // Total number of lazy-loaded components
+  let loadedResources = 0;
+
+  return {
+    register: (promise) => {
+      const resource = { loading: true, promise };
+      resources.push(resource);
+
+      promise
+        .then(() => {
+          resource.loading = false;
+          loadedResources++;
+        })
+        .catch((error) => {
+          console.error("Error loading resource:", error);
+          resource.loading = false;
+          loadedResources++;
+        });
+
+      return promise;
+    },
+    getStatus: () => ({
+      loading: loadedResources < totalResources,
+      progress: Math.min(
+        Math.round((loadedResources / totalResources) * 100),
+        100
+      ),
+    }),
+  };
+};
+
+const resourceTracker = createLoadTracker();
+
+// Wrap lazy imports with resource tracker
+const Aplicaciones = lazy(() =>
+  resourceTracker.register(import("../../modules/05_Aplicaciones"))
+);
+const Caracteristicas = lazy(() =>
+  resourceTracker.register(import("../../modules/07_Caracteristicas"))
+);
+const Descargas = lazy(() =>
+  resourceTracker.register(import("../../modules/09_Descargas"))
+);
+const Disenos = lazy(() =>
+  resourceTracker.register(import("../../modules/06_Diseno"))
+);
+const Dolcker = lazy(() =>
+  resourceTracker.register(import("../../modules/03_Dolcker"))
+);
+const Final = lazy(() =>
+  resourceTracker.register(import("../../modules/10_Final"))
+);
+const Indice = lazy(() =>
+  resourceTracker.register(import("../../modules/02_Indice"))
+);
+const Introduccion = lazy(() =>
+  resourceTracker.register(import("../../modules/01_Introduccion"))
+);
+const Sistemas = lazy(() =>
+  resourceTracker.register(import("../../modules/08_Sistemas"))
+);
+const Ventajas = lazy(() =>
+  resourceTracker.register(import("../../modules/04_Ventajas"))
+);
+const Galeria = lazy(() =>
+  resourceTracker.register(import("../../modules/11_Galeria"))
+);
 
 const FachadaVentilada = () => {
   const indiceRef = useRef();
   const [showButton, setShowButton] = useState(false);
+  const [resourceStatus, setResourceStatus] = useState({
+    loading: true,
+    progress: 0,
+  });
 
   const handleGoToIndice = () => {
     indiceRef.current.scrollIntoView({ behavior: "smooth" });
@@ -37,9 +100,22 @@ const FachadaVentilada = () => {
     };
   }, []);
 
+  // Track loading progress
+  useEffect(() => {
+    const updateProgress = () => {
+      setResourceStatus(resourceTracker.getStatus());
+
+      if (resourceTracker.getStatus().loading) {
+        requestAnimationFrame(updateProgress);
+      }
+    };
+
+    updateProgress();
+  }, []);
+
   return (
-    <MultipleOptionsProvider>
-      <Suspense fallback={<Loader />}>
+    <Suspense fallback={<Loader resourceStatus={resourceStatus} />}>
+      <MultipleOptionsProvider>
         <Indice id="indice" indiceRef={indiceRef} />
         <Dolcker id="dolcker" />
         <Ventajas id="ventajas" />
@@ -78,15 +154,15 @@ const FachadaVentilada = () => {
         <Galeria id="galeria" />
         <Descargas id="descargas" />
         <Final />
-      </Suspense>
-      {showButton && (
-        <StyledButton onClick={handleGoToIndice}>
-          <span role="img" aria-label="up arrow">
-            &#8593;
-          </span>
-        </StyledButton>
-      )}
-    </MultipleOptionsProvider>
+        {showButton && (
+          <StyledButton onClick={handleGoToIndice}>
+            <span role="img" aria-label="up arrow">
+              &#8593;
+            </span>
+          </StyledButton>
+        )}
+      </MultipleOptionsProvider>
+    </Suspense>
   );
 };
 

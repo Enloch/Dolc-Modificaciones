@@ -51,7 +51,7 @@ const StyledFullScreen = styled.div`
     left: ${GRID.horizontalSpace};
     z-index: 2;
     color: white;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
   }
 
@@ -62,7 +62,9 @@ const StyledFullScreen = styled.div`
     left: 50%;
     z-index: 2;
     color: white;
-    mix-blend-mode: difference;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+
+    /* mix-blend-mode: difference; */
     display: flex;
     align-items: flex-end;
     gap: 1rem;
@@ -71,6 +73,7 @@ const StyledFullScreen = styled.div`
       width: auto;
       height: 2rem;
       cursor: pointer;
+      filter: drop-shadow(2px 2px 4px rgb(0, 0, 0)) invert(95%);
     }
   }
 
@@ -81,13 +84,13 @@ const StyledFullScreen = styled.div`
   }
 
   .closeFullScreen {
-    mix-blend-mode: difference;
-    width: 3rem;
+    /* mix-blend-mode: difference; */
+    width: 2rem;
     position: absolute;
     top: ${GRID.verticalSpace};
     right: ${GRID.horizontalSpace};
     cursor: pointer;
-    filter: brightness(100);
+    filter: brightness(100)drop-shadow(2px 2px 4px rgb(0, 0, 0));;
   }
 
   ${mediaQueryTablet(css`
