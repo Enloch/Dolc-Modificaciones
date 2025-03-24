@@ -21,12 +21,12 @@ const DolckerTline = ({ id }) => {
 
   return (
     <StyledDolcker id={id} backgroundColor={COLORS.gray03}>
-      <Titulo>Dolcker Matrix soluciona</Titulo>
+      <Titulo>Dolcker Steps soluciona</Titulo>
       <div className='dolcker-info'>
         <ImageWithCaption
           src={Reemplazo}
           alt='Imagen Dolcker 2'
-          caption='Sistema Matrix con matrices de aluminio extruido.'
+          caption='Sistema Steps con matrices de aluminio extruido.'
         />
 
         <Text>

@@ -9,7 +9,7 @@ import Reemplazo from "../../../assets/images/DolckerMatrix/temporal.webp";
 const VentajasTline = ({ id }) => {
   return (
     <StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-      <Titulo>Ventajas del sistema Dolcker Leiva</Titulo>
+      <Titulo>Ventajas del sistema Dolcker Steps</Titulo>
       <ImageWithCaption
         src={Reemplazo}
         alt='Imagen de Ventajas 1'

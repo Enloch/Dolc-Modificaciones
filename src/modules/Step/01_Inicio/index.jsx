@@ -40,7 +40,7 @@ const Indice = ({ indiceRef }) => {
   return (
     <>
       <StyledIndice backgroundColor={COLORS.gray06} ref={indiceRef} id='indice'>
-        <Titulo color={COLORS.gray01}>Dolcker LEIVA</Titulo>
+        <Titulo color={COLORS.gray01}>Dolcker Steps</Titulo>
         <ListaContenidos />
         <AnimatedArrow
           size={32}
@@ -50,10 +50,10 @@ const Indice = ({ indiceRef }) => {
           onClick={handleClickFlecha}
         />
         <div className='idiomas'>
-          <Link to='/dolcker-system' className='seleccionado'>
+          {/* <Link to='/dolcker-system' className='seleccionado'>
             ES
           </Link>
-          <Link to='/en/dolcker-system'>EN</Link>
+          <Link to='/en/dolcker-system'>EN</Link> */}
         </div>
       </StyledIndice>
       {menuDesplegable}
