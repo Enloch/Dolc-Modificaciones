@@ -51,6 +51,7 @@ const StyledFullScreen = styled.div`
     left: ${GRID.horizontalSpace};
     z-index: 2;
     color: white;
+    max-width: 75%;
     /* mix-blend-mode: difference; */
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
   }
