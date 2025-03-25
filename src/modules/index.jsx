@@ -119,3 +119,12 @@ export { default as DisenosStep } from './Step/05_Diseno';
 export { default as CaracteristicasStep } from './Step/06_Caracteristicas';
 export { default as SistemasStep } from './Step/07_Sistemas';
 export { default as DescargasStep } from './Step/08_Descargas';
+//Detaill
+export { default as IndiceDetaill } from './Detaill/01_Inicio';
+export { default as DolckerDetaill } from './Detaill/02_Dolcker';
+export { default as VentajasDetaill } from './Detaill/03_Ventajas';
+export { default as AplicacionesDetaill } from './Detaill/04_Aplicaciones';
+export { default as DisenosDetaill } from './Detaill/05_Diseno';
+export { default as CaracteristicasDetaill } from './Detaill/06_Caracteristicas';
+export { default as SistemasDetaill } from './Detaill/07_Sistemas';
+export { default as DescargasDetaill } from './Detaill/08_Descargas';

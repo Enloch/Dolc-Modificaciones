@@ -12,7 +12,7 @@ import DolckerArchiform from './pages/catalogos/DolckerArchiform';
 import DolckerAlumtech from './pages/catalogos/DolckerAlumtech';
 import DolckerVolum from './pages/catalogos/DolckerVolum';
 import DolckerStep from './pages/catalogos/DolckerStep';
-
+import DolckerDetaill from './pages/catalogos/DolckerDetaill';
 // import FontStyles from './global/FontStyles'
 import './assets/fonts/fonts.css';
 import GlobalStyles from './global/GlobalStyles';
@@ -51,6 +51,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/dolcker-alumtech' element={<DolckerAlumtech />} />
         <Route path='/dolcker-volum' element={<DolckerVolum />} />
         <Route path='/dolcker-step' element={<DolckerStep />} />
+        <Route path='/dolcker-detaill' element={<DolckerDetaill />} />
         <Route path='/dolcker-matrix-decor' element={<DolckerMatrixDecor />} />
         <Route path='/dolcker-G10' element={<DolckerG10 />} />
         <Route path='/dolcker-escamas' element={<Escamas />} />
