@@ -171,8 +171,8 @@ const Menu = ({
 					variant="fullWidth"
 					aria-label="model categories"
 				>
-					<StyledTab label="C-Grapa" value={CATEGORIES.CG} />
-					<StyledTab label="C-Clip" value={CATEGORIES.SG} />
+					<StyledTab label="C-Clip" value={CATEGORIES.CG} />
+					<StyledTab label="C-Grapa" value={CATEGORIES.SG} />
 				</StyledTabs>
 			</Box>
 
