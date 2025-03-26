@@ -11,9 +11,8 @@ const Descargas = ({ id }) => {
         <StyledDescargas id={id} backgroundColor={COLORS.gray03}>
             <Titulo>Descargas</Titulo>
             {/* <h1>Arquitecto da Catálogo</h1> */}
-            <div className='download-container'>{descargas}</div>
+            {/* <div className='download-container'>{descargas}</div> */}
         </StyledDescargas>
     )
 }
-
 export default Descargas

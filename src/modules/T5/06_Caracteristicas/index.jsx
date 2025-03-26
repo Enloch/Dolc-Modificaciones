@@ -301,8 +301,8 @@ const Caracteristicas = ({ id }) => {
                           <img
                             src={dimension2}
                             alt="dimension-curvatura"
-                            style={{ 
-                              width: "40px", 
+                            style={{
+                              width: "40px",
                               height: "40px",
                               filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
                             }}
@@ -367,8 +367,8 @@ const Caracteristicas = ({ id }) => {
                           <img
                             src={dimension3}
                             alt="dimension-absorcion"
-                            style={{ 
-                              width: "40px", 
+                            style={{
+                              width: "40px",
                               height: "40px",
                               filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))"
                             }}

@@ -92,12 +92,12 @@ const Sistemas = ({ id }) => {
 					caption="Detalles tecnicos T5 XL GO"
 					onClickFunc={() => openModal(IMG1, "Detalles tecnicos T5 XL GO")}
 				/>
-				<ImageWithCaption
+				{/* <ImageWithCaption
 					src={dolckerClip2}
 					alt="Dolcker-clip tabla"
 					caption="Imágen tabla"
 					columnSpan="6"
-				/>
+				/> */}
 			</StyledSistemas>
 
 			<StyledSistemas id={id[2]}>
@@ -120,12 +120,12 @@ const Sistemas = ({ id }) => {
 					caption="Detalles tecnicos T5 XL GV"
 					onClickFunc={() => openModal(IMG2, "Detalles tecnicos T5 XL GV")}
 				/>
-				<ImageWithCaption
+				{/* <ImageWithCaption
 					src={dolckerClip2}
 					alt="Dolcker-clip tabla"
 					caption="Imágen tabla"
 					columnSpan="6"
-				/>
+				/> */}
 			</StyledSistemas>
 
 			<StyledSistemas id={id[3]}>
@@ -162,12 +162,12 @@ const Sistemas = ({ id }) => {
 					caption="Detalles de arranque T5 XL PLUS"
 					onClickFunc={() => openModal(IMG1, "Detalles de arranque T5 XL PLUS")}
 				/>
-				<ImageWithCaption
+				{/* <ImageWithCaption
 					src={dolckerClip2}
 					alt="Dolcker-clip tabla"
 					caption="Imágen tabla"
 					columnSpan="6"
-				/>
+				/> */}
 			</StyledSistemas>
 			<StyledSistemas>
 				<Titulo2>GRAPAS T5 XL</Titulo2>

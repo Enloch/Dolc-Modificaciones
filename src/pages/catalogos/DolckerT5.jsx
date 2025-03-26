@@ -58,7 +58,7 @@ const DolckerT5 = () => {
 			/>
 			<Caracteristicas id={["caracteristicas-especiales", "datos-tecnicos"]} />
 			<Sistemas id={["sistemas", "t5-go", "t5-gv", "t5-plus"]} />
-			<Descargas id="descargas" />
+			{/* <Descargas id="descargas" /> */}
 			<Final />
 			{showButton && (
 				<StyledButton onClick={handleGoToIndice}>
