@@ -81,7 +81,7 @@ const DolckerTline = ({ id }) => {
 						configuraciones personalizadas que garantizan un resultado estético
 						y funcional de alto nivel.
 					</Text>
-					{/* <Text>
+					<Text>
 						• TXT 11 – Fachadas con alineaciones de revestimiento diferenciadas,
 						destacando una junta vertical lacada en el color elegido por el
 						diseñador.
@@ -91,7 +91,7 @@ const DolckerTline = ({ id }) => {
 						<br />
 						<br />• TXT 13 – Fachadas que incorporan perfiles estratégicos para
 						generar sombras y potenciar la volumetría.
-					</Text> */}
+					</Text>
 				</div>
 
 				<VisualizadorNota {...propsVisualizador} />
