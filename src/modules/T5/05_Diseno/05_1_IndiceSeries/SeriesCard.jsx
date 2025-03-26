@@ -22,7 +22,7 @@ const CardContainer = styled.div`
 `
 
 const CardTitle = styled.h3`
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   margin: 8px 0 4px;
   text-transform: lowercase;
@@ -33,7 +33,7 @@ const CardTitle = styled.h3`
 `
 
 const CardInfo = styled.p`
-  font-size: 12px;
+  font-size: 10px;
   color: #666;
   margin: 0;
   line-height: 1.4;
