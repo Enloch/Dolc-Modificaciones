@@ -19,6 +19,7 @@ import ImageWithCaption from "../../../components/ImageWithCaption";
 import IMG1 from "../../../assets/images/GaleriaT5/inicio/Detalles tecnicos web T5 XL GO_WEB.jpg";
 import IMG2 from "../../../assets/images/GaleriaT5/inicio/Detalles tecnicos web T5 XL GV_WEB.jpg";
 import IMG3 from "../../../assets/images/GaleriaT5/inicio/Detalles tecnicos web T5 XL SUPER PLUS_WEB.jpg";
+import IMG4 from "../../../assets/images/GaleriaT5/inicio/Dolcker grapa T5 detalle_WEB.jpg";
 import Modal from "../../../components/Modal";
 const Sistemas = ({ id }) => {
 	const [selectedImage, setSelectedImage] = useState(null);
@@ -171,6 +172,13 @@ const Sistemas = ({ id }) => {
 			</StyledSistemas>
 			<StyledSistemas>
 				<Titulo2>GRAPAS T5 XL</Titulo2>
+				<ImageWithCaption
+					src={IMG4}
+					alt="Dolcker-clip demostración"
+					columnSpan="6"
+					caption="Detalle trasero colocación grapa T5 XL"
+					onClickFunc={() => openModal(IMG4, "Detalle trasero colocación grapa T5 XL")}
+				/>
 				<Text>
 					<strong>Punto de Dilatación en Grapa Cerámica grapas T5 XL</strong>
 					<br />
