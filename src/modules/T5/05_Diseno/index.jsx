@@ -53,17 +53,6 @@ const Disenos = ({ id }) => {
 				/>
 			</StyledDisenos>
 			<StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
-				<Titulo2>Formato</Titulo2>
-				<Anotacion {...propsFormato.anotacion} />
-				{/* <VisualizadorVariaciones {...propsFormato.visualizador} /> */}
-				<ImageWithCaption
-					src={ConfiguradorImg}
-					alt="Imagen de Diseños 1"
-					caption="Configurador interactivo"
-					columnSpan="6"
-				/>
-			</StyledDisenos>
-			<StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
 				<Titulo2>Malla de seguridad</Titulo2>
 				<Anotaciones>
 					<Text>
@@ -109,7 +98,7 @@ const Disenos = ({ id }) => {
 					columnSpan="6"
 				/>
 			</StyledDisenos>
-			<StyledDisenos id={id[4]} backgroundColor={COLORS.gray01} isEspesores>
+			<StyledDisenos id={id[2]} backgroundColor={COLORS.gray01} isEspesores>
 				<Titulo2>Espesores</Titulo2>
 				<div className="espesor espesor-1">
 					<img src={ranurado3} alt="" />
@@ -142,59 +131,7 @@ const Disenos = ({ id }) => {
 					</ul>
 				</div>
 			</StyledDisenos>
-			<StyledDisenos id={id[5]} backgroundColor={COLORS.gray01}>
-				<Titulo2>Piezas especiales</Titulo2>
-				<Anotaciones>
-					<Anotacion
-						type="normal"
-						text="Pulsa en el punto para ver todas las posibilidades de piezas especiales"
-					/>
-					<Anotacion
-						type="swipe"
-						text="Desliza con el ratón o el dedo para rotar la imagen 360º"
-					/>
-				</Anotaciones>
-				{/* <VisualizadorRotador config={config} /> */}
-				<ImageWithCaption
-					src={rotadorImg}
-					alt="Imagen de Diseños 1"
-					caption="Jorge debe definir que piezas exactamente son"
-					columnSpan="6"
-				/>
-			</StyledDisenos>
-			{/* <StyledDisenos id={id[5]} backgroundColor={COLORS.gray01}>
-                <Titulo2>Perfiles Cenefa</Titulo2>
-                <Anotaciones>
-                    <Anotacion
-                        type='normal'
-                        text='Pulsa en el punto para ver todas las posibilidades de piezas especiales'
-                    />
-                    <Anotacion
-                        type='swipe'
-                        text='Desliza con el ratón o el dedo para rotar la imagen 360º'
-                    />
-                </Anotaciones>
-                <VisualizadorRotador config={config} />
-            </StyledDisenos> */}
-			{/* <IndiceSeries id={id[6]} />
-      <Series
-        ids={[
-          "basalt",
-          "dolm",
-          "dquartz",
-          "marble",
-          "stone",
-          "quarcity",
-          "crete",
-          "portland",
-          "space",
-          "tzment",
-          "wood",
-          "terrazo",
-          "arquitect",
-          "volumen",
-        ]}
-      /> */}
+			<IndiceSeries id={id[3]} />
 		</>
 	);
 };

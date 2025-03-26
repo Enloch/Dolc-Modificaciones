@@ -51,11 +51,8 @@ const DolckerT5 = () => {
 			<Disenos
 				id={[
 					"diseno",
-					"formato",
-					"despiece",
 					"mallas-de-seguridad",
 					"espesores",
-					"piezas",
 					"series",
 				]}
 			/>
