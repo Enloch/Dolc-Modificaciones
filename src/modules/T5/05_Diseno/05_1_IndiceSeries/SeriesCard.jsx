@@ -7,8 +7,6 @@ const CardContainer = styled.div`
   cursor: pointer;
   transition: transform 0.2s ease;
   height: 100%;
-  width: 100%;
-  max-width: 280px;
   
   &:hover {
     transform: translateY(-5px);
@@ -16,6 +14,7 @@ const CardContainer = styled.div`
 
   img {
     width: 100%;
+    min-width: 160px;
     max-width: 165px;
     height: 280px;
     object-fit: cover;
@@ -28,11 +27,11 @@ const CardTitle = styled.h3`
   font-size: 12px;
   font-weight: 400;
   margin: 8px 0 4px;
-  text-transform: capitalize;
+  text-transform: lowercase;
   
-  /* &::first-letter {
+  &::first-letter {
     text-transform: uppercase;
-  } */
+  }
 `
 
 const CardInfo = styled.p`
@@ -47,7 +46,7 @@ const SeriesCard = ({ name, size, image, onClick }) => {
     <CardContainer onClick={onClick}>
       <img src={image} alt={name} />
       <CardTitle>{name}</CardTitle>
-      {/* <CardInfo>{size}</CardInfo> */}
+      <CardInfo>{size}</CardInfo>
     </CardContainer>
   )
 }
