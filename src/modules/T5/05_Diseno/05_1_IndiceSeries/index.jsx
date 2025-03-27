@@ -174,7 +174,7 @@ const IndiceSeries = ({ id }) => {
   );
 
   // Responsive itemsPerPage - 4 for desktop, 2 for mobile
-  const itemsPerPage = windowWidth <= 768 ? 2 : 4;
+  const itemsPerPage = windowWidth <= 768 ? 2 : 7;
 
   // Update window width on resize
   useEffect(() => {
