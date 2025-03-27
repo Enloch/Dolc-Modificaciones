@@ -5,6 +5,7 @@ import { StyledGaleria, StyledSlider } from './styles';
 import ImageGallery from 'react-image-gallery';
 import Text from '../../../components/Text';
 import 'react-image-gallery/styles/css/image-gallery.css';
+import Escena3DTXT from '../../../components/Configuradores/TXT';
 
 const images = import.meta.globEager('../../../assets/images/GaleriaTXT/*');
 
@@ -112,7 +113,9 @@ const DisenosTline = ({ id }) => {
       {/* <IndiceSeries id={id[1]} queSerieActiva={setSerieActiva} /> */}
       <StyledDisenos id={id[2]} backgroundColor={COLORS.gray01}>
         <Titulo2>Configurador</Titulo2>
-        <div className='rotador'>{/* <RotadorLeiva /> */}</div>
+        <div className='rotador'>
+          <Escena3DTXT />
+        </div>
       </StyledDisenos>
     </>
   );
