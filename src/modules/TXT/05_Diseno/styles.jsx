@@ -47,7 +47,7 @@ const StyledDisenos = styled(Seccion)`
   .rotador {
     grid-column: 5 / -1;
     background-color: #fff;
-    height: 75vh;
+    aspect-ratio: 16/9;
   }
   .espesor {
     ul {
@@ -90,7 +90,7 @@ const StyledDisenos = styled(Seccion)`
       props.isEspesores ? "grid-template-columns: repeat(4, 1fr);" : null}
     .rotador {
       grid-column: 1 / -1;
-      height: 60vh;
+      aspect-ratio: 16/9;
     }
     .espesor-1 {
       grid-column: 1 / span 1;
@@ -116,7 +116,8 @@ const StyledDisenos = styled(Seccion)`
       props.isEspesores ? "grid-template-columns: repeat(3, 1fr);" : null}
     .rotador {
       grid-column: 1 / -1;
-      height: 100vh;
+      aspect-ratio: 16/9;
+      height: auto;
     }
     .espesor-1 {
       grid-column: 1 / -1;
