@@ -4,6 +4,11 @@ import { COLORS } from '../../../../global/GlobalStyles'
 import StyledIndiceSeries from './styles'
 import Modal from '../../../../components/Modal'
 import SeriesCard from './SeriesCard'
+import Slider from 'react-slick'
+
+// Import slick css
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 // Import images
 import atlantisSilk from '../../../../assets/images/T5/Series/atlantissilk.webp'
@@ -166,20 +171,69 @@ const IndiceSeries = ({ id }) => {
         setModalOpen(false);
     };
 
+    // Configuración del carrusel
+    const sliderSettings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 7,
+        slidesToScroll: 7,
+        initialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 5,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    arrows: true,
+                    dots: false // Desactivar puntos en móviles muy pequeños
+                }
+            }
+        ]
+    };
+
     return (
         <StyledIndiceSeries id={id} backgroundColor={COLORS.gray02}>
             <Titulo2>SERIES</Titulo2>
             
-            <div className="series-grid">
-                {seriesData.sort((a, b) => a.name.localeCompare(b.name)).map((series) => (
-                    <SeriesCard 
-                        key={series.id}
-                        name={series.name}
-                        size={series.size}
-                        image={series.image}
-                        onClick={() => openModal(series)}
-                    />
-                ))}
+            <div className="carousel-container">
+                <Slider {...sliderSettings}>
+                    {seriesData.sort((a, b) => a.name.localeCompare(b.name)).map((series) => (
+                        <div key={series.id} className="carousel-item">
+                            <SeriesCard 
+                                name={series.name}
+                                size={series.size}
+                                image={series.image}
+                                onClick={() => openModal(series)}
+                            />
+                        </div>
+                    ))}
+                </Slider>
             </div>
 
             <Modal 
