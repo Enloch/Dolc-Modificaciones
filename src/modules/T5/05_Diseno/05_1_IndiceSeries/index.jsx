@@ -185,7 +185,7 @@ const IndiceSeries = ({ id }) => {
             <Modal 
                 isOpen={modalOpen} 
                 onClose={closeModal}
-                caption={selectedImage ? `${selectedImage.name} - ${selectedImage.size}` : ''}
+                caption={selectedImage ? `${selectedImage.name}` : ''}
             >
                 {selectedImage && (
                     <img 
