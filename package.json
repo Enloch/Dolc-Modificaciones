@@ -23,7 +23,7 @@
 		"framer-motion": "^12.4.2",
 		"gh-pages": "^6.3.0",
 		"gltfjsx": "^6.5.3",
-		"jspdf": "^2.5.2",
+		"jspdf": "^3.0.1",
 		"leva": "^0.10.0",
 		"postprocessing": "^6.36.7",
 		"r3f-perf": "^7.2.3",
