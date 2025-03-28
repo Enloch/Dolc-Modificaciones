@@ -75,7 +75,6 @@ export const Landing = () => {
 	return (
 		<>
 			<MainContainer>
-				<Navbar />
 				<Seccion className="Collection">
 					<SeccionContenido>
 						<WrapperContenido>

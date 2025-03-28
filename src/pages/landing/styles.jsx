@@ -21,23 +21,31 @@ export const AnimatedArrow = styled.img`
 	cursor: pointer;
 `;
 export const MainContainer = styled.div`
-	height: 100vh;
-	width: 100vw;
-	/* height: 100vh; */
-	/* background-color: #d8d9db; */
+	min-height: 100vh;
+	width: 100%;
 	background-color: #fff;
+	overflow: visible;
+	display: flex;
+	flex-direction: column;
 `;
 
 export const Seccion = styled.div`
-	/* height: 100%; */
+	flex: 1;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
 `;
 
 export const SeccionContenido = styled.div`
-	/* height: 100%; */
+	flex: 1;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
 `;
 
 export const WrapperContenido = styled.div`
 	margin: 0 auto;
+	width: 100%;
 	/* background-color: #b89f64; */
 `;
 
@@ -244,41 +252,9 @@ export const Caja25Flex = styled.div`
 export const Caja75Flex = styled.div`
 	box-sizing: border-box;
 	margin: 0;
-	height: 100%;
 	display: flex;
 	flex-wrap: wrap;
-
-	/* flex-direction: row; */
 	flex-basis: 75%;
-	/* padding-left: 16px; */
-	/* @media (min-width: 0px) {
-    flex-basis: 100%;
-    flex-grow: 0;
-    max-width: 100%;
-  }
-  @media (min-width: 600px) {
-    flex-basis: 100%;
-    flex-grow: 0;
-    max-width: 100%;
-  }
-
-  @media (min-width: 900px) {
-    flex-basis: 75%;
-    flex-grow: 0;
-    max-width: 75%;
-  }
-
-  @media (min-width: 1200px) {
-    flex-basis: 75%;
-    flex-grow: 0;
-    max-width: 75%;
-  }
-
-  @media (min-width: 1536px) {
-    flex-basis: 75%;
-    flex-grow: 0;
-    max-width: 75%;
-  } */
 `;
 export const Caja15Flex = styled.div`
 	box-sizing: border-box;
@@ -432,6 +408,7 @@ export const StyledImagenTexto = styled.div`
 	max-width: 95%;
 	padding-top: 16px;
 	padding-left: 16px;
+	overflow: hidden;
 
 	@media (min-width: 600px) {
 		flex-basis: 100%;
@@ -477,7 +454,6 @@ export const StyledImageOverlay = styled.div`
 export const StyledImagen = styled.img`
 	/* height: 29.17vw; */
 	width: 100%;
-
 	aspect-ratio: 1/1;
 	transform: scale(1.1);
 	object-fit: cover;
@@ -496,6 +472,9 @@ export const StyledTexto = styled.p`
 	font-size: clamp(16px, 4vw, 18px);
 	line-height: 24px;
 	color: #000000;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 `;
 export const StyledSubTexto = styled.p`
 	margin: 2% 0 0 0;

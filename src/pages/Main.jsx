@@ -1,12 +1,13 @@
 import React from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/NavBar";
 import { Landing } from "./landing";
+import { Final } from "../modules";
+import Navbar from "../components/Menu";
 const Main = () => {
   return (
     <>
+      <Navbar />
       <Landing />
-      {/* <Footer /> */}
+      <Final />
     </>
   );
 };
