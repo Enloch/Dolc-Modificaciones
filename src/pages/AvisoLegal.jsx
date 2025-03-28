@@ -4,7 +4,7 @@ import Seccion from '../components/Seccion'
 import Text from '../components/Text'
 import { Titulo2 } from '../components/Titulos'
 import useMenuDesplegable from '../hooks/useMenuDesplegable'
-import Final from '../modules/10_Final'
+import Final from '../modules/ES/System/10_Final'
 
 const AvisoLegal = ({ lang = '' }) => {
     const { menuDesplegable, btnIndice } = useMenuDesplegable(

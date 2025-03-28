@@ -42,37 +42,37 @@ const resourceTracker = createLoadTracker();
 
 // Wrap lazy imports with resource tracker
 const Aplicaciones = lazy(() =>
-  resourceTracker.register(import("../../modules/05_Aplicaciones"))
+  resourceTracker.register(import("../../modules/ES/System/05_Aplicaciones"))
 );
 const Caracteristicas = lazy(() =>
-  resourceTracker.register(import("../../modules/07_Caracteristicas"))
+  resourceTracker.register(import("../../modules/ES/System/07_Caracteristicas"))
 );
 const Descargas = lazy(() =>
-  resourceTracker.register(import("../../modules/09_Descargas"))
+  resourceTracker.register(import("../../modules/ES/System/09_Descargas"))
 );
 const Disenos = lazy(() =>
-  resourceTracker.register(import("../../modules/06_Diseno"))
+  resourceTracker.register(import("../../modules/ES/System/06_Diseno"))
 );
 const Dolcker = lazy(() =>
-  resourceTracker.register(import("../../modules/03_Dolcker"))
+  resourceTracker.register(import("../../modules/ES/System/03_Dolcker"))
 );
 const Final = lazy(() =>
-  resourceTracker.register(import("../../modules/10_Final"))
+  resourceTracker.register(import("../../modules/ES/System/10_Final"))
 );
 const Indice = lazy(() =>
-  resourceTracker.register(import("../../modules/02_Indice"))
+  resourceTracker.register(import("../../modules/ES/System/02_Indice"))
 );
 const Introduccion = lazy(() =>
-  resourceTracker.register(import("../../modules/01_Introduccion"))
+  resourceTracker.register(import("../../modules/ES/System/01_Introduccion"))
 );
 const Sistemas = lazy(() =>
-  resourceTracker.register(import("../../modules/08_Sistemas"))
+  resourceTracker.register(import("../../modules/ES/System/08_Sistemas"))
 );
 const Ventajas = lazy(() =>
-  resourceTracker.register(import("../../modules/04_Ventajas"))
+  resourceTracker.register(import("../../modules/ES/System/04_Ventajas"))
 );
 const Galeria = lazy(() =>
-  resourceTracker.register(import("../../modules/11_Galeria"))
+  resourceTracker.register(import("../../modules/ES/System/11_Galeria"))
 );
 
 const FachadaVentilada = () => {

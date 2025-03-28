@@ -1,35 +1,134 @@
-import React, { useRef } from "react";
-import MenuLanzadera from "../../components/ListaContenidos/MenuLanzaderaLandingEn";
-import useMenuDesplegable from "../../hooks/useMenuDesplegable";
-import Loading from "../../components/LoadingEN";
-import DolkSystem from "./DolkSystemEn";
-import Footer from "../../components/FooterEn";
-import Navbar from "../../components/NavBarEn";
-import Logo from "../../assets/images/Inicio/logo.png";
+import React from "react";
+import {
+	MainContainer,
+	Seccion,
+	SeccionContenido,
+	WrapperContenido,
+	GridSeccion,
+	GridTextoCabecera,
+	ContenedorSeparador,
+	SeparadorHeader,
+	ContenedorSubtitulos,
+	LimiteSubtitulos,
+	Caja25Flex,
+	Caja75Flex,
+	SeccionTituloPunto,
+	AjusteTituloPunto,
+	Punto,
+	ContenedorTituloPunto,
+	TituloPunto,
+	StyledImagenTexto,
+	StyledImagen,
+	StyledTexto,
+	StyledSubTexto,
+} from "./styles";
+import { Titulo } from "../../components/Titulos";
+import System from "../../assets/images/Inicio/inicio.jpg";
+import Tline from "../../assets/images/DolckerTline/tline.jpg";
+import Matrix from "../../assets/images/DolckerMatrix/facade.jpg";
+import Decor from "../..//assets/images/DolckerMatrixDecor/decor.jpg";
+import TXT from "../../assets/images/DolckerTXT/txt.jpg";
+import Navbar from "../../components/Menu/menuEN";
+import T5 from "../../assets/images/T5/IMG_3280.jpg";
+import { Final } from "../../modules/EN";
 
-const MainEn = () => {
-  const dolckerSystemRef = useRef(null);
-  // const { menuDesplegable, btnIndice } = useMenuDesplegable(
-  //     MenuLanzadera,
-  //     <img src={Logo} style={{ scale: '0.5', filter: 'invert(1)' }} />
-  // )
+export const MainEn = () => {
+	const imageData = [
+		{
+			src: System,
+			title: "Dolcker System",
+			subtitle: "Integral solution for full-body facades and cladding",
+			link: "dolcker-system",
+		},
+		{
+			src: Tline,
+			title: "Dolcker T-line",
+			subtitle: "Ventilated facade system with aluminum profiling",
+			link: "dolcker-tline",
+		},
+		{
+			src: Matrix,
+			title: "Dolcker Matrix Facade",
+			subtitle:
+				"Clipped aluminum slats for ventilated facades and cladding.",
+			link: "dolcker-matrix-facade",
+		},
+		{
+			src: Decor,
+			title: "Dolcker Matrix Decor",
+			subtitle:
+				"Clipped aluminum slats for cladding and avant-garde interiors.",
+			link: "dolcker-matrix-decor",
+		},
+		{
+			src: TXT,
+			title: "Dolcker TXT",
+			subtitle: "Modular design solution for ventilated facades",
+			link: "dolcker-txt",
+		},
+		{
+			src: T5,
+			title: "Dolcker T5 XL",
+			subtitle: "Ventilated facade system with aluminum profiling",
+			link: "dolcker-t5",
+		},
+	];
 
-  const handleButtonClick = () => {
-    dolckerSystemRef.current.scrollIntoView({ behavior: "smooth" });
-  };
-  return (
-    <>
-      {/* {menuDesplegable}
-            {btnIndice} */}
-      <Navbar />
-      <Loading onButtonClick={handleButtonClick} />
-      <div ref={dolckerSystemRef}>
-        <DolkSystem id='dolcker-system' />
-      </div>
-      {/* <DolckerTline /> */}
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<Navbar />
+			<MainContainer>
+				<Seccion className="Collection">
+					<SeccionContenido>
+						<WrapperContenido>
+							<GridSeccion>
+								<Titulo id="scroller">
+									DEVELOPMENT OF INNOVATIVE AND HIGH-PERFORMANCE
+									<br /> VENTILATED FACADES
+								</Titulo>
+							</GridSeccion>
+							<ContenedorSeparador>
+								<SeparadorHeader />
+							</ContenedorSeparador>
+							<ContenedorSubtitulos>
+								<LimiteSubtitulos>
+									<Caja25Flex>
+										<SeccionTituloPunto>
+											<AjusteTituloPunto>
+												<Punto>
+													<TituloPunto></TituloPunto>
+												</Punto>
+												<ContenedorTituloPunto id="collection">
+													<Titulo>Solutions</Titulo>
+												</ContenedorTituloPunto>
+											</AjusteTituloPunto>
+										</SeccionTituloPunto>
+									</Caja25Flex>
+									<Caja75Flex>
+										{imageData.map((image, index) => (
+											<StyledImagenTexto key={index}>
+												<a
+													href={image.link ? image.link : "#"}
+													style={{
+														textDecoration: "none",
+														cursor: "pointer",
+														overflow: "hidden",
+													}}
+												>
+													<StyledImagen src={image.src} alt={image.title} />
+												</a>
+												{/* <StyledSubTexto>{image.subtitle}</StyledSubTexto> */}
+												<StyledTexto>{image.title}</StyledTexto>
+											</StyledImagenTexto>
+										))}
+									</Caja75Flex>
+								</LimiteSubtitulos>
+							</ContenedorSubtitulos>
+						</WrapperContenido>
+					</SeccionContenido>
+				</Seccion>
+			</MainContainer>
+			<Final />
+		</>
+	);
 };
-
-export default MainEn;

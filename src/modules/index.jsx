@@ -1,14 +1,14 @@
-export { default as Introduccion } from './01_Introduccion';
-export { default as Indice } from './02_Indice';
-export { default as Dolcker } from './03_Dolcker';
-export { default as Ventajas } from './04_Ventajas';
-export { default as Aplicaciones } from './05_Aplicaciones';
-export { default as Disenos } from './06_Diseno';
-export { default as Caracteristicas } from './07_Caracteristicas';
-export { default as Sistemas } from './08_Sistemas';
-export { default as Descargas } from './09_Descargas';
-export { default as Final } from './10_Final';
-export { default as Galeria } from './11_Galeria';
+export { default as Introduccion } from './ES/System/01_Introduccion';
+export { default as Indice } from './ES/System/02_Indice';
+export { default as Dolcker } from './ES/System/03_Dolcker';
+export { default as Ventajas } from './ES/System/04_Ventajas';
+export { default as Aplicaciones } from './ES/System/05_Aplicaciones';
+export { default as Disenos } from './ES/System/06_Diseno';
+export { default as Caracteristicas } from './ES/System/07_Caracteristicas';
+export { default as Sistemas } from './ES/System/08_Sistemas';
+export { default as Descargas } from './ES/System/09_Descargas';
+export { default as Final } from './ES/System/10_Final';
+export { default as Galeria } from './ES/System/11_Galeria';
 //Escamas
 export { default as InicioEsc } from './Escamas/Escamas00_Introduccion';
 export { default as IndiceEsc } from './Escamas/Escamas01_Inicio';

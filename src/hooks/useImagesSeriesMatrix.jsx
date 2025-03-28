@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 import { Children } from "react";
 import getDataFromModules from "../helpers/getDataFromModules";
-import Enlace from "../modules/06_Diseno/06_1_IndiceSeries/Enlace";
+import Enlace from "../modules/ES/System/06_Diseno/06_1_IndiceSeries/Enlace";
 import img1 from "../assets/images/DolckerTline/ranurado11mm.webp";
 
 // const imagenesAmbiente = getDataFromModules(imagenesAmbienteImports);

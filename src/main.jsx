@@ -22,7 +22,7 @@ import Main from './pages/Main';
 import QuienesSomos from './pages/QuienesSomos';
 import AvisoLegal from './pages/AvisoLegal';
 import PoliticaPrivacidad from './pages/PoliticaPrivacidad';
-import MainEn from './pages/en/MainEn';
+import {MainEn} from './pages/en/MainEn';
 import QuienesSomosEn from './pages/en/QuienesSomoEn';
 import FachadaVentiladaEn from './pages/en/catalogos/FachadaVentiladaEn';
 import Contacto from './pages/Contacto';

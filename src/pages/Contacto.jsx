@@ -4,7 +4,7 @@ import Seccion from '../components/SeccionContacto'
 import Text from '../components/Text'
 import { Titulo2 } from '../components/Titulos'
 import useMenuDesplegable from '../hooks/useMenuDesplegable'
-import Final from '../modules/10_Final'
+import Final from '../modules/ES/System/10_Final'
 import styled from 'styled-components'
 
 const IframeMapa = styled.iframe`

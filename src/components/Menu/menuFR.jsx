@@ -12,7 +12,6 @@ import {
   Bloque3,
 } from "./styles";
 import LogoDolcker from "../../assets/icons/Introduccion/logo.svg";
-// import LogoIndus from "../../assets/imagenes/logos/IndusMenu.svg";
 import { AnimatePresence } from "framer-motion";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,10 +50,10 @@ const Navbar = () => {
           <MenuButton onClick={toggleMenu}>☰</MenuButton>
           {/* Menu for large screens */}
           <Bloque2>
-            <Links href='/en/quienes-somos'>About us</Links>
-            <Links href='/en/contacto'>Contact</Links>
-            <Links href='/en/aviso-legal'>Legal notice</Links>
-            <Links href='/en/politica-privacidad'>Privacy policy</Links>
+            <Links href='/fr/quienes-somos'>À propos de nous</Links>
+            <Links href='/fr/contacto'>Contact</Links>
+            <Links href='/fr/aviso-legal'>Avis légal</Links>
+            <Links href='/fr/politica-privacidad'>Politique de confidentialité</Links>
           </Bloque2>
           <Bloque3>
             <Links href='/'>ES</Links>
@@ -91,10 +90,10 @@ const Navbar = () => {
               />
             </a>
 
-            <Links href='/en/quienes-somos'>About us</Links>
-            <Links href='/en/contacto'>Contact</Links>
-            <Links href='/en/aviso-legal'>Legal notice</Links>
-            <Links href='/en/politica-privacidad'>Privacy policy</Links>
+            <Links href='/fr/quienes-somos'>À propos de nous</Links>
+            <Links href='/fr/contacto'>Contact</Links>
+            <Links href='/fr/aviso-legal'>Avis légal</Links>
+            <Links href='/fr/politica-privacidad'>Politique de confidentialité</Links>
             <div style={{ display: "flex", paddingTop: "30px" }}>
               <Links href='/'>ES</Links>
 
