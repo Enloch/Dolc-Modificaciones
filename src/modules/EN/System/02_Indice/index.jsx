@@ -1,10 +1,10 @@
-import ListaContenidos from "../../../../components/ListaContenidos";
-import { Titulo } from "../../../../components/Titulos";
-import { COLORS } from "../../../../global/GlobalStyles";
+import ListaContenidos from "../../../components/ListaContenidos";
+import { Titulo } from "../../../components/Titulos";
+import { COLORS } from "../../../global/GlobalStyles";
 import { StyledIndice } from "./styles";
-import flecha from "../../../../assets/icons/flechita.svg";
-import scrollTo from "../../../../helpers/scrollTo";
-import useMenuDesplegableEn from "../../../../hooks/useMenuDesplegableEn";
+import flecha from "../../../assets/icons/flechita.svg";
+import scrollTo from "../../../helpers/scrollTo";
+import useMenuDesplegableEn from "../../../hooks/useMenuDesplegableEn";
 import { Link } from "react-router-dom";
 
 const Indice = ({ indiceRef }) => {
