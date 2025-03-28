@@ -13,7 +13,7 @@ import { StyledGaleria, StyledSlider } from "./styles";
 const Aplicaciones = ({ id }) => {
 	// Actualizado para usar import.meta.glob con eager: true en lugar de globEager
 	const imagesRehabilitar = import.meta.glob(
-		"../../assets/images/GaleriaSystem/*",
+		"../../../../assets/images/GaleriaSystem/*",
 		{ eager: true }
 	);
 	const imagesGaleriaRehabilitar = Object.keys(imagesRehabilitar).map(
@@ -26,7 +26,7 @@ const Aplicaciones = ({ id }) => {
 
 	// Actualizado para usar import.meta.glob con eager: true en lugar de globEager
 	const imagesobra = import.meta.glob(
-		"../../assets/images/GaleriaSystem/obra/*",
+		"../../../../assets/images/GaleriaSystem/obra/*",
 		{ eager: true }
 	);
 	const imagesGaleriaObra = Object.keys(imagesobra).map(
