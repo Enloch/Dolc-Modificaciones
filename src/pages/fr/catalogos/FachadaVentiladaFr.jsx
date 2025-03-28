@@ -12,6 +12,7 @@ import {
     Introduccion,
     Sistemas,
     Ventajas,
+    Galeria
 } from '../../../modules/FR'
 
 const FachadaVentiladaFr = () => {
@@ -73,6 +74,7 @@ const FachadaVentiladaFr = () => {
                     'dol-hc20',
                 ]}
             />
+            <Galeria id='galeria' />
             <Descargas id='descargas' />
             <Final />
             {showButton && (

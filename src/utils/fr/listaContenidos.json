@@ -200,6 +200,10 @@
         ]
     },
     {
+        "title": "Galerie des projets",
+        "link": "#galeria"
+    },
+    {
         "title": "Téléchargements",
         "link": "#descargas"
     }

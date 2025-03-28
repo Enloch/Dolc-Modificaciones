@@ -19,7 +19,7 @@ const albardilla = import.meta.globEager(
         '../../assets/images/Diseno/Piezas especiales/REJILLA/*.webp'
     ),
     sueloElevado = import.meta.globEager(
-        '../../assets/images/Diseno/Piezas especiales/Raised floor/*.webp'
+        '../../assets/images/Diseno/Piezas especiales/SUELO ELEVADO/*.webp'
     ),
     techo = import.meta.globEager(
         '../../assets/images/Diseno/Piezas especiales/TECHO/*.webp'

@@ -4,7 +4,7 @@ import Seccion from '../../components/Seccion'
 import Text from '../../components/Text'
 import { Titulo2 } from '../../components/Titulos'
 import useMenuDesplegableFr from '../../hooks/useMenuDesplegableFr'
-import Final from '../../modules/FR/10_Final'
+import Final from '../../modules/FR/System/10_Final'
 
 const PoliticaPrivacidadFr = ({ lang = 'fr' }) => {
     const { menuDesplegable, btnIndice } = useMenuDesplegableFr(
