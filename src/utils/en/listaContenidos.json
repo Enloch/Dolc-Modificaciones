@@ -200,7 +200,12 @@
         ]
     },
     {
+        "title": "Project Gallery",
+        "link": "#galeria"
+    },
+    {
         "title": "Downloads",
         "link": "#descargas"
     }
+   
 ]

@@ -2,14 +2,37 @@ import ImageWithCaption from '../../../../components/ImageWithCaption'
 import { Titulo, Titulo2, Titulo3 } from '../../../../components/Titulos'
 import { COLORS, DISTANCES } from '../../../../global/GlobalStyles'
 import StyledAplicaciones from './styles'
-import img1 from '../../../../assets/images/Aplicaciones/catalogo3-1-9.webp'
-import img2 from '../../../../assets/images/Aplicaciones/catalogo3-1-10.jpg'
-import img3 from '../../../../assets/images/Aplicaciones/catalogo3-1-11.webp'
-import img4 from '../../../../assets/images/Aplicaciones/catalogo3-1-12.webp'
-import img5 from '../../../../assets/images/Aplicaciones/catalogo3-1-13.webp'
+import img1 from "../../../../assets/images/Aplicaciones/catalogo3-1-9.jpg";
+import img2 from "../../../../assets/images/Aplicaciones/catalogo3-1-10.jpg";
+import img3 from "../../../../assets/images/Aplicaciones/catalogo3-1-11.jpg";
+import img4 from "../../../../assets/images/Aplicaciones/2.jpg";
+import img5 from "../../../../assets/images/Aplicaciones/catalogo3-1-13.webp";
 import Cita from '../../../../components/Cita'
+import ImageGallery from "react-image-gallery";
+import { StyledGaleria, StyledSlider } from "./styles";
 
 const Aplicaciones = ({ id }) => {
+    const imagesRehabilitar = import.meta.glob(
+		"../../../../assets/images/GaleriaSystem/*",
+		{ eager: true }
+	);
+	const imagesGaleriaRehabilitar = Object.keys(imagesRehabilitar).map(
+		(key) => ({
+			original: imagesRehabilitar[key].default,
+			thumbnail: imagesRehabilitar[key].default,
+		})
+	);
+
+	const imagesobra = import.meta.glob(
+		"../../../../assets/images/GaleriaSystem/obra/*",
+		{ eager: true }
+	);
+	const imagesGaleriaObra = Object.keys(imagesobra).map(
+		(key) => ({
+			original: imagesobra[key].default,
+			thumbnail: imagesobra[key].default,
+		})
+	);
     return (
         <>
             <StyledAplicaciones
@@ -32,6 +55,21 @@ const Aplicaciones = ({ id }) => {
                     colorAutor={COLORS.gray04}
                 />
             </StyledAplicaciones>
+            <StyledGaleria id="galeria-aplicaciones" backgroundColor={COLORS.gray02}>
+				<StyledSlider className="Slider">
+					<ImageGallery
+						items={imagesGaleriaRehabilitar}
+						showPlayButton={false}
+						showFullscreenButton={true}
+						showThumbnails={false}
+						autoPlay={true}
+						showBullets={false}
+						showNav={true}
+						lazyLoad={true}
+						slideDuration={450}
+					/>
+				</StyledSlider>
+			</StyledGaleria>
             <StyledAplicaciones
                 id={id[1]}
                 backgroundColor={COLORS.gray01}
@@ -70,6 +108,21 @@ const Aplicaciones = ({ id }) => {
                     colorAutor={COLORS.gray04}
                 />
             </StyledAplicaciones>
+            <StyledGaleria id="galeria-obra-nueva" backgroundColor={COLORS.gray01}>
+				<StyledSlider className="Slider">
+					<ImageGallery
+						items={imagesGaleriaObra}
+						showPlayButton={false}
+						showFullscreenButton={true}
+						showThumbnails={false}
+						autoPlay={true}
+						showBullets={false}
+						showNav={true}
+						lazyLoad={true}
+						slideDuration={450}
+					/>
+				</StyledSlider>
+			</StyledGaleria>
             <StyledAplicaciones
                 id={id[3]}
                 backgroundColor={COLORS.gray01}

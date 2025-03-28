@@ -8,3 +8,5 @@ export { default as Caracteristicas } from './System/07_Caracteristicas'
 export { default as Sistemas } from './System/08_Sistemas'
 export { default as Descargas } from './System/09_Descargas'
 export { default as Final } from './System/10_Final'
+export { default as Galeria } from './System/11_Galeria'
+
