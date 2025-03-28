@@ -19,15 +19,20 @@ import GlobalStyles from './global/GlobalStyles';
 import ResetStyles from './global/ResetStyles';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Main from './pages/Main';
+import Contacto from './pages/Contacto';
 import QuienesSomos from './pages/QuienesSomos';
 import AvisoLegal from './pages/AvisoLegal';
 import PoliticaPrivacidad from './pages/PoliticaPrivacidad';
+//English
 import {MainEn} from './pages/en/MainEn';
+import ContactoEn from './pages/en/Contacto';
 import QuienesSomosEn from './pages/en/QuienesSomoEn';
 import FachadaVentiladaEn from './pages/en/catalogos/FachadaVentiladaEn';
-import Contacto from './pages/Contacto';
 import PaginaImagenes from './pages/PaginaImagen';
-import MainFr from './pages/fr/MainFr';
+import PoliticaPrivacidadEn from './pages/en/PoliticaPrivacidad';
+import AvisoLegalEn from './pages/en/AvisoLegal';
+//French
+import {MainFr} from './pages/fr/MainFr';
 import FachadaVentiladaFr from './pages/fr/catalogos/FachadaVentiladaFr';
 import ContactoFr from './pages/fr/Contacto';
 import PoliticaPrivacidadFr from './pages/fr/PoliticaPrivacidad';
@@ -44,7 +49,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/dolcker-system' element={<FachadaVentilada />} />
         <Route path='/dolcker-tline' element={<DolckerTline />} />
         <Route path='/dolcker-matrix-facade' element={<DolckerMatrix />} />
-        {/* <Route path='/dolcker-leiva' element={<DolckerLeiva />} /> */}
         <Route path='/dolcker-txt' element={<DolckerTXT />} />
         <Route path='/dolcker-t5' element={<T5 />} />
         <Route path='/dolcker-archiform' element={<DolckerArchiform />} />
@@ -65,16 +69,16 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/en/dolcker-system' element={<FachadaVentiladaEn />} />
         <Route path='/en/' element={<MainEn />} />
         <Route path='/en/quienes-somos' element={<QuienesSomosEn />} />
-        <Route path='/en/aviso-legal' element={<AvisoLegal lang='en' />} />
-        <Route path='/en/contacto' element={<Contacto lang='en' />} />
-        <Route path='/en/politica-privacidad' element={<PoliticaPrivacidad lang='en' />} />
+        <Route path='/en/aviso-legal' element={<AvisoLegalEn lang='en' />} />
+        <Route path='/en/contacto' element={<ContactoEn lang='en' />} />
+        <Route path='/en/politica-privacidad' element={<PoliticaPrivacidadEn lang='en' />} />
         {/* FR */}
         <Route path='/fr/' element={<MainFr />} />
         <Route path='/fr/dolcker-system' element={<FachadaVentiladaFr />} />
         <Route path='/fr/quienes-somos' element={<QuienesSomosFr />} />
-        <Route path='/fr/aviso-legal' element={<AvisoLegalFr />} />
-        <Route path='/fr/contacto' element={<ContactoFr />} />
-        <Route path='/fr/politica-privacidad' element={<PoliticaPrivacidadFr />} />
+        <Route path='/fr/aviso-legal' element={<AvisoLegalFr lang='fr' />} />
+        <Route path='/fr/contacto' element={<ContactoFr lang='fr' />} />
+        <Route path='/fr/politica-privacidad' element={<PoliticaPrivacidadFr lang='fr' />} />
       </Routes>
     </BrowserRouter>
   </>

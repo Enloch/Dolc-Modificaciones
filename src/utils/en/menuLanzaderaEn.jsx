@@ -4,13 +4,8 @@ const menuLanzaderaEn = [
     link: "/en/quienes-somos",
   },
   {
-    title: "Ventilated facades",
-    subList: [
-      {
-        title: "Dolcker System",
-        link: "/en/dolcker-system",
-      },
-    ],
+    title: "Index",
+    link: "/en",
   },
   {
     title: "Contact",

@@ -4,57 +4,8 @@ const menuLanzadera = [
     link: "/quienes-somos",
   },
   {
-    title: "Fachadas ventiladas",
-    subList: [
-      {
-        title: "Dolcker System",
-        link: "/dolcker-system",
-      },
-      // {
-      //     title: 'Dolcker Escamas',
-      //     link: '/cambios-pendientes',
-      // },
-      // {
-      //     title: 'Dolcker T-Line',
-      //     link: '/cambios-pendientes',
-      // },
-      // {
-      //     title: 'Dolcker Wood',
-      //     link: '/cambios-pendientes',
-      // },
-      // {
-      //     title: 'Dolcker G-10',
-      //     link: '/cambios-pendientes',
-      // },
-      // {
-      //     title: 'Dolcker Matrix',
-      //     link: '/cambios-pendientes',
-      // },
-      // {
-      //     title: 'Dolcker 3D',
-      //     link: '/cambios-pendientes',
-      // },
-      // {
-      //     title: 'Dolcker Pirámide',
-      //     link: '/cambios-pendientes',
-      // },
-      // {
-      //     title: 'Dolcker T5',
-      //     link: '/cambios-pendientes',
-      // },
-      // {
-      //     title: 'Dolcker Baguette',
-      //     link: '/cambios-pendientes',
-      // },
-      // {
-      //     title: 'Dolcker Recercos',
-      //     link: '/cambios-pendientes',
-      // },
-      // {
-      //     title: 'Dolcker Step',
-      //     link: '/dolcker-step',
-      // },
-    ],
+    title: "Inicio",
+    link: "/",
   },
   {
     title: "Contacto",

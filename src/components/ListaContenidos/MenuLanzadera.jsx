@@ -4,9 +4,11 @@ import menuLanzaderaEn from "../../utils/en/menuLanzaderaEn";
 import menuLanzadera from "../../utils/menuLanzadera";
 import StyledListaContenidos from "./styles";
 
-const MenuLanzadera = ({ fr = false }) => {
+const MenuLanzadera = ({ fr = false, en = false }) => {
   const contenidos = fr
     ? useListaContenidos(menuLanzaderaFr, [], true)
+    : en
+    ? useListaContenidos(menuLanzaderaEn, [], true)
     : useListaContenidos(menuLanzadera, [], true);
 
   return (

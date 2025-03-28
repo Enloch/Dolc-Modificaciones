@@ -21,7 +21,7 @@ const QuienesSomos = () => {
             {menuDesplegable}
             {btnIndice}
             <Seccion style={{ minHeight: '100vh' }}>
-                <Titulo2>Quiénes somos</Titulo2>
+                <Titulo2>Who we are</Titulo2>
                 <Text>
                     Collaborating directly with architects and designers so that
                     they can bring their projects to the forefront of

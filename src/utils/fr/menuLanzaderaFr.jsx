@@ -4,13 +4,8 @@ const menuLanzaderaFr = [
     link: "/fr/quienes-somos",
   },
   {
-    title: "Façades ventilées",
-    subList: [
-      {
-        title: "Dolcker System",
-        link: "/fr/dolcker-system",
-      },
-    ],
+    title: "Accueil",
+    link: "/fr",
   },
   {
     title: "Contact",
