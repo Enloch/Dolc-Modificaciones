@@ -38,39 +38,39 @@ export const MainEn = () => {
 			src: System,
 			title: "Dolcker System",
 			subtitle: "Integral solution for full-body facades and cladding",
-			link: "dolcker-system",
+			link: "en/dolcker-system",
 		},
 		{
 			src: Tline,
 			title: "Dolcker T-line",
 			subtitle: "Ventilated facade system with aluminum profiling",
-			link: "dolcker-tline",
+			link: "en/dolcker-tline",
 		},
 		{
 			src: Matrix,
 			title: "Dolcker Matrix Facade",
 			subtitle:
 				"Clipped aluminum slats for ventilated facades and cladding.",
-			link: "dolcker-matrix-facade",
+			link: "en/dolcker-matrix-facade",
 		},
 		{
 			src: Decor,
 			title: "Dolcker Matrix Decor",
 			subtitle:
 				"Clipped aluminum slats for cladding and avant-garde interiors.",
-			link: "dolcker-matrix-decor",
+			link: "en/dolcker-matrix-decor",
 		},
 		{
 			src: TXT,
 			title: "Dolcker TXT",
 			subtitle: "Modular design solution for ventilated facades",
-			link: "dolcker-txt",
+			link: "en/dolcker-txt",
 		},
 		{
 			src: T5,
 			title: "Dolcker T5 XL",
 			subtitle: "Ventilated facade system with aluminum profiling",
-			link: "dolcker-t5",
+			link: "en/dolcker-t5",
 		},
 	];
 
