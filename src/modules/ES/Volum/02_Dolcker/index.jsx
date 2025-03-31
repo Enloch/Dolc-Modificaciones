@@ -47,13 +47,14 @@ const DolckerTline = ({ id }) => {
           completamente continuas, obteniendo un acabado uniforme, preciso y de
           alta calidad arquitectónica.
         </Text>
+        <ImageWithCaption
+          src={Imagen2}
+          alt="Imagen Dolcker 2"
+          // caption="Sistema Volumen"
+        />
       </div>
       {/* <VisualizadorNota {...propsVisualizador} /> */}
-      <ImageWithCaption
-        src={Imagen2}
-        alt="Imagen Dolcker 2"
-        // caption="Sistema Volumen"
-      />
+
       <Text />
     </StyledDolcker>
   );
