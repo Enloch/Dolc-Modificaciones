@@ -1,19 +1,18 @@
 import styled, { css } from "styled-components";
-import Anotaciones from "../../../../components/Anotacion/Anotaciones";
-import StyledAnotacion from "../../../../components/Anotacion/styles";
-import Seccion from "../../../../components/Seccion";
-import Text from "../../../../components/Text";
-import { Titulo } from "../../../../components/Titulos";
+import Anotaciones from "../../../../../components/Anotacion/Anotaciones";
+import StyledAnotacion from "../../../../../components/Anotacion/styles";
+import Seccion from "../../../../../components/Seccion";
+import Text from "../../../../../components/Text";
+import { Titulo } from "../../../../../components/Titulos";
 import {
   Column6,
   Column8,
-  Column3,
   DISTANCES,
   GridLayout,
   TABLET_SIZE,
-} from "../../../../global/GlobalStyles";
-import { mediaQueryMobile, mediaQueryTablet } from "../../../../styles/sizes";
-import AmbienteContainer from "../../../../components/AmbienteContainerTline";
+} from "../../../../../global/GlobalStyles";
+import { mediaQueryMobile, mediaQueryTablet } from "../../../../../styles/sizes";
+import AmbienteContainer from "../../../../../components/AmbienteContainerTline";
 
 const StyledSerie = styled(Seccion)`
     row-gap: ${DISTANCES.medium};

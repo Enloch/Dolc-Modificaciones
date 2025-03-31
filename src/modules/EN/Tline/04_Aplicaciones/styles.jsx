@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import StyledCita from "../../../components/Cita/styles";
-import StyledImageWithCaption from "../../../components/ImageWithCaption/styles";
-import Seccion from "../../../components/Seccion";
-import {  Column6, MOBILE_SIZE, TABLET_SIZE  } from "../../../global/GlobalStyles";
+import StyledImageWithCaption from "../../../../components/ImageWithCaption/styles";
+import Seccion from "../../../../components/Seccion";
+import {  Column6, MOBILE_SIZE, TABLET_SIZE  } from "../../../../global/GlobalStyles";
 
 export const StyledGaleria = styled(Seccion)`
 	.Slider {

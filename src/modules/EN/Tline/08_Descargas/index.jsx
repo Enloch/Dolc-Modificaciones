@@ -1,7 +1,7 @@
-import { Titulo } from '../../../components/Titulos'
-import configDescargas from '../../../configs/configDescargasTline'
-import { COLORS } from '../../../global/GlobalStyles'
-import useDescargas from '../../../hooks/useDescargas'
+import { Titulo } from '../../../../components/Titulos'
+import configDescargas from '../../../../configs/configDescargasTline'
+import { COLORS } from '../../../../global/GlobalStyles'
+import useDescargas from '../../../../hooks/useDescargas'
 import StyledDescargas from './styles'
 
 const DescargasTline = ({ id }) => {

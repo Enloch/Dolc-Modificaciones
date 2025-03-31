@@ -1,18 +1,15 @@
 /* eslint-disable indent */
 import styled from "styled-components";
-import Anotaciones from "../../../components/Anotacion/Anotaciones";
-import StyledAnotacion from "../../../components/Anotacion/styles";
-import Seccion from "../../../components/Seccion";
-import StyledVisualizadorRotador from "../../../components/VisualizadorRotador/styles";
-import StyledVisualizadorVariaciones from "../../../components/VisualizadorVariaciones/styles";
+import Seccion from "../../../../components/Seccion";
+import StyledVisualizadorRotador from "../../../../components/VisualizadorRotador/styles";
+import StyledVisualizadorVariaciones from "../../../../components/VisualizadorVariaciones/styles";
 import {
 	COLORS,
-	Column7,
 	DISTANCES,
 	GridLayout,
 	TABLET_SIZE,
-} from "../../../global/GlobalStyles";
-import { column_5_span7, column_5_span8 } from "../../../styles/grid";
+} from "../../../../global/GlobalStyles";
+import { column_5_span7, column_5_span8 } from "../../../../styles/grid";
 
 const StyledDisenos = styled(Seccion)`
 	row-gap: ${DISTANCES.medium};

@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
-import AmbienteContainer from "../../../../components/AmbienteContainerTline";
-import Anotacion from "../../../../components/Anotacion";
-import Text from "../../../../components/Text";
-import { Titulo } from "../../../../components/Titulos";
-import useSerie from "../../../../hooks/useSerie";
+import AmbienteContainer from "../../../../../components/AmbienteContainerTline";
+import Anotacion from "../../../../../components/Anotacion";
+import Text from "../../../../../components/Text";
+import { Titulo } from "../../../../../components/Titulos";
+import useSerie from "../../../../../hooks/useSerie";
 import StyledSerie from "./styles";
 
 // Define el componente `Serie` que recibe varias props

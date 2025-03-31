@@ -1,24 +1,24 @@
 import { useState } from "react";
-import ImageWithCaption from "../../../components/ImageWithCaption";
-import { Titulo } from "../../../components/Titulos";
-import { COLORS } from "../../../global/GlobalStyles";
+import ImageWithCaption from "../../../../components/ImageWithCaption";	
+import { Titulo } from "../../../../components/Titulos";	
+import { COLORS } from "../../../../global/GlobalStyles";
 import StyledCaracteristicas from "./styles";
-import caracter1 from "../../../assets/images/DolckerTline/Caracteristicas/IMG_5562.jpg";
-import ImagenJorge from "../../../assets/images/DolckerTline/tablas.jpg";
-import ImagenConstructiva from "../../../assets/images/DolckerTline/tablas.jpg";
+import caracter1 from "../../../../assets/images/DolckerTline/Caracteristicas/IMG_5562.jpg";
+import ImagenJorge from "../../../../assets/images/DolckerTline/tablas.jpg";
+import ImagenConstructiva from "../../../../assets/images/DolckerTline/tablas.jpg";
 // Importar iconos para las tablas
-import dimension1 from "../../../assets/icons/caracteristicas/medida1.svg";
-import dimension2 from "../../../assets/icons/caracteristicas/medida2.svg";
-import dimension3 from "../../../assets/icons/caracteristicas/medida3.svg";
-import mecanica1 from "../../../assets/icons/caracteristicas/mecanica1.svg";
-import mecanica2 from "../../../assets/icons/caracteristicas/mecanica2.svg";
-import mecanica3 from "../../../assets/icons/caracteristicas/mecanica3.svg";
-import mecanica4 from "../../../assets/icons/caracteristicas/mecanica4.svg";
-import mecanica5 from "../../../assets/icons/caracteristicas/mecanica5.svg";
-import mecanica6 from "../../../assets/icons/caracteristicas/mecanica6.svg";
-import higiene1 from "../../../assets/icons/caracteristicas/higiene1.svg";
-import higiene2 from "../../../assets/icons/caracteristicas/higiene2.svg";
-import higiene3 from "../../../assets/icons/caracteristicas/higiene3.svg";
+import dimension1 from "../../../../assets/icons/caracteristicas/medida1.svg";
+import dimension2 from "../../../../assets/icons/caracteristicas/medida2.svg";
+import dimension3 from "../../../../assets/icons/caracteristicas/medida3.svg";
+import mecanica1 from "../../../../assets/icons/caracteristicas/mecanica1.svg";
+import mecanica2 from "../../../../assets/icons/caracteristicas/mecanica2.svg";
+import mecanica3 from "../../../../assets/icons/caracteristicas/mecanica3.svg";
+import mecanica4 from "../../../../assets/icons/caracteristicas/mecanica4.svg";
+import mecanica5 from "../../../../assets/icons/caracteristicas/mecanica5.svg";
+import mecanica6 from "../../../../assets/icons/caracteristicas/mecanica6.svg";
+import higiene1 from "../../../../assets/icons/caracteristicas/higiene1.svg";
+import higiene2 from "../../../../assets/icons/caracteristicas/higiene2.svg";
+import higiene3 from "../../../../assets/icons/caracteristicas/higiene3.svg";
 // Importar componentes de MUI
 import {
   Table,
@@ -31,8 +31,8 @@ import {
   Box,
   Typography,
 } from "@mui/material";
-import Text from "../../../components/Text";
-import Listado from "../../../components/Listado";
+import Text from "../../../../components/Text";
+import Listado from "../../../../components/Listado";
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';

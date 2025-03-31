@@ -1,16 +1,16 @@
 import { useState } from "react";
-import Text from "../../../components/Text";
-import { Titulo, Titulo2 } from "../../../components/Titulos";
+import Text from "../../../../components/Text";
+import { Titulo, Titulo2 } from "../../../../components/Titulos";	
 import StyledSistemas, { Enlaces } from "./styles";
-import { COLORS } from "../../../global/GlobalStyles";
-import Modal from "../../../components/Modal";
-import sistemas from "../../../assets/images/DolckerTline/Sistemas/sistemas.webp";
-import ImageWithCaption from "../../../components/ImageWithCaption";
-import img1 from "../../../assets/images/DolckerTline/Sistemas/DOLCKER_T-LINE SOLUCIONA GRAPA.jpg";
-import img2 from "../../../assets/images/DolckerTline/Sistemas/RENDER CLIP LINE 10 copia.jpg";
-import img3 from "../../../assets/images/DolckerTline/Sistemas/RENDER SISTEMA CLIP 14 copia.jpg";
-import img4 from "../../../assets/images/DolckerTline/Sistemas/Dolcker TLine T10 detalle tecnico_web.jpg";
-import img5 from "../../../assets/images/DolckerTline/Sistemas/Dolcker TLine T20 detalle tecnico_web.jpg";
+import { COLORS } from "../../../../global/GlobalStyles";
+import Modal from "../../../../components/Modal";
+import sistemas from "../../../../assets/images/DolckerTline/Sistemas/sistemas.webp";
+import ImageWithCaption from "../../../../components/ImageWithCaption";	
+import img1 from "../../../../assets/images/DolckerTline/Sistemas/DOLCKER_T-LINE SOLUCIONA GRAPA.jpg";
+import img2 from "../../../../assets/images/DolckerTline/Sistemas/RENDER CLIP LINE 10 copia.jpg";
+import img3 from "../../../../assets/images/DolckerTline/Sistemas/RENDER SISTEMA CLIP 14 copia.jpg";
+import img4 from "../../../../assets/images/DolckerTline/Sistemas/Dolcker TLine T10 detalle tecnico_web.jpg";
+import img5 from "../../../../assets/images/DolckerTline/Sistemas/Dolcker TLine T20 detalle tecnico_web.jpg";
 const SistemasTline = ({ id }) => {
 	const [selectedImage, setSelectedImage] = useState(null);
 	const [selectedCaption, setSelectedCaption] = useState("");

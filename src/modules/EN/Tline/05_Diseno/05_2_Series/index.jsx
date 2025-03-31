@@ -1,26 +1,26 @@
 import { useState, useRef } from "react";
-import FullScreen from "../../../../components/FullScreen";
+import FullScreen from "../../../../../components/FullScreen";
 
-import configArdesia from "../../../../configs/SeriesTline/configArdesia";
-import configBalmoral from "../../../../configs/SeriesTline/configBalmoral";
-import configBellagio from "../../../../configs/SeriesTline/configBellagio";
-import configBrunswich from "../../../../configs/SeriesTline/configBrunswich";
-import configByb from "../../../../configs/SeriesTline/configByb";
-import configCapri from "../../../../configs/SeriesTline/configCapri";
-import configCore from "../../../../configs/SeriesTline/configCore";
-import configCromat from "../../../../configs/SeriesTline/configCromat";
-import configDome from "../../../../configs/SeriesTline/configDome";
-import configEternal from "../../../../configs/SeriesTline/configEternal";
-import configGravel from "../../../../configs/SeriesTline/configGravel";
-import configHabitat from "../../../../configs/SeriesTline/configHabitat";
-import configHannover from "../../../../configs/SeriesTline/configHannover";
-import configInvictus from "../../../../configs/SeriesTline/configInvictus";
-import configKursaal from "../../../../configs/SeriesTline/configKursaal";
-import configNikea from "../../../../configs/SeriesTline/configNikea";
-import configStoneland from "../../../../configs/SeriesTline/configStoneland";
-import configStorm from "../../../../configs/SeriesTline/configStorm";
-import configUnik from "../../../../configs/SeriesTline/configUnik";
-import { COLORS } from "../../../../global/GlobalStyles";
+import configArdesia from "../../../../../configs/SeriesTline/configArdesia";
+import configBalmoral from "../../../../../configs/SeriesTline/configBalmoral";
+import configBellagio from "../../../../../configs/SeriesTline/configBellagio";
+import configBrunswich from "../../../../../configs/SeriesTline/configBrunswich";
+import configByb from "../../../../../configs/SeriesTline/configByb";
+import configCapri from "../../../../../configs/SeriesTline/configCapri";
+import configCore from "../../../../../configs/SeriesTline/configCore";
+import configCromat from "../../../../../configs/SeriesTline/configCromat";
+import configDome from "../../../../../configs/SeriesTline/configDome";
+import configEternal from "../../../../../configs/SeriesTline/configEternal";
+import configGravel from "../../../../../configs/SeriesTline/configGravel";
+import configHabitat from "../../../../../configs/SeriesTline/configHabitat";
+import configHannover from "../../../../../configs/SeriesTline/configHannover";
+import configInvictus from "../../../../../configs/SeriesTline/configInvictus";
+import configKursaal from "../../../../../configs/SeriesTline/configKursaal";
+import configNikea from "../../../../../configs/SeriesTline/configNikea";
+import configStoneland from "../../../../../configs/SeriesTline/configStoneland";
+import configStorm from "../../../../../configs/SeriesTline/configStorm";
+import configUnik from "../../../../../configs/SeriesTline/configUnik";
+import { COLORS } from "../../../../../global/GlobalStyles";
 import Serie from "./Serie";
 
 const Series = ({ id, serieActivaMostrar }) => {

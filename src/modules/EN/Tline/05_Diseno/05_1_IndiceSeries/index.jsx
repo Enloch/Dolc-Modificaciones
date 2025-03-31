@@ -1,6 +1,6 @@
-import { Titulo } from "../../../../components/Titulos";
-import { COLORS } from "../../../../global/GlobalStyles";
-import useImagesSeries from "../../../../hooks/useImagesSeriesTline";
+import { Titulo } from "../../../../../components/Titulos";
+import { COLORS } from "../../../../../global/GlobalStyles";
+import useImagesSeries from "../../../../../hooks/useImagesSeriesTline";
 import StyledIndiceSeries from "./styles";
 import React, { useState } from "react";
 

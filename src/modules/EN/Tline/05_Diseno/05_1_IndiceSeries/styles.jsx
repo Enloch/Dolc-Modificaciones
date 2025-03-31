@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
-import Seccion from "../../../../components/Seccion";
-import { Titulo } from "../../../../components/Titulos";
-import { column_5_span7, column_total } from "../../../../styles/grid";
-import { mediaQueryTablet } from "../../../../styles/sizes";
+import Seccion from "../../../../../components/Seccion";
+import { Titulo } from "../../../../../components/Titulos";
+import { column_total } from "../../../../../styles/grid";
+import { mediaQueryTablet } from "../../../../../styles/sizes";
 import Enlace from "./Enlace";
 
 const StyledIndiceSeries = styled(Seccion)`
