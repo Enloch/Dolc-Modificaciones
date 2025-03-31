@@ -48,7 +48,12 @@ const DolckerTline = ({ id }) => {
           alta calidad arquitectónica.
         </Text>
       </div>
-      <VisualizadorNota {...propsVisualizador} />
+      {/* <VisualizadorNota {...propsVisualizador} /> */}
+      <ImageWithCaption
+        src={Imagen2}
+        alt="Imagen Dolcker 2"
+        // caption="Sistema Volumen"
+      />
       <Text />
     </StyledDolcker>
   );
