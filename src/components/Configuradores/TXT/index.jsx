@@ -8,7 +8,7 @@ import {
   AccumulativeShadows,
   RandomizedLight,
   OrbitControls,
-  useGLTF
+  useGLTF,
 } from "@react-three/drei";
 import { EffectComposer, SSAO, ToneMapping } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
@@ -78,6 +78,7 @@ export default function Escena3DTXT() {
         style={{ width: "100%", height: "100%" }}
         gl={{ antialias: false }}
       >
+        {/* Configuración de cámara */}
         <PerspectiveCamera
           makeDefault={true}
           far={100}
@@ -86,11 +87,8 @@ export default function Escena3DTXT() {
           position={[10, 6.6, 9.4]}
           rotation={[0.005, 0.973, -0.004]}
         />
-        {/* <OrbitControls /> */}
-        {/* <SoftShadows size={100} samples={32} focus={10} /> */}
-
+        <SoftShadows size={30} samples={10} focus={10} />
         {/* <Sky azimuth={0.973} turbidity={20} sunPosition={[2, 2, 1]} /> */}
-        {/* Configuración de cámara */}
         {/* Componente 3D */}
         <Model />
         {/* Entorno */}
@@ -101,12 +99,11 @@ export default function Escena3DTXT() {
           environmentRotation={[rotacionX, rotacionZ, rotacionY]}
           backgroundRotation={[rotacionX, rotacionZ, rotacionY]}
         />
-
         {/* Reemplazamos la luz direccional con nuestro componente personalizado */}
         {/* <DirectionalLightWithTarget />
          */}
         <directionalLight
-          // castShadow
+          castShadow
           intensity={3}
           position={[-25, 7, 16]}
           shadow-mapSize={[4096, 4096]}
@@ -125,10 +122,8 @@ export default function Escena3DTXT() {
           enabled={true}
           autoClear={false}
           multisampling={8}
-          resolutionScale={undefined}
-          stencilBuffer={false}
         >
-          <SSAO
+          {/* <SSAO
             blendFunction={BlendFunction.MULTIPLY} // blend mode
             samples={30} // amount of samples per pixel (shouldn't be a multiple of the ring count)
             rings={4} // amount of rings in the occlusion sampling pattern
@@ -140,7 +135,7 @@ export default function Escena3DTXT() {
             radius={20} // occlusion sampling radius
             scale={0.5} // scale of the ambient occlusion
             bias={0.5} // occlusion bias
-          />
+          /> */}
           <ToneMapping
             adaptive
             resolution={256}
