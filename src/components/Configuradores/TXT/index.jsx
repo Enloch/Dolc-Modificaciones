@@ -87,7 +87,7 @@ export default function Escena3DTXT() {
           position={[10, 6.6, 9.4]}
           rotation={[0.005, 0.973, -0.004]}
         />
-        <SoftShadows size={30} samples={10} focus={10} />
+        <SoftShadows size={32} samples={10} focus={10} />
         {/* <Sky azimuth={0.973} turbidity={20} sunPosition={[2, 2, 1]} /> */}
         {/* Componente 3D */}
         <Model />
