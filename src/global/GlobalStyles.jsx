@@ -33,7 +33,7 @@ const GRID = {
   horizontalSpace: DISTANCES.medium,
   verticalSpace: DISTANCES.long,
 };
-8
+8;
 const Column3 = css`
   grid-column: 3 / span end;
 
