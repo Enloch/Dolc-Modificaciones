@@ -128,3 +128,12 @@ export { default as DisenosDetaill } from "./Detaill/05_Diseno";
 export { default as CaracteristicasDetaill } from "./Detaill/06_Caracteristicas";
 export { default as SistemasDetaill } from "./Detaill/07_Sistemas";
 export { default as DescargasDetaill } from "./Detaill/08_Descargas";
+//Fusion
+export { default as IndiceFusion } from "./ES/Fusion/01_Inicio";
+export { default as DolckerFusion } from "./ES/Fusion/02_Dolcker";
+export { default as VentajasFusion } from "./ES/Fusion/03_Ventajas";
+export { default as AplicacionesFusion } from "./ES/Fusion/04_Aplicaciones";
+export { default as DisenosFusion } from "./ES/Fusion/05_Diseno";
+export { default as CaracteristicasFusion } from "./ES/Fusion/06_Caracteristicas";
+export { default as SistemasFusion } from "./ES/Fusion/07_Sistemas";
+export { default as DescargasFusion } from "./ES/Fusion/08_Descargas";
