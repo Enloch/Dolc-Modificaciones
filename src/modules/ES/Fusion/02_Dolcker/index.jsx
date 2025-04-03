@@ -5,8 +5,8 @@ import { COLORS } from "../../../../global/GlobalStyles";
 import Text from "../../../../components/Text";
 import config from "../../../../configs/configDolckerTline";
 
-import Imagen1 from "../../../../assets/images/Archiform/Dolcker/Archiform54.jpg";
-import Imagen2 from "../../../../assets/images/Archiform/Dolcker/Archiform01.jpg";
+import Imagen1 from "../../../../assets/images/Fusion/Dolcker/IMG_7282.jpg";
+import Imagen2 from "../../../../assets/images/Fusion/Dolcker/IMG_7346.jpg";
 
 const DolckerTline = ({ id }) => {
   const propsVisualizador = {
@@ -19,39 +19,39 @@ const DolckerTline = ({ id }) => {
 
   return (
     <StyledDolcker id={id} backgroundColor={COLORS.gray03}>
-      <Titulo>Sistema Archiform soluciona</Titulo>
+      <Titulo>Sistema Fusion soluciona</Titulo>
       <div className="dolcker-info">
         <ImageWithCaption
           src={Imagen1}
           alt="Imagen Dolcker 2"
-          caption="Sistema Archiform"
+          caption="Sistema Fusion"
         />
 
         <Text>
-          DOLCKER & Archiform presenta su innovador sistema para formatos
-          trapezoidales con ranura continua en espesores de 14 y 20 mm: el
-          primer sistema <strong>full&body</strong> con ranura continua, que
-          ofrece infinitas posibilidades de modulación y diseño.
+          Sistema de fachadas modulares con combinaciones personalizadas
           <br />
           <br />
-          Gracias a la tecnología full&body, es posible crear fachadas con
-          aristas totalmente continuas, aportando una estética diferenciadora
-          respecto a los formatos tradicionales cuadrados o rectangulares. Una
-          solución ideal para envolventes arquitectónicas elegantes y
-          distintivas.
+          DOLCKER FUSIÓN es la evolución natural del reconocido sistema DOLCKER
+          SYSTEM, creado para ofrecer una libertad creativa sin precedentes en
+          el diseño de envolventes arquitectónicas.
           <br />
           <br />
-          El sistema DOLCKER & Archiform va más allá de las fachadas, ofreciendo
-          soluciones integrales también para suelos elevados, techos, recercados
-          de ventanas y tapas de coronación, manteniendo siempre el mismo
-          material y acabado. Esto permite una coherencia total en el diseño
-          arquitectónico.
+          Su principal valor diferencial reside en la posibilidad de combinar
+          diferentes colecciones dentro de una misma fachada, permitiendo
+          mezclar colores, texturas y acabados en los porcentajes definidos a
+          medida por el arquitecto o prescriptor.
           <br />
           <br />
-          Además, DOLCKER ha desarrollado un sistema de colocación de alta
-          seguridad, diseñado para facilitar el trabajo de los técnicos y
-          garantizar las máximas prestaciones en edificios singulares, tanto a
-          nivel técnico como estético.
+          Esta personalización se mantiene a lo largo de toda la cadena
+          logística: el material se entrega clasificado, mezclado y combinado
+          según proyecto, en palets preparados para su instalación directa,
+          facilitando la ejecución y optimizando el trabajo en obra.
+          <br />
+          <br />
+          Gracias a esta innovación, se pueden concebir fachadas con una
+          estética única, donde el control del diseño está plenamente en manos
+          del proyectista, permitiendo una expresión arquitectónica libre,
+          sofisticada y eficiente.
         </Text>
         <ImageWithCaption
           src={Imagen2}

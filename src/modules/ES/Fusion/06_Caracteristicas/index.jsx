@@ -2,7 +2,7 @@ import ImageWithCaption from "../../../../components/ImageWithCaption";
 import { Titulo } from "../../../../components/Titulos";
 import { COLORS } from "../../../../global/GlobalStyles";
 import StyledCaracteristicas from "./styles";
-import caracter1 from "../../../../assets/images/Archiform/Caracteristicas/Archiform51.jpg";
+import caracter1 from "../../../../assets/images/Fusion/Caracteristicas/IMG_7453.jpg";
 import Text from "../../../../components/Text";
 import Listado from "../../../../components/Listado";
 import { useState } from "react";

@@ -30,6 +30,7 @@ import Decor from "../..//assets/images/DolckerMatrixDecor/decor.jpg";
 import TXT from "../../assets/images/DolckerTXT/txt.jpg";
 import Volumen from "../../assets/images/Volumen/Volum97.jpg";
 import Archiform from "../../assets/images/Archiform/Archiform27.jpg";
+import Fusion from "../../assets/images/Fusion/fusion.jpg";
 import T5 from "../../assets/images/T5/IMG_3280.jpg";
 export const Landing = () => {
   const imageData = [
@@ -82,6 +83,12 @@ export const Landing = () => {
       title: "Dolcker Archiform",
       subtitle: "Solución integral full&body para fachadas y revestimientos",
       link: "dolcker-archiform",
+    },
+    {
+      src: Fusion,
+      title: "Dolcker Fusion",
+      subtitle: "Solución integral full&body para fachadas y revestimientos",
+      link: "dolcker-fusion",
     },
   ];
 

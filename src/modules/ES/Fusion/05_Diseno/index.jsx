@@ -3,7 +3,7 @@ import ImageWithCaption from "../../../../components/ImageWithCaption";
 import { Titulo, Titulo2 } from "../../../../components/Titulos";
 import { COLORS } from "../../../../global/GlobalStyles";
 import StyledDisenos from "./styles";
-import img1 from "../../../../assets/images/Archiform/Diseno/Archiform36.jpg";
+import img1 from "../../../../assets/images/Fusion/Diseno/IMG_7245.jpg";
 import fondo from "../../../../assets/images/Diseno/Formato/fondo.webp";
 import indicadoresFormato from "../../../../utils/indicadoresFormato";
 import Anotacion from "../../../../components/Anotacion";
@@ -39,7 +39,7 @@ const DisenosTline = ({ id }) => {
         <ImageWithCaption
           src={img1}
           alt="Imagen de Diseños 1"
-          caption="DOLCKER & CLIP Archiform."
+          caption="DOLCKER Fusion Color"
           columnSpan="6"
         />
         <Cita
@@ -71,6 +71,15 @@ const DisenosTline = ({ id }) => {
       <StyledDisenos id={id[4]} backgroundColor={COLORS.gray01} isEspesores>
         <Titulo2>Espesores</Titulo2>
         <div className="espesor espesor-1">
+          <img src={ranurado11} alt="" />
+          <ul>
+            <strong>TC 11 / 11 mm.</strong>
+            <li>Suelo</li>
+            <li>Techo</li>
+            <li>Fachada</li>
+          </ul>
+        </div>
+        <div className="espesor espesor-2">
           <img src={ranurado14} alt="" />
           <ul>
             <strong>TC 14 / 14 mm.</strong>
@@ -80,7 +89,7 @@ const DisenosTline = ({ id }) => {
             <li>Recerco</li>
           </ul>
         </div>
-        <div className="espesor espesor-2">
+        <div className="espesor espesor-3">
           <img src={ranurado20} alt="" />
           <ul>
             <strong>TC 20 / 20 mm.</strong>

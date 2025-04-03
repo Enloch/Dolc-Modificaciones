@@ -2,7 +2,7 @@ import Text from "../../../../components/Text";
 import { Titulo, Titulo2 } from "../../../../components/Titulos";
 import StyledSistemas, { Enlaces } from "./styles";
 import { COLORS } from "../../../../global/GlobalStyles";
-import sistemas from "../../../../assets/images/Archiform/Sistemas/Archiform38.jpg";
+import sistemas from "../../../../assets/images/Fusion/Sistemas/img_0001.jpg";
 
 import dolckerClip1 from "../../../../assets/images/Sistemas/sistema-dolcker-clip.webp";
 import dolckerClip2 from "../../../../assets/icons/Sistemas/dolcker-clip.svg";
@@ -25,7 +25,7 @@ const Sistemas = ({ id }) => {
         <ImageWithCaption
           src={sistemas}
           alt="Sistemas introducción"
-          columnSpan="5"
+          columnSpan="6"
         />
         <Enlaces>
           <li>
@@ -35,27 +35,27 @@ const Sistemas = ({ id }) => {
               <strong>Dolcker & Clip</strong>
             </a>
           </li>
-          {/* <li>
+          <li>
             <a href={"#" + id[2]}>
               Sistema
               <br />
               <strong>DOL - TC11</strong>
             </a>
-          </li> */}
-          {/* <li>
+          </li>
+          <li>
             <a href={"#" + id[3]}>
               Sistema
               <br />
               <strong>DOL - TC14</strong>
             </a>
-          </li> */}
-          {/* <li>
+          </li>
+          <li>
             <a href={"#" + id[4]}>
               Sistema
               <br />
               <strong>DOL - HC20</strong>
             </a>
-          </li> */}
+          </li>
         </Enlaces>
       </StyledSistemas>
 
@@ -114,7 +114,7 @@ const Sistemas = ({ id }) => {
         />
       </StyledSistemas>
 
-      {/* <StyledSistemas id={id[2]}>
+      <StyledSistemas id={id[2]}>
         <Titulo2>DOL - TC11</Titulo2>
         <Text>
           El sistema DOL-TC11 para fachadas de cerámica con grapa oculta es un
@@ -132,13 +132,13 @@ const Sistemas = ({ id }) => {
         <ImageWithCaption
           src={tc111}
           alt="DOL-TC11 demostración"
-          columnSpan="5"
+          columnSpan="6"
           isGray
         />
         <ImageWithCaption
           src={tc112}
           alt="DOL-TC11 tabla"
-          columnSpan="8"
+          columnSpan="6"
           isGray
         />
       </StyledSistemas>
@@ -161,13 +161,13 @@ const Sistemas = ({ id }) => {
         <ImageWithCaption
           src={tc141}
           alt="DOL-TC14 demostración"
-          columnSpan="5"
+          columnSpan="6"
           isGray
         />
         <ImageWithCaption
           src={tc142}
           alt="DOL-TC14 tabla"
-          columnSpan="8"
+          columnSpan="6"
           isGray
         />
       </StyledSistemas>
@@ -190,16 +190,16 @@ const Sistemas = ({ id }) => {
         <ImageWithCaption
           src={hc201}
           alt="DOL-HC20 demostración"
-          columnSpan="5"
+          columnSpan="6"
           isGray
         />
         <ImageWithCaption
           src={hc202}
           alt="DOL-HC20 tabla"
-          columnSpan="8"
+          columnSpan="6"
           isGray
         />
-      </StyledSistemas> */}
+      </StyledSistemas>
     </>
   );
 };

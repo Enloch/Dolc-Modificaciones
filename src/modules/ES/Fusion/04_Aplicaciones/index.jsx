@@ -1,62 +1,69 @@
-import ImageWithCaption from "../../../../components/ImageWithCaption";
-import { Titulo, Titulo2, Titulo3 } from "../../../../components/Titulos";
-import { COLORS, DISTANCES } from "../../../../global/GlobalStyles";
-import StyledAplicaciones from "./styles";
-import img1 from "../../../../assets/images/Archiform/Aplicaciones/Archiform46.jpg";
-import img2 from "../../../../assets/images/Archiform/Aplicaciones/Archiform02.jpg";
-import img3 from "../../../../assets/images/Archiform/Aplicaciones/Archiform08.jpg";
-import img4 from "../../../../assets/images/Archiform/Aplicaciones/Archiform05.jpg";
-import img5 from "../../../../assets/images/Archiform/Aplicaciones/Archiform52.jpg";
+import { Titulo, Titulo3 } from "../../../../components/Titulos";
+import { COLORS } from "../../../../global/GlobalStyles";
+import Text from "../../../../components/Text";
 import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 const AplicacionesTline = ({ id }) => {
   // Actualizado para usar import.meta.glob con eager: true en lugar de globEager
-  const imagesRehabilitar = import.meta.glob(
-    "../../../../assets/images/GaleriaArchiform/Aplicaciones/*",
+  const ImagenesAplicaciones = import.meta.glob(
+    "../../../../assets/images/Fusion/Galeria/aplicaciones/*",
     { eager: true }
   );
-  const imagesGaleriaRehabilitar = Object.keys(imagesRehabilitar).map(
+  const imagesGaleriaAplicaciones = Object.keys(ImagenesAplicaciones).map(
     (key) => ({
-      original: imagesRehabilitar[key].default,
-      thumbnail: imagesRehabilitar[key].default,
+      original: ImagenesAplicaciones[key].default,
+      thumbnail: ImagenesAplicaciones[key].default,
     })
   );
 
   // Actualizado para usar import.meta.glob con eager: true en lugar de globEager
-  const imagesobra = import.meta.glob(
-    "../../../../assets/images/GaleriaArchiform/ObraNueva/*",
+  const ImagenesTerracota = import.meta.glob(
+    "../../../../assets/images/Fusion/Galeria/terracota/*",
     { eager: true }
   );
-  const imagesGaleriaObra = Object.keys(imagesobra).map((key) => ({
-    original: imagesobra[key].default,
-    thumbnail: imagesobra[key].default,
+  const imagesGaleriaTerracota = Object.keys(ImagenesTerracota).map((key) => ({
+    original: ImagenesTerracota[key].default,
+    thumbnail: ImagenesTerracota[key].default,
   }));
+
+  // Actualizado para usar import.meta.glob con eager: true en lugar de globEager
+  const ImagenesColor = import.meta.glob(
+    "../../../../assets/images/Fusion/Galeria/color/*",
+    { eager: true }
+  );
+  const imagesGaleriaColor = Object.keys(ImagenesColor).map((key) => ({
+    original: ImagenesColor[key].default,
+    thumbnail: ImagenesColor[key].default,
+  }));
+
+  // Actualizado para usar import.meta.glob con eager: true en lugar de globEager
+  const ImagenesPetra = import.meta.glob(
+    "../../../../assets/images/Fusion/Galeria/petra/*",
+    { eager: true }
+  );
+  const imagesGaleriaPetra = Object.keys(ImagenesPetra).map((key) => ({
+    original: ImagenesPetra[key].default,
+    thumbnail: ImagenesPetra[key].default,
+  }));
+
+  // Actualizado para usar import.meta.glob con eager: true en lugar de globEager
+  const ImagenesTextura = import.meta.glob(
+    "../../../../assets/images/Fusion/Galeria/textura/*",
+    { eager: true }
+  );
+  const imagesGaleriaTextura = Object.keys(ImagenesTextura).map((key) => ({
+    original: ImagenesTextura[key].default,
+    thumbnail: ImagenesTextura[key].default,
+  }));
+
   return (
     <>
-      <StyledAplicaciones
-        id={id[0]}
-        backgroundColor={COLORS.gray02}
-        rowGap={DISTANCES.medium}
-      >
+      <StyledGaleria id={id[0]} backgroundColor={COLORS.gray02}>
         <Titulo color={COLORS.gray08}>Aplicaciones</Titulo>
-        <ImageWithCaption
-          src={img1}
-          alt="Imagen de Aplicaciones 1"
-          caption="DOLCKER & CLIP Archiform."
-          columnSpan="6"
-        />
-        <Cita
-          cita="“La arquitectura es el juego sabio, correcto y magnífico de los volúmenes bajo la luz.”"
-          author="— Le Corbusier"
-          colorCita={COLORS.gray08}
-          colorAutor={COLORS.gray04}
-        />
-      </StyledAplicaciones>
-      <StyledGaleria id="galeria-aplicaciones" backgroundColor={COLORS.gray02}>
         <StyledSlider className="Slider">
           <ImageGallery
-            items={imagesGaleriaRehabilitar}
+            items={imagesGaleriaAplicaciones}
             showPlayButton={false}
             showFullscreenButton={true}
             showThumbnails={false}
@@ -67,49 +74,23 @@ const AplicacionesTline = ({ id }) => {
             slideDuration={450}
           />
         </StyledSlider>
+        <Text>
+          Inspirada en la cerámica tradicional, aporta una estética cálida,
+          natural y atemporal. Ideal para proyectos que buscan una conexión
+          sensorial con lo mediterráneo.
+        </Text>
+        <Cita
+          cita="“El color es un poder que influye directamente en el alma”"
+          author="— Wassily Kandinsky"
+          colorCita={COLORS.gray08}
+          colorAutor={COLORS.gray04}
+        />
       </StyledGaleria>
-      <StyledAplicaciones
-        id={id[1]}
-        backgroundColor={COLORS.gray01}
-        rowGap={DISTANCES.medium}
-      >
-        <Titulo2 color={COLORS.gray08}>Rehabilitación</Titulo2>
-        <ImageWithCaption
-          src={img2}
-          alt="Imagen de Aplicaciones 1"
-          caption="DOL - TC14 Archiform."
-          columnSpan="6"
-        />
-        <Cita
-          cita="“Todo es permisible con tal de que sea fantástico”"
-          author="— Carlo Mollino"
-          colorCita={COLORS.gray08}
-          colorAutor={COLORS.gray04}
-        />
-      </StyledAplicaciones>
-      <StyledAplicaciones
-        id={id[2]}
-        backgroundColor={COLORS.gray01}
-        rowGap={DISTANCES.medium}
-      >
-        <Titulo2 color={COLORS.gray08}>Obra nueva</Titulo2>
-        <ImageWithCaption
-          src={img3}
-          alt="Imagen de Aplicaciones 1"
-          caption="DOL -TC20 Archiform."
-          columnSpan="6"
-        />
-        <Cita
-          cita="“La arquitectura es una cuestión de sueños y fantasías, de curvas generosas y espacios amplios”"
-          author="— Oscar Niemeyer"
-          colorCita={COLORS.gray08}
-          colorAutor={COLORS.gray04}
-        />
-      </StyledAplicaciones>
-      <StyledGaleria id="galeria-obra-nueva" backgroundColor={COLORS.gray01}>
+      <StyledGaleria id={id[1]} backgroundColor={COLORS.gray01}>
+        <Titulo3 color={COLORS.gray08}>- Terracota</Titulo3>
         <StyledSlider className="Slider">
           <ImageGallery
-            items={imagesGaleriaObra}
+            items={imagesGaleriaTerracota}
             showPlayButton={false}
             showFullscreenButton={true}
             showThumbnails={false}
@@ -120,35 +101,99 @@ const AplicacionesTline = ({ id }) => {
             slideDuration={450}
           />
         </StyledSlider>
+        <Text>
+          Superficies uniformes en tonos neutros o saturados, para composiciones
+          sobrias o expresivas de gran pureza visual. Perfecta para arquitectura
+          contemporánea y minimalista.
+        </Text>
+        <Cita
+          cita="“La arquitectura empieza cuando se colocan cuidadosamente dos ladrillos juntos.”"
+          author="— Ludwig Mies van der Rohe"
+          colorCita={COLORS.gray08}
+          colorAutor={COLORS.gray04}
+        />
       </StyledGaleria>
-      <StyledAplicaciones
-        id={id[3]}
-        backgroundColor={COLORS.gray01}
-        rowGap={DISTANCES.medium}
-      >
-        <Titulo3 color={COLORS.gray08}>- Fachadas</Titulo3>
-        <ImageWithCaption
-          src={img4}
-          alt="Imagen de Aplicaciones 4"
-          caption="DOL - TC20 Archiform."
-          columnSpan="6"
+      <StyledGaleria id={id[2]} backgroundColor={COLORS.gray01}>
+        <Titulo3 color={COLORS.gray08}>- Color</Titulo3>
+        <StyledSlider className="Slider">
+          <ImageGallery
+            items={imagesGaleriaColor}
+            showPlayButton={false}
+            showFullscreenButton={true}
+            showThumbnails={false}
+            autoPlay={true}
+            showBullets={false}
+            showNav={true}
+            lazyLoad={true}
+            slideDuration={450}
+          />
+        </StyledSlider>
+        <Text>
+          Superficies uniformes en tonos neutros o saturados, para composiciones
+          sobrias o expresivas de gran pureza visual. Perfecta para arquitectura
+          contemporánea y minimalista.
+        </Text>
+        <Cita
+          cita="“El diseño no es solo lo que se ve o se siente. El diseño es cómo funciona.”"
+          author="— Steve Jobs"
+          colorCita={COLORS.gray08}
+          colorAutor={COLORS.gray04}
         />
-      </StyledAplicaciones>
-      <StyledAplicaciones
-        id={id[4]}
-        backgroundColor={COLORS.gray01}
-        rowGap={DISTANCES.medium}
-      >
-        <Titulo3 color={COLORS.gray08}>
-          - Terrazas, suelos elevados, techos y soluciones
-        </Titulo3>
-        <ImageWithCaption
-          src={img5}
-          alt="Imagen de Aplicaciones 5"
-          caption="DOL - TC14 Archiform."
-          columnSpan="6"
+      </StyledGaleria>
+      <StyledGaleria id={id[3]} backgroundColor={COLORS.gray01}>
+        <Titulo3 color={COLORS.gray08}>- Petra</Titulo3>
+        <StyledSlider className="Slider">
+          <ImageGallery
+            items={imagesGaleriaPetra}
+            showPlayButton={false}
+            showFullscreenButton={true}
+            showThumbnails={false}
+            autoPlay={true}
+            showBullets={false}
+            showNav={true}
+            lazyLoad={true}
+            slideDuration={450}
+          />
+        </StyledSlider>
+        <Text>
+          Acabados pétreos realistas con texturas naturales. Imitaciones de
+          piedra como caliza, granito o pizarra que aportan carácter,
+          durabilidad y elegancia.
+        </Text>
+        <Cita
+          cita="“Diseñar no es hacer bonito, es hacer con sentido.”"
+          author="— Frase atribuida a múltiples diseñadores (origen no confirmado)"
+          colorCita={COLORS.gray08}
+          colorAutor={COLORS.gray04}
         />
-      </StyledAplicaciones>
+      </StyledGaleria>
+      <StyledGaleria id={id[4]} backgroundColor={COLORS.gray01}>
+        <Titulo3 color={COLORS.gray08}>- Textura</Titulo3>
+        <StyledSlider className="Slider">
+          <ImageGallery
+            items={imagesGaleriaTextura}
+            showPlayButton={false}
+            showFullscreenButton={true}
+            showThumbnails={false}
+            autoPlay={true}
+            showBullets={false}
+            showNav={true}
+            lazyLoad={true}
+            slideDuration={450}
+          />
+        </StyledSlider>
+        <Text>
+          Permite combinar diferentes acabados superficiales (mate, brillo,
+          planeado, etc.), generando un efecto visual y táctil único gracias al
+          contraste entre texturas.
+        </Text>
+        <Cita
+          cita="“Donde el color y la textura se encuentran, nace el carácter del espacio.”"
+          author="— Inspiración propia / Original"
+          colorCita={COLORS.gray08}
+          colorAutor={COLORS.gray04}
+        />
+      </StyledGaleria>
     </>
   );
 };
