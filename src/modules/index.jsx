@@ -101,15 +101,15 @@ export { default as DisenosAlumtech } from "./Alumtech/05_Diseno";
 export { default as CaracteristicasAlumtech } from "./Alumtech/06_Caracteristicas";
 export { default as SistemasAlumtech } from "./Alumtech/07_Sistemas";
 export { default as DescargasAlumtech } from "./Alumtech/08_Descargas";
-//VOLUM
-export { default as IndiceVolum } from "./ES/Volum/01_Inicio";
-export { default as DolckerVolum } from "./ES/Volum/02_Dolcker";
-export { default as VentajasVolum } from "./ES/Volum/03_Ventajas";
-export { default as AplicacionesVolum } from "./ES/Volum/04_Aplicaciones";
-export { default as DisenosVolum } from "./ES/Volum/05_Diseno";
-export { default as CaracteristicasVolum } from "./ES/Volum/06_Caracteristicas";
-export { default as SistemasVolum } from "./ES/Volum/07_Sistemas";
-export { default as DescargasVolum } from "./ES/Volum/08_Descargas";
+//SCALA
+export { default as IndiceScala } from "./ES/Scala/01_Inicio";
+export { default as DolckerScala } from "./ES/Scala/02_Dolcker";
+export { default as VentajasScala } from "./ES/Scala/03_Ventajas";
+export { default as AplicacionesScala } from "./ES/Scala/04_Aplicaciones";
+export { default as DisenosScala } from "./ES/Scala/05_Diseno";
+export { default as CaracteristicasScala } from "./ES/Scala/06_Caracteristicas";
+export { default as SistemasScala } from "./ES/Scala/07_Sistemas";
+export { default as DescargasScala } from "./ES/Scala/08_Descargas";
 //STEP
 export { default as IndiceStep } from "./Step/01_Inicio";
 export { default as DolckerStep } from "./Step/02_Dolcker";

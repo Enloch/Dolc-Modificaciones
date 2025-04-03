@@ -1,15 +1,14 @@
 import ImageWithCaption from "../../../../components/ImageWithCaption";
 import { Titulo } from "../../../../components/Titulos";
 import StyledVentajas from "./styles";
-import img1 from "../../../../assets/images/Volumen/Ventajas/Volum17.jpg";
+import img1 from "../../../../assets/images/Scala/Ventajas/Volum17.jpg";
 import Text from "../../../../components/Text";
 import { COLORS } from "../../../../global/GlobalStyles";
 import Listado from "../../../../components/Listado";
-import Reemplazo from "../../../../assets/images/DolckerMatrix/temporal.webp";
 const VentajasTline = ({ id }) => {
   return (
     <StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-      <Titulo>Ventajas del sistema Dolcker Volumen</Titulo>
+      <Titulo>Ventajas del sistema Dolcker Scala</Titulo>
       <ImageWithCaption
         src={img1}
         alt="Imagen de Ventajas 1"

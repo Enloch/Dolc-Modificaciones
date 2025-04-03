@@ -3,7 +3,7 @@ import ImageWithCaption from "../../../../components/ImageWithCaption";
 import { Titulo, Titulo2 } from "../../../../components/Titulos";
 import { COLORS } from "../../../../global/GlobalStyles";
 import StyledDisenos from "./styles";
-import img1 from "../../../../assets/images/Volumen/Diseno/Volum68.jpg";
+import img1 from "../../../../assets/images/Scala/Diseno/Volum68.jpg";
 import fondo from "../../../../assets/images/Diseno/Formato/fondo.webp";
 import indicadoresFormato from "../../../../utils/indicadoresFormato";
 import Anotacion from "../../../../components/Anotacion";

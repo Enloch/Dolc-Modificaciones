@@ -2,12 +2,11 @@ import ImageWithCaption from "../../../../components/ImageWithCaption";
 import { Titulo } from "../../../../components/Titulos";
 import StyledDolcker from "./styles";
 import { COLORS } from "../../../../global/GlobalStyles";
-import VisualizadorNota from "../../../../components/Tline/VisualizadorNota";
 import Text from "../../../../components/Text";
 import config from "../../../../configs/configDolckerTline";
 
-import Imagen1 from "../../../../assets/images/Volumen/Dolcker/Volum55.jpg";
-import Imagen2 from "../../../../assets/images/Volumen/Dolcker/Volum62.jpg";
+import Imagen1 from "../../../../assets/images/Scala/Dolcker/Volum55.jpg";
+import Imagen2 from "../../../../assets/images/Scala/Dolcker/Volum62.jpg";
 
 const DolckerTline = ({ id }) => {
   const propsVisualizador = {
@@ -20,16 +19,16 @@ const DolckerTline = ({ id }) => {
 
   return (
     <StyledDolcker id={id} backgroundColor={COLORS.gray03}>
-      <Titulo>Sistema Volumen soluciona</Titulo>
+      <Titulo>Sistema Scala soluciona</Titulo>
       <div className="dolcker-info">
         <ImageWithCaption
           src={Imagen1}
           alt="Imagen Dolcker 2"
-          caption="Sistema Volumen"
+          caption="Sistema Scala"
         />
 
         <Text>
-          DOLCKER VOLUMEN es el primer sistema de ranura continua{" "}
+          DOLCKER SCALA es el primer sistema de ranura continua{" "}
           <strong>full&body</strong>, que ofrece infinitas posibilidades de
           modulación. Combina placas de distintos espesores —11, 14 y 20 mm—
           para generar relieves, sombras y espacios entre las piezas de la

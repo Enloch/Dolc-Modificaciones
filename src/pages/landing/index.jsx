@@ -28,7 +28,7 @@ import Tline from "../../assets/images/DolckerTline/tline.jpg";
 import Matrix from "../../assets/images/DolckerMatrix/facade.jpg";
 import Decor from "../..//assets/images/DolckerMatrixDecor/decor.jpg";
 import TXT from "../../assets/images/DolckerTXT/txt.jpg";
-import Volumen from "../../assets/images/Volumen/Volum97.jpg";
+import Scala from "../../assets/images/Scala/Volum97.jpg";
 import Archiform from "../../assets/images/Archiform/Archiform27.jpg";
 import Fusion from "../../assets/images/Fusion/fusion.jpg";
 import T5 from "../../assets/images/T5/IMG_3280.jpg";
@@ -73,10 +73,10 @@ export const Landing = () => {
       link: "dolcker-t5",
     },
     {
-      src: Volumen,
-      title: "Dolcker Volumen",
+      src: Scala,
+      title: "Dolcker Scala",
       subtitle: "Solución integral full&body para fachadas y revestimientos",
-      link: "dolcker-volumen",
+      link: "dolcker-scala",
     },
     {
       src: Archiform,

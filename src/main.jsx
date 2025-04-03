@@ -10,7 +10,7 @@ import Escamas from "./pages/catalogos/Escamas";
 import T5 from "./pages/catalogos/DolckerT5";
 import DolckerArchiform from "./pages/catalogos/DolckerArchiform";
 import DolckerAlumtech from "./pages/catalogos/DolckerAlumtech";
-import DolckerVolum from "./pages/catalogos/DolckerVolum";
+import DolckerScala from "./pages/catalogos/DolckerScala";
 import DolckerStep from "./pages/catalogos/DolckerStep";
 import DolckerDetaill from "./pages/catalogos/DolckerDetaill";
 import DolckerFusion from "./pages/catalogos/DolckerFusion";
@@ -54,7 +54,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/dolcker-t5" element={<T5 />} />
         <Route path="/dolcker-archiform" element={<DolckerArchiform />} />
         <Route path="/dolcker-alumtech" element={<DolckerAlumtech />} />
-        <Route path="/dolcker-volumen" element={<DolckerVolum />} />
+        <Route path="/dolcker-scala" element={<DolckerScala />} />
         <Route path="/dolcker-step" element={<DolckerStep />} />
         <Route path="/dolcker-detaill" element={<DolckerDetaill />} />
         <Route path="/dolcker-matrix-decor" element={<DolckerMatrixDecor />} />
