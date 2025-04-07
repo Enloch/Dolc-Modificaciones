@@ -1,12 +1,10 @@
-import ListaContenidos from "../../../components/ListaContenidosMatrix";
-import { Titulo } from "../../../components/Titulos";
-import { COLORS } from "../../../global/GlobalStyles";
+import ListaContenidos from "../../../../components/ListaContenidosMatrix";
+import { Titulo } from "../../../../components/Titulos";
+import { COLORS } from "../../../../global/GlobalStyles";
 import { StyledIndice } from "./styles";
-import flecha from "../../../assets/icons/flechita.svg";
 import { BsMouse } from "react-icons/bs";
-import scrollTo from "../../../helpers/scrollTo";
-import useMenuDesplegable from "../../../hooks/useMenuDesplegable";
-import { Link } from "react-router-dom";
+import scrollTo from "../../../../helpers/scrollTo";
+import useMenuDesplegable from "../../../../hooks/useMenuDesplegable";
 import styled, { keyframes } from "styled-components";
 // Define la animación para la flecha
 const pulse = keyframes`

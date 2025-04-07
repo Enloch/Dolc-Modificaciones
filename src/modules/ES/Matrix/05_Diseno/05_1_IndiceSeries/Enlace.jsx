@@ -3,7 +3,7 @@ import {
   DISTANCES,
   TextMedium,
   TextSmall,
-} from "../../../../global/GlobalStyles";
+} from "../../../../../global/GlobalStyles";
 
 const Enlace = styled.a`
   display: flex;

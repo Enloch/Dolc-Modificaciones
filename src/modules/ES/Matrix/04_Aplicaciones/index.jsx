@@ -1,26 +1,22 @@
-import ImageWithCaption from "../../../components/ImageWithCaption";
-import { Titulo, Titulo2, Titulo3 } from "../../../components/Titulos";
-import { COLORS, DISTANCES } from "../../../global/GlobalStyles";
+import ImageWithCaption from "../../../../components/ImageWithCaption";
+import { Titulo, Titulo2 } from "../../../../components/Titulos";
+import { COLORS, DISTANCES } from "../../../../global/GlobalStyles";
 import StyledAplicaciones from "./styles";
-import img1 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-9.jpg";
-import img2 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-10.jpg";
-import logos from "../../../assets/images/DolckerMatrix/Aplicaciones/logos.gif";
-import img3 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-11.jpg";
-import img4 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-12.jpg";
-import img5 from "../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-13.jpg";
-import Cita from "../../../components/Cita";
-import ImageWithCaptionSlider from "../../../components/ImageWithCaptionSlider";
+import img1 from "../../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-9.jpg";
+import logos from "../../../../assets/images/DolckerMatrix/Aplicaciones/logos.gif";
+import img3 from "../../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-11.jpg";
+import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 const AplicacionesTline = ({ id }) => {
 	const imagesRehabilitar = import.meta.globEager(
-		"../../../assets/images/GaleriaMatrix/Rehabilitar/*"
+		"../../../../assets/images/GaleriaMatrix/Rehabilitar/*"
 	);
 	const imagesObra = import.meta.globEager(
-		"../../../assets/images/GaleriaMatrix/Obra/*"
+		"../../../../assets/images/GaleriaMatrix/Obra/*"
 	);
 	const imagesExterior = import.meta.globEager(
-		"../../../assets/images/GaleriaMatrix/Exterior/*"
+		"../../../../assets/images/GaleriaMatrix/Exterior/*"
 	);
 
 	const imagesGaleriaRehabilitar = Object.keys(imagesRehabilitar).map(

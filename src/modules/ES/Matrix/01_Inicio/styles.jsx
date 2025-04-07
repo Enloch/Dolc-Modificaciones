@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
-import Seccion from "../../../components/Seccion";
-import { TextMedium } from "../../../global/GlobalStyles";
-import { mediaQueryTablet } from "../../../styles/sizes";
+import Seccion from "../../../../components/Seccion";
+import { TextMedium } from "../../../../global/GlobalStyles";
+import { mediaQueryTablet } from "../../../../styles/sizes";
 const StyledIndice = styled(Seccion)`
   min-height: 100vh;
   .flecha-indice {

@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import StyledImageWithCaption from "../../../components/ImageWithCaption/styles";
-import Seccion from "../../../components/Seccion";
+import StyledImageWithCaption from "../../../../components/ImageWithCaption/styles";
+import Seccion from "../../../../components/Seccion";
 import {
   Column8,
   DISTANCES,
   GridLayout,
   TABLET_SIZE,
-} from "../../../global/GlobalStyles";
-import StyledAnotacion from "../../../components/Anotacion/styles";
-import StyledVisualizadorNota from "../../../components/VisualizadorNota/styles";
+} from "../../../../global/GlobalStyles";
+import StyledAnotacion from "../../../../components/Anotacion/styles";
+import StyledVisualizadorNota from "../../../../components/VisualizadorNota/styles";
 
 const StyledDolcker = styled(Seccion)`
   row-gap: ${DISTANCES.long};

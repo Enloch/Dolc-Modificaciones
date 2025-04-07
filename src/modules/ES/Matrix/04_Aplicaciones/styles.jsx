@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import StyledCita from "../../../components/Cita/styles";
-import StyledImageWithCaption from "../../../components/ImageWithCaption/styles";
-import Seccion from "../../../components/Seccion";
-import { column_5_span6 } from "../../../styles/grid";
+import StyledImageWithCaption from "../../../../components/ImageWithCaption/styles";
+import Seccion from "../../../../components/Seccion";
+import { column_5_span6 } from "../../../../styles/grid";
 
 export const StyledGaleria = styled(Seccion)`
 	.Slider {

@@ -1,12 +1,10 @@
 import styled, { css } from "styled-components";
-import Seccion from "../../../../components/Seccion";
-import { Titulo } from "../../../../components/Titulos";
+import Seccion from "../../../../../components/Seccion";
+import { Titulo } from "../../../../../components/Titulos";
 import {
-  column_5_span7,
-  column_5_span8,
   column_total,
-} from "../../../../styles/grid";
-import { mediaQueryTablet, mediaQueryMobile } from "../../../../styles/sizes";
+} from "../../../../../styles/grid";
+import { mediaQueryTablet, mediaQueryMobile } from "../../../../../styles/sizes";
 import Enlace from "./Enlace";
 
 export const StyledIndiceSeries = styled(Seccion)`

@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Titulo } from "../../../../components/Titulos";
-import { COLORS } from "../../../../global/GlobalStyles";
-import useImagesSeries from "../../../../hooks/useImagesSeriesMatrix";
+import { Titulo } from "../../../../../components/Titulos";
+import { COLORS } from "../../../../../global/GlobalStyles";
 import {
   StyledIndiceSeries,
-  StyledIndiceImagenes,
   StyledFamilia,
   ContenedorTitulos,
   ContenedorImagenes,
@@ -16,7 +14,7 @@ import {
 import {
   Familias,
   configFamilias,
-} from "../../../../configs/SeriesMatrix/configFamilias";
+} from "../../../../../configs/SeriesMatrix/configFamilias";
 const IndiceSeries = ({ id, queSerieActiva }) => {
   const [tituloActivo, setTituloActivo] = useState(Familias[0].Titulo);
   const [coleccionActiva, setColeccionActiva] = useState(null);

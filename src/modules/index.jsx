@@ -38,14 +38,14 @@ export { default as CaracteristicasG10 } from "./G10/06_Caracteristicas";
 export { default as SistemasG10 } from "./G10/07_Sistemas";
 export { default as DescargasG10 } from "./G10/08_Descargas";
 //Matrix
-export { default as IndiceMatrix } from "./Matrix/01_Inicio";
-export { default as DolckerMatrix } from "./Matrix/02_Dolcker";
-export { default as VentajasMatrix } from "./Matrix/03_Ventajas";
-export { default as AplicacionesMatrix } from "./Matrix/04_Aplicaciones";
-export { default as DisenosMatrix } from "./Matrix/05_Diseno";
-export { default as CaracteristicasMatrix } from "./Matrix/06_Caracteristicas";
-export { default as SistemasMatrix } from "./Matrix/07_Sistemas";
-export { default as DescargasMatrix } from "./Matrix/08_Descargas";
+export { default as IndiceMatrix } from "./ES/Matrix/01_Inicio";
+export { default as DolckerMatrix } from "./ES/Matrix/02_Dolcker";
+export { default as VentajasMatrix } from "./ES/Matrix/03_Ventajas";
+export { default as AplicacionesMatrix } from "./ES/Matrix/04_Aplicaciones";
+export { default as DisenosMatrix } from "./ES/Matrix/05_Diseno";
+export { default as CaracteristicasMatrix } from "./ES/Matrix/06_Caracteristicas";
+export { default as SistemasMatrix } from "./ES/Matrix/07_Sistemas";
+export { default as DescargasMatrix } from "./ES/Matrix/08_Descargas";
 //Leiva
 export { default as IndiceLeiva } from "./Leiva/01_Inicio";
 export { default as DolckerLeiva } from "./Leiva/02_Dolcker";

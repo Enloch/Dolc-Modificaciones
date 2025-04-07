@@ -1,20 +1,17 @@
 import { useState } from "react";
-import Cita from "../../../components/Cita";
-import ImageWithCaption from "../../../components/ImageWithCaption";
-import { Titulo, Titulo2 } from "../../../components/Titulos";
-import { COLORS } from "../../../global/GlobalStyles";
+import Cita from "../../../../components/Cita";
+import ImageWithCaption from "../../../../components/ImageWithCaption";
+import { Titulo, Titulo2 } from "../../../../components/Titulos";
+import { COLORS } from "../../../../global/GlobalStyles";
 import StyledDisenos from "./styles";
-import img1 from "../../../assets/images/DolckerMatrix/Diseno/catalogo3-1-14.jpg";
-import fondo from "../../../assets/images/Diseno/Formato/fondo.webp";
-import indicadoresFormato from "../../../utils/indicadoresFormato";
-import RotadorMatrix from "../../../components/Rotadores/Matrix/Rotador";
+import img1 from "../../../../assets/images/DolckerMatrix/Diseno/catalogo3-1-14.jpg";
+import RotadorMatrix from "../../../../components/Rotadores/Matrix/Rotador";
 import IndiceSeries from "./05_1_IndiceSeries";
-import Series from "./05_2_Series";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 const DisenosTline = ({ id }) => {
 	const imagesDiseño = import.meta.globEager(
-		"../../../assets/images/GaleriaMatrix/Diseño/*"
+		"../../../../assets/images/GaleriaMatrix/Diseño/*"
 	);
 	const imagenesGaleria = Object.keys(imagesDiseño).map((key) => ({
 		original: imagesDiseño[key].default,
