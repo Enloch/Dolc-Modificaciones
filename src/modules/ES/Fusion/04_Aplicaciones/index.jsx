@@ -75,39 +75,32 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-          <strong>DOLCKER FUSION</strong> representa la evolución natural del
-          prestigioso sistema
-          <strong>DOLCKER SYSTEM</strong>, concebido para brindar una libertad
-          creativa sin precedentes en el diseño de envolventes arquitectónicas.
+          FUSION es la herramienta de diseño de fachadas y envolventes
+          desarrollada para arquitectos y técnicos que buscan libertad creativa
+          con soluciones técnicas precisas.
           <br />
           <br />
-          Su mayor valor añadido radica en la posibilidad de{" "}
-          <strong>
-            combinar diferentes colecciones dentro de una misma fachada
-          </strong>
-          , permitiendo al arquitecto o prescriptor mezclar colores, texturas y
-          formatos en los porcentajes deseados. Esta capacidad de
-          personalización transforma cada proyecto en una propuesta única y
-          totalmente a medida.
+          Con Dolcker fusion puedes:
+          <br />
+          • Diseñar edificios nuevos o rehabilitar fachadas existentes,
+          adaptando los acabados a las condiciones del entorno urbano o al
+          estilo del proyecto.
+          <br />
+          • Combinar colores en porcentajes definidos por el diseñador,
+          generando composiciones únicas en cerámica, piedra o materiales
+          técnicos.
+          <br />
+          • Seleccionar texturas específicas como mate, brillo o flameada,
+          aportando un lenguaje estético acorde con la identidad del edificio.
+          <br />
+          • Elegir sistemas de anclaje personalizados: desde sistemas clip hasta
+          despieces a medida, con asesoramiento técnico incluido para garantizar
+          una instalación eficaz y duradera.
           <br />
           <br />
-          Además, esta personalización se extiende a toda la cadena logística:
-          el material se suministra ya clasificado, mezclado y combinado según
-          las especificaciones del proyecto, en palets listos para su
-          instalación directa. Esto no solo{" "}
-          <strong>agiliza la ejecución en obra</strong>, sino que también{" "}
-          <strong>optimiza los tiempos y recursos</strong>.
-          <br />
-          <br />
-          Gracias a esta innovadora solución, es posible diseñar{" "}
-          <strong>fachadas con una estética singular y diferenciadora</strong>,
-          donde el control total del diseño está en manos del proyectista,
-          posibilitando{" "}
-          <strong>
-            una expresión arquitectónica libre, sofisticada y altamente
-            eficiente
-          </strong>
-          .
+          Dolcker Fusion ofrece una solución integral para llevar el diseño
+          arquitectónico al siguiente nivel, combinando creatividad, técnica y
+          soporte profesional en cada fase del proyecto.
         </Text>
         <Cita
           cita="“El color es un poder que influye directamente en el alma”"
@@ -132,22 +125,30 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-          Una colección inspirada en los colores naturales de la tierra, que
-          toma como referencia las{" "}
-          <strong>arcillas rojas en distintos matices</strong> para crear{" "}
-          <strong>diseños orgánicos</strong>, cálidos y atemporales, en sintonía
-          con la naturaleza.
+          Fusion Terracota es una línea de superficies arquitectónicas que
+          explora la belleza atemporal de los tonos naturales de la arcilla
+          cocida. Diseñada para proyectos contemporáneos que buscan una conexión
+          con la materia prima y el equilibrio visual, esta colección se adapta
+          tanto a composiciones sobrias como expresivas.
           <br />
           <br />
-          <strong>Superficies uniformes</strong> en tonos neutros o saturados,
-          perfectas para composiciones <strong>sobrias o expresivas</strong>,
-          siempre con una estética de<strong> gran pureza visual.</strong>
+          Características principales:
+          <br />
+          • Colores tierra suaves y naturales: gamas que evocan la esencia del
+          barro, la arena, el óxido o el siena.
+          <br />
+          • Superficies de gran pureza visual, pensadas para ofrecer texturas
+          auténticas y acabados cerámicos cálidos, duraderos y versátiles.
+          <br />
+          • Posibilidad de combinar colores en proporciones personalizadas,
+          adaptando cada diseño a la identidad estética del proyecto.
+          <br />
+          • Perfecta para arquitectura contemporánea, rehabilitación o
+          integración en paisajes urbanos sensibles.
           <br />
           <br />
-          Una propuesta ideal para proyectos de{" "}
-          <strong>arquitectura contemporánea y minimalista</strong>, donde
-          predominan <strong>la limpieza formal</strong> y la{" "}
-          <strong>coherencia cromática</strong>.
+          Elige los tonos directamente de la tierra y crea composiciones que
+          hablen el lenguaje de la arquitectura honesta, natural y esencial.
         </Text>
         <Cita
           cita="“La arquitectura empieza cuando se colocan cuidadosamente dos ladrillos juntos.”"
@@ -172,33 +173,33 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-          Una colección inspirada en la fuerza del color como herramienta de
-          diseño arquitectónico.{" "}
-          <strong>
-            Superficies uniformes en una paleta variada de tonos intensos y
-            matizados
-          </strong>
-          , ideales para composiciones tanto{" "}
-          <strong>sobrias como audaces</strong>, siempre con una estética de{" "}
-          <strong>gran pureza visual</strong>.
+          Fusion Color es la herramienta creativa de la colección ARQ que
+          permite combinar colores monolíticos para obtener composiciones
+          arquitectónicas personalizadas, equilibradas o atrevidas, según la
+          identidad del proyecto.
           <br />
           <br />
-          Pensada para una{" "}
-          <strong>arquitectura contemporánea y de carácter marcado</strong>,
-          esta colección{" "}
-          <strong>
-            permite mezclar colores contrastantes o dentro de un mismo rango
-            expresivo
-          </strong>
-          , dando forma a envolventes únicas y llenas de personalidad.
+          Partiendo de una cuidada gama de monocolores, la colección ofrece la
+          posibilidad de:
+          <br />
+          • Realizar combinaciones suaves, usando tonos próximos dentro de una
+          misma gama cromática.
+          <br />
+          • Crear efectos entonados, con matices sutiles para una armonía visual
+          continua.
+          <br />
+          • Apostar por una alta dispersión cromática, jugando con colores
+          intensos o contrastados que generan impacto y carácter.
           <br />
           <br />
-          FUSION invita a liberar la imaginación y explorar nuevas formas de
-          diseñar, donde{" "}
-          <strong>
-            el color se convierte en un elemento estructural más del lenguaje
-            arquitectónico.
-          </strong>
+          Cada combinación puede definirse en la proporción exacta deseada, lo
+          que permite controlar el ritmo visual y la atmósfera del diseño, desde
+          lo más sobrio hasta lo más expresivo.
+          <br />
+          <br />
+          Fusion Color convierte la cerámica en una herramienta de lenguaje
+          arquitectónico, donde el color se estructura, se equilibra y se
+          expresa con intención.
         </Text>
         <Cita
           cita="“El diseño no es solo lo que se ve o se siente. El diseño es cómo funciona.”"
@@ -223,9 +224,32 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-          Acabados pétreos realistas con texturas naturales. Imitaciones de
-          piedra como caliza, granito o pizarra que aportan carácter,
-          durabilidad y elegancia.
+          Fusion Petra es la propuesta creativa que permite combinar distintas
+          colecciones de piedra natural para crear fachadas únicas,
+          contemporáneas y con un alto valor estético.
+          <br />
+          <br />
+          Las piedras naturales, por su origen geológico y su diversidad
+          cromática y gráfica, ofrecen una riqueza visual incomparable.
+          <br />
+          <br />
+          Fusion Petra parte de esa singularidad para ofrecer al arquitecto o
+          diseñador la posibilidad de:
+          <br />
+          • Mezclar tonos y texturas de diferentes piedras en una misma fachada.
+          <br />
+          • Diseñar composiciones elegantes, modernas y de estilo vanguardista.
+          <br />
+          • Definir la proporción exacta de cada tipo de piedra, adaptando el
+          ritmo visual y el impacto del proyecto.
+          <br />
+          • Jugar con gráficas y vetas naturales para generar efectos dinámicos
+          o sobrios, según el lenguaje del edificio.
+          <br />
+          <br />
+          Con Fusion Petra, las piedras dejan de ser un material complementario
+          para convertirse en una herramienta compositiva central, capaz de
+          construir identidad y sofisticación desde lo esencial.
         </Text>
         <Cita
           cita="“Diseñar no es hacer bonito, es hacer con sentido.”"
@@ -250,9 +274,29 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-          Permite combinar diferentes acabados superficiales (mate, brillo,
-          planeado, etc.), generando un efecto visual y táctil único gracias al
-          contraste entre texturas.
+          Fusion Textura es la herramienta creativa que permite diseñar y
+          personalizar fachadas combinando distintos acabados y colores,
+          generando composiciones con profundidad, ritmo visual y una
+          interacción dinámica con la luz.
+          <br />
+          <br />
+          A través de esta propuesta, puedes:
+          <br />
+          • Combinar texturas mate, brillo y flameado dentro de una misma
+          superficie arquitectónica.
+          <br />
+          • Aplicar cualquier acabado disponible en nuestras colecciones para
+          generar fachadas con carácter único.
+          <br />
+          • Definir tus propios porcentajes de combinación, adaptando el diseño
+          a las necesidades estéticas y técnicas del proyecto.
+          <br />
+          • Crear efectos de luz y sombra, aportando volumen, relieve y
+          sofisticación a la envolvente del edificio.
+          <br /> <br />
+          Fusion Textura ofrece libertad creativa total, elevando la fachada a
+          un lenguaje expresivo donde el acabado se convierte en materia de
+          diseño.
         </Text>
         <Cita
           cita="“Donde el color y la textura se encuentran, nace el carácter del espacio.”"
