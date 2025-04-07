@@ -410,16 +410,29 @@ export const StyledImagenTexto = styled.div`
 	padding-left: 16px;
 	overflow: hidden;
 
-	@media (min-width: 600px) {
+	@media (min-width: 0px) {
 		flex-basis: 100%;
 		flex-grow: 0;
 		max-width: 95%;
 	}
 
-	@media (min-width: 900px) {
-		flex-basis: 100%;
+	@media (min-width: 600px) {
+		flex-basis: 50%;
 		flex-grow: 0;
-		max-width: 100%;
+		max-width: 50%;
+	}
+
+	@media (min-width: 900px) {
+		flex-basis: 33.33%;
+		flex-grow: 0;
+		max-width: 33.33%;
+	}
+
+	/* iPad Pro de ~13 pulgadas */
+	@media (min-width: 1024px) and (max-width: 1366px) {
+		flex-basis: 33.33%;
+		flex-grow: 0;
+		max-width: 33.33%;
 	}
 
 	@media (min-width: 1200px) {
@@ -452,17 +465,42 @@ export const StyledImageOverlay = styled.div`
 `;
 
 export const StyledImagen = styled.img`
-	/* height: 29.17vw; */
 	width: 100%;
-	aspect-ratio: 1/1;
-	transform: scale(1.1);
 	object-fit: cover;
-	transition: transform 0.3s ease; /* Agrega una transición para suavizar el efecto de zoom */
+	transition: transform 0.3s ease;
 	margin-bottom: 16px;
-	&:hover {
-		transform: scale(
-			1.2
-		); /* Aumenta el tamaño de la imagen a 1.1 veces su tamaño original */
+
+	@media (min-width: 0px) {
+		aspect-ratio: 16/9; /* Formato panorámico más estrecho verticalmente */
+		transform: scale(1);
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	@media (min-width: 600px) {
+		aspect-ratio: 1/0.9;
+		transform: scale(1.05);
+		&:hover {
+			transform: scale(1.15);
+		}
+	}
+
+	@media (min-width: 900px) {
+		aspect-ratio: 1/1;
+		transform: scale(1.1);
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+
+	/* iPad Pro de ~13 pulgadas */
+	@media (min-width: 1024px) and (max-width: 1366px) {
+		aspect-ratio: 1/1;
+		transform: scale(1.1);
+		&:hover {
+			transform: scale(1.2);
+		}
 	}
 `;
 

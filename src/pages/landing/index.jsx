@@ -5,7 +5,6 @@ import {
   SeccionContenido,
   WrapperContenido,
   GridSeccion,
-  GridTextoCabecera,
   ContenedorSeparador,
   SeparadorHeader,
   ContenedorSubtitulos,
@@ -20,7 +19,6 @@ import {
   StyledImagenTexto,
   StyledImagen,
   StyledTexto,
-  StyledSubTexto,
 } from "./styles";
 import { Titulo } from "../../components/Titulos";
 import System from "../../assets/images/Inicio/inicio.jpg";
