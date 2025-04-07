@@ -75,9 +75,39 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-          Inspirada en la cerámica tradicional, aporta una estética cálida,
-          natural y atemporal. Ideal para proyectos que buscan una conexión
-          sensorial con lo mediterráneo.
+          <strong>DOLCKER FUSION</strong> representa la evolución natural del
+          prestigioso sistema
+          <strong>DOLCKER SYSTEM</strong>, concebido para brindar una libertad
+          creativa sin precedentes en el diseño de envolventes arquitectónicas.
+          <br />
+          <br />
+          Su mayor valor añadido radica en la posibilidad de{" "}
+          <strong>
+            combinar diferentes colecciones dentro de una misma fachada
+          </strong>
+          , permitiendo al arquitecto o prescriptor mezclar colores, texturas y
+          formatos en los porcentajes deseados. Esta capacidad de
+          personalización transforma cada proyecto en una propuesta única y
+          totalmente a medida.
+          <br />
+          <br />
+          Además, esta personalización se extiende a toda la cadena logística:
+          el material se suministra ya clasificado, mezclado y combinado según
+          las especificaciones del proyecto, en palets listos para su
+          instalación directa. Esto no solo{" "}
+          <strong>agiliza la ejecución en obra</strong>, sino que también{" "}
+          <strong>optimiza los tiempos y recursos</strong>.
+          <br />
+          <br />
+          Gracias a esta innovadora solución, es posible diseñar{" "}
+          <strong>fachadas con una estética singular y diferenciadora</strong>,
+          donde el control total del diseño está en manos del proyectista,
+          posibilitando{" "}
+          <strong>
+            una expresión arquitectónica libre, sofisticada y altamente
+            eficiente
+          </strong>
+          .
         </Text>
         <Cita
           cita="“El color es un poder que influye directamente en el alma”"
@@ -102,9 +132,22 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-          Superficies uniformes en tonos neutros o saturados, para composiciones
-          sobrias o expresivas de gran pureza visual. Perfecta para arquitectura
-          contemporánea y minimalista.
+          Una colección inspirada en los colores naturales de la tierra, que
+          toma como referencia las{" "}
+          <strong>arcillas rojas en distintos matices</strong> para crear{" "}
+          <strong>diseños orgánicos</strong>, cálidos y atemporales, en sintonía
+          con la naturaleza.
+          <br />
+          <br />
+          <strong>Superficies uniformes</strong> en tonos neutros o saturados,
+          perfectas para composiciones <strong>sobrias o expresivas</strong>,
+          siempre con una estética de<strong> gran pureza visual.</strong>
+          <br />
+          <br />
+          Una propuesta ideal para proyectos de{" "}
+          <strong>arquitectura contemporánea y minimalista</strong>, donde
+          predominan <strong>la limpieza formal</strong> y la{" "}
+          <strong>coherencia cromática</strong>.
         </Text>
         <Cita
           cita="“La arquitectura empieza cuando se colocan cuidadosamente dos ladrillos juntos.”"
@@ -129,9 +172,33 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-          Superficies uniformes en tonos neutros o saturados, para composiciones
-          sobrias o expresivas de gran pureza visual. Perfecta para arquitectura
-          contemporánea y minimalista.
+          Una colección inspirada en la fuerza del color como herramienta de
+          diseño arquitectónico.{" "}
+          <strong>
+            Superficies uniformes en una paleta variada de tonos intensos y
+            matizados
+          </strong>
+          , ideales para composiciones tanto{" "}
+          <strong>sobrias como audaces</strong>, siempre con una estética de{" "}
+          <strong>gran pureza visual</strong>.
+          <br />
+          <br />
+          Pensada para una{" "}
+          <strong>arquitectura contemporánea y de carácter marcado</strong>,
+          esta colección{" "}
+          <strong>
+            permite mezclar colores contrastantes o dentro de un mismo rango
+            expresivo
+          </strong>
+          , dando forma a envolventes únicas y llenas de personalidad.
+          <br />
+          <br />
+          FUSION invita a liberar la imaginación y explorar nuevas formas de
+          diseñar, donde{" "}
+          <strong>
+            el color se convierte en un elemento estructural más del lenguaje
+            arquitectónico.
+          </strong>
         </Text>
         <Cita
           cita="“El diseño no es solo lo que se ve o se siente. El diseño es cómo funciona.”"
