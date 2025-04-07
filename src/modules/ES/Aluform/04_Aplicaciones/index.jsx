@@ -10,7 +10,7 @@ import img5 from "../../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3
 import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
-const AplicacionesTline = ({ id }) => {
+const Aplicaciones = ({ id }) => {
 	const imagesRehabilitar = import.meta.globEager(
 		"../../../../assets/images/GaleriaMatrix/Rehabilitar/*"
 	);
@@ -52,8 +52,8 @@ const AplicacionesTline = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="Los detalles no son los detalles. Los detalles son el diseño."
-					author="Charles Eames "
+					cita="La piel del edificio no solo lo protege, lo define."
+					author="— Jean Nouvel"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
 				/>
@@ -71,8 +71,8 @@ const AplicacionesTline = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="Lo funcional es mejor que lo bello, porque lo que funciona bien permanece en el tiempo."
-					author="Ray Eames"
+					cita="El metal no es frío cuando se convierte en forma, luz y ritmo."
+					author="— Adaptación de Tadao Ando"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
 				/>
@@ -105,8 +105,8 @@ const AplicacionesTline = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="El espacio no tiene sentido sin luz. Un edificio habla a través del silencio de la percepción orquestada por la luz."
-					author="Steven Holl"
+					cita="Diseñar con aluminio es esculpir con precisión industrial."
+					author="— Autor desconocido"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
 				/>
@@ -135,7 +135,6 @@ const AplicacionesTline = ({ id }) => {
 				<ImageWithCaption
 					src={img5}
 					alt="Imagen de Aplicaciones 1"
-					//   caption='Jorge dará la referencia o imágen.'
 					columnSpan="6"
 				/>
 			</StyledAplicaciones>
@@ -158,4 +157,4 @@ const AplicacionesTline = ({ id }) => {
 	);
 };
 
-export default AplicacionesTline;
+export default Aplicaciones;

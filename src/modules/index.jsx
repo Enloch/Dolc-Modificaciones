@@ -137,3 +137,12 @@ export { default as DisenosFusion } from "./ES/Fusion/05_Diseno";
 export { default as CaracteristicasFusion } from "./ES/Fusion/06_Caracteristicas";
 export { default as SistemasFusion } from "./ES/Fusion/07_Sistemas";
 export { default as DescargasFusion } from "./ES/Fusion/08_Descargas";
+//Aluform
+export { default as IndiceAluform } from "./ES/Aluform/01_Inicio";
+export { default as DolckerAluform } from "./ES/Aluform/02_Dolcker";
+export { default as VentajasAluform } from "./ES/Aluform/03_Ventajas";
+export { default as AplicacionesAluform } from "./ES/Aluform/04_Aplicaciones";
+export { default as DisenosAluform } from "./ES/Aluform/05_Diseno";
+export { default as CaracteristicasAluform } from "./ES/Aluform/06_Caracteristicas";
+export { default as SistemasAluform } from "./ES/Aluform/07_Sistemas";
+export { default as DescargasAluform } from "./ES/Aluform/08_Descargas";

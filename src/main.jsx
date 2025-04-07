@@ -14,6 +14,7 @@ import DolckerScala from "./pages/catalogos/DolckerScala";
 import DolckerStep from "./pages/catalogos/DolckerStep";
 import DolckerDetaill from "./pages/catalogos/DolckerDetaill";
 import DolckerFusion from "./pages/catalogos/DolckerFusion";
+import DolckerAluform from "./pages/catalogos/DolckerAluform";
 // import FontStyles from './global/FontStyles'
 import "./assets/fonts/fonts.css";
 import GlobalStyles from "./global/GlobalStyles";
@@ -58,6 +59,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/dolcker-step" element={<DolckerStep />} />
         <Route path="/dolcker-detaill" element={<DolckerDetaill />} />
         <Route path="/dolcker-matrix-decor" element={<DolckerMatrixDecor />} />
+        <Route path="/dolcker-aluform" element={<DolckerAluform />} />
         <Route path="/dolcker-fusion" element={<DolckerFusion />} />
         <Route path="/dolcker-G10" element={<DolckerG10 />} />
         <Route path="/dolcker-escamas" element={<Escamas />} />

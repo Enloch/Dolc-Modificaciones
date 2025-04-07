@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Inicio",
+    "link": "/"
+  },
+  {
+    "title": "Dolcker Aluform soluciona",
+    "link": "#dolcker"
+  },
+  {
+    "title": "Ventajas del sistema Dolcker Aluform",
+    "link": "#ventajas"
+  },
+  {
+    "title": "Aplicaciones",
+    "subList": [
+      {
+        "title": "Aplicaciones",
+        "link": "#aplicaciones"
+      },
+      {
+        "title": "Rehabilitación",
+        "link": "#rehabilitacion"
+      },
+      {
+        "title": "Obra nueva",
+        "subList": [
+          {
+            "title": "Obra nueva",
+            "link": "#obra-nueva"
+          },
+          {
+            "title": "Exteriores",
+            "link": "#exteriores"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Diseño",
+    "subList": [
+      {
+        "title": "Diseño",
+        "link": "#diseno"
+      },
+      {
+        "title": "Colecciones",
+        "link": "#colecciones"
+      },
+      {
+        "title": "Configurador",
+        "link": "#configurador"
+      }
+    ]
+  },
+  {
+    "title": "Características",
+    "subList": [
+      {
+        "title": "Características técnicas",
+        "link": "#caracteristicas-especiales"
+      }
+    ]
+  }
+]
