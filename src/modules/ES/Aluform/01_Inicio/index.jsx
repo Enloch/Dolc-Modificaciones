@@ -38,7 +38,7 @@ const Indice = ({ indiceRef }) => {
 	return (
 		<>
 			<StyledIndice backgroundColor={COLORS.gray06} ref={indiceRef} id="indice">
-				<Titulo color={COLORS.gray01}>Dolcker MATRIX FACADE</Titulo>
+				<Titulo color={COLORS.gray01}>Dolcker Aluform</Titulo>
 				<ListaContenidos />
 				<AnimatedArrow
 					size={32}
