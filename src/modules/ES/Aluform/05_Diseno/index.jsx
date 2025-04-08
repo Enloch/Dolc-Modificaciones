@@ -4,14 +4,14 @@ import ImageWithCaption from "../../../../components/ImageWithCaption";
 import { Titulo, Titulo2 } from "../../../../components/Titulos";
 import { COLORS } from "../../../../global/GlobalStyles";
 import StyledDisenos from "./styles";
-import img1 from "../../../../assets/images/DolckerMatrix/Diseno/catalogo3-1-14.jpg";
+import img1 from "../../../../assets/images/Aluform/Diseno/IMG_7666.jpg";
 import RotadorMatrix from "../../../../components/Rotadores/Matrix/Rotador";
 import IndiceSeries from "./05_1_IndiceSeries";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 const DisenosTline = ({ id }) => {
 	const imagesDiseño = import.meta.globEager(
-		"../../../../assets/images/GaleriaMatrix/Diseño/*"
+		"../../../../assets/images/Aluform/Galeria/Diseño/*"
 	);
 	const imagenesGaleria = Object.keys(imagesDiseño).map((key) => ({
 		original: imagesDiseño[key].default,

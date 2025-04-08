@@ -2,23 +2,23 @@ import ImageWithCaption from "../../../../components/ImageWithCaption";
 import { Titulo, Titulo2 } from "../../../../components/Titulos";
 import { COLORS, DISTANCES } from "../../../../global/GlobalStyles";
 import StyledAplicaciones from "./styles";
-import img1 from "../../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-9.jpg";
+import img1 from "../../../../assets/images/Aluform/Aplicaciones/IMG_6153.jpg";
 import logos from "../../../../assets/images/DolckerMatrix/Aplicaciones/logos.gif";
-import img3 from "../../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-11.jpg";
-import img5 from "../../../../assets/images/DolckerMatrix/Aplicaciones/catalogo3-1-13.jpg";
+import img3 from "../../../../assets/images/Aluform/Aplicaciones/IMG_7658.jpg";
+import img5 from "../../../../assets/images/Aluform/Aplicaciones/IMG_9927.jpg";
 
 import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 const Aplicaciones = ({ id }) => {
 	const imagesRehabilitar = import.meta.globEager(
-		"../../../../assets/images/GaleriaMatrix/Rehabilitar/*"
+		"../../../../assets/images/Aluform/Galeria/Rehabilitacion/*"
 	);
 	const imagesObra = import.meta.globEager(
-		"../../../../assets/images/GaleriaMatrix/Obra/*"
+		"../../../../assets/images/Aluform/Galeria/Obra/*"
 	);
 	const imagesExterior = import.meta.globEager(
-		"../../../../assets/images/GaleriaMatrix/Exterior/*"
+		"../../../../assets/images/Aluform/Galeria/Exteriores/*"
 	);
 
 	const imagesGaleriaRehabilitar = Object.keys(imagesRehabilitar).map(

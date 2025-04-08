@@ -9,19 +9,47 @@ import {
 	GridLayout,
 	TABLET_SIZE,
 	MOBILE_SIZE,
+	Column6
 } from "../../../../global/GlobalStyles";
 import { column_5_span7, column_5_span6 } from "../../../../styles/grid";
 
 export const StyledGaleria = styled(Seccion)`
-	.Slider {
-		${column_5_span6}
-	}
+  .Slider {
+    ${Column6}
+  }
+  @media (max-width: ${TABLET_SIZE}) {
+    .Slider {
+      ${Column6}
+    }
+  }
+  @media (max-width: ${MOBILE_SIZE}) {
+    .Slider {
+      ${Column6}
+    }
+  }
 `;
 export const StyledSlider = styled.div`
-	.image-gallery-slide .image-gallery-image {
-		max-width: 100%;
-		object-fit: contain;
-	}
+  .image-gallery-slide .image-gallery-image {
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+  .image-gallery-icon:hover {
+    color: ${COLORS.gray06};
+  }
+  
+  /* Maintain image proportions in fullscreen mode */
+  .image-gallery-fullscreen-button .image-gallery-fullscreen-button {
+    z-index: 5;
+  }
+  
+  .fullscreen .image-gallery-slide .image-gallery-image {
+    object-fit: contain;
+    max-height: 100vh;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+  }
 `;
 const StyledDisenos = styled(Seccion)`
 	row-gap: ${DISTANCES.small};

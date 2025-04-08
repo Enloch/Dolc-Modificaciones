@@ -2,138 +2,112 @@ import ImageWithCaption from "../../../../components/ImageWithCaption";
 import { Titulo } from "../../../../components/Titulos";
 import { COLORS } from "../../../../global/GlobalStyles";
 import StyledCaracteristicas from "./styles";
-import caracter1 from "../../../../assets/images/DolckerMatrix/Caracteristicas/caracteristicas.jpg";
+import caracter1 from "../../../../assets/images/Aluform/Caracteristicas/IMG_7657.jpg";
 import Text from "../../../../components/Text";
 
 const CaracteristicasTline = ({ id }) => {
-	return (
-		<>
-			<StyledCaracteristicas id={id[0]} backgroundColor={COLORS.gray02}>
-				<Titulo>Características técnicas</Titulo>
-				<ImageWithCaption
-					src={caracter1}
-					alt="Render por parte de 7475"
-					caption=""
-					columnSpan="6"
-				/>
-				<Text>
-					<strong>Resistencia y durabilidad</strong>
-					<br />
-					<br />
-					El <strong>aluminio extrusionado </strong>es conocido por su gran
-					resistencia estructural, lo que le{" "}
-					<strong>
-						permite soportar cargas y esfuerzos físicos sin deformarse.
-					</strong>
-					Esto lo convierte en un material ideal para aplicaciones en la
-					industria de la construcción, ya que puede resistir condiciones
-					adversas, como cambios de temperatura, humedad y corrosión.
-					<br />
-					<br />
-					Además de su resistencia, el aluminio extrusionado destaca por su
-					durabilidad a largo plazo. Su
-					<strong> capacidad para resistir la oxidación y la corrosión </strong>
-					garantiza una vida útil prolongada, lo que
-					<strong> reduce los costos de mantenimiento y reemplazo.</strong>
-					<br />
-					<br />
-				</Text>
-				<Text>
-					<strong>Variedad de formas y perfiles</strong>
-					<br />
-					<br />
-					El<strong> proceso de extrusión del aluminio </strong>permite obtener
-					una amplia variedad de formas y
-					<strong> perfiles de aluminio extrusionado.</strong>
-					<br />
-					<br />
-					Las piezas de aluminio extrusionado que se obtienen son de un
-					<strong> gran resistencia </strong>, con una forma perfecta y con un
-					riesgo muy bajo de salir de fábrica con imperfecciones o errores.
-					<br />
-					<br />
-					Desde barras y tubos hasta perfiles complejos y personalizados,
-					<strong> el aluminio extrusionado ofrece versatilidad</strong> para
-					adaptarse a diferentes necesidades de diseño y aplicaciones
-					específicas
-					<br />
-					<br />
-					Estos perfiles se pueden utilizar en la fabricación de{" "}
-					<strong>
-						persianas de aluminio extrusionado autoblocantes de seguridad
-					</strong>
-					, fachadas, entre otros. Los{" "}
-					<strong>
-						perfiles extrusionados de aluminio permiten dar flexibilidad y crear
-						soluciones a medida
-					</strong>
-					, adaptadas a los requisitos técnicos y estéticos de cada proyecto.
-					<br />
-					<br />
-				</Text>
-				<Text>
-					<strong>Ligero y resistente</strong>
-					<br />
-					<br />
-					En primer lugar, una de las principales propiedades del aluminio es su
-					ligereza. Esto no impide que ajustando la composición de su aleación
-					se puede lograr una gran resistencia y como resultado puede adaptarse
-					a casi cualquier aplicación.
-					<br />
-					<br />
-				</Text>
-				<Text>
-					<strong>Mantenimiento 0</strong>
-					<br />
-					<br />
-					Mediante el proceso de acabado del aluminio, bien sea anodizado o
-					lacado, se confiere una protección importante frente a los agentes
-					agresivos atmosféricos. También se consiguen posibilidades decorativas
-					adaptadas al entorno o el diseño de las estructuras que lo componen.
-					Por tanto no requiere de mantenimiento específico, lo que conlleva un
-					ahorro de costes considerable.
-					<br />
-					<br />
-				</Text>
-				<Text>
-					<strong>Reciclable</strong>
-					<br />
-					<br />
-					El aluminio es un material totalmente reciclable y contribuye a
-					reducir el consumo energético en un 95%. Las características del
-					material reciclado no difieren de las del material proveniente del
-					mineral. Esta  alta capacidad de reciclaje tiene un valor de
-					sostenibilidad pera el medio ambiente.
-					<br />
-					<br />
-				</Text>
-				<Text>
-					<strong>Variedad de acabados</strong>
-					<br />
-					<br />
-					El aluminio es el material ideal para la creación de conceptos de
-					edificación contemporáneos. Tanto si se opta por un acabado de la
-					superficie lacado o anodizado, disfrutará de la belleza duradera de
-					las ventanas sin tener que invertir en pintura ni en barniz
-					<br />
-					<br />
-				</Text>
-				<Text>
-					<strong>Resistente a la corrosión</strong>
-					<br />
-					<br />
-					De forma natural, el aluminio genera una capa de óxido autoprotectora
-					que lo hace muy resistente a la corrosión.
-					<br />
-					<br />
-					Mediante procesos industriales controlados  se pueden aplicar
-					diferentes tipos de tratamiento de superficie para conseguir mejorar
-					aún más esta propiedad.
-				</Text>
-			</StyledCaracteristicas>
-			{/* <StyledCaracteristicas id={id[1]} backgroundColor={COLORS.gray02}> */}
-			{/* <Titulo>Datos técnicos</Titulo> */}
-			{/* <ImageWithCaption
+  return (
+    <>
+      <StyledCaracteristicas id={id[0]} backgroundColor={COLORS.gray02}>
+        <Titulo>Características técnicas</Titulo>
+        <ImageWithCaption
+          src={caracter1}
+          alt="Render por parte de 7475"
+          caption=""
+          columnSpan="6"
+        />
+        <Text>
+          <strong>Resistencia y Durabilidad</strong>
+          <br />
+          <br />
+          El aluminio, al ser plegado y posteriormente lacado, adquiere una
+          estructura robusta capaz de soportar cargas y esfuerzos físicos sin
+          deformarse. Su{" "}
+          <strong>
+            resistencia a condiciones climáticas adversas, como cambios de
+            temperatura, humedad y corrosión
+          </strong>
+          , lo convierte en un material ideal para aplicaciones exteriores. El
+          lacado añade una capa protectora que mejora aún más su resistencia a
+          la corrosión y a la abrasión, garantizando una{" "}
+          <strong>vida útil prolongada</strong> con mínimos costos de
+          mantenimiento.
+        </Text>
+        <Text>
+          <strong>Versatilidad en Formas y Diseños</strong>
+          <br />
+          <br />
+          El proceso de plegado permite conformar el aluminio en una{" "}
+          <strong>amplia variedad de formas y perfiles</strong>, adaptándose a
+          diseños específicos y necesidades arquitectónicas particulares. Esta
+          flexibilidad es especialmente útil en la creación de fachadas modernas
+          y elementos decorativos personalizados.
+        </Text>
+        <Text>
+          <strong>Ligereza y Resistencia</strong>
+          <br />
+          <br />
+          Una de las principales ventajas del aluminio es su baja densidad, lo
+          que lo hace significativamente más ligero que otros metales. Esta
+          ligereza facilita su manipulación e instalación,{" "}
+          <strong>
+            reduciendo los tiempos y costos en proyectos de construcción
+          </strong>
+          . A pesar de su peso reducido, el aluminio plegado ofrece una{" "}
+          <strong>resistencia mecánica notable</strong>, adecuada para diversas
+          aplicaciones estructurales.
+        </Text>
+        <Text>
+          <strong>Mantenimiento Reducido</strong>
+          <br />
+          <br />
+          El acabado lacado del aluminio proporciona una superficie que resiste
+          eficazmente la acumulación de suciedad y la acción de agentes
+          atmosféricos. Esto se traduce en un{" "}
+          <strong>mantenimiento mínimo</strong>, generalmente limitado a
+          limpiezas periódicas con agua y detergentes suaves, sin necesidad de
+          tratamientos adicionales.
+        </Text>
+        <Text>
+          <strong>Sostenibilidad y Reciclabilidad</strong>
+          <br />
+          <br />
+          El aluminio es un material <strong>100% reciclable</strong> sin
+          pérdida de sus propiedades originales. Su reciclaje consume solo el 5%
+          de la energía requerida para producir aluminio primario, contribuyendo
+          significativamente a la{" "}
+          <strong>
+            reducción del impacto ambiental y promoviendo prácticas de
+            construcción sostenibles.
+          </strong>
+        </Text>
+        <Text>
+          <strong>Variedad de Acabados Estéticos</strong>
+          <br />
+          <br />
+          El proceso de lacado ofrece una{" "}
+          <strong>amplia gama de colores y texturas</strong>, permitiendo
+          personalizar la apariencia del aluminio según las preferencias
+          estéticas del proyecto. Esto facilita su integración en diferentes
+          estilos arquitectónicos, desde los más tradicionales hasta los más
+          vanguardistas.
+        </Text>
+        <Text>
+          <strong>Resistencia a la Corrosión</strong>
+          <br />
+          <br />
+          De forma natural, el aluminio desarrolla una capa de óxido que lo
+          protege contra la corrosión. El lacado potencia esta propiedad,
+          proporcionando una barrera adicional que lo hace{" "}
+          <strong>
+            especialmente adecuado para entornos húmedos o salinos
+          </strong>
+          , como zonas costeras.
+        </Text>
+      </StyledCaracteristicas>
+      {/* <StyledCaracteristicas id={id[1]} backgroundColor={COLORS.gray02}> */}
+      {/* <Titulo>Datos técnicos</Titulo> */}
+      {/* <ImageWithCaption
           src={caracter1}
           alt='Imágenes técnicas (Jorge)'
           caption=''
@@ -147,10 +121,10 @@ const CaracteristicasTline = ({ id }) => {
           columnSpan='6'
           isGray
         /> */}
-			{/* <Text>
+      {/* <Text>
           <strong>Textos (Jorge)</strong>
         </Text> */}
-			{/* <ImageWithCaption
+      {/* <ImageWithCaption
           src={caracter1}
           alt='Imágenes técnicas (Jorge)'
           caption=''
@@ -176,10 +150,10 @@ const CaracteristicasTline = ({ id }) => {
           columnSpan='6'
           isGray
         /> */}
-			{/* <Text>
+      {/* <Text>
           <strong>Textos (Jorge)</strong>
         </Text> */}
-			{/* <ImageWithCaption
+      {/* <ImageWithCaption
           src={caracter1}
           alt='Imágenes técnicas (Jorge)'
           caption=''
@@ -191,9 +165,9 @@ const CaracteristicasTline = ({ id }) => {
           caption=''
           columnSpan='6'
         /> */}
-			{/* </StyledCaracteristicas> */}
-		</>
-	);
+      {/* </StyledCaracteristicas> */}
+    </>
+  );
 };
 
 export default CaracteristicasTline;
