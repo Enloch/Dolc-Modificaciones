@@ -75,12 +75,12 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-          FUSION es la herramienta de diseño de fachadas y envolventes
+          Fusión es la herramienta de diseño de fachadas y envolventes
           desarrollada para arquitectos y técnicos que buscan libertad creativa
           con soluciones técnicas precisas.
           <br />
           <br />
-          Con Dolcker fusion puedes:
+          Con Dolcker Fusión puedes:
           <br />
           • Diseñar edificios nuevos o rehabilitar fachadas existentes,
           adaptando los acabados a las condiciones del entorno urbano o al
@@ -98,7 +98,7 @@ const AplicacionesTline = ({ id }) => {
           una instalación eficaz y duradera.
           <br />
           <br />
-          Dolcker Fusion ofrece una solución integral para llevar el diseño
+          Dolcker Fusión ofrece una solución integral para llevar el diseño
           arquitectónico al siguiente nivel, combinando creatividad, técnica y
           soporte profesional en cada fase del proyecto.
         </Text>
@@ -110,7 +110,7 @@ const AplicacionesTline = ({ id }) => {
         />
       </StyledGaleria>
       <StyledGaleria id={id[1]} backgroundColor={COLORS.gray01}>
-        <Titulo3 color={COLORS.gray08}>- Terracota</Titulo3>
+        <Titulo3 color={COLORS.gray08}>- Fusión Terracota</Titulo3>
         <StyledSlider className="Slider">
           <ImageGallery
             items={imagesGaleriaTerracota}
@@ -125,7 +125,7 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-          Fusion Terracota es una línea de superficies arquitectónicas que
+        Fusión Terracota es una línea de superficies arquitectónicas que
           explora la belleza atemporal de los tonos naturales de la arcilla
           cocida. Diseñada para proyectos contemporáneos que buscan una conexión
           con la materia prima y el equilibrio visual, esta colección se adapta
@@ -158,7 +158,7 @@ const AplicacionesTline = ({ id }) => {
         />
       </StyledGaleria>
       <StyledGaleria id={id[2]} backgroundColor={COLORS.gray01}>
-        <Titulo3 color={COLORS.gray08}>- Color</Titulo3>
+        <Titulo3 color={COLORS.gray08}>- Fusión Color</Titulo3>
         <StyledSlider className="Slider">
           <ImageGallery
             items={imagesGaleriaColor}
@@ -173,7 +173,7 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-          Fusion Color es la herramienta creativa de la colección ARQ que
+        Fusión Color es la herramienta creativa de la colección ARQ que
           permite combinar colores monolíticos para obtener composiciones
           arquitectónicas personalizadas, equilibradas o atrevidas, según la
           identidad del proyecto.
@@ -197,7 +197,7 @@ const AplicacionesTline = ({ id }) => {
           lo más sobrio hasta lo más expresivo.
           <br />
           <br />
-          Fusion Color convierte la cerámica en una herramienta de lenguaje
+          Fusión Color convierte la cerámica en una herramienta de lenguaje
           arquitectónico, donde el color se estructura, se equilibra y se
           expresa con intención.
         </Text>
@@ -209,7 +209,7 @@ const AplicacionesTline = ({ id }) => {
         />
       </StyledGaleria>
       <StyledGaleria id={id[3]} backgroundColor={COLORS.gray01}>
-        <Titulo3 color={COLORS.gray08}>- Petra</Titulo3>
+        <Titulo3 color={COLORS.gray08}>- Fusión Petra</Titulo3>
         <StyledSlider className="Slider">
           <ImageGallery
             items={imagesGaleriaPetra}
@@ -224,7 +224,7 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-          Fusion Petra es la propuesta creativa que permite combinar distintas
+          Fusión Petra es la propuesta creativa que permite combinar distintas
           colecciones de piedra natural para crear fachadas únicas,
           contemporáneas y con un alto valor estético.
           <br />
@@ -233,7 +233,7 @@ const AplicacionesTline = ({ id }) => {
           cromática y gráfica, ofrecen una riqueza visual incomparable.
           <br />
           <br />
-          Fusion Petra parte de esa singularidad para ofrecer al arquitecto o
+          Fusión Petra parte de esa singularidad para ofrecer al arquitecto o
           diseñador la posibilidad de:
           <br />
           • Mezclar tonos y texturas de diferentes piedras en una misma fachada.
@@ -247,7 +247,7 @@ const AplicacionesTline = ({ id }) => {
           o sobrios, según el lenguaje del edificio.
           <br />
           <br />
-          Con Fusion Petra, las piedras dejan de ser un material complementario
+          Con Fusión Petra, las piedras dejan de ser un material complementario
           para convertirse en una herramienta compositiva central, capaz de
           construir identidad y sofisticación desde lo esencial.
         </Text>
@@ -259,7 +259,7 @@ const AplicacionesTline = ({ id }) => {
         />
       </StyledGaleria>
       <StyledGaleria id={id[4]} backgroundColor={COLORS.gray01}>
-        <Titulo3 color={COLORS.gray08}>- Textura</Titulo3>
+        <Titulo3 color={COLORS.gray08}>- Fusión Textura</Titulo3>
         <StyledSlider className="Slider">
           <ImageGallery
             items={imagesGaleriaTextura}
@@ -274,7 +274,7 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-          Fusion Textura es la herramienta creativa que permite diseñar y
+          Fusión Textura es la herramienta creativa que permite diseñar y
           personalizar fachadas combinando distintos acabados y colores,
           generando composiciones con profundidad, ritmo visual y una
           interacción dinámica con la luz.
@@ -294,7 +294,7 @@ const AplicacionesTline = ({ id }) => {
           • Crear efectos de luz y sombra, aportando volumen, relieve y
           sofisticación a la envolvente del edificio.
           <br /> <br />
-          Fusion Textura ofrece libertad creativa total, elevando la fachada a
+          Fusión Textura ofrece libertad creativa total, elevando la fachada a
           un lenguaje expresivo donde el acabado se convierte en materia de
           diseño.
         </Text>
