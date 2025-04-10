@@ -18,8 +18,53 @@ import ranurado14 from "../../../../assets/images/Diseno/Espesores/ranurado14.we
 import ranurado20 from "../../../../assets/images/Diseno/Espesores/ranurado20.webp";
 import VisualizadorDesplazador from "../../../../components/VisualizadorDesplazador";
 import IndiceSeries from "./06_1_IndiceSeries";
+import { useState, useEffect } from "react";
 
 const Disenos = ({ id }) => {
+  const [selectedSerie, setSelectedSerie] = useState(null);
+
+  // Efecto para manejar los cambios en la URL (hash)
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.substring(1); // Eliminar el # del hash
+      if (hash && isValidSerie(hash)) {
+        setSelectedSerie(hash);
+      } else {
+        setSelectedSerie(null);
+      }
+    };
+
+    // Verificar el hash inicial al cargar la página
+    handleHashChange();
+
+    // Escuchar cambios en el hash
+    window.addEventListener("hashchange", handleHashChange);
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
+
+  // Función para validar si una serie es válida
+  const isValidSerie = (serie) => {
+    const validSeries = [
+      "basalt",
+      "dolm",
+      "dquartz",
+      "marble",
+      "stone",
+      "quarcity",
+      "crete",
+      "portland",
+      "space",
+      "tzment",
+      "wood",
+      "terrazo",
+      "arquitect",
+      "volumen",
+    ];
+    return validSeries.includes(serie);
+  };
+
   const propsFormato = {
     anotacion: {
       text: "Pulsa en el punto para ver las posibilidades de formato",
@@ -38,13 +83,13 @@ const Disenos = ({ id }) => {
         <Titulo>Diseño</Titulo>
         <ImageWithCaption
           src={img1}
-          alt='Imagen de Diseños 1'
-          caption='DOLCKER &CLIP. Do&Dolm Grafito'
-          columnSpan='6'
+          alt="Imagen de Diseños 1"
+          caption="DOLCKER &CLIP. Do&Dolm Grafito"
+          columnSpan="6"
         />
         <Cita
-          cita='“La simplicidad llevada al extremo, se convierte en elegancia.”'
-          author='John Franklin'
+          cita="“La simplicidad llevada al extremo, se convierte en elegancia.”"
+          author="John Franklin"
           colorAutor={COLORS.gray05}
         />
       </StyledDisenos>
@@ -57,20 +102,20 @@ const Disenos = ({ id }) => {
         <Titulo2>Acabados</Titulo2>
         <Anotaciones>
           <Anotacion
-            type='normal'
-            text='Pulsa en el punto para ver todas las posibilidades de piezas especiales'
+            type="normal"
+            text="Pulsa en el punto para ver todas las posibilidades de piezas especiales"
           />
           <Anotacion
-            type='swipe'
-            text='Desliza con el ratón o el dedo para apreciar la textura'
+            type="swipe"
+            text="Desliza con el ratón o el dedo para apreciar la textura"
           />
         </Anotaciones>
         <VisualizadorDesplazador config={configAcabados} />
       </StyledDisenos>
       <StyledDisenos id={id[4]} backgroundColor={COLORS.gray01} isEspesores>
         <Titulo2>Espesores</Titulo2>
-        <div className='espesor espesor-1'>
-          <img src={ranurado11} alt='' />
+        <div className="espesor espesor-1">
+          <img src={ranurado11} alt="" />
           <ul>
             <strong>TC 11 / 11 mm.</strong>
             <li>Suelo</li>
@@ -78,8 +123,8 @@ const Disenos = ({ id }) => {
             <li>Fachada</li>
           </ul>
         </div>
-        <div className='espesor espesor-2'>
-          <img src={ranurado14} alt='' />
+        <div className="espesor espesor-2">
+          <img src={ranurado14} alt="" />
           <ul>
             <strong>TC 14 / 14 mm.</strong>
             <li>Suelo</li>
@@ -88,8 +133,8 @@ const Disenos = ({ id }) => {
             <li>Recerco</li>
           </ul>
         </div>
-        <div className='espesor espesor-3'>
-          <img src={ranurado20} alt='' />
+        <div className="espesor espesor-3">
+          <img src={ranurado20} alt="" />
           <ul>
             <strong>TC 20 / 20 mm.</strong>
             <li>Suelo técnico</li>
@@ -106,35 +151,39 @@ const Disenos = ({ id }) => {
         <Titulo2>Piezas especiales</Titulo2>
         <Anotaciones>
           <Anotacion
-            type='normal'
-            text='Pulsa en el punto para ver todas las posibilidades de piezas especiales'
+            type="normal"
+            text="Pulsa en el punto para ver todas las posibilidades de piezas especiales"
           />
           <Anotacion
-            type='swipe'
-            text='Desliza con el ratón o el dedo para rotar la imagen 360º'
+            type="swipe"
+            text="Desliza con el ratón o el dedo para rotar la imagen 360º"
           />
         </Anotaciones>
         <VisualizadorRotador config={config} />
       </StyledDisenos>
       <IndiceSeries id={id[6]} />
-      <Series
-        ids={[
-          "basalt",
-          "dolm",
-          "dquartz",
-          "marble",
-          "stone",
-          "quarcity",
-          "crete",
-          "portland",
-          "space",
-          "tzment",
-          "wood",
-          "terrazo",
-          "arquitect",
-          "volumen",
-        ]}
-      />
+      {selectedSerie && (
+        <Series
+          key={selectedSerie}
+          ids={[
+            "basalt",
+            "dolm",
+            "dquartz",
+            "marble",
+            "stone",
+            "quarcity",
+            "crete",
+            "portland",
+            "space",
+            "tzment",
+            "wood",
+            "terrazo",
+            "arquitect",
+            "volumen",
+          ]}
+          selectedSerie={selectedSerie}
+        />
+      )}
     </>
   );
 };

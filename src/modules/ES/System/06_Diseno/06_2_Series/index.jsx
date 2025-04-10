@@ -27,7 +27,7 @@ import Anotaciones from '../../../../../components/Anotacion/Anotaciones'
 import { useRef } from 'react'
 import createPDF from '../../../../../utils/createPDF'
 
-const Series = ({ ids }) => {
+const Series = ({ ids, selectedSerie }) => {
     const [fullScreenSrc, setFullScreenSrc] = useState('')
     const [fullScreenTitulo, setFullScreenTitulo] = useState('')
     const visRef = useRef(null)
@@ -58,6 +58,161 @@ const Series = ({ ids }) => {
         },
     }
 
+    // Función para renderizar la serie correspondiente
+    const renderSerie = (id) => {
+        switch (id) {
+            case 'basalt':
+                return (
+                    <Serie
+                        id={id}
+                        config={configBASALT}
+                        setFullScreenSrc={setFullScreenSrc}
+                        setFullScreenTitulo={setFullScreenTitulo}
+                        backgroundColor={COLORS.gray01}
+                    />
+                )
+            case 'dolm':
+                return (
+                    <Serie
+                        id={id}
+                        config={configDOLM}
+                        setFullScreenSrc={setFullScreenSrc}
+                        setFullScreenTitulo={setFullScreenTitulo}
+                        backgroundColor={COLORS.gray01}
+                    />
+                )
+            case 'dquartz':
+                return (
+                    <Serie
+                        id={id}
+                        config={configQUARTZ}
+                        setFullScreenSrc={setFullScreenSrc}
+                        setFullScreenTitulo={setFullScreenTitulo}
+                        backgroundColor={COLORS.gray01}
+                    />
+                )
+            case 'marble':
+                return (
+                    <Serie
+                        id={id}
+                        config={configMARBLE}
+                        setFullScreenSrc={setFullScreenSrc}
+                        setFullScreenTitulo={setFullScreenTitulo}
+                        backgroundColor={COLORS.gray01}
+                    />
+                )
+            case 'stone':
+                return (
+                    <Serie
+                        id={id}
+                        config={configSTONE}
+                        setFullScreenSrc={setFullScreenSrc}
+                        setFullScreenTitulo={setFullScreenTitulo}
+                        backgroundColor={COLORS.gray01}
+                    />
+                )
+            case 'quarcity':
+                return (
+                    <Serie
+                        id={id}
+                        config={configQUARCITY}
+                        setFullScreenSrc={setFullScreenSrc}
+                        setFullScreenTitulo={setFullScreenTitulo}
+                        backgroundColor={COLORS.gray01}
+                    />
+                )
+            case 'crete':
+                return (
+                    <Serie
+                        id={id}
+                        config={configCRETE}
+                        setFullScreenSrc={setFullScreenSrc}
+                        setFullScreenTitulo={setFullScreenTitulo}
+                        backgroundColor={COLORS.gray01}
+                    />
+                )
+            case 'portland':
+                return (
+                    <Serie
+                        id={id}
+                        config={configPORTLAND}
+                        setFullScreenSrc={setFullScreenSrc}
+                        setFullScreenTitulo={setFullScreenTitulo}
+                        backgroundColor={COLORS.gray01}
+                    />
+                )
+            case 'space':
+                return (
+                    <Serie
+                        id={id}
+                        config={configSPACE}
+                        setFullScreenSrc={setFullScreenSrc}
+                        setFullScreenTitulo={setFullScreenTitulo}
+                        backgroundColor={COLORS.gray01}
+                    />
+                )
+            case 'tzment':
+                return (
+                    <Serie
+                        id={id}
+                        config={configTZMENT}
+                        setFullScreenSrc={setFullScreenSrc}
+                        setFullScreenTitulo={setFullScreenTitulo}
+                        backgroundColor={COLORS.gray01}
+                    />
+                )
+            case 'wood':
+                return (
+                    <Serie
+                        id={id}
+                        config={configWOOD}
+                        setFullScreenSrc={setFullScreenSrc}
+                        setFullScreenTitulo={setFullScreenTitulo}
+                        backgroundColor={COLORS.gray01}
+                    />
+                )
+            case 'terrazo':
+                return (
+                    <Serie
+                        id={id}
+                        config={configTERRAZO}
+                        setFullScreenSrc={setFullScreenSrc}
+                        setFullScreenTitulo={setFullScreenTitulo}
+                        backgroundColor={COLORS.gray01}
+                    />
+                )
+            case 'arquitect':
+                return (
+                    <Serie
+                        id={id}
+                        config={configArquitect}
+                        setFullScreenSrc={setFullScreenSrc}
+                        setFullScreenTitulo={setFullScreenTitulo}
+                        backgroundColor={COLORS.gray01}
+                    />
+                )
+            case 'volumen':
+                return (
+                    <Serie
+                        id={id}
+                        config={configVOLUMEN}
+                        setFullScreenSrc={setFullScreenSrc}
+                        setFullScreenTitulo={setFullScreenTitulo}
+                        backgroundColor={COLORS.gray01}
+                    >
+                        <Anotaciones className='anotacion-variaciones'>
+                            <Anotacion {...propsFormato.anotacion2} />
+                            <Anotacion {...propsFormato.anotacion} />
+                            <Anotacion {...propsFormato.anotacionPDF} />
+                        </Anotaciones>
+                        <VisualizadorVariaciones {...propsFormato.visualizador} />
+                    </Serie>
+                )
+            default:
+                return null
+        }
+    }
+
     return (
         <>
             <FullScreen
@@ -67,111 +222,7 @@ const Series = ({ ids }) => {
                 setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             />
-            <Serie
-                id={ids[0]}
-                config={configBASALT}
-                setFullScreenSrc={setFullScreenSrc}
-                setFullScreenTitulo={setFullScreenTitulo}
-                backgroundColor={COLORS.gray01}
-            />
-            <Serie
-                id={ids[1]}
-                config={configDOLM}
-                setFullScreenSrc={setFullScreenSrc}
-                setFullScreenTitulo={setFullScreenTitulo}
-                backgroundColor={COLORS.gray01}
-            />
-            <Serie
-                id={ids[2]}
-                config={configQUARTZ}
-                setFullScreenSrc={setFullScreenSrc}
-                setFullScreenTitulo={setFullScreenTitulo}
-                backgroundColor={COLORS.gray01}
-            />
-            <Serie
-                id={ids[3]}
-                config={configMARBLE}
-                setFullScreenSrc={setFullScreenSrc}
-                setFullScreenTitulo={setFullScreenTitulo}
-                backgroundColor={COLORS.gray01}
-            />
-            <Serie
-                id={ids[4]}
-                config={configSTONE}
-                setFullScreenSrc={setFullScreenSrc}
-                setFullScreenTitulo={setFullScreenTitulo}
-                backgroundColor={COLORS.gray01}
-            />
-            <Serie
-                id={ids[5]}
-                config={configQUARCITY}
-                setFullScreenSrc={setFullScreenSrc}
-                setFullScreenTitulo={setFullScreenTitulo}
-                backgroundColor={COLORS.gray01}
-            />
-            <Serie
-                id={ids[6]}
-                config={configCRETE}
-                setFullScreenSrc={setFullScreenSrc}
-                setFullScreenTitulo={setFullScreenTitulo}
-                backgroundColor={COLORS.gray01}
-            />
-            <Serie
-                id={ids[7]}
-                config={configPORTLAND}
-                setFullScreenSrc={setFullScreenSrc}
-                setFullScreenTitulo={setFullScreenTitulo}
-                backgroundColor={COLORS.gray01}
-            />
-            <Serie
-                id={ids[8]}
-                config={configSPACE}
-                setFullScreenSrc={setFullScreenSrc}
-                setFullScreenTitulo={setFullScreenTitulo}
-                backgroundColor={COLORS.gray01}
-            />
-            <Serie
-                id={ids[9]}
-                config={configTZMENT}
-                setFullScreenSrc={setFullScreenSrc}
-                setFullScreenTitulo={setFullScreenTitulo}
-                backgroundColor={COLORS.gray01}
-            />
-            <Serie
-                id={ids[10]}
-                config={configWOOD}
-                setFullScreenSrc={setFullScreenSrc}
-                setFullScreenTitulo={setFullScreenTitulo}
-                backgroundColor={COLORS.gray01}
-            />
-            <Serie
-                id={ids[11]}
-                config={configTERRAZO}
-                setFullScreenSrc={setFullScreenSrc}
-                setFullScreenTitulo={setFullScreenTitulo}
-                backgroundColor={COLORS.gray01}
-            />
-            <Serie
-                id={ids[12]}
-                config={configArquitect}
-                setFullScreenSrc={setFullScreenSrc}
-                setFullScreenTitulo={setFullScreenTitulo}
-                backgroundColor={COLORS.gray01}
-            />
-            <Serie
-                id={ids[13]}
-                config={configVOLUMEN}
-                setFullScreenSrc={setFullScreenSrc}
-                setFullScreenTitulo={setFullScreenTitulo}
-                backgroundColor={COLORS.gray01}
-            >
-                <Anotaciones className='anotacion-variaciones'>
-                    <Anotacion {...propsFormato.anotacion2} />
-                    <Anotacion {...propsFormato.anotacion} />
-                    <Anotacion {...propsFormato.anotacionPDF} />
-                </Anotaciones>
-                <VisualizadorVariaciones {...propsFormato.visualizador} />
-            </Serie>
+            {selectedSerie && renderSerie(selectedSerie)}
         </>
     )
 }
