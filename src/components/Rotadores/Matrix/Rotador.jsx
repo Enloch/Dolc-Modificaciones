@@ -20,10 +20,9 @@ import {
   ContRotador,
   CanvasContainer,
   RotadorMenuContainer,
-  IntroContainer,
-  IntroContent,
-  IntroImage,
-  IntroText,
+  StyledRangeInput,
+  ControlBar, // Import ControlBar
+  FachadaControlBar, // Import FachadaControlBar
 } from "./styles";
 import Menu from "./Menu";
 import R360 from "../../../assets/icons/360.svg";
@@ -130,6 +129,10 @@ export default function RotadorMatrix() {
           <Canvas
             frameloop="demand"
             shadows={"soft"}
+            gl={{
+              antialias: true,
+              powerPreference: "high-performance",
+            }}
             style={{
               position: "relative",
               top: 0,
@@ -174,74 +177,34 @@ export default function RotadorMatrix() {
         </Suspense>
         <Loader />
         {fachadaVisible === false && (
-          <div
-            style={{
-              position: "absolute",
-              bottom: "10px",
-              left: "50%",
-              transform: "translateX(-50%)",
-              display: "flex",
-              alignItems: "center",
-              gap: "15px",
-              height: "45px",
-            }}
-          >
-            <a onClick={handleRotationClick} style={{ cursor: "pointer" }}>
-              <img src={Rotar} style={{ width: "45px" }} />
+          <ControlBar>
+            <a onClick={handleRotationClick}>
+              <img src={Rotar} />
             </a>
-            <input
-              style={{
-                appearance: "none", // Esto es para asegurar que los estilos se apliquen correctamente en todos los navegadores
-                width: "100%", // Ajusta al ancho que prefieras
-                height: "3px", // Altura de la barra
-                background: "#292929", // Color de fondo de la barra (gris claro)
-                outline: "none", // Remueve el borde que aparece al hacer foco en algunos navegadores
-                opacity: "0.7", // Opacidad de la barra
-                transition: "opacity .2s", // Transición suave para la opacidad
-                borderRadius: "5px", // Bordes redondeados
-                // Estilos para el pulgar (la parte que se desliza)
-                WebkitSliderThumb: {
-                  appearance: "none",
-                  width: "25px",
-                  height: "25px",
-                  borderRadius: "50%",
-                  background: "#888", // Color del pulgar (gris)
-                  cursor: "pointer",
-                },
-              }}
+            <StyledRangeInput
               type="range"
               min="1"
               max="6"
               value={numModels}
               onChange={(e) => setNumModels(parseInt(e.target.value))}
             />
-            <a onClick={handleFachadaClick} style={{ cursor: "pointer" }}>
-              <img src={Front} style={{ width: "45px" }} />
+            <a onClick={handleFachadaClick}>
+              <img src={Front} />
             </a>
-            <a onClick={handleInteriorClick} style={{ cursor: "pointer" }}>
-              <img src={Inside} style={{ width: "45px" }} />
+            <a onClick={handleInteriorClick}>
+              <img src={Inside} />
             </a>
-          </div>
+          </ControlBar>
         )}
         {fachadaVisible === true && (
-          <div
-            style={{
-              position: "absolute",
-              top: "10px",
-              left: "20px",
-              display: "flex",
-              alignItems: "center",
-              gap: "25px",
-              height: "45px",
-            }}
-          >
-            <a onClick={handleRotationClick} style={{ cursor: "pointer" }}>
-              <img src={Rotar} style={{ width: "45px" }} />
+          <FachadaControlBar>
+            <a onClick={handleRotationClick}>
+              <img src={Rotar} />
             </a>
-            <a onClick={handleResetClick} style={{ cursor: "pointer" }}>
-              <img src={Exit} style={{ width: "45px" }} />
+            <a onClick={handleResetClick}>
+              <img src={Exit} />
             </a>
-          </div>
+          </FachadaControlBar>
         )}
       </CanvasContainer>
       <RotadorMenuContainer visible={!fachadaVisible}>

@@ -163,8 +163,8 @@ export function Fachada(props) {
           {malla.colorActivo === "colorPicker" ? (
             <meshStandardMaterial
               color={malla.color}
-              metalness='0.5'
-              roughness='0.5'
+              metalness="0.5"
+              roughness="0.5"
               map={null}
             />
           ) : (
