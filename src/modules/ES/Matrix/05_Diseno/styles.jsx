@@ -72,7 +72,12 @@ const StyledDisenos = styled(Seccion)`
   .espesor-3 {
     grid-column: 9 / span 2;
   }
-
+  /* Media query para pantallas Ultrawide */
+  @media (min-aspect-ratio: 21/9) {
+    .rotador {
+      grid-column: 5 / -2; /* Estilo específico para Ultrawide */
+    }
+  }
   @media (max-width: ${TABLET_SIZE}) {
     > * {
       grid-row-start: auto !important;

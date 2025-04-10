@@ -386,14 +386,9 @@ const EscenaFachada = ({ rotada }) => {
 
 const EscenaInterior = ({ rotada }) => {
   const { size } = useThree();
-  const aspect = size.width / size.height;
-
-  // Ajusta el campo de visión en función del aspecto del canvas
-  const fov = aspect > 1 ? 41 : 41 / aspect;
   const fustrum = 10;
   const lightRef = useRef();
   const targetRef = useRef(new THREE.Object3D());
-
   const { scene } = useThree();
 
   useEffect(() => {
@@ -425,7 +420,7 @@ const EscenaInterior = ({ rotada }) => {
         makeDefault={true}
         far={30}
         near={0.1}
-        fov={fov}
+        fov={45}
         position={[0, 2.038, 5.249]}
       />
       {!rotada ? <LamasVertical /> : <LamasHorizontal />}

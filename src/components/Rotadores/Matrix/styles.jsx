@@ -242,14 +242,14 @@ export const StyledRangeInput = styled.input`
     }
 
     &::-moz-range-thumb {
-       width: 25px; /* Larger thumb for touch */
-       height: 25px; /* Larger thumb for touch */
+      width: 25px; /* Larger thumb for touch */
+      height: 25px; /* Larger thumb for touch */
     }
-     /* Add IE/Edge mobile adjustments if needed */
-     &::-ms-thumb {
-        width: 25px;
-        height: 25px;
-     }
+    /* Add IE/Edge mobile adjustments if needed */
+    &::-ms-thumb {
+      width: 25px;
+      height: 25px;
+    }
   }
   /* --- END MOBILE STYLES --- */
 
@@ -315,25 +315,25 @@ export const ControlBar = styled.div`
     width: 35px; /* Slightly smaller icons on mobile */
     height: 35px;
   }
-  
+
   @media (max-width: 600px) {
-     gap: 10px; /* Reduce gap on smaller screens */
-     height: 40px; /* Slightly smaller bar */
-     width: 95%; /* Use more width */
-     
-     img {
-        width: 30px; /* Even smaller icons */
-        height: 30px;
-     }
+    gap: 10px; /* Reduce gap on smaller screens */
+    height: 40px; /* Slightly smaller bar */
+    width: 95%; /* Use more width */
+
+    img {
+      width: 30px; /* Even smaller icons */
+      height: 30px;
+    }
   }
 
   @media (max-width: 400px) {
     /* Maybe stack items or further reduce icon size if needed */
-     gap: 5px;
-     img {
-        width: 25px;
-        height: 25px;
-     }
+    gap: 5px;
+    img {
+      width: 25px;
+      height: 25px;
+    }
   }
 `;
 
@@ -346,21 +346,21 @@ export const FachadaControlBar = styled.div`
   align-items: center;
   gap: 15px; /* Smaller gap */
   height: 45px;
-  
+
   img {
     display: block;
-    width: 35px; 
+    width: 35px;
     height: 35px;
   }
 
-   @media (max-width: 600px) {
-     gap: 10px;
-     height: 40px;
-     left: 5px;
-     
-     img {
-        width: 30px;
-        height: 30px;
-     }
+  @media (max-width: 600px) {
+    gap: 10px;
+    height: 40px;
+    left: 5px;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
   }
 `;
