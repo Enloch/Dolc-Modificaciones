@@ -31,7 +31,6 @@ import { MainEn } from "./pages/en/MainEn";
 import ContactoEn from "./pages/en/Contacto";
 import QuienesSomosEn from "./pages/en/QuienesSomoEn";
 import FachadaVentiladaEn from "./pages/en/catalogos/FachadaVentiladaEn";
-import PaginaImagenes from "./pages/PaginaImagen";
 import PoliticaPrivacidadEn from "./pages/en/PoliticaPrivacidad";
 import AvisoLegalEn from "./pages/en/AvisoLegal";
 //French
@@ -65,7 +64,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/dolcker-invisifix" element={<DolckerInvisifix />} />
         <Route path="/dolcker-G10" element={<DolckerG10 />} />
         <Route path="/dolcker-escamas" element={<Escamas />} />
-        <Route path="/cambios-pendientes" element={<PaginaImagenes />} />
         <Route path="/" element={<Main />} />
         <Route path="/quienes-somos" element={<QuienesSomos />} />
         <Route path="/aviso-legal" element={<AvisoLegal />} />
