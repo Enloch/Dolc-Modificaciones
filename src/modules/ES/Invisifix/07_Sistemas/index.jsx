@@ -2,7 +2,7 @@ import Text from "../../../../components/Text";
 import { Titulo, Titulo2 } from "../../../../components/Titulos";
 import StyledSistemas, { Enlaces } from "./styles";
 import { COLORS } from "../../../../global/GlobalStyles";
-import sistemas from "../../../../assets/images/Fusion/Sistemas/img_0001.jpg";
+import sistemas from "../../../../assets/images/Invisifix/Sistemas/IMG_5896.jpg";
 
 import dolckerClip1 from "../../../../assets/images/Sistemas/sistema-dolcker-clip.webp";
 import dolckerClip2 from "../../../../assets/icons/Sistemas/dolcker-clip.svg";

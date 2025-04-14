@@ -7,7 +7,7 @@ import { StyledGaleria, StyledSlider } from "./styles";
 const AplicacionesTline = ({ id }) => {
   // Actualizado para usar import.meta.glob con eager: true en lugar de globEager
   const ImagenesAplicaciones = import.meta.glob(
-    "../../../../assets/images/Fusion/Galeria/aplicaciones/*",
+    "../../../../assets/images/Invisifix/Galeria/aplicaciones/*",
     { eager: true }
   );
   const imagesGaleriaAplicaciones = Object.keys(ImagenesAplicaciones).map(
@@ -18,43 +18,13 @@ const AplicacionesTline = ({ id }) => {
   );
 
   // Actualizado para usar import.meta.glob con eager: true en lugar de globEager
-  const ImagenesTerracota = import.meta.glob(
-    "../../../../assets/images/Fusion/Galeria/terracota/*",
+  const ImagenesObraNueva = import.meta.glob(
+    "../../../../assets/images/Invisifix/Galeria/Obra/*",
     { eager: true }
   );
-  const imagesGaleriaTerracota = Object.keys(ImagenesTerracota).map((key) => ({
-    original: ImagenesTerracota[key].default,
-    thumbnail: ImagenesTerracota[key].default,
-  }));
-
-  // Actualizado para usar import.meta.glob con eager: true en lugar de globEager
-  const ImagenesColor = import.meta.glob(
-    "../../../../assets/images/Fusion/Galeria/color/*",
-    { eager: true }
-  );
-  const imagesGaleriaColor = Object.keys(ImagenesColor).map((key) => ({
-    original: ImagenesColor[key].default,
-    thumbnail: ImagenesColor[key].default,
-  }));
-
-  // Actualizado para usar import.meta.glob con eager: true en lugar de globEager
-  const ImagenesPetra = import.meta.glob(
-    "../../../../assets/images/Fusion/Galeria/petra/*",
-    { eager: true }
-  );
-  const imagesGaleriaPetra = Object.keys(ImagenesPetra).map((key) => ({
-    original: ImagenesPetra[key].default,
-    thumbnail: ImagenesPetra[key].default,
-  }));
-
-  // Actualizado para usar import.meta.glob con eager: true en lugar de globEager
-  const ImagenesTextura = import.meta.glob(
-    "../../../../assets/images/Fusion/Galeria/textura/*",
-    { eager: true }
-  );
-  const imagesGaleriaTextura = Object.keys(ImagenesTextura).map((key) => ({
-    original: ImagenesTextura[key].default,
-    thumbnail: ImagenesTextura[key].default,
+  const imagesGaleriaObraNueva = Object.keys(ImagenesObraNueva).map((key) => ({
+    original: ImagenesObraNueva[key].default,
+    thumbnail: ImagenesObraNueva[key].default,
   }));
 
   return (
@@ -75,12 +45,12 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-          Fusión es la herramienta de diseño de fachadas y envolventes
+          Invisifix es la herramienta de diseño de fachadas y envolventes
           desarrollada para arquitectos y técnicos que buscan libertad creativa
           con soluciones técnicas precisas.
           <br />
           <br />
-          Con Dolcker Fusión puedes:
+          Con Dolcker Invisifix puedes:
           <br />
           • Diseñar edificios nuevos o rehabilitar fachadas existentes,
           adaptando los acabados a las condiciones del entorno urbano o al
@@ -110,10 +80,10 @@ const AplicacionesTline = ({ id }) => {
         />
       </StyledGaleria>
       <StyledGaleria id={id[1]} backgroundColor={COLORS.gray01}>
-        <Titulo3 color={COLORS.gray08}>- Fusión Terracota</Titulo3>
+        <Titulo3 color={COLORS.gray08}>- Obra Nueva</Titulo3>
         <StyledSlider className="Slider">
           <ImageGallery
-            items={imagesGaleriaTerracota}
+            items={imagesGaleriaObraNueva}
             showPlayButton={false}
             showFullscreenButton={true}
             showThumbnails={false}
@@ -124,186 +94,6 @@ const AplicacionesTline = ({ id }) => {
             slideDuration={450}
           />
         </StyledSlider>
-        <Text>
-        Fusión Terracota es una línea de superficies arquitectónicas que
-          explora la belleza atemporal de los tonos naturales de la arcilla
-          cocida. Diseñada para proyectos contemporáneos que buscan una conexión
-          con la materia prima y el equilibrio visual, esta colección se adapta
-          tanto a composiciones sobrias como expresivas.
-          <br />
-          <br />
-          Características principales:
-          <br />
-          • Colores tierra suaves y naturales: gamas que evocan la esencia del
-          barro, la arena, el óxido o el siena.
-          <br />
-          • Superficies de gran pureza visual, pensadas para ofrecer texturas
-          auténticas y acabados cerámicos cálidos, duraderos y versátiles.
-          <br />
-          • Posibilidad de combinar colores en proporciones personalizadas,
-          adaptando cada diseño a la identidad estética del proyecto.
-          <br />
-          • Perfecta para arquitectura contemporánea, rehabilitación o
-          integración en paisajes urbanos sensibles.
-          <br />
-          <br />
-          Elige los tonos directamente de la tierra y crea composiciones que
-          hablen el lenguaje de la arquitectura honesta, natural y esencial.
-        </Text>
-        <Cita
-          cita="“La arquitectura empieza cuando se colocan cuidadosamente dos ladrillos juntos.”"
-          author="— Ludwig Mies van der Rohe"
-          colorCita={COLORS.gray08}
-          colorAutor={COLORS.gray04}
-        />
-      </StyledGaleria>
-      <StyledGaleria id={id[2]} backgroundColor={COLORS.gray01}>
-        <Titulo3 color={COLORS.gray08}>- Fusión Color</Titulo3>
-        <StyledSlider className="Slider">
-          <ImageGallery
-            items={imagesGaleriaColor}
-            showPlayButton={false}
-            showFullscreenButton={true}
-            showThumbnails={false}
-            autoPlay={true}
-            showBullets={false}
-            showNav={true}
-            lazyLoad={true}
-            slideDuration={450}
-          />
-        </StyledSlider>
-        <Text>
-        Fusión Color es la herramienta creativa de la colección ARQ que
-          permite combinar colores monolíticos para obtener composiciones
-          arquitectónicas personalizadas, equilibradas o atrevidas, según la
-          identidad del proyecto.
-          <br />
-          <br />
-          Partiendo de una cuidada gama de monocolores, la colección ofrece la
-          posibilidad de:
-          <br />
-          • Realizar combinaciones suaves, usando tonos próximos dentro de una
-          misma gama cromática.
-          <br />
-          • Crear efectos entonados, con matices sutiles para una armonía visual
-          continua.
-          <br />
-          • Apostar por una alta dispersión cromática, jugando con colores
-          intensos o contrastados que generan impacto y carácter.
-          <br />
-          <br />
-          Cada combinación puede definirse en la proporción exacta deseada, lo
-          que permite controlar el ritmo visual y la atmósfera del diseño, desde
-          lo más sobrio hasta lo más expresivo.
-          <br />
-          <br />
-          Fusión Color convierte la cerámica en una herramienta de lenguaje
-          arquitectónico, donde el color se estructura, se equilibra y se
-          expresa con intención.
-        </Text>
-        <Cita
-          cita="“El diseño no es solo lo que se ve o se siente. El diseño es cómo funciona.”"
-          author="— Steve Jobs"
-          colorCita={COLORS.gray08}
-          colorAutor={COLORS.gray04}
-        />
-      </StyledGaleria>
-      <StyledGaleria id={id[3]} backgroundColor={COLORS.gray01}>
-        <Titulo3 color={COLORS.gray08}>- Fusión Petra</Titulo3>
-        <StyledSlider className="Slider">
-          <ImageGallery
-            items={imagesGaleriaPetra}
-            showPlayButton={false}
-            showFullscreenButton={true}
-            showThumbnails={false}
-            autoPlay={true}
-            showBullets={false}
-            showNav={true}
-            lazyLoad={true}
-            slideDuration={450}
-          />
-        </StyledSlider>
-        <Text>
-          Fusión Petra es la propuesta creativa que permite combinar distintas
-          colecciones de piedra natural para crear fachadas únicas,
-          contemporáneas y con un alto valor estético.
-          <br />
-          <br />
-          Las piedras naturales, por su origen geológico y su diversidad
-          cromática y gráfica, ofrecen una riqueza visual incomparable.
-          <br />
-          <br />
-          Fusión Petra parte de esa singularidad para ofrecer al arquitecto o
-          diseñador la posibilidad de:
-          <br />
-          • Mezclar tonos y texturas de diferentes piedras en una misma fachada.
-          <br />
-          • Diseñar composiciones elegantes, modernas y de estilo vanguardista.
-          <br />
-          • Definir la proporción exacta de cada tipo de piedra, adaptando el
-          ritmo visual y el impacto del proyecto.
-          <br />
-          • Jugar con gráficas y vetas naturales para generar efectos dinámicos
-          o sobrios, según el lenguaje del edificio.
-          <br />
-          <br />
-          Con Fusión Petra, las piedras dejan de ser un material complementario
-          para convertirse en una herramienta compositiva central, capaz de
-          construir identidad y sofisticación desde lo esencial.
-        </Text>
-        <Cita
-          cita="“Diseñar no es hacer bonito, es hacer con sentido.”"
-          author="— Frase atribuida a múltiples diseñadores (origen no confirmado)"
-          colorCita={COLORS.gray08}
-          colorAutor={COLORS.gray04}
-        />
-      </StyledGaleria>
-      <StyledGaleria id={id[4]} backgroundColor={COLORS.gray01}>
-        <Titulo3 color={COLORS.gray08}>- Fusión Textura</Titulo3>
-        <StyledSlider className="Slider">
-          <ImageGallery
-            items={imagesGaleriaTextura}
-            showPlayButton={false}
-            showFullscreenButton={true}
-            showThumbnails={false}
-            autoPlay={true}
-            showBullets={false}
-            showNav={true}
-            lazyLoad={true}
-            slideDuration={450}
-          />
-        </StyledSlider>
-        <Text>
-          Fusión Textura es la herramienta creativa que permite diseñar y
-          personalizar fachadas combinando distintos acabados y colores,
-          generando composiciones con profundidad, ritmo visual y una
-          interacción dinámica con la luz.
-          <br />
-          <br />
-          A través de esta propuesta, puedes:
-          <br />
-          • Combinar texturas mate, brillo y flameado dentro de una misma
-          superficie arquitectónica.
-          <br />
-          • Aplicar cualquier acabado disponible en nuestras colecciones para
-          generar fachadas con carácter único.
-          <br />
-          • Definir tus propios porcentajes de combinación, adaptando el diseño
-          a las necesidades estéticas y técnicas del proyecto.
-          <br />
-          • Crear efectos de luz y sombra, aportando volumen, relieve y
-          sofisticación a la envolvente del edificio.
-          <br /> <br />
-          Fusión Textura ofrece libertad creativa total, elevando la fachada a
-          un lenguaje expresivo donde el acabado se convierte en materia de
-          diseño.
-        </Text>
-        <Cita
-          cita="“Donde el color y la textura se encuentran, nace el carácter del espacio.”"
-          author="— Inspiración propia / Original"
-          colorCita={COLORS.gray08}
-          colorAutor={COLORS.gray04}
-        />
       </StyledGaleria>
     </>
   );

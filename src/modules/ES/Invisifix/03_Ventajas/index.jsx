@@ -1,24 +1,23 @@
 import ImageWithCaption from "../../../../components/ImageWithCaption";
 import { Titulo } from "../../../../components/Titulos";
 import StyledVentajas from "./styles";
-import img1 from "../../../../assets/images/Fusion/Ventajas/IMG_7220.jpg";
+import img1 from "../../../../assets/images/Invisifix/Ventajas/IMG_0060.jpg";
 import Text from "../../../../components/Text";
 import { COLORS } from "../../../../global/GlobalStyles";
 import Listado from "../../../../components/Listado";
-import Reemplazo from "../../../../assets/images/DolckerMatrix/temporal.webp";
 const VentajasTline = ({ id }) => {
   return (
     <StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-      <Titulo>Ventajas del sistema Dolcker Fusion</Titulo>
+      <Titulo>Ventajas del sistema Dolcker Invisifix</Titulo>
       <ImageWithCaption
         src={img1}
         alt="Imagen de Ventajas 1"
-        caption="DOLCKER Fusion Terracotta"
+        caption="DOLCKER Invisifix"
         columnSpan="6"
       />
       <Text>
-        DOLCKER FUSION ha desarrollado un innovador sistema modular que permite
-        una personalización total de la fachada, combinando:
+        DOLCKER INVISIFIX ha desarrollado un innovador sistema modular que
+        permite una personalización total de la fachada, combinando:
         <br />
         <br />
         <strong>1. </strong>
@@ -37,7 +36,7 @@ const VentajasTline = ({ id }) => {
         clasificación previa en obra.
         <br />
         <br />
-        El sistema DOLCKER FUSION incorpora un desarrollo técnico de fijación
+        El sistema DOLCKER INVISIFIX incorpora un desarrollo técnico de fijación
         para fachadas ventiladas, diseñado para satisfacer tanto exigencias
         estéticas como funcionales del proyecto.
       </Text>

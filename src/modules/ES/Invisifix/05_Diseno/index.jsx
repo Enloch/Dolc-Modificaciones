@@ -3,7 +3,7 @@ import ImageWithCaption from "../../../../components/ImageWithCaption";
 import { Titulo, Titulo2 } from "../../../../components/Titulos";
 import { COLORS } from "../../../../global/GlobalStyles";
 import StyledDisenos from "./styles";
-import img1 from "../../../../assets/images/Fusion/Diseno/IMG_7245.jpg";
+import img1 from "../../../../assets/images/Invisifix/Diseno/IMG_6516.jpg";
 import fondo from "../../../../assets/images/Diseno/Formato/fondo.webp";
 import indicadoresFormato from "../../../../utils/indicadoresFormato";
 import Anotacion from "../../../../components/Anotacion";
@@ -25,7 +25,7 @@ const DisenosTline = ({ id }) => {
 
   useEffect(() => {
     const handleHashChange = () => {
-      const hash = window.location.hash.substring(1); 
+      const hash = window.location.hash.substring(1);
       if (hash && isValidSerie(hash)) {
         setSelectedSerie(hash);
       } else {
