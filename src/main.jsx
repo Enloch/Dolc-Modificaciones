@@ -15,6 +15,7 @@ import DolckerStep from "./pages/catalogos/DolckerStep";
 import DolckerDetaill from "./pages/catalogos/DolckerDetaill";
 import DolckerFusion from "./pages/catalogos/DolckerFusion";
 import DolckerAluform from "./pages/catalogos/DolckerAluform";
+import DolckerInvisifix from "./pages/catalogos/DolckerInvisifix";
 // import FontStyles from './global/FontStyles'
 import "./assets/fonts/fonts.css";
 import GlobalStyles from "./global/GlobalStyles";
@@ -61,6 +62,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/dolcker-matrix-decor" element={<DolckerMatrixDecor />} />
         <Route path="/dolcker-aluform" element={<DolckerAluform />} />
         <Route path="/dolcker-fusion" element={<DolckerFusion />} />
+        <Route path="/dolcker-invisifix" element={<DolckerInvisifix />} />
         <Route path="/dolcker-G10" element={<DolckerG10 />} />
         <Route path="/dolcker-escamas" element={<Escamas />} />
         <Route path="/cambios-pendientes" element={<PaginaImagenes />} />

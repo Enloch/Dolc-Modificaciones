@@ -146,3 +146,12 @@ export { default as DisenosAluform } from "./ES/Aluform/05_Diseno";
 export { default as CaracteristicasAluform } from "./ES/Aluform/06_Caracteristicas";
 export { default as SistemasAluform } from "./ES/Aluform/07_Sistemas";
 export { default as DescargasAluform } from "./ES/Aluform/08_Descargas";
+//Invisifix
+export { default as IndiceInvisifix } from "./ES/Invisifix/01_Inicio";
+export { default as DolckerInvisifix } from "./ES/Invisifix/02_Dolcker";
+export { default as VentajasInvisifix } from "./ES/Invisifix/03_Ventajas";
+export { default as AplicacionesInvisifix } from "./ES/Invisifix/04_Aplicaciones";
+export { default as DisenosInvisifix } from "./ES/Invisifix/05_Diseno";
+export { default as CaracteristicasInvisifix } from "./ES/Invisifix/06_Caracteristicas";
+export { default as SistemasInvisifix } from "./ES/Invisifix/07_Sistemas";
+export { default as DescargasInvisifix } from "./ES/Invisifix/08_Descargas";
