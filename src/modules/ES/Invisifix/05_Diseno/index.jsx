@@ -18,8 +18,49 @@ import ranurado14 from "../../../../assets/images/Diseno/Espesores/ranurado14.we
 import ranurado20 from "../../../../assets/images/Diseno/Espesores/ranurado20.webp";
 import VisualizadorDesplazador from "../../../../components/VisualizadorDesplazador";
 import IndiceSeries from "./05_1_IndiceSeries";
+import { useState, useEffect } from "react";
 
 const DisenosTline = ({ id }) => {
+  const [selectedSerie, setSelectedSerie] = useState(null);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.substring(1); 
+      if (hash && isValidSerie(hash)) {
+        setSelectedSerie(hash);
+      } else {
+        setSelectedSerie(null);
+      }
+    };
+
+    handleHashChange();
+
+    window.addEventListener("hashchange", handleHashChange);
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
+
+  const isValidSerie = (serie) => {
+    const validSeries = [
+      "basalt",
+      "dolm",
+      "dquartz",
+      "marble",
+      "stone",
+      "quarcity",
+      "crete",
+      "portland",
+      "space",
+      "tzment",
+      "wood",
+      "terrazo",
+      "arquitect",
+      "volumen",
+    ];
+    return validSeries.includes(serie);
+  };
+
   const propsFormato = {
     anotacion: {
       text: "Pulsa en el punto para ver las posibilidades de formato",
@@ -118,24 +159,47 @@ const DisenosTline = ({ id }) => {
         <VisualizadorRotador config={config} />
       </StyledDisenos>
       <IndiceSeries id={id[6]} />
-      <Series
-        ids={[
-          "basalt",
-          "dolm",
-          "dquartz",
-          "marble",
-          "stone",
-          "quarcity",
-          "crete",
-          "portland",
-          "space",
-          "tzment",
-          "wood",
-          "terrazo",
-          "arquitect",
-          "volumen",
-        ]}
-      />
+      {selectedSerie ? (
+        <Series
+          key={selectedSerie}
+          ids={[
+            "basalt",
+            "dolm",
+            "dquartz",
+            "marble",
+            "stone",
+            "quarcity",
+            "crete",
+            "portland",
+            "space",
+            "tzment",
+            "wood",
+            "terrazo",
+            "arquitect",
+            "volumen",
+          ]}
+          selectedSerie={selectedSerie}
+        />
+      ) : (
+        <Series
+          ids={[
+            "basalt",
+            "dolm",
+            "dquartz",
+            "marble",
+            "stone",
+            "quarcity",
+            "crete",
+            "portland",
+            "space",
+            "tzment",
+            "wood",
+            "terrazo",
+            "arquitect",
+            "volumen",
+          ]}
+        />
+      )}
     </>
   );
 };
