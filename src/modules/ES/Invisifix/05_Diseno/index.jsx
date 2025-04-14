@@ -80,7 +80,7 @@ const DisenosTline = ({ id }) => {
         <ImageWithCaption
           src={img1}
           alt="Imagen de Diseños 1"
-          caption="DOLCKER Fusion Color"
+          caption="DOLCKER Invisifix"
           columnSpan="6"
         />
         <Cita
