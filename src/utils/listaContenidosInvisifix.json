@@ -19,20 +19,21 @@
         "link": "#aplicaciones"
       },
       {
-        "title": "Invisifix Terracota",
-        "link": "#terracota"
-      },
-      {
-        "title": "Invisifix Color",
-        "link": "#color"
-      },
-      {
-        "title": "Fusión Petra",
-        "link": "#petra"
-      },
-      {
-        "title": "Fusión Textura",
-        "link": "#textura"
+        "title": "Obra nueva",
+        "subList": [
+          {
+            "title": "Obra nueva",
+            "link": "#obra-nueva"
+          },
+          {
+            "title": "Fachadas",
+            "link": "#fachadas"
+          },
+          {
+            "title": "Terrazas, suelos elevados, techos y soluciones",
+            "link": "#terrazas"
+          }
+        ]
       }
     ]
   },

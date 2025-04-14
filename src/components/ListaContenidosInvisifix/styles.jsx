@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { GRID, TextMedium, COLORS } from "../../global/GlobalStyles";
 import { column_5_span6 } from "../../styles/grid";
 import { mediaQueryTablet } from "../../styles/sizes";
-import StyledSublista from "./Sublista/styles";
+import StyledSublista from "../ListaContenidos/Sublista/styles";
 
 const StyledListaContenidos = styled.nav`
   ${column_5_span6}
