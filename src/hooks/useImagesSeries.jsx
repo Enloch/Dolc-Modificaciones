@@ -31,47 +31,6 @@ const enlacesObj = [
   { titulo: "DO&TERRAZO", src: imagenesAmbiente[10], id: "#terrazo" },
   { titulo: "DO&ARQUITECT", src: imagenesAmbiente[0], id: "#arquitect" },
   { titulo: "DO&VOLUMEN", src: imagenesAmbiente[12], id: "#volumen" },
-
-  // Series Tline
-  { titulo: "DOLCKER & LINE ARD", src: imagenesAmbienteTline[0], id: "#ard" },
-  { titulo: "DOLCKER & LINE BALM", src: imagenesAmbienteTline[1], id: "#balm" },
-  {
-    titulo: "DOLCKER & LINE BELLA",
-    src: imagenesAmbienteTline[2],
-    id: "#bella",
-  },
-  { titulo: "DOLCKER & LINE BRUN", src: imagenesAmbienteTline[3], id: "#brun" },
-  { titulo: "DOLCKER & LINE BYB", src: imagenesAmbienteTline[4], id: "#byb" },
-  { titulo: "DOLCKER & LINE CAP", src: imagenesAmbienteTline[5], id: "#cap" },
-  { titulo: "DOLCKER & LINE COR", src: imagenesAmbienteTline[6], id: "#cor" },
-  { titulo: "DOLCKER & LINE CROM", src: imagenesAmbienteTline[7], id: "#crom" },
-  { titulo: "DOLCKER & LINE DOM", src: imagenesAmbienteTline[8], id: "#dom" },
-  { titulo: "DOLCKER & LINE ETER", src: imagenesAmbienteTline[9], id: "#eter" },
-  {
-    titulo: "DOLCKER & LINE GRAV",
-    src: imagenesAmbienteTline[10],
-    id: "#grav",
-  },
-  {
-    titulo: "DOLCKER & LINE HABI",
-    src: imagenesAmbienteTline[11],
-    id: "#habi",
-  },
-  { titulo: "DOLCKER & LINE HAN", src: imagenesAmbienteTline[12], id: "#han" },
-  { titulo: "DOLCKER & LINE INV", src: imagenesAmbienteTline[13], id: "#inv" },
-  { titulo: "DOLCKER & LINE KUR", src: imagenesAmbienteTline[14], id: "#kur" },
-  { titulo: "DOLCKER & LINE NIK", src: imagenesAmbienteTline[15], id: "#nik" },
-  {
-    titulo: "DOLCKER & LINE STONE",
-    src: imagenesAmbienteTline[16],
-    id: "#stone2",
-  },
-  {
-    titulo: "DOLCKER & LINE STOR",
-    src: imagenesAmbienteTline[17],
-    id: "#stor",
-  },
-  { titulo: "DOLCKER & LINE UNI", src: imagenesAmbienteTline[18], id: "#uni" },
 ];
 
 const useImagesSeries = () => {

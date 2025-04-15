@@ -10,80 +10,13 @@ import Anotacion from "../../../../components/Anotacion";
 import VisualizadorVariaciones from "../../../../components/VisualizadorVariaciones";
 import Anotaciones from "../../../../components/Anotacion/Anotaciones";
 import configAcabados from "../../../../configs/configAcabados";
-import Series from "./05_2_Series";
 import ranurado11 from "../../../../assets/images/Diseno/Espesores/ranurado11mm.webp";
 import ranurado14 from "../../../../assets/images/Diseno/Espesores/ranurado14.webp";
 import ranurado20 from "../../../../assets/images/Diseno/Espesores/ranurado20.webp";
 import VisualizadorDesplazador from "../../../../components/VisualizadorDesplazador";
 import IndiceSeries from "./05_1_IndiceSeries";
-import { useState, useEffect } from "react";
 
 const DisenosTline = ({ id }) => {
-  const [selectedSerie, setSelectedSerie] = useState(null);
-
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.substring(1);
-      if (hash && isValidSerie(hash)) {
-        setSelectedSerie(hash);
-      } else {
-        setSelectedSerie(null);
-      }
-    };
-
-    handleHashChange();
-
-    window.addEventListener("hashchange", handleHashChange);
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-    };
-  }, []);
-
-  const isValidSerie = (serie) => {
-    const seriesInvisifix = [
-      "basalt",
-      "dolm",
-      "dquartz",
-      "marble",
-      "stone",
-      "quarcity",
-      "crete",
-      "portland",
-      "space",
-      "tzment",
-      "wood",
-      "terrazo",
-      "arquitect",
-      "volumen",
-    ];
-
-    const seriesTline = [
-      "ard",
-      "balm",
-      "bella",
-      "brun",
-      "byb",
-      "cap",
-      "cor",
-      "crom",
-      "dom",
-      "eter",
-      "grav",
-      "habi",
-      "han",
-      "inv",
-      "kur",
-      "nik",
-      "stone2",
-      "stor",
-      "uni",
-    ];
-
-    // Combinar ambos arrays para la validación
-    const validSeries = [...seriesInvisifix, ...seriesTline];
-    return validSeries.includes(serie);
-  };
-
   const propsFormato = {
     anotacion: {
       text: "Pulsa en el punto para ver las posibilidades de formato",
@@ -168,89 +101,6 @@ const DisenosTline = ({ id }) => {
         </div>
       </StyledDisenos>
       <IndiceSeries id={id[3]} />
-      {selectedSerie ? (
-        <Series
-          key={selectedSerie}
-          ids={[
-            // Series Invisifix
-            "basalt",
-            "dolm",
-            "dquartz",
-            "marble",
-            "stone",
-            "quarcity",
-            "crete",
-            "portland",
-            "space",
-            "tzment",
-            "wood",
-            "terrazo",
-            "arquitect",
-            "volumen",
-            // Series Tline
-            "ard",
-            "balm",
-            "bella",
-            "brun",
-            "byb",
-            "cap",
-            "cor",
-            "crom",
-            "dom",
-            "eter",
-            "grav",
-            "habi",
-            "han",
-            "inv",
-            "kur",
-            "nik",
-            "stone",
-            "stor",
-            "uni",
-          ]}
-          selectedSerie={selectedSerie}
-        />
-      ) : (
-        <Series
-          ids={[
-            // Series Invisifix
-            "basalt",
-            "dolm",
-            "dquartz",
-            "marble",
-            "stone",
-            "quarcity",
-            "crete",
-            "portland",
-            "space",
-            "tzment",
-            "wood",
-            "terrazo",
-            "arquitect",
-            "volumen",
-            // Series Tline
-            "ard",
-            "balm",
-            "bella",
-            "brun",
-            "byb",
-            "cap",
-            "cor",
-            "crom",
-            "dom",
-            "eter",
-            "grav",
-            "habi",
-            "han",
-            "inv",
-            "kur",
-            "nik",
-            "stone",
-            "stor",
-            "uni",
-          ]}
-        />
-      )}
     </>
   );
 };

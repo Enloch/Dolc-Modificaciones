@@ -1,159 +1,122 @@
-import { Titulo2 } from "../../../../../components/Titulos";
+import { useState } from "react";
+import { Titulo2, Titulo3 } from "../../../../../components/Titulos";
 import { COLORS } from "../../../../../global/GlobalStyles";
-import useImagesSeries from "../../../../../hooks/useImagesSeries";
 import StyledIndiceSeries from "./styles";
-import { Children } from "react";
-import Enlace from "../../../../../modules/ES/System/06_Diseno/06_1_IndiceSeries/Enlace";
-import getDataFromModules from "../../../../../helpers/getDataFromModules";
+import Slider from "react-slick";
+import Modal from "../../../../../components/Modal";
+import SeriesCard from "./SeriesCard";
+import { seriesInvisifix } from "./data";
 
-// Importar imágenes para las series de Invisifix
-const imagenesAmbienteImports = import.meta.globEager(
-  "../../../../../assets/images/Series/**/EJEMPLO/**"
-);
-
-// Importar imágenes para las series de Tline
-const imagenesAmbienteTlineImports = import.meta.globEager(
-  "../../../../../assets/images/DolckerTline/Series/**/EJEMPLO/**"
-);
-
-const imagenesAmbiente = getDataFromModules(imagenesAmbienteImports);
-const imagenesAmbienteTline = getDataFromModules(imagenesAmbienteTlineImports);
-
-// Definir las series de Invisifix
-const seriesInvisifix = [
-  { titulo: "DO&BASALT", src: imagenesAmbiente[1], id: "#basalt" },
-  { titulo: "DO&DOLM", src: imagenesAmbiente[3], id: "#dolm" },
-  { titulo: "DO&DQUARTZ", src: imagenesAmbiente[7], id: "#dquartz" },
-  { titulo: "DO&MARBLE", src: imagenesAmbiente[4], id: "#marble" },
-  { titulo: "DO&STONE", src: imagenesAmbiente[9], id: "#stone" },
-  { titulo: "DO&QUARCITY", src: imagenesAmbiente[6], id: "#quarcity" },
-  { titulo: "DO&CRETE", src: imagenesAmbiente[2], id: "#crete" },
-  { titulo: "DO&PORTLAND", src: imagenesAmbiente[5], id: "#portland" },
-  { titulo: "DO&SPACE", src: imagenesAmbiente[8], id: "#space" },
-  { titulo: "DO&TZMENT", src: imagenesAmbiente[11], id: "#tzment" },
-  { titulo: "DO&WOOD", src: imagenesAmbiente[13], id: "#wood" },
-  { titulo: "DO&TERRAZO", src: imagenesAmbiente[10], id: "#terrazo" },
-  { titulo: "DO&ARQUITECT", src: imagenesAmbiente[0], id: "#arquitect" },
-  { titulo: "DO&VOLUMEN", src: imagenesAmbiente[12], id: "#volumen" },
-];
-
-// Definir las series de Tline
-const seriesTline = [
-  { titulo: "DOLCKER & LINE ARD", src: imagenesAmbienteTline[0], id: "#ard" },
-  { titulo: "DOLCKER & LINE BALM", src: imagenesAmbienteTline[1], id: "#balm" },
-  {
-    titulo: "DOLCKER & LINE BELLA",
-    src: imagenesAmbienteTline[2],
-    id: "#bella",
-  },
-  { titulo: "DOLCKER & LINE BRUN", src: imagenesAmbienteTline[3], id: "#brun" },
-  { titulo: "DOLCKER & LINE BYB", src: imagenesAmbienteTline[4], id: "#byb" },
-  { titulo: "DOLCKER & LINE CAP", src: imagenesAmbienteTline[5], id: "#cap" },
-  { titulo: "DOLCKER & LINE COR", src: imagenesAmbienteTline[6], id: "#cor" },
-  { titulo: "DOLCKER & LINE CROM", src: imagenesAmbienteTline[7], id: "#crom" },
-  { titulo: "DOLCKER & LINE DOM", src: imagenesAmbienteTline[8], id: "#dom" },
-  { titulo: "DOLCKER & LINE ETER", src: imagenesAmbienteTline[9], id: "#eter" },
-  {
-    titulo: "DOLCKER & LINE GRAV",
-    src: imagenesAmbienteTline[10],
-    id: "#grav",
-  },
-  {
-    titulo: "DOLCKER & LINE HABI",
-    src: imagenesAmbienteTline[11],
-    id: "#habi",
-  },
-  { titulo: "DOLCKER & LINE HAN", src: imagenesAmbienteTline[12], id: "#han" },
-  { titulo: "DOLCKER & LINE INV", src: imagenesAmbienteTline[13], id: "#inv" },
-  { titulo: "DOLCKER & LINE KUR", src: imagenesAmbienteTline[14], id: "#kur" },
-  { titulo: "DOLCKER & LINE NIK", src: imagenesAmbienteTline[15], id: "#nik" },
-  {
-    titulo: "DOLCKER & LINE STONE",
-    src: imagenesAmbienteTline[16],
-    id: "#stone2",
-  },
-  {
-    titulo: "DOLCKER & LINE STOR",
-    src: imagenesAmbienteTline[17],
-    id: "#stor",
-  },
-  { titulo: "DOLCKER & LINE UNI", src: imagenesAmbienteTline[18], id: "#uni" },
-];
+// Import slick css
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const IndiceSeries = ({ id }) => {
-  // Función para manejar el clic en una serie
-  const handleSerieClick = (event, serieId) => {
-    event.preventDefault(); // Prevenir el comportamiento predeterminado
+  console.log(seriesInvisifix);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
 
-    // Extraer el ID sin el #
-    const serieIdWithoutHash = serieId.substring(1);
-
-    // Cambiar la URL manualmente
-    window.location.hash = serieIdWithoutHash;
-
-    // Esperar un momento para que el componente se cargue y luego desplazar la página
-    setTimeout(() => {
-      // Intentar encontrar el elemento por su ID
-      const element = document.getElementById(serieIdWithoutHash);
-      if (element) {
-        // Si se encuentra el elemento, desplazar la página hasta él
-        element.scrollIntoView({ behavior: "smooth" });
-      } else {
-        // Si no se encuentra el elemento, desplazar la página hasta el inicio de la sección de series
-        window.scrollTo({
-          top: document.getElementById(id).offsetTop,
-          behavior: "smooth",
-        });
-      }
-    }, 100); // Esperar 100ms para que el componente se cargue
+  const openModal = (image) => {
+    setSelectedImage(image);
+    setModalOpen(true);
   };
 
-  // Crear elementos para las series de Invisifix
-  const elementosInvisifix = Children.toArray(
-    seriesInvisifix.map(({ titulo, src, id }) => {
-      return (
-        <Enlace
-          href={id}
-          className="enlace"
-          onClick={(event) => handleSerieClick(event, id)}
-        >
-          <img src={src} alt={titulo + " ejemplo"} />
-          <span>{titulo}</span>
-        </Enlace>
-      );
-    })
-  );
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
-  // Crear elementos para las series de Tline
-  const elementosTline = Children.toArray(
-    seriesTline.map(({ titulo, src, id }) => {
-      return (
-        <Enlace
-          href={id}
-          className="enlace"
-          onClick={(event) => handleSerieClick(event, id)}
-        >
-          <img src={src} alt={titulo + " ejemplo"} />
-          <span>{titulo}</span>
-        </Enlace>
-      );
-    })
-  );
+  // Configuración del carrusel
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 7,
+    slidesToScroll: 7,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 5,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: true,
+          dots: false,
+        },
+      },
+    ],
+  };
 
   return (
-    <>
-      {/* Sección para series Invisifix */}
-      <StyledIndiceSeries id={id} backgroundColor={COLORS.gray02}>
-        <Titulo2>SERIES SYSTEM</Titulo2>
-        {elementosInvisifix}
-      </StyledIndiceSeries>
+    <StyledIndiceSeries id={id} backgroundColor={COLORS.gray02}>
+      <Titulo2>SERIES</Titulo2>
 
-      {/* Sección para series Tline */}
-      <StyledIndiceSeries id={`${id}-tline`} backgroundColor={COLORS.gray02}>
-        <Titulo2>SERIES TLINE</Titulo2>
-        {elementosTline}
-      </StyledIndiceSeries>
-    </>
+      {/* Sección Invisifix */}
+      <Titulo3>System</Titulo3>
+      <div className="carousel-container">
+        <Slider {...sliderSettings}>
+          {seriesInvisifix.map((series) => (
+            <div key={series.id} className="carousel-item">
+              <SeriesCard
+                name={series.name}
+                image={series.image}
+                onClick={() => openModal(series)}
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      {/* Sección Tline */}
+      {/* <Titulo3>TLINE</Titulo3>
+      <div className="carousel-container">
+        <Slider {...sliderSettings}>
+          {seriesTline.map((series) => (
+            <div key={series.id} className="carousel-item">
+              <SeriesCard
+                name={series.name}
+                image={series.image}
+                onClick={() => openModal(series)}
+              />
+            </div>
+          ))}
+        </Slider>
+      </div> */}
+
+      <Modal
+        isOpen={modalOpen}
+        onClose={closeModal}
+        caption={selectedImage ? selectedImage.name : ""}
+      >
+        {selectedImage && (
+          <img src={selectedImage.image} alt={selectedImage.name} />
+        )}
+      </Modal>
+    </StyledIndiceSeries>
   );
 };
 
