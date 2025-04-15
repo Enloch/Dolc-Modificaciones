@@ -16,6 +16,28 @@ import configTERRAZO from "../../../../../configs/Series/configTerrazo";
 import configTZMENT from "../../../../../configs/Series/configTzment";
 import configVOLUMEN from "../../../../../configs/Series/configVolumen";
 import configWOOD from "../../../../../configs/Series/configWood";
+
+// Importaciones de las configuraciones de Tline
+import configArdesia from "../../../../../configs/SeriesTline/configArdesia";
+import configBalmoral from "../../../../../configs/SeriesTline/configBalmoral";
+import configBellagio from "../../../../../configs/SeriesTline/configBellagio";
+import configBrunswich from "../../../../../configs/SeriesTline/configBrunswich";
+import configByb from "../../../../../configs/SeriesTline/configByb";
+import configCapri from "../../../../../configs/SeriesTline/configCapri";
+import configCore from "../../../../../configs/SeriesTline/configCore";
+import configCromat from "../../../../../configs/SeriesTline/configCromat";
+import configDome from "../../../../../configs/SeriesTline/configDome";
+import configEternal from "../../../../../configs/SeriesTline/configEternal";
+import configGravel from "../../../../../configs/SeriesTline/configGravel";
+import configHabitat from "../../../../../configs/SeriesTline/configHabitat";
+import configHannover from "../../../../../configs/SeriesTline/configHannover";
+import configInvictus from "../../../../../configs/SeriesTline/configInvictus";
+import configKursaal from "../../../../../configs/SeriesTline/configKursaal";
+import configNikea from "../../../../../configs/SeriesTline/configNikea";
+import configStoneland from "../../../../../configs/SeriesTline/configStoneland";
+import configStorm from "../../../../../configs/SeriesTline/configStorm";
+import configUnik from "../../../../../configs/SeriesTline/configUnik";
+
 import { COLORS } from "../../../../../global/GlobalStyles";
 import Serie from "./Serie";
 
@@ -207,6 +229,198 @@ const Series = ({ ids, selectedSerie }) => {
             </Anotaciones>
             <VisualizadorVariaciones {...propsFormato.visualizador} />
           </Serie>
+        );
+
+      // Series Tline
+      case "ard":
+        return (
+          <Serie
+            id={id}
+            config={configArdesia}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
+        );
+      case "balm":
+        return (
+          <Serie
+            id={id}
+            config={configBalmoral}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
+        );
+      case "bella":
+        return (
+          <Serie
+            id={id}
+            config={configBellagio}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
+        );
+      case "brun":
+        return (
+          <Serie
+            id={id}
+            config={configBrunswich}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
+        );
+      case "byb":
+        return (
+          <Serie
+            id={id}
+            config={configByb}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
+        );
+      case "cap":
+        return (
+          <Serie
+            id={id}
+            config={configCapri}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
+        );
+      case "cor":
+        return (
+          <Serie
+            id={id}
+            config={configCore}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
+        );
+      case "crom":
+        return (
+          <Serie
+            id={id}
+            config={configCromat}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
+        );
+      case "dom":
+        return (
+          <Serie
+            id={id}
+            config={configDome}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
+        );
+      case "eter":
+        return (
+          <Serie
+            id={id}
+            config={configEternal}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
+        );
+      case "grav":
+        return (
+          <Serie
+            id={id}
+            config={configGravel}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
+        );
+      case "habi":
+        return (
+          <Serie
+            id={id}
+            config={configHabitat}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
+        );
+      case "han":
+        return (
+          <Serie
+            id={id}
+            config={configHannover}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
+        );
+      case "inv":
+        return (
+          <Serie
+            id={id}
+            config={configInvictus}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
+        );
+      case "kur":
+        return (
+          <Serie
+            id={id}
+            config={configKursaal}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
+        );
+      case "nik":
+        return (
+          <Serie
+            id={id}
+            config={configNikea}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
+        );
+      case "stone2": // Cambiado para evitar conflicto con stone de Invisifix
+        return (
+          <Serie
+            id={id}
+            config={configStoneland}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
+        );
+      case "stor":
+        return (
+          <Serie
+            id={id}
+            config={configStorm}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
+        );
+      case "uni":
+        return (
+          <Serie
+            id={id}
+            config={configUnik}
+            setFullScreenSrc={setFullScreenSrc}
+            setFullScreenTitulo={setFullScreenTitulo}
+            backgroundColor={COLORS.gray01}
+          />
         );
       default:
         return null;

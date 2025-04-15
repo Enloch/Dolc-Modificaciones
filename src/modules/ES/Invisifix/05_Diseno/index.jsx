@@ -9,8 +9,6 @@ import indicadoresFormato from "../../../../utils/indicadoresFormato";
 import Anotacion from "../../../../components/Anotacion";
 import VisualizadorVariaciones from "../../../../components/VisualizadorVariaciones";
 import Anotaciones from "../../../../components/Anotacion/Anotaciones";
-import VisualizadorRotador from "../../../../components/VisualizadorRotador";
-import config from "../../../../configs/configPiezasEspeciales";
 import configAcabados from "../../../../configs/configAcabados";
 import Series from "./05_2_Series";
 import ranurado11 from "../../../../assets/images/Diseno/Espesores/ranurado11mm.webp";
@@ -42,7 +40,7 @@ const DisenosTline = ({ id }) => {
   }, []);
 
   const isValidSerie = (serie) => {
-    const validSeries = [
+    const seriesInvisifix = [
       "basalt",
       "dolm",
       "dquartz",
@@ -58,6 +56,31 @@ const DisenosTline = ({ id }) => {
       "arquitect",
       "volumen",
     ];
+
+    const seriesTline = [
+      "ard",
+      "balm",
+      "bella",
+      "brun",
+      "byb",
+      "cap",
+      "cor",
+      "crom",
+      "dom",
+      "eter",
+      "grav",
+      "habi",
+      "han",
+      "inv",
+      "kur",
+      "nik",
+      "stone2",
+      "stor",
+      "uni",
+    ];
+
+    // Combinar ambos arrays para la validación
+    const validSeries = [...seriesInvisifix, ...seriesTline];
     return validSeries.includes(serie);
   };
 
@@ -90,12 +113,12 @@ const DisenosTline = ({ id }) => {
           colorAutor={COLORS.gray04}
         />
       </StyledDisenos>
-      <StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
+      <StyledDisenos backgroundColor={COLORS.gray01}>
         <Titulo2>Formato</Titulo2>
         <Anotacion {...propsFormato.anotacion} />
         <VisualizadorVariaciones {...propsFormato.visualizador} />
       </StyledDisenos>
-      <StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
+      <StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
         <Titulo2>Acabados</Titulo2>
         <Anotaciones>
           <Anotacion
@@ -109,12 +132,12 @@ const DisenosTline = ({ id }) => {
         </Anotaciones>
         <VisualizadorDesplazador config={configAcabados} />
       </StyledDisenos>
-      <StyledDisenos id={id[4]} backgroundColor={COLORS.gray01} isEspesores>
+      <StyledDisenos id={id[2]} backgroundColor={COLORS.gray01} isEspesores>
         <Titulo2>Espesores</Titulo2>
         <div className="espesor espesor-1">
           <img src={ranurado11} alt="" />
           <ul>
-            <strong>TC 11 / 11 mm.</strong>
+            <strong>Porcelánico 8/9/10 mm</strong>
             <li>Suelo</li>
             <li>Techo</li>
             <li>Fachada</li>
@@ -123,7 +146,7 @@ const DisenosTline = ({ id }) => {
         <div className="espesor espesor-2">
           <img src={ranurado14} alt="" />
           <ul>
-            <strong>TC 14 / 14 mm.</strong>
+            <strong>Color & FullBody 11 mm</strong>
             <li>Suelo</li>
             <li>Techo</li>
             <li>Fachada</li>
@@ -133,7 +156,7 @@ const DisenosTline = ({ id }) => {
         <div className="espesor espesor-3">
           <img src={ranurado20} alt="" />
           <ul>
-            <strong>TC 20 / 20 mm.</strong>
+            <strong>Formato XL 3/6/8 mm</strong>
             <li>Suelo técnico</li>
             <li>Fachada</li>
             <li>Recerco</li>
@@ -144,25 +167,12 @@ const DisenosTline = ({ id }) => {
           </ul>
         </div>
       </StyledDisenos>
-      <StyledDisenos id={id[5]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Piezas especiales</Titulo2>
-        <Anotaciones>
-          <Anotacion
-            type="normal"
-            text="Pulsa en el punto para ver todas las posibilidades de piezas especiales"
-          />
-          <Anotacion
-            type="swipe"
-            text="Desliza con el ratón o el dedo para rotar la imagen 360º"
-          />
-        </Anotaciones>
-        <VisualizadorRotador config={config} />
-      </StyledDisenos>
-      <IndiceSeries id={id[6]} />
+      <IndiceSeries id={id[3]} />
       {selectedSerie ? (
         <Series
           key={selectedSerie}
           ids={[
+            // Series Invisifix
             "basalt",
             "dolm",
             "dquartz",
@@ -177,12 +187,33 @@ const DisenosTline = ({ id }) => {
             "terrazo",
             "arquitect",
             "volumen",
+            // Series Tline
+            "ard",
+            "balm",
+            "bella",
+            "brun",
+            "byb",
+            "cap",
+            "cor",
+            "crom",
+            "dom",
+            "eter",
+            "grav",
+            "habi",
+            "han",
+            "inv",
+            "kur",
+            "nik",
+            "stone",
+            "stor",
+            "uni",
           ]}
           selectedSerie={selectedSerie}
         />
       ) : (
         <Series
           ids={[
+            // Series Invisifix
             "basalt",
             "dolm",
             "dquartz",
@@ -197,6 +228,26 @@ const DisenosTline = ({ id }) => {
             "terrazo",
             "arquitect",
             "volumen",
+            // Series Tline
+            "ard",
+            "balm",
+            "bella",
+            "brun",
+            "byb",
+            "cap",
+            "cor",
+            "crom",
+            "dom",
+            "eter",
+            "grav",
+            "habi",
+            "han",
+            "inv",
+            "kur",
+            "nik",
+            "stone",
+            "stor",
+            "uni",
           ]}
         />
       )}
