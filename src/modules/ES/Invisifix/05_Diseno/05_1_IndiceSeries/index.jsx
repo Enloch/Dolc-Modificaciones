@@ -84,25 +84,25 @@ const IndiceSeries = ({ id }) => {
   // Función para manejar el clic en una serie
   const handleSerieClick = (event, serieId) => {
     event.preventDefault(); // Prevenir el comportamiento predeterminado
-    
+
     // Extraer el ID sin el #
     const serieIdWithoutHash = serieId.substring(1);
-    
+
     // Cambiar la URL manualmente
     window.location.hash = serieIdWithoutHash;
-    
+
     // Esperar un momento para que el componente se cargue y luego desplazar la página
     setTimeout(() => {
       // Intentar encontrar el elemento por su ID
       const element = document.getElementById(serieIdWithoutHash);
       if (element) {
         // Si se encuentra el elemento, desplazar la página hasta él
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       } else {
         // Si no se encuentra el elemento, desplazar la página hasta el inicio de la sección de series
         window.scrollTo({
           top: document.getElementById(id).offsetTop,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
     }, 100); // Esperar 100ms para que el componente se cargue
@@ -112,8 +112,8 @@ const IndiceSeries = ({ id }) => {
   const elementosInvisifix = Children.toArray(
     seriesInvisifix.map(({ titulo, src, id }) => {
       return (
-        <Enlace 
-          href={id} 
+        <Enlace
+          href={id}
           className="enlace"
           onClick={(event) => handleSerieClick(event, id)}
         >
@@ -128,8 +128,8 @@ const IndiceSeries = ({ id }) => {
   const elementosTline = Children.toArray(
     seriesTline.map(({ titulo, src, id }) => {
       return (
-        <Enlace 
-          href={id} 
+        <Enlace
+          href={id}
           className="enlace"
           onClick={(event) => handleSerieClick(event, id)}
         >
@@ -144,7 +144,7 @@ const IndiceSeries = ({ id }) => {
     <>
       {/* Sección para series Invisifix */}
       <StyledIndiceSeries id={id} backgroundColor={COLORS.gray02}>
-        <Titulo2>SERIES INVISIFIX</Titulo2>
+        <Titulo2>SERIES SYSTEM</Titulo2>
         {elementosInvisifix}
       </StyledIndiceSeries>
 
