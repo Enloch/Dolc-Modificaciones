@@ -27,7 +27,7 @@ const DolckerTline = ({ id }) => {
           caption="Sistema Invisifix"
         />
 
-        <Text>
+        <div className="text-content">
           La nueva generación de grapas invisibles Dolcker
           <br />
           <br />
@@ -43,44 +43,36 @@ const DolckerTline = ({ id }) => {
           la seguridad estructural.
           <br />
           <br />
+          Características principales de Invisifix:
           <ul>
-            Características principales de Invisifix:
             <li>
-              - Composición mejorada y mayor rendimiento mecánico: acero de alta
+              Composición mejorada y mayor rendimiento mecánico: acero de alta
               resistencia para una grapa más segura y duradera.
             </li>
             <li>
-              - Patilla vista reducida y biselada, diseñada para pasar
+              Patilla vista reducida y biselada, diseñada para pasar
               desapercibida incluso en condiciones de observación próxima.
             </li>
             <li>
-              - Sujeción retranqueada, que aleja el punto de anclaje del borde
+              Sujeción retranqueada, que aleja el punto de anclaje del borde
               visible de la placa, reduciendo su impacto visual.
             </li>
             <li>
-              - Lacado QUALICOAT parcial en la zona vista, disponible en
-              cualquier RAL, con fondo negro para integración estética con la
-              junta.
+              Lacado QUALICOAT parcial en la zona vista, disponible en cualquier
+              RAL, con fondo negro para integración estética con la junta.
             </li>
             <li>
-              - Compatible con piezas cerámicas de distintos espesores,
-              totalmente integrada en el sistema Dolcker T20.
+              Compatible con piezas cerámicas de distintos espesores, totalmente
+              integrada en el sistema Dolcker T20.
             </li>
           </ul>
           <br />
           Invisifix es una solución discreta, precisa y adaptable, ideal para
           arquitecturas de alto valor añadido, donde la integración entre
           técnica y diseño es esencial.
-        </Text>
-        <ImageWithCaption
-          src={Imagen2}
-          alt="Imagen Dolcker 2"
-          // caption="Sistema Volumen"
-        />
+        </div>
       </div>
-      {/* <VisualizadorNota {...propsVisualizador} /> */}
-
-      <Text />
+      <ImageWithCaption columnSpan="6" src={Imagen2} alt="Imagen Dolcker 2" />
     </StyledDolcker>
   );
 };
