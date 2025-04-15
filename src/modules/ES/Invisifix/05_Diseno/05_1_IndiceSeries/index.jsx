@@ -5,14 +5,13 @@ import StyledIndiceSeries from "./styles";
 import Slider from "react-slick";
 import Modal from "../../../../../components/Modal";
 import SeriesCard from "./SeriesCard";
-import { seriesInvisifix } from "./data";
+import { seriesInvisifix, seriesTline } from "./data";
 
 // Import slick css
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const IndiceSeries = ({ id }) => {
-  console.log(seriesInvisifix);
   const [selectedImage, setSelectedImage] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -92,7 +91,7 @@ const IndiceSeries = ({ id }) => {
       </div>
 
       {/* Sección Tline */}
-      {/* <Titulo3>TLINE</Titulo3>
+      <Titulo3>TLINE</Titulo3>
       <div className="carousel-container">
         <Slider {...sliderSettings}>
           {seriesTline.map((series) => (
@@ -105,7 +104,7 @@ const IndiceSeries = ({ id }) => {
             </div>
           ))}
         </Slider>
-      </div> */}
+      </div>
 
       <Modal
         isOpen={modalOpen}

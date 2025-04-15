@@ -410,312 +410,338 @@ export const seriesInvisifix = [
   },
 ].sort((a, b) => a.name.localeCompare(b.name));
 
-// export const seriesTline = [
-//   // Ardesia
-//   {
-//     id: 1,
-//     name: "Ard Bronce",
-//     image: configArdesia.muestras[0].imagen,
-//   },
-//   {
-//     id: 2,
-//     name: "Ard Earth",
-//     image: configArdesia.muestras[1].imagen,
-//   },
-//   {
-//     id: 3,
-//     name: "Ard Noir",
-//     image: configArdesia.muestras[2].imagen,
-//   },
-//   {
-//     id: 4,
-//     name: "Ard Opal",
-//     image: configArdesia.muestras[3].imagen,
-//   },
-//   {
-//     id: 5,
-//     name: "Ard Silver",
-//     image: configArdesia.muestras[4].imagen,
-//   },
-//   // Balmoral
-//   {
-//     id: 6,
-//     name: "Balm Dark Natural",
-//     image: configBalmoral.muestras[0].imagen,
-//   },
-//   {
-//     id: 7,
-//     name: "Balm Moon Natural",
-//     image: configBalmoral.muestras[1].imagen,
-//   },
-//   // Bellagio
-//   {
-//     id: 8,
-//     name: "Bell Natural",
-//     image: configBellagio.muestras[0].imagen,
-//   },
-//   // Brunswich
-//   {
-//     id: 25,
-//     name: "Brun Acero",
-//     image: configBrunswich.muestras[0].imagen,
-//   },
+export const seriesTline = [
+  // Ardesia
+  {
+    id: 1,
+    name: "Ard Bronce",
+    image: configArdesia.muestras[0].imagen,
+  },
+  {
+    id: 2,
+    name: "Ard Earth",
+    image: configArdesia.muestras[1].imagen,
+  },
+  {
+    id: 3,
+    name: "Ard Noir",
+    image: configArdesia.muestras[2].imagen,
+  },
+  {
+    id: 4,
+    name: "Ard Opal",
+    image: configArdesia.muestras[3].imagen,
+  },
+  {
+    id: 5,
+    name: "Ard Silver",
+    image: configArdesia.muestras[4].imagen,
+  },
+  // Balmoral
+  {
+    id: 6,
+    name: "Balm Dark Natural",
+    image: configBalmoral.muestras[0].imagen,
+  },
+  {
+    id: 7,
+    name: "Balm Moon Natural",
+    image: configBalmoral.muestras[1].imagen,
+  },
+  // Bellagio
+  {
+    id: 8,
+    name: "Bella Natural",
+    image: configBellagio.muestras[0].imagen,
+  },
+  // Brunswich
+  {
+    id: 9,
+    name: "Brun Acero",
+    image: configBrunswich.muestras[0].imagen,
+  },
+  {
+    id: 10,
+    name: "Brun Ceniza",
+    image: configBrunswich.muestras[1].imagen,
+  },
 
-//   // Byb
-//   {
-//     id: 28,
-//     name: "Byb Blanco",
-//     image: configByb.muestras[0].imagen,
-//   },
+  // Byb
+  {
+    id: 11,
+    name: "ByB Black Matt",
+    image: configByb.muestras[0].imagen,
+  },
+  {
+    id: 12,
+    name: "ByB Blanco Natural",
+    image: configByb.muestras[1].imagen,
+  },
 
-//   // Capri
-//   {
-//     id: 31,
-//     name: "Capri Natural",
-//     image: configCapri.muestras[0].imagen,
-//   },
-//   // Core
-//   {
-//     id: 35,
-//     name: "Core Blanco",
-//     image: configCore.muestras[0].imagen,
-//   },
+  // Capri
+  {
+    id: 13,
+    name: "Cap Cream",
+    image: configCapri.muestras[0].imagen,
+  },
+  {
+    id: 14,
+    name: "Cap Dark",
+    image: configCapri.muestras[1].imagen,
+  },
+  {
+    id: 15,
+    name: "Cap Grey",
+    image: configCapri.muestras[2].imagen,
+  },
+  // Core
+  {
+    id: 16,
+    name: "Core Ambre",
+    image: configCore.muestras[0].imagen,
+  },
+  {
+    id: 17,
+    name: "Core Argent",
+    image: configCore.muestras[1].imagen,
+  },
+  {
+    id: 18,
+    name: "Core Concrete",
+    image: configCore.muestras[2].imagen,
+  },
+  {
+    id: 19,
+    name: "Core Plumb",
+    image: configCore.muestras[3].imagen,
+  },
+  {
+    id: 20,
+    name: "Core Snow",
+    image: configCore.muestras[4].imagen,
+  },
+  {
+    id: 21,
+    name: "Core Tortora",
+    image: configCore.muestras[5].imagen,
+  },
 
-//   // Cromat
-//   {
-//     id: 41,
-//     name: "Cromat Antracita",
-//     image: configCromat.muestras[0].imagen,
-//   },
-//   {
-//     id: 42,
-//     name: "Cromat Arena",
-//     image: configCromat.muestras[1].imagen,
-//   },
-//   {
-//     id: 43,
-//     name: "Cromat Blanco",
-//     image: configCromat.muestras[2].imagen,
-//   },
-//   {
-//     id: 44,
-//     name: "Cromat Gris",
-//     image: configCromat.muestras[3].imagen,
-//   },
-//   {
-//     id: 45,
-//     name: "Cromat Negro",
-//     image: configCromat.muestras[4].imagen,
-//   },
-//   // Dome
-//   {
-//     id: 46,
-//     name: "Dome Antracita",
-//     image: configDome.muestras[0].imagen,
-//   },
-//   {
-//     id: 47,
-//     name: "Dome Arena",
-//     image: configDome.muestras[1].imagen,
-//   },
-//   {
-//     id: 48,
-//     name: "Dome Ceniza",
-//     image: configDome.muestras[2].imagen,
-//   },
-//   {
-//     id: 49,
-//     name: "Dome Gris",
-//     image: configDome.muestras[3].imagen,
-//   },
-//   // Eternal
-//   {
-//     id: 50,
-//     name: "Eternal Blanco",
-//     image: configEternal.muestras[0].imagen,
-//   },
-//   {
-//     id: 51,
-//     name: "Eternal Crema",
-//     image: configEternal.muestras[1].imagen,
-//   },
-//   {
-//     id: 52,
-//     name: "Eternal Gris",
-//     image: configEternal.muestras[2].imagen,
-//   },
-//   {
-//     id: 53,
-//     name: "Eternal Negro",
-//     image: configEternal.muestras[3].imagen,
-//   },
-//   // Gravel
-//   {
-//     id: 54,
-//     name: "Gravel Beige",
-//     image: configGravel.muestras[0].imagen,
-//   },
-//   {
-//     id: 55,
-//     name: "Gravel Blanco",
-//     image: configGravel.muestras[1].imagen,
-//   },
-//   {
-//     id: 56,
-//     name: "Gravel Gris",
-//     image: configGravel.muestras[2].imagen,
-//   },
-//   {
-//     id: 57,
-//     name: "Gravel Natural",
-//     image: configGravel.muestras[3].imagen,
-//   },
-//   {
-//     id: 58,
-//     name: "Gravel Negro",
-//     image: configGravel.muestras[4].imagen,
-//   },
-//   // Habitat
-//   {
-//     id: 59,
-//     name: "Habitat Anthracite",
-//     image: configHabitat.muestras[0].imagen,
-//   },
-//   {
-//     id: 60,
-//     name: "Habitat Cool",
-//     image: configHabitat.muestras[1].imagen,
-//   },
-//   {
-//     id: 61,
-//     name: "Habitat Warm",
-//     image: configHabitat.muestras[2].imagen,
-//   },
-//   // Hannover
-//   {
-//     id: 62,
-//     name: "Hannover Arena",
-//     image: configHannover.muestras[0].imagen,
-//   },
-//   {
-//     id: 63,
-//     name: "Hannover Grafito",
-//     image: configHannover.muestras[1].imagen,
-//   },
-//   {
-//     id: 64,
-//     name: "Hannover Pergamino",
-//     image: configHannover.muestras[2].imagen,
-//   },
-//   // Invictus
-//   {
-//     id: 65,
-//     name: "Invictus Blanco",
-//     image: configInvictus.muestras[0].imagen,
-//   },
-//   {
-//     id: 66,
-//     name: "Invictus Gris",
-//     image: configInvictus.muestras[1].imagen,
-//   },
-//   {
-//     id: 67,
-//     name: "Invictus Negro",
-//     image: configInvictus.muestras[2].imagen,
-//   },
-//   // Kursaal
-//   {
-//     id: 68,
-//     name: "Kursaal Antracita",
-//     image: configKursaal.muestras[0].imagen,
-//   },
-//   {
-//     id: 69,
-//     name: "Kursaal Arena",
-//     image: configKursaal.muestras[1].imagen,
-//   },
-//   {
-//     id: 70,
-//     name: "Kursaal Gris",
-//     image: configKursaal.muestras[2].imagen,
-//   },
-//   {
-//     id: 71,
-//     name: "Kursaal Marfil",
-//     image: configKursaal.muestras[3].imagen,
-//   },
-//   {
-//     id: 72,
-//     name: "Kursaal Negro",
-//     image: configKursaal.muestras[4].imagen,
-//   },
-//   // Nikea
-//   {
-//     id: 73,
-//     name: "Nikea Blanco",
-//     image: configNikea.muestras[0].imagen,
-//   },
-//   {
-//     id: 74,
-//     name: "Nikea Marfil",
-//     image: configNikea.muestras[1].imagen,
-//   },
-//   // Stoneland
-//   {
-//     id: 75,
-//     name: "Stoneland Beige",
-//     image: configStoneland.muestras[0].imagen,
-//   },
-//   {
-//     id: 76,
-//     name: "Stoneland Blanco",
-//     image: configStoneland.muestras[1].imagen,
-//   },
-//   {
-//     id: 77,
-//     name: "Stoneland Gris",
-//     image: configStoneland.muestras[2].imagen,
-//   },
-//   {
-//     id: 78,
-//     name: "Stoneland Negro",
-//     image: configStoneland.muestras[3].imagen,
-//   },
-//   // Storm
-//   {
-//     id: 79,
-//     name: "Storm Grafito",
-//     image: configStorm.muestras[0].imagen,
-//   },
-//   {
-//     id: 80,
-//     name: "Storm Gris",
-//     image: configStorm.muestras[1].imagen,
-//   },
-//   {
-//     id: 81,
-//     name: "Storm Hueso",
-//     image: configStorm.muestras[2].imagen,
-//   },
-//   {
-//     id: 82,
-//     name: "Storm Negro",
-//     image: configStorm.muestras[3].imagen,
-//   },
-//   // Unik
-//   {
-//     id: 83,
-//     name: "Unik Antracita",
-//     image: configUnik.muestras[0].imagen,
-//   },
-//   {
-//     id: 84,
-//     name: "Unik Beige",
-//     image: configUnik.muestras[1].imagen,
-//   },
-//   {
-//     id: 85,
-//     name: "Unik Perla",
-//     image: configUnik.muestras[2].imagen,
-//   },
-// ].sort((a, b) => a.name.localeCompare(b.name));
+  // Cromat
+  {
+    id: 22,
+    name: "Cromat Gris",
+    image: configCromat.muestras[0].imagen,
+  },
+  {
+    id: 23,
+    name: "Cromat Marengo",
+    image: configCromat.muestras[1].imagen,
+  },
+  {
+    id: 24,
+    name: "Cromat Marfil",
+    image: configCromat.muestras[2].imagen,
+  },
+  {
+    id: 25,
+    name: "Cromat Noce",
+    image: configCromat.muestras[3].imagen,
+  },
+  {
+    id: 26,
+    name: "Cromat Perla",
+    image: configCromat.muestras[4].imagen,
+  },
+  // Dome
+  {
+    id: 27,
+    name: "Dome Anthracite",
+    image: configDome.muestras[0].imagen,
+  },
+  {
+    id: 28,
+    name: "Dome Ash",
+    image: configDome.muestras[1].imagen,
+  },
+  {
+    id: 29,
+    name: "Dome Bone",
+    image: configDome.muestras[2].imagen,
+  },
+  {
+    id: 30,
+    name: "Dome Nut",
+    image: configDome.muestras[3].imagen,
+  },
+  // Eternal
+  {
+    id: 31,
+    name: "Eter Cream Natural",
+    image: configEternal.muestras[0].imagen,
+  },
+  {
+    id: 32,
+    name: "Eter Dark Natural",
+    image: configEternal.muestras[1].imagen,
+  },
+  {
+    id: 33,
+    name: "Eter Pearl Natural",
+    image: configEternal.muestras[2].imagen,
+  },
+  {
+    id: 34,
+    name: "Eter Taupe Natural",
+    image: configEternal.muestras[3].imagen,
+  },
+  // Gravel
+  {
+    id: 35,
+    name: "Grav Black",
+    image: configGravel.muestras[0].imagen,
+  },
+  {
+    id: 36,
+    name: "Grav Cream",
+    image: configGravel.muestras[1].imagen,
+  },
+  {
+    id: 37,
+    name: "Grav Earth",
+    image: configGravel.muestras[2].imagen,
+  },
+  {
+    id: 38,
+    name: "Grav Grey",
+    image: configGravel.muestras[3].imagen,
+  },
+  {
+    id: 39,
+    name: "Grav Shadow",
+    image: configGravel.muestras[4].imagen,
+  },
+  {
+    id: 40,
+    name: "Grav White",
+    image: configGravel.muestras[5].imagen,
+  },
+
+  // Habitat
+  {
+    id: 41,
+    name: "Habi Grey",
+    image: configHabitat.muestras[0].imagen,
+  },
+  {
+    id: 42,
+    name: "Habi Taupe",
+    image: configHabitat.muestras[1].imagen,
+  },
+  // Hannover
+  {
+    id: 43,
+    name: "Hannover Han Black Natural",
+    image: configHannover.muestras[0].imagen,
+  },
+  {
+    id: 44,
+    name: "Hannover Han Ivory Natural",
+    image: configHannover.muestras[1].imagen,
+  },
+  // Invictus
+  {
+    id: 45,
+    name: "Inv Natural",
+    image: configInvictus.muestras[0].imagen,
+  },
+  // Kursaal
+  {
+    id: 46,
+    name: "Kur Ashen",
+    image: configKursaal.muestras[0].imagen,
+  },
+  {
+    id: 47,
+    name: "Kur Neutral",
+    image: configKursaal.muestras[1].imagen,
+  },
+  {
+    id: 48,
+    name: "Kur Pure",
+    image: configKursaal.muestras[2].imagen,
+  },
+  {
+    id: 49,
+    name: "Kur Raven",
+    image: configKursaal.muestras[3].imagen,
+  },
+  {
+    id: 50,
+    name: "Kur Rust",
+    image: configKursaal.muestras[4].imagen,
+  },
+  {
+    id: 51,
+    name: "Kur Slate",
+    image: configKursaal.muestras[5].imagen,
+  },
+  // Nikea
+  {
+    id: 52,
+    name: "Nik",
+    image: configNikea.muestras[0].imagen,
+  },
+  // Stoneland
+  {
+    id: 53,
+    name: "Stone Grey Rectificado",
+    image: configStoneland.muestras[0].imagen,
+  },
+  {
+    id: 54,
+    name: "Stone Ivory",
+    image: configStoneland.muestras[1].imagen,
+  },
+  {
+    id: 55,
+    name: "Stone Pearl",
+    image: configStoneland.muestras[2].imagen,
+  },
+  // Storm
+  {
+    id: 56,
+    name: "Stor Cloud",
+    image: configStorm.muestras[0].imagen,
+  },
+  {
+    id: 57,
+    name: "Stor Cream",
+    image: configStorm.muestras[1].imagen,
+  },
+  {
+    id: 58,
+    name: "Stor Earth",
+    image: configStorm.muestras[2].imagen,
+  },
+  {
+    id: 59,
+    name: "Stor Grey",
+    image: configStorm.muestras[3].imagen,
+  },
+  {
+    id: 60,
+    name: "Stor White",
+    image: configStorm.muestras[4].imagen,
+  },
+  // Unik
+  {
+    id: 61,
+    name: "Uni Ash Natural",
+    image: configUnik.muestras[0].imagen,
+  },
+  {
+    id: 62,
+    name: "Uni Ivory Natural",
+    image: configUnik.muestras[1].imagen,
+  },
+].sort((a, b) => a.name.localeCompare(b.name));

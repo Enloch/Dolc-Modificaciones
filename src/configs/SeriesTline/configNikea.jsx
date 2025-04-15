@@ -27,7 +27,7 @@ const configNikea = {
       left: "20%",
       ambiente: {
         imagen: ambientes[0],
-        titulo: "Dolcker & Line ik Nikea",
+        titulo: "Dolcker & Line Nik",
       },
     },
   ],

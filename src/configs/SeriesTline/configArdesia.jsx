@@ -1,6 +1,5 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
 import imgSeleccionar from "../../assets/images/DolckerTline/Series/ARDESIA/DOLCKER CR ARDESIA materiales seleccion.webp";
-import MuestraImg from "../../assets/images/DolckerTline/ranurado11mm.webp";
 const ambientesImports = import.meta.globEager(
   "../../assets/images/DolckerTline/Series/ARDESIA/AMBIENTES/**"
 );
