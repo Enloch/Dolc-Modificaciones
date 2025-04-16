@@ -107,7 +107,7 @@ const IndiceSeries = ({ id }) => {
       </div>
 
       {/* Sección Invisifix Clean */}
-      {/* <Titulo3>Clean</Titulo3>
+      <Titulo3>Clean</Titulo3>
       <div className="carousel-container">
         <Slider {...sliderSettings}>
           {seriesInvisifixClean.map((series) => (
@@ -120,7 +120,7 @@ const IndiceSeries = ({ id }) => {
             </div>
           ))}
         </Slider>
-      </div> */}
+      </div>
       <Modal
         isOpen={modalOpen}
         onClose={closeModal}
