@@ -61,6 +61,22 @@ const TZMENTImports = import.meta.globEager(
 const WOODImports = import.meta.globEager(
   "../../../../../assets/images/Series/WOOD/DESPIECE/**"
 );
+//Series CLean
+const BRERAImports = import.meta.globEager(
+  "../../../../../assets/images/Invisifix/Series/BRERA/**"
+);
+const DOMUSImports = import.meta.globEager(
+  "../../../../../assets/images/Invisifix/Series/DOMUS/**"
+);
+const LUCENAImports = import.meta.globEager(
+  "../../../../../assets/images/Invisifix/Series/LUCENA/**"
+);
+const MELBOURNEImports = import.meta.globEager(
+  "../../../../../assets/images/Invisifix/Series/MELBOURNE/**"
+);
+const VALONIAImports = import.meta.globEager(
+  "../../../../../assets/images/Invisifix/Series/VALONIA/**"
+);
 
 // Get data from modules
 const muestrasARQUITECT = getDataFromModules(ARQUITECTImports);
@@ -76,7 +92,12 @@ const muestrasSTONE = getDataFromModules(STONEImports);
 const muestrasTERRAZO = getDataFromModules(TERRAZOImports);
 const muestrasTZMENT = getDataFromModules(TZMENTImports);
 const muestrasWOOD = getDataFromModules(WOODImports);
-
+//series Clean
+const muestrasBRERA = getDataFromModules(BRERAImports);
+const muestrasDOMUS = getDataFromModules(DOMUSImports);
+const muestrasLUCENA = getDataFromModules(LUCENAImports);
+const muestrasMELBOURNE = getDataFromModules(MELBOURNEImports);
+const muestrasVALONA = getDataFromModules(VALONIAImports);
 export const seriesInvisifix = [
   // DO&ARQUITECT (12 variantes)
   {
@@ -745,3 +766,142 @@ export const seriesTline = [
     image: configUnik.muestras[1].imagen,
   },
 ].sort((a, b) => a.name.localeCompare(b.name));
+
+//series Clean
+export const seriesInvisifixClean = [
+  //BRERA
+  {
+    id: 1,
+    name: "BRERA ANTRACITA",
+    image: muestrasBRERA[0],
+  },
+  {
+    id: 2,
+    name: "BRERA ARENA",
+    image: muestrasBRERA[1],
+  },
+  {
+    id: 3,
+    name: "BRERA BLANCO",
+    image: muestrasBRERA[2],
+  },
+  {
+    id: 4,
+    name: "BRERA CEMENTO",
+    image: muestrasBRERA[3],
+  },
+  {
+    id: 5,
+    name: "BRERA GRIS",
+    image: muestrasBRERA[4],
+  },
+  {
+    id: 6,
+    name: "BRERA TAUPE",
+    image: muestrasBRERA[5],
+  },
+  //DOMUS
+  {
+    id: 7,
+    name: "DOMUS ANTRACITA",
+    image: muestrasDOMUS[0],
+  },
+  {
+    id: 8,
+    name: "DOMUS ARENA",
+    image: muestrasDOMUS[1],
+  },
+  {
+    id: 9,
+    name: "DOMUS BLANCO",
+    image: muestrasDOMUS[2],
+  },
+  {
+    id: 10,
+    name: "DOMUS GRIS",
+    image: muestrasDOMUS[3],
+  },
+  {
+    id: 11,
+    name: "DOMUS PLOMO",
+    image: muestrasDOMUS[4],
+  },
+  {
+    id: 12,
+    name: "DOMUS TAUPE",
+    image: muestrasDOMUS[5],
+  },
+  //LUCENA
+  {
+    id: 13,
+    name: "LUCENA ARENA",
+    image: muestrasLUCENA[0],
+  },
+  {
+    id: 14,
+    name: "LUCENA BLANCO",
+    image: muestrasLUCENA[1],
+  },
+  {
+    id: 15,
+    name: "LUCENA NIEVE",
+    image: muestrasLUCENA[2],
+  },
+  {
+    id: 16,
+    name: "LUCENA PERLA",
+    image: muestrasLUCENA[3],
+  },
+  //MELBOURNE
+  {
+    id: 17,
+    name: "MELBOURNE ANTRACITA",
+    image: muestrasMELBOURNE[0],
+  },
+  {
+    id: 18,
+    name: "MELBOURNE BLANCO",
+    image: muestrasMELBOURNE[1],
+  },
+  {
+    id: 19,
+    name: "MELBOURNE GRIS",
+    image: muestrasMELBOURNE[2],
+  },
+  {
+    id: 20,
+    name: "MELBOURNE MARFIL",
+    image: muestrasMELBOURNE[3],
+  },
+  {
+    id: 21,
+    name: "MELBOURNE TAUPE",
+    image: muestrasMELBOURNE[4],
+  },
+  //VALONA
+  {
+    id: 22,
+    name: "VALONIA ANTRACITA",
+    image: muestrasVALONA[0],
+  },
+  {
+    id: 23,
+    name: "VALONIA AZUL",
+    image: muestrasVALONA[1],
+  },
+  {
+    id: 24,
+    name: "VALONIA BLANCO",
+    image: muestrasVALONA[2],
+  },
+  {
+    id: 25,
+    name: "VALONIA GRIS",
+    image: muestrasVALONA[3],
+  },
+  {
+    id: 26,
+    name: "VALONIA TAUPE",
+    image: muestrasVALONA[4],
+  },
+];

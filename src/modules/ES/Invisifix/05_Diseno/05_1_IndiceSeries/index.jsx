@@ -5,7 +5,7 @@ import StyledIndiceSeries from "./styles";
 import Slider from "react-slick";
 import Modal from "../../../../../components/Modal";
 import SeriesCard from "./SeriesCard";
-import { seriesInvisifix, seriesTline } from "./data";
+import { seriesInvisifix, seriesTline, seriesInvisifixClean } from "./data";
 
 // Import slick css
 import "slick-carousel/slick/slick.css";
@@ -106,6 +106,21 @@ const IndiceSeries = ({ id }) => {
         </Slider>
       </div>
 
+      {/* Sección Invisifix Clean */}
+      {/* <Titulo3>Clean</Titulo3>
+      <div className="carousel-container">
+        <Slider {...sliderSettings}>
+          {seriesInvisifixClean.map((series) => (
+            <div key={series.id} className="carousel-item">
+              <SeriesCard
+                name={series.name}
+                image={series.image}
+                onClick={() => openModal(series)}
+              />
+            </div>
+          ))}
+        </Slider>
+      </div> */}
       <Modal
         isOpen={modalOpen}
         onClose={closeModal}
