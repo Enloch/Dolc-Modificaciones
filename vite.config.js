@@ -11,6 +11,9 @@ export default defineConfig({
 	],
 	server: {
 		host: true,
+		open: {
+			browser: 'chrome'
+		}
 	},
 	build: {
 		chunkSizeWarningLimit: 1600,
