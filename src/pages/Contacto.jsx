@@ -4,7 +4,6 @@ import Seccion from "../components/SeccionContacto";
 import Text from "../components/Text";
 import { Titulo2 } from "../components/Titulos";
 import useMenuDesplegable from "../hooks/useMenuDesplegable";
-import Final from "../modules/ES/System/10_Final";
 import styled from "styled-components";
 
 const IframeMapa = styled.iframe`
@@ -38,7 +37,6 @@ const Contacto = ({ lang = "" }) => {
           28051 Madrid (España)
           <br />
           (+34) 902 363 725
-          <br />
           <br />
           <a href="mailto:administracion@dolcker.es">
             administracion@dolcker.es
