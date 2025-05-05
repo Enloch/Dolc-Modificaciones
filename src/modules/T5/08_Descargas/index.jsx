@@ -10,7 +10,6 @@ const Descargas = ({ id }) => {
   return (
     <StyledDescargas id={id} backgroundColor={COLORS.gray03}>
       <Titulo>Descargas</Titulo>
-      <h1>Arquitecto da Catálogo</h1>
       <div className="download-container">{descargas}</div>
     </StyledDescargas>
   );
