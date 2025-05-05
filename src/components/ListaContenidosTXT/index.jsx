@@ -1,4 +1,4 @@
-import useListaContenidos from "../../hooks/useListaContenidosTline";
+import useListaContenidos from "../../hooks/useListaContenidosTxt";
 import StyledListaContenidos from "./styles";
 import { useContext } from "react";
 import ListaContenidosContext from "../../contexts/ListaContenidosContextTXT";

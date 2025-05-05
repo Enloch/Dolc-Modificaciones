@@ -39,14 +39,14 @@ const Indice = ({ indiceRef }) => {
 
   return (
     <>
-      <StyledIndice backgroundColor={COLORS.gray06} ref={indiceRef} id='indice'>
+      <StyledIndice backgroundColor={COLORS.gray06} ref={indiceRef} id="indice">
         <Titulo color={COLORS.gray01}>Dolcker TXT</Titulo>
         <ListaContenidos />
         <AnimatedArrow
           size={32}
-          color='white'
-          alt=''
-          className='flecha-indice'
+          color="white"
+          alt=""
+          className="flecha-indice"
           onClick={handleClickFlecha}
         />
         {/* <div className='idiomas'>

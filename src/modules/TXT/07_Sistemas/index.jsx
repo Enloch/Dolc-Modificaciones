@@ -69,32 +69,25 @@ const SistemasTline = ({ id }) => {
             <a href={"#" + id[2]}>
               Sistema
               <br />
-              <strong>TXT-12</strong>
+              <strong>TXT-13</strong>
             </a>
           </li>
           <li>
             <a href={"#" + id[3]}>
               Sistema
               <br />
-              <strong>TXT-13</strong>
+              <strong>TXT-TC14 Detalles esquina</strong>
             </a>
           </li>
           <li>
             <a href={"#" + id[4]}>
               Sistema
               <br />
-              <strong>TXT-TC14 Detalles esquina</strong>
-            </a>
-          </li>
-          <li>
-            <a href={"#" + id[5]}>
-              Sistema
-              <br />
               <strong>TXT-TC14 Detalles recerco</strong>
             </a>
           </li>
           <li>
-            <a href={"#" + id[6]}>
+            <a href={"#" + id[5]}>
               <br />
               <strong>TXT-TC14 Leyenda</strong>
             </a>
@@ -115,16 +108,6 @@ const SistemasTline = ({ id }) => {
         />
       </StyledSistemas>
       <StyledSistemas id={id[2]}>
-        <Titulo2>TXT-12</Titulo2>
-        <Text>Fachadas diseñadas para resaltar volúmenes distintivos.</Text>
-        <ImageWithCaption
-          src={txt12}
-          alt="Dolcker-clip demostración"
-          columnSpan="6"
-          caption="Detalles tecnicos TXT-12"
-        />
-      </StyledSistemas>
-      <StyledSistemas id={id[3]}>
         <Titulo2>TXT-13</Titulo2>
         <Text>
           Fachadas que incorporan perfiles estratégicos para generar sombras y
@@ -137,7 +120,7 @@ const SistemasTline = ({ id }) => {
           caption="Detalles tecnicos TXT-13"
         />
       </StyledSistemas>
-      <StyledSistemas id={id[4]}>
+      <StyledSistemas id={id[3]}>
         <Titulo2>
           TXT-TC14
           <br />
@@ -188,7 +171,7 @@ const SistemasTline = ({ id }) => {
           />
         </StyledGrid>
       </StyledSistemas>
-      <StyledSistemas id={id[5]}>
+      <StyledSistemas id={id[4]}>
         <Titulo2>
           TXT-TC14
           <br />
@@ -218,7 +201,7 @@ const SistemasTline = ({ id }) => {
           />
         </StyledGrid>
       </StyledSistemas>
-      <StyledSistemas id={id[6]}>
+      <StyledSistemas id={id[5]}>
         <Titulo2>
           TXT-TC14
           <br />

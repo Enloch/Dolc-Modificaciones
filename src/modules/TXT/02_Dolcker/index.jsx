@@ -86,9 +86,6 @@ const DolckerTline = ({ id }) => {
             destacando una junta vertical lacada en el color elegido por el
             diseñador.
             <br />
-            <br />
-            • TXT 12 – Fachadas diseñadas para resaltar volúmenes distintivos.
-            <br />
             <br />• TXT 13 – Fachadas que incorporan perfiles estratégicos para
             generar sombras y potenciar la volumetría.
           </Text>
