@@ -1,8 +1,8 @@
-import useListaContenidos from '../../hooks/useListaContenidosG10';
-import StyledListaContenidos from './styles';
-import { useContext } from 'react';
-import ListaContenidosContext from '../../contexts/ListaContenidosContextT5';
-import inglesLista from '../../utils/en/listaContenidos.json';
+import useListaContenidos from "../../hooks/useListaContenidosT5";
+import StyledListaContenidos from "./styles";
+import { useContext } from "react";
+import ListaContenidosContext from "../../contexts/ListaContenidosContextT5";
+import inglesLista from "../../utils/en/listaContenidos.json";
 
 const ListaContenidos = ({ en = false, isMenuDesplegable = false }) => {
   const contendiosJSON = useContext(ListaContenidosContext);

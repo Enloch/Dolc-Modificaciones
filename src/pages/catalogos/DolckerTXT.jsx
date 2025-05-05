@@ -54,7 +54,7 @@ const DolckerTXT = () => {
         ]}
       />
       {/* <Descargas id='descargas' /> */}
-      {/* <Final /> */}
+      <Final />
       {showButton && (
         <StyledButton onClick={handleGoToIndice}>
           <span role="img" aria-label="up arrow">
