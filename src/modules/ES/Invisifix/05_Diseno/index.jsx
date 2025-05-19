@@ -46,11 +46,6 @@ const DisenosTline = ({ id }) => {
           colorAutor={COLORS.gray04}
         />
       </StyledDisenos>
-      <StyledDisenos backgroundColor={COLORS.gray01}>
-        <Titulo2>Formato</Titulo2>
-        <Anotacion {...propsFormato.anotacion} />
-        <VisualizadorVariaciones {...propsFormato.visualizador} />
-      </StyledDisenos>
       <StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
         <Titulo2>Acabados</Titulo2>
         <Anotaciones>
