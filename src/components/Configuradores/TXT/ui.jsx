@@ -25,6 +25,7 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import styled from "@emotion/styled";
+
 // Define Styled Components
 
 // Constants for MenuIcon positioning
@@ -125,10 +126,9 @@ export const TXTUI = () => {
       <MenuIcon
         src={IconoMenu}
         isOpen={isMenuOpen}
-        onClick={toggleMenu}
-        alt="flecha-menu"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
       />
-      <MenuContainer id="menu" isOpen={isMenuOpen}>
+      <MenuContainer isOpen={isMenuOpen}>
         <MenuContent>
           <Typography variant="h4" sx={{ marginBottom: "10px" }}>
             Configuración
