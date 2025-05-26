@@ -25,7 +25,6 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import styled from "@emotion/styled";
-
 // Define Styled Components
 
 // Constants for MenuIcon positioning
@@ -107,6 +106,7 @@ const MaterialOption = ({ src, alt, label }) => (
 );
 
 export const TXTUI = () => {
+  const { menuSeleccionActivo, setMenuSeleccionActivo } = useConfigStore();
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Changed: Default state is now closed
   // State to manage which accordion is expanded
   const [expandedAccordion, setExpandedAccordion] = useState(false); // false means all are closed initially
@@ -137,6 +137,7 @@ export const TXTUI = () => {
           <Accordion
             expanded={expandedAccordion === "panel1"}
             onChange={handleAccordionChange("panel1")}
+            onClick={() => setMenuSeleccionActivo(false)}
           >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -164,6 +165,7 @@ export const TXTUI = () => {
           <Accordion
             expanded={expandedAccordion === "panel2"}
             onChange={handleAccordionChange("panel2")}
+            onClick={() => setMenuSeleccionActivo(false)}
           >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -188,6 +190,7 @@ export const TXTUI = () => {
           <Accordion
             expanded={expandedAccordion === "panel3"}
             onChange={handleAccordionChange("panel3")}
+            onClick={() => setMenuSeleccionActivo(!menuSeleccionActivo)}
           >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -197,7 +200,10 @@ export const TXTUI = () => {
               <Typography variant="h6">Configura el posicionamiento</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>Opciones de posicionamiento próximamente.</Typography>
+              <Typography>
+                Utiliza los iconos de la izquierda para seleccionar la sección
+                que deseas configurar.
+              </Typography>
             </AccordionDetails>
           </Accordion>
         </MenuContent>
@@ -215,6 +221,7 @@ export const Iconos = ({ onConfigAccept }) => {
     setSection4,
     setSection5,
     setSection6,
+    menuSeleccionActivo,
   } = useConfigStore();
 
   const iconSize = "30px";
@@ -294,6 +301,7 @@ export const Iconos = ({ onConfigAccept }) => {
           left: 0,
           top: 0,
           zIndex: 9,
+          display: menuSeleccionActivo ? "block" : "none",
         }}
       >
         {iconSections.map((icon) => (

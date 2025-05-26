@@ -4,6 +4,9 @@ export const useConfigStore = create((set) => ({
   sistemaActivo: "TXT11",
   setSistemaActivo: (sistema) => set({ sistemaActivo: sistema }),
   selectedSection: null,
+  menuSeleccionActivo: false,
+  setMenuSeleccionActivo: (menuSeleccionActivo) =>
+    set({ menuSeleccionActivo: menuSeleccionActivo }),
   setSelectedSection: (section) => set({ selectedSection: section }),
   Section1: 0,
   setSection1: (value) => set({ Section1: value }),
