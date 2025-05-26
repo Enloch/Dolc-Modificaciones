@@ -11,42 +11,12 @@ import {
   useGLTF,
 } from "@react-three/drei";
 import { EffectComposer, SSAO, ToneMapping } from "@react-three/postprocessing";
-import { BlendFunction } from "postprocessing";
 import * as THREE from "three";
 import { EscenaTXT } from "./EscenaTXT";
-
+import { TXTUI, Iconos } from "./ui";
 let rotacionX = 0;
 let rotacionY = 0;
 let rotacionZ = 244.4;
-
-// Predefined finishes
-const availableFinishes = {
-  original: { name: "Original", properties: null }, // null properties means use GLTF default
-  shinyBlue: {
-    name: "Shiny Blue",
-    properties: {
-      color: new THREE.Color("blue"),
-      roughness: 0.1,
-      metalness: 0.8,
-    },
-  },
-  matteGreen: {
-    name: "Matte Green",
-    properties: {
-      color: new THREE.Color("green"),
-      roughness: 0.9,
-      metalness: 0.1,
-    },
-  },
-  metallicGold: {
-    name: "Metallic Gold",
-    properties: {
-      color: new THREE.Color("gold"),
-      roughness: 0.2,
-      metalness: 0.9,
-    },
-  },
-};
 
 // Componente para la luz direccional con target
 function DirectionalLightWithTarget() {
@@ -86,8 +56,6 @@ function DirectionalLightWithTarget() {
 
 export default function Escena3DTXT() {
   const [selectedSection, setSelectedSection] = useState(null); // State for selected section
-  const [activeFinishKey, setActiveFinishKey] = useState("original"); // Default to original
-
   const handleSectionClick = (sectionName) => {
     console.log(`Section clicked in parent: ${sectionName}`);
     // Toggle selection: if clicked section is already selected, deselect it. Otherwise, select it.
@@ -96,123 +64,77 @@ export default function Escena3DTXT() {
     );
   };
 
-  // Get the actual finish properties object based on the key
-  const currentFinishProperties = availableFinishes[activeFinishKey].properties;
-
   return (
     <>
-      {/* Basic UI for selecting finishes */}
-      <div
-        style={{
-          position: "relative",
-          top: "10px",
-          left: "10px",
-          zIndex: 100,
-          background: "rgba(255,255,255,0.8)",
-          padding: "10px",
-          borderRadius: "5px",
-        }}
-      >
-        <strong>Select Finish:</strong>
-        <br />
-        {Object.keys(availableFinishes).map((key) => (
-          <button
-            key={key}
-            onClick={() => setActiveFinishKey(key)}
-            style={{
-              fontWeight: activeFinishKey === key ? "bold" : "normal",
-              marginRight: "5px",
-              marginTop: "5px",
-            }}
-          >
-            {availableFinishes[key].name}
-          </button>
-        ))}
-        <p style={{ marginTop: "5px", fontSize: "0.9em" }}>
-          Selected: {availableFinishes[activeFinishKey].name}
-        </p>
-      </div>
-
-      <Canvas
-        flat
-        frameloop="demand"
-        shadows={"soft"}
-        style={{ width: "100%", height: "100%" }}
-        gl={{ antialias: false }}
-      >
-        {/* Configuración de cámara */}
-        <PerspectiveCamera
-          makeDefault={true}
-          far={100}
-          near={0.1}
-          fov={31.417}
-          position={[10, 6.6, 9.4]}
-          rotation={[0.005, 0.973, -0.004]}
-        />
-        <SoftShadows size={32} samples={10} focus={10} />
-        {/* <Sky azimuth={0.973} turbidity={20} sunPosition={[2, 2, 1]} /> */}
-        {/* Componente 3D */}
-        <EscenaTXT
-          onSectionClick={handleSectionClick} // Pass the handler
-          selectedSection={selectedSection} // Pass the currently selected section
-          activeFinishProperties={currentFinishProperties} // Pass the properties object
-        />
-        {/* Entorno */}
-        <Environment
-          files="/HDRI INTERCAMBIADOR TXT.hdr"
-          background
-          environmentIntensity={2}
-          environmentRotation={[rotacionX, rotacionZ, rotacionY]}
-          backgroundRotation={[rotacionX, rotacionZ, rotacionY]}
-        />
-        {/* Reemplazamos la luz direccional con nuestro componente personalizado */}
-        {/* <DirectionalLightWithTarget />
-         */}
-        <directionalLight
-          castShadow
-          intensity={3}
-          position={[-25, 7, 16]}
-          shadow-mapSize={[4096, 4096]}
-          shadow-bias={-0.001}
-          shadow-camera-left={-15}
-          shadow-camera-right={15}
-          shadow-camera-top={15}
-          shadow-camera-bottom={-15}
-          shadow-camera-near={0.1}
-          shadow-camera-far={50}
-        />
-        {/* Luz ambiental suave para iluminar áreas en sombra */}
-        <ambientLight intensity={0.5} color={0xffffff} />
-        <EffectComposer
-          enableNormalPass
-          enabled={true}
-          autoClear={false}
-          multisampling={8}
+      <div style={{ width: "100%", height: "100%", position: "relative" }}>
+        <TXTUI />
+        <Iconos />
+        <Canvas
+          flat
+          // frameloop="demand"
+          shadows={"soft"}
+          gl={{ antialias: false }}
         >
-          {/* <SSAO
-            blendFunction={BlendFunction.MULTIPLY} // blend mode
-            samples={30} // amount of samples per pixel (shouldn't be a multiple of the ring count)
-            rings={4} // amount of rings in the occlusion sampling pattern
-            distanceThreshold={1.0} // global distance threshold at which the occlusion effect starts to fade out. min: 0, max: 1
-            distanceFalloff={0.0} // distance falloff. min: 0, max: 1
-            rangeThreshold={0.5} // local occlusion range threshold at which the occlusion starts to fade out. min: 0, max: 1
-            rangeFalloff={0.1} // occlusion range falloff. min: 0, max: 1
-            luminanceInfluence={0.9} // how much the luminance of the scene influences the ambient occlusion
-            radius={20} // occlusion sampling radius
-            scale={0.5} // scale of the ambient occlusion
-            bias={0.5} // occlusion bias
-          /> */}
-          <ToneMapping
-            adaptive
-            resolution={256}
-            middleGrey={0.5}
-            maxLuminance={16.0}
-            averageLuminance={1.0}
-            adaptationRate={1.0}
-            mode={ToneMapping.ACES}
+          {/* Configuración de cámara */}
+          <PerspectiveCamera
+            makeDefault={true}
+            far={100}
+            near={0.1}
+            fov={31.417}
+            position={[10, 6.6, 9.4]}
+            rotation={[0.005, 0.973, -0.004]}
           />
-        </EffectComposer>
-      </Canvas>
+          <SoftShadows size={32} samples={10} focus={1} />
+          {/* <Sky azimuth={0.973} turbidity={20} sunPosition={[2, 2, 1]} /> */}
+          {/* Componente 3D */}
+          <EscenaTXT
+            onSectionClick={handleSectionClick} // Pass the handler
+            selectedSection={selectedSection} // Pass the currently selected section
+          />
+          {/* Entorno */}
+          <Environment
+            files="/HDRI INTERCAMBIADOR TXT.hdr"
+            background
+            environmentIntensity={2}
+            environmentRotation={[rotacionX, rotacionZ, rotacionY]}
+            backgroundRotation={[rotacionX, rotacionZ, rotacionY]}
+          />
+          {/* Reemplazamos la luz direccional con nuestro componente personalizado */}
+          {/* <DirectionalLightWithTarget />
+           */}
+          <directionalLight
+            castShadow
+            intensity={3}
+            position={[-25, 7, 16]}
+            shadow-mapSize={[4096, 4096]}
+            shadow-bias={-0.001}
+            shadow-camera-left={-15}
+            shadow-camera-right={15}
+            shadow-camera-top={15}
+            shadow-camera-bottom={-15}
+            shadow-camera-near={0.1}
+            shadow-camera-far={50}
+          />
+          {/* Luz ambiental suave para iluminar áreas en sombra */}
+          <ambientLight intensity={0.5} color={0xffffff} />
+          <EffectComposer
+            enableNormalPass
+            enabled={true}
+            autoClear={false}
+            multisampling={8}
+          >
+            <ToneMapping
+              adaptive
+              resolution={256}
+              middleGrey={0.5}
+              maxLuminance={16.0}
+              averageLuminance={1.0}
+              adaptationRate={1.0}
+              mode={ToneMapping.ACES}
+            />
+          </EffectComposer>
+        </Canvas>
+      </div>
     </>
   );
 }
