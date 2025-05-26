@@ -27,17 +27,25 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import styled from "@emotion/styled";
 
 // Define Styled Components
+
+// Constants for MenuIcon positioning
+const MENU_MAX_WIDTH = 350; // px, from MenuContainer's max-width
+const ICON_WIDTH = 30;      // px, from MenuIcon's width
+const ICON_MARGIN_RIGHT_OPEN = 10; // px, desired margin from the right edge of the open menu
+const ICON_POSITION_LEFT_OPEN = MENU_MAX_WIDTH - ICON_WIDTH - ICON_MARGIN_RIGHT_OPEN; // 310px
+const ICON_POSITION_LEFT_CLOSED = 20; // px
+
 const MenuIcon = styled.img`
   position: absolute;
   top: 3%;
-  width: 30px;
+  left: ${({ isOpen }) => (isOpen ? `${ICON_POSITION_LEFT_OPEN}px` : `${ICON_POSITION_LEFT_CLOSED}px`)};
+  width: ${ICON_WIDTH}px;
   z-index: 11;
   cursor: pointer;
   transition:
     transform 1.5s ease-in-out,
     filter 1.5s ease-in-out,
-    left 1.5s ease-in-out;
-  left: ${({ isOpen }) => (isOpen ? "16%" : "1%")};
+    left 1.5s ease-in-out; // Added 'left' to transition
   filter: ${({ isOpen }) => (isOpen ? "invert(0)" : "invert(1)")};
   transform: ${({ isOpen }) => (isOpen ? "rotate(0deg)" : "rotate(180deg)")};
 `;
