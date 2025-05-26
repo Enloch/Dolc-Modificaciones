@@ -57,7 +57,7 @@ function DirectionalLightWithTarget() {
 export default function Escena3DTXT() {
   const [selectedSection, setSelectedSection] = useState(null); // State for selected section
   const handleSectionClick = (sectionName) => {
-    console.log(`Section clicked in parent: ${sectionName}`);
+    console.log(`Section clicked/selected via icon: ${sectionName}`);
     // Toggle selection: if clicked section is already selected, deselect it. Otherwise, select it.
     setSelectedSection((prevSelected) =>
       prevSelected === sectionName ? null : sectionName
@@ -68,7 +68,7 @@ export default function Escena3DTXT() {
     <>
       <div style={{ width: "100%", height: "100%", position: "relative" }}>
         <TXTUI />
-        <Iconos />
+        <Iconos onIconClick={handleSectionClick} />
         <Canvas
           flat
           // frameloop="demand"
