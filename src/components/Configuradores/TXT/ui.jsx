@@ -10,6 +10,7 @@ import IconoEmberoDorado from "/texturas/Embero Dorado Rugoso 1K.jpg";
 import IconoEmbero from "/texturas/EmberoTexturaRugoso.jpg";
 import IconoOlmo from "/texturas/Olmo Rugoso 1K.jpg";
 //--------
+import { TIPOS_MATERIAL } from "./texturas"; // Added import
 import {
   Popover,
   Button,
@@ -79,15 +80,24 @@ const MenuContent = styled.div`
   gap: 10px;
 `;
 
-const MaterialOption = ({ src, alt, label }) => (
+const MaterialOption = ({ src, alt, label, isSelected, onClick }) => (
   <Box
+    onClick={onClick} // Added onClick handler
     sx={{
       display: "flex",
       flexDirection: "column",
       gap: 1,
       alignItems: "center",
-      width: "80px", // Standardized width
-      height: "auto",
+      width: "100px", // Adjusted width for better spacing with border
+      padding: "8px",
+      border: isSelected ? "2px solid #1976d2" : "2px solid transparent", // Blue border for selected
+      borderRadius: "8px",
+      cursor: "pointer",
+      transition: "border-color 0.3s ease, background-color 0.3s ease",
+      "&:hover": {
+        borderColor: isSelected ? "#1976d2" : "#e0e0e0", // Keep blue if selected, else light gray
+        backgroundColor: isSelected ? "transparent" : "#f5f5f5", // Light background on hover if not selected
+      },
     }}
   >
     <img
@@ -107,7 +117,12 @@ const MaterialOption = ({ src, alt, label }) => (
 );
 
 export const TXTUI = () => {
-  const { menuSeleccionActivo, setMenuSeleccionActivo } = useConfigStore();
+  const {
+    menuSeleccionActivo,
+    setMenuSeleccionActivo,
+    materialPorcelanicoSeleccionado, // Get current selection
+    setMaterialPorcelanicoSeleccionado, // Get setter
+  } = useConfigStore();
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Changed: Default state is now closed
   // State to manage which accordion is expanded
   const [expandedAccordion, setExpandedAccordion] = useState(false); // false means all are closed initially
@@ -144,19 +159,23 @@ export const TXTUI = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography variant="h6">Elegir material porcelánico</Typography>
+              <Typography variant="h6">Acabado Porcelánico</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
-                <MaterialOption
-                  src={IconoPaladio}
-                  alt="Paladio"
-                  label="Paladio"
-                />
+              <Box sx={{ display: "flex", justifyContent: "space-around", gap: 2, flexWrap: 'wrap' }}>
                 <MaterialOption
                   src={IconoEstatuario}
                   alt="Estatuario"
                   label="Estatuario"
+                  isSelected={materialPorcelanicoSeleccionado === TIPOS_MATERIAL.ESTATUARIO}
+                  onClick={() => setMaterialPorcelanicoSeleccionado(TIPOS_MATERIAL.ESTATUARIO)}
+                />
+                <MaterialOption
+                  src={IconoPaladio}
+                  alt="Paladio"
+                  label="Paladio"
+                  isSelected={materialPorcelanicoSeleccionado === TIPOS_MATERIAL.PALADIO}
+                  onClick={() => setMaterialPorcelanicoSeleccionado(TIPOS_MATERIAL.PALADIO)}
                 />
               </Box>
             </AccordionDetails>

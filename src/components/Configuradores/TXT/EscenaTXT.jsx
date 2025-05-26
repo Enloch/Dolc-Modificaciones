@@ -4,15 +4,119 @@ Command: npx gltfjsx@6.5.3 EscenaTXT.glb --transform -j -s
 Files: EscenaTXT.glb [6.73MB] > C:\Users\7475\Desktop\Trabajo\Dolc-Modificaciones\public\EscenaTXT-transformed.glb [793.65KB] (88%)
 */
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useGLTF } from "@react-three/drei";
+import { useThree } from "@react-three/fiber";
 import { useConfigStore } from "./store";
+import { TextureLoader, SRGBColorSpace } from "three";
+import { TIPOS_MATERIAL, getImagenesParaMaterial } from "./texturas";
 
 export function EscenaTXT(props) {
   const { nodes, materials } = useGLTF("/EscenaTXT-transformed.glb");
+  const { invalidate } = useThree();
   const { onSectionClick, ...groupProps } = props;
-  const { Section1, Section2, Section3, Section4, Section5, Section6 } =
-    useConfigStore();
+  const {
+    Section1,
+    Section2,
+    Section3,
+    Section4,
+    Section5,
+    Section6,
+    materialPorcelanicoSeleccionado,
+  } = useConfigStore();
+
+  const [texturasCargadas, setTexturasCargadas] = useState([]);
+
+  useEffect(() => {
+    if (materialPorcelanicoSeleccionado) {
+      const rutasImagenes = getImagenesParaMaterial(
+        materialPorcelanicoSeleccionado
+      );
+      if (rutasImagenes && rutasImagenes.length > 0) {
+        const loader = new TextureLoader();
+        const promesasTexturas = rutasImagenes.map((url) => {
+          return new Promise((resolve, reject) => {
+            loader.load(
+              url,
+              (texture) => {
+                texture.flipY = false;
+                texture.colorSpace = SRGBColorSpace;
+                resolve(texture);
+              },
+              undefined,
+              (error) => {
+                console.error(`Error cargando textura: ${url}`, error);
+                reject(error);
+              }
+            );
+          });
+        });
+
+        Promise.all(promesasTexturas)
+          .then((loadedTextures) => {
+            setTexturasCargadas(loadedTextures);
+          })
+          .catch((error) => {
+            console.error(
+              "Error al cargar una o más texturas del conjunto:",
+              error
+            );
+            setTexturasCargadas([]);
+          });
+      } else {
+        console.warn(
+          `No se encontraron rutas de imágenes para el material: ${materialPorcelanicoSeleccionado}`
+        );
+        setTexturasCargadas([]);
+      }
+    } else {
+      setTexturasCargadas([]);
+    }
+  }, [materialPorcelanicoSeleccionado]);
+
+  useEffect(() => {
+    if (materials && texturasCargadas.length === 18) {
+      let changed = false;
+      for (let i = 0; i < 18; i++) {
+        const materialKey = `Pieza${(i + 1).toString().padStart(2, "0")}`;
+        if (
+          materials[materialKey] &&
+          materials[materialKey].isMeshStandardMaterial
+        ) {
+          if (materials[materialKey].map !== texturasCargadas[i]) {
+            if (
+              materials[materialKey].map &&
+              materials[materialKey].map.isTexture
+            ) {
+              // materials[materialKey].map.dispose();
+            }
+            materials[materialKey].map = texturasCargadas[i];
+            materials[materialKey].needsUpdate = true;
+            changed = true;
+          }
+        } else {
+          // console.warn(`Material GLTF no encontrado o no es MeshStandardMaterial: ${materialKey}`);
+        }
+      }
+      if (changed) {
+        invalidate();
+      }
+    } else if (
+      texturasCargadas.length === 0 &&
+      materialPorcelanicoSeleccionado
+    ) {
+      // Potentially revert to default/original materials if needed
+      // For now, ensure a re-render if we explicitly cleared textures
+      // This might be more complex if original textures need to be restored.
+      // invalidate();
+    }
+  }, [
+    materials,
+    texturasCargadas,
+    materialPorcelanicoSeleccionado,
+    invalidate,
+  ]);
+
   console.log("Section1", Section1);
   console.log("Section2", Section2);
   console.log("Section3", Section3);

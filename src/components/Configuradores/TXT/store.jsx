@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { TIPOS_MATERIAL } from "./texturas";
 
 export const useConfigStore = create((set) => ({
   sistemaActivo: "TXT11",
@@ -20,4 +21,6 @@ export const useConfigStore = create((set) => ({
   setSection5: (value) => set({ Section5: value }),
   Section6: 0,
   setSection6: (value) => set({ Section6: value }),
+  materialPorcelanicoSeleccionado: TIPOS_MATERIAL.ESTATUARIO,
+  setMaterialPorcelanicoSeleccionado: (material) => set({ materialPorcelanicoSeleccionado: material }),
 }));
