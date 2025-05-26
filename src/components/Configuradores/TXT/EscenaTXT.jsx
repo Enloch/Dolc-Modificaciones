@@ -4,419 +4,470 @@ Command: npx gltfjsx@6.5.3 EscenaTXT.glb --transform -j -s
 Files: EscenaTXT.glb [6.73MB] > C:\Users\7475\Desktop\Trabajo\Dolc-Modificaciones\public\EscenaTXT-transformed.glb [793.65KB] (88%)
 */
 
-import React from "react";
+import React, { useMemo } from "react";
 import { useGLTF } from "@react-three/drei";
+import * as THREE from "three";
 
 export function EscenaTXT(props) {
   const { nodes, materials } = useGLTF("/EscenaTXT-transformed.glb");
+  const { onSectionClick, selectedSection, ...groupProps } = props;
+
+  const highlightColorThree = useMemo(() => new THREE.Color("red"), []);
+
+  const highlightedMaterialCache = useMemo(() => {
+    const cache = {};
+    for (const key in materials) {
+      if (materials[key] && typeof materials[key].clone === "function") {
+        const highlighted = materials[key].clone();
+        highlighted.color.set(highlightColorThree);
+        cache[key] = highlighted;
+      }
+    }
+    return cache;
+  }, [materials, highlightColorThree]);
+
+  const getMaterialForMesh = (originalMaterialKey, meshSectionName) => {
+    if (
+      selectedSection === meshSectionName &&
+      highlightedMaterialCache[originalMaterialKey]
+    ) {
+      return highlightedMaterialCache[originalMaterialKey];
+    }
+    return materials[originalMaterialKey] || null;
+  };
+
   return (
-    <group {...props} dispose={null}>
-      <group name="Seccion1" position={[0, 0, 0.0]}>
+    <group {...groupProps} dispose={null}>
+      <group
+        name="Seccion1"
+        position={[0, 0, 0.0]}
+        onClick={() => onSectionClick && onSectionClick("Seccion1")}
+      >
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_001.geometry}
-          material={materials.Pieza01}
+          material={getMaterialForMesh("Pieza01", "Seccion1")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_002.geometry}
-          material={materials.Pieza02}
+          material={getMaterialForMesh("Pieza02", "Seccion1")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_003.geometry}
-          material={materials.Pieza03}
+          material={getMaterialForMesh("Pieza03", "Seccion1")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_004.geometry}
-          material={materials.Pieza04}
+          material={getMaterialForMesh("Pieza04", "Seccion1")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_005.geometry}
-          material={materials.Pieza05}
+          material={getMaterialForMesh("Pieza05", "Seccion1")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_006.geometry}
-          material={materials.Pieza06}
+          material={getMaterialForMesh("Pieza06", "Seccion1")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_007.geometry}
-          material={materials.Pieza07}
+          material={getMaterialForMesh("Pieza07", "Seccion1")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_008.geometry}
-          material={materials.Pieza08}
+          material={getMaterialForMesh("Pieza08", "Seccion1")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_009.geometry}
-          material={materials.Pieza09}
+          material={getMaterialForMesh("Pieza09", "Seccion1")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_010.geometry}
-          material={materials.Pieza10}
+          material={getMaterialForMesh("Pieza10", "Seccion1")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_011.geometry}
-          material={materials.Pieza11}
+          material={getMaterialForMesh("Pieza11", "Seccion1")}
         />
       </group>
-      <group name="Seccion2" position={[0, 0, 0.0]}>
+      <group
+        name="Seccion2"
+        position={[0, 0, 0.0]}
+        onClick={() => onSectionClick && onSectionClick("Seccion2")}
+      >
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_012.geometry}
-          material={materials.Pieza03}
+          material={getMaterialForMesh("Pieza03", "Seccion2")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_013.geometry}
-          material={materials.Pieza04}
+          material={getMaterialForMesh("Pieza04", "Seccion2")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_014.geometry}
-          material={materials.Pieza12}
+          material={getMaterialForMesh("Pieza12", "Seccion2")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_015.geometry}
-          material={materials.Pieza13}
+          material={getMaterialForMesh("Pieza13", "Seccion2")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_016.geometry}
-          material={materials.Pieza14}
+          material={getMaterialForMesh("Pieza14", "Seccion2")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_017.geometry}
-          material={materials.Pieza15}
+          material={getMaterialForMesh("Pieza15", "Seccion2")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_018.geometry}
-          material={materials.Pieza16}
+          material={getMaterialForMesh("Pieza16", "Seccion2")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_019.geometry}
-          material={materials.Pieza17}
+          material={getMaterialForMesh("Pieza17", "Seccion2")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_020.geometry}
-          material={materials.Pieza18}
+          material={getMaterialForMesh("Pieza18", "Seccion2")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_021.geometry}
-          material={materials.Pieza01}
+          material={getMaterialForMesh("Pieza01", "Seccion2")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_022.geometry}
-          material={materials.Pieza02}
+          material={getMaterialForMesh("Pieza02", "Seccion2")}
         />
       </group>
-      <group name="Seccion3" position={[0, 0, 0.0]}>
+      <group
+        name="Seccion3"
+        position={[0, 0, 0.0]}
+        onClick={() => onSectionClick && onSectionClick("Seccion3")}
+      >
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_023.geometry}
-          material={materials.Pieza14}
+          material={getMaterialForMesh("Pieza14", "Seccion3")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_024.geometry}
-          material={materials.Pieza15}
+          material={getMaterialForMesh("Pieza15", "Seccion3")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_025.geometry}
-          material={materials.Pieza05}
+          material={getMaterialForMesh("Pieza05", "Seccion3")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_026.geometry}
-          material={materials.Pieza06}
+          material={getMaterialForMesh("Pieza06", "Seccion3")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_027.geometry}
-          material={materials.Pieza07}
+          material={getMaterialForMesh("Pieza07", "Seccion3")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_028.geometry}
-          material={materials.Pieza08}
+          material={getMaterialForMesh("Pieza08", "Seccion3")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_029.geometry}
-          material={materials.Pieza09}
+          material={getMaterialForMesh("Pieza09", "Seccion3")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_030.geometry}
-          material={materials.Pieza10}
+          material={getMaterialForMesh("Pieza10", "Seccion3")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_031.geometry}
-          material={materials.Pieza11}
+          material={getMaterialForMesh("Pieza11", "Seccion3")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_032.geometry}
-          material={materials.Pieza12}
+          material={getMaterialForMesh("Pieza12", "Seccion3")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_033.geometry}
-          material={materials.Pieza13}
+          material={getMaterialForMesh("Pieza13", "Seccion3")}
         />
       </group>
-      <group name="Seccion4" position={[0, 0, 0.0]}>
+      <group
+        name="Seccion4"
+        position={[0, 0, 0.0]}
+        onClick={() => onSectionClick && onSectionClick("Seccion4")}
+      >
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_034.geometry}
-          material={materials.Pieza07}
+          material={getMaterialForMesh("Pieza07", "Seccion4")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_035.geometry}
-          material={materials.Pieza08}
+          material={getMaterialForMesh("Pieza08", "Seccion4")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_036.geometry}
-          material={materials.Pieza16}
+          material={getMaterialForMesh("Pieza16", "Seccion4")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_037.geometry}
-          material={materials.Pieza17}
+          material={getMaterialForMesh("Pieza17", "Seccion4")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_038.geometry}
-          material={materials.Pieza18}
+          material={getMaterialForMesh("Pieza18", "Seccion4")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_039.geometry}
-          material={materials.Pieza01}
+          material={getMaterialForMesh("Pieza01", "Seccion4")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_040.geometry}
-          material={materials.Pieza02}
+          material={getMaterialForMesh("Pieza02", "Seccion4")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_041.geometry}
-          material={materials.Pieza03}
+          material={getMaterialForMesh("Pieza03", "Seccion4")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_042.geometry}
-          material={materials.Pieza04}
+          material={getMaterialForMesh("Pieza04", "Seccion4")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_043.geometry}
-          material={materials.Pieza05}
+          material={getMaterialForMesh("Pieza05", "Seccion4")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_044.geometry}
-          material={materials.Pieza06}
+          material={getMaterialForMesh("Pieza06", "Seccion4")}
         />
       </group>
-      <group name="Seccion5" position={[0, 0, 0.0]}>
+      <group
+        name="Seccion5"
+        position={[0, 0, 0.0]}
+        onClick={() => onSectionClick && onSectionClick("Seccion5")}
+      >
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_045.geometry}
-          material={materials.Pieza18}
+          material={getMaterialForMesh("Pieza18", "Seccion5")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_046.geometry}
-          material={materials.Pieza01}
+          material={getMaterialForMesh("Pieza01", "Seccion5")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_047.geometry}
-          material={materials.Pieza09}
+          material={getMaterialForMesh("Pieza09", "Seccion5")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_048.geometry}
-          material={materials.Pieza10}
+          material={getMaterialForMesh("Pieza10", "Seccion5")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_049.geometry}
-          material={materials.Pieza11}
+          material={getMaterialForMesh("Pieza11", "Seccion5")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_050.geometry}
-          material={materials.Pieza12}
+          material={getMaterialForMesh("Pieza12", "Seccion5")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_051.geometry}
-          material={materials.Pieza13}
+          material={getMaterialForMesh("Pieza13", "Seccion5")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_052.geometry}
-          material={materials.Pieza14}
+          material={getMaterialForMesh("Pieza14", "Seccion5")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_053.geometry}
-          material={materials.Pieza15}
+          material={getMaterialForMesh("Pieza15", "Seccion5")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_054.geometry}
-          material={materials.Pieza16}
+          material={getMaterialForMesh("Pieza16", "Seccion5")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_055.geometry}
-          material={materials.Pieza17}
+          material={getMaterialForMesh("Pieza17", "Seccion5")}
         />
       </group>
-      <group name="Seccion6" position={[0, 0, 0.0]}>
+      <group
+        name="Seccion6"
+        position={[0, 0, 0.0]}
+        onClick={() => onSectionClick && onSectionClick("Seccion6")}
+      >
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_056.geometry}
-          material={materials.Pieza11}
+          material={getMaterialForMesh("Pieza11", "Seccion6")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_057.geometry}
-          material={materials.Pieza12}
+          material={getMaterialForMesh("Pieza12", "Seccion6")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_058.geometry}
-          material={materials.Pieza02}
+          material={getMaterialForMesh("Pieza02", "Seccion6")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_059.geometry}
-          material={materials.Pieza03}
+          material={getMaterialForMesh("Pieza03", "Seccion6")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_060.geometry}
-          material={materials.Pieza04}
+          material={getMaterialForMesh("Pieza04", "Seccion6")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_061.geometry}
-          material={materials.Pieza05}
+          material={getMaterialForMesh("Pieza05", "Seccion6")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_062.geometry}
-          material={materials.Pieza06}
+          material={getMaterialForMesh("Pieza06", "Seccion6")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_063.geometry}
-          material={materials.Pieza07}
+          material={getMaterialForMesh("Pieza07", "Seccion6")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_064.geometry}
-          material={materials.Pieza08}
+          material={getMaterialForMesh("Pieza08", "Seccion6")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_065.geometry}
-          material={materials.Pieza09}
+          material={getMaterialForMesh("Pieza09", "Seccion6")}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.PIEZA_TXT_13_066.geometry}
-          material={materials.Pieza10}
+          material={getMaterialForMesh("Pieza10", "Seccion6")}
         />
       </group>
       <group name="Perfiles">

@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Canvas, useLoader, useThree } from "@react-three/fiber";
 import {
   Environment,
@@ -14,9 +14,39 @@ import { EffectComposer, SSAO, ToneMapping } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
 import * as THREE from "three";
 import { EscenaTXT } from "./EscenaTXT";
+
 let rotacionX = 0;
 let rotacionY = 0;
 let rotacionZ = 244.4;
+
+// Predefined finishes
+const availableFinishes = {
+  original: { name: "Original", properties: null }, // null properties means use GLTF default
+  shinyBlue: {
+    name: "Shiny Blue",
+    properties: {
+      color: new THREE.Color("blue"),
+      roughness: 0.1,
+      metalness: 0.8,
+    },
+  },
+  matteGreen: {
+    name: "Matte Green",
+    properties: {
+      color: new THREE.Color("green"),
+      roughness: 0.9,
+      metalness: 0.1,
+    },
+  },
+  metallicGold: {
+    name: "Metallic Gold",
+    properties: {
+      color: new THREE.Color("gold"),
+      roughness: 0.2,
+      metalness: 0.9,
+    },
+  },
+};
 
 // Componente para la luz direccional con target
 function DirectionalLightWithTarget() {
@@ -55,8 +85,54 @@ function DirectionalLightWithTarget() {
 }
 
 export default function Escena3DTXT() {
+  const [selectedSection, setSelectedSection] = useState(null); // State for selected section
+  const [activeFinishKey, setActiveFinishKey] = useState("original"); // Default to original
+
+  const handleSectionClick = (sectionName) => {
+    console.log(`Section clicked in parent: ${sectionName}`);
+    // Toggle selection: if clicked section is already selected, deselect it. Otherwise, select it.
+    setSelectedSection((prevSelected) =>
+      prevSelected === sectionName ? null : sectionName
+    );
+  };
+
+  // Get the actual finish properties object based on the key
+  const currentFinishProperties = availableFinishes[activeFinishKey].properties;
+
   return (
     <>
+      {/* Basic UI for selecting finishes */}
+      <div
+        style={{
+          position: "relative",
+          top: "10px",
+          left: "10px",
+          zIndex: 100,
+          background: "rgba(255,255,255,0.8)",
+          padding: "10px",
+          borderRadius: "5px",
+        }}
+      >
+        <strong>Select Finish:</strong>
+        <br />
+        {Object.keys(availableFinishes).map((key) => (
+          <button
+            key={key}
+            onClick={() => setActiveFinishKey(key)}
+            style={{
+              fontWeight: activeFinishKey === key ? "bold" : "normal",
+              marginRight: "5px",
+              marginTop: "5px",
+            }}
+          >
+            {availableFinishes[key].name}
+          </button>
+        ))}
+        <p style={{ marginTop: "5px", fontSize: "0.9em" }}>
+          Selected: {availableFinishes[activeFinishKey].name}
+        </p>
+      </div>
+
       <Canvas
         flat
         frameloop="demand"
@@ -76,7 +152,11 @@ export default function Escena3DTXT() {
         <SoftShadows size={32} samples={10} focus={10} />
         {/* <Sky azimuth={0.973} turbidity={20} sunPosition={[2, 2, 1]} /> */}
         {/* Componente 3D */}
-        <EscenaTXT />
+        <EscenaTXT
+          onSectionClick={handleSectionClick} // Pass the handler
+          selectedSection={selectedSection} // Pass the currently selected section
+          activeFinishProperties={currentFinishProperties} // Pass the properties object
+        />
         {/* Entorno */}
         <Environment
           files="/HDRI INTERCAMBIADOR TXT.hdr"
