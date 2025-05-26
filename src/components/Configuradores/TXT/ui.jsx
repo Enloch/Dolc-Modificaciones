@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useConfigStore } from "./store";
 import IconoSelect from "../../../assets/icons/open-indicator.svg";
 import {
   Popover,
@@ -30,6 +31,16 @@ export const TXTUI = () => {
 };
 
 export const Iconos = ({ onConfigAccept }) => {
+  const {
+    setSelectedSection,
+    setSection1,
+    setSection2,
+    setSection3,
+    setSection4,
+    setSection5,
+    setSection6,
+  } = useConfigStore();
+
   const iconSize = "30px";
   const iconSections = [
     { name: "Seccion1", left: "36%", alt: "selector1" },
@@ -42,12 +53,13 @@ export const Iconos = ({ onConfigAccept }) => {
 
   const [popoverAnchorEl, setPopoverAnchorEl] = useState(null);
   const [popoverOpenForSection, setPopoverOpenForSection] = useState(null);
-  const [currentPopoverValue, setCurrentPopoverValue] = useState("0cm");
+  const [currentPopoverValue, setCurrentPopoverValue] = useState(0);
 
   const handleIconClick = (event, sectionName) => {
     setPopoverAnchorEl(event.currentTarget);
     setPopoverOpenForSection(sectionName);
-    setCurrentPopoverValue("0cm");
+    setCurrentPopoverValue(0); // Reset to default numeric value
+    setSelectedSection(sectionName);
   };
 
   const handlePopoverClose = () => {
@@ -56,13 +68,39 @@ export const Iconos = ({ onConfigAccept }) => {
   };
 
   const handlePopoverValueChange = (event) => {
-    setCurrentPopoverValue(event.target.value);
+    const numericValue = parseFloat(event.target.value);
+    setCurrentPopoverValue(numericValue);
+
+    if (popoverOpenForSection) {
+      switch (popoverOpenForSection) {
+        case "Seccion1":
+          setSection1(numericValue);
+          break;
+        case "Seccion2":
+          setSection2(numericValue);
+          break;
+        case "Seccion3":
+          setSection3(numericValue);
+          break;
+        case "Seccion4":
+          setSection4(numericValue);
+          break;
+        case "Seccion5":
+          setSection5(numericValue);
+          break;
+        case "Seccion6":
+          setSection6(numericValue);
+          break;
+        default:
+          console.warn(
+            "Unknown section in handlePopoverValueChange:",
+            popoverOpenForSection
+          );
+      }
+    }
   };
 
   const handleAccept = () => {
-    if (onConfigAccept && popoverOpenForSection) {
-      onConfigAccept(popoverOpenForSection, currentPopoverValue);
-    }
     handlePopoverClose();
   };
 
@@ -111,12 +149,12 @@ export const Iconos = ({ onConfigAccept }) => {
           anchorEl={popoverAnchorEl}
           onClose={handlePopoverClose}
           anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "center",
+            vertical: "center",
+            horizontal: "left",
           }}
           transformOrigin={{
-            vertical: "top",
-            horizontal: "center",
+            vertical: "center",
+            horizontal: "right",
           }}
         >
           <Box sx={{ p: 2, minWidth: "150px" }}>
@@ -131,17 +169,17 @@ export const Iconos = ({ onConfigAccept }) => {
                 onChange={handlePopoverValueChange}
               >
                 <FormControlLabel
-                  value="0cm"
+                  value={0}
                   control={<Radio size="small" />}
                   label="0cm"
                 />
                 <FormControlLabel
-                  value="3cm"
+                  value={0.03}
                   control={<Radio size="small" />}
                   label="3cm"
                 />
                 <FormControlLabel
-                  value="6cm"
+                  value={0.06}
                   control={<Radio size="small" />}
                   label="6cm"
                 />

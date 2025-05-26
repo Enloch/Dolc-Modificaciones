@@ -6,12 +6,20 @@ Files: EscenaTXT.glb [6.73MB] > C:\Users\7475\Desktop\Trabajo\Dolc-Modificacione
 
 import React, { useMemo } from "react";
 import { useGLTF } from "@react-three/drei";
+import { useConfigStore } from "./store";
 import * as THREE from "three";
 
 export function EscenaTXT(props) {
   const { nodes, materials } = useGLTF("/EscenaTXT-transformed.glb");
   const { onSectionClick, selectedSection, ...groupProps } = props;
-
+  const { Section1, Section2, Section3, Section4, Section5, Section6 } =
+    useConfigStore();
+  console.log("Section1", Section1);
+  console.log("Section2", Section2);
+  console.log("Section3", Section3);
+  console.log("Section4", Section4);
+  console.log("Section5", Section5);
+  console.log("Section6", Section6);
   const highlightColorThree = useMemo(() => new THREE.Color("red"), []);
 
   const highlightedMaterialCache = useMemo(() => {
@@ -40,7 +48,7 @@ export function EscenaTXT(props) {
     <group {...groupProps} dispose={null}>
       <group
         name="Seccion1"
-        position={[0, 0, 0.0]}
+        position={[0, 0, Section1]}
         onClick={() => onSectionClick && onSectionClick("Seccion1")}
       >
         <mesh
@@ -112,7 +120,7 @@ export function EscenaTXT(props) {
       </group>
       <group
         name="Seccion2"
-        position={[0, 0, 0.0]}
+        position={[0, 0, Section2]}
         onClick={() => onSectionClick && onSectionClick("Seccion2")}
       >
         <mesh
@@ -184,7 +192,7 @@ export function EscenaTXT(props) {
       </group>
       <group
         name="Seccion3"
-        position={[0, 0, 0.0]}
+        position={[0, 0, Section3]}
         onClick={() => onSectionClick && onSectionClick("Seccion3")}
       >
         <mesh
@@ -256,7 +264,7 @@ export function EscenaTXT(props) {
       </group>
       <group
         name="Seccion4"
-        position={[0, 0, 0.0]}
+        position={[0, 0, Section4]}
         onClick={() => onSectionClick && onSectionClick("Seccion4")}
       >
         <mesh
@@ -328,7 +336,7 @@ export function EscenaTXT(props) {
       </group>
       <group
         name="Seccion5"
-        position={[0, 0, 0.0]}
+        position={[0, 0, Section5]}
         onClick={() => onSectionClick && onSectionClick("Seccion5")}
       >
         <mesh
@@ -400,7 +408,7 @@ export function EscenaTXT(props) {
       </group>
       <group
         name="Seccion6"
-        position={[0, 0, 0.0]}
+        position={[0, 0, Section6]}
         onClick={() => onSectionClick && onSectionClick("Seccion6")}
       >
         <mesh
