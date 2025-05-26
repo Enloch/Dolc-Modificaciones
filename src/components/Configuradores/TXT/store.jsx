@@ -1,6 +1,8 @@
 import { create } from "zustand";
 
 export const useConfigStore = create((set) => ({
+  sistemaActivo: "TXT11",
+  setSistemaActivo: (sistema) => set({ sistemaActivo: sistema }),
   selectedSection: null,
   setSelectedSection: (section) => set({ selectedSection: section }),
   Section1: 0,

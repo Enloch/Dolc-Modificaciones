@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useConfigStore } from "./store";
 import IconoSelect from "../../../assets/icons/open-indicator.svg";
+import IconoMenu from "../../../assets/icons/abrir-menu.svg";
+
 import {
   Popover,
   Button,
@@ -11,21 +13,67 @@ import {
   Typography,
   Box,
 } from "@mui/material";
+import styled from "@emotion/styled";
+
+// Define Styled Components
+const MenuIcon = styled.img`
+  position: absolute;
+  top: 3%;
+  width: 30px;
+  z-index: 11;
+  cursor: pointer;
+  transition:
+    transform 1.5s ease-in-out,
+    filter 1.5s ease-in-out,
+    left 1.5s ease-in-out;
+  left: ${({ isOpen }) => (isOpen ? "17%" : "1%")};
+  filter: ${({ isOpen }) => (isOpen ? "invert(0)" : "invert(1)")};
+  transform: ${({ isOpen }) => (isOpen ? "rotate(0deg)" : "rotate(180deg)")};
+`;
+
+const MenuContainer = styled.div`
+  width: 20%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.575);
+  backdrop-filter: blur(7.5px);
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  transition: left 1.5s ease-in-out; // Simplified transition
+  left: ${({ isOpen }) => (isOpen ? "0" : "-20%")};
+`;
+
+const MenuContent = styled.div`
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
 
 export const TXTUI = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
-      <div
-        style={{
-          width: "20%",
-          height: "20%",
-          backgroundColor: "white",
-          position: "absolute",
-          left: 0,
-          top: 0,
-          zIndex: 10,
-        }}
-      ></div>
+      <MenuIcon
+        src={IconoMenu}
+        isOpen={isMenuOpen}
+        onClick={toggleMenu}
+        alt="flecha-menu"
+      />
+      <MenuContainer id="menu" isOpen={isMenuOpen}>
+        <MenuContent>
+          <Typography variant="h4">Configuración</Typography>
+          <Typography variant="h6">Elegir material porcelánico</Typography>
+          <Box></Box>
+          <Typography variant="h6">Elegir Material de perfil</Typography>
+          <Typography variant="h6">Configura el posicionamiento</Typography>
+        </MenuContent>
+      </MenuContainer>
     </>
   );
 };

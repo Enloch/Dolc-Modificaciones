@@ -56,11 +56,11 @@ function DirectionalLightWithTarget() {
 
 export default function Escena3DTXT() {
   const [selectedSection, setSelectedSection] = useState(null); // State for selected section
-  
+
   // Handler for Popover confirmation from Iconos
   const handleIconConfigAccept = (sectionName, cmValue) => {
     console.log(`Configuration accepted for ${sectionName}: ${cmValue}`);
-    
+
     // Toggle selection: if clicked section is already selected, deselect it. Otherwise, select it.
     setSelectedSection((prevSelected) =>
       prevSelected === sectionName ? null : sectionName
@@ -81,7 +81,7 @@ export default function Escena3DTXT() {
     <>
       <div style={{ width: "100%", height: "100%", position: "relative" }}>
         <TXTUI />
-        <Iconos onConfigAccept={handleIconConfigAccept} /> 
+        <Iconos onConfigAccept={handleIconConfigAccept} />
         <Canvas
           flat
           // frameloop="demand"
@@ -101,8 +101,7 @@ export default function Escena3DTXT() {
           {/* <Sky azimuth={0.973} turbidity={20} sunPosition={[2, 2, 1]} /> */}
           {/* Componente 3D */}
           <EscenaTXT
-            onSectionClick={handleDirectModelClick} 
-            selectedSection={selectedSection} 
+            onSectionClick={handleDirectModelClick}
             // Pass cmValue or sectionConfigs here if EscenaTXT needs it
           />
           {/* Entorno */}
