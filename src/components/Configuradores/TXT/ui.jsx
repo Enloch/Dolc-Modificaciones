@@ -2,7 +2,14 @@ import React, { useState } from "react";
 import { useConfigStore } from "./store";
 import IconoSelect from "../../../assets/icons/open-indicator.svg";
 import IconoMenu from "../../../assets/icons/abrir-menu.svg";
-
+//-------- Iconos de material porcelánico
+import IconoPaladio from "/texturas/TXT/piezas/PALADIO/PALADIO 60X120 (1).jpg";
+import IconoEstatuario from "/texturas/TXT/piezas/ESTATUARIO/ESTATUARIO 60X120 (1).jpg";
+//-------- Iconos de material perfil
+import IconoEmberoDorado from "/texturas/Embero Dorado Rugoso 1K.jpg";
+import IconoEmbero from "/texturas/EmberoTexturaRugoso.jpg";
+import IconoOlmo from "/texturas/Olmo Rugoso 1K.jpg";
+//--------
 import {
   Popover,
   Button,
@@ -12,7 +19,11 @@ import {
   FormControl,
   Typography,
   Box,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
 } from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import styled from "@emotion/styled";
 
 // Define Styled Components
@@ -26,13 +37,14 @@ const MenuIcon = styled.img`
     transform 1.5s ease-in-out,
     filter 1.5s ease-in-out,
     left 1.5s ease-in-out;
-  left: ${({ isOpen }) => (isOpen ? "17%" : "1%")};
+  left: ${({ isOpen }) => (isOpen ? "16%" : "1%")};
   filter: ${({ isOpen }) => (isOpen ? "invert(0)" : "invert(1)")};
   transform: ${({ isOpen }) => (isOpen ? "rotate(0deg)" : "rotate(180deg)")};
 `;
 
 const MenuContainer = styled.div`
-  width: 20%;
+  width: auto;
+  max-width: 350px;
   height: 100%;
   background: rgba(255, 255, 255, 0.575);
   backdrop-filter: blur(7.5px);
@@ -50,11 +62,45 @@ const MenuContent = styled.div`
   gap: 10px;
 `;
 
+const MaterialOption = ({ src, alt, label }) => (
+  <Box
+    sx={{
+      display: "flex",
+      flexDirection: "column",
+      gap: 1,
+      alignItems: "center",
+      width: "80px", // Standardized width
+      height: "auto",
+    }}
+  >
+    <img
+      src={src}
+      alt={alt}
+      style={{
+        width: "80px",
+        height: "80px",
+        objectFit: "cover",
+        borderRadius: "50%",
+      }}
+    />
+    <Typography variant="body1" sx={{ textAlign: "center" }}>
+      {label}
+    </Typography>
+  </Box>
+);
+
 export const TXTUI = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
+  // State to manage which accordion is expanded
+  const [expandedAccordion, setExpandedAccordion] = useState(false); // false means all are closed initially
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Handler for accordion changes
+  const handleAccordionChange = (panel) => (event, isExpanded) => {
+    setExpandedAccordion(isExpanded ? panel : false);
   };
 
   return (
@@ -67,11 +113,76 @@ export const TXTUI = () => {
       />
       <MenuContainer id="menu" isOpen={isMenuOpen}>
         <MenuContent>
-          <Typography variant="h4">Configuración</Typography>
-          <Typography variant="h6">Elegir material porcelánico</Typography>
-          <Box></Box>
-          <Typography variant="h6">Elegir Material de perfil</Typography>
-          <Typography variant="h6">Configura el posicionamiento</Typography>
+          <Typography variant="h4" sx={{ marginBottom: "10px" }}>
+            Configuración
+          </Typography>
+
+          <Accordion
+            expanded={expandedAccordion === "panel1"}
+            onChange={handleAccordionChange("panel1")}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography variant="h6">Elegir material porcelánico</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
+                <MaterialOption
+                  src={IconoPaladio}
+                  alt="Paladio"
+                  label="Paladio"
+                />
+                <MaterialOption
+                  src={IconoEstatuario}
+                  alt="Estatuario"
+                  label="Estatuario"
+                />
+              </Box>
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion
+            expanded={expandedAccordion === "panel2"}
+            onChange={handleAccordionChange("panel2")}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header"
+            >
+              <Typography variant="h6">Elegir Material de perfil</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
+                <MaterialOption
+                  src={IconoEmberoDorado}
+                  alt="Embero Dorado"
+                  label="Embero Dorado"
+                />
+                <MaterialOption src={IconoEmbero} alt="Embero" label="Embero" />
+                <MaterialOption src={IconoOlmo} alt="Olmo" label="Olmo" />
+              </Box>
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion
+            expanded={expandedAccordion === "panel3"}
+            onChange={handleAccordionChange("panel3")}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel3a-content"
+              id="panel3a-header"
+            >
+              <Typography variant="h6">Configura el posicionamiento</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>Opciones de posicionamiento próximamente.</Typography>
+            </AccordionDetails>
+          </Accordion>
         </MenuContent>
       </MenuContainer>
     </>
