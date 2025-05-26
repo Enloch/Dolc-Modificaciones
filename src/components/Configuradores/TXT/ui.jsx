@@ -30,15 +30,17 @@ import styled from "@emotion/styled";
 
 // Constants for MenuIcon positioning
 const MENU_MAX_WIDTH = 350; // px, from MenuContainer's max-width
-const ICON_WIDTH = 30;      // px, from MenuIcon's width
+const ICON_WIDTH = 30; // px, from MenuIcon's width
 const ICON_MARGIN_RIGHT_OPEN = 10; // px, desired margin from the right edge of the open menu
-const ICON_POSITION_LEFT_OPEN = MENU_MAX_WIDTH - ICON_WIDTH - ICON_MARGIN_RIGHT_OPEN; // 310px
+const ICON_POSITION_LEFT_OPEN =
+  MENU_MAX_WIDTH - ICON_WIDTH - ICON_MARGIN_RIGHT_OPEN; // 310px
 const ICON_POSITION_LEFT_CLOSED = 20; // px
 
 const MenuIcon = styled.img`
   position: absolute;
   top: 3%;
-  left: ${({ isOpen }) => (isOpen ? `${ICON_POSITION_LEFT_OPEN}px` : `${ICON_POSITION_LEFT_CLOSED}px`)};
+  left: ${({ isOpen }) =>
+    isOpen ? `${ICON_POSITION_LEFT_OPEN}px` : `${ICON_POSITION_LEFT_CLOSED}px`};
   width: ${ICON_WIDTH}px;
   z-index: 11;
   cursor: pointer;
@@ -52,15 +54,22 @@ const MenuIcon = styled.img`
 
 const MenuContainer = styled.div`
   width: auto;
-  max-width: 350px;
+  max-width: ${MENU_MAX_WIDTH}px; // Used constant
   height: 100%;
   background: rgba(255, 255, 255, 0.575);
   backdrop-filter: blur(7.5px);
   position: absolute;
   top: 0;
   z-index: 10;
-  transition: left 1.5s ease-in-out; // Simplified transition
-  left: ${({ isOpen }) => (isOpen ? "0" : "-20%")};
+  overflow: auto;
+  opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
+  left: ${({ isOpen }) => (isOpen ? "0" : `-${MENU_MAX_WIDTH}px`)};
+  visibility: ${({ isOpen }) => (isOpen ? "visible" : "hidden")};
+
+  transition:
+    left 1.5s ease-in-out,
+    opacity 1.5s ease-in-out,
+    visibility 0s ease-in-out ${({ isOpen }) => (isOpen ? "0s" : "1.5s")};
 `;
 
 const MenuContent = styled.div`
@@ -98,7 +107,7 @@ const MaterialOption = ({ src, alt, label }) => (
 );
 
 export const TXTUI = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Changed: Default state is now closed
   // State to manage which accordion is expanded
   const [expandedAccordion, setExpandedAccordion] = useState(false); // false means all are closed initially
 
