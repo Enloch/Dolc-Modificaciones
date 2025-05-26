@@ -15,6 +15,7 @@ import * as THREE from "three";
 import { EscenaTXT } from "./EscenaTXT";
 import { TXTUI, Iconos } from "./ui";
 import { useDeviceOrientation } from "../../../hooks/useDeviceOrientation"; // Adjusted path
+import { useConfigStore } from "./store"; // Import useConfigStore
 import styled from "@emotion/styled";
 import { Alert, AlertTitle } from "@mui/material"; // Ensure Alert and AlertTitle are imported
 
@@ -52,6 +53,26 @@ const LandscapePrompt = styled.div`
   //   font-size: 3rem;
   //   margin-bottom: 15px;
   // }
+`;
+
+// Styled component for the loading overlay
+const LoadingOverlay = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95); // Darker for more focus
+  color: white;
+  z-index: 10000; // Ensure it's on top of everything
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 1.2rem;
 `;
 
 // Componente para la luz direccional con target
@@ -93,6 +114,17 @@ function DirectionalLightWithTarget() {
 export default function Escena3DTXT() {
   const [selectedSection, setSelectedSection] = useState(null); // State for selected section
   const { isMobile, isLandscape } = useDeviceOrientation();
+  const [currentFrameLoop, setCurrentFrameLoop] = useState("always"); // Initial frameloop mode
+  const { materialPorcelanicoSeleccionado } = useConfigStore(); // Get selected material
+
+  // Switch to 'demand' frameloop after initial rendering or material change
+  useEffect(() => {
+    setCurrentFrameLoop("always"); // Set to always when effect runs
+    const timer = setTimeout(() => {
+      setCurrentFrameLoop("demand");
+    }, 5000); // User-defined delay
+    return () => clearTimeout(timer); // Cleanup timer on unmount or before next run
+  }, [materialPorcelanicoSeleccionado]); // Re-run when material changes
 
   // Handler for Popover confirmation from Iconos
   const handleIconConfigAccept = (sectionName, cmValue) => {
@@ -155,7 +187,7 @@ export default function Escena3DTXT() {
           <Iconos onConfigAccept={handleIconConfigAccept} />
           <Canvas
             flat
-            frameloop="demand"
+            frameloop={currentFrameLoop} // Use state for dynamic frameloop
             shadows={"soft"}
             gl={{ antialias: false }}
           >
@@ -179,6 +211,7 @@ export default function Escena3DTXT() {
             <Environment
               files="/HDRI INTERCAMBIADOR TXT.hdr"
               background
+              backgroundIntensity={3}
               environmentIntensity={2}
               environmentRotation={[rotacionX, rotacionZ, rotacionY]}
               backgroundRotation={[rotacionX, rotacionZ, rotacionY]}
@@ -200,7 +233,7 @@ export default function Escena3DTXT() {
               shadow-camera-far={50}
             />
             {/* Luz ambiental suave para iluminar áreas en sombra */}
-            <ambientLight intensity={0.5} color={0xffffff} />
+            <ambientLight intensity={1} color={0xffffff} />
             <EffectComposer
               enableNormalPass
               enabled={true}

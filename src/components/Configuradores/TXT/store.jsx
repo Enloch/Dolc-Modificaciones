@@ -22,5 +22,6 @@ export const useConfigStore = create((set) => ({
   Section6: 0,
   setSection6: (value) => set({ Section6: value }),
   materialPorcelanicoSeleccionado: TIPOS_MATERIAL.ESTATUARIO,
-  setMaterialPorcelanicoSeleccionado: (material) => set({ materialPorcelanicoSeleccionado: material }),
+  setMaterialPorcelanicoSeleccionado: (material) =>
+    set({ materialPorcelanicoSeleccionado: material }),
 }));
