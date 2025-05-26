@@ -155,7 +155,7 @@ export default function Escena3DTXT() {
           <Iconos onConfigAccept={handleIconConfigAccept} />
           <Canvas
             flat
-            // frameloop="demand"
+            frameloop="demand"
             shadows={"soft"}
             gl={{ antialias: false }}
           >
