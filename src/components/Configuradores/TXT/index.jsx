@@ -56,19 +56,32 @@ function DirectionalLightWithTarget() {
 
 export default function Escena3DTXT() {
   const [selectedSection, setSelectedSection] = useState(null); // State for selected section
-  const handleSectionClick = (sectionName) => {
-    console.log(`Section clicked/selected via icon: ${sectionName}`);
+  
+  // Handler for Popover confirmation from Iconos
+  const handleIconConfigAccept = (sectionName, cmValue) => {
+    console.log(`Configuration accepted for ${sectionName}: ${cmValue}`);
+    
     // Toggle selection: if clicked section is already selected, deselect it. Otherwise, select it.
     setSelectedSection((prevSelected) =>
       prevSelected === sectionName ? null : sectionName
     );
+    // TODO: Store cmValue if needed for EscenaTXT, e.g., in a state like sectionConfigs
+  };
+
+  // Handler for direct clicks on the 3D model parts via EscenaTXT
+  const handleDirectModelClick = (sectionName) => {
+    console.log(`Direct model click on: ${sectionName}`);
+    setSelectedSection((prevSelected) =>
+      prevSelected === sectionName ? null : sectionName
+    );
+    // If a direct click should open the popover, or clear a value, add logic here.
   };
 
   return (
     <>
       <div style={{ width: "100%", height: "100%", position: "relative" }}>
         <TXTUI />
-        <Iconos onIconClick={handleSectionClick} />
+        <Iconos onConfigAccept={handleIconConfigAccept} /> 
         <Canvas
           flat
           // frameloop="demand"
@@ -88,8 +101,9 @@ export default function Escena3DTXT() {
           {/* <Sky azimuth={0.973} turbidity={20} sunPosition={[2, 2, 1]} /> */}
           {/* Componente 3D */}
           <EscenaTXT
-            onSectionClick={handleSectionClick} // Pass the handler
-            selectedSection={selectedSection} // Pass the currently selected section
+            onSectionClick={handleDirectModelClick} 
+            selectedSection={selectedSection} 
+            // Pass cmValue or sectionConfigs here if EscenaTXT needs it
           />
           {/* Entorno */}
           <Environment
