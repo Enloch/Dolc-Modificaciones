@@ -12,22 +12,8 @@ import {
 } from "@react-three/drei";
 import { EffectComposer, SSAO, ToneMapping } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
-import Escena from "/EscenaTXT-transformed.glb?url";
 import * as THREE from "three";
-
-function Model() {
-  const gltf = useGLTF(Escena);
-  // Aseguramos que el modelo reciba y proyecte sombras
-  if (gltf.scene) {
-    gltf.scene.traverse((child) => {
-      if (child.isMesh) {
-        child.castShadow = true;
-        child.receiveShadow = true;
-      }
-    });
-  }
-  return <primitive object={gltf.scene} />;
-}
+import { EscenaTXT } from "./EscenaTXT";
 let rotacionX = 0;
 let rotacionY = 0;
 let rotacionZ = 244.4;
@@ -90,7 +76,7 @@ export default function Escena3DTXT() {
         <SoftShadows size={32} samples={10} focus={10} />
         {/* <Sky azimuth={0.973} turbidity={20} sunPosition={[2, 2, 1]} /> */}
         {/* Componente 3D */}
-        <Model />
+        <EscenaTXT />
         {/* Entorno */}
         <Environment
           files="/HDRI INTERCAMBIADOR TXT.hdr"
