@@ -23,7 +23,7 @@ export function CanvasSetup({ sectionConfigs, cmValue, onSectionClick }) {
     }, 5000);
     return () => clearTimeout(timer);
   }, [materialPorcelanicoSeleccionado]);
-
+  console.log(materialPorcelanicoSeleccionado);
   return (
     <>
       <Leva collapsed />

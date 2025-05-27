@@ -4,6 +4,7 @@ import IconoSelect from "../../../assets/icons/open-indicator.svg";
 import IconoMenu from "../../../assets/icons/abrir-menu.svg";
 //-------- Iconos de material porcelánico
 import IconoPaladio from "/texturas/TXT/piezas/PALADIO/PALADIO 60X120 (1).jpg";
+import IconoCalacattaVena from "/texturas/TXT/piezas/CALACATTAVENA/VENA (1).jpg";
 import IconoEstatuario from "/texturas/TXT/piezas/ESTATUARIO/ESTATUARIO 60X120 (1).jpg";
 import IconoSahara from "/texturas/TXT/piezas/SAHARA/SAHARA (1).jpg";
 //-------- Iconos de material perfil
@@ -199,6 +200,13 @@ export const TXTUI = () => {
                   label="Estatuario"
                   isSelected={materialPorcelanicoSeleccionado === TIPOS_MATERIAL.ESTATUARIO}
                   onClick={() => setMaterialPorcelanicoSeleccionado(TIPOS_MATERIAL.ESTATUARIO)}
+                />
+                <MaterialOption
+                  src={IconoCalacattaVena}
+                  alt="Calacatta Vena"
+                  label="Calacatta Vena"
+                  isSelected={materialPorcelanicoSeleccionado === TIPOS_MATERIAL.CALACATTAVENA}
+                  onClick={() => setMaterialPorcelanicoSeleccionado(TIPOS_MATERIAL.CALACATTAVENA)}
                 />
                 <MaterialOption
                   src={IconoPaladio}

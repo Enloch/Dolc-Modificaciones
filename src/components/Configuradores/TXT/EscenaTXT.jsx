@@ -75,34 +75,28 @@ export function EscenaTXT(props) {
   }, [materialPorcelanicoSeleccionado]);
 
   useEffect(() => {
-    if (materials && texturasCargadas.length === 18) {
+    if (materials && texturasCargadas.length > 0) {
+      console.log(`Aplicando ${texturasCargadas.length} texturas a los materiales`);
       let changed = false;
-      for (let i = 0; i < 18; i++) {
-        const materialKey = `Pieza${(i + 1).toString().padStart(2, "0")}`;
+
+      // Aplicar texturas a los materiales correspondientes
+      texturasCargadas.forEach((textura, index) => {
+        const materialKey = `Pieza${(index + 1).toString().padStart(2, "0")}`;
         if (materials[materialKey] && materials[materialKey].isMeshStandardMaterial) {
-          if (materials[materialKey].map !== texturasCargadas[i]) {
-            if (materials[materialKey].map && materials[materialKey].map.isTexture) {
-              // materials[materialKey].map.dispose();
-            }
-            materials[materialKey].map = texturasCargadas[i];
+          if (materials[materialKey].map !== textura) {
+            materials[materialKey].map = textura;
             materials[materialKey].needsUpdate = true;
             changed = true;
           }
-        } else {
-          // console.warn(`Material GLTF no encontrado o no es MeshStandardMaterial: ${materialKey}`);
         }
-      }
+      });
+
       if (changed) {
+        console.log("Texturas actualizadas, invalidando escena");
         invalidate();
       }
-    } else if (texturasCargadas.length === 0 && materialPorcelanicoSeleccionado) {
-      // Potentially revert to default/original materials if needed
-      // For now, ensure a re-render if we explicitly cleared textures
-      // This might be more complex if original textures need to be restored.
-      // invalidate();
     }
-  }, [materials, texturasCargadas, materialPorcelanicoSeleccionado, invalidate]);
-
+  }, [materials, texturasCargadas, invalidate]);
   useEffect(() => {
     const targetMaterial = genericPerfilMaterialRef.current; // Use our generic material
 
@@ -771,8 +765,29 @@ export function EscenaTXT(props) {
         </>
       )}
       <mesh castShadow receiveShadow geometry={nodes.BARANDILLAS.geometry} material={materials.Aluminio} />
-      <mesh castShadow receiveShadow geometry={nodes.CARCASA_EDIFICIO.geometry} material={materials.Fondo} />
-      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO.geometry} material={materials.Pieza01} />
+      <mesh castShadow receiveShadow geometry={nodes.CARCASA_EDIFICIO_1.geometry} material={materials.Fondo} />
+      <mesh castShadow receiveShadow geometry={nodes.CARCASA_EDIFICIO_2.geometry} material={materials.Material}>
+        <meshStandardMaterial color={"#9e9e9e"} roughness={1} metalness={0} />
+      </mesh>
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_1.geometry} material={materials.Pieza01} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_2.geometry} material={materials.Pieza01} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_3.geometry} material={materials.Pieza02} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_4.geometry} material={materials.Pieza03} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_5.geometry} material={materials.Pieza04} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_6.geometry} material={materials.Pieza05} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_7.geometry} material={materials.Pieza06} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_8.geometry} material={materials.Pieza07} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_9.geometry} material={materials.Pieza08} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_10.geometry} material={materials.Pieza09} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_11.geometry} material={materials.Pieza10} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_12.geometry} material={materials.Pieza11} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_13.geometry} material={materials.Pieza12} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_14.geometry} material={materials.Pieza13} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_15.geometry} material={materials.Pieza14} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_16.geometry} material={materials.Pieza15} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_17.geometry} material={materials.Pieza16} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_18.geometry} material={materials.Pieza17} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO_19.geometry} material={materials.Pieza18} />
       <mesh
         // castShadow
         geometry={nodes.CRISTALES_BARANDILLAS.geometry}

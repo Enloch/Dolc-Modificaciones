@@ -1,8 +1,9 @@
 // src/components/Configuradores/TXT/texturas.js
 
 export const TIPOS_MATERIAL = {
-  PALADIO: "PALADIO",
+  CALACATTAVENA: "CALACATTAVENA",
   ESTATUARIO: "ESTATUARIO",
+  PALADIO: "PALADIO",
   SAHARA: "SAHARA",
   // Puedes añadir más tipos de material aquí si es necesario
 };
@@ -41,6 +42,17 @@ export const TEXTURAS_POR_MATERIAL = {
       ".jpg" // extension
     ),
   },
+  [TIPOS_MATERIAL.CALACATTAVENA]: {
+    id: TIPOS_MATERIAL.CALACATTAVENA,
+    nombre: "Calacatta Vena",
+    imagenes: generarRutasImagenesMaterial(
+      "/texturas/TXT/piezas/CALACATTAVENA/", // basePath
+      "VENA", // nombreMaterial
+      "", // dimensiones
+      20, // cantidad
+      ".jpg" // extension
+    ),
+  },
   [TIPOS_MATERIAL.PALADIO]: {
     id: TIPOS_MATERIAL.PALADIO,
     nombre: "Paladio",
@@ -59,7 +71,7 @@ export const TEXTURAS_POR_MATERIAL = {
       "/texturas/TXT/piezas/SAHARA/", // basePath
       "SAHARA", // nombreMaterial
       "", // dimensiones
-      36, // cantidad
+      20, // cantidad
       ".jpg" // extension
     ),
   },
