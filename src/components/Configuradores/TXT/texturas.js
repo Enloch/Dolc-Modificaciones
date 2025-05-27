@@ -1,8 +1,9 @@
 // src/components/Configuradores/TXT/texturas.js
 
 export const TIPOS_MATERIAL = {
-  ESTATUARIO: "ESTATUARIO",
   PALADIO: "PALADIO",
+  ESTATUARIO: "ESTATUARIO",
+  SAHARA: "SAHARA",
   // Puedes añadir más tipos de material aquí si es necesario
 };
 
@@ -16,18 +17,14 @@ export const TIPOS_MATERIAL = {
  * @param {string} extension - La extensión del archivo. Ej: '.jpg'
  * @returns {string[]} Un array con las rutas completas de las imágenes.
  */
-const generarRutasImagenesMaterial = (
-  basePath,
-  nombreMaterial,
-  dimensiones,
-  cantidad,
-  extension = ".jpg"
-) => {
+const generarRutasImagenesMaterial = (basePath, nombreMaterial, dimensiones, cantidad, extension = ".jpg") => {
   const rutas = [];
   for (let i = 1; i <= cantidad; i++) {
-    rutas.push(
-      `${basePath}${nombreMaterial} ${dimensiones} (${i})${extension}`
-    );
+    {
+      dimensiones === ""
+        ? rutas.push(`${basePath}${nombreMaterial} (${i})${extension}`)
+        : rutas.push(`${basePath}${nombreMaterial} ${dimensiones} (${i})${extension}`);
+    }
   }
   return rutas;
 };
@@ -52,6 +49,17 @@ export const TEXTURAS_POR_MATERIAL = {
       "PALADIO", // nombreMaterial
       "60X120", // dimensiones
       18, // cantidad
+      ".jpg" // extension
+    ),
+  },
+  [TIPOS_MATERIAL.SAHARA]: {
+    id: TIPOS_MATERIAL.SAHARA,
+    nombre: "Sahara",
+    imagenes: generarRutasImagenesMaterial(
+      "/texturas/TXT/piezas/SAHARA/", // basePath
+      "SAHARA", // nombreMaterial
+      "", // dimensiones
+      36, // cantidad
       ".jpg" // extension
     ),
   },

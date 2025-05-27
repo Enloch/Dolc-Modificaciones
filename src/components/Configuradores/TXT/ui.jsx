@@ -5,6 +5,7 @@ import IconoMenu from "../../../assets/icons/abrir-menu.svg";
 //-------- Iconos de material porcelánico
 import IconoPaladio from "/texturas/TXT/piezas/PALADIO/PALADIO 60X120 (1).jpg";
 import IconoEstatuario from "/texturas/TXT/piezas/ESTATUARIO/ESTATUARIO 60X120 (1).jpg";
+import IconoSahara from "/texturas/TXT/piezas/SAHARA/SAHARA (1).jpg";
 //-------- Iconos de material perfil
 import { CatalogoPerfiles } from "./Materiales";
 //--------
@@ -31,15 +32,13 @@ import styled from "@emotion/styled";
 const MENU_MAX_WIDTH = 350; // px, from MenuContainer's max-width
 const ICON_WIDTH = 30; // px, from MenuIcon's width
 const ICON_MARGIN_RIGHT_OPEN = 10; // px, desired margin from the right edge of the open menu
-const ICON_POSITION_LEFT_OPEN =
-  MENU_MAX_WIDTH - ICON_WIDTH - ICON_MARGIN_RIGHT_OPEN; // 310px
+const ICON_POSITION_LEFT_OPEN = MENU_MAX_WIDTH - ICON_WIDTH - ICON_MARGIN_RIGHT_OPEN; // 310px
 const ICON_POSITION_LEFT_CLOSED = 20; // px
 
 const MenuIcon = styled.img`
   position: absolute;
   top: 3%;
-  left: ${({ isOpen }) =>
-    isOpen ? `${ICON_POSITION_LEFT_OPEN}px` : `${ICON_POSITION_LEFT_CLOSED}px`};
+  left: ${({ isOpen }) => (isOpen ? `${ICON_POSITION_LEFT_OPEN}px` : `${ICON_POSITION_LEFT_CLOSED}px`)};
   width: ${ICON_WIDTH}px;
   z-index: 11;
   cursor: pointer;
@@ -60,7 +59,24 @@ const MenuContainer = styled.div`
   position: absolute;
   top: 0;
   z-index: 10;
-  overflow: auto;
+
+  /* CHANGED: Allow vertical scrolling if content overflows */
+  overflow-y: auto;
+  /* You might want to explicitly hide horizontal scrollbar if not needed */
+  /* overflow-x: hidden; */
+
+  /* ADDED: CSS to hide the scrollbar itself */
+  /* For WebKit browsers (Chrome, Safari, new Edge) */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* For Firefox */
+  scrollbar-width: none;
+
+  /* For IE and old Edge */
+  -ms-overflow-style: none;
+
   opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
   left: ${({ isOpen }) => (isOpen ? "0" : `-${MENU_MAX_WIDTH}px`)};
   visibility: ${({ isOpen }) => (isOpen ? "visible" : "hidden")};
@@ -86,14 +102,14 @@ const MaterialOption = ({ src, alt, label, isSelected, onClick }) => (
       flexDirection: "column",
       gap: 1,
       alignItems: "center",
-      width: "100px", // Adjusted width for better spacing with border
+      width: "80px", // Adjusted width for better spacing with border
       padding: "8px",
-      border: isSelected ? "2px solid #1976d2" : "2px solid transparent", // Blue border for selected
+      border: isSelected ? "2px solid #414141" : "2px solid transparent", // Blue border for selected
       borderRadius: "8px",
       cursor: "pointer",
       transition: "border-color 0.3s ease, background-color 0.3s ease",
       "&:hover": {
-        borderColor: isSelected ? "#1976d2" : "#e0e0e0", // Keep blue if selected, else light gray
+        borderColor: isSelected ? "#c9c9c9" : "#e0e0e0", // Keep blue if selected, else light gray
         backgroundColor: isSelected ? "transparent" : "#f5f5f5", // Light background on hover if not selected
       },
     }}
@@ -102,13 +118,13 @@ const MaterialOption = ({ src, alt, label, isSelected, onClick }) => (
       src={src}
       alt={alt}
       style={{
-        width: "80px",
-        height: "80px",
+        width: "75px",
+        height: "75px",
         objectFit: "cover",
         borderRadius: "50%",
       }}
     />
-    <Typography variant="body1" sx={{ textAlign: "center" }}>
+    <Typography variant="body2" sx={{ textAlign: "center" }}>
       {label}
     </Typography>
   </Box>
@@ -153,11 +169,7 @@ export const TXTUI = () => {
 
   return (
     <>
-      <MenuIcon
-        src={IconoMenu}
-        isOpen={isMenuOpen}
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-      />
+      <MenuIcon src={IconoMenu} isOpen={isMenuOpen} onClick={() => setIsMenuOpen(!isMenuOpen)} />
       <MenuContainer isOpen={isMenuOpen}>
         <MenuContent>
           <Typography variant="h4" sx={{ marginBottom: "10px" }}>
@@ -169,11 +181,7 @@ export const TXTUI = () => {
             onChange={handleAccordionChange("panel1")}
             onClick={() => setMenuSeleccionActivo(false)}
           >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
+            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
               <Typography variant="h6">Acabado Porcelánico</Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -189,26 +197,22 @@ export const TXTUI = () => {
                   src={IconoEstatuario}
                   alt="Estatuario"
                   label="Estatuario"
-                  isSelected={
-                    materialPorcelanicoSeleccionado ===
-                    TIPOS_MATERIAL.ESTATUARIO
-                  }
-                  onClick={() =>
-                    setMaterialPorcelanicoSeleccionado(
-                      TIPOS_MATERIAL.ESTATUARIO
-                    )
-                  }
+                  isSelected={materialPorcelanicoSeleccionado === TIPOS_MATERIAL.ESTATUARIO}
+                  onClick={() => setMaterialPorcelanicoSeleccionado(TIPOS_MATERIAL.ESTATUARIO)}
                 />
                 <MaterialOption
                   src={IconoPaladio}
                   alt="Paladio"
                   label="Paladio"
-                  isSelected={
-                    materialPorcelanicoSeleccionado === TIPOS_MATERIAL.PALADIO
-                  }
-                  onClick={() =>
-                    setMaterialPorcelanicoSeleccionado(TIPOS_MATERIAL.PALADIO)
-                  }
+                  isSelected={materialPorcelanicoSeleccionado === TIPOS_MATERIAL.PALADIO}
+                  onClick={() => setMaterialPorcelanicoSeleccionado(TIPOS_MATERIAL.PALADIO)}
+                />
+                <MaterialOption
+                  src={IconoSahara}
+                  alt="Sahara"
+                  label="Sahara"
+                  isSelected={materialPorcelanicoSeleccionado === TIPOS_MATERIAL.SAHARA}
+                  onClick={() => setMaterialPorcelanicoSeleccionado(TIPOS_MATERIAL.SAHARA)}
                 />
               </Box>
             </AccordionDetails>
@@ -219,11 +223,7 @@ export const TXTUI = () => {
             onChange={handleAccordionChange("panel2")}
             onClick={() => setMenuSeleccionActivo(false)}
           >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel2a-content"
-              id="panel2a-header"
-            >
+            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2a-content" id="panel2a-header">
               <Typography variant="h6">Elegir Material de perfil</Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -247,21 +247,14 @@ export const TXTUI = () => {
             onChange={handleAccordionChange("panel3")}
             onClick={() => setMenuSeleccionActivo(!menuSeleccionActivo)}
           >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel3a-content"
-              id="panel3a-header"
-            >
+            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3a-content" id="panel3a-header">
               <Typography variant="h6">Configura el posicionamiento</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Utiliza los iconos de la izquierda para seleccionar la sección
-                que deseas configurar.
+                Utiliza los iconos de la izquierda para seleccionar la sección que deseas configurar.
               </Typography>
-              <Button onClick={handleReiniciarPosicionamiento}>
-                Reiniciar posicionamiento
-              </Button>
+              <Button onClick={handleReiniciarPosicionamiento}>Reiniciar posicionamiento</Button>
             </AccordionDetails>
           </Accordion>
         </MenuContent>
@@ -333,10 +326,7 @@ export const Iconos = ({ onConfigAccept }) => {
           setSection6(numericValue);
           break;
         default:
-          console.warn(
-            "Unknown section in handlePopoverValueChange:",
-            popoverOpenForSection
-          );
+          console.warn("Unknown section in handlePopoverValueChange:", popoverOpenForSection);
       }
     }
   };
@@ -375,11 +365,7 @@ export const Iconos = ({ onConfigAccept }) => {
               cursor: "pointer",
             }}
           >
-            <img
-              src={IconoSelect}
-              alt={icon.alt}
-              style={{ width: "100%", height: "100%" }}
-            />
+            <img src={IconoSelect} alt={icon.alt} style={{ width: "100%", height: "100%" }} />
           </div>
         ))}
       </div>
@@ -410,28 +396,11 @@ export const Iconos = ({ onConfigAccept }) => {
                 value={currentPopoverValue}
                 onChange={handlePopoverValueChange}
               >
-                <FormControlLabel
-                  value={0}
-                  control={<Radio size="small" />}
-                  label="0cm"
-                />
-                <FormControlLabel
-                  value={0.03}
-                  control={<Radio size="small" />}
-                  label="3cm"
-                />
-                <FormControlLabel
-                  value={0.06}
-                  control={<Radio size="small" />}
-                  label="6cm"
-                />
+                <FormControlLabel value={0} control={<Radio size="small" />} label="0cm" />
+                <FormControlLabel value={0.03} control={<Radio size="small" />} label="3cm" />
+                <FormControlLabel value={0.06} control={<Radio size="small" />} label="6cm" />
               </RadioGroup>
-              <Button
-                onClick={handleAccept}
-                variant="contained"
-                size="small"
-                sx={{ mt: 1 }}
-              >
+              <Button onClick={handleAccept} variant="contained" size="small" sx={{ mt: 1 }}>
                 Aceptar
               </Button>
             </FormControl>
