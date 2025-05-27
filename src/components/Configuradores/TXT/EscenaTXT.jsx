@@ -17,7 +17,9 @@ export function EscenaTXT(props) {
   const { nodes, materials } = useGLTF("/EscenaTXT-transformed.glb");
   const { invalidate } = useThree();
   const { onSectionClick, ...groupProps } = props;
+  const genericPerfilMaterialRef = useRef(new THREE.MeshStandardMaterial({ name: "GenericPerfilMaterial" }));
   const {
+    sistemaActivo,
     Section1,
     Section2,
     Section3,
@@ -34,9 +36,7 @@ export function EscenaTXT(props) {
 
   useEffect(() => {
     if (materialPorcelanicoSeleccionado) {
-      const rutasImagenes = getImagenesParaMaterial(
-        materialPorcelanicoSeleccionado
-      );
+      const rutasImagenes = getImagenesParaMaterial(materialPorcelanicoSeleccionado);
       if (rutasImagenes && rutasImagenes.length > 0) {
         const loader = new TextureLoader();
         const promesasTexturas = rutasImagenes.map((url) => {
@@ -62,16 +62,11 @@ export function EscenaTXT(props) {
             setTexturasCargadas(loadedTextures);
           })
           .catch((error) => {
-            console.error(
-              "Error al cargar una o más texturas del conjunto:",
-              error
-            );
+            console.error("Error al cargar una o más texturas del conjunto:", error);
             setTexturasCargadas([]);
           });
       } else {
-        console.warn(
-          `No se encontraron rutas de imágenes para el material: ${materialPorcelanicoSeleccionado}`
-        );
+        console.warn(`No se encontraron rutas de imágenes para el material: ${materialPorcelanicoSeleccionado}`);
         setTexturasCargadas([]);
       }
     } else {
@@ -84,15 +79,9 @@ export function EscenaTXT(props) {
       let changed = false;
       for (let i = 0; i < 18; i++) {
         const materialKey = `Pieza${(i + 1).toString().padStart(2, "0")}`;
-        if (
-          materials[materialKey] &&
-          materials[materialKey].isMeshStandardMaterial
-        ) {
+        if (materials[materialKey] && materials[materialKey].isMeshStandardMaterial) {
           if (materials[materialKey].map !== texturasCargadas[i]) {
-            if (
-              materials[materialKey].map &&
-              materials[materialKey].map.isTexture
-            ) {
+            if (materials[materialKey].map && materials[materialKey].map.isTexture) {
               // materials[materialKey].map.dispose();
             }
             materials[materialKey].map = texturasCargadas[i];
@@ -106,612 +95,698 @@ export function EscenaTXT(props) {
       if (changed) {
         invalidate();
       }
-    } else if (
-      texturasCargadas.length === 0 &&
-      materialPorcelanicoSeleccionado
-    ) {
+    } else if (texturasCargadas.length === 0 && materialPorcelanicoSeleccionado) {
       // Potentially revert to default/original materials if needed
       // For now, ensure a re-render if we explicitly cleared textures
       // This might be more complex if original textures need to be restored.
       // invalidate();
     }
-  }, [
-    materials,
-    texturasCargadas,
-    materialPorcelanicoSeleccionado,
-    invalidate,
-  ]);
+  }, [materials, texturasCargadas, materialPorcelanicoSeleccionado, invalidate]);
 
   useEffect(() => {
-    if (
-      materialPerfilSeleccionado &&
-      CatalogoPerfiles[materialPerfilSeleccionado] &&
-      materials.Madera_1
-    ) {
+    const targetMaterial = genericPerfilMaterialRef.current; // Use our generic material
+
+    if (materialPerfilSeleccionado && CatalogoPerfiles[materialPerfilSeleccionado]) {
       const perfilMaterialConfig = CatalogoPerfiles[materialPerfilSeleccionado];
 
-      // Apply roughness and metalness universally
-      materials.Madera_1.roughness = perfilMaterialConfig.roughness;
-      materials.Madera_1.metalness = perfilMaterialConfig.metalness;
+      targetMaterial.roughness = perfilMaterialConfig.roughness;
+      targetMaterial.metalness = perfilMaterialConfig.metalness;
+
+      const oldMap = targetMaterial.map; // Store current map to potentially dispose later
 
       if (perfilMaterialConfig.mainTexture) {
-        // Load the new texture using the path from mainTexture
         textureLoaderRef.current.load(
           perfilMaterialConfig.mainTexture,
           (loadedTexture) => {
+            // if (oldMap && oldMap !== loadedTexture) { oldMap.dispose(); } // Optional: dispose old texture
             loadedTexture.flipY = false;
             loadedTexture.colorSpace = THREE.SRGBColorSpace;
-            loadedTexture.needsUpdate = true;
 
-            materials.Madera_1.map = loadedTexture;
-            materials.Madera_1.color.set(0xffffff); // Reset color to white when texture is applied
-            materials.Madera_1.needsUpdate = true;
+            targetMaterial.map = loadedTexture;
+            targetMaterial.color.set(0xffffff); // Reset color to white when texture is applied
+            targetMaterial.needsUpdate = true;
+            invalidate(); // Trigger a re-render
+          },
+          undefined, // onProgress
+          (error) => {
+            console.error(`Error loading profile texture: ${perfilMaterialConfig.mainTexture}`, error);
+            // Fallback: clear texture, set a default color
+            // if (oldMap) { oldMap.dispose(); }
+            targetMaterial.map = null;
+            targetMaterial.color.set(0xcccccc); // Example fallback color
+            targetMaterial.needsUpdate = true;
+            invalidate();
           }
         );
       } else if (perfilMaterialConfig.color) {
-        // If no mainTexture but color is defined, apply the color
-        materials.Madera_1.map = null; // Remove any existing texture
-        materials.Madera_1.color.set(perfilMaterialConfig.color);
-        materials.Madera_1.needsUpdate = true;
+        // if (oldMap) { oldMap.dispose(); }
+        targetMaterial.map = null; // Remove any existing texture
+        targetMaterial.color.set(perfilMaterialConfig.color);
+        targetMaterial.needsUpdate = true;
+        invalidate();
       } else {
-        // Fallback or default behavior if neither texture nor color is specified (optional)
-        // For example, remove texture and set a default color
-        materials.Madera_1.map = null;
-        materials.Madera_1.color.set(0xffffff); // Default to white or another placeholder
-        materials.Madera_1.needsUpdate = true;
+        // Fallback: no texture, default color (e.g., white)
+        // if (oldMap) { oldMap.dispose(); }
+        targetMaterial.map = null;
+        targetMaterial.color.set(0xffffff); // Default to white
+        targetMaterial.needsUpdate = true;
+        invalidate();
       }
+    } else {
+      // No material selected or config not found, reset to a default state
+      const oldMap = targetMaterial.map;
+      // if (oldMap) { oldMap.dispose(); }
+      targetMaterial.map = null;
+      targetMaterial.color.set(0xffffff); // Default color
+      targetMaterial.roughness = 0.5; // Default roughness
+      targetMaterial.metalness = 0.0; // Default metalness
+      targetMaterial.needsUpdate = true;
+      invalidate();
     }
-  }, [materialPerfilSeleccionado, materials.Madera_1]); // Depend on selection and material instance
-
-  console.log("Section1", Section1);
-  console.log("Section2", Section2);
-  console.log("Section3", Section3);
-  console.log("Section4", Section4);
-  console.log("Section5", Section5);
-  console.log("Section6", Section6);
-
+  }, [materialPerfilSeleccionado, invalidate]); // Dependencies
   const getMaterialForMesh = (originalMaterialKey) => {
     return materials[originalMaterialKey] || null;
   };
 
   return (
     <group {...groupProps} dispose={null}>
-      <group
-        name="Seccion1"
-        position={[0, 0, Section1]}
-        onClick={() => onSectionClick && onSectionClick("Seccion1")}
-      >
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_001.geometry}
-          material={getMaterialForMesh("Pieza01")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_002.geometry}
-          material={getMaterialForMesh("Pieza02")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_003.geometry}
-          material={getMaterialForMesh("Pieza03")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_004.geometry}
-          material={getMaterialForMesh("Pieza04")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_005.geometry}
-          material={getMaterialForMesh("Pieza05")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_006.geometry}
-          material={getMaterialForMesh("Pieza06")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_007.geometry}
-          material={getMaterialForMesh("Pieza07")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_008.geometry}
-          material={getMaterialForMesh("Pieza08")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_009.geometry}
-          material={getMaterialForMesh("Pieza09")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_010.geometry}
-          material={getMaterialForMesh("Pieza10")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_011.geometry}
-          material={getMaterialForMesh("Pieza11")}
-        />
-      </group>
-      <group
-        name="Seccion2"
-        position={[0, 0, Section2]}
-        onClick={() => onSectionClick && onSectionClick("Seccion2")}
-      >
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_012.geometry}
-          material={getMaterialForMesh("Pieza03")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_013.geometry}
-          material={getMaterialForMesh("Pieza04")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_014.geometry}
-          material={getMaterialForMesh("Pieza12")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_015.geometry}
-          material={getMaterialForMesh("Pieza13")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_016.geometry}
-          material={getMaterialForMesh("Pieza14")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_017.geometry}
-          material={getMaterialForMesh("Pieza15")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_018.geometry}
-          material={getMaterialForMesh("Pieza16")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_019.geometry}
-          material={getMaterialForMesh("Pieza17")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_020.geometry}
-          material={getMaterialForMesh("Pieza18")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_021.geometry}
-          material={getMaterialForMesh("Pieza01")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_022.geometry}
-          material={getMaterialForMesh("Pieza02")}
-        />
-      </group>
-      <group
-        name="Seccion3"
-        position={[0, 0, Section3]}
-        onClick={() => onSectionClick && onSectionClick("Seccion3")}
-      >
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_023.geometry}
-          material={getMaterialForMesh("Pieza14")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_024.geometry}
-          material={getMaterialForMesh("Pieza15")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_025.geometry}
-          material={getMaterialForMesh("Pieza05")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_026.geometry}
-          material={getMaterialForMesh("Pieza06")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_027.geometry}
-          material={getMaterialForMesh("Pieza07")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_028.geometry}
-          material={getMaterialForMesh("Pieza08")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_029.geometry}
-          material={getMaterialForMesh("Pieza09")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_030.geometry}
-          material={getMaterialForMesh("Pieza10")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_031.geometry}
-          material={getMaterialForMesh("Pieza11")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_032.geometry}
-          material={getMaterialForMesh("Pieza12")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_033.geometry}
-          material={getMaterialForMesh("Pieza13")}
-        />
-      </group>
-      <group
-        name="Seccion4"
-        position={[0, 0, Section4]}
-        onClick={() => onSectionClick && onSectionClick("Seccion4")}
-      >
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_034.geometry}
-          material={getMaterialForMesh("Pieza07")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_035.geometry}
-          material={getMaterialForMesh("Pieza08")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_036.geometry}
-          material={getMaterialForMesh("Pieza16")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_037.geometry}
-          material={getMaterialForMesh("Pieza17")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_038.geometry}
-          material={getMaterialForMesh("Pieza18")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_039.geometry}
-          material={getMaterialForMesh("Pieza01")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_040.geometry}
-          material={getMaterialForMesh("Pieza02")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_041.geometry}
-          material={getMaterialForMesh("Pieza03")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_042.geometry}
-          material={getMaterialForMesh("Pieza04")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_043.geometry}
-          material={getMaterialForMesh("Pieza05")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_044.geometry}
-          material={getMaterialForMesh("Pieza06")}
-        />
-      </group>
-      <group
-        name="Seccion5"
-        position={[0, 0, Section5]}
-        onClick={() => onSectionClick && onSectionClick("Seccion5")}
-      >
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_045.geometry}
-          material={getMaterialForMesh("Pieza18")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_046.geometry}
-          material={getMaterialForMesh("Pieza01")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_047.geometry}
-          material={getMaterialForMesh("Pieza09")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_048.geometry}
-          material={getMaterialForMesh("Pieza10")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_049.geometry}
-          material={getMaterialForMesh("Pieza11")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_050.geometry}
-          material={getMaterialForMesh("Pieza12")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_051.geometry}
-          material={getMaterialForMesh("Pieza13")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_052.geometry}
-          material={getMaterialForMesh("Pieza14")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_053.geometry}
-          material={getMaterialForMesh("Pieza15")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_054.geometry}
-          material={getMaterialForMesh("Pieza16")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_055.geometry}
-          material={getMaterialForMesh("Pieza17")}
-        />
-      </group>
-      <group
-        name="Seccion6"
-        position={[0, 0, Section6]}
-        onClick={() => onSectionClick && onSectionClick("Seccion6")}
-      >
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_056.geometry}
-          material={getMaterialForMesh("Pieza11")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_057.geometry}
-          material={getMaterialForMesh("Pieza12")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_058.geometry}
-          material={getMaterialForMesh("Pieza02")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_059.geometry}
-          material={getMaterialForMesh("Pieza03")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_060.geometry}
-          material={getMaterialForMesh("Pieza04")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_061.geometry}
-          material={getMaterialForMesh("Pieza05")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_062.geometry}
-          material={getMaterialForMesh("Pieza06")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_063.geometry}
-          material={getMaterialForMesh("Pieza07")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_064.geometry}
-          material={getMaterialForMesh("Pieza08")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_065.geometry}
-          material={getMaterialForMesh("Pieza09")}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PIEZA_TXT_13_066.geometry}
-          material={getMaterialForMesh("Pieza10")}
-        />
-      </group>
-      <group name="Perfiles">
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PERFIL_FIJO_001.geometry}
-          material={materials.Madera_1} // This material instance is now dynamically updated
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PERFIL_FIJO_002.geometry}
-          material={materials.Madera_1}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PERFIL_FIJO_003.geometry}
-          material={materials.Madera_1}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PERFIL_FIJO_004.geometry}
-          material={materials.Madera_1}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PERFIL_FIJO_005.geometry}
-          material={materials.Madera_1}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PERFIL_FIJO_006.geometry}
-          material={materials.Madera_1}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.PERFIL_FIJO_007.geometry}
-          material={materials.Madera_1}
-        />
-      </group>
+      {sistemaActivo === "TXT13" && (
+        <>
+          <group name="Seccion1" position={[0, 0, Section1]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_001.geometry}
+              material={getMaterialForMesh("Pieza01")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_002.geometry}
+              material={getMaterialForMesh("Pieza02")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_003.geometry}
+              material={getMaterialForMesh("Pieza03")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_004.geometry}
+              material={getMaterialForMesh("Pieza04")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_005.geometry}
+              material={getMaterialForMesh("Pieza05")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_006.geometry}
+              material={getMaterialForMesh("Pieza06")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_007.geometry}
+              material={getMaterialForMesh("Pieza07")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_008.geometry}
+              material={getMaterialForMesh("Pieza08")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_009.geometry}
+              material={getMaterialForMesh("Pieza09")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_010.geometry}
+              material={getMaterialForMesh("Pieza10")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_011.geometry}
+              material={getMaterialForMesh("Pieza11")}
+            />
+          </group>
+          <group name="Seccion2" position={[0, 0, Section2]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_012.geometry}
+              material={getMaterialForMesh("Pieza03")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_013.geometry}
+              material={getMaterialForMesh("Pieza04")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_014.geometry}
+              material={getMaterialForMesh("Pieza12")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_015.geometry}
+              material={getMaterialForMesh("Pieza13")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_016.geometry}
+              material={getMaterialForMesh("Pieza14")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_017.geometry}
+              material={getMaterialForMesh("Pieza15")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_018.geometry}
+              material={getMaterialForMesh("Pieza16")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_019.geometry}
+              material={getMaterialForMesh("Pieza17")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_020.geometry}
+              material={getMaterialForMesh("Pieza18")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_021.geometry}
+              material={getMaterialForMesh("Pieza01")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_022.geometry}
+              material={getMaterialForMesh("Pieza02")}
+            />
+          </group>
+          <group name="Seccion3" position={[0, 0, Section3]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_023.geometry}
+              material={getMaterialForMesh("Pieza14")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_024.geometry}
+              material={getMaterialForMesh("Pieza15")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_025.geometry}
+              material={getMaterialForMesh("Pieza05")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_026.geometry}
+              material={getMaterialForMesh("Pieza06")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_027.geometry}
+              material={getMaterialForMesh("Pieza07")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_028.geometry}
+              material={getMaterialForMesh("Pieza08")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_029.geometry}
+              material={getMaterialForMesh("Pieza09")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_030.geometry}
+              material={getMaterialForMesh("Pieza10")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_031.geometry}
+              material={getMaterialForMesh("Pieza11")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_032.geometry}
+              material={getMaterialForMesh("Pieza12")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_033.geometry}
+              material={getMaterialForMesh("Pieza13")}
+            />
+          </group>
+          <group name="Seccion4" position={[0, 0, Section4]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_034.geometry}
+              material={getMaterialForMesh("Pieza07")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_035.geometry}
+              material={getMaterialForMesh("Pieza08")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_036.geometry}
+              material={getMaterialForMesh("Pieza16")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_037.geometry}
+              material={getMaterialForMesh("Pieza17")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_038.geometry}
+              material={getMaterialForMesh("Pieza18")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_039.geometry}
+              material={getMaterialForMesh("Pieza01")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_040.geometry}
+              material={getMaterialForMesh("Pieza02")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_041.geometry}
+              material={getMaterialForMesh("Pieza03")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_042.geometry}
+              material={getMaterialForMesh("Pieza04")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_043.geometry}
+              material={getMaterialForMesh("Pieza05")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_044.geometry}
+              material={getMaterialForMesh("Pieza06")}
+            />
+          </group>
+          <group name="Seccion5" position={[0, 0, Section5]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_045.geometry}
+              material={getMaterialForMesh("Pieza18")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_046.geometry}
+              material={getMaterialForMesh("Pieza01")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_047.geometry}
+              material={getMaterialForMesh("Pieza09")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_048.geometry}
+              material={getMaterialForMesh("Pieza10")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_049.geometry}
+              material={getMaterialForMesh("Pieza11")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_050.geometry}
+              material={getMaterialForMesh("Pieza12")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_051.geometry}
+              material={getMaterialForMesh("Pieza13")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_052.geometry}
+              material={getMaterialForMesh("Pieza14")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_053.geometry}
+              material={getMaterialForMesh("Pieza15")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_054.geometry}
+              material={getMaterialForMesh("Pieza16")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_055.geometry}
+              material={getMaterialForMesh("Pieza17")}
+            />
+          </group>
+          <group name="Seccion6" position={[0, 0, Section6]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_056.geometry}
+              material={getMaterialForMesh("Pieza11")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_057.geometry}
+              material={getMaterialForMesh("Pieza12")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_058.geometry}
+              material={getMaterialForMesh("Pieza02")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_059.geometry}
+              material={getMaterialForMesh("Pieza03")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_060.geometry}
+              material={getMaterialForMesh("Pieza04")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_061.geometry}
+              material={getMaterialForMesh("Pieza05")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_062.geometry}
+              material={getMaterialForMesh("Pieza06")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_063.geometry}
+              material={getMaterialForMesh("Pieza07")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_064.geometry}
+              material={getMaterialForMesh("Pieza08")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_065.geometry}
+              material={getMaterialForMesh("Pieza09")}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PIEZA_TXT_13_066.geometry}
+              material={getMaterialForMesh("Pieza10")}
+            />
+          </group>
+          <group name="PerfilesTXT13">
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PERFIL_FIJO_001.geometry}
+              material={genericPerfilMaterialRef.current}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PERFIL_FIJO_002.geometry}
+              material={genericPerfilMaterialRef.current}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PERFIL_FIJO_003.geometry}
+              material={genericPerfilMaterialRef.current}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PERFIL_FIJO_004.geometry}
+              material={genericPerfilMaterialRef.current}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PERFIL_FIJO_005.geometry}
+              material={genericPerfilMaterialRef.current}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PERFIL_FIJO_006.geometry}
+              material={genericPerfilMaterialRef.current}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PERFIL_FIJO_007.geometry}
+              material={genericPerfilMaterialRef.current}
+            />
+          </group>
+        </>
+      )}
+      {sistemaActivo === "TXT11" && (
+        <>
+          <group name="Seccion1 TXT11" position={[0, 0, Section1]}>
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_001.geometry} material={materials.Pieza01} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_002.geometry} material={materials.Pieza02} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_003.geometry} material={materials.Pieza03} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_004.geometry} material={materials.Pieza04} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_005.geometry} material={materials.Pieza05} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_006.geometry} material={materials.Pieza06} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_007.geometry} material={materials.Pieza07} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_008.geometry} material={materials.Pieza08} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_009.geometry} material={materials.Pieza09} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_010.geometry} material={materials.Pieza10} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_011.geometry} material={materials.Pieza11} />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PERFIL_001.geometry}
+              material={genericPerfilMaterialRef.current}
+            />
+          </group>
+          <group name="Seccion2 TXT11" position={[0, 0, Section2]}>
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_012.geometry} material={materials.Pieza18} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_013.geometry} material={materials.Pieza01} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_014.geometry} material={materials.Pieza17} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_015.geometry} material={materials.Pieza02} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_016.geometry} material={materials.Pieza03} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_017.geometry} material={materials.Pieza12} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_018.geometry} material={materials.Pieza13} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_019.geometry} material={materials.Pieza14} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_020.geometry} material={materials.Pieza15} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_021.geometry} material={materials.Pieza16} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_022.geometry} material={materials.Pieza04} />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PERFIL_002.geometry}
+              material={genericPerfilMaterialRef.current}
+            />
+          </group>
+          <group name="Seccion3 TXT11" position={[0, 0, Section3]}>
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_023.geometry} material={materials.Pieza11} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_024.geometry} material={materials.Pieza12} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_025.geometry} material={materials.Pieza10} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_026.geometry} material={materials.Pieza13} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_027.geometry} material={materials.Pieza14} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_028.geometry} material={materials.Pieza05} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_029.geometry} material={materials.Pieza06} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_030.geometry} material={materials.Pieza07} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_031.geometry} material={materials.Pieza08} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_032.geometry} material={materials.Pieza09} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_033.geometry} material={materials.Pieza15} />
+
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PERFIL_003.geometry}
+              material={genericPerfilMaterialRef.current}
+            />
+          </group>
+          <group name="Seccion4 TXT11" position={[0, 0, Section4]}>
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_034.geometry} material={materials.Pieza04} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_035.geometry} material={materials.Pieza05} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_036.geometry} material={materials.Pieza03} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_037.geometry} material={materials.Pieza06} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_038.geometry} material={materials.Pieza07} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_039.geometry} material={materials.Pieza16} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_040.geometry} material={materials.Pieza17} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_041.geometry} material={materials.Pieza18} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_042.geometry} material={materials.Pieza01} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_043.geometry} material={materials.Pieza02} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_044.geometry} material={materials.Pieza08} />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PERFIL_004.geometry}
+              material={genericPerfilMaterialRef.current}
+            />
+          </group>
+          <group name="Seccion5 TXT11" position={[0, 0, Section5]}>
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_045.geometry} material={materials.Pieza15} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_046.geometry} material={materials.Pieza16} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_047.geometry} material={materials.Pieza14} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_048.geometry} material={materials.Pieza17} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_049.geometry} material={materials.Pieza18} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_050.geometry} material={materials.Pieza09} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_051.geometry} material={materials.Pieza10} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_052.geometry} material={materials.Pieza11} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_053.geometry} material={materials.Pieza12} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_054.geometry} material={materials.Pieza13} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_055.geometry} material={materials.Pieza01} />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PERFIL_005.geometry}
+              material={genericPerfilMaterialRef.current}
+            />
+          </group>
+          <group name="Seccion6 TXT11" position={[0, 0, Section6]}>
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_056.geometry} material={materials.Pieza08} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_057.geometry} material={materials.Pieza09} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_058.geometry} material={materials.Pieza07} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_059.geometry} material={materials.Pieza10} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_060.geometry} material={materials.Pieza11} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_061.geometry} material={materials.Pieza02} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_062.geometry} material={materials.Pieza03} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_063.geometry} material={materials.Pieza04} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_064.geometry} material={materials.Pieza05} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_065.geometry} material={materials.Pieza06} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_066.geometry} material={materials.Pieza12} />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PERFIL_006.geometry}
+              material={genericPerfilMaterialRef.current}
+            />
+          </group>
+          <group name="Seccion7 TXT11" position={[0, 0, 0]}>
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_067.geometry} material={materials.Pieza01} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_068.geometry} material={materials.Pieza02} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_069.geometry} material={materials.Pieza18} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_070.geometry} material={materials.Pieza03} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_071.geometry} material={materials.Pieza04} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_072.geometry} material={materials.Pieza13} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_073.geometry} material={materials.Pieza14} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_074.geometry} material={materials.Pieza15} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_075.geometry} material={materials.Pieza16} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_076.geometry} material={materials.Pieza17} />
+            <mesh castShadow receiveShadow geometry={nodes.PIEZA_077.geometry} material={materials.Pieza05} />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.PERFIL_007.geometry}
+              material={genericPerfilMaterialRef.current}
+            />
+          </group>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.PERFIL_000.geometry}
+            material={genericPerfilMaterialRef.current}
+          />
+        </>
+      )}
+      <mesh castShadow receiveShadow geometry={nodes.BARANDILLAS.geometry} material={materials.Aluminio} />
+      <mesh castShadow receiveShadow geometry={nodes.CARCASA_EDIFICIO.geometry} material={materials.Fondo} />
+      <mesh castShadow receiveShadow geometry={nodes.CERAMICA_EDIFICIO.geometry} material={materials.Pieza01} />
       <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.BARANDILLAS.geometry}
-        material={materials.Aluminio}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.CARCASA_EDIFICIO.geometry}
-        material={materials.Fondo}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.CERAMICA_EDIFICIO.geometry}
-        material={materials.Pieza01}
-      />
-      <mesh
-        castShadow
-        receiveShadow
+        // castShadow
         geometry={nodes.CRISTALES_BARANDILLAS.geometry}
         material={materials.Cristal}
       />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.LUCECITAS.geometry}
-        material={nodes.LUCECITAS.material}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.PARED_FACHADA_TXT.geometry}
-        material={materials.Fondo}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Plane001.geometry}
-        material={nodes.Plane001.material}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Rectangle2926.geometry}
-        material={materials.Aluminio}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.VENTANAS_1.geometry}
-        material={materials.Cristal}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.VENTANAS_2.geometry}
-        material={materials.Marco_Ventana}
-      />
+
+      <mesh castShadow receiveShadow geometry={nodes.LUCECITAS.geometry}>
+        <meshStandardMaterial color={"#ffffff"} roughness={0.5} metalness={0.1} />
+      </mesh>
+      <mesh castShadow receiveShadow geometry={nodes.PARED_FACHADA_TXT.geometry} material={materials.Fondo} />
+      <mesh castShadow receiveShadow geometry={nodes.Plane001.geometry} material={nodes.Plane001.material} />
+      <mesh castShadow receiveShadow geometry={nodes.Rectangle2926.geometry} material={materials.Aluminio} />
+      <mesh castShadow receiveShadow geometry={nodes.VENTANAS_1.geometry} material={materials.Cristal} />
+      <mesh castShadow receiveShadow geometry={nodes.VENTANAS_2.geometry} material={materials.Marco_Ventana} />
     </group>
   );
 }

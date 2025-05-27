@@ -6,8 +6,7 @@ export const useConfigStore = create((set) => ({
   setSistemaActivo: (sistema) => set({ sistemaActivo: sistema }),
   selectedSection: null,
   menuSeleccionActivo: false,
-  setMenuSeleccionActivo: (menuSeleccionActivo) =>
-    set({ menuSeleccionActivo: menuSeleccionActivo }),
+  setMenuSeleccionActivo: (menuSeleccionActivo) => set({ menuSeleccionActivo: menuSeleccionActivo }),
   setSelectedSection: (section) => set({ selectedSection: section }),
   Section1: 0,
   setSection1: (value) => set({ Section1: value }),
@@ -22,10 +21,9 @@ export const useConfigStore = create((set) => ({
   Section6: 0,
   setSection6: (value) => set({ Section6: value }),
   materialPorcelanicoSeleccionado: TIPOS_MATERIAL.ESTATUARIO,
-  setMaterialPorcelanicoSeleccionado: (material) =>
-    set({ materialPorcelanicoSeleccionado: material }),
+  setMaterialPorcelanicoSeleccionado: (material) => set({ materialPorcelanicoSeleccionado: material }),
 
   // --- Add state for Perfil material selection ---
-  materialPerfilSeleccionado: 'OLMO_RUGOSO', // Default to an ID from CatalogoPerfiles
+  materialPerfilSeleccionado: "ORO_GRATA", // Default to an ID from CatalogoPerfiles
   setMaterialPerfilSeleccionado: (materialId) => set({ materialPerfilSeleccionado: materialId }),
 }));
