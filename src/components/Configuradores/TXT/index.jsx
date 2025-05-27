@@ -21,6 +21,7 @@ import { Alert, AlertTitle } from "@mui/material"; // Ensure Alert and AlertTitl
 
 let rotacionX = 0;
 let rotacionY = 0;
+// let rotacionZ = 8;
 let rotacionZ = 244.4;
 
 // Styled component for the landscape prompt message
@@ -200,7 +201,7 @@ export default function Escena3DTXT() {
               position={[10, 6.6, 9.4]}
               rotation={[0.005, 0.973, -0.004]}
             />
-            <SoftShadows size={32} samples={10} focus={1} />
+            {/* <SoftShadows size={32} samples={10} focus={1} /> */}
             {/* <Sky azimuth={0.973} turbidity={20} sunPosition={[2, 2, 1]} /> */}
             {/* Componente 3D */}
             <EscenaTXT
@@ -212,7 +213,7 @@ export default function Escena3DTXT() {
               files="/HDRI INTERCAMBIADOR TXT.hdr"
               background
               backgroundIntensity={3}
-              environmentIntensity={2}
+              environmentIntensity={1}
               environmentRotation={[rotacionX, rotacionZ, rotacionY]}
               backgroundRotation={[rotacionX, rotacionZ, rotacionY]}
             />
@@ -221,7 +222,7 @@ export default function Escena3DTXT() {
              */}
             <directionalLight
               castShadow
-              intensity={3}
+              intensity={4}
               position={[-25, 7, 16]}
               shadow-mapSize={[4096, 4096]}
               shadow-bias={-0.001}
@@ -233,7 +234,7 @@ export default function Escena3DTXT() {
               shadow-camera-far={50}
             />
             {/* Luz ambiental suave para iluminar áreas en sombra */}
-            <ambientLight intensity={1} color={0xffffff} />
+            {/* <ambientLight intensity={1} color={0xffffff} /> */}
             <EffectComposer
               enableNormalPass
               enabled={true}

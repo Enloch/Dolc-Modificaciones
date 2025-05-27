@@ -4,12 +4,14 @@ Command: npx gltfjsx@6.5.3 EscenaTXT.glb --transform -j -s
 Files: EscenaTXT.glb [6.73MB] > C:\Users\7475\Desktop\Trabajo\Dolc-Modificaciones\public\EscenaTXT-transformed.glb [793.65KB] (88%)
 */
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 import { useConfigStore } from "./store";
 import { TextureLoader, SRGBColorSpace } from "three";
 import { TIPOS_MATERIAL, getImagenesParaMaterial } from "./texturas";
+import { CatalogoPerfiles } from "./Materiales"; // Added import for CatalogoPerfiles
+import * as THREE from "three"; // Added THREE import
 
 export function EscenaTXT(props) {
   const { nodes, materials } = useGLTF("/EscenaTXT-transformed.glb");
@@ -23,7 +25,10 @@ export function EscenaTXT(props) {
     Section5,
     Section6,
     materialPorcelanicoSeleccionado,
+    materialPerfilSeleccionado, // Now correctly sourced from useConfigStore
   } = useConfigStore();
+
+  const textureLoaderRef = useRef(new THREE.TextureLoader()); // Use a ref for the texture loader
 
   const [texturasCargadas, setTexturasCargadas] = useState([]);
 
@@ -116,6 +121,47 @@ export function EscenaTXT(props) {
     materialPorcelanicoSeleccionado,
     invalidate,
   ]);
+
+  useEffect(() => {
+    if (
+      materialPerfilSeleccionado &&
+      CatalogoPerfiles[materialPerfilSeleccionado] &&
+      materials.Madera_1
+    ) {
+      const perfilMaterialConfig = CatalogoPerfiles[materialPerfilSeleccionado];
+
+      // Apply roughness and metalness universally
+      materials.Madera_1.roughness = perfilMaterialConfig.roughness;
+      materials.Madera_1.metalness = perfilMaterialConfig.metalness;
+
+      if (perfilMaterialConfig.mainTexture) {
+        // Load the new texture using the path from mainTexture
+        textureLoaderRef.current.load(
+          perfilMaterialConfig.mainTexture,
+          (loadedTexture) => {
+            loadedTexture.flipY = false;
+            loadedTexture.colorSpace = THREE.SRGBColorSpace;
+            loadedTexture.needsUpdate = true;
+
+            materials.Madera_1.map = loadedTexture;
+            materials.Madera_1.color.set(0xffffff); // Reset color to white when texture is applied
+            materials.Madera_1.needsUpdate = true;
+          }
+        );
+      } else if (perfilMaterialConfig.color) {
+        // If no mainTexture but color is defined, apply the color
+        materials.Madera_1.map = null; // Remove any existing texture
+        materials.Madera_1.color.set(perfilMaterialConfig.color);
+        materials.Madera_1.needsUpdate = true;
+      } else {
+        // Fallback or default behavior if neither texture nor color is specified (optional)
+        // For example, remove texture and set a default color
+        materials.Madera_1.map = null;
+        materials.Madera_1.color.set(0xffffff); // Default to white or another placeholder
+        materials.Madera_1.needsUpdate = true;
+      }
+    }
+  }, [materialPerfilSeleccionado, materials.Madera_1]); // Depend on selection and material instance
 
   console.log("Section1", Section1);
   console.log("Section2", Section2);
@@ -567,7 +613,7 @@ export function EscenaTXT(props) {
           castShadow
           receiveShadow
           geometry={nodes.PERFIL_FIJO_001.geometry}
-          material={materials.Madera_1}
+          material={materials.Madera_1} // This material instance is now dynamically updated
         />
         <mesh
           castShadow

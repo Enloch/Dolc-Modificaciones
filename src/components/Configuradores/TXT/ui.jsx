@@ -6,11 +6,9 @@ import IconoMenu from "../../../assets/icons/abrir-menu.svg";
 import IconoPaladio from "/texturas/TXT/piezas/PALADIO/PALADIO 60X120 (1).jpg";
 import IconoEstatuario from "/texturas/TXT/piezas/ESTATUARIO/ESTATUARIO 60X120 (1).jpg";
 //-------- Iconos de material perfil
-import IconoEmberoDorado from "/texturas/Embero Dorado Rugoso 1K.jpg";
-import IconoEmbero from "/texturas/EmberoTexturaRugoso.jpg";
-import IconoOlmo from "/texturas/Olmo Rugoso 1K.jpg";
+import { CatalogoPerfiles } from "./Materiales";
 //--------
-import { TIPOS_MATERIAL } from "./texturas"; // Added import
+import { TIPOS_MATERIAL } from "./texturas";
 import {
   Popover,
   Button,
@@ -122,6 +120,14 @@ export const TXTUI = () => {
     setMenuSeleccionActivo,
     materialPorcelanicoSeleccionado, // Get current selection
     setMaterialPorcelanicoSeleccionado, // Get setter
+    materialPerfilSeleccionado,
+    setMaterialPerfilSeleccionado,
+    setSection1,
+    setSection2,
+    setSection3,
+    setSection4,
+    setSection5,
+    setSection6,
   } = useConfigStore();
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Changed: Default state is now closed
   // State to manage which accordion is expanded
@@ -134,6 +140,15 @@ export const TXTUI = () => {
   // Handler for accordion changes
   const handleAccordionChange = (panel) => (event, isExpanded) => {
     setExpandedAccordion(isExpanded ? panel : false);
+  };
+
+  const handleReiniciarPosicionamiento = () => {
+    setSection1(0);
+    setSection2(0);
+    setSection3(0);
+    setSection4(0);
+    setSection5(0);
+    setSection6(0);
   };
 
   return (
@@ -162,20 +177,38 @@ export const TXTUI = () => {
               <Typography variant="h6">Acabado Porcelánico</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Box sx={{ display: "flex", justifyContent: "space-around", gap: 2, flexWrap: 'wrap' }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-around",
+                  gap: 2,
+                  flexWrap: "wrap",
+                }}
+              >
                 <MaterialOption
                   src={IconoEstatuario}
                   alt="Estatuario"
                   label="Estatuario"
-                  isSelected={materialPorcelanicoSeleccionado === TIPOS_MATERIAL.ESTATUARIO}
-                  onClick={() => setMaterialPorcelanicoSeleccionado(TIPOS_MATERIAL.ESTATUARIO)}
+                  isSelected={
+                    materialPorcelanicoSeleccionado ===
+                    TIPOS_MATERIAL.ESTATUARIO
+                  }
+                  onClick={() =>
+                    setMaterialPorcelanicoSeleccionado(
+                      TIPOS_MATERIAL.ESTATUARIO
+                    )
+                  }
                 />
                 <MaterialOption
                   src={IconoPaladio}
                   alt="Paladio"
                   label="Paladio"
-                  isSelected={materialPorcelanicoSeleccionado === TIPOS_MATERIAL.PALADIO}
-                  onClick={() => setMaterialPorcelanicoSeleccionado(TIPOS_MATERIAL.PALADIO)}
+                  isSelected={
+                    materialPorcelanicoSeleccionado === TIPOS_MATERIAL.PALADIO
+                  }
+                  onClick={() =>
+                    setMaterialPorcelanicoSeleccionado(TIPOS_MATERIAL.PALADIO)
+                  }
                 />
               </Box>
             </AccordionDetails>
@@ -195,13 +228,16 @@ export const TXTUI = () => {
             </AccordionSummary>
             <AccordionDetails>
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
-                <MaterialOption
-                  src={IconoEmberoDorado}
-                  alt="Embero Dorado"
-                  label="Embero Dorado"
-                />
-                <MaterialOption src={IconoEmbero} alt="Embero" label="Embero" />
-                <MaterialOption src={IconoOlmo} alt="Olmo" label="Olmo" />
+                {Object.values(CatalogoPerfiles).map((material) => (
+                  <MaterialOption
+                    key={material.id}
+                    src={material.miniTexture} // Uses the imported mini texture path from CatalogoPerfiles
+                    alt={material.label}
+                    label={material.label}
+                    onClick={() => setMaterialPerfilSeleccionado(material.id)}
+                    selected={materialPerfilSeleccionado === material.id}
+                  />
+                ))}
               </Box>
             </AccordionDetails>
           </Accordion>
@@ -223,6 +259,9 @@ export const TXTUI = () => {
                 Utiliza los iconos de la izquierda para seleccionar la sección
                 que deseas configurar.
               </Typography>
+              <Button onClick={handleReiniciarPosicionamiento}>
+                Reiniciar posicionamiento
+              </Button>
             </AccordionDetails>
           </Accordion>
         </MenuContent>

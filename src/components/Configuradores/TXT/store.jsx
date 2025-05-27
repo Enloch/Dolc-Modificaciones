@@ -24,4 +24,8 @@ export const useConfigStore = create((set) => ({
   materialPorcelanicoSeleccionado: TIPOS_MATERIAL.ESTATUARIO,
   setMaterialPorcelanicoSeleccionado: (material) =>
     set({ materialPorcelanicoSeleccionado: material }),
+
+  // --- Add state for Perfil material selection ---
+  materialPerfilSeleccionado: 'OLMO_RUGOSO', // Default to an ID from CatalogoPerfiles
+  setMaterialPerfilSeleccionado: (materialId) => set({ materialPerfilSeleccionado: materialId }),
 }));
