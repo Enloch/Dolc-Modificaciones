@@ -9,7 +9,7 @@ import { Leva, useControls, folder } from "leva";
 
 const rotacionX = 0;
 const rotacionY = 0;
-const rotacionZ = 244.4;
+const rotacionZ = 2.094395;
 // const rotacionZ = 244.4;
 
 export function CanvasSetup({ sectionConfigs, cmValue, onSectionClick }) {
@@ -45,33 +45,41 @@ export function CanvasSetup({ sectionConfigs, cmValue, onSectionClick }) {
           position={[10, 6.6, 9.4]}
           rotation={[0.005, 0.973, -0.004]}
         />
-        <SoftShadows size={32} samples={10} focus={1} />
+        <SoftShadows size={10} samples={30} focus={4} />
         {/* Componente 3D */}
         <EscenaTXT sectionConfigs={sectionConfigs} cmValue={cmValue} onSectionClick={onSectionClick} />
         {/* Entorno */}
         <Environment
           files="/HDRI INTERCAMBIADOR TXT.hdr"
           background
-          backgroundIntensity={3}
+          backgroundIntensity={2}
+          environmentIntensity={0}
+          environmentRotation={[rotacionX, rotacionZ, rotacionY]}
+          backgroundRotation={[rotacionX, rotacionZ, rotacionY]}
+        />
+        <Environment
+          files="/HDRI INTERCAMBIADOR TXT.hdr"
           environmentIntensity={1}
           environmentRotation={[rotacionX, rotacionZ, rotacionY]}
           backgroundRotation={[rotacionX, rotacionZ, rotacionY]}
+          encoding={3001}
         />
         {/* <DirectionalLightWithTarget /> */}
         <directionalLight
           castShadow
-          intensity={2}
+          color={"#fffbf0"}
+          intensity={7}
           position={[-25, 7, 16]}
           shadow-mapSize={[4096, 4096]}
-          shadow-bias={-0.0}
-          shadow-camera-left={-15}
-          shadow-camera-right={15}
-          shadow-camera-top={15}
-          shadow-camera-bottom={-15}
+          shadow-bias={-0.00001}
+          shadow-camera-left={-20}
+          shadow-camera-right={20}
+          shadow-camera-top={20}
+          shadow-camera-bottom={-20}
           shadow-camera-near={0.1}
           shadow-camera-far={50}
         />
-        <ambientLight intensity={2} />
+        <pointLight position={[6, 6, 6]} intensity={10} />
         <EffectComposer enableNormalPass enabled={true} autoClear={false} multisampling={8}>
           <ToneMapping
             adaptive

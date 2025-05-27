@@ -97,21 +97,23 @@ const MenuContent = styled.div`
 
 const MaterialOption = ({ src, alt, label, isSelected, onClick }) => (
   <Box
-    onClick={onClick} // Added onClick handler
+    onClick={onClick}
     sx={{
       display: "flex",
       flexDirection: "column",
       gap: 1,
       alignItems: "center",
-      width: "80px", // Adjusted width for better spacing with border
+      width: "calc(33.333% - 16px)", // 3 items per row with gap
+      minWidth: "70px",
       padding: "8px",
-      border: isSelected ? "2px solid #414141" : "2px solid transparent", // Blue border for selected
+      border: isSelected ? "2px solid #414141" : "2px solid transparent",
       borderRadius: "8px",
       cursor: "pointer",
       transition: "border-color 0.3s ease, background-color 0.3s ease",
+      boxSizing: "border-box",
       "&:hover": {
-        borderColor: isSelected ? "#c9c9c9" : "#e0e0e0", // Keep blue if selected, else light gray
-        backgroundColor: isSelected ? "transparent" : "#f5f5f5", // Light background on hover if not selected
+        borderColor: isSelected ? "#c9c9c9" : "#e0e0e0",
+        backgroundColor: isSelected ? "transparent" : "#f5f5f5",
       },
     }}
   >
@@ -119,8 +121,8 @@ const MaterialOption = ({ src, alt, label, isSelected, onClick }) => (
       src={src}
       alt={alt}
       style={{
-        width: "75px",
-        height: "75px",
+        width: "65px",
+        height: "65px",
         objectFit: "cover",
         borderRadius: "50%",
       }}
@@ -159,7 +161,8 @@ export const TXTUI = () => {
     setExpandedAccordion(isExpanded ? panel : false);
   };
 
-  const handleReiniciarPosicionamiento = () => {
+  const handleReiniciarPosicionamiento = (event) => {
+    event.stopPropagation(); // Detener la propagación del evento
     setSection1(0);
     setSection2(0);
     setSection3(0);
@@ -189,9 +192,10 @@ export const TXTUI = () => {
               <Box
                 sx={{
                   display: "flex",
-                  justifyContent: "space-around",
-                  gap: 2,
                   flexWrap: "wrap",
+                  gap: "8px",
+                  justifyContent: "space-between",
+                  width: "100%",
                 }}
               >
                 <MaterialOption
@@ -215,13 +219,6 @@ export const TXTUI = () => {
                   isSelected={materialPorcelanicoSeleccionado === TIPOS_MATERIAL.PALADIO}
                   onClick={() => setMaterialPorcelanicoSeleccionado(TIPOS_MATERIAL.PALADIO)}
                 />
-                <MaterialOption
-                  src={IconoSahara}
-                  alt="Sahara"
-                  label="Sahara"
-                  isSelected={materialPorcelanicoSeleccionado === TIPOS_MATERIAL.SAHARA}
-                  onClick={() => setMaterialPorcelanicoSeleccionado(TIPOS_MATERIAL.SAHARA)}
-                />
               </Box>
             </AccordionDetails>
           </Accordion>
@@ -235,7 +232,7 @@ export const TXTUI = () => {
               <Typography variant="h6">Elegir Material de perfil</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
+              <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", maxHeight: "300px", overflow: "auto" }}>
                 {Object.values(CatalogoPerfiles).map((material) => (
                   <MaterialOption
                     key={material.id}
@@ -243,6 +240,7 @@ export const TXTUI = () => {
                     alt={material.label}
                     label={material.label}
                     onClick={() => setMaterialPerfilSeleccionado(material.id)}
+                    isSelected={materialPerfilSeleccionado === material.id}
                     selected={materialPerfilSeleccionado === material.id}
                   />
                 ))}
@@ -253,13 +251,13 @@ export const TXTUI = () => {
           <Accordion
             expanded={expandedAccordion === "panel3"}
             onChange={handleAccordionChange("panel3")}
-            onClick={() => setMenuSeleccionActivo(!menuSeleccionActivo)}
+            onClick={() => setMenuSeleccionActivo(expandedAccordion === "panel3" ? false : true)}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3a-content" id="panel3a-header">
               <Typography variant="h6">Configura el posicionamiento</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>
+              <Typography onClick={(event) => event.stopPropagation()}>
                 Utiliza los iconos de la izquierda para seleccionar la sección que deseas configurar.
               </Typography>
               <Button onClick={handleReiniciarPosicionamiento}>Reiniciar posicionamiento</Button>
