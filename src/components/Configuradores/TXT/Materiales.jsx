@@ -264,7 +264,7 @@ export const CatalogoPerfiles = {
     label: "Burdeos Mate",
     mainTexture: null, // Ensure BurdeosMate is imported
     miniTexture: BurdeosMateMini, // Ensure BurdeosMateMini is importe d
-    color: "#a50b00",
+    color: "#83130b",
     roughness: 0.65, // From MaterialesMetalizados
     metalness: 0, // From MaterialesMetalizados
   },

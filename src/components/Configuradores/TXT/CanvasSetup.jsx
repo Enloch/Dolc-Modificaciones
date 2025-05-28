@@ -10,42 +10,11 @@ import Layers from "../../Layers";
 
 const rotacionX = 0;
 const rotacionY = 0;
-const rotacionZ = 2.094395;
+// const rotacionZ = 1;
+const degToRad = (deg) => (deg * Math.PI) / 180;
+const rotacionZ = degToRad(60);
 // const rotacionZ = 244.4;
-function DirectionalLightWithTarget(targetX, targetY, targetZ) {
-  const lightRef = useRef();
-  const targetRef = useRef();
-  const { scene } = useThree();
 
-  // Configuramos el target de la luz cuando los refs están disponibles
-  useEffect(() => {
-    if (lightRef.current && targetRef.current) {
-      lightRef.current.target = targetRef.current;
-      scene.add(targetRef.current); // Es necesario añadir el target a la escena
-    }
-  }, [scene]);
-
-  return (
-    <>
-      <directionalLight
-        ref={lightRef}
-        castShadow
-        intensity={2.75}
-        position={[-10, 15, 16]}
-        shadow-mapSize={[4096, 4096]}
-        shadow-bias={-0.001}
-        shadow-camera-left={-15}
-        shadow-camera-right={15}
-        shadow-camera-top={15}
-        shadow-camera-bottom={-15}
-        shadow-camera-near={0.1}
-        shadow-camera-far={30}
-      />
-      {/* Este objeto actúa como el target de la luz */}
-      <object3D ref={targetRef} position={[0, 10, 5]} />
-    </>
-  );
-}
 export function CanvasSetup() {
   const [currentFrameLoop, setCurrentFrameLoop] = useState("always");
   const [renderer, setRenderer] = useState();
@@ -68,9 +37,6 @@ export function CanvasSetup() {
       directionalLightRef.current.target.updateMatrixWorld();
     }
   }, []);
-
-  // Configuración de capas
-  const [cameraLayers, setCameraLayers] = useState([0, 1]); // La cámara ve las capas 0 y 1
 
   // Añadir un renderizado forzado al inicio para asegurar que todo se renderice correctamente
   useEffect(() => {
@@ -105,10 +71,9 @@ export function CanvasSetup() {
           fov={31.417}
           position={[10, 6.6, 9.4]}
           rotation={[0.005, 0.973, -0.004]}
-          layers={[1]}
         />
 
-        <SoftShadows size={10} samples={10} focus={4} />
+        <SoftShadows size={25} samples={10} focus={1} />
         {/* Componente 3D */}
         <EscenaTXT layer />
         {/* Entorno */}
@@ -119,12 +84,45 @@ export function CanvasSetup() {
           environmentIntensity={1}
           environmentRotation={[rotacionX, rotacionZ, rotacionY]}
           backgroundRotation={[rotacionX, rotacionZ, rotacionY]}
+          ground={true}
           // encoding={3001}
         />
-        <DirectionalLightWithTarget targetX={0} targetY={10} targetZ={5} />
-
-        <pointLight position={[7, 6, 5.5]} intensity={200} decay={1} layers={1} />
+        <DirectionalLightWithTarget />
       </Canvas>
+    </>
+  );
+}
+function DirectionalLightWithTarget() {
+  const lightRef = useRef();
+  const targetRef = useRef();
+  const { scene } = useThree();
+
+  // Configuramos el target de la luz cuando los refs están disponibles
+  useEffect(() => {
+    if (lightRef.current && targetRef.current) {
+      lightRef.current.target = targetRef.current;
+      scene.add(targetRef.current); // Es necesario añadir el target a la escena
+    }
+  }, [scene]);
+
+  return (
+    <>
+      <directionalLight
+        ref={lightRef}
+        castShadow
+        intensity={2.5}
+        position={[-10, 15, 16]}
+        shadow-mapSize={[4096, 4096]}
+        shadow-bias={-0.001}
+        shadow-camera-left={-15}
+        shadow-camera-right={15}
+        shadow-camera-top={15}
+        shadow-camera-bottom={-15}
+        shadow-camera-near={0.1}
+        shadow-camera-far={30}
+      />
+      {/* Este objeto actúa como el target de la luz */}
+      <object3D ref={targetRef} position={[0, 10, 5]} />
     </>
   );
 }

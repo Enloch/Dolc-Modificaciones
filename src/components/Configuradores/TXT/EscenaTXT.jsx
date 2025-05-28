@@ -12,8 +12,6 @@ import { TextureLoader, SRGBColorSpace } from "three";
 import { TIPOS_MATERIAL, getImagenesParaMaterial } from "./texturas";
 import { CatalogoPerfiles } from "./Materiales"; // Added import for CatalogoPerfiles
 import * as THREE from "three"; // Added THREE import
-import Layers from "../../Layers";
-
 export function EscenaTXT(props) {
   const { nodes, materials } = useGLTF("/EscenaTXT-transformed.glb");
   const { invalidate } = useThree();
@@ -268,7 +266,7 @@ export function EscenaTXT(props) {
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_009.geometry} material={materials.Pieza09} />
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_010.geometry} material={materials.Pieza10} />
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_011.geometry} material={materials.Pieza11} />
-            <mesh castShadow receiveShadow geometry={nodes.PERFIL_001.geometry} material={genericPerfilMaterialRef.current}></mesh>
+            <mesh castShadow receiveShadow geometry={nodes.PERFIL_001.geometry} material={genericPerfilMaterialRef.current} />
           </group>
           <group name="Seccion2 TXT11" position={[0, 0, Section2]}>
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_012.geometry} material={materials.Pieza18} />
@@ -282,7 +280,7 @@ export function EscenaTXT(props) {
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_020.geometry} material={materials.Pieza15} />
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_021.geometry} material={materials.Pieza16} />
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_022.geometry} material={materials.Pieza04} />
-            <mesh castShadow receiveShadow geometry={nodes.PERFIL_002.geometry} material={genericPerfilMaterialRef.current}></mesh>
+            <mesh castShadow receiveShadow geometry={nodes.PERFIL_002.geometry} material={genericPerfilMaterialRef.current} />
           </group>
           <group name="Seccion3 TXT11" position={[0, 0, Section3]}>
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_023.geometry} material={materials.Pieza11} />
@@ -297,7 +295,7 @@ export function EscenaTXT(props) {
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_032.geometry} material={materials.Pieza09} />
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_033.geometry} material={materials.Pieza15} />
 
-            <mesh castShadow receiveShadow geometry={nodes.PERFIL_003.geometry} material={genericPerfilMaterialRef.current}></mesh>
+            <mesh castShadow receiveShadow geometry={nodes.PERFIL_003.geometry} material={genericPerfilMaterialRef.current} />
           </group>
           <group name="Seccion4 TXT11" position={[0, 0, Section4]}>
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_034.geometry} material={materials.Pieza04} />
@@ -311,7 +309,7 @@ export function EscenaTXT(props) {
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_042.geometry} material={materials.Pieza01} />
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_043.geometry} material={materials.Pieza02} />
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_044.geometry} material={materials.Pieza08} />
-            <mesh castShadow receiveShadow geometry={nodes.PERFIL_004.geometry} material={genericPerfilMaterialRef.current}></mesh>
+            <mesh castShadow receiveShadow geometry={nodes.PERFIL_004.geometry} material={genericPerfilMaterialRef.current} />
           </group>
           <group name="Seccion5 TXT11" position={[0, 0, Section5]}>
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_045.geometry} material={materials.Pieza15} />
@@ -325,7 +323,7 @@ export function EscenaTXT(props) {
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_053.geometry} material={materials.Pieza12} />
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_054.geometry} material={materials.Pieza13} />
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_055.geometry} material={materials.Pieza01} />
-            <mesh castShadow receiveShadow geometry={nodes.PERFIL_005.geometry} material={genericPerfilMaterialRef.current}></mesh>
+            <mesh castShadow receiveShadow geometry={nodes.PERFIL_005.geometry} material={genericPerfilMaterialRef.current} />
           </group>
           <group name="Seccion6 TXT11" position={[0, 0, Section6]}>
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_056.geometry} material={materials.Pieza08} />
@@ -339,7 +337,7 @@ export function EscenaTXT(props) {
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_064.geometry} material={materials.Pieza05} />
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_065.geometry} material={materials.Pieza06} />
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_066.geometry} material={materials.Pieza12} />
-            <mesh castShadow receiveShadow geometry={nodes.PERFIL_006.geometry} material={genericPerfilMaterialRef.current} layers={1} />
+            <mesh castShadow receiveShadow geometry={nodes.PERFIL_006.geometry} material={genericPerfilMaterialRef.current} />
           </group>
           <group name="Seccion7 TXT11" position={[0, 0, 0]}>
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_067.geometry} material={materials.Pieza01} />
@@ -353,9 +351,9 @@ export function EscenaTXT(props) {
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_075.geometry} material={materials.Pieza16} />
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_076.geometry} material={materials.Pieza17} />
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_077.geometry} material={materials.Pieza05} />
-            <mesh castShadow receiveShadow geometry={nodes.PERFIL_007.geometry} material={genericPerfilMaterialRef.current}></mesh>
+            <mesh castShadow receiveShadow geometry={nodes.PERFIL_007.geometry} material={genericPerfilMaterialRef.current} />
           </group>
-          <mesh castShadow receiveShadow geometry={nodes.PERFIL_000.geometry} material={genericPerfilMaterialRef.current}></mesh>
+          <mesh castShadow receiveShadow geometry={nodes.PERFIL_000.geometry} material={genericPerfilMaterialRef.current} />
         </>
       )}
       <mesh castShadow receiveShadow geometry={nodes.BARANDILLAS.geometry} material={materials.Aluminio} />
