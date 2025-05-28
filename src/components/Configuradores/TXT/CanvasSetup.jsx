@@ -10,7 +10,7 @@ const rotacionX = 0;
 const rotacionY = 0;
 // const rotacionZ = 1;
 const degToRad = (deg) => (deg * Math.PI) / 180;
-const rotacionZ = degToRad(60);
+const rotacionZ = degToRad(20);
 // const rotacionZ = 244.4;
 
 export function CanvasSetup() {

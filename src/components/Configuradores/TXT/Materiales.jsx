@@ -278,8 +278,8 @@ export const CatalogoPerfiles = {
     label: "Burdeos Mate",
     mainTexture: null, // Ensure BurdeosMate is imported
     miniTexture: BurdeosMateMini, // Ensure BurdeosMateMini is importe d
-    color: "#752822",
-    roughness: 0.5, // From MaterialesMetalizados
+    color: "#631610",
+    roughness: 0.3, // From MaterialesMetalizados
     metalness: 1, // From MaterialesMetalizados
   },
   BURDEOS_GRATA: {
@@ -287,8 +287,8 @@ export const CatalogoPerfiles = {
     label: "Burdeos Grata",
     mainTexture: null, // Ensure BurdeosGrata is imported
     miniTexture: BurdeosGrataMini, // Ensure BurdeosGrataMini is imported
-    color: "#591e1a",
-    roughness: 0.6, // From MaterialesMetalizados
+    color: "#631610",
+    roughness: 0.4, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },
   BURDEOS_GRATA_RFP: {
@@ -296,8 +296,8 @@ export const CatalogoPerfiles = {
     label: "Burdeos Grata RFP",
     mainTexture: null, // Ensure BurdeosGrataRFP is imported
     miniTexture: BurdeosGrataRFPMini, // Ensure BurdeosGrataRFPMini is imported
-    color: "#591e1a",
-    roughness: 0.65, // From MaterialesMetalizados
+    color: "#631610",
+    roughness: 0.5, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },
   NEGRO_GRATA: {
