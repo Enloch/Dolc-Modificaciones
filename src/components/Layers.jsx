@@ -1,38 +1,32 @@
-import { useEffect, useRef } from "react";
+import { forwardRef, useEffect, useRef } from "react";
 import { useThree } from "@react-three/fiber";
-import { Layers as ThreeLayers } from "three";
 
-// Función para convertir un array de índices a una máscara de bits
-const bitmaskFromIndicesArray = (indices) => {
-  return indices.reduce((acc, i) => acc | (1 << i), 0);
-};
+export const Layers = forwardRef(({ layers = [0], children }, ref) => {
+  const { invalidate } = useThree();
+  const groupRef = useRef();
+  const layersArray = Array.isArray(layers) ? layers : [layers];
+  const layersMask = layersArray.reduce((mask, layer) => mask | (1 << layer), 0);
 
-const Layers = ({ layers = [0] }) => {
-  const { scene } = useThree();
-  const layersObj = useRef(new ThreeLayers());
-
+  // Apply layers to the group's children
   useEffect(() => {
-    // Convertir el valor de layers a un array si es un número
-    const layersArray = Array.isArray(layers) ? layers : [layers];
+    if (groupRef.current) {
+      groupRef.current.traverse((child) => {
+        if (child.layers) {
+          child.layers.mask = 0; // Disable all layers first
+          layersArray.forEach((layer) => {
+            child.layers.enable(layer);
+          });
+        }
+      });
+      invalidate();
+    }
+  }, [layersArray, invalidate]);
 
-    // Aplicar la máscara de bits a las capas
-    layersObj.current.mask = bitmaskFromIndicesArray(layersArray);
+  if (children) {
+    return <group ref={groupRef}>{children}</group>;
+  }
 
-    // Aplicar a todos los objetos de la escena que no tengan un padre
-    // (esto es similar a cómo funciona el componente original)
-    scene.traverse((child) => {
-      if (child.layers && !child.parent) {
-        child.layers.mask = layersObj.current.mask;
-      }
-    });
-
-    return () => {
-      // Restaurar la máscara por defecto al desmontar
-      layersObj.current.mask = 0xffffffff;
-    };
-  }, [layers, scene]);
-
-  return null; // No renderizamos nada en el DOM
-};
+  return null;
+});
 
 export default Layers;

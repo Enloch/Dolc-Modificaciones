@@ -177,14 +177,14 @@ export const CatalogoPerfiles = {
     mainTexture: PlataGrataRFP, // Ensure PlataGrataRFP is imported
     miniTexture: PlataGrataRFPMini, // Ensure PlataGrataRFPMini is imported
     roughness: 0.55, // From MaterialesMetalizados
-    metalness: 1.0, // From MaterialesMetalizados
+    metalness: 1.0, // From MaterialesMetalizadoss
   },
   PLATA_BRILLO: {
     id: "PLATA_BRILLO",
     label: "Plata Brillo",
     mainTexture: PlataBrillo, // Ensure PlataBrillo is imported
     miniTexture: PlataBrilloMini, // Ensure PlataBrilloMini is imported
-    roughness: 0.5, // From MaterialesMetalizados
+    roughness: 0.2, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },
   ORO_MATE: {
@@ -263,18 +263,18 @@ export const CatalogoPerfiles = {
     id: "BURDEOS_MATE",
     label: "Burdeos Mate",
     mainTexture: null, // Ensure BurdeosMate is imported
-    miniTexture: BurdeosMateMini, // Ensure BurdeosMateMini is imported
-    color: "#743b37",
-    roughness: 0.5, // From MaterialesMetalizados
-    metalness: 1.0, // From MaterialesMetalizados
+    miniTexture: BurdeosMateMini, // Ensure BurdeosMateMini is importe d
+    color: "#a50b00",
+    roughness: 0.65, // From MaterialesMetalizados
+    metalness: 0, // From MaterialesMetalizados
   },
   BURDEOS_GRATA: {
-    id: "BURDEOS_GRATA",  
+    id: "BURDEOS_GRATA",
     label: "Burdeos Grata",
     mainTexture: null, // Ensure BurdeosGrata is imported
     miniTexture: BurdeosGrataMini, // Ensure BurdeosGrataMini is imported
-    color: "#591e1a",
-    roughness: 0.1, // From MaterialesMetalizados
+    color: "#a50b00",
+    roughness: 0.4, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },
   BURDEOS_GRATA_RFP: {
@@ -282,7 +282,7 @@ export const CatalogoPerfiles = {
     label: "Burdeos Grata RFP",
     mainTexture: null, // Ensure BurdeosGrataRFP is imported
     miniTexture: BurdeosGrataRFPMini, // Ensure BurdeosGrataRFPMini is imported
-    color: "#591e1a",
+    color: "#a50b00",
     roughness: 0.45, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },

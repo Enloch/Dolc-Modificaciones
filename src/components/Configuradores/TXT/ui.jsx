@@ -179,7 +179,21 @@ export const TXTUI = () => {
           <Typography variant="h4" sx={{ marginBottom: "10px" }}>
             Configuración
           </Typography>
-
+          <Accordion
+            expanded={expandedAccordion === "panel3"}
+            onChange={handleAccordionChange("panel3")}
+            onClick={() => setMenuSeleccionActivo(expandedAccordion === "panel3" ? false : true)}
+          >
+            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3a-content" id="panel3a-header">
+              <Typography variant="h6">Configura el posicionamiento</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography onClick={(event) => event.stopPropagation()}>
+                Utiliza los iconos de la izquierda para seleccionar la sección que deseas configurar.
+              </Typography>
+              <Button onClick={handleReiniciarPosicionamiento}>Reiniciar posicionamiento</Button>
+            </AccordionDetails>
+          </Accordion>
           <Accordion
             expanded={expandedAccordion === "panel1"}
             onChange={handleAccordionChange("panel1")}
@@ -247,22 +261,6 @@ export const TXTUI = () => {
               </Box>
             </AccordionDetails>
           </Accordion>
-
-          <Accordion
-            expanded={expandedAccordion === "panel3"}
-            onChange={handleAccordionChange("panel3")}
-            onClick={() => setMenuSeleccionActivo(expandedAccordion === "panel3" ? false : true)}
-          >
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3a-content" id="panel3a-header">
-              <Typography variant="h6">Configura el posicionamiento</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography onClick={(event) => event.stopPropagation()}>
-                Utiliza los iconos de la izquierda para seleccionar la sección que deseas configurar.
-              </Typography>
-              <Button onClick={handleReiniciarPosicionamiento}>Reiniciar posicionamiento</Button>
-            </AccordionDetails>
-          </Accordion>
         </MenuContent>
       </MenuContainer>
     </>
@@ -270,16 +268,8 @@ export const TXTUI = () => {
 };
 
 export const Iconos = ({ onConfigAccept }) => {
-  const {
-    setSelectedSection,
-    setSection1,
-    setSection2,
-    setSection3,
-    setSection4,
-    setSection5,
-    setSection6,
-    menuSeleccionActivo,
-  } = useConfigStore();
+  const { setSelectedSection, setSection1, setSection2, setSection3, setSection4, setSection5, setSection6, menuSeleccionActivo } =
+    useConfigStore();
 
   const iconSize = "30px";
   const iconSections = [

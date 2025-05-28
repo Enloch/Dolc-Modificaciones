@@ -12,7 +12,7 @@ const rotacionX = 0;
 const rotacionY = 0;
 const rotacionZ = 2.094395;
 // const rotacionZ = 244.4;
-function DirectionalLightWithTarget() {
+function DirectionalLightWithTarget(targetX, targetY, targetZ) {
   const lightRef = useRef();
   const targetRef = useRef();
   const { scene } = useThree();
@@ -53,7 +53,6 @@ export function CanvasSetup() {
   const cameraRef = useRef();
   const directionalLightRef = useRef();
   const lightTargetRef = useRef();
-  const pointLightRef = useRef();
 
   useEffect(() => {
     setCurrentFrameLoop("always");
@@ -101,17 +100,17 @@ export function CanvasSetup() {
         <PerspectiveCamera
           makeDefault={true}
           ref={cameraRef}
-          far={20}
+          far={25}
           near={0.1}
           fov={31.417}
           position={[10, 6.6, 9.4]}
           rotation={[0.005, 0.973, -0.004]}
-        >
-          <Layers layers={cameraLayers} />
-        </PerspectiveCamera>
+          layers={[1]}
+        />
+
         <SoftShadows size={10} samples={10} focus={4} />
         {/* Componente 3D */}
-        <EscenaTXT />
+        <EscenaTXT layer />
         {/* Entorno */}
         <Environment
           files="/HDRI INTERCAMBIADOR TXT.hdr"
@@ -120,12 +119,11 @@ export function CanvasSetup() {
           environmentIntensity={1}
           environmentRotation={[rotacionX, rotacionZ, rotacionY]}
           backgroundRotation={[rotacionX, rotacionZ, rotacionY]}
-          encoding={3001}
+          // encoding={3001}
         />
-        <DirectionalLightWithTarget />
-        <pointLight ref={pointLightRef} position={[7, 6, 5]} intensity={20} distance={10}>
-          <Layers layers={[1]} />
-        </pointLight>
+        <DirectionalLightWithTarget targetX={0} targetY={10} targetZ={5} />
+
+        <pointLight position={[7, 6, 5.5]} intensity={200} decay={1} layers={1} />
       </Canvas>
     </>
   );
