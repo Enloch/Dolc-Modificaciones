@@ -2,15 +2,10 @@ import React, { useState } from "react";
 import { useConfigStore } from "./store";
 import IconoSelect from "../../../assets/icons/open-indicator.svg";
 import IconoMenu from "../../../assets/icons/abrir-menu.svg";
-//-------- Iconos de material porcelánico
-import IconoPaladio from "/texturas/TXT/piezas/PALADIO/PALADIO 60X120 (1).jpg";
-import IconoCalacattaVena from "/texturas/TXT/piezas/CALACATTAVENA/VENA (1).jpg";
-import IconoEstatuario from "/texturas/TXT/piezas/ESTATUARIO/ESTATUARIO 60X120 (1).jpg";
-import IconoSahara from "/texturas/TXT/piezas/SAHARA/SAHARA (1).jpg";
 //-------- Iconos de material perfil
 import { CatalogoPerfiles } from "./Materiales";
 //--------
-import { TIPOS_MATERIAL } from "./texturas";
+import { TIPOS_MATERIAL, TEXTURAS_POR_MATERIAL } from "./texturas";
 import {
   Popover,
   Button,
@@ -147,6 +142,8 @@ export const TXTUI = () => {
     setSection4,
     setSection5,
     setSection6,
+    sistemaActivo, // Destructure from store
+    setSistemaActivo, // Destructure from store
   } = useConfigStore();
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Changed: Default state is now closed
   // State to manage which accordion is expanded
@@ -159,6 +156,12 @@ export const TXTUI = () => {
   // Handler for accordion changes
   const handleAccordionChange = (panel) => (event, isExpanded) => {
     setExpandedAccordion(isExpanded ? panel : false);
+  };
+
+  // Updated handler to use global state setter
+  const handleTxtTypeChange = (event) => {
+    setSistemaActivo(event.target.value); // Use global setter
+    // console.log("Selected TXT Model:", event.target.value); // Optional: for debugging
   };
 
   const handleReiniciarPosicionamiento = (event) => {
@@ -179,6 +182,31 @@ export const TXTUI = () => {
           <Typography variant="h4" sx={{ marginBottom: "10px" }}>
             Configuración
           </Typography>
+
+          {/* New Accordion for TXT Model Selection */}
+          <Accordion
+            expanded={expandedAccordion === "panelTXTType"}
+            onChange={handleAccordionChange("panelTXTType")}
+            onClick={() => setMenuSeleccionActivo(false)} // Consistent with other selection panels
+          >
+            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panelTXTType-content" id="panelTXTType-header">
+              <Typography variant="h6">Seleccionar Modelo TXT</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <FormControl component="fieldset">
+                <RadioGroup
+                  aria-label="modelo-txt-seleccion"
+                  name="modelo-txt-radio-buttons-group"
+                  value={sistemaActivo} // Use global state
+                  onChange={handleTxtTypeChange}
+                >
+                  <FormControlLabel value="TXT11" control={<Radio />} label="TXT11" />
+                  <FormControlLabel value="TXT13" control={<Radio />} label="TXT13" />
+                </RadioGroup>
+              </FormControl>
+            </AccordionDetails>
+          </Accordion>
+
           <Accordion
             expanded={expandedAccordion === "panel3"}
             onChange={handleAccordionChange("panel3")}
@@ -208,31 +236,20 @@ export const TXTUI = () => {
                   display: "flex",
                   flexWrap: "wrap",
                   gap: "8px",
-                  justifyContent: "space-between",
+                  justifyContent: "space-between", // Kept as per original, can be changed to "flex-start"
                   width: "100%",
                 }}
               >
-                <MaterialOption
-                  src={IconoEstatuario}
-                  alt="Estatuario"
-                  label="Estatuario"
-                  isSelected={materialPorcelanicoSeleccionado === TIPOS_MATERIAL.ESTATUARIO}
-                  onClick={() => setMaterialPorcelanicoSeleccionado(TIPOS_MATERIAL.ESTATUARIO)}
-                />
-                <MaterialOption
-                  src={IconoCalacattaVena}
-                  alt="Calacatta Vena"
-                  label="Calacatta Vena"
-                  isSelected={materialPorcelanicoSeleccionado === TIPOS_MATERIAL.CALACATTAVENA}
-                  onClick={() => setMaterialPorcelanicoSeleccionado(TIPOS_MATERIAL.CALACATTAVENA)}
-                />
-                <MaterialOption
-                  src={IconoPaladio}
-                  alt="Paladio"
-                  label="Paladio"
-                  isSelected={materialPorcelanicoSeleccionado === TIPOS_MATERIAL.PALADIO}
-                  onClick={() => setMaterialPorcelanicoSeleccionado(TIPOS_MATERIAL.PALADIO)}
-                />
+                {Object.values(TEXTURAS_POR_MATERIAL).map((material) => (
+                  <MaterialOption
+                    key={material.id}
+                    src={material.imagenes[0]} // Use the first image from the material's image array
+                    alt={material.nombre}
+                    label={material.nombre}
+                    isSelected={materialPorcelanicoSeleccionado === material.id}
+                    onClick={() => setMaterialPorcelanicoSeleccionado(material.id)}
+                  />
+                ))}
               </Box>
             </AccordionDetails>
           </Accordion>

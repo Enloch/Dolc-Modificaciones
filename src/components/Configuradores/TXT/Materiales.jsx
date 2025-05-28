@@ -155,108 +155,122 @@ export const CatalogoPerfiles = {
     roughness: 0.4,
     metalness: 0.0,
   },
+  PLATA_BRILLO: {
+    id: "PLATA_BRILLO",
+    label: "Plata Brillo",
+    mainTexture: null, // Ensure PlataBrillo is imported
+    miniTexture: PlataBrilloMini, // Ensure PlataBrilloMini is imported
+    color: "#bababa",
+    roughness: 0.2, // From MaterialesMetalizados
+    metalness: 1.0, // From MaterialesMetalizados
+  },
   PLATA_MATE: {
     id: "PLATA_MATE",
     label: "Plata Mate",
-    mainTexture: PlataMate, // Ensure PlataMate is imported
+    mainTexture: null, // Ensure PlataMate is imported
     miniTexture: PlataMateMini, // Ensure PlataMateMini is imported
-    roughness: 0.65, // From MaterialesMetalizados
+    color: "#bababa",
+    roughness: 0.3, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },
   PLATA_GRATA: {
     id: "PLATA_GRATA",
     label: "Plata Grata",
-    mainTexture: PlataGrata, // Ensure PlataGrata is imported
+    mainTexture: null, // Ensure PlataGrata is imported
     miniTexture: PlataGrataMini, // Ensure PlataGrataMini is imported
-    roughness: 0.6, // From MaterialesMetalizados
+    color: "#bababa",
+    roughness: 0.4, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },
   PLATA_GRATA_RFP: {
     id: "PLATA_GRATA_RFP",
     label: "Plata Grata RFP",
-    mainTexture: PlataGrataRFP, // Ensure PlataGrataRFP is imported
+    mainTexture: null, // Ensure PlataGrataRFP is imported
     miniTexture: PlataGrataRFPMini, // Ensure PlataGrataRFPMini is imported
-    roughness: 0.55, // From MaterialesMetalizados
+    color: "#bababa",
+    roughness: 0.5, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizadoss
   },
-  PLATA_BRILLO: {
-    id: "PLATA_BRILLO",
-    label: "Plata Brillo",
-    mainTexture: PlataBrillo, // Ensure PlataBrillo is imported
-    miniTexture: PlataBrilloMini, // Ensure PlataBrilloMini is imported
-    roughness: 0.2, // From MaterialesMetalizados
-    metalness: 1.0, // From MaterialesMetalizados
-  },
+
   ORO_MATE: {
     id: "ORO_MATE",
     label: "Oro Mate",
-    mainTexture: OroMate, // Ensure OroMate is imported
+    mainTexture: null, // Ensure OroMate is imported
     miniTexture: OroMateMini, // Ensure OroMateMini is imported
-    roughness: 0.65, // From MaterialesMetalizados
-    metalness: 1.0, // From MaterialesMetalizados
+    color: "#cfaa66",
+    roughness: 0.3, // From MaterialesMetalizados
+    metalness: 1, // From MaterialesMetalizados
   },
   ORO_GRATA: {
     id: "ORO_GRATA",
     label: "Oro Grata",
-    mainTexture: OroGrata, // Ensure OroGrata is imported
+    mainTexture: null, // Ensure OroGrata is imported
     miniTexture: OroGrataMini, // Ensure OroGrataMini is imported
-    roughness: 0.6, // From MaterialesMetalizados
+    color: "#cfaa66",
+    roughness: 0.4, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },
   ORO_GRATA_RFP: {
     id: "ORO_GRATA_RFP",
     label: "Oro Grata RFP",
-    mainTexture: OroGrataRFP, // Ensure OroGrataRFP is imported
+    mainTexture: null, // Ensure OroGrataRFP is imported
     miniTexture: OroGrataRFPMini, // Ensure OroGrataRFPMini is imported
-    roughness: 0.55, // From MaterialesMetalizados
+    color: "#cfaa66",
+    roughness: 0.5, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },
   BRONCE_MATE: {
     id: "BRONCE_MATE",
     label: "Bronce Mate",
-    mainTexture: BronceMate, // Ensure BronceMate is imported
+    mainTexture: null, // Ensure BronceMate is imported
     miniTexture: BronceMateMini, // Ensure BronceMateMini is imported
-    roughness: 0.65, // From MaterialesMetalizados
+    color: "#645035",
+    roughness: 0.3, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },
   BRONCE_GRATA: {
     id: "BRONCE_GRATA",
     label: "Bronce Grata",
-    mainTexture: BronceGrata, // Ensure BronceGrata is imported
+    mainTexture: null, // Ensure BronceGrata is imported
     miniTexture: BronceGrataMini, // Ensure BronceGrataMini is imported
-    roughness: 0.6, // From MaterialesMetalizados
+    color: "#645035",
+    roughness: 0.4, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },
   BRONCE_GRATA_RFP: {
     id: "BRONCE_GRATA_RFP",
     label: "Bronce Grata RFP",
-    mainTexture: BronceGrataRFP, // Ensure BronceGrataRFP is imported
+    mainTexture: null, // Ensure BronceGrataRFP is imported
     miniTexture: BronceGrataRFPMini, // Ensure BronceGrataRFPMini is imported
-    roughness: 0.55, // From MaterialesMetalizados
+    color: "#645035",
+    roughness: 0.5, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },
   INOX_MATE: {
     id: "INOX_MATE",
     label: "Inox Mate",
-    mainTexture: InoxMate, // Ensure InoxMate is imported
+    mainTexture: null, // Ensure InoxMate is imported
     miniTexture: InoxMateMini, // Ensure InoxMateMini is imported
-    roughness: 0.65, // From MaterialesMetalizados
+    color: "#b8b1a5",
+    roughness: 0.3, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },
   INOX_GRATA: {
     id: "INOX_GRATA",
     label: "Inox Grata",
-    mainTexture: InoxGrata, // Ensure InoxGrata is imported
+    mainTexture: null, // Ensure InoxGrata is imported
     miniTexture: InoxGrataMini, // Ensure InoxGrataMini is imported
-    roughness: 0.6, // From MaterialesMetalizados
+    color: "#b8b1a5",
+    roughness: 0.4, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },
   INOX_GRATA_RFP: {
     id: "INOX_GRATA_RFP",
     label: "Inox Grata RFP",
-    mainTexture: InoxGrataRFP, // Ensure InoxGrataRFP is imported
+    mainTexture: null, // Ensure InoxGrataRFP is imported
     miniTexture: InoxGrataRFPMini, // Ensure InoxGrataRFPMini is imported
-    roughness: 0.55, // From MaterialesMetalizados
+    color: "#b8b1a5",
+    roughness: 0.5, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },
   BURDEOS_MATE: {
@@ -264,17 +278,17 @@ export const CatalogoPerfiles = {
     label: "Burdeos Mate",
     mainTexture: null, // Ensure BurdeosMate is imported
     miniTexture: BurdeosMateMini, // Ensure BurdeosMateMini is importe d
-    color: "#83130b",
-    roughness: 0.65, // From MaterialesMetalizados
-    metalness: 0, // From MaterialesMetalizados
+    color: "#752822",
+    roughness: 0.5, // From MaterialesMetalizados
+    metalness: 1, // From MaterialesMetalizados
   },
   BURDEOS_GRATA: {
     id: "BURDEOS_GRATA",
     label: "Burdeos Grata",
     mainTexture: null, // Ensure BurdeosGrata is imported
     miniTexture: BurdeosGrataMini, // Ensure BurdeosGrataMini is imported
-    color: "#a50b00",
-    roughness: 0.4, // From MaterialesMetalizados
+    color: "#591e1a",
+    roughness: 0.6, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },
   BURDEOS_GRATA_RFP: {
@@ -282,24 +296,26 @@ export const CatalogoPerfiles = {
     label: "Burdeos Grata RFP",
     mainTexture: null, // Ensure BurdeosGrataRFP is imported
     miniTexture: BurdeosGrataRFPMini, // Ensure BurdeosGrataRFPMini is imported
-    color: "#a50b00",
-    roughness: 0.45, // From MaterialesMetalizados
+    color: "#591e1a",
+    roughness: 0.65, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },
   NEGRO_GRATA: {
     id: "NEGRO_GRATA",
     label: "Negro Grata",
-    mainTexture: NegroGrata, // Ensure NegroGrata is imported
+    mainTexture: null, // Ensure NegroGrata is imported
     miniTexture: NegroGrataMini, // Ensure NegroGrataMini is imported
-    roughness: 0.6, // From MaterialesMetalizados
+    color: "#202020",
+    roughness: 0.4, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },
   NEGRO_GRATA_RFP: {
     id: "NEGRO_GRATA_RFP",
     label: "Negro Grata RFP",
-    mainTexture: NegroGrataRFP, // Ensure NegroGrata is imported
+    mainTexture: null, // Ensure NegroGrata is imported
     miniTexture: NegroGrataRFPMini, // Ensure NegroGrataMini is imported
-    roughness: 0.55, // From MaterialesMetalizados
+    color: "#202020",
+    roughness: 0.5, // From MaterialesMetalizados
     metalness: 1.0, // From MaterialesMetalizados
   },
 };

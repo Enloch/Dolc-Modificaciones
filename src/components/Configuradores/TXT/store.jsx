@@ -2,7 +2,7 @@ import { create } from "zustand";
 import { TIPOS_MATERIAL } from "./texturas";
 
 export const useConfigStore = create((set) => ({
-  sistemaActivo: "TXT11",
+  sistemaActivo: "TXT13",
   setSistemaActivo: (sistema) => set({ sistemaActivo: sistema }),
   selectedSection: null,
   menuSeleccionActivo: false,
@@ -24,6 +24,6 @@ export const useConfigStore = create((set) => ({
   setMaterialPorcelanicoSeleccionado: (material) => set({ materialPorcelanicoSeleccionado: material }),
 
   // --- Add state for Perfil material selection ---
-  materialPerfilSeleccionado: "ORO_GRATA", // Default to an ID from CatalogoPerfiles
+  materialPerfilSeleccionado: "ORO_MATE", // Default to an ID from CatalogoPerfiles
   setMaterialPerfilSeleccionado: (materialId) => set({ materialPerfilSeleccionado: materialId }),
 }));

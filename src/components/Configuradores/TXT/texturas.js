@@ -3,8 +3,8 @@
 export const TIPOS_MATERIAL = {
   CALACATTAVENA: "CALACATTAVENA",
   ESTATUARIO: "ESTATUARIO",
+  NOONGREY: "NOONGREY",
   PALADIO: "PALADIO",
-  SAHARA: "SAHARA",
   // Puedes añadir más tipos de material aquí si es necesario
 };
 
@@ -53,6 +53,17 @@ export const TEXTURAS_POR_MATERIAL = {
       ".jpg" // extension
     ),
   },
+  [TIPOS_MATERIAL.NOONGREY]: {
+    id: TIPOS_MATERIAL.NOONGREY,
+    nombre: "Noon grey",
+    imagenes: generarRutasImagenesMaterial(
+      "/texturas/TXT/piezas/NOONGREY/", // basePath
+      "NOONGREY", // nombreMaterial
+      "", // dimensiones
+      20, // cantidad
+      ".jpg" // extension
+    ),
+  },
   [TIPOS_MATERIAL.PALADIO]: {
     id: TIPOS_MATERIAL.PALADIO,
     nombre: "Paladio",
@@ -61,17 +72,6 @@ export const TEXTURAS_POR_MATERIAL = {
       "PALADIO", // nombreMaterial
       "60X120", // dimensiones
       18, // cantidad
-      ".jpg" // extension
-    ),
-  },
-  [TIPOS_MATERIAL.SAHARA]: {
-    id: TIPOS_MATERIAL.SAHARA,
-    nombre: "Sahara",
-    imagenes: generarRutasImagenesMaterial(
-      "/texturas/TXT/piezas/SAHARA/", // basePath
-      "SAHARA", // nombreMaterial
-      "", // dimensiones
-      20, // cantidad
       ".jpg" // extension
     ),
   },

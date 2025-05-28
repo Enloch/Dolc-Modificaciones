@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import { Environment, PerspectiveCamera, SoftShadows, Stats } from "@react-three/drei";
-import { EffectComposer, ToneMapping } from "@react-three/postprocessing";
+import { Environment, PerspectiveCamera, SoftShadows } from "@react-three/drei";
 import * as THREE from "three";
 import { EscenaTXT } from "./EscenaTXT";
 import { useConfigStore } from "./store";
 import { Leva, useControls, folder } from "leva";
-import Layers from "../../Layers";
 
 const rotacionX = 0;
 const rotacionY = 0;
@@ -62,7 +60,6 @@ export function CanvasSetup() {
         frameloop={currentFrameLoop}
         shadows={"soft"}
       >
-        <Stats />
         <PerspectiveCamera
           makeDefault={true}
           ref={cameraRef}
@@ -85,7 +82,7 @@ export function CanvasSetup() {
           environmentRotation={[rotacionX, rotacionZ, rotacionY]}
           backgroundRotation={[rotacionX, rotacionZ, rotacionY]}
           ground={true}
-          // encoding={3001}
+          encoding={3001}
         />
         <DirectionalLightWithTarget />
       </Canvas>
@@ -113,7 +110,7 @@ function DirectionalLightWithTarget() {
         intensity={2.5}
         position={[-10, 15, 16]}
         shadow-mapSize={[4096, 4096]}
-        shadow-bias={-0.001}
+        shadow-bias={-0.0001}
         shadow-camera-left={-15}
         shadow-camera-right={15}
         shadow-camera-top={15}
