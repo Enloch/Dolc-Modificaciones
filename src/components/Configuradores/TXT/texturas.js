@@ -1,10 +1,21 @@
 // src/components/Configuradores/TXT/texturas.js
 
 export const TIPOS_MATERIAL = {
+  ALLUREA: "ALLUREA",
+  ALLURELG: "ALLURELG",
+  BERAICE: "BERAICE",
+  BERENLG: "BERENLG",
+  BLANCBORG: "BLANCBORG",
+  BLANCSGOLD: "BLANCSGOLD",
   CALACATTAVENA: "CALACATTAVENA",
+  EDRAL: "EDRAL",
+  EMELG: "EMELG",
   ESTATUARIO: "ESTATUARIO",
+  KENDOL: "KENDOL",
   NOONGREY: "NOONGREY",
+  NOONSAND: "NOONSAND",
   PALADIO: "PALADIO",
+  WEGAB: "WEGAB",
   // Puedes añadir más tipos de material aquí si es necesario
 };
 
@@ -31,49 +42,80 @@ const generarRutasImagenesMaterial = (basePath, nombreMaterial, dimensiones, can
 };
 
 export const TEXTURAS_POR_MATERIAL = {
-  [TIPOS_MATERIAL.ESTATUARIO]: {
-    id: TIPOS_MATERIAL.ESTATUARIO,
-    nombre: "Estatuario", // Nombre para mostrar en la UI
-    imagenes: generarRutasImagenesMaterial(
-      "/texturas/TXT/piezas/ESTATUARIO/", // basePath
-      "ESTATUARIO", // nombreMaterial
-      "60X120", // dimensiones
-      18, // cantidad
-      ".jpg" // extension
-    ),
+  [TIPOS_MATERIAL.ALLUREA]: {
+    id: TIPOS_MATERIAL.ALLUREA,
+    nombre: "Allure Anthracite",
+    imagenes: generarRutasImagenesMaterial("/texturas/TXT/piezas/ALLUREA/", "ALLUREA", "", 20, ".jpg"),
+  },
+  [TIPOS_MATERIAL.ALLURELG]: {
+    id: TIPOS_MATERIAL.ALLURELG,
+    nombre: "Allure Light Grey",
+    imagenes: generarRutasImagenesMaterial("/texturas/TXT/piezas/ALLURELG/", "ALLURELG", "", 20, ".jpg"),
+  },
+  [TIPOS_MATERIAL.BERAICE]: {
+    id: TIPOS_MATERIAL.BERAICE,
+    nombre: "Bera Ice",
+    imagenes: generarRutasImagenesMaterial("/texturas/TXT/piezas/BERAICE/", "BERAICE", "", 20, ".jpg"),
+  },
+  [TIPOS_MATERIAL.BERENLG]: {
+    id: TIPOS_MATERIAL.BERENLG,
+    nombre: "Beren Light Grey",
+    imagenes: generarRutasImagenesMaterial("/texturas/TXT/piezas/BERENLG/", "BERENLG", "", 20, ".jpg"),
+  },
+  [TIPOS_MATERIAL.BLANCBORG]: {
+    id: TIPOS_MATERIAL.BLANCBORG,
+    nombre: "Blanc Borghini",
+    imagenes: generarRutasImagenesMaterial("/texturas/TXT/piezas/BLANCBORG/", "BLANCBORG", "", 20, ".jpg"),
+  },
+  [TIPOS_MATERIAL.BLANCSGOLD]: {
+    id: TIPOS_MATERIAL.BLANCSGOLD,
+    nombre: "Blanc Statuario Gold",
+    imagenes: generarRutasImagenesMaterial("/texturas/TXT/piezas/BLANCSGOLD/", "BLANCSGOLD", "", 20, ".jpg"),
   },
   [TIPOS_MATERIAL.CALACATTAVENA]: {
     id: TIPOS_MATERIAL.CALACATTAVENA,
     nombre: "Calacatta Vena",
-    imagenes: generarRutasImagenesMaterial(
-      "/texturas/TXT/piezas/CALACATTAVENA/", // basePath
-      "VENA", // nombreMaterial
-      "", // dimensiones
-      20, // cantidad
-      ".jpg" // extension
-    ),
+    imagenes: generarRutasImagenesMaterial("/texturas/TXT/piezas/CALACATTAVENA/", "VENA", "", 20, ".jpg"),
+  },
+  [TIPOS_MATERIAL.EDRAL]: {
+    id: TIPOS_MATERIAL.EDRAL,
+    nombre: "Edra Light",
+    imagenes: generarRutasImagenesMaterial("/texturas/TXT/piezas/EDRAL/", "EDRAL", "", 20, ".jpg"),
+  },
+  [TIPOS_MATERIAL.EMELG]: {
+    id: TIPOS_MATERIAL.EMELG,
+    nombre: "Eme Light Grey",
+    imagenes: generarRutasImagenesMaterial("/texturas/TXT/piezas/EMELG/", "EMELG", "", 20, ".jpg"),
+  },
+  [TIPOS_MATERIAL.ESTATUARIO]: {
+    id: TIPOS_MATERIAL.ESTATUARIO,
+    nombre: "Estatuario",
+    imagenes: generarRutasImagenesMaterial("/texturas/TXT/piezas/ESTATUARIO/", "ESTATUARIO", "60X120", 18, ".jpg"),
+  },
+  [TIPOS_MATERIAL.KENDOL]: {
+    id: TIPOS_MATERIAL.KENDOL,
+    nombre: "Kendo Light Grey",
+    imagenes: generarRutasImagenesMaterial("/texturas/TXT/piezas/KENDOL/", "KENDOL", "", 20, ".jpg"),
   },
   [TIPOS_MATERIAL.NOONGREY]: {
     id: TIPOS_MATERIAL.NOONGREY,
-    nombre: "Noon grey",
-    imagenes: generarRutasImagenesMaterial(
-      "/texturas/TXT/piezas/NOONGREY/", // basePath
-      "NOONGREY", // nombreMaterial
-      "", // dimensiones
-      20, // cantidad
-      ".jpg" // extension
-    ),
+    nombre: "Noon Grey",
+    imagenes: generarRutasImagenesMaterial("/texturas/TXT/piezas/NOONGREY/", "NOONGREY", "", 20, ".jpg"),
+  },
+  [TIPOS_MATERIAL.NOONSAND]: {
+    id: TIPOS_MATERIAL.NOONSAND,
+    nombre: "Noon Sand",
+    imagenes: generarRutasImagenesMaterial("/texturas/TXT/piezas/NOONSAND/", "NOONSAND", "", 20, ".jpg"),
   },
   [TIPOS_MATERIAL.PALADIO]: {
     id: TIPOS_MATERIAL.PALADIO,
     nombre: "Paladio",
-    imagenes: generarRutasImagenesMaterial(
-      "/texturas/TXT/piezas/PALADIO/", // basePath
-      "PALADIO", // nombreMaterial
-      "60X120", // dimensiones
-      18, // cantidad
-      ".jpg" // extension
-    ),
+    imagenes: generarRutasImagenesMaterial("/texturas/TXT/piezas/PALADIO/", "PALADIO", "60X120", 18, ".jpg"),
+  },
+  [TIPOS_MATERIAL.WEGAB]: {
+    id: TIPOS_MATERIAL.WEGAB,
+    nombre: "Wega Black",
+    imagenes: generarRutasImagenesMaterial("/texturas/TXT/piezas/WEGAB/", "WEGAB", "", 20, ".jpg"),
   },
 };
 

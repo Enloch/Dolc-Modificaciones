@@ -70,7 +70,7 @@ export function CanvasSetup() {
           rotation={[0.005, 0.973, -0.004]}
         />
 
-        <SoftShadows size={25} samples={10} focus={1} />
+        {/* <SoftShadows size={10} samples={5} focus={1} /> */}
         {/* Componente 3D */}
         <EscenaTXT layer />
         {/* Entorno */}
@@ -116,7 +116,7 @@ function DirectionalLightWithTarget() {
         shadow-camera-top={15}
         shadow-camera-bottom={-15}
         shadow-camera-near={0.1}
-        shadow-camera-far={30}
+        shadow-camera-far={50}
       />
       {/* Este objeto actúa como el target de la luz */}
       <object3D ref={targetRef} position={[0, 10, 5]} />

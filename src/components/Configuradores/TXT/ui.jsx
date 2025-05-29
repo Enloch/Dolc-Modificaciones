@@ -238,6 +238,8 @@ export const TXTUI = () => {
                   gap: "8px",
                   justifyContent: "space-between", // Kept as per original, can be changed to "flex-start"
                   width: "100%",
+                  maxHeight: "300px",
+                  overflow: "auto",
                 }}
               >
                 {Object.values(TEXTURAS_POR_MATERIAL).map((material) => (
