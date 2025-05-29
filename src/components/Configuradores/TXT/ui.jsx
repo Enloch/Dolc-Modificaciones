@@ -190,7 +190,7 @@ export const TXTUI = () => {
             onClick={() => setMenuSeleccionActivo(false)} // Consistent with other selection panels
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panelTXTType-content" id="panelTXTType-header">
-              <Typography variant="h6">Seleccionar Modelo TXT</Typography>
+              <Typography variant="body1">Seleccionar sistema TXT</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <FormControl component="fieldset">
@@ -213,7 +213,7 @@ export const TXTUI = () => {
             onClick={() => setMenuSeleccionActivo(expandedAccordion === "panel3" ? false : true)}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3a-content" id="panel3a-header">
-              <Typography variant="h6">Configura el posicionamiento</Typography>
+              <Typography variant="body1">Configura el posicionamiento</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography onClick={(event) => event.stopPropagation()}>
@@ -228,7 +228,7 @@ export const TXTUI = () => {
             onClick={() => setMenuSeleccionActivo(false)}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-              <Typography variant="h6">Acabado Porcelánico</Typography>
+              <Typography variant="body1">Acabado Porcelánico</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Box
@@ -260,7 +260,7 @@ export const TXTUI = () => {
             onClick={() => setMenuSeleccionActivo(false)}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2a-content" id="panel2a-header">
-              <Typography variant="h6">Elegir Material de perfil</Typography>
+              <Typography variant="body1">Elegir Material de perfil</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", maxHeight: "300px", overflow: "auto" }}>
