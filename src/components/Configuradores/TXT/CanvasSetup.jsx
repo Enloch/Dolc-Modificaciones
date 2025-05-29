@@ -88,13 +88,14 @@ export function CanvasSetup() {
           position={[3.12, 5.65, 11.92]}
           rotation={[0, 0, 0]}
         /> */}
-        {/* <SoftShadows size={40} samples={100} focus={4} /> */}
+        {/* <SoftShadows size={5} samples={10} focus={10} /> */}
         {/* Componente 3D */}
         <EscenaTXT layer />
         {/* Entorno */}
         <Environment
           files="/HDRI INTERCAMBIADOR TXT.hdr"
           background={true}
+          backgroundBlurriness={0.1}
           environmentIntensity={1}
           backgroundIntensity={1}
           environmentRotation={[rotacionX, rotacionZ, rotacionY]}
@@ -138,7 +139,7 @@ function DirectionalLightWithTarget() {
       />
       {/* Este objeto actúa como el target de la luz */}
       {/* <directionalLight ref={lightRef} intensity={2} position={[20, 3, 8]} /> */}
-      <object3D ref={targetRef} position={[0, 10, 7]} />
+      <object3D ref={targetRef} position={[0, 7, 7]} />
     </>
   );
 }

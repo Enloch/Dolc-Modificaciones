@@ -86,7 +86,11 @@ export default function Escena3DTXT() {
             )}
             <TXTUI />
             <Iconos onConfigAccept={handleIconConfigAccept} />
-
+            <img
+              src="/texturas/TXT/background/background.jpg"
+              alt="background"
+              style={{ width: "100%", height: "100%", position: "absolute", top: 0, left: 0 }}
+            />
             <CanvasSetup />
           </>
         ))}
