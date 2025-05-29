@@ -16,10 +16,10 @@ import BurdeosGrata from "/texturas/Matrix/BurdeosGrata.jpg";
 import BurdeosGrataRFP from "/texturas/Matrix/BurdeosGrata.jpg";
 import NegroGrata from "/texturas/Matrix/NegroGrata.jpg";
 import NegroGrataRFP from "/texturas/Matrix/NegroGrata.jpg";
-import OlmoRugoso from "/texturas/Matrix/OlmoRugoso.jpg";
-import NogalRugoso from "/texturas/Matrix/NogalRugoso.jpg";
-import EmberoDoradoRugoso from "/texturas/Matrix/EmberoDoradoRugoso.jpg";
-import EmberoTexturaRugoso from "/texturas/Matrix/EmberoTexturaRugoso.jpg";
+import OlmoRugoso from "/texturas/Matrix/Olmo Rugoso 1K.jpg";
+import NogalRugoso from "/texturas/Matrix/Nogal Rugoso 1K.jpg";
+import EmberoDoradoRugoso from "/texturas/Matrix/Embero Dorado Rugoso 1K.jpg";
+import EmberoTexturaRugoso from "/texturas/Matrix/Embero Rugoso 1K.jpg";
 //minis
 import PlataMateMini from "/texturasmini/PlataMate.jpg";
 import PlataGrataMini from "/texturasmini/PlataGrata.jpg";

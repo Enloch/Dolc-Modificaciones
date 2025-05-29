@@ -88,7 +88,7 @@ export function CanvasSetup() {
           position={[3.12, 5.65, 11.92]}
           rotation={[0, 0, 0]}
         /> */}
-        <SoftShadows />
+        <SoftShadows size={50} />
         {/* Componente 3D */}
         <EscenaTXT layer />
         {/* Entorno */}

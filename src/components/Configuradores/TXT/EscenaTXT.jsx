@@ -13,7 +13,7 @@ import { TIPOS_MATERIAL, getImagenesParaMaterial } from "./texturas";
 import { CatalogoPerfiles } from "./Materiales"; // Added import for CatalogoPerfiles
 import * as THREE from "three"; // Added THREE import
 export function EscenaTXT(props) {
-  const { nodes, materials } = useGLTF("/EscenaTXT-transformed.glb");
+  const { nodes, materials } = useGLTF("/EscenaTXT.glb");
   const { invalidate } = useThree();
   const { onSectionClick, ...groupProps } = props;
   const genericPerfilMaterialRef = useRef(new THREE.MeshStandardMaterial({ name: "GenericPerfilMaterial" }));
@@ -100,6 +100,7 @@ export function EscenaTXT(props) {
 
     if (materialPerfilSeleccionado && CatalogoPerfiles[materialPerfilSeleccionado]) {
       const perfilMaterialConfig = CatalogoPerfiles[materialPerfilSeleccionado];
+      console.log("Applying profile material:", perfilMaterialConfig);
 
       targetMaterial.roughness = perfilMaterialConfig.roughness;
       targetMaterial.metalness = perfilMaterialConfig.metalness;
@@ -107,52 +108,68 @@ export function EscenaTXT(props) {
       const oldMap = targetMaterial.map; // Store current map to potentially dispose later
 
       if (perfilMaterialConfig.mainTexture) {
+        console.log(`Loading profile texture: ${perfilMaterialConfig.mainTexture}`);
         textureLoaderRef.current.load(
           perfilMaterialConfig.mainTexture,
           (loadedTexture) => {
-            // if (oldMap && oldMap !== loadedTexture) { oldMap.dispose(); } // Optional: dispose old texture
+            console.log("Profile texture loaded successfully:", loadedTexture);
+            if (oldMap && oldMap !== loadedTexture) {
+              oldMap.dispose();
+            } // Optional: dispose old texture
             loadedTexture.flipY = false;
             loadedTexture.colorSpace = THREE.SRGBColorSpace;
 
             targetMaterial.map = loadedTexture;
             targetMaterial.color.set(0xffffff); // Reset color to white when texture is applied
             targetMaterial.needsUpdate = true;
-            // Trigger a re-render
+            invalidate(); // Trigger a re-render
           },
           undefined, // onProgress
           (error) => {
             console.error(`Error loading profile texture: ${perfilMaterialConfig.mainTexture}`, error);
-            // Fallback: clear texture, set a default color
-            // if (oldMap) { oldMap.dispose(); }
+            if (oldMap) {
+              oldMap.dispose();
+            }
             targetMaterial.map = null;
             targetMaterial.color.set(0xcccccc); // Example fallback color
             targetMaterial.needsUpdate = true;
+            invalidate(); // Trigger a re-render
           }
         );
       } else if (perfilMaterialConfig.color) {
-        // if (oldMap) { oldMap.dispose(); }
+        console.log("Applying profile color:", perfilMaterialConfig.color);
+        if (oldMap) {
+          oldMap.dispose();
+        }
         targetMaterial.map = null; // Remove any existing texture
         targetMaterial.color.set(perfilMaterialConfig.color);
-        targetMaterial.colorSpace = THREE.SRGBColorSpace;
+        // targetMaterial.colorSpace = THREE.SRGBColorSpace; // For colors, usually NoColorSpace or be mindful of conversions
         targetMaterial.needsUpdate = true;
+        invalidate(); // Trigger a re-render
       } else {
-        // Fallback: no texture, default color (e.g., white)
-        // if (oldMap) { oldMap.dispose(); }
+        console.log("Applying fallback profile material (no texture, default color)");
+        if (oldMap) {
+          oldMap.dispose();
+        }
         targetMaterial.map = null;
         targetMaterial.color.set(0xffffff); // Default to white
-        targetMaterial.colorSpace = THREE.SRGBColorSpace;
+        // targetMaterial.colorSpace = THREE.SRGBColorSpace;
         targetMaterial.needsUpdate = true;
+        invalidate(); // Trigger a re-render
       }
     } else {
-      // No material selected or config not found, reset to a default state
+      console.log("No profile material selected or config not found, resetting to default.");
       const oldMap = targetMaterial.map;
-      // if (oldMap) { oldMap.dispose(); }
+      if (oldMap) {
+        oldMap.dispose();
+      }
       targetMaterial.map = null;
       targetMaterial.color.set(0xffffff); // Default color
       targetMaterial.roughness = 0.5; // Default roughness
       targetMaterial.metalness = 0.0; // Default metalness
-      targetMaterial.colorSpace = THREE.SRGBColorSpace;
+      // targetMaterial.colorSpace = THREE.SRGBColorSpace;
       targetMaterial.needsUpdate = true;
+      invalidate(); // Trigger a re-render
     }
   }, [materialPerfilSeleccionado, invalidate]); // Dependencies
   const getMaterialForMesh = (originalMaterialKey) => {
