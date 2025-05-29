@@ -145,7 +145,7 @@ export const TXTUI = () => {
     sistemaActivo, // Destructure from store
     setSistemaActivo, // Destructure from store
   } = useConfigStore();
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Changed: Default state is now closed
+  const [isMenuOpen, setIsMenuOpen] = useState(true); // Changed: Default state is now closed
   // State to manage which accordion is expanded
   const [expandedAccordion, setExpandedAccordion] = useState(false); // false means all are closed initially
 

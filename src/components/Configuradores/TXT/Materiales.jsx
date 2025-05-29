@@ -225,8 +225,8 @@ export const CatalogoPerfiles = {
     mainTexture: null, // Ensure BronceMate is imported
     miniTexture: BronceMateMini, // Ensure BronceMateMini is imported
     color: "#645035",
-    roughness: 0.3, // From MaterialesMetalizados
-    metalness: 1.0, // From MaterialesMetalizados
+    roughness: 0.1, // From MaterialesMetalizados
+    metalness: 0.5, // From MaterialesMetalizados
   },
   BRONCE_GRATA: {
     id: "BRONCE_GRATA",
@@ -234,8 +234,8 @@ export const CatalogoPerfiles = {
     mainTexture: null, // Ensure BronceGrata is imported
     miniTexture: BronceGrataMini, // Ensure BronceGrataMini is imported
     color: "#645035",
-    roughness: 0.4, // From MaterialesMetalizados
-    metalness: 1.0, // From MaterialesMetalizados
+    roughness: 0.2, // From MaterialesMetalizados
+    metalness: 0.5, // From MaterialesMetalizados
   },
   BRONCE_GRATA_RFP: {
     id: "BRONCE_GRATA_RFP",
@@ -243,8 +243,8 @@ export const CatalogoPerfiles = {
     mainTexture: null, // Ensure BronceGrataRFP is imported
     miniTexture: BronceGrataRFPMini, // Ensure BronceGrataRFPMini is imported
     color: "#645035",
-    roughness: 0.5, // From MaterialesMetalizados
-    metalness: 1.0, // From MaterialesMetalizados
+    roughness: 0.3, // From MaterialesMetalizados
+    metalness: 0.5, // From MaterialesMetalizados
   },
   INOX_MATE: {
     id: "INOX_MATE",
@@ -278,27 +278,27 @@ export const CatalogoPerfiles = {
     label: "Burdeos Mate",
     mainTexture: null, // Ensure BurdeosMate is imported
     miniTexture: BurdeosMateMini, // Ensure BurdeosMateMini is importe d
-    color: "#8B241B",
-    roughness: 0.3, // From MaterialesMetalizados
-    metalness: 1, // From MaterialesMetalizados
+    color: "#651c1c",
+    roughness: 0.5, // From MaterialesMetalizados
+    metalness: 0, // From MaterialesMetalizados
   },
   BURDEOS_GRATA: {
     id: "BURDEOS_GRATA",
     label: "Burdeos Grata",
     mainTexture: null, // Ensure BurdeosGrata is imported
     miniTexture: BurdeosGrataMini, // Ensure BurdeosGrataMini is imported
-    color: "#8B241B",
-    roughness: 0.4, // From MaterialesMetalizados
-    metalness: 1.0, // From MaterialesMetalizados
+    color: "#651c1c",
+    roughness: 0.25, // From MaterialesMetalizados
+    metalness: 0, // From MaterialesMetalizados
   },
   BURDEOS_GRATA_RFP: {
     id: "BURDEOS_GRATA_RFP",
     label: "Burdeos Grata RFP",
     mainTexture: null, // Ensure BurdeosGrataRFP is imported
     miniTexture: BurdeosGrataRFPMini, // Ensure BurdeosGrataRFPMini is imported
-    color: "#8B241B",
-    roughness: 0.5, // From MaterialesMetalizados
-    metalness: 1.0, // From MaterialesMetalizados
+    color: "#651c1c",
+    roughness: 0, // From MaterialesMetalizados
+    metalness: 0, // From MaterialesMetalizados
   },
   NEGRO_GRATA: {
     id: "NEGRO_GRATA",
