@@ -6,9 +6,7 @@ import inglesLista from "../../utils/en/listaContenidos.json";
 
 const ListaContenidos = ({ en = false, isMenuDesplegable = false }) => {
   const contendiosJSON = useContext(ListaContenidosContextFusion);
-  const contenidos = en
-    ? useListaContenidos(inglesLista)
-    : useListaContenidos(contendiosJSON);
+  const contenidos = en ? useListaContenidos(inglesLista) : useListaContenidos(contendiosJSON);
 
   return (
     <StyledListaContenidos isMenuDesplegable={isMenuDesplegable}>

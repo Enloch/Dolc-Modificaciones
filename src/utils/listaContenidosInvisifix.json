@@ -20,20 +20,7 @@
       },
       {
         "title": "Obra nueva",
-        "subList": [
-          {
-            "title": "Obra nueva",
-            "link": "#obra-nueva"
-          },
-          {
-            "title": "Fachadas",
-            "link": "#fachadas"
-          },
-          {
-            "title": "Terrazas, suelos elevados, techos y soluciones",
-            "link": "#terrazas"
-          }
-        ]
+        "link": "#obra-nueva"
       }
     ]
   },
@@ -55,45 +42,6 @@
       {
         "title": "Series",
         "link": "#series"
-      }
-    ]
-  },
-  {
-    "title": "Características",
-    "subList": [
-      {
-        "title": "Características técnicas",
-        "link": "#caracteristicas-especiales"
-      },
-      {
-        "title": "Datos técnicos",
-        "link": "#datos-tecnicos"
-      }
-    ]
-  },
-
-  {
-    "title": "Sistemas",
-    "subList": [
-      {
-        "title": "Sistemas",
-        "link": "#sistemas"
-      },
-      {
-        "title": "Dolcker & Clip",
-        "link": "#dolcker-and-clip"
-      },
-      {
-        "title": "Dol-TC11",
-        "link": "#dol-tc11"
-      },
-      {
-        "title": "Dol-TC14",
-        "link": "#dol-tc14"
-      },
-      {
-        "title": "Dol-HC20",
-        "link": "#dol-hc20"
       }
     ]
   },

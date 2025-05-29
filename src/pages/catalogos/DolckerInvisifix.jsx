@@ -39,20 +39,10 @@ const DolckerInvisifix = () => {
       <Indice id="indice" indiceRef={indiceRef} />
       <Dolcker id="dolcker" />
       <Ventajas id="ventajas" />
-      <Aplicaciones
-        id={["aplicaciones", "terracota", "color", "petra", "textura"]}
-      />
+      <Aplicaciones id={["aplicaciones", "obra-nueva"]} />
       <Disenos id={["diseno", "acabados", "espesores", "series"]} />
-      <Caracteristicas id={["caracteristicas-especiales", "datos-tecnicos"]} />
-      <Sistemas
-        id={[
-          "sistemas",
-          "dolcker-and-clip",
-          "dol-tc11",
-          "dol-tc14",
-          "dol-hc20",
-        ]}
-      />
+      {/* <Caracteristicas id={["caracteristicas-especiales", "datos-tecnicos"]} /> */}
+      {/* <Sistemas id={["sistemas", "dolcker-and-clip", "dol-tc11", "dol-tc14", "dol-hc20"]} /> */}
       <Descargas id="descargas" />
       <Final />
       {showButton && (

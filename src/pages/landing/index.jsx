@@ -30,6 +30,7 @@ import Scala from "../../assets/images/Scala/Volum97.jpg";
 import Archiform from "../../assets/images/Archiform/Archiform27.jpg";
 import Fusion from "../../assets/images/Fusion/fusion.jpg";
 import T5 from "../../assets/images/T5/IMG_3280.jpg";
+import Invisifix from "../../assets/images/Invisifix/invisifix.jpg";
 export const Landing = () => {
   const imageData = [
     {
@@ -47,15 +48,13 @@ export const Landing = () => {
     {
       src: Matrix,
       title: "Dolcker Matrix Facade",
-      subtitle:
-        "Lamas de aluminio clipeadas para fachadas ventiladas y revestimientos.",
+      subtitle: "Lamas de aluminio clipeadas para fachadas ventiladas y revestimientos.",
       link: "dolcker-matrix-facade",
     },
     {
       src: Decor,
       title: "Dolcker Matrix Decor",
-      subtitle:
-        "Lamas de aluminio clipeadas para revestimientos e interiores de vanguardia.",
+      subtitle: "Lamas de aluminio clipeadas para revestimientos e interiores de vanguardia.",
       link: "dolcker-matrix-decor",
     },
     {
@@ -87,6 +86,12 @@ export const Landing = () => {
       title: "Dolcker Fusion",
       subtitle: "Solución integral full&body para fachadas y revestimientos",
       link: "dolcker-fusion",
+    },
+    {
+      src: Invisifix,
+      title: "Dolcker Invisifix",
+      subtitle: "Solución integral full&body para fachadas y revestimientos",
+      link: "dolcker-invisifix",
     },
   ];
 

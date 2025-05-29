@@ -10,7 +10,7 @@ const rotacionX = 0;
 const rotacionY = 0;
 // const rotacionZ = 1;
 const degToRad = (deg) => (deg * Math.PI) / 180;
-const rotacionZ = degToRad(20);
+const rotacionZ = degToRad(291);
 // const rotacionZ = 244.4;
 
 export function CanvasSetup() {
@@ -51,10 +51,20 @@ export function CanvasSetup() {
       clearTimeout(timer);
     };
   }, []);
+  // const { rotacionA } = useControls({
+  //   rotacionA: {
+  //     value: 0, // Valor en grados
+  //     min: 0,
+  //     max: 360,
+  //     step: 1,
+  //   },
+  // });
 
+  // Convertir a radianes para usarlo en el componente
+  // const rotacionARad = degToRad(rotacionA);
   return (
     <>
-      <Leva collapsed />
+      {/* <Leva /> */}
       <Canvas
         // flat
         frameloop={currentFrameLoop}
@@ -70,15 +80,15 @@ export function CanvasSetup() {
           rotation={[0.005, 0.973, -0.004]}
         />
 
-        {/* <SoftShadows size={10} samples={5} focus={1} /> */}
+        {/* <SoftShadows size={40} samples={100} focus={4} /> */}
         {/* Componente 3D */}
         <EscenaTXT layer />
         {/* Entorno */}
         <Environment
           files="/HDRI INTERCAMBIADOR TXT.hdr"
-          background
-          backgroundIntensity={1}
+          background={true}
           environmentIntensity={1}
+          backgroundIntensity={1}
           environmentRotation={[rotacionX, rotacionZ, rotacionY]}
           backgroundRotation={[rotacionX, rotacionZ, rotacionY]}
           ground={true}
@@ -107,8 +117,8 @@ function DirectionalLightWithTarget() {
       <directionalLight
         ref={lightRef}
         castShadow
-        intensity={2.5}
-        position={[-10, 15, 16]}
+        intensity={4}
+        position={[10, 15, 16]}
         shadow-mapSize={[4096, 4096]}
         shadow-bias={-0.0001}
         shadow-camera-left={-15}
@@ -119,7 +129,24 @@ function DirectionalLightWithTarget() {
         shadow-camera-far={50}
       />
       {/* Este objeto actúa como el target de la luz */}
-      <object3D ref={targetRef} position={[0, 10, 5]} />
+      {/* <directionalLight ref={lightRef} intensity={2} position={[20, 3, 8]} /> */}
+      <object3D ref={targetRef} position={[0, 10, 7]} />
     </>
   );
+}
+{
+  /* <directionalLight
+ref={lightRef}
+castShadow
+intensity={2}
+position={[-10, 15, 16]}
+shadow-mapSize={[4096, 4096]}
+shadow-bias={-0.0001}
+shadow-camera-left={-15}
+shadow-camera-right={15}
+shadow-camera-top={15}
+shadow-camera-bottom={-15}
+shadow-camera-near={0.1}
+shadow-camera-far={50}
+/> */
 }
