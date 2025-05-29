@@ -36,6 +36,7 @@ const Footer = styled.div`
   bottom: 20px;
   left: 20px;
   right: 20px;
+  max-width: ${MENU_MAX_WIDTH}px;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
   padding: 10px;
@@ -43,7 +44,18 @@ const Footer = styled.div`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  z-index: 12;
+  z-index: 1;
+  /* cursor: pointer; */
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 1.5s ease-in-out,
+    transform 1.5s ease-in-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 `;
 
 const FooterTitle = styled(Typography)`
@@ -115,7 +127,7 @@ const MenuIcon = styled.img`
 
 const MenuContainer = styled.div`
   width: auto;
-  max-width: ${MENU_MAX_WIDTH}px; // Used constant
+  max-width: ${MENU_MAX_WIDTH}px;
   height: 100%;
   background: rgba(255, 255, 255, 0.575);
   backdrop-filter: blur(7.5px);
@@ -346,36 +358,36 @@ export const TXTUI = () => {
         </MenuContent>
 
         {/* Fixed Footer */}
-        <Footer>
-          <FooterTitle>Selección actual</FooterTitle>
-          <FooterContent>
-            <FooterItem>
-              <FooterLabel>Sistema</FooterLabel>
-              <FooterValue>{sistemaActivo}</FooterValue>
-            </FooterItem>
-
-            <FooterItem>
-              <FooterLabel>Porcelánico</FooterLabel>
-              {selectedPorcelain && selectedPorcelain.imagenes && selectedPorcelain.imagenes[0] ? (
-                <Thumbnail src={selectedPorcelain.imagenes[0]} alt={selectedPorcelain.nombre} />
-              ) : (
-                <Thumbnail src="" alt="No seleccionado" style={{ backgroundColor: "#f0f0f0" }} />
-              )}
-              <FooterValue>{selectedPorcelain?.nombre || "No seleccionado"}</FooterValue>
-            </FooterItem>
-
-            <FooterItem>
-              <FooterLabel>Perfil</FooterLabel>
-              {selectedProfile && selectedProfile.miniTexture ? (
-                <Thumbnail src={selectedProfile.miniTexture} alt={selectedProfile.label} />
-              ) : (
-                <Thumbnail src="" alt="No seleccionado" style={{ backgroundColor: "#f0f0f0" }} />
-              )}
-              <FooterValue>{selectedProfile?.label || "No seleccionado"}</FooterValue>
-            </FooterItem>
-          </FooterContent>
-        </Footer>
       </MenuContainer>
+      <Footer className={!isMenuOpen && !menuSeleccionActivo ? "visible" : ""}>
+        <FooterTitle>Selección actual</FooterTitle>
+        <FooterContent>
+          <FooterItem>
+            <FooterLabel>Sistema</FooterLabel>
+            <FooterValue>{sistemaActivo}</FooterValue>
+          </FooterItem>
+
+          <FooterItem>
+            <FooterLabel>Porcelánico</FooterLabel>
+            {selectedPorcelain && selectedPorcelain.imagenes && selectedPorcelain.imagenes[0] ? (
+              <Thumbnail src={selectedPorcelain.imagenes[0]} alt={selectedPorcelain.nombre} />
+            ) : (
+              <Thumbnail src="" alt="No seleccionado" style={{ backgroundColor: "#f0f0f0" }} />
+            )}
+            <FooterValue>{selectedPorcelain?.nombre || "No seleccionado"}</FooterValue>
+          </FooterItem>
+
+          <FooterItem>
+            <FooterLabel>Perfil</FooterLabel>
+            {selectedProfile && selectedProfile.miniTexture ? (
+              <Thumbnail src={selectedProfile.miniTexture} alt={selectedProfile.label} />
+            ) : (
+              <Thumbnail src="" alt="No seleccionado" style={{ backgroundColor: "#f0f0f0" }} />
+            )}
+            <FooterValue>{selectedProfile?.label || "No seleccionado"}</FooterValue>
+          </FooterItem>
+        </FooterContent>
+      </Footer>
     </>
   );
 };
