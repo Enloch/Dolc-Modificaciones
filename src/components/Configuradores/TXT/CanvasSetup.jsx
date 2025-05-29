@@ -10,7 +10,7 @@ const rotacionX = 0;
 const rotacionY = 0;
 // const rotacionZ = 1;
 const degToRad = (deg) => (deg * Math.PI) / 180;
-const rotacionZ = degToRad(291);
+const rotacionZ = degToRad(245);
 // const rotacionZ = 244.4;
 
 export function CanvasSetup() {
@@ -51,17 +51,17 @@ export function CanvasSetup() {
       clearTimeout(timer);
     };
   }, []);
-  const { rotacionA } = useControls({
-    rotacionA: {
-      value: 0, // Valor en grados
-      min: 0,
-      max: 360,
-      step: 1,
-    },
-  });
+  // const { rotacionA } = useControls({
+  //   rotacionA: {
+  //     value: 0, // Valor en grados
+  //     min: 0,
+  //     max: 360,
+  //     step: 1,
+  //   },
+  // });
 
-  // Convertir a radianes para usarlo en el componente
-  const rotacionARad = degToRad(rotacionA);
+  // // Convertir a radianes para usarlo en el componente
+  // const rotacionARad = degToRad(rotacionA);
   return (
     <>
       {/* <Leva /> */}
@@ -79,7 +79,7 @@ export function CanvasSetup() {
           position={[10, 6.6, 9.4]}
           rotation={[0.005, 0.973, -0.004]}
         />
-        <PerspectiveCamera
+        {/* <PerspectiveCamera
           // makeDefault={true}
           ref={cameraRef}
           far={25}
@@ -87,7 +87,7 @@ export function CanvasSetup() {
           fov={31.417}
           position={[3.12, 5.65, 11.92]}
           rotation={[0, 0, 0]}
-        />
+        /> */}
         {/* <SoftShadows size={40} samples={100} focus={4} /> */}
         {/* Componente 3D */}
         <EscenaTXT layer />
@@ -97,8 +97,8 @@ export function CanvasSetup() {
           background={true}
           environmentIntensity={1}
           backgroundIntensity={1}
-          environmentRotation={[rotacionX, rotacionARad, rotacionY]}
-          backgroundRotation={[rotacionX, rotacionARad, rotacionY]}
+          environmentRotation={[rotacionX, rotacionZ, rotacionY]}
+          backgroundRotation={[rotacionX, rotacionZ, rotacionY]}
           ground={true}
           encoding={3001}
         />

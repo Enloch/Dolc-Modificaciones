@@ -31,6 +31,73 @@ const ICON_MARGIN_RIGHT_OPEN = 10; // px, desired margin from the right edge of 
 const ICON_POSITION_LEFT_OPEN = MENU_MAX_WIDTH - ICON_WIDTH - ICON_MARGIN_RIGHT_OPEN; // 310px
 const ICON_POSITION_LEFT_CLOSED = 20; // px
 
+const Footer = styled.div`
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 12;
+`;
+
+const FooterTitle = styled(Typography)`
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+  /* text-align: center; */
+  width: 100%;
+`;
+
+const FooterContent = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8px;
+`;
+
+const FooterItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* flex: 1; */
+  min-width: 0; /* Allows text truncation */
+  /* padding: 0 8px; */
+  box-sizing: border-box;
+`;
+
+const FooterLabel = styled(Typography)`
+  font-size: 0.7rem;
+  color: #555;
+  margin-bottom: 4px;
+`;
+
+const FooterValue = styled.div`
+  font-weight: 500;
+  text-align: center;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+`;
+
+const Thumbnail = styled.img`
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+`;
+
 const MenuIcon = styled.img`
   position: absolute;
   top: 3%;
@@ -55,11 +122,11 @@ const MenuContainer = styled.div`
   position: absolute;
   top: 0;
   z-index: 10;
+  display: flex;
+  flex-direction: column;
 
   /* CHANGED: Allow vertical scrolling if content overflows */
-  overflow-y: auto;
-  /* You might want to explicitly hide horizontal scrollbar if not needed */
-  /* overflow-x: hidden; */
+  overflow: hidden; /* Changed from overflow-y: auto */
 
   /* ADDED: CSS to hide the scrollbar itself */
   /* For WebKit browsers (Chrome, Safari, new Edge) */
@@ -88,6 +155,9 @@ const MenuContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 100px; /* Space for the fixed footer */
 `;
 
 const MaterialOption = ({ src, alt, label, isSelected, onClick }) => (
@@ -112,19 +182,8 @@ const MaterialOption = ({ src, alt, label, isSelected, onClick }) => (
       },
     }}
   >
-    <img
-      src={src}
-      alt={alt}
-      style={{
-        width: "65px",
-        height: "65px",
-        objectFit: "cover",
-        borderRadius: "50%",
-      }}
-    />
-    <Typography variant="body2" sx={{ textAlign: "center" }}>
-      {label}
-    </Typography>
+    <Thumbnail src={src} alt={alt} />
+    <FooterLabel sx={{ textAlign: "center" }}>{label}</FooterLabel>
   </Box>
 );
 
@@ -174,6 +233,10 @@ export const TXTUI = () => {
     setSection6(0);
   };
 
+  // Get the selected materials for the footer
+  const selectedPorcelain = Object.values(TEXTURAS_POR_MATERIAL).find((material) => material.id === materialPorcelanicoSeleccionado);
+  const selectedProfile = Object.values(CatalogoPerfiles).find((material) => material.id === materialPerfilSeleccionado);
+
   return (
     <>
       <MenuIcon src={IconoMenu} isOpen={isMenuOpen} onClick={() => setIsMenuOpen(!isMenuOpen)} />
@@ -197,11 +260,11 @@ export const TXTUI = () => {
                 <RadioGroup
                   aria-label="modelo-txt-seleccion"
                   name="modelo-txt-radio-buttons-group"
-                  value={sistemaActivo} // Use global state
+                  value={sistemaActivo}
                   onChange={handleTxtTypeChange}
                 >
-                  <FormControlLabel value="TXT11" control={<Radio />} label="TXT11" />
-                  <FormControlLabel value="TXT13" control={<Radio />} label="TXT13" />
+                  <FormControlLabel value="TXT 11" control={<Radio />} label="TXT 11" />
+                  <FormControlLabel value="TXT 13" control={<Radio />} label="TXT 13" />
                 </RadioGroup>
               </FormControl>
             </AccordionDetails>
@@ -281,6 +344,37 @@ export const TXTUI = () => {
             </AccordionDetails>
           </Accordion>
         </MenuContent>
+
+        {/* Fixed Footer */}
+        <Footer>
+          <FooterTitle>Selección actual</FooterTitle>
+          <FooterContent>
+            <FooterItem>
+              <FooterLabel>Sistema</FooterLabel>
+              <FooterValue>{sistemaActivo}</FooterValue>
+            </FooterItem>
+
+            <FooterItem>
+              <FooterLabel>Porcelánico</FooterLabel>
+              {selectedPorcelain && selectedPorcelain.imagenes && selectedPorcelain.imagenes[0] ? (
+                <Thumbnail src={selectedPorcelain.imagenes[0]} alt={selectedPorcelain.nombre} />
+              ) : (
+                <Thumbnail src="" alt="No seleccionado" style={{ backgroundColor: "#f0f0f0" }} />
+              )}
+              <FooterValue>{selectedPorcelain?.nombre || "No seleccionado"}</FooterValue>
+            </FooterItem>
+
+            <FooterItem>
+              <FooterLabel>Perfil</FooterLabel>
+              {selectedProfile && selectedProfile.miniTexture ? (
+                <Thumbnail src={selectedProfile.miniTexture} alt={selectedProfile.label} />
+              ) : (
+                <Thumbnail src="" alt="No seleccionado" style={{ backgroundColor: "#f0f0f0" }} />
+              )}
+              <FooterValue>{selectedProfile?.label || "No seleccionado"}</FooterValue>
+            </FooterItem>
+          </FooterContent>
+        </Footer>
       </MenuContainer>
     </>
   );

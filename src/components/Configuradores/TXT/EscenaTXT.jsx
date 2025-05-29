@@ -161,7 +161,7 @@ export function EscenaTXT(props) {
 
   return (
     <group {...groupProps} dispose={null}>
-      {sistemaActivo === "TXT13" && (
+      {sistemaActivo === "TXT 13" && (
         <>
           <group name="Seccion1" position={[0, 0, Section1]}>
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_TXT_13_001.geometry} material={getMaterialForMesh("Pieza01")} />
@@ -252,7 +252,7 @@ export function EscenaTXT(props) {
           </group>
         </>
       )}
-      {sistemaActivo === "TXT11" && (
+      {sistemaActivo === "TXT 11" && (
         <>
           <group name="Seccion1 TXT11" position={[0, 0, Section1]}>
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_001.geometry} material={materials.Pieza01} />
