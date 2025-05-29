@@ -88,7 +88,7 @@ export function CanvasSetup() {
           position={[3.12, 5.65, 11.92]}
           rotation={[0, 0, 0]}
         /> */}
-        {/* <SoftShadows size={5} samples={10} focus={10} /> */}
+        <SoftShadows />
         {/* Componente 3D */}
         <EscenaTXT layer />
         {/* Entorno */}
@@ -130,10 +130,10 @@ function DirectionalLightWithTarget() {
         position={[10, 15, 16]}
         shadow-mapSize={[4096, 4096]}
         shadow-bias={-0.0001}
-        shadow-camera-left={-15}
-        shadow-camera-right={15}
-        shadow-camera-top={15}
-        shadow-camera-bottom={-15}
+        shadow-camera-left={-20}
+        shadow-camera-right={20}
+        shadow-camera-top={20}
+        shadow-camera-bottom={-20}
         shadow-camera-near={0.1}
         shadow-camera-far={50}
       />
