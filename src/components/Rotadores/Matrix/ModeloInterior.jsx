@@ -8,21 +8,15 @@ export function Interior(props) {
   useEffect(() => {
     if (materials["Dormitorio plano"]) {
       materials["Dormitorio plano"].transparent = true;
-      materials["Dormitorio plano"].opacity = 0.4; // Ajusta esto para controlar la mezcla
+      materials["Dormitorio plano"].opacity = 1; // Ajusta esto para controlar la mezcla
       materials["Dormitorio plano"].blendMode = THREE.AdditiveBlending;
     }
   }, [materials]);
 
   return (
     <group {...props} dispose={null}>
-      <mesh
-        geometry={nodes.Dormitorio_copia.geometry}
-        material={materials["Dormitorio copia"]}
-      />
-      <mesh
-        geometry={nodes.Dormitorio_Plano.geometry}
-        material={materials["Dormitorio plano"]}
-      />
+      <mesh geometry={nodes.Dormitorio_copia.geometry} material={materials["Dormitorio copia"]} />
+      <mesh geometry={nodes.Dormitorio_Plano.geometry} material={materials["Dormitorio plano"]} />
     </group>
   );
 }

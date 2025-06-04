@@ -118,7 +118,7 @@ export function Fachada(props) {
   let desplazamientoX = 0;
   const incrementoUV = 0.05; // Desplazamiento UV como fracción del ancho de la textura
 
-  while (mallasRepetidas.length < 120) {
+  while (mallasRepetidas.length < 180) {
     elementosIniciales.forEach((mallaOriginal) => {
       let nuevaMalla = { ...mallaOriginal, posicion: posicionAcumulada };
 
@@ -148,7 +148,7 @@ export function Fachada(props) {
   }
 
   // Cortar el array a 45 elementos si excede
-  const mallasFinales = mallasRepetidas.slice(0, 120);
+  const mallasFinales = mallasRepetidas.slice(0, 180);
 
   return (
     <group {...props} dispose={null}>
@@ -161,52 +161,13 @@ export function Fachada(props) {
           geometry={malla.geometria}
         >
           {malla.colorActivo === "colorPicker" ? (
-            <meshStandardMaterial
-              color={malla.color}
-              metalness="0.5"
-              roughness="0.5"
-              map={null}
-            />
+            <meshStandardMaterial color={malla.color} metalness="0.5" roughness="0.5" map={null} />
           ) : (
-            <meshPhysicalMaterial
-              map={malla.material}
-              roughness={malla.aspereza}
-              metalness={malla.metalizado}
-              color={"#FFFFFF"}
-            />
+            <meshPhysicalMaterial map={malla.material} roughness={malla.aspereza} metalness={malla.metalizado} color={"#FFFFFF"} />
           )}
         </mesh>
       ))}
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Box006.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Lamas2.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Marco2.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Ventana3.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Ventana3_1.geometry}
-        material={materials["Glass Smoked"]}
-      />
+      <mesh castShadow receiveShadow geometry={nodes.Box006.geometry} material={materials.MarcoVentana} />
     </group>
   );
 }

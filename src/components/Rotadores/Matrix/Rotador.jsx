@@ -305,7 +305,7 @@ const EscenaFachada = ({ rotada }) => {
         makeDefault={true}
         far={40}
         near={0.1}
-        fov={28.057}
+        fov={27}
         position={[7.314, 12.229, 15.262]}
         rotation={[0.325, 0.75, -0.226]}
       />
@@ -319,17 +319,17 @@ const EscenaFachada = ({ rotada }) => {
         position={[-10, 12, 3]}
         shadow-mapSize={[2048, 2048]}
         shadow-bias={-0.00004}
-        shadow-camera-left={-10}
-        shadow-camera-right={10}
-        shadow-camera-top={10}
-        shadow-camera-bottom={-10}
+        shadow-camera-left={-30}
+        shadow-camera-right={30}
+        shadow-camera-top={30}
+        shadow-camera-bottom={-30}
         shadow-camera-near={0.1}
         shadow-camera-far={150}
       />
       <Sky distance={10000} rayleigh={1} sunPosition={[25, 7, 16]} turbidity={5} />
       <object3D ref={targetRef} position={[0, 0, 0]} />
       <MatrixV2 />
-      {/* {!rotada ? <Fachada /> : <FachadaHorizontal />} */}
+      {!rotada ? <Fachada /> : <FachadaHorizontal />}
       {/* <Gltf src="/modelos/Matrix/MatrixV2.glb" /> */}
       {/* <OrbitControls /> */}
     </>
