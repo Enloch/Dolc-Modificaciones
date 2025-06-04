@@ -1,13 +1,7 @@
 import React, { useState, Suspense, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useControls } from "leva";
-import {
-  OrbitControls,
-  Environment,
-  Sky,
-  Stats,
-  PerformanceMonitor,
-} from "@react-three/drei";
+import { OrbitControls, Environment, Sky, Stats, PerformanceMonitor } from "@react-three/drei";
 import { Base } from "./Base";
 import { PerfilesVerticales } from "./PerfilesVerticales";
 import { PerfilesHorizontales } from "./PerfilesHorizontales";
@@ -23,11 +17,7 @@ import {
   Titulo,
 } from "./styles";
 // import Menu from "./Menu";
-import {
-  MaterialesMetalizados,
-  NombreMateriales,
-  MaterialesMetalizadosHorizontal,
-} from "./Materiales";
+import { MaterialesMetalizados, NombreMateriales, MaterialesMetalizadosHorizontal } from "./Materiales";
 const modelTypes = [
   { value: "vertical", label: "Vertical" },
   { value: "horizontal", label: "Horizontal" },
@@ -49,22 +39,11 @@ const modelHorizontalOptions = [
 
 export default function Intercambiador() {
   const [modelType, setModelType] = useState("vertical");
-  const initialMaterials =
-    modelType === "vertical"
-      ? MaterialesMetalizados
-      : MaterialesMetalizadosHorizontal;
-  const [selectedMaterial, setSelectedMaterial] = useState(
-    initialMaterials[16].name
-  );
-  const [selectedMetalness, setSelectedMetalness] = useState(
-    initialMaterials[16].metalness
-  );
-  const [selectedRoughness, setSelectedRoughness] = useState(
-    initialMaterials[16].roughness
-  );
-  const [selectedColor, setSelectedColor] = useState(
-    initialMaterials[16].color
-  );
+  const initialMaterials = modelType === "vertical" ? MaterialesMetalizados : MaterialesMetalizadosHorizontal;
+  const [selectedMaterial, setSelectedMaterial] = useState(initialMaterials[16].name);
+  const [selectedMetalness, setSelectedMetalness] = useState(initialMaterials[16].metalness);
+  const [selectedRoughness, setSelectedRoughness] = useState(initialMaterials[16].roughness);
+  const [selectedColor, setSelectedColor] = useState(initialMaterials[16].color);
   const [selectedIndices, setSelectedIndices] = useState([]);
   useEffect(() => {
     if (modelType === "vertical") {
@@ -84,10 +63,7 @@ export default function Intercambiador() {
   const [showMaderas, setShowMaderas] = useState(false);
   const [showColorPicker, setShowColorPicker] = useState(false);
   const handleMaterialChange = (index) => {
-    const materials =
-      modelType === "vertical"
-        ? MaterialesMetalizados
-        : MaterialesMetalizadosHorizontal;
+    const materials = modelType === "vertical" ? MaterialesMetalizados : MaterialesMetalizadosHorizontal;
     setSelectedMaterial(materials[index].name);
     setSelectedMetalness(materials[index].metalness);
     setSelectedRoughness(materials[index].roughness);
@@ -103,7 +79,7 @@ export default function Intercambiador() {
       <CanvasContainer>
         <Canvas
           dpr={dpr}
-          frameloop='demand'
+          frameloop="demand"
           shadows
           style={{ position: "relative", top: 0, left: 0 }}
           camera={{
@@ -112,25 +88,13 @@ export default function Intercambiador() {
             fov: 25.361,
           }}
         >
-          <PerformanceMonitor
-            onIncline={() => setDpr(2)}
-            onDecline={() => setDpr(1)}
-          ></PerformanceMonitor>
+          <PerformanceMonitor onIncline={() => setDpr(2)} onDecline={() => setDpr(1)}></PerformanceMonitor>
           {/* <Stats /> */}
-          <Environment files='/PBR_HDRI.hdr' intensity={0.3} />
+          <Environment files="/PBR_HDRI.hdr" intensity={0.3} />
           {/* <ambientLight intensity={0.3} /> */}
           <Sky sunPosition={[-10, 10, 10]} />
-          <directionalLight
-            position={[-20, 20, 5]}
-            castShadow
-            intensity={2}
-            shadow-mapSize={8192}
-          >
-            <orthographicCamera
-              attach='shadow-camera'
-              shadowBias={-0.005}
-              args={[-8.5, 8.5, 8.5, -8.5, 0.01, 100]}
-            />
+          <directionalLight position={[-20, 20, 5]} castShadow intensity={2} shadow-mapSize={8192}>
+            <orthographicCamera attach="shadow-camera" shadowBias={-0.005} args={[-8.5, 8.5, 8.5, -8.5, 0.01, 100]} />
           </directionalLight>
           <Suspense fallback={null}>
             <Base />
@@ -180,47 +144,23 @@ export default function Intercambiador() {
                   </option>
                 ))}
           </select>
-          <div className='metales'>
-            <Titulo
-              onClick={() => (
-                setShowMetales(!showMetales), setShowMaderas(false)
-              )}
-            >
-              Metales
-            </Titulo>
+          <div className="metales">
+            <Titulo onClick={() => (setShowMetales(!showMetales), setShowMaderas(false))}>Metales</Titulo>
             <MenuContainer2 visible={showMetales}>
               {NombreMateriales.slice(0, 18).map((material, index) => (
-                <MaterialButton
-                  key={index}
-                  onClick={() => handleMaterialChange(index)}
-                >
-                  <MaterialImage
-                    src={material.textura}
-                    alt={`Material ${material.nombre}`}
-                  />
+                <MaterialButton key={index} onClick={() => handleMaterialChange(index)}>
+                  <MaterialImage src={material.textura} alt={`Material ${material.nombre}`} />
                   <MaterialTextContainer>
                     <MaterialText>{material.nombre}</MaterialText>
                   </MaterialTextContainer>
                 </MaterialButton>
               ))}
             </MenuContainer2>
-            <Titulo
-              onClick={() => (
-                setShowMaderas(!showMaderas), setShowMetales(false)
-              )}
-            >
-              Maderas
-            </Titulo>
+            <Titulo onClick={() => (setShowMaderas(!showMaderas), setShowMetales(false))}>Maderas</Titulo>
             <MenuContainer2 visible={showMaderas}>
               {NombreMateriales.slice(18, 22).map((material, index) => (
-                <MaterialButton
-                  key={index}
-                  onClick={() => handleMaterialChange(index + 18)}
-                >
-                  <MaterialImage
-                    src={material.textura}
-                    alt={`Material ${material.nombre}`}
-                  />
+                <MaterialButton key={index} onClick={() => handleMaterialChange(index + 18)}>
+                  <MaterialImage src={material.textura} alt={`Material ${material.nombre}`} />
                   <MaterialTextContainer>
                     <MaterialText>{material.nombre}</MaterialText>
                   </MaterialTextContainer>

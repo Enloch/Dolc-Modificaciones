@@ -1,4 +1,4 @@
-import React from "react";
+import React, { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import FachadaVentilada from "./pages/catalogos/FachadaVentilada";
 import DolckerTline from "./pages/catalogos/DolckerTLine";
@@ -72,58 +72,51 @@ const theme = createTheme({
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <ResetStyles />
-    {/* <FontStyles /> */}
-    <GlobalStyles />
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/dolcker-system" element={<FachadaVentilada />} />
-          <Route path="/dolcker-tline" element={<DolckerTline />} />
-          <Route path="/dolcker-matrix-facade" element={<DolckerMatrix />} />
-          <Route path="/dolcker-txt" element={<DolckerTXT />} />
-          <Route path="/dolcker-t5" element={<T5 />} />
-          <Route path="/dolcker-archiform" element={<DolckerArchiform />} />
-          <Route path="/dolcker-alumtech" element={<DolckerAlumtech />} />
-          <Route path="/dolcker-scala" element={<DolckerScala />} />
-          <Route path="/dolcker-step" element={<DolckerStep />} />
-          <Route path="/dolcker-detaill" element={<DolckerDetaill />} />
-          <Route
-            path="/dolcker-matrix-decor"
-            element={<DolckerMatrixDecor />}
-          />
-          <Route path="/dolcker-aluform" element={<DolckerAluform />} />
-          <Route path="/dolcker-fusion" element={<DolckerFusion />} />
-          <Route path="/dolcker-invisifix" element={<DolckerInvisifix />} />
-          <Route path="/dolcker-G10" element={<DolckerG10 />} />
-          <Route path="/dolcker-escamas" element={<Escamas />} />
-          <Route path="/" element={<Main />} />
-          <Route path="/quienes-somos" element={<QuienesSomos />} />
-          <Route path="/aviso-legal" element={<AvisoLegal />} />
-          <Route path="/contacto" element={<Contacto />} />
-          <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
-          {/* EN */}
-          <Route path="/en/dolcker-system" element={<FachadaVentiladaEn />} />
-          <Route path="/en/" element={<MainEn />} />
-          <Route path="/en/quienes-somos" element={<QuienesSomosEn />} />
-          <Route path="/en/aviso-legal" element={<AvisoLegalEn lang="en" />} />
-          <Route path="/en/contacto" element={<ContactoEn lang="en" />} />
-          <Route
-            path="/en/politica-privacidad"
-            element={<PoliticaPrivacidadEn lang="en" />}
-          />
-          {/* FR */}
-          <Route path="/fr/" element={<MainFr />} />
-          <Route path="/fr/dolcker-system" element={<FachadaVentiladaFr />} />
-          <Route path="/fr/quienes-somos" element={<QuienesSomosFr />} />
-          <Route path="/fr/aviso-legal" element={<AvisoLegalFr lang="fr" />} />
-          <Route path="/fr/contacto" element={<ContactoFr lang="fr" />} />
-          <Route
-            path="/fr/politica-privacidad"
-            element={<PoliticaPrivacidadFr lang="fr" />}
-          />
-        </Routes>
-      </BrowserRouter>
-    </ThemeProvider>
+    <StrictMode>
+      <ResetStyles />
+      {/* <FontStyles /> */}
+      <GlobalStyles />
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/dolcker-system" element={<FachadaVentilada />} />
+            <Route path="/dolcker-tline" element={<DolckerTline />} />
+            <Route path="/dolcker-matrix-facade" element={<DolckerMatrix />} />
+            <Route path="/dolcker-txt" element={<DolckerTXT />} />
+            <Route path="/dolcker-t5" element={<T5 />} />
+            <Route path="/dolcker-archiform" element={<DolckerArchiform />} />
+            <Route path="/dolcker-alumtech" element={<DolckerAlumtech />} />
+            <Route path="/dolcker-scala" element={<DolckerScala />} />
+            <Route path="/dolcker-step" element={<DolckerStep />} />
+            <Route path="/dolcker-detaill" element={<DolckerDetaill />} />
+            <Route path="/dolcker-matrix-decor" element={<DolckerMatrixDecor />} />
+            <Route path="/dolcker-aluform" element={<DolckerAluform />} />
+            <Route path="/dolcker-fusion" element={<DolckerFusion />} />
+            <Route path="/dolcker-invisifix" element={<DolckerInvisifix />} />
+            <Route path="/dolcker-G10" element={<DolckerG10 />} />
+            <Route path="/dolcker-escamas" element={<Escamas />} />
+            <Route path="/" element={<Main />} />
+            <Route path="/quienes-somos" element={<QuienesSomos />} />
+            <Route path="/aviso-legal" element={<AvisoLegal />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
+            {/* EN */}
+            <Route path="/en/dolcker-system" element={<FachadaVentiladaEn />} />
+            <Route path="/en/" element={<MainEn />} />
+            <Route path="/en/quienes-somos" element={<QuienesSomosEn />} />
+            <Route path="/en/aviso-legal" element={<AvisoLegalEn lang="en" />} />
+            <Route path="/en/contacto" element={<ContactoEn lang="en" />} />
+            <Route path="/en/politica-privacidad" element={<PoliticaPrivacidadEn lang="en" />} />
+            {/* FR */}
+            <Route path="/fr/" element={<MainFr />} />
+            <Route path="/fr/dolcker-system" element={<FachadaVentiladaFr />} />
+            <Route path="/fr/quienes-somos" element={<QuienesSomosFr />} />
+            <Route path="/fr/aviso-legal" element={<AvisoLegalFr lang="fr" />} />
+            <Route path="/fr/contacto" element={<ContactoFr lang="fr" />} />
+            <Route path="/fr/politica-privacidad" element={<PoliticaPrivacidadFr lang="fr" />} />
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
+    </StrictMode>
   </>
 );

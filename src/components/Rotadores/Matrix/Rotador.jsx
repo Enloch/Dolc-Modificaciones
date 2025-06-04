@@ -1,19 +1,7 @@
 import React, { useState, useRef, Suspense, useEffect } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import {
-  OrbitControls,
-  PerspectiveCamera,
-  Center,
-  Environment,
-  Sky,
-  Loader,
-  SoftShadows,
-} from "@react-three/drei";
-import {
-  HueSaturation,
-  EffectComposer,
-  ToneMapping,
-} from "@react-three/postprocessing";
+import { OrbitControls, PerspectiveCamera, Center, Environment, Sky, Loader, SoftShadows, Gltf } from "@react-three/drei";
+import { HueSaturation, EffectComposer, ToneMapping } from "@react-three/postprocessing";
 import * as THREE from "three";
 import { Modelo } from "./MatrixModelo";
 import {
@@ -37,6 +25,7 @@ import Exit from "../../../assets/icons/exit.svg";
 import { LamasHorizontalesInterior } from "./LamasHorizontalesInterior";
 import { LamasVerticalesInterior } from "./LamasVerticalesInterior";
 import { Interior } from "./ModeloInterior";
+import { MatrixV2 } from "./MatrixV2";
 export default function RotadorMatrix() {
   const {
     materialIndex,
@@ -112,12 +101,7 @@ export default function RotadorMatrix() {
   const [targetValue, setTargetValue] = useState([0, 0, 0]);
 
   useEffect(() => {
-    const newTargetValue =
-      numModels > 1
-        ? rotation != 0
-          ? [0, cameraPosition, 0]
-          : [cameraPosition, 0, 0]
-        : [0, 0, 0];
+    const newTargetValue = numModels > 1 ? (rotation != 0 ? [0, cameraPosition, 0] : [cameraPosition, 0, 0]) : [0, 0, 0];
 
     setTargetValue(newTargetValue);
   }, [numModels, rotation, cameraPosition]); // Dependencias del efecto
@@ -181,13 +165,7 @@ export default function RotadorMatrix() {
             <a onClick={handleRotationClick}>
               <img src={Rotar} />
             </a>
-            <StyledRangeInput
-              type="range"
-              min="1"
-              max="6"
-              value={numModels}
-              onChange={(e) => setNumModels(parseInt(e.target.value))}
-            />
+            <StyledRangeInput type="range" min="1" max="6" value={numModels} onChange={(e) => setNumModels(parseInt(e.target.value))} />
             <a onClick={handleFachadaClick}>
               <img src={Front} />
             </a>
@@ -197,14 +175,22 @@ export default function RotadorMatrix() {
           </ControlBar>
         )}
         {fachadaVisible === true && (
-          <FachadaControlBar>
-            <a onClick={handleRotationClick}>
-              <img src={Rotar} />
-            </a>
-            <a onClick={handleResetClick}>
-              <img src={Exit} />
-            </a>
-          </FachadaControlBar>
+          <>
+            <FachadaControlBar>
+              <a onClick={handleRotationClick}>
+                <img src={Rotar} />
+              </a>
+              <a onClick={handleResetClick}>
+                <img src={Exit} />
+              </a>
+            </FachadaControlBar>
+            <div style={{ width: "100%", height: "100%", position: "absolute", top: 0, left: 0, pointerEvents: "none" }}>
+              <img
+                src="/modelos/Matrix/BALCONES.png"
+                style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "16 / 9" }}
+              />
+            </div>
+          </>
         )}
       </CanvasContainer>
       <RotadorMenuContainer visible={!fachadaVisible}>
@@ -223,23 +209,10 @@ const CameraAdjuster = () => {
 
   return null;
 };
-const EscenaRotador = ({
-  numModels,
-  modelPositions,
-  cameraPosition,
-  rotation,
-  targetValue,
-}) => {
+const EscenaRotador = ({ numModels, modelPositions, cameraPosition, rotation, targetValue }) => {
   return (
     <>
-      <PerspectiveCamera
-        makeDefault
-        fov={50}
-        position={[0, 0, 1]}
-        near={0.1}
-        far={20}
-        zoom={0.95}
-      />
+      <PerspectiveCamera makeDefault fov={50} position={[0, 0, 1]} near={0.1} far={20} zoom={0.95} />
       <Luces />
       <Center rotation={[0, 0, rotation]}>
         <Modelo
@@ -261,38 +234,19 @@ const EscenaRotador = ({
         {numModels > 3 && (
           <Modelo
             modelId={4}
-            position={[
-              modelPositions[0] + modelPositions[1] + modelPositions[2],
-              0,
-              0,
-            ]} // posición modificada
+            position={[modelPositions[0] + modelPositions[1] + modelPositions[2], 0, 0]} // posición modificada
           />
         )}
         {numModels > 4 && (
           <Modelo
             modelId={5}
-            position={[
-              modelPositions[0] +
-                modelPositions[1] +
-                modelPositions[2] +
-                modelPositions[3],
-              0,
-              0,
-            ]} // posición modificada
+            position={[modelPositions[0] + modelPositions[1] + modelPositions[2] + modelPositions[3], 0, 0]} // posición modificada
           />
         )}
         {numModels > 5 && (
           <Modelo
             modelId={6}
-            position={[
-              modelPositions[0] +
-                modelPositions[1] +
-                modelPositions[2] +
-                modelPositions[3] +
-                modelPositions[4],
-              0,
-              0,
-            ]} // posición modificada
+            position={[modelPositions[0] + modelPositions[1] + modelPositions[2] + modelPositions[3] + modelPositions[4], 0, 0]} // posición modificada
           />
         )}
       </Center>
@@ -346,13 +300,14 @@ const EscenaFachada = ({ rotada }) => {
   }, [scene]);
   return (
     <>
+      {/* <PerspectiveCamera makeDefault={true} far={20} near={0.01} fov={42} position={[0, -0.5, 4]} rotation={[0.5, 0, 0]} /> */}
       <PerspectiveCamera
         makeDefault={true}
-        far={20}
-        near={0.01}
-        fov={42}
-        position={[0, -0.5, 4]}
-        rotation={[0.5, 0, 0]}
+        far={40}
+        near={0.1}
+        fov={28.057}
+        position={[7.314, 12.229, 15.262]}
+        rotation={[0.325, 0.75, -0.226]}
       />
       {/* <Environment files={hdri} /> */}
       <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_garden_1k.hdr" />
@@ -361,25 +316,22 @@ const EscenaFachada = ({ rotada }) => {
         ref={lightRef}
         castShadow
         intensity={5}
-        position={[6, 10, 4]}
+        position={[-10, 12, 3]}
         shadow-mapSize={[2048, 2048]}
-        shadow-bias={-0.0004}
-        shadow-camera-left={-8}
-        shadow-camera-right={8}
-        shadow-camera-top={8}
-        shadow-camera-bottom={-8}
+        shadow-bias={-0.00004}
+        shadow-camera-left={-10}
+        shadow-camera-right={10}
+        shadow-camera-top={10}
+        shadow-camera-bottom={-10}
         shadow-camera-near={0.1}
         shadow-camera-far={150}
       />
-      <Sky
-        distance={10000}
-        rayleigh={1}
-        sunPosition={[25, 7, 16]}
-        turbidity={5}
-      />
-      <object3D ref={targetRef} position={[0, 5, -1]} />
-      {!rotada ? <Fachada /> : <FachadaHorizontal />}
-      <EffectComposer multisampling={16}></EffectComposer>
+      <Sky distance={10000} rayleigh={1} sunPosition={[25, 7, 16]} turbidity={5} />
+      <object3D ref={targetRef} position={[0, 0, 0]} />
+      <MatrixV2 />
+      {/* {!rotada ? <Fachada /> : <FachadaHorizontal />} */}
+      {/* <Gltf src="/modelos/Matrix/MatrixV2.glb" /> */}
+      {/* <OrbitControls /> */}
     </>
   );
 };
@@ -411,18 +363,9 @@ const EscenaInterior = ({ rotada }) => {
         shadow-bias={-0.0004}
         shadow-mapSize={1024}
       >
-        <orthographicCamera
-          attach="shadow-camera"
-          args={[-fustrum, fustrum, fustrum, -fustrum, 0.001, 100]}
-        />
+        <orthographicCamera attach="shadow-camera" args={[-fustrum, fustrum, fustrum, -fustrum, 0.001, 100]} />
       </directionalLight>
-      <PerspectiveCamera
-        makeDefault={true}
-        far={30}
-        near={0.1}
-        fov={45}
-        position={[0, 2.038, 5.249]}
-      />
+      <PerspectiveCamera makeDefault={true} far={30} near={0.1} fov={45} position={[0, 2.038, 5.249]} />
       {!rotada ? <LamasVertical /> : <LamasHorizontal />}
       <ParedInterior />
     </>

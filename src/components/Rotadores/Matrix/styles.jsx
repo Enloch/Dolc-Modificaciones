@@ -5,8 +5,9 @@ export const ContRotador = styled.div`
   position: relative;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
+  aspect-ratio: 16/9;
   display: flex;
   flex-direction: row;
 
@@ -20,13 +21,15 @@ export const CanvasContainer = styled.div`
   top: 0;
   left: 0;
   width: ${({ visible }) => (visible ? "80%" : "100%")};
-  height: 100%;
   grid-template-columns: 1fr 1fr;
+  aspect-ratio: 16/9;
   @media (max-width: 1080px) {
     width: ${({ visible }) => (visible ? "70%" : "100%")};
+    aspect-ratio: 16/9;
   }
   @media screen and (max-width: 600px) {
     width: 100%;
+    aspect-ratio: 16/9;
   }
 `;
 
@@ -346,7 +349,7 @@ export const FachadaControlBar = styled.div`
   align-items: center;
   gap: 15px; /* Smaller gap */
   height: 45px;
-
+  z-index: 50;
   img {
     display: block;
     width: 35px;
