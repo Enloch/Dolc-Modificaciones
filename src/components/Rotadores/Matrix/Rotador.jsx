@@ -1,6 +1,6 @@
 import React, { useState, useRef, Suspense, useEffect } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import { OrbitControls, PerspectiveCamera, Center, Environment, Sky, Loader, SoftShadows, Gltf } from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera, Center, Environment, Sky, Loader, SoftShadows, Gltf, useHelper } from "@react-three/drei";
 import { HueSaturation, EffectComposer, ToneMapping } from "@react-three/postprocessing";
 import * as THREE from "three";
 import { Modelo } from "./MatrixModelo";
@@ -26,6 +26,7 @@ import { LamasHorizontalesInterior } from "./LamasHorizontalesInterior";
 import { LamasVerticalesInterior } from "./LamasVerticalesInterior";
 import { Interior } from "./ModeloInterior";
 import { MatrixV2 } from "./MatrixV2";
+import { useControls } from "leva";
 export default function RotadorMatrix() {
   const {
     materialIndex,
@@ -112,10 +113,11 @@ export default function RotadorMatrix() {
         <Suspense fallback={null}>
           <Canvas
             frameloop="demand"
-            shadows={"soft"}
+            shadows={true}
             gl={{
               antialias: true,
               powerPreference: "high-performance",
+              pixelRatio: 1,
             }}
             style={{
               position: "relative",
@@ -288,7 +290,6 @@ const Luces = () => {
   );
 };
 const EscenaFachada = ({ rotada }) => {
-  const fustrum = 10;
   const lightRef = useRef();
   const targetRef = useRef();
   const { scene } = useThree();
@@ -297,15 +298,32 @@ const EscenaFachada = ({ rotada }) => {
   useEffect(() => {
     if (lightRef.current && targetRef.current) {
       lightRef.current.target = targetRef.current;
-      scene.add(targetRef.current); // Es necesario añadir el target a la escena
     }
-  }, [scene]);
+  }, [lightRef, targetRef]);
+  // const { lightX, lightY, lightZ, targetX, targetY, targetZ, fustruma } = useControls("Fachada", {
+  //   lightX: { value: -50, min: -50, max: 50, step: 0.01 },
+  //   lightY: { value: 50, min: -50, max: 50, step: 0.01 },
+  //   lightZ: { value: 50, min: 1, max: 100, step: 0.01 },
+  //   targetX: { value: 0, min: -50, max: 50, step: 0.01 },
+  //   targetY: { value: 0, min: -50, max: 50, step: 0.01 },
+  //   targetZ: { value: 0, min: -50, max: 50, step: 0.01 },
+  //   fustruma: { value: 10, min: 1, max: 100, step: 0.01 },
+  // });
+
+  // useEffect(() => {
+  //   if (lightRef.current && targetRef.current) {
+  //     lightRef.current.position.set(lightX, lightY, lightZ);
+  //     targetRef.current.position.set(targetX, targetY, targetZ);
+  //   }
+  // }, [lightX, lightY, lightZ, targetX, targetY, targetZ, fustruma]);
+  // useHelper(lightRef, THREE.DirectionalLightHelper, 5, "red");
+  // useHelper(lightRef, THREE.CameraHelper);
+  const fustrum = 20;
   return (
     <>
-      {/* <PerspectiveCamera makeDefault={true} far={20} near={0.01} fov={42} position={[0, -0.5, 4]} rotation={[0.5, 0, 0]} /> */}
       <PerspectiveCamera
         makeDefault={true}
-        far={40}
+        far={150}
         near={0.1}
         fov={27}
         position={[7.314, 12.229, 15.262]}
@@ -313,23 +331,24 @@ const EscenaFachada = ({ rotada }) => {
       />
       {/* <Environment files={hdri} /> */}
       <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_garden_1k.hdr" />
-      <SoftShadows size={3} samples={10} focus={8} />
+      {/* <SoftShadows size={20} samples={32} focus={1} /> */}
       <directionalLight
         ref={lightRef}
         castShadow
         intensity={5}
-        position={[-10, 12, 3]}
-        shadow-mapSize={[2048, 2048]}
+        position={[-50, 50, 42.6]}
         shadow-bias={-0.00004}
-        shadow-camera-left={-30}
-        shadow-camera-right={30}
-        shadow-camera-top={30}
-        shadow-camera-bottom={-30}
-        shadow-camera-near={0.1}
+        shadow-intensity={0.8}
+        shadow-normalBias={0.05}
+        shadow-mapSize={[8192, 8192]}
+        shadow-camera-left={-fustrum}
+        shadow-camera-right={fustrum}
+        shadow-camera-top={fustrum}
+        shadow-camera-bottom={-fustrum}
+        shadow-camera-near={1}
         shadow-camera-far={150}
       />
-      <Sky distance={10000} rayleigh={1} sunPosition={[25, 7, 16]} turbidity={5} />
-      <object3D ref={targetRef} position={[0, 0, 0]} />
+      <object3D ref={targetRef} position={[-21, 31.7, 4.67]} />
       <MatrixV2 />
       {!rotada ? <Fachada /> : <FachadaHorizontal />}
       {/* <Gltf src="/modelos/Matrix/MatrixV2.glb" /> */}

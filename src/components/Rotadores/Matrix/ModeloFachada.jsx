@@ -118,7 +118,7 @@ export function Fachada(props) {
   let desplazamientoX = 0;
   const incrementoUV = 0.05; // Desplazamiento UV como fracción del ancho de la textura
 
-  while (mallasRepetidas.length < 180) {
+  while (mallasRepetidas.length < 200) {
     elementosIniciales.forEach((mallaOriginal) => {
       let nuevaMalla = { ...mallaOriginal, posicion: posicionAcumulada };
 
@@ -148,7 +148,7 @@ export function Fachada(props) {
   }
 
   // Cortar el array a 45 elementos si excede
-  const mallasFinales = mallasRepetidas.slice(0, 180);
+  const mallasFinales = mallasRepetidas.slice(0, 200);
 
   return (
     <group {...props} dispose={null}>
@@ -168,7 +168,6 @@ export function Fachada(props) {
         </mesh>
       ))}
       <mesh castShadow receiveShadow geometry={nodes.Box006.geometry}>
-        {" "}
         <meshPhysicalMaterial roughness={1} metalness={1} color={"#a1a1a1"} />
       </mesh>
     </group>

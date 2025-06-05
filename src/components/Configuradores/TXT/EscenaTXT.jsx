@@ -258,7 +258,7 @@ export function EscenaTXT(props) {
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_TXT_13_065.geometry} material={getMaterialForMesh("Pieza09")} />
             <mesh castShadow receiveShadow geometry={nodes.PIEZA_TXT_13_066.geometry} material={getMaterialForMesh("Pieza10")} />
           </group>
-          <group name="PerfilesTXT13">
+          <group name="PerfilesTXT13" position={[0, 0, 0.09]}>
             <mesh castShadow receiveShadow geometry={nodes.PERFIL_FIJO_001.geometry} material={genericPerfilMaterialRef.current} />
             <mesh castShadow receiveShadow geometry={nodes.PERFIL_FIJO_002.geometry} material={genericPerfilMaterialRef.current} />
             <mesh castShadow receiveShadow geometry={nodes.PERFIL_FIJO_003.geometry} material={genericPerfilMaterialRef.current} />

@@ -11,20 +11,23 @@ export function MatrixV2(props) {
   const { nodes, materials } = useGLTF("/modelos/Matrix/MatrixV2-transformed.glb");
   return (
     <group {...props} dispose={null}>
-      {/* <mesh castShadow receiveShadow geometry={nodes.Pared.geometry} material={nodes.Pared.material} /> */}
-      <mesh castShadow receiveShadow geometry={nodes.Balcon_Superior_Tejado.geometry}>
-        <shadowMaterial />
+      <mesh receiveShadow geometry={nodes.Pared.geometry} material={nodes.Pared.material} />
+      <mesh castShadow geometry={nodes.Balcon_Superior_Suelo.geometry}>
+        {/* <shadowMaterial opacity={0.1} transparent={true} /> */}
       </mesh>
-      <mesh castShadow receiveShadow geometry={nodes.Balcon_Inferior_Suelo.geometry} material={nodes.Balcon_Inferior_Suelo.material}>
-        <shadowMaterial />
+      <mesh castShadow geometry={nodes.Balcon_Superior_Tejado.geometry}>
+        {/* <shadowMaterial /> */}
       </mesh>
-      <mesh castShadow receiveShadow geometry={nodes.Balcon_Inferior_Tejado.geometry} material={nodes.Balcon_Inferior_Tejado.material}>
-        <shadowMaterial />
+      <mesh castShadow geometry={nodes.Balcon_Inferior_Suelo.geometry}>
+        {/* <shadowMaterial /> */}
       </mesh>
-      <mesh castShadow receiveShadow geometry={nodes.Balcon_Superior_Suelo.geometry} material={nodes.Balcon_Superior_Suelo.material}>
-        <shadowMaterial />
+      <mesh castShadow geometry={nodes.Balcon_Inferior_Tejado.geometry}>
+        {/* <shadowMaterial /> */}
       </mesh>
-      <mesh castShadow receiveShadow geometry={nodes.Suelo.geometry} material={nodes.Suelo.material} />
+      <mesh castShadow geometry={nodes.Cristales.geometry}>
+        {/* <shadowMaterial /> */}
+      </mesh>
+      {/* <mesh castShadow receiveShadow geometry={nodes.Suelo.geometry} material={nodes.Suelo.material} /> */}
     </group>
   );
 }

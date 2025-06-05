@@ -518,8 +518,8 @@ export const Iconos = ({ onConfigAccept }) => {
                 onChange={handlePopoverValueChange}
               >
                 <FormControlLabel value={0} control={<Radio size="small" />} label="0cm" />
-                <FormControlLabel value={0.03} control={<Radio size="small" />} label="3cm" />
-                <FormControlLabel value={0.06} control={<Radio size="small" />} label="6cm" />
+                <FormControlLabel value={0.06} control={<Radio size="small" />} label="3cm" />
+                <FormControlLabel value={0.12} control={<Radio size="small" />} label="6cm" />
               </RadioGroup>
               <Button onClick={handleAccept} variant="contained" size="small" sx={{ mt: 1 }}>
                 Aceptar
