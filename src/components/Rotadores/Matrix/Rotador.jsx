@@ -127,7 +127,6 @@ export default function RotadorMatrix() {
               height: "100%",
             }}
           >
-            {/* <Perf /> */}
             <CameraAdjuster />
             <Suspense fallback={null}>
               {fachadaVisible === false && (
