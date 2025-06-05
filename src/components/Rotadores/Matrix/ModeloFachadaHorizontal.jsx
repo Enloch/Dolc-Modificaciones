@@ -4,9 +4,7 @@ import { MaterialesMetalizados } from "./Materiales";
 import useStore from "./store"; // Importa la tienda Zustand
 import * as THREE from "three";
 export function FachadaHorizontal(props) {
-  const { nodes, materials } = useGLTF(
-    "/modelos/MatrixFachadaH.glb"
-  );
+  const { nodes, materials } = useGLTF("/modelos/MatrixFachadaH.glb");
   const Metalizado = MaterialesMetalizados.map((metal) => metal.metalness);
   const Aspereza = MaterialesMetalizados.map((aspereza) => aspereza.roughness);
   const {
@@ -163,23 +161,13 @@ export function FachadaHorizontal(props) {
           geometry={malla.geometria}
         >
           {malla.colorActivo === "colorPicker" ? (
-            <meshStandardMaterial
-              color={malla.color}
-              metalness='0.5'
-              roughness='0.5'
-              map={null}
-            />
+            <meshStandardMaterial color={malla.color} metalness="0.5" roughness="0.5" map={null} />
           ) : (
-            <meshPhysicalMaterial
-              map={malla.material}
-              roughness={malla.aspereza}
-              metalness={malla.metalizado}
-              color={"#FFFFFF"}
-            />
+            <meshPhysicalMaterial map={malla.material} roughness={malla.aspereza} metalness={malla.metalizado} color={"#FFFFFF"} />
           )}
         </mesh>
       ))}
-
+      {/* 
       <mesh
         castShadow
         receiveShadow
@@ -191,14 +179,11 @@ export function FachadaHorizontal(props) {
         receiveShadow
         geometry={nodes.Lamas2.geometry}
         material={materials.MarcoVentana}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Box006.geometry}
-        material={materials.MarcoVentana}
-      />
-      <mesh
+      /> */}
+      <mesh castShadow receiveShadow geometry={nodes.Box006.geometry}>
+        <meshPhysicalMaterial roughness={1} metalness={1} color={"#a1a1a1"} />
+      </mesh>
+      {/* <mesh
         castShadow
         receiveShadow
         geometry={nodes.Ventana3.geometry}
@@ -209,7 +194,7 @@ export function FachadaHorizontal(props) {
         receiveShadow
         geometry={nodes.Ventana3_1.geometry}
         material={materials["Glass Smoked"]}
-      />
+      /> */}
     </group>
   );
 }

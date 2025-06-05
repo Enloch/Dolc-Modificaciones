@@ -167,7 +167,10 @@ export function Fachada(props) {
           )}
         </mesh>
       ))}
-      <mesh castShadow receiveShadow geometry={nodes.Box006.geometry} material={materials.MarcoVentana} />
+      <mesh castShadow receiveShadow geometry={nodes.Box006.geometry}>
+        {" "}
+        <meshPhysicalMaterial roughness={1} metalness={1} color={"#a1a1a1"} />
+      </mesh>
     </group>
   );
 }

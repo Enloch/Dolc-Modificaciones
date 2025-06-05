@@ -184,12 +184,14 @@ export default function RotadorMatrix() {
                 <img src={Exit} />
               </a>
             </FachadaControlBar>
-            <div style={{ width: "100%", height: "100%", position: "absolute", top: 0, left: 0, pointerEvents: "none" }}>
-              <img
-                src="/modelos/Matrix/BALCONES.png"
-                style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "16 / 9" }}
-              />
-            </div>
+            {!esInterior && (
+              <div style={{ width: "100%", height: "100%", position: "absolute", top: 0, left: 0, pointerEvents: "none" }}>
+                <img
+                  src="/modelos/Matrix/BALCONES.png"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "16 / 9" }}
+                />
+              </div>
+            )}
           </>
         )}
       </CanvasContainer>
@@ -365,7 +367,7 @@ const EscenaInterior = ({ rotada }) => {
       >
         <orthographicCamera attach="shadow-camera" args={[-fustrum, fustrum, fustrum, -fustrum, 0.001, 100]} />
       </directionalLight>
-      <PerspectiveCamera makeDefault={true} far={30} near={0.1} fov={45} position={[0, 2.038, 5.249]} />
+      <PerspectiveCamera makeDefault={true} far={30} near={0.1} fov={45} position={[0, 2.038, 5.249]} zoom={1.1} />
       {!rotada ? <LamasVertical /> : <LamasHorizontal />}
       <ParedInterior />
     </>
