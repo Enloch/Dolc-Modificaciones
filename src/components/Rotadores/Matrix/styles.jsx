@@ -25,11 +25,9 @@ export const CanvasContainer = styled.div`
   aspect-ratio: 16/9;
   @media (max-width: 1080px) {
     width: ${({ visible }) => (visible ? "70%" : "100%")};
-    aspect-ratio: 16/9;
   }
   @media screen and (max-width: 600px) {
     width: 100%;
-    aspect-ratio: 16/9;
   }
 `;
 

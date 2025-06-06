@@ -79,7 +79,6 @@ const StyledDisenos = styled(Seccion)`
     ${(props) => (props.isEspesores ? "grid-template-columns: repeat(3, 1fr);" : null)}
     .rotador {
       grid-column: 1 / -1;
-      height: 60vh;
     }
     .espesor-1 {
       grid-column: 1 / span 1;
@@ -101,7 +100,6 @@ const StyledDisenos = styled(Seccion)`
     ${(props) => (props.isEspesores ? "grid-template-columns: repeat(3, 1fr);" : null)}
     .rotador {
       grid-column: 1 / -1;
-      height: 100vh;
     }
     .espesor-1 {
       grid-column: 1 / span 1;
