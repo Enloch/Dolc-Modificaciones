@@ -5,14 +5,7 @@ import StyledAnotacion from "../../../components/Anotacion/styles";
 import Seccion from "../../../components/Seccion";
 import StyledVisualizadorRotador from "../../../components/VisualizadorRotador/styles";
 import StyledVisualizadorVariaciones from "../../../components/VisualizadorVariaciones/styles";
-import {
-  COLORS,
-  Column7,
-  DISTANCES,
-  GridLayout,
-  TABLET_SIZE,
-  MOBILE_SIZE,
-} from "../../../global/GlobalStyles";
+import { COLORS, Column7, DISTANCES, GridLayout, TABLET_SIZE, MOBILE_SIZE } from "../../../global/GlobalStyles";
 import { column_5_span7, column_5_span6 } from "../../../styles/grid";
 
 export const StyledGaleria = styled(Seccion)`
@@ -85,13 +78,12 @@ const StyledDisenos = styled(Seccion)`
     > * {
       grid-row-start: auto !important;
     }
-
-    ${(props) =>
-      props.isEspesores ? "grid-template-columns: repeat(4, 1fr);" : null}
     .rotador {
       grid-column: 1 / -1;
       aspect-ratio: 16/9;
     }
+    ${(props) => (props.isEspesores ? "grid-template-columns: repeat(4, 1fr);" : null)}
+
     .espesor-1 {
       grid-column: 1 / span 1;
     }
@@ -111,14 +103,13 @@ const StyledDisenos = styled(Seccion)`
     > * {
       grid-row-start: auto !important;
     }
-
-    ${(props) =>
-      props.isEspesores ? "grid-template-columns: repeat(3, 1fr);" : null}
     .rotador {
       grid-column: 1 / -1;
       aspect-ratio: 16/9;
       height: auto;
     }
+    ${(props) => (props.isEspesores ? "grid-template-columns: repeat(3, 1fr);" : null)}
+
     .espesor-1 {
       grid-column: 1 / -1;
     }
