@@ -8,41 +8,41 @@ import useMenuDesplegableEn from "../../../../hooks/useMenuDesplegableEn";
 import { Link } from "react-router-dom";
 
 const Indice = ({ indiceRef }) => {
-  const { menuDesplegable, btnIndice } = useMenuDesplegableEn(
-    ListaContenidos,
-    "Index",
-    indiceRef
-  );
+	const { menuDesplegable, btnIndice } = useMenuDesplegableEn(
+		ListaContenidos,
+		"Index",
+		indiceRef
+	);
 
-  const handleClickFlecha = () => {
-    const position =
-      indiceRef.current.offsetHeight + indiceRef.current.offsetTop;
-    scrollTo(position, 2000);
-  };
+	const handleClickFlecha = () => {
+		const position =
+			indiceRef.current.offsetHeight + indiceRef.current.offsetTop;
+		scrollTo(position, 2000);
+	};
 
-  return (
-    <>
-      <StyledIndice backgroundColor={COLORS.gray06} ref={indiceRef} id='indice'>
-        <Titulo color={COLORS.gray01}>Index</Titulo>
-        <ListaContenidos en={true} />
-        <img
-          src={flecha}
-          alt=''
-          className='flecha-indice'
-          onClick={handleClickFlecha}
-        />
-        <div className='idiomas'>
-          <Link to='/dolcker-system'>ES</Link>
-          <Link to='#' className='seleccionado'>
-            EN
-          </Link>
-          <Link to='/fr/dolcker-system'>FR</Link>
-        </div>
-      </StyledIndice>
-      {menuDesplegable}
-      {btnIndice}
-    </>
-  );
+	return (
+		<>
+			<StyledIndice backgroundColor={COLORS.gray06} ref={indiceRef} id="indice">
+				<Titulo color={COLORS.gray01}>Index</Titulo>
+				<ListaContenidos en={true} />
+				<img
+					src={flecha}
+					alt=""
+					className="flecha-indice"
+					onClick={handleClickFlecha}
+				/>
+				<div className="idiomas">
+					<Link to="/dolcker-system">ES</Link>
+					<Link to="#" className="seleccionado">
+						EN
+					</Link>
+					<Link to="/fr/dolcker-system">FR</Link>
+				</div>
+			</StyledIndice>
+			{menuDesplegable}
+			{btnIndice}
+		</>
+	);
 };
 
 export default Indice;
