@@ -10,6 +10,7 @@ import img5 from "../../../../assets/images/DolckerTline/arquitecto.webp";
 import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
+
 const AplicacionesTline = ({ id }) => {
 	const imagesAplicaciones = import.meta.globEager(
 		"../../../../assets/images/GaleriaTline/aplicaciones/*"
@@ -28,16 +29,16 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray02}
 				rowGap={DISTANCES.long}
 			>
-				<Titulo color={COLORS.gray08}>Aplicaciones</Titulo>
+				<Titulo color={COLORS.gray08}>Applications</Titulo>
 				<ImageWithCaption
 					src={img1}
-					alt="Imagen de Aplicaciones 1"
+					alt="Image d'applications 1"
 					caption=""
 					columnSpan="6"
 				/>
 				<Cita
-					cita="La arquitectura es el arte de gastar el espacio. "
-					author="Philip Johnson (1906-2005) "
+					cita="L'architecture est l'art de dépenser l'espace."
+					author="Philip Johnson (1906-2005)"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
 				/>
@@ -62,15 +63,15 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.medium}
 			>
-				<Titulo2 color={COLORS.gray08}>Rehabilitación</Titulo2>
+				<Titulo2 color={COLORS.gray08}>Rénovation</Titulo2>
 				<ImageWithCaption
 					src={img2}
-					alt="Imagen de Aplicaciones 1"
+					alt="Image d'applications 1"
 					caption=""
 					columnSpan="6"
 				/>
 				<Cita
-					cita="La arquitectura es una forma de plasmar los sueños en el mucho real."
+					cita="L'architecture est une façon de matérialiser les rêves dans le monde réel."
 					author="Bjarke Ingels"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -81,16 +82,15 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.medium}
 			>
-				<Titulo2 color={COLORS.gray08}>Obra nueva</Titulo2>
+				<Titulo2 color={COLORS.gray08}>Construction neuve</Titulo2>
 				<ImageWithCaption
 					src={img3}
-					alt="Imagen de Aplicaciones 1"
-					//   caption='Jorge dará la referencia o imágen.'
+					alt="Image d'applications 1"
 					columnSpan="6"
 				/>
 				<Cita
-					cita=" Un edificio tiene dos vidas. La que imagina su creador y la vida que tiene. Y no siempre son iguales "
-					author="Rem Koolhaas (1944-) "
+					cita="Un bâtiment a deux vies. Celle imaginée par son créateur et la vie qu'il a. Et elles ne sont pas toujours les mêmes."
+					author="Rem Koolhaas (1944-)"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
 				/>
@@ -100,11 +100,11 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.medium}
 			>
-				<Titulo3 color={COLORS.gray08}>- Fachadas</Titulo3>
+				<Titulo3 color={COLORS.gray08}>- Façades</Titulo3>
 				<ImageWithCaption
 					src={img4}
-					alt="Imagen de Aplicaciones 4"
-					caption="Sistema Dolcker & Line"
+					alt="Image d'applications 4"
+					caption="Système Dolcker & Line"
 					columnSpan="6"
 				/>
 			</StyledAplicaciones>

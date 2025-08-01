@@ -18,14 +18,14 @@ const IndiceSeries = ({ id, queSerieActiva }) => {
 				backgroundColor={COLORS.gray02}
 				style={{ paddingBottom: "0", rowGap: "20px" }}
 			>
-				<Titulo style={{ paddingBottom: "0" }}>SERIES</Titulo>
+				<Titulo style={{ paddingBottom: "0" }}>SÉRIES</Titulo>
 				<select value={categoria} onChange={handleCategoriaChange}>
-					<option value="Todas">Todas las series</option>
-					<option value="Piedra">Piedra</option>
-					<option value="Cemento">Cemento</option>
-					<option value="Marmol">Mármol</option>
-					<option value="Monocolor">Monocolor</option>
-					<option value="Terrazo">Terrazo</option>
+					<option value="Todas">Toutes les séries</option>
+					<option value="Piedra">Pierre</option>
+					<option value="Cemento">Ciment</option>
+					<option value="Marmol">Marbre</option>
+					<option value="Monocolor">Monocolore</option>
+					<option value="Terrazo">Terrazzo</option>
 				</select>
 			</StyledIndiceSeries>
 			<StyledIndiceSeries

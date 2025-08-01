@@ -50,7 +50,7 @@ const Serie = ({
 			{isOverflow ? (
 				<Anotacion
 					type="swipe"
-					text="Desliza con el ratón o el dedo para ver todas las imágenes"
+					text="Faites glisser avec la souris ou le doigt pour voir toutes les images"
 					className="anotacion-ejemplo"
 				/>
 			) : undefined}
@@ -70,7 +70,7 @@ const Serie = ({
 			{/* Muestra una anotación interactiva */}
 			<Anotacion
 				type="click"
-				text="Pulsa en la imagen para ver la imagen a tamaño completo"
+				text="Cliquez sur l'image pour l'agrandir"
 				className="anotacion-muestra"
 			/>
 
@@ -80,7 +80,7 @@ const Serie = ({
 			{/* Muestra las imágenes de acabado si están disponibles */}
 			{imgsAcabados ? (
 				<>
-					<Text className="text-acabados">Acabados</Text>
+					<Text className="text-acabados">Finitions</Text>
 					<div className="acabado-container">{imgsAcabados}</div>
 				</>
 			) : undefined}

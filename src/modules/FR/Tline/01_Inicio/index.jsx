@@ -26,7 +26,7 @@ const AnimatedArrow = styled(BsMouse)`
 const Indice = ({ indiceRef }) => {
 	const { menuDesplegable, btnIndice } = useMenuDesplegable(
 		ListaContenidos,
-		"Índice",
+		"Index",
 		indiceRef
 	);
 
