@@ -9,7 +9,7 @@ const DescargasTline = ({ id }) => {
 
 	return (
 		<StyledDescargas id={id} backgroundColor={COLORS.gray03}>
-			<Titulo>Descargas</Titulo>
+			<Titulo>Telechargements</Titulo>
 			<div className="download-container">{descargas}</div>
 		</StyledDescargas>
 	);

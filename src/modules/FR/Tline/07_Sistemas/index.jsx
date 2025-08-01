@@ -27,38 +27,38 @@ const SistemasTline = ({ id }) => {
 	return (
 		<>
 			<StyledSistemas id={id[0]} backgroundColor={COLORS.gray02}>
-				<Titulo>Sistema constructivos</Titulo>
+				<Titulo>Système constructif</Titulo>
 				<ImageWithCaption
 					src={sistemas}
-					alt="Sistemas introducción"
+					alt="Introduction aux systèmes"
 					caption=""
 					columnSpan="5"
 				/>
 				<Enlaces>
 					<li>
 						<a href={"#" + id[2]}>
-							Sistema
+							Système
 							<br />
 							<strong>T-Line Clip 10</strong>
 						</a>
 					</li>
 					<li>
 						<a href={"#" + id[3]}>
-							Sistema
+							Système
 							<br />
 							<strong>T-Line Clip 20</strong>
 						</a>
 					</li>
 					<li>
 						<a href={"#" + id[4]}>
-							Sistema
+							Système
 							<br />
 							<strong>T-Line T10</strong>
 						</a>
 					</li>
 					<li>
 						<a href={"#" + id[5]}>
-							Sistema
+							Système
 							<br />
 							<strong>T-Line T20</strong>
 						</a>
@@ -68,132 +68,118 @@ const SistemasTline = ({ id }) => {
 
 			<StyledSistemas id={id[1]}>
 				<Text>
-					El sistema <strong>DOLCKER TLINE</strong> para fachadas de cerámica
-					tipo dolcker es un sistema con perfilería de alta inercia y doble
-					seguridad. Todos y cada uno de los elementos que componen este sistema
-					están fabricados con materias primas de máxima calidad. Se trata de un
-					sistema de fijación mecánica de clip + fijación química para la
-					colocación de una cenefa de aluminio clipada al sistema , mediante una
-					subestructura que está compuesta por ménsulas regulables de aluminio
-					de alta calidad en forma de “L” de 3 mm de espesor, que transmiten
-					esfuerzos y que van fijadas mediante anclaje a la estructura base del
-					edificio (pared de ladrillo o forjado de hormigón).Sobre estas
-					ménsulas se fijan mediante tornillos autotaladrantes de acero
-					inoxidable los perfiles verticales de aluminio extruidos en forma
-					de“T”de 3 mm de espesor.
+					Le système <strong>DOLCKER TLINE</strong> pour façades en céramique de
+					type Dolcker est un système avec une profilé à haute inertie et une
+					double sécurité. Tous les éléments qui composent ce système sont
+					fabriqués avec des matières premières de la plus haute qualité. Il
+					s'agit d'un système de fixation mécanique à clip + fixation chimique
+					pour l'installation d'une bande d'aluminium clipsée au système, au
+					moyen d'une sous-structure composée de consoles réglables en aluminium
+					de haute qualité en forme de "L" de 3 mm d'épaisseur, qui transmettent
+					les efforts et sont fixées par ancrage à la structure de base du
+					bâtiment (mur en briques ou dalle en béton). Sur ces consoles, les
+					profilés verticaux en aluminium extrudé en forme de "T" de 3 mm
+					d'épaisseur sont fixés à l'aide de vis autoperceuses en acier
+					inoxydable.
 					<br />
 					<br />
-					En estos perfiles en forma de “T” se atornillan unos perfiles
-					horizontales en forma de “G”, permitiendo así que la pieza esté
-					apoyada en su totalidad. Se trata del sistema idóneo para la
-					colocación de cerámicas, permitiendo sustituir las piezas ya que
-					dispone de un clip corredera de acero inoxidable logrando infinidad de
-					colocaciones. Además permite lacar el perfil cenefa en función del
-					color de su carpintería, permitiendo que el cliente elija el color de
-					la misma . Se colocan al menos dos clips correderas en la parte
-					superior de la pieza de arranque a 1/5 de distancia respecto a la
-					longitud de la pieza. En el resto de piezas intermedias, se procederá
-					a la colocación de al menos 4 clips por cada pieza de cerámica. Se le
-					añadirá puntos de masilla poliuretano de pegado y sellado sika-111 o
-					similar (4 por pieza) que nos permita absorber las dilataciones de la
-					fachada en los clips correderas. Una vez situados todos los clip se
-					procede a la colocación de la cenefa decoratica clipandose en los
-					clips ya colocados.Este sistema dispone de un perfil de seguridad para
-					formatos de dimensiones superiores a 100 cms para su colocacion con
-					fijacion química , que permiten mejorar subciones de viento.
+					Sur ces profilés en forme de "T", des profilés horizontaux en forme de
+					"G" sont vissés, permettant ainsi à la pièce d'être entièrement
+					supportée. C'est le système idéal pour l'installation de céramiques,
+					permettant de remplacer les pièces car il dispose d'un clip coulissant
+					en acier inoxydable, offrant une infinité de possibilités
+					d'installation. De plus, il permet de laquer le profilé de la bande en
+					fonction de la couleur de votre menuiserie, permettant au client de
+					choisir la couleur. Au moins deux clips coulissants sont placés sur la
+					partie supérieure de la pièce de départ à 1/5 de la longueur de la
+					pièce. Pour le reste des pièces intermédiaires, au moins 4 clips
+					seront placés par pièce de céramique. Des points de mastic
+					polyuréthane de collage et d'étanchéité Sika-111 ou similaire (4 par
+					pièce) seront ajoutés pour absorber les dilatations de la façade dans
+					les clips coulissants. Une fois tous les clips en place, la bande
+					décorative est clipsée sur les clips déjà installés. Ce système
+					dispose d'un profilé de sécurité pour les formats de dimensions
+					supérieures à 100 cm pour une installation avec fixation chimique, ce
+					qui permet d'améliorer la résistance au vent.
 					<br />
 					<br />
-					Se trata sin duda de un sistema con múltiples opciones de composición
-					de fachada ya que es posible romper las juntas verticales. Éstas
-					juntas verticales se ven minimizadas a tan solo 1 mm potenciando de
-					esta manera las juntas horizontales.
+					Il s'agit sans aucun doute d'un système offrant de multiples options
+					de composition de façade, car il est possible de rompre les joints
+					verticaux. Ces joints verticaux sont minimisés à seulement 1 mm, ce
+					qui met en valeur les joints horizontaux.
 				</Text>
-				{/* <ImageWithCaption
-          src={dolckerClip1}
-          alt='Dolcker-clip demostración'
-          caption='Imágen demostración (Jorge)'
-          columnSpan='5'
-          isGray
-        />
-        <ImageWithCaption
-          src={dolckerClip2}
-          alt='Dolcker-clip tabla'
-          caption='Imágen tabla (Jorge)'
-          columnSpan='8'
-          isGray
-        /> */}
 			</StyledSistemas>
 			<StyledSistemas id={id[2]}>
 				<Titulo2>T-Line Clip 10</Titulo2>
 				<Text>
-					Sistema de fachada compuesto por el perfil Dolcker Clip y un perfil
-					decorativo lacado, diseñado para su instalación mediante clipado en un
-					sistema de ranurado continuo.
+					Système de façade composé du profilé Dolcker Clip et d'un profilé
+					décoratif laqué, conçu pour une installation par clipsage dans un
+					système de rainurage continu.
 				</Text>
 				<ImageWithCaption
 					src={img3}
-					alt="Dolcker-clip demostración"
+					alt="Dolcker-clip démonstration"
 					columnSpan="6"
-					caption="Detalles tecnicos T-Line Clip 10"
+					caption="Détails techniques T-Line Clip 10"
 					onClickFunc={() =>
-						openModal(img3, "Detalles tecnicos T-Line Clip 10")
+						openModal(img3, "Détails techniques T-Line Clip 10")
 					}
 				/>
 			</StyledSistemas>
 			<StyledSistemas id={id[3]}>
 				<Titulo2>T-Line Clip 20</Titulo2>
 				<Text>
-					Sistema de fachada con perfil Dolcker Clip y perfil decorativo lacado,
-					diseñado para fijación mediante clipado con anclaje de grapa vista,
-					proporcionando una solución estética y funcional.
+					Système de façade avec profilé Dolcker Clip et profilé décoratif
+					laqué, conçu pour une fixation par clipsage avec ancrage à agrafe
+					apparente, offrant une solution esthétique et fonctionnelle.
 				</Text>
 				<ImageWithCaption
 					src={img2}
-					alt="Dolcker-clip demostración"
+					alt="Dolcker-clip démonstration"
 					columnSpan="6"
-					caption="Detalles tecnicos T-Line Clip 20"
+					caption="Détails techniques T-Line Clip 20"
 					onClickFunc={() =>
-						openModal(img2, "Detalles tecnicos T-Line Clip 20")
+						openModal(img2, "Détails techniques T-Line Clip 20")
 					}
 				/>
 				<ImageWithCaption
 					src={img1}
-					alt="Dolcker-clip demostración"
+					alt="Dolcker-clip démonstration"
 					columnSpan="6"
-					caption="Detalles tecnicos T-Line Clip 20 sin perfil"
+					caption="Détails techniques T-Line Clip 20 sans profilé"
 					onClickFunc={() =>
-						openModal(img1, "Detalles tecnicos T-Line Clip 20 sin perfil")
+						openModal(img1, "Détails techniques T-Line Clip 20 sans profilé")
 					}
 				/>
 			</StyledSistemas>
 			<StyledSistemas id={id[4]}>
 				<Titulo2>T-Line T10</Titulo2>
 				<Text>
-					Perfil decorativo lacado fijado al sistema de fachada mediante
-					fijación mecánica oculta, garantizando un acabado limpio y sin
-					elementos visibles en la superficie.
+					Profilé décoratif laqué fixé au système de façade par fixation
+					mécanique cachée, garantissant une finition propre et sans éléments
+					visibles en surface.
 				</Text>
 				<ImageWithCaption
 					src={img4}
-					alt="Dolcker-clip demostración"
+					alt="Dolcker-clip démonstration"
 					columnSpan="6"
-					caption="Detalles tecnicos T-Line T10"
-					onClickFunc={() => openModal(img4, "Detalles tecnicos T-Line T10")}
+					caption="Détails techniques T-Line T10"
+					onClickFunc={() => openModal(img4, "Détails techniques T-Line T10")}
 				/>
 			</StyledSistemas>
 			<StyledSistemas id={id[5]}>
 				<Titulo2>T-Line T20</Titulo2>
 				<Text>
-					Perfil decorativo lacado fijado al sistema de fachada con fijación
-					mecánica vista, ofreciendo una solución robusta y con un diseño
-					industrial moderno.
+					Profilé décoratif laqué fixé au système de façade avec fixation
+					mécanique apparente, offrant une solution robuste et un design
+					industriel moderne.
 				</Text>
 				<ImageWithCaption
 					src={img5}
-					alt="Dolcker-clip demostración"
+					alt="Dolcker-clip démonstration"
 					columnSpan="6"
-					caption="Detalles tecnicos T-Line T20"
-					onClickFunc={() => openModal(img5, "Detalles tecnicos T-Line T20")}
+					caption="Détails techniques T-Line T20"
+					onClickFunc={() => openModal(img5, "Détails techniques T-Line T20")}
 				/>
 			</StyledSistemas>
 			<Modal
@@ -201,7 +187,7 @@ const SistemasTline = ({ id }) => {
 				onClose={closeModal}
 				caption={selectedCaption}
 			>
-				<img src={selectedImage} alt="Ampliada" />
+				<img src={selectedImage} alt="Agrandie" />
 			</Modal>
 		</>
 	);
