@@ -37,6 +37,7 @@ import AvisoLegalEn from "./pages/en/AvisoLegal";
 //French
 import { MainFr } from "./pages/fr/MainFr";
 import FachadaVentiladaFr from "./pages/fr/catalogos/FachadaVentiladaFr";
+import DolckerTlineFr from "./pages/fr/catalogos/DolckerTLineFr";
 import ContactoFr from "./pages/fr/Contacto";
 import PoliticaPrivacidadFr from "./pages/fr/PoliticaPrivacidad";
 import AvisoLegalFr from "./pages/fr/AvisoLegal";
@@ -124,6 +125,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 						{/* FR */}
 						<Route path="/fr/" element={<MainFr />} />
 						<Route path="/fr/dolcker-system" element={<FachadaVentiladaFr />} />
+						<Route path="/fr/dolcker-tline" element={<DolckerTlineFr />} />
 						<Route path="/fr/quienes-somos" element={<QuienesSomosFr />} />
 						<Route
 							path="/fr/aviso-legal"

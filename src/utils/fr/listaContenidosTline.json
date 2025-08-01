@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Accueil",
+    "link": "/fr"
+  },
+  {
+    "title": "Dolcker T-LINE résout",
+    "link": "#dolcker"
+  },
+  {
+    "title": "Avantages du système Dolcker T-LINE",
+    "link": "#ventajas"
+  },
+  {
+    "title": "Applications",
+    "subList": [
+      {
+        "title": "Applications",
+        "link": "#aplicaciones"
+      },
+      {
+        "title": "Réhabilitation",
+        "link": "#rehabilitacion"
+      },
+      {
+        "title": "Construction neuve",
+        "subList": [
+          {
+            "title": "Construction neuve",
+            "link": "#obra-nueva"
+          },
+          {
+            "title": "Façades",
+            "link": "#fachadas"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Conception",
+    "subList": [
+      {
+        "title": "Conception",
+        "link": "#diseno"
+      },
+      {
+        "title": "Format",
+        "link": "#formato"
+      },
+      {
+        "title": "Finition",
+        "link": "#acabados"
+      },
+      {
+        "title": "Épaisseur",
+        "link": "#espesores"
+      },
+      {
+        "title": "Séries",
+        "link": "#series"
+      }
+    ]
+  },
+  {
+    "title": "Caractéristiques",
+    "subList": [
+      {
+        "title": "Caractéristiques techniques",
+        "link": "#caracteristicas-especiales"
+      },
+      {
+        "title": "Données techniques",
+        "link": "#datos-tecnicos"
+      }
+    ]
+  },
+  {
+    "title": "Systèmes",
+    "subList": [
+      {
+        "title": "Systèmes",
+        "link": "#sistemas"
+      },
+      {
+        "title": "T-LINE",
+        "link": "#t-line"
+      },
+      {
+        "title": "T-Line Clip 10",
+        "link": "#t-line-clip-10"
+      },
+      {
+        "title": "T-Line Clip 20",
+        "link": "#t-line-clip-20"
+      },
+      {
+        "title": "T-Line T10",
+        "link": "#t-line-t10"
+      },
+      {
+        "title": "T-Line T20",
+        "link": "#t-line-t20"
+      }
+    ]
+  }
+]

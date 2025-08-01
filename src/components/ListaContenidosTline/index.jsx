@@ -3,12 +3,15 @@ import StyledListaContenidos from "./styles";
 import { useContext } from "react";
 import ListaContenidosContext from "../../contexts/ListaContenidosContextTline";
 import inglesLista from "../../utils/en/listaContenidosTline.json";
-
-const ListaContenidos = ({ en = false, isMenuDesplegable = false }) => {
+import francesLista from "../../utils/fr/listaContenidosTline.json";
+const ListaContenidos = ({
+	en = false,
+	isMenuDesplegable = false,
+	fr = false,
+}) => {
 	const contendiosJSON = useContext(ListaContenidosContext);
-	const contenidos = en
-		? useListaContenidos(inglesLista)
-		: useListaContenidos(contendiosJSON);
+	const data = en ? inglesLista : fr ? francesLista : contendiosJSON;
+	const contenidos = useListaContenidos(data);
 
 	return (
 		<StyledListaContenidos isMenuDesplegable={isMenuDesplegable}>

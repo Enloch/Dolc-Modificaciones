@@ -53,6 +53,7 @@ const Indice = ({ indiceRef }) => {
 						ES
 					</Link>
 					<Link to="/en/dolcker-tline">EN</Link>
+					<Link to="/fr/dolcker-tline">FR</Link>
 				</div>
 			</StyledIndice>
 			{menuDesplegable}

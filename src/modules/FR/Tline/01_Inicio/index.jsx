@@ -26,7 +26,7 @@ const AnimatedArrow = styled(BsMouse)`
 const Indice = ({ indiceRef }) => {
 	const { menuDesplegable, btnIndice } = useMenuDesplegable(
 		ListaContenidos,
-		"Index",
+		"Índice",
 		indiceRef
 	);
 
@@ -40,7 +40,7 @@ const Indice = ({ indiceRef }) => {
 		<>
 			<StyledIndice backgroundColor={COLORS.gray06} ref={indiceRef} id="indice">
 				<Titulo color={COLORS.gray01}>Dolcker T-LINE</Titulo>
-				<ListaContenidos en={true} />
+				<ListaContenidos fr={true} />
 				<AnimatedArrow
 					size={32}
 					color="white"
@@ -50,10 +50,10 @@ const Indice = ({ indiceRef }) => {
 				/>
 				<div className="idiomas">
 					<Link to="/dolcker-tline">ES</Link>
-					<Link to="/en/dolcker-tline" className="seleccionado">
-						EN
+					<Link to="/en/dolcker-tline">EN</Link>
+					<Link to="/fr/dolcker-tline" className="seleccionado">
+						FR
 					</Link>
-					<Link to="/fr/dolcker-tline">FR</Link>
 				</div>
 			</StyledIndice>
 			{menuDesplegable}
