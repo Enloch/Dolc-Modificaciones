@@ -32,6 +32,7 @@ import ContactoEn from "./pages/en/Contacto";
 import QuienesSomosEn from "./pages/en/QuienesSomoEn";
 import FachadaVentiladaEn from "./pages/en/catalogos/FachadaVentiladaEn";
 import DolckerTlineEn from "./pages/en/catalogos/DolckerTLineEn";
+import DolckerMatrixEn from "./pages/en/catalogos/DolckerMatrixEn";
 import PoliticaPrivacidadEn from "./pages/en/PoliticaPrivacidad";
 import AvisoLegalEn from "./pages/en/AvisoLegal";
 //French
@@ -112,6 +113,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 						<Route path="/en/" element={<MainEn />} />
 						<Route path="/en/dolcker-system" element={<FachadaVentiladaEn />} />
 						<Route path="/en/dolcker-tline" element={<DolckerTlineEn />} />
+						<Route
+							path="/en/dolcker-matrix-facade"
+							element={<DolckerMatrixEn />}
+						/>
 						<Route path="/en/quienes-somos" element={<QuienesSomosEn />} />
 						<Route
 							path="/en/aviso-legal"

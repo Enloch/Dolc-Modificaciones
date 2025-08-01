@@ -1,4 +1,4 @@
-import ListaContenidos from "../../../../components/ListaContenidosMatrix";
+import ListaContenidos from "../../../../components/ListaContenidosTline";
 import { Titulo } from "../../../../components/Titulos";
 import { COLORS } from "../../../../global/GlobalStyles";
 import { StyledIndice } from "./styles";
@@ -26,7 +26,7 @@ const AnimatedArrow = styled(BsMouse)`
 const Indice = ({ indiceRef }) => {
 	const { menuDesplegable, btnIndice } = useMenuDesplegable(
 		ListaContenidos,
-		"Índice",
+		"Index",
 		indiceRef
 	);
 
@@ -40,7 +40,7 @@ const Indice = ({ indiceRef }) => {
 		<>
 			<StyledIndice backgroundColor={COLORS.gray06} ref={indiceRef} id="indice">
 				<Titulo color={COLORS.gray01}>Dolcker MATRIX FACADE</Titulo>
-				<ListaContenidos />
+				<ListaContenidos en={true} />
 				<AnimatedArrow
 					size={32}
 					color="white"
@@ -49,10 +49,10 @@ const Indice = ({ indiceRef }) => {
 					onClick={handleClickFlecha}
 				/>
 				<div className="idiomas">
-					<Link to="/dolcker-matrix-facade" className="seleccionado">
-						ES
+					<Link to="/dolcker-matrix-facade">ES</Link>
+					<Link to="/en/dolcker-matrix-facade" className="seleccionado">
+						EN
 					</Link>
-					<Link to="/en/dolcker-matrix-facade">EN</Link>
 					<Link to="/fr/dolcker-matrix-facade">FR</Link>
 				</div>
 			</StyledIndice>

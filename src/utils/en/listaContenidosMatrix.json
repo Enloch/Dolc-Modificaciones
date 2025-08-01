@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Index",
+    "link": "/"
+  },
+  {
+    "title": "Dolcker Matrix Facade solves",
+    "link": "#dolcker"
+  },
+  {
+    "title": "Advantages of Dolcker system",
+    "link": "#ventajas"
+  },
+  {
+    "title": "Applications",
+    "subList": [
+      {
+        "title": "Applications",
+        "link": "#aplicaciones"
+      },
+      {
+        "title": "Rehabilitation",
+        "link": "#rehabilitacion"
+      },
+      {
+        "title": "New construction",
+        "subList": [
+          {
+            "title": "New construction",
+            "link": "#obra-nueva"
+          },
+          {
+            "title": "Exterior",
+            "link": "#exteriores"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Design",
+    "subList": [
+      {
+        "title": "Design",
+        "link": "#diseno"
+      },
+      {
+        "title": "Collections",
+        "link": "#colecciones"
+      },
+      {
+        "title": "Configurator",
+        "link": "#configurador"
+      }
+    ]
+  },
+  {
+    "title": "Technical features",
+    "subList": [
+      {
+        "title": "Technical features",
+        "link": "#caracteristicas-especiales"
+      }
+    ]
+  }
+]

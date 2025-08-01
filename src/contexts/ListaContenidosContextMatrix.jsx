@@ -1,6 +1,6 @@
-import { createContext } from 'react'
-import listaContenidosJSON from '../utils/listaContenidosMatrix.json'
+import { createContext } from "react";
+import listaContenidosJSON from "../utils/listaContenidosMatrix.json";
 
-const ListaContenidosContext = createContext(listaContenidosJSON)
+const ListaContenidosContext = createContext(listaContenidosJSON);
 
-export default ListaContenidosContext
+export default ListaContenidosContext;
