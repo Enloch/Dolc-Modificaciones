@@ -18,3 +18,12 @@ export { default as DisenosTline } from "./Tline/05_Diseno";
 export { default as CaracteristicasTline } from "./Tline/06_Caracteristicas";
 export { default as SistemasTline } from "./Tline/07_Sistemas";
 export { default as DescargasTline } from "./Tline/08_Descargas";
+//MATRIX
+export { default as IndiceMatrix } from "./Matrix/01_Inicio";
+export { default as DolckerMatrix } from "./Matrix/02_Dolcker";
+export { default as VentajasMatrix } from "./Matrix/03_Ventajas";
+export { default as AplicacionesMatrix } from "./Matrix/04_Aplicaciones";
+export { default as DisenosMatrix } from "./Matrix/05_Diseno";
+export { default as CaracteristicasMatrix } from "./Matrix/06_Caracteristicas";
+export { default as SistemasMatrix } from "./Matrix/07_Sistemas";
+export { default as DescargasMatrix } from "./Matrix/08_Descargas";

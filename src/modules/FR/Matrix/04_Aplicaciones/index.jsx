@@ -44,15 +44,15 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray02}
 				rowGap={DISTANCES.small}
 			>
-				<Titulo color={COLORS.gray08}>Applications</Titulo>
+				<Titulo color={COLORS.gray08}>Aplicaciones</Titulo>
 				<ImageWithCaption
 					src={img1}
-					alt="Applications Image 1"
+					alt="Imagen de Aplicaciones 1"
 					caption=""
 					columnSpan="6"
 				/>
 				<Cita
-					cita="Details are not the details. They make the design."
+					cita="Los detalles no son los detalles. Los detalles son el diseño."
 					author="Charles Eames "
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -63,21 +63,21 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.small}
 			>
-				<Titulo2 color={COLORS.gray08}>Rehabilitation</Titulo2>
+				<Titulo2 color={COLORS.gray08}>Rehabilitación</Titulo2>
 				<ImageWithCaption
 					src={logos}
-					alt="Applications Image 1"
+					alt="Imagen de Aplicaciones 1"
 					caption=""
 					columnSpan="6"
 				/>
 				<Cita
-					cita="What is functional is better than what is beautiful, because what works well remains over time."
+					cita="Lo funcional es mejor que lo bello, porque lo que funciona bien permanece en el tiempo."
 					author="Ray Eames"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
 				/>
 			</StyledAplicaciones>
-			<StyledGaleria id="new-construction-gallery" backgroundColor={COLORS.gray01}>
+			<StyledGaleria id="galeria-obra-nueva" backgroundColor={COLORS.gray01}>
 				<StyledSlider className="Slider">
 					<ImageGallery
 						items={imagesGaleriaRehabilitar}
@@ -97,21 +97,21 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.small}
 			>
-				<Titulo2 color={COLORS.gray08}>New construction</Titulo2>
+				<Titulo2 color={COLORS.gray08}>Obra nueva</Titulo2>
 				<ImageWithCaption
 					src={img3}
-					alt="Applications Image 1"
+					alt="Imagen de Aplicaciones 1"
 					//   caption='Jorge dará la referencia o imágen.'
 					columnSpan="6"
 				/>
 				<Cita
-					cita="Space has no meaning without light. A building speaks through the silence of perception orchestrated by light."
+					cita="El espacio no tiene sentido sin luz. Un edificio habla a través del silencio de la percepción orquestada por la luz."
 					author="Steven Holl"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
 				/>
 			</StyledAplicaciones>
-			<StyledGaleria id="new-construction-gallery" backgroundColor={COLORS.gray01}>
+			<StyledGaleria id="galeria-obra-nueva" backgroundColor={COLORS.gray01}>
 				<StyledSlider className="Slider">
 					<ImageGallery
 						items={imagenesGaleriaObra}
@@ -131,15 +131,15 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.small}
 			>
-				<Titulo2 color={COLORS.gray08}>Exteriors</Titulo2>
+				<Titulo2 color={COLORS.gray08}>Exteriores</Titulo2>
 				<ImageWithCaption
 					src={img5}
-					alt="Applications Image 1"
+					alt="Imagen de Aplicaciones 1"
 					//   caption='Jorge dará la referencia o imágen.'
 					columnSpan="6"
 				/>
 			</StyledAplicaciones>
-			<StyledGaleria id="new-construction-gallery" backgroundColor={COLORS.gray01}>
+			<StyledGaleria id="galeria-obra-nueva" backgroundColor={COLORS.gray01}>
 				<StyledSlider className="Slider">
 					<ImageGallery
 						items={imagenesGaleriaExterior}

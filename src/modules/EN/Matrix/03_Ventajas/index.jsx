@@ -9,33 +9,31 @@ import Listado from "../../../../components/Listado";
 const VentajasTline = ({ id }) => {
 	return (
 		<StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-			<Titulo>Ventajas del sistema Dolcker Matrix Facade</Titulo>
+			<Titulo>Advantages of the Dolcker Matrix Facade system</Titulo>
 			<ImageWithCaption
 				src={img1}
-				alt="Imagen de Ventajas 1"
+				alt="Advantages Image 1"
 				caption=""
 				columnSpan="6"
 			/>
 			<Text>
-				Sistema dolcker matrix facade dispone de un desarrollo técnico de
-				fijación para fachadas ventiladas mejorado, para adaptarse a las
-				necesidades tanto estéticas como funcionales del proyecto.
+				The Dolcker Matrix Facade system features an improved technical
+				fastening development for ventilated facades, adapting to both the
+				aesthetic and functional needs of the project.
 			</Text>
 			<Listado>
-				<li>Sistema de fijación mecánica oculta + clipada</li>
-				<li>Sistema desmontable</li>
-				<li>
-					Perfil de alumnio vertical o horizontal para disistinas colocaciones
-				</li>
-				<li>Posibilidad de fabricacion diferentes aleaciones de aluminio</li>
-				<li>Sistema de libre colocación</li>
-				<li>Multitud de DISEÑOS de piezas</li>
-				<li>Despiece a medida</li>
-				<li>Posibilidad de fabricacion lamas SEGUN DISEÑO</li>
-				<li>Sistema desarrollado para cámaras de hasta 20 cm</li>
-				<li>Piezas con ACABADOS solidos , metalicos , maderas , anodizados</li>
-				<li>Montaje rápido y seguro</li>
-				<li>Sistema versátil a la hora de diseñar la fachada</li>
+				<li>Hidden mechanical fastening + clip system</li>
+				<li>Dismountable system</li>
+				<li>Vertical or horizontal aluminum profile for different installations</li>
+				<li>Possibility of manufacturing different aluminum alloys</li>
+				<li>Free placement system</li>
+				<li>Multitude of piece DESIGNS</li>
+				<li>Customized cutting</li>
+				<li>Possibility of manufacturing slats ACCORDING TO DESIGN</li>
+				<li>System developed for chambers up to 20 cm</li>
+				<li>Pieces with solid, metallic, wood, anodized FINISHES</li>
+				<li>Fast and secure assembly</li>
+				<li>Versatile system when designing the facade</li>
 			</Listado>
 		</StyledVentajas>
 	);

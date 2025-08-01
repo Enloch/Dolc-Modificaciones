@@ -9,126 +9,119 @@ const CaracteristicasTline = ({ id }) => {
 	return (
 		<>
 			<StyledCaracteristicas id={id[0]} backgroundColor={COLORS.gray02}>
-				<Titulo>Características técnicas</Titulo>
+				<Titulo>Technical characteristics</Titulo>
 				<ImageWithCaption
 					src={caracter1}
-					alt="Render por parte de 7475"
+					alt="Render by 7475"
 					caption=""
 					columnSpan="6"
 				/>
 				<Text>
-					<strong>Resistencia y durabilidad</strong>
+					<strong>Resistance and durability</strong>
 					<br />
 					<br />
-					El <strong>aluminio extrusionado </strong>es conocido por su gran
-					resistencia estructural, lo que le{" "}
+					<strong>Extruded aluminum</strong> is known for its great structural
+					resistance, which allows it to 
 					<strong>
-						permite soportar cargas y esfuerzos físicos sin deformarse.
+						withstand loads and physical stresses without deforming.
 					</strong>
-					Esto lo convierte en un material ideal para aplicaciones en la
-					industria de la construcción, ya que puede resistir condiciones
-					adversas, como cambios de temperatura, humedad y corrosión.
+					This makes it an ideal material for applications in the
+					construction industry, as it can resist adverse conditions, such as
+					temperature changes, humidity, and corrosion.
 					<br />
 					<br />
-					Además de su resistencia, el aluminio extrusionado destaca por su
-					durabilidad a largo plazo. Su
-					<strong> capacidad para resistir la oxidación y la corrosión </strong>
-					garantiza una vida útil prolongada, lo que
-					<strong> reduce los costos de mantenimiento y reemplazo.</strong>
+					In addition to its resistance, extruded aluminum stands out for its
+					long-term durability. Its <strong>ability to resist oxidation and corrosion
+					</strong>guarantees a prolonged useful life, which <strong>reduces maintenance and replacement costs.</strong>
 					<br />
 					<br />
 				</Text>
 				<Text>
-					<strong>Variedad de formas y perfiles</strong>
+					<strong>Variety of shapes and profiles</strong>
 					<br />
 					<br />
-					El<strong> proceso de extrusión del aluminio </strong>permite obtener
-					una amplia variedad de formas y
-					<strong> perfiles de aluminio extrusionado.</strong>
+					The <strong>aluminum extrusion process</strong> allows obtaining a wide
+					variety of shapes and <strong>extruded aluminum profiles.</strong>
 					<br />
 					<br />
-					Las piezas de aluminio extrusionado que se obtienen son de un
-					<strong> gran resistencia </strong>, con una forma perfecta y con un
-					riesgo muy bajo de salir de fábrica con imperfecciones o errores.
+					The extruded aluminum pieces obtained are of <strong>great resistance
+					</strong>, with a perfect shape and with a very low risk of leaving the
+					factory with imperfections or errors.
 					<br />
 					<br />
-					Desde barras y tubos hasta perfiles complejos y personalizados,
-					<strong> el aluminio extrusionado ofrece versatilidad</strong> para
-					adaptarse a diferentes necesidades de diseño y aplicaciones
-					específicas
+					From bars and tubes to complex and customized profiles, <strong>extruded
+					aluminum offers versatility</strong> to adapt to different design needs
+					and specific applications.
 					<br />
 					<br />
-					Estos perfiles se pueden utilizar en la fabricación de{" "}
+					These profiles can be used in the manufacture of 
 					<strong>
-						persianas de aluminio extrusionado autoblocantes de seguridad
+						self-locking security extruded aluminum blinds
 					</strong>
-					, fachadas, entre otros. Los{" "}
+					, facades, among others. 
 					<strong>
-						perfiles extrusionados de aluminio permiten dar flexibilidad y crear
-						soluciones a medida
+						Extruded aluminum profiles allow flexibility and create
+						custom solutions
 					</strong>
-					, adaptadas a los requisitos técnicos y estéticos de cada proyecto.
+					, adapted to the technical and aesthetic requirements of each project.
 					<br />
 					<br />
 				</Text>
 				<Text>
-					<strong>Ligero y resistente</strong>
+					<strong>Lightweight and resistant</strong>
 					<br />
 					<br />
-					En primer lugar, una de las principales propiedades del aluminio es su
-					ligereza. Esto no impide que ajustando la composición de su aleación
-					se puede lograr una gran resistencia y como resultado puede adaptarse
-					a casi cualquier aplicación.
-					<br />
-					<br />
-				</Text>
-				<Text>
-					<strong>Mantenimiento 0</strong>
-					<br />
-					<br />
-					Mediante el proceso de acabado del aluminio, bien sea anodizado o
-					lacado, se confiere una protección importante frente a los agentes
-					agresivos atmosféricos. También se consiguen posibilidades decorativas
-					adaptadas al entorno o el diseño de las estructuras que lo componen.
-					Por tanto no requiere de mantenimiento específico, lo que conlleva un
-					ahorro de costes considerable.
+					First, one of the main properties of aluminum is its
+					lightness. This does not prevent that by adjusting the composition of its alloy
+					a great resistance can be achieved and as a result it can adapt
+					to almost any application.
 					<br />
 					<br />
 				</Text>
 				<Text>
-					<strong>Reciclable</strong>
+					<strong>Zero Maintenance</strong>
 					<br />
 					<br />
-					El aluminio es un material totalmente reciclable y contribuye a
-					reducir el consumo energético en un 95%. Las características del
-					material reciclado no difieren de las del material proveniente del
-					mineral. Esta  alta capacidad de reciclaje tiene un valor de
-					sostenibilidad pera el medio ambiente.
-					<br />
-					<br />
-				</Text>
-				<Text>
-					<strong>Variedad de acabados</strong>
-					<br />
-					<br />
-					El aluminio es el material ideal para la creación de conceptos de
-					edificación contemporáneos. Tanto si se opta por un acabado de la
-					superficie lacado o anodizado, disfrutará de la belleza duradera de
-					las ventanas sin tener que invertir en pintura ni en barniz
+					Through the aluminum finishing process, whether anodized or lacquered,
+					important protection against aggressive atmospheric agents is conferred.
+					Decorative possibilities adapted to the environment or the design of the
+					structures that compose it are also achieved. Therefore, it does not
+					require specific maintenance, which leads to considerable cost savings.
 					<br />
 					<br />
 				</Text>
 				<Text>
-					<strong>Resistente a la corrosión</strong>
+					<strong>Recyclable</strong>
 					<br />
 					<br />
-					De forma natural, el aluminio genera una capa de óxido autoprotectora
-					que lo hace muy resistente a la corrosión.
+					Aluminum is a totally recyclable material and contributes to reducing
+					energy consumption by 95%. The characteristics of the recycled material
+					do not differ from those of the material from the mineral. This high
+					recycling capacity has a sustainability value for the environment.
 					<br />
 					<br />
-					Mediante procesos industriales controlados  se pueden aplicar
-					diferentes tipos de tratamiento de superficie para conseguir mejorar
-					aún más esta propiedad.
+				</Text>
+				<Text>
+					<strong>Variety of finishes</strong>
+					<br />
+					<br />
+					Aluminum is the ideal material for the creation of contemporary
+					building concepts. Whether you opt for a lacquered or anodized surface
+					finish, you will enjoy the lasting beauty of the windows without having
+					to invest in paint or varnish.
+					<br />
+					<br />
+				</Text>
+				<Text>
+					<strong>Corrosion resistant</strong>
+					<br />
+					<br />
+					Naturally, aluminum generates a self-protective oxide layer that makes
+					it very resistant to corrosion.
+					<br />
+					<br />
+					Through controlled industrial processes, different types of surface
+					treatment can be applied to further improve this property.
 				</Text>
 			</StyledCaracteristicas>
 			{/* <StyledCaracteristicas id={id[1]} backgroundColor={COLORS.gray02}> */}
