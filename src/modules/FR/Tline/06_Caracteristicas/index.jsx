@@ -49,7 +49,7 @@ const CaracteristicasTline = ({ id }) => {
 	return (
 		<>
 			<StyledCaracteristicas id={id[0]} backgroundColor={COLORS.gray02}>
-				<Titulo>Características técnicas</Titulo>
+				<Titulo>Caractéristiques techniques</Titulo>
 				<ImageWithCaption
 					src={caracter1}
 					alt="Render por parte de 7475"
@@ -57,122 +57,128 @@ const CaracteristicasTline = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Text>
-					Dolcker Line es un material compacto, resistente y caracterizado por
-					una porosidad casi inexistente y, por absorción del agua menor al 0,1
+					Dolcker Line est un matériau compact, résistant et caractérisé par une
+					porosité presque inexistante et une absorption d'eau inférieure à 0,1
 					%
 					<br />
 					<br />
-					Su estructura vitrificada, con un grado bajo de porosidad, garantiza
-					una elevada impermeabilidad a suciedad y al hielo.
+					Sa structure vitrifiée, avec un faible degré de porosité, garantit une
+					imperméabilité élevée à la saleté et à la glace.
 					<br />
 					<br />
-					Cuerpo pasta porcelánica.
+					Corps en pâte porcelaine.
 					<br />
 					<br />
-					Las ventajas de un material único.
+					Les avantages d'un matériau unique.
 				</Text>
 				<Listado>
 					<li>
 						<strong>
-							Amplia gama de colores, formatos, espesores y acabados.
+							Large gamme de couleurs, formats, épaisseurs et finitions.
 						</strong>
 					</li>
 					<li>
-						<strong>Es antiácido.</strong> Es insensible a los ácidos más
-						difundidos (No resiste al ataque del ácido fluorhídrico).
+						<strong>Il est antiacide.</strong> Insensible aux acides les plus
+						répandus (ne résiste pas à l'attaque de l'acide fluorhydrique).
 					</li>
 					<li>
-						<strong>Es resistente.</strong> Resistente a la abrasión y al
-						desgaste más que cualquier material natural.
+						<strong>Il est résistant.</strong> Résistant à l'abrasion et à
+						l'usure plus que tout matériau naturel.
 					</li>
 					<li>
-						<strong>No combustible.</strong> El material no se quema ni produce
-						gases o humos tóxico-nocivos en caso de incendio o exposición a las
-						llamas.
+						<strong>Non combustible.</strong> Le matériau ne brûle pas et ne
+						produit pas de gaz ou fumées toxiques-nocives en cas d'incendie ou
+						d'exposition aux flammes.
 					</li>
 					<li>
 						<strong>
-							No retiene sustancias orgánicas y bacterias, causa de alergias y
-							disturbios.
+							Ne retient pas les substances organiques et les bactéries, causes
+							d'allergies et de troubles.
 						</strong>
 					</li>
 					<li>
-						<strong>Fácil de trabajar.</strong> El producto se presta a ser
-						trabajado (cortado, perforado, etc.) como la piedra natural para
-						satisfacer cualquier tipo de personalización.
+						<strong>Facile à travailler.</strong> Le produit se prête à être
+						travaillé (coupé, perforé, etc.) comme la pierre naturelle pour
+						satisfaire tout type de personnalisation.
 					</li>
 					<li>
-						<strong>Es Inatacable.</strong> Ningún problema con ollas calientes
-						o cigarrillos encendidos, que al contrario dañan la madera,
-						laminados plásticos o aglomerados con resinas.
+						<strong>Il est inattaquable.</strong> Aucun problème avec des
+						casseroles chaudes ou des cigarettes allumées, qui au contraire
+						endommagent le bois, les stratifiés plastiques ou les agglomérés
+						avec résines.
 					</li>
 					<li>
-						<strong>Fácil de limpiar.</strong> Es posible utilizar detergentes
-						muy fuertes o disolventes sin el peligro de dañar el material.
+						<strong>Facile à nettoyer.</strong> Il est possible d'utiliser des
+						détergents très puissants ou des solvants sans risque d'endommager
+						le matériau.
 					</li>
 					<li>
-						<strong>Resistente al hielo.</strong> El material es resistente al
-						frío y al hielo.
+						<strong>Résistant à la glace.</strong> Le matériau est résistant au
+						froid et à la glace.
 					</li>
 					<li>
-						<strong>Establo cromático.</strong> Los colores son totalmente
-						estables y no se alteran ni por la exposición al sol, ni a los
-						agentes atmosféricos, ni al smog.
+						<strong>Stabilité chromatique.</strong> Les couleurs sont totalement
+						stables et ne s'altèrent ni par l'exposition au soleil, ni par les
+						agents atmosphériques, ni par le smog.
 					</li>
 				</Listado>
 				<Text>
-					<strong>ECOLÓGICO</strong>
+					<strong>ÉCOLOGIQUE</strong>
 					<br />
 					<br />
-					No contiene impermeabilizantes químicos, barnices o resinas, no emite
-					exhalaciones tampoco con el calor de una llama. Al contrario de
-					algunas piedras naturales no emana Radon u otros gases radioactivos y
-					no viene pulido con plomo. Se produce respetando el medio ambiente.
+					Ne contient pas d'imperméabilisants chimiques, de vernis ou de
+					résines, n'émet pas d'exhalations même avec la chaleur d'une flamme.
+					Contrairement à certaines pierres naturelles, il n'émet pas de radon
+					ou d'autres gaz radioactifs et n'est pas poli au plomb. Il est produit
+					en respectant l'environnement.
 					<br />
 					<br />
-					<strong>RESISTENCIA A LOS CAMBIOS BRUSCOS DE TEMPERATURA</strong>
+					<strong>RÉSISTANCE AUX CHANGEMENTS BRUSQUES DE TEMPERATURE</strong>
 					<br />
 					<br />
-					<strong>RESISTENCIA A LA FLEXIÓN CON CARGAS FIJAS Y ESTÁTICAS</strong>
+					<strong>
+						RÉSISTANCE À LA FLEXION AVEC DES CHARGES FIXES ET STATIQUES
+					</strong>
 					<br />
 					<br />
-					<strong>RESISTENCIA AL IMPACTO, A LA ABRASIÓN SEGURIDAD</strong>
+					<strong>RÉSISTANCE À L'IMPACT, À L'ABRASION SÉCURITÉ</strong>
 				</Text>
 				<Listado>
-					<li>Expansión por humedad insignificante</li>
+					<li>Expansion par humidité insignifiante</li>
 					<li>Incombustible</li>
-					<li>Ignífugo</li>
-					<li>Ausencia de peligro en caso de incendio</li>
-					<li>Seguridad eléctrica</li>
+					<li>Ignifuge</li>
+					<li>Absence de danger en cas d'incendie</li>
+					<li>Sécurité électrique</li>
 				</Listado>
 				<Text>
-					<strong>SALUD Y BIENESTAR</strong>
+					<strong>SANTÉ ET BIEN-ÊTRE</strong>
 				</Text>
 				<Listado>
-					<li>Carencia de olor propio o adquirido</li>
-					<li>Resistencia a la liberación de polvo propio</li>
-					<li>Facilidad de limpieza de polvo adquirido</li>
-					<li>Fácil limpieza y mantenimiento</li>
+					<li>Carence d'odeur propre ou acquise</li>
+					<li>Résistance à la libération de poussière propre</li>
+					<li>Facilité de nettoyage de la poussière acquise</li>
+					<li>Nettoyage et entretien faciles</li>
 					<li>
-						Es un producto que, por su capacidad de aislante eléctrico, evita la
-						captación de polvo ambiental eléctricamente activo
+						C'est un produit qui, grâce à sa capacité d'isolant électrique,
+						évite la capture de poussière ambiante électriquement active
 					</li>
-					<li>Adecuado donde el uso de agua es abundante</li>
+					<li>Convenable lorsque l'utilisation de l'eau est abondante</li>
 					<li>
-						Es la instalación definitiva: no necesita ningún mantenimiento
-						después de su puesta en obra
+						C'est l'installation définitive : il n'a pas besoin d'entretien
+						après sa mise en œuvre
 					</li>
 				</Listado>
 			</StyledCaracteristicas>
 			<StyledCaracteristicas id={id[1]} backgroundColor={COLORS.gray02}>
-				<Titulo>Datos técnicos</Titulo>
+				<Titulo>Données techniques</Titulo>
 				<Text>
-					<strong>CARACTERÍSTICAS FÍSICAS Y MECÁNICAS</strong>
+					<strong>Caractéristiques physiques et mécaniques</strong>
 					<br />
 					<br />
-					Las piezas de cerámica se clasifican como baldosas cerámicas prensadas
-					en seco con baja absorción de agua según norma UNE-EN 14411, con las
-					siguientes características declaradas por el fabricante:
+					Les pièces de céramique sont classées comme carreaux de céramique
+					prenassés en sèche avec une absorption d'eau faible selon la norme
+					UNE-EN 14411, avec les caractéristiques suivantes déclarées par le
+					fabricant :
 				</Text>
 
 				<Box sx={{ width: "100%", overflow: "auto", mt: 3 }}>
@@ -203,7 +209,7 @@ const CaracteristicasTline = ({ id }) => {
 							}}
 						>
 							<Typography sx={{ fontWeight: 600 }}>
-								CARACTERÍSTICAS DIMENSIONALES / DIMENSIONAL CHARACTERISTICS
+								CARACTÉRISTIQUES DIMENSIONNELLES
 							</Typography>
 						</AccordionSummary>
 						<AccordionDetails>
@@ -233,9 +239,7 @@ const CaracteristicasTline = ({ id }) => {
 											></TableCell>
 											<TableCell sx={{ padding: "10px 10px", width: "180px" }}>
 												<Typography sx={{ fontWeight: 600 }}>
-													CARACTERÍSTICAS DIMENSIONALES
-													<br />
-													DIMENSIONAL CHARACTERISTICS
+													CARACTÉRISTIQUES DIMENSIONNELLES
 												</Typography>
 											</TableCell>
 											<TableCell
@@ -292,9 +296,7 @@ const CaracteristicasTline = ({ id }) => {
 											</TableCell>
 											<TableCell sx={{ padding: "10px 10px" }}>
 												<Typography variant="body2">
-													LONGITUD
-													<br />
-													LENGTH AND WIDTH
+													Épaisseur utile (e)
 												</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -313,9 +315,7 @@ const CaracteristicasTline = ({ id }) => {
 										<TableRow>
 											<TableCell sx={{ padding: "10px 10px" }}>
 												<Typography variant="body2">
-													ESPESOR
-													<br />
-													THICKNESS
+													Largeur utile (a)
 												</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -334,9 +334,7 @@ const CaracteristicasTline = ({ id }) => {
 										<TableRow>
 											<TableCell sx={{ padding: "10px 10px" }}>
 												<Typography variant="body2">
-													RECTITUD DE LOS LADOS
-													<br />
-													WARPAGE OF EDGES
+													Longueur utile (l)
 												</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -355,9 +353,7 @@ const CaracteristicasTline = ({ id }) => {
 										<TableRow>
 											<TableCell sx={{ padding: "10px 10px" }}>
 												<Typography variant="body2">
-													ORTOGONALIDAD
-													<br />
-													WEDGING
+													Rectitude des côtés
 												</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -392,9 +388,7 @@ const CaracteristicasTline = ({ id }) => {
 											</TableCell>
 											<TableCell sx={{ padding: "10px 10px" }}>
 												<Typography variant="body2">
-													CURVATURA CENTRAL Y LATERAL
-													<br />
-													CENTRAL AND EDGE CURVATURE
+													Curvature centrale et latérale
 												</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -412,11 +406,7 @@ const CaracteristicasTline = ({ id }) => {
 										</TableRow>
 										<TableRow>
 											<TableCell sx={{ padding: "10px 10px" }}>
-												<Typography variant="body2">
-													ALABEO
-													<br />
-													WARPAGE
-												</Typography>
+												<Typography variant="body2">Planéité</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
 												<Typography variant="body2">2</Typography>
@@ -446,9 +436,7 @@ const CaracteristicasTline = ({ id }) => {
 											</TableCell>
 											<TableCell sx={{ padding: "10px 10px" }}>
 												<Typography variant="body2">
-													ABSORCIÓN DE AGUA
-													<br />
-													WATER ABSORPTION
+													Absorption d'eau
 												</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -498,7 +486,7 @@ const CaracteristicasTline = ({ id }) => {
 							}}
 						>
 							<Typography sx={{ fontWeight: 600 }}>
-								CARACTERÍSTICAS MECÁNICAS / MECHANICAL CHARACTERISTICS
+								CARACTÉRISTIQUES MÉCANIQUES
 							</Typography>
 						</AccordionSummary>
 						<AccordionDetails>
@@ -526,9 +514,7 @@ const CaracteristicasTline = ({ id }) => {
 											></TableCell>
 											<TableCell sx={{ padding: "10px 10px", width: "180px" }}>
 												<Typography sx={{ fontWeight: 600 }}>
-													CARACTERÍSTICAS MECÁNICAS
-													<br />
-													MECHANICAL CHARACTERISTICS
+													CARACTÉRISTIQUES MÉCANIQUES
 												</Typography>
 											</TableCell>
 											<TableCell
@@ -585,9 +571,7 @@ const CaracteristicasTline = ({ id }) => {
 											</TableCell>
 											<TableCell sx={{ padding: "10px 10px" }}>
 												<Typography variant="body2">
-													CARGA DE ROTURA
-													<br />
-													BREAKING STRENGTH
+													Charge de rupture
 												</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -606,9 +590,7 @@ const CaracteristicasTline = ({ id }) => {
 										<TableRow>
 											<TableCell sx={{ padding: "10px 10px" }}>
 												<Typography variant="body2">
-													RESISTENCIA A FLEXIÓN
-													<br />
-													MODULUS OF RUPTURA
+													Modulus de rupture
 												</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -639,9 +621,7 @@ const CaracteristicasTline = ({ id }) => {
 											</TableCell>
 											<TableCell sx={{ padding: "10px 10px" }}>
 												<Typography variant="body2">
-													RESISTENCIA AL DESGASTE PROF.
-													<br />
-													DEEP ABRASION RESISTANCE
+													Résistance au dégagement profond
 												</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -672,9 +652,7 @@ const CaracteristicasTline = ({ id }) => {
 											</TableCell>
 											<TableCell sx={{ padding: "10px 10px" }}>
 												<Typography variant="body2">
-													RESISTENCIA A LA ABRASIÓN SUP.
-													<br />
-													SURFACE ABRASION RESISTANCE
+													Résistance à l'abrasion de surface
 												</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -705,9 +683,7 @@ const CaracteristicasTline = ({ id }) => {
 											</TableCell>
 											<TableCell sx={{ padding: "10px 10px" }}>
 												<Typography variant="body2">
-													COEFICIENTE DILATACIÓN TÉRMICA
-													<br />
-													THERMAL EXPANSION COEFFICIENT
+													Coefficient de dilatation thermique
 												</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -738,28 +714,20 @@ const CaracteristicasTline = ({ id }) => {
 											</TableCell>
 											<TableCell sx={{ padding: "10px 10px" }}>
 												<Typography variant="body2">
-													RESISTENCIA AL CHOQUE TÉRMICO
-													<br />
-													THERMAL SHOCK RESISTANCE
+													Résistance au choc thermique
 												</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
 												<Typography variant="body2">10</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
-												<Typography variant="body2">
-													RESISTENTE / RESISTANT
-												</Typography>
+												<Typography variant="body2">Résistant</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
-												<Typography variant="body2">
-													RESISTENTE / RESISTANT
-												</Typography>
+												<Typography variant="body2">Résistant</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
-												<Typography variant="body2">
-													RESISTENTE / RESISTANT
-												</Typography>
+												<Typography variant="body2">Résistant</Typography>
 											</TableCell>
 										</TableRow>
 										<TableRow>
@@ -777,26 +745,39 @@ const CaracteristicasTline = ({ id }) => {
 											</TableCell>
 											<TableCell sx={{ padding: "10px 10px" }}>
 												<Typography variant="body2">
-													RESISTENCIA AL HIELO
-													<br />
-													FROST RESISTANCE
+													Résistance à la flamme
 												</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
 												<Typography variant="body2">12</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
-												<Typography variant="body2">EXIGIDO</Typography>
+												<Typography variant="body2">A1</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
+												<Typography variant="body2">A1</Typography>
+											</TableCell>
+											<TableCell align="center" sx={{ padding: "10px 10px" }}>
+												<Typography variant="body2">A1</Typography>
+											</TableCell>
+										</TableRow>
+										<TableRow>
+											<TableCell sx={{ padding: "10px 10px" }}>
 												<Typography variant="body2">
-													RESISTENTE / RESISTANT
+													Résistance aux rayures
 												</Typography>
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
-												<Typography variant="body2">
-													RESISTENTE / RESISTANT
-												</Typography>
+												<Typography variant="body2">6</Typography>
+											</TableCell>
+											<TableCell align="center" sx={{ padding: "10px 10px" }}>
+												<Typography variant="body2">1300 N</Typography>
+											</TableCell>
+											<TableCell align="center" sx={{ padding: "10px 10px" }}>
+												<Typography variant="body2">≥ 2000 N</Typography>
+											</TableCell>
+											<TableCell align="center" sx={{ padding: "10px 10px" }}>
+												<Typography variant="body2">≥ 12000 N</Typography>
 											</TableCell>
 										</TableRow>
 									</TableBody>
@@ -831,7 +812,7 @@ const CaracteristicasTline = ({ id }) => {
 							}}
 						>
 							<Typography sx={{ fontWeight: 600 }}>
-								CARACTERÍSTICAS HIGIÉNICAS / HYGIENIC CHARACTERISTICS
+								Caractéristiques hygiéniques
 							</Typography>
 						</AccordionSummary>
 						<AccordionDetails>
@@ -860,14 +841,10 @@ const CaracteristicasTline = ({ id }) => {
 												sx={{ width: "60px", padding: "10px 10px" }}
 											></TableCell>
 											<TableCell sx={{ width: "180px", padding: "10px 10px" }}>
-												CARACTERÍSTICAS HIGIÉNICAS
-												<br />
-												HYGIENIC CHARACTERISTICS
+												CARACTÉRISTIQUES HYGIÉNIQUES
 											</TableCell>
 											<TableCell sx={{ width: "220px", padding: "10px 10px" }}>
-												TIPO DE ÁCIDO O BASE
-												<br />
-												TYPE OF ACID OR BASE
+												TYPE D'ACIDE OU DE BASE
 											</TableCell>
 											<TableCell
 												align="center"
@@ -937,14 +914,12 @@ const CaracteristicasTline = ({ id }) => {
 												/>
 											</TableCell>
 											<TableCell rowSpan={4} sx={{ padding: "10px 10px" }}>
-												RESISTENCIA QUÍMICA
-												<br />
-												CHEMICAL RESISTANCE
+												<Typography variant="body2">
+													RÉSISTANCE AUX PRODUITS CHIMIQUES
+												</Typography>
 											</TableCell>
 											<TableCell sx={{ padding: "10px 10px" }}>
-												ÁCIDOS BAJA CONCENTRACIÓN
-												<br />
-												LOW CONCENTRATION ACIDS
+												ACIDES FAIBLE CONCENTRATION
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
 												13
@@ -964,9 +939,7 @@ const CaracteristicasTline = ({ id }) => {
 										</TableRow>
 										<TableRow>
 											<TableCell sx={{ padding: "10px 10px" }}>
-												ÁCIDOS ALTA CONCENTRACIÓN
-												<br />
-												HIGH CONCENTRATION ACIDS
+												ACIDES FORTE CONCENTRATION
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
 												13
@@ -986,9 +959,7 @@ const CaracteristicasTline = ({ id }) => {
 										</TableRow>
 										<TableRow>
 											<TableCell sx={{ padding: "10px 10px" }}>
-												BASES BAJA CONCENTRACIÓN
-												<br />
-												LOW CONCENTRATION ALKALI
+												BASES FAIBLE CONCENTRATION
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
 												13
@@ -1009,8 +980,6 @@ const CaracteristicasTline = ({ id }) => {
 										<TableRow>
 											<TableCell sx={{ padding: "10px 10px" }}>
 												BASES ALTA CONCENTRACIÓN
-												<br />
-												HIGH CONCENTRATION ALKALI
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
 												13
@@ -1042,9 +1011,9 @@ const CaracteristicasTline = ({ id }) => {
 												/>
 											</TableCell>
 											<TableCell sx={{ padding: "10px 10px" }}>
-												RESISTENCIA A LAS MANCHAS
-												<br />
-												STAINS RESISTANCE
+												<Typography variant="body2">
+													RESISTENCIA A LAS MANCHAS
+												</Typography>
 											</TableCell>
 											<TableCell sx={{ padding: "10px 10px" }}></TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -1077,17 +1046,15 @@ const CaracteristicasTline = ({ id }) => {
 												/>
 											</TableCell>
 											<TableCell sx={{ padding: "10px 10px" }}>
-												PRODUCTOS DOMÉSTICOS DE LIMPIEZA Y SALES DE PISCINA
-												<br />
-												HOUSEHOLD DETERGENTS AND ADDITIVES FOR SWIMMING-POOLS
+												<Typography variant="body2">
+													PRODUCTOS DOMÉSTICOS DE LIMPIEZA Y SALES DE PISCINA
+												</Typography>
 											</TableCell>
 											<TableCell sx={{ padding: "10px 10px" }}></TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
 												13
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
-												MÍNIMO UB
-												<br />
 												MINIMUM UB
 											</TableCell>
 											<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -1100,9 +1067,49 @@ const CaracteristicasTline = ({ id }) => {
 												CLASE LA
 											</TableCell>
 										</TableRow>
+										<TableRow>
+											<TableCell sx={{ padding: "10px 10px" }}>
+												<Typography variant="body2">
+													Résistance bactérienne
+												</Typography>
+											</TableCell>
+											<TableCell align="center" sx={{ padding: "10px 10px" }}>
+												<Typography variant="body2">0</Typography>
+											</TableCell>
+											<TableCell align="center" sx={{ padding: "10px 10px" }}>
+												<Typography variant="body2">0</Typography>
+											</TableCell>
+											<TableCell align="center" sx={{ padding: "10px 10px" }}>
+												<Typography variant="body2">0</Typography>
+											</TableCell>
+										</TableRow>
+										<TableRow>
+											<TableCell sx={{ padding: "10px 10px" }}>
+												<Typography variant="body2">
+													Résistance aux champignons
+													<br />
+													FUNGUS RESISTANCE
+												</Typography>
+											</TableCell>
+											<TableCell align="center" sx={{ padding: "10px 10px" }}>
+												<Typography variant="body2">0</Typography>
+											</TableCell>
+											<TableCell align="center" sx={{ padding: "10px 10px" }}>
+												<Typography variant="body2">0</Typography>
+											</TableCell>
+											<TableCell align="center" sx={{ padding: "10px 10px" }}>
+												<Typography variant="body2">0</Typography>
+											</TableCell>
+										</TableRow>
 									</TableBody>
 								</Table>
 							</TableContainer>
+							<Text>
+								La surface de Dolcker Line est extrêmement lisse et homogène,
+								avec une porosité presque inexistante, ce qui empêche la
+								prolifération de micro-organismes et de bactéries. Dolcker Line
+								est un produit antibactérien, certifié selon la norme ISO 22196.
+							</Text>
 						</AccordionDetails>
 					</Accordion>
 				</Box>
