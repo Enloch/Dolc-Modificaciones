@@ -1,6 +1,9 @@
+import ImageWithCaption from "../../../../components/ImageWithCaption";
 import { Titulo } from "../../../../components/Titulos";
 import StyledDolcker from "./styles";
 import { COLORS } from "../../../../global/GlobalStyles";
+import img2 from "../../../../assets/images/DolckerTline/Dolcker/catalogo3-1-5.webp";
+import img4 from "../../../../assets/images/DolckerTline/Dolcker/DOLCKER_T-LINE SOLUCIONA GRAPA.webp";
 import img3 from "../../../../assets/images/DolckerTline/Dolcker/catalogo3-1-7.jpg";
 import VisualizadorNota from "../../../../components/Tline/VisualizadorNota";
 import Text from "../../../../components/Text";
@@ -20,6 +23,16 @@ const DolckerTline = ({ id }) => {
 		<StyledDolcker id={id} backgroundColor={COLORS.gray03}>
 			<Titulo>Dolcker T-LINE soluciona</Titulo>
 			<div className="dolcker-info">
+				{/* <ImageWithCaption
+          src={img2}
+          alt='Imagen Dolcker 2'
+          caption='Sistema T-LINE con perfilería.'
+        />
+        <ImageWithCaption
+          src={img4}
+          alt='Imagen Dolcker 2'
+          caption='Sistema T-LINE con grapa vista. Grapa y cara del perfíl interior lacado en el color de la cerámica.'
+        /> */}
 				<Text>
 					El sistema DOLCKER & line para fachadas de cerámica tipo Dolcker line
 					es un sistema con perfilería de alta inercia y doble seguridad. Todos

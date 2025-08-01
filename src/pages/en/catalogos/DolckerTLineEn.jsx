@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import MultipleOptionsProvider from "../../contexts/MultipleOptionsContext";
+import MultipleOptionsProvider from "../../../contexts/MultipleOptionsContext";
 import styled from "styled-components";
 import {
 	AplicacionesTline as Aplicaciones,
@@ -11,7 +11,7 @@ import {
 	IndiceTline as Indice,
 	SistemasTline as Sistemas,
 	VentajasTline as Ventajas,
-} from "../../modules/EN";
+} from "../../../modules/EN";
 
 const DolckerTlineEn = () => {
 	const indiceRef = useRef();
@@ -70,7 +70,7 @@ const DolckerTlineEn = () => {
 					"t-line-t20",
 				]}
 			/>
-			<Descargas id='descargas' />
+			<Descargas id="descargas" />
 			<Final />
 			{showButton && (
 				<StyledButton onClick={handleGoToIndice}>

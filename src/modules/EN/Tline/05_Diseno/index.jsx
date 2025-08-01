@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import Cita from "../../../../components/Cita";
-import ImageWithCaption from "../../../../components/ImageWithCaption";	
-import { Titulo, Titulo2 } from "../../../../components/Titulos";	
+import ImageWithCaption from "../../../../components/ImageWithCaption";
+import { Titulo, Titulo2 } from "../../../../components/Titulos";
 import { COLORS } from "../../../../global/GlobalStyles";
 import StyledDisenos from "./styles";
 import img1 from "../../../../assets/images/DolckerTline/Diseno/catalogo3-1-14.webp";
@@ -16,9 +16,62 @@ import ranurado9 from "../../../../assets/images/DolckerTline/Diseno/Espesores/D
 import ranurado11 from "../../../../assets/images/DolckerTline/Diseno/Espesores/Dolcker_espesor_11mm.jpg";
 import VisualizadorDesplazador from "../../../../components/Tline/VisualizadorDesplazador";
 import IndiceSeries from "./05_1_IndiceSeries";
-import RotadorTline from "../../../../components/Rotadores/TlineV2/Rotador";
-import Configurador1Tline from "../../../../components/VisualizadorVariacionesTline";
-import Configurador2Tline from "../../../../components/VisualizadorVariacionesTline2";
+import styled from "styled-components";
+
+// Componente Loader estilizado
+const Loader = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	background: ${COLORS.gray01};
+`;
+
+// Placeholder atractivo
+const Placeholder = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	background: ${COLORS.gray03};
+	cursor: pointer;
+	transition: all 0.3s ease;
+	&:hover {
+		background: ${COLORS.gray02};
+	}
+	&::after {
+		content: "👆 Haz clic para explorar los acabados";
+		font-size: 3rem;
+		color: ${COLORS.gray05};
+	}
+`;
+
+const RotadorTline = lazy(() =>
+	import("../../../../components/Rotadores/TlineV2/Rotador")
+		.then((module) => module)
+		.catch((error) => {
+			console.error("Error loading RotadorTline:", error);
+			return { default: () => <div>Error al cargar el visualizador</div> };
+		})
+);
+
+const Configurador1Tline = lazy(() =>
+	import("../../../../components/VisualizadorVariacionesTline")
+		.then((module) => module)
+		.catch((error) => {
+			console.error("Error loading Configurador1Tline:", error);
+			return { default: () => <div>Error al cargar el visualizador</div> };
+		})
+);
+
+const Configurador2Tline = lazy(() =>
+	import("../../../../components/VisualizadorVariacionesTline2")
+		.then((module) => module)
+		.catch((error) => {
+			console.error("Error loading Configurador2Tline:", error);
+			return { default: () => <div>Error al cargar el visualizador</div> };
+		})
+);
 
 const DisenosTline = ({ id }) => {
 	const ids = [
@@ -55,6 +108,8 @@ const DisenosTline = ({ id }) => {
 		},
 	};
 	const [serieActiva, setSerieActiva] = useState("");
+	const [showRotador, setShowRotador] = useState(false);
+
 	return (
 		<>
 			<StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
@@ -74,7 +129,15 @@ const DisenosTline = ({ id }) => {
 			<StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
 				<Titulo2>Formato</Titulo2>
 				<Anotacion {...propsFormato.anotacion} />
-				<Configurador1Tline />
+				<Suspense
+					fallback={
+						<Loader>
+							<div>Cargando visualizador...</div>
+						</Loader>
+					}
+				>
+					<Configurador1Tline />
+				</Suspense>
 			</StyledDisenos>
 			<StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
 				<Titulo2>Acabados Cerámica</Titulo2>
@@ -102,8 +165,23 @@ const DisenosTline = ({ id }) => {
 						text="Desliza con el ratón o el dedo para apreciar la textura"
 					/>
 				</Anotaciones>
-				<div className="rotador">
-					<RotadorTline />
+				<div
+					className="rotador"
+					onClick={() => !showRotador && setShowRotador(true)}
+				>
+					{showRotador ? (
+						<Suspense
+							fallback={
+								<Loader>
+									<div>Cargando visualizador...</div>
+								</Loader>
+							}
+						>
+							<RotadorTline />
+						</Suspense>
+					) : (
+						<Placeholder />
+					)}
 				</div>
 			</StyledDisenos>
 			<StyledDisenos id={id[4]} backgroundColor={COLORS.gray01} isEspesores>
@@ -145,7 +223,15 @@ const DisenosTline = ({ id }) => {
 			<StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
 				{/* <Titulo2>Formato</Titulo2> */}
 				<Anotacion {...propsFormato.anotacion} />
-				<Configurador2Tline />
+				<Suspense
+					fallback={
+						<Loader>
+							<div>Cargando visualizador...</div>
+						</Loader>
+					}
+				>
+					<Configurador2Tline />
+				</Suspense>
 			</StyledDisenos>
 		</>
 	);

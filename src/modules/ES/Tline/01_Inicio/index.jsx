@@ -49,10 +49,10 @@ const Indice = ({ indiceRef }) => {
 					onClick={handleClickFlecha}
 				/>
 				<div className="idiomas">
-					<Link to="/dolcker-system" className="seleccionado">
+					<Link to="/dolcker-tline" className="seleccionado">
 						ES
 					</Link>
-					<Link to="/en/dolcker-system">EN</Link>
+					<Link to="/en/dolcker-tline">EN</Link>
 				</div>
 			</StyledIndice>
 			{menuDesplegable}
