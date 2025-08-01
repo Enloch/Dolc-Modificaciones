@@ -40,7 +40,7 @@ const Placeholder = styled.div`
 		background: ${COLORS.gray02};
 	}
 	&::after {
-		content: "👆 Haz clic para explorar los acabados";
+		content: "👆 Click to explore finishes";
 		font-size: 3rem;
 		color: ${COLORS.gray05};
 	}
@@ -51,7 +51,7 @@ const RotadorTline = lazy(() =>
 		.then((module) => module)
 		.catch((error) => {
 			console.error("Error loading RotadorTline:", error);
-			return { default: () => <div>Error al cargar el visualizador</div> };
+			return { default: () => <div>Error loading visualizer</div> };
 		})
 );
 
@@ -60,7 +60,7 @@ const Configurador1Tline = lazy(() =>
 		.then((module) => module)
 		.catch((error) => {
 			console.error("Error loading Configurador1Tline:", error);
-			return { default: () => <div>Error al cargar el visualizador</div> };
+			return { default: () => <div>Error loading visualizer</div> };
 		})
 );
 
@@ -69,7 +69,7 @@ const Configurador2Tline = lazy(() =>
 		.then((module) => module)
 		.catch((error) => {
 			console.error("Error loading Configurador2Tline:", error);
-			return { default: () => <div>Error al cargar el visualizador</div> };
+			return { default: () => <div>Error loading visualizer</div> };
 		})
 );
 
@@ -98,7 +98,7 @@ const DisenosTline = ({ id }) => {
 
 	const propsFormato = {
 		anotacion: {
-			text: "Pulsa en el punto para ver las posibilidades de formato",
+			text: "Click on the point to see the format possibilities",
 			type: "click",
 		},
 		visualizador: {
@@ -113,7 +113,7 @@ const DisenosTline = ({ id }) => {
 	return (
 		<>
 			<StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
-				<Titulo>Diseño</Titulo>
+				<Titulo>Design</Titulo>
 				<ImageWithCaption
 					src={img1}
 					alt="Imagen de Diseños 1"
@@ -121,18 +121,18 @@ const DisenosTline = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="“La regla de la arquitectura es hacer las cosas con amor y obsesión en gran proporción.”"
+					cita="“The rule of architecture is to do things with love and obsession in great proportion.”"
 					author="Miguel Fisac (1913-2006)"
 					colorAutor={COLORS.gray05}
 				/>
 			</StyledDisenos>
 			<StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
-				<Titulo2>Formato</Titulo2>
+				<Titulo2>Format</Titulo2>
 				<Anotacion {...propsFormato.anotacion} />
 				<Suspense
 					fallback={
 						<Loader>
-							<div>Cargando visualizador...</div>
+							<div>Loading visualizer...</div>
 						</Loader>
 					}
 				>
@@ -140,29 +140,29 @@ const DisenosTline = ({ id }) => {
 				</Suspense>
 			</StyledDisenos>
 			<StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
-				<Titulo2>Acabados Cerámica</Titulo2>
+				<Titulo2>Ceramic Finishes</Titulo2>
 				<Anotaciones>
 					<Anotacion
 						type="normal"
-						text="Pulsa en el punto para ver todas las posibilidades de piezas especiales"
+						text="Click on the point to see all possibilities for special pieces"
 					/>
 					<Anotacion
 						type="swipe"
-						text="Desliza con el ratón o el dedo para apreciar la textura"
+						text="Slide with the mouse or finger to appreciate the texture"
 					/>
 				</Anotaciones>
 				<VisualizadorDesplazador config={configAcabados} />
 			</StyledDisenos>
 			<StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
-				<Titulo2>Acabados y Perfiles de Cenefas</Titulo2>
+				<Titulo2>Finishes and Border Profiles</Titulo2>
 				<Anotaciones>
 					<Anotacion
 						type="normal"
-						text="Pulsa en el punto para ver todas las posibilidades de piezas especiales"
+						text="Click on the point to see all possibilities for special pieces"
 					/>
 					<Anotacion
 						type="swipe"
-						text="Desliza con el ratón o el dedo para apreciar la textura"
+						text="Slide with the mouse or finger to appreciate the texture"
 					/>
 				</Anotaciones>
 				<div
@@ -173,7 +173,7 @@ const DisenosTline = ({ id }) => {
 						<Suspense
 							fallback={
 								<Loader>
-									<div>Cargando visualizador...</div>
+									<div>Loading visualizer...</div>
 								</Loader>
 							}
 						>
@@ -185,35 +185,35 @@ const DisenosTline = ({ id }) => {
 				</div>
 			</StyledDisenos>
 			<StyledDisenos id={id[4]} backgroundColor={COLORS.gray01} isEspesores>
-				<Titulo2>Espesores</Titulo2>
+				<Titulo2>Thicknesses</Titulo2>
 				<div className="espesor espesor-1">
 					<img src={ranurado6} alt="" />
 					<ul>
 						<strong>TC 6 / 6 mm.</strong>
-						<li>Suelo</li>
-						<li>Techo</li>
-						<li>Fachada</li>
-						<li>Recerco</li>
+						<li>Floor</li>
+						<li>Ceiling</li>
+						<li>Facade</li>
+						<li>Recess</li>
 					</ul>
 				</div>
 				<div className="espesor espesor-2">
 					<img src={ranurado9} alt="" />
 					<ul>
 						<strong>TC 9 / 9 mm.</strong>
-						<li>Suelo</li>
-						<li>Techo</li>
-						<li>Fachada</li>
-						<li>Recerco</li>
+						<li>Floor</li>
+						<li>Ceiling</li>
+						<li>Facade</li>
+						<li>Recess</li>
 					</ul>
 				</div>
 				<div className="espesor espesor-3">
 					<img src={ranurado11} alt="" />
 					<ul>
 						<strong>TC 11 / 11 mm.</strong>
-						<li>Suelo</li>
-						<li>Techo</li>
-						<li>Fachada</li>
-						<li>Recerco</li>
+						<li>Floor</li>
+						<li>Ceiling</li>
+						<li>Facade</li>
+						<li>Recess</li>
 					</ul>
 				</div>
 			</StyledDisenos>
@@ -221,12 +221,12 @@ const DisenosTline = ({ id }) => {
 			<IndiceSeries id={id[6]} queSerieActiva={setSerieActiva} />
 			<Series id={ids} serieActivaMostrar={serieActiva} />
 			<StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
-				{/* <Titulo2>Formato</Titulo2> */}
+				{/* <Titulo2>Format</Titulo2> */}
 				<Anotacion {...propsFormato.anotacion} />
 				<Suspense
 					fallback={
 						<Loader>
-							<div>Cargando visualizador...</div>
+							<div>Loading visualizer...</div>
 						</Loader>
 					}
 				>

@@ -9,7 +9,7 @@ import Listado from "../../../../components/Listado";
 const VentajasTline = ({ id }) => {
 	return (
 		<StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-			<Titulo>Ventajas del sistema Dolcker T-LINE</Titulo>
+			<Titulo>Advantages of Dolcker T-LINE system</Titulo>
 			<ImageWithCaption
 				src={img1}
 				alt="Imagen de Ventajas 1"
@@ -17,25 +17,23 @@ const VentajasTline = ({ id }) => {
 				columnSpan="6"
 			/>
 			<Text>
-				Sistema dolcker line dispone de un desarrollo técnico de fijación oculta
-				en las piezas porcelanicas para poder clipar una cenefa lacada en
-				diferentes acabados
+				Dolcker line system has a technical development of hidden fixing in the
+				porcelain pieces to be able to clip a lacquered border in different
+				finishes
 			</Text>
 			<Listado>
-				<li>Sistema desmontable</li>
-				<li>
-					Clip correderos (seguridad para piezas de ariostamiento andamios)
-				</li>
-				<li>Perfil continuo de gran inercia para soporte de grandes cargas</li>
-				<li>Sistema de libre colocación</li>
-				<li>Multitud de tamaños de piezas</li>
-				<li>Despiece a medida</li>
-				<li>Diferentes espesores de piezas (6, 9 y 11 mm)</li>
-				<li>Sistema desarrollado para cámaras de hasta 20 cm</li>
-				<li>Fabricación de piezas con texturas mate, flamed y honed</li>
-				<li>Montaje rápido y seguro</li>
-				<li>Sistema versátil a la hora de diseñar la fachada</li>
-				<li>Sistema versátil en la decoración de las cenefas</li>
+				<li>Removable system</li>
+				<li>Sliding clips (safety for scaffolding bracing pieces)</li>
+				<li>Continuous profile with high inertia for supporting heavy loads</li>
+				<li>Free placement system</li>
+				<li>Multitude of piece sizes</li>
+				<li>Customized cutting</li>
+				<li>Different piece thicknesses (6, 9 and 11 mm)</li>
+				<li>System developed for chambers up to 20 cm</li>
+				<li>Manufacture of pieces with matte, flamed and honed textures</li>
+				<li>Fast and safe assembly</li>
+				<li>Versatile system when designing the facade</li>
+				<li>Versatile system in the decoration of borders</li>
 			</Listado>
 		</StyledVentajas>
 	);

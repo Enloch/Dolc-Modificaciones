@@ -28,7 +28,7 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray02}
 				rowGap={DISTANCES.long}
 			>
-				<Titulo color={COLORS.gray08}>Aplicaciones</Titulo>
+				<Titulo color={COLORS.gray08}>Applications</Titulo>
 				<ImageWithCaption
 					src={img1}
 					alt="Imagen de Aplicaciones 1"
@@ -36,7 +36,7 @@ const AplicacionesTline = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="La arquitectura es el arte de gastar el espacio. "
+					cita="Architecture is the art of wasting space. "
 					author="Philip Johnson (1906-2005) "
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -62,7 +62,7 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.medium}
 			>
-				<Titulo2 color={COLORS.gray08}>Rehabilitación</Titulo2>
+				<Titulo2 color={COLORS.gray08}>Rehabilitation</Titulo2>
 				<ImageWithCaption
 					src={img2}
 					alt="Imagen de Aplicaciones 1"
@@ -70,7 +70,7 @@ const AplicacionesTline = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="La arquitectura es una forma de plasmar los sueños en el mucho real."
+					cita="Architecture is a way of translating dreams into the real world."
 					author="Bjarke Ingels"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -81,7 +81,7 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.medium}
 			>
-				<Titulo2 color={COLORS.gray08}>Obra nueva</Titulo2>
+				<Titulo2 color={COLORS.gray08}>New construction</Titulo2>
 				<ImageWithCaption
 					src={img3}
 					alt="Imagen de Aplicaciones 1"
@@ -89,7 +89,7 @@ const AplicacionesTline = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita=" Un edificio tiene dos vidas. La que imagina su creador y la vida que tiene. Y no siempre son iguales "
+					cita="A building has two lives. The one its creator imagines and the life it has. And they are not always the same "
 					author="Rem Koolhaas (1944-) "
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -100,11 +100,11 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.medium}
 			>
-				<Titulo3 color={COLORS.gray08}>- Fachadas</Titulo3>
+				<Titulo3 color={COLORS.gray08}>- Facades</Titulo3>
 				<ImageWithCaption
 					src={img4}
 					alt="Imagen de Aplicaciones 4"
-					caption="Sistema Dolcker & Line"
+					caption="Dolcker & Line System"
 					columnSpan="6"
 				/>
 			</StyledAplicaciones>

@@ -12,7 +12,7 @@ import config from "../../../../configs/configDolckerTline";
 
 const DolckerTline = ({ id }) => {
 	const propsVisualizador = {
-		text: "Pasa el ratón por los puntos para ver la información",
+		text: "Hover over the points to see the information",
 		type: "normal",
 		indicadores: config,
 		imgBackground: img3,
@@ -21,7 +21,7 @@ const DolckerTline = ({ id }) => {
 
 	return (
 		<StyledDolcker id={id} backgroundColor={COLORS.gray03}>
-			<Titulo>Dolcker T-LINE soluciona</Titulo>
+			<Titulo>Dolcker T-LINE solutions</Titulo>
 			<div className="dolcker-info">
 				{/* <ImageWithCaption
           src={img2}
@@ -34,52 +34,47 @@ const DolckerTline = ({ id }) => {
           caption='Sistema T-LINE con grapa vista. Grapa y cara del perfíl interior lacado en el color de la cerámica.'
         /> */}
 				<Text>
-					El sistema DOLCKER & line para fachadas de cerámica tipo Dolcker line
-					es un sistema con perfilería de alta inercia y doble seguridad. Todos
-					y cada uno de los elementos que componen este sistema están fabricados
-					con materias primas de máxima calidad.
+					DOLCKER & line system for Dolcker line type ceramic facades is a
+					system with high inertia and double safety profiles. All and every one
+					of the elements that make up this system are manufactured with raw
+					materials of the highest quality.
 					<br />
 					<br />
 					<br />
-					Se trata de un sistema de fijación mecánica de clip + fijación química
-					+ fijación mecánica cenefa continua perimetral de aluminio lacada a su
-					color , mediante una subestructura que está compuesta por ménsulas
-					regulables de aluminio de alta calidad en forma de “L” de 3 mm de
-					espesor, que transmiten esfuerzos y que van fijadas mediante anclaje a
-					la estructura base del edificio (pared de ladrillo o forjado de
-					hormigón).Sobre estas ménsulas se fijan mediante tornillos
-					autotaladrantes de acero inoxidable los perfiles verticales de
-					aluminio extruidos en forma de“T”de 3 mm de espesor.
+					It is a mechanical clip fastening system + chemical fastening +
+					mechanical fastening continuous perimeter aluminum border lacquered to
+					its color, by means of a substructure that is composed of high-quality
+					adjustable aluminum brackets in the shape of an "L" of 3 mm thick,
+					which transmit forces and are fixed by anchoring to the base structure
+					of the building (brick wall or concrete slab). On these brackets, the
+					vertical profiles of extruded aluminum in the shape of a "T" of 3 mm
+					thick are fixed by means of self-drilling stainless steel screws.
 					<br />
 					<br />
 					<br />
-					En estos perfiles en forma de “T” se atornillan unos perfiles
-					horizontales en forma de “G”, permitiendo así que la pieza esté
-					apoyada en su totalidad. Se trata del sistema idóneo para la
-					colocación de cerámicas, permitiendo sustituir las piezas ya que
-					dispone de un clip corredera de acero inoxidable logrando infinidad de
-					colocaciones. Además permite lacar el perfil cenefa horizontal en
-					función del color que el cliente elija. Se colocan al menos dos clips
-					correderos en la parte superior de la pieza de arranque. En el resto
-					de piezas intermedias, se procederá a la colocación de al menos 4
-					clips por cada pieza de cerámica. Se le añadirá puntos de masilla
-					poliuretano de pegado y sellado sika-111 o similar (4 por pieza) que
-					nos permita absorber las dilataciones de la fachada en los clips
-					correderas.
+					In these "T"-shaped profiles, "G"-shaped horizontal profiles are
+					screwed, thus allowing the piece to be fully supported. It is the
+					ideal system for the placement of ceramics, allowing the replacement
+					of pieces since it has a stainless steel sliding clip achieving an
+					infinity of placements. It also allows lacquering the horizontal
+					border profile depending on the color the client chooses. At least two
+					sliding clips are placed on the upper part of the starting piece. In
+					the rest of the intermediate pieces, at least 4 clips will be placed
+					for each ceramic piece. Sika-111 or similar polyurethane adhesive and
+					sealant mastic points (4 per piece) will be added to allow us to
+					absorb the facade's expansions in the sliding clips.
 					<br />
 					<br />
 					<br />
-					Se trata sin duda de un sistema con múltiples opciones de composición
-					de fachada ya que es posible romper las juntas verticales. Estas
-					juntas verticales se ven minimizadas a tan solo 1 mm potenciando de
-					esta manera las juntas horizontales. La salida de la cerámica es entre
-					43-47 mm dependiendo del espesor de la cerámica escogida.
+					It is undoubtedly a system with multiple facade composition options
+					since it is possible to break the vertical joints. These vertical
+					joints are minimized to just 1 mm, thus enhancing the horizontal
+					joints. The ceramic projection is between 43-47 mm depending on the
+					thickness of the chosen ceramic.
 				</Text>
 			</div>
 			<VisualizadorNota {...propsVisualizador} />
 			<Text>
-				<br />
-
 				<br />
 			</Text>
 		</StyledDolcker>
