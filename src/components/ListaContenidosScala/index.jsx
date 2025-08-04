@@ -2,19 +2,22 @@ import useListaContenidos from "../../hooks/useListaContenidos";
 import StyledListaContenidos from "./styles";
 import { useContext } from "react";
 import ListaContenidosContextScala from "../../contexts/ListaContenidosContextScala";
-import inglesLista from "../../utils/en/listaContenidos.json";
+import inglesLista from "../../utils/en/listaContenidosScala.json";
+import francesLista from "../../utils/fr/listaContenidosScala.json";
+const ListaContenidos = ({
+	en = false,
+	isMenuDesplegable = false,
+	fr = false,
+}) => {
+	const contendiosJSON = useContext(ListaContenidosContextScala);
+	const data = en ? inglesLista : fr ? francesLista : contendiosJSON;
+	const contenidos = useListaContenidos(data);
 
-const ListaContenidos = ({ en = false, isMenuDesplegable = false }) => {
-  const contendiosJSON = useContext(ListaContenidosContextScala);
-  const contenidos = en
-    ? useListaContenidos(inglesLista)
-    : useListaContenidos(contendiosJSON);
-
-  return (
-    <StyledListaContenidos isMenuDesplegable={isMenuDesplegable}>
-      <ul>{contenidos}</ul>
-    </StyledListaContenidos>
-  );
+	return (
+		<StyledListaContenidos isMenuDesplegable={isMenuDesplegable}>
+			<ul>{contenidos}</ul>
+		</StyledListaContenidos>
+	);
 };
 
 export default ListaContenidos;

@@ -54,3 +54,12 @@ export { default as DisenosT5 } from "./T5/05_Diseno";
 export { default as CaracteristicasT5 } from "./T5/06_Caracteristicas";
 export { default as SistemasT5 } from "./T5/07_Sistemas";
 export { default as DescargasT5 } from "./T5/08_Descargas";
+//Scala
+export { default as IndiceScala } from "./Scala/01_Inicio";
+export { default as DolckerScala } from "./Scala/02_Dolcker";
+export { default as VentajasScala } from "./Scala/03_Ventajas";
+export { default as AplicacionesScala } from "./Scala/04_Aplicaciones";
+export { default as DisenosScala } from "./Scala/05_Diseno";
+export { default as CaracteristicasScala } from "./Scala/06_Caracteristicas";
+export { default as SistemasScala } from "./Scala/07_Sistemas";
+export { default as DescargasScala } from "./Scala/08_Descargas";
