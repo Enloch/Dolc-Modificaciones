@@ -40,7 +40,7 @@ const Indice = ({ indiceRef }) => {
 		<>
 			<StyledIndice backgroundColor={COLORS.gray06} ref={indiceRef} id="indice">
 				<Titulo color={COLORS.gray01}>Dolcker MATRIX FACADE</Titulo>
-				<ListaContenidos en={true} />
+				<ListaContenidos fr={true} />
 				<AnimatedArrow
 					size={32}
 					color="white"

@@ -3,7 +3,7 @@ import StyledListaContenidos from "./styles";
 import { useContext } from "react";
 import ListaContenidosContext from "../../contexts/ListaContenidosContextMatrix";
 import inglesLista from "../../utils/en/listaContenidosMatrix.json";
-import francesLista from "../../utils/fr/listaContenidosTline.json";
+import francesLista from "../../utils/fr/listaContenidosMatrix.json";
 const ListaContenidos = ({
 	en = false,
 	isMenuDesplegable = false,
