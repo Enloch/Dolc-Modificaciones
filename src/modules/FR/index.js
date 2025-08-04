@@ -63,3 +63,12 @@ export { default as DisenosScala } from "./Scala/05_Diseno";
 export { default as CaracteristicasScala } from "./Scala/06_Caracteristicas";
 export { default as SistemasScala } from "./Scala/07_Sistemas";
 export { default as DescargasScala } from "./Scala/08_Descargas";
+//Archiform
+export { default as IndiceArchiform } from "./Archiform/01_Inicio";
+export { default as DolckerArchiform } from "./Archiform/02_Dolcker";
+export { default as VentajasArchiform } from "./Archiform/03_Ventajas";
+export { default as AplicacionesArchiform } from "./Archiform/04_Aplicaciones";
+export { default as DisenosArchiform } from "./Archiform/05_Diseno";
+export { default as CaracteristicasArchiform } from "./Archiform/06_Caracteristicas";
+export { default as SistemasArchiform } from "./Archiform/07_Sistemas";
+export { default as DescargasArchiform } from "./Archiform/08_Descargas";
