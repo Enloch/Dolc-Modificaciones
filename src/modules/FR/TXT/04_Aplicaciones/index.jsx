@@ -19,7 +19,7 @@ const AplicacionesTline = ({ id }) => {
         backgroundColor={COLORS.gray02}
         rowGap={DISTANCES.small}
       >
-        <Titulo color={COLORS.gray08}>Aplicaciones</Titulo>
+        <Titulo color={COLORS.gray08}>Applications</Titulo>
         <ImageWithCaption
           src={img1}
           alt="Imagen de Aplicaciones 1"
@@ -38,7 +38,7 @@ const AplicacionesTline = ({ id }) => {
         backgroundColor={COLORS.gray01}
         rowGap={DISTANCES.small}
       >
-        <Titulo2 color={COLORS.gray08}>Rehabilitación</Titulo2>
+        <Titulo2 color={COLORS.gray08}>Rénovation</Titulo2>
         <ImageWithCaption
           src={img2}
           alt="Imagen de Aplicaciones 1"
@@ -57,7 +57,7 @@ const AplicacionesTline = ({ id }) => {
         backgroundColor={COLORS.gray01}
         rowGap={DISTANCES.small}
       >
-        <Titulo2 color={COLORS.gray08}>Obra nueva</Titulo2>
+        <Titulo2 color={COLORS.gray08}>Nouvelle construction</Titulo2>
         <ImageWithCaption
           src={img3}
           alt="Imagen de Aplicaciones 1"

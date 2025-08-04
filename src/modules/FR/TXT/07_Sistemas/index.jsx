@@ -50,7 +50,7 @@ const SistemasTline = ({ id }) => {
       </Modal>
 
       <StyledSistemas id={id[0]} backgroundColor={COLORS.gray02}>
-        <Titulo>Sistema constructivos</Titulo>
+        <Titulo>Systèmes constructifs</Titulo>
         <ImageWithCaption
           src={sistemas}
           alt="Sistemas introducción"
@@ -60,36 +60,36 @@ const SistemasTline = ({ id }) => {
         <Enlaces>
           <li>
             <a href={"#" + id[1]}>
-              Sistema
+              Système
               <br />
               <strong>TXT-11</strong>
             </a>
           </li>
           <li>
             <a href={"#" + id[2]}>
-              Sistema
+              Système
               <br />
               <strong>TXT-13</strong>
             </a>
           </li>
           <li>
             <a href={"#" + id[3]}>
-              Sistema
+              Système
               <br />
-              <strong>TXT-TC14 Detalles esquina</strong>
+              <strong>TXT-TC14 Détails coin</strong>
             </a>
           </li>
           <li>
             <a href={"#" + id[4]}>
-              Sistema
+              Système
               <br />
-              <strong>TXT-TC14 Detalles recerco</strong>
+              <strong>TXT-TC14 Détails recerco</strong>
             </a>
           </li>
           <li>
             <a href={"#" + id[5]}>
               <br />
-              <strong>TXT-TC14 Leyenda</strong>
+              <strong>TXT-TC14 Légende</strong>
             </a>
           </li>
         </Enlaces>
@@ -110,8 +110,8 @@ const SistemasTline = ({ id }) => {
       <StyledSistemas id={id[2]}>
         <Titulo2>TXT-13</Titulo2>
         <Text>
-          Fachadas que incorporan perfiles estratégicos para generar sombras y
-          potenciar la volumetría.
+          Façades intégrant des profils stratégiques pour générer des ombres et
+          valoriser la volumétrie.
         </Text>
         <ImageWithCaption
           src={txt13}
@@ -124,7 +124,7 @@ const SistemasTline = ({ id }) => {
         <Titulo2>
           TXT-TC14
           <br />
-          Detalles esquina
+          Détails coin
         </Titulo2>
         <StyledGrid>
           <ImageWithCaption
@@ -175,7 +175,7 @@ const SistemasTline = ({ id }) => {
         <Titulo2>
           TXT-TC14
           <br />
-          Detalles recerco
+          Détails recerco
         </Titulo2>
         <StyledGrid>
           <ImageWithCaption
@@ -205,45 +205,45 @@ const SistemasTline = ({ id }) => {
         <Titulo2>
           TXT-TC14
           <br />
-          Leyenda
+          Légende
         </Titulo2>
 
         <LegendList>
-          <p data-number="01">Muro de obra o de hormigón</p>
-          <p data-number="02">Recubrimiento</p>
-          <p data-number="03">Aislamiento</p>
-          <p data-number="04">Cámara deaire ventilada</p>
-          <p data-number="05">Perfil T vertical</p>
+          <p data-number="01">Mur d'ouvrage ou en béton</p>
+          <p data-number="02">Revêtement</p>
+          <p data-number="03">Isolation</p>
+          <p data-number="04">Chambre d'air ventilée</p>
+          <p data-number="05">Profil T vertical</p>
           <p data-number="06">Ménsula</p>
-          <p data-number="07">Taco de Nylon</p>
-          <p data-number="08">Tornillo autotaladrante</p>
-          <p data-number="09">Cerámica Dolcker</p>
-          <p data-number="10">Perfil Dolcker cuadrado</p>
-          <p data-number="11">Perfil Dolcker TXT</p>
-          <p data-number="12">Tornillo autotaladrante cabeza plana</p>
-          <p data-number="13">Fijación química</p>
-          <p data-number="14">Anclaje expansivo INOX</p>
-          <p data-number="15">Perfil Dolcker terminación</p>
-          <p data-number="16">Lámina Kerdi</p>
-          <p data-number="17">Arandela</p>
-          <p data-number="18">Panel Composite</p>
-          <p data-number="19">Cerámica</p>
-          <p data-number="20">Media grapa</p>
-          <p data-number="21">Grapa</p>
-          <p data-number="22">Sikatack panel</p>
-          <p data-number="23">Cinta doble cara</p>
-          <p data-number="24">Angular</p>
-          <p data-number="25">Taco clavo</p>
-          <p data-number="26">Extrusionado</p>
-          <p data-number="27">Sellado ventana</p>
-          <p data-number="28">Rejilla Aluminio perforada</p>
-          <p data-number="29">Lámina impermeabilizante</p>
-          <p data-number="30">Chapa de Aluminio plegada lacada</p>
-          <p data-number="31">Perfil F extrusionado</p>
-          <p data-number="32">Separador</p>
-          <p data-number="33">Poliestireno expandido</p>
-          <p data-number="34">Tornillo autotaladrante cabeza plana</p>
-          <p data-number="35">Cenefa decorativa</p>
+          <p data-number="07">Cheville en Nylon</p>
+          <p data-number="08">Vis autoperceuse</p>
+          <p data-number="09">Céramique Dolcker</p>
+          <p data-number="10">Profil Dolcker carré</p>
+          <p data-number="11">Profil Dolcker TXT</p>
+          <p data-number="12">Vis autoperceuse à tête plate</p>
+          <p data-number="13">Fixation chimique</p>
+          <p data-number="14">Ancrage expansif INOX</p>
+          <p data-number="15">Profil Dolcker de finition</p>
+          <p data-number="16">Feuille Kerdi</p>
+          <p data-number="17">Rondelle</p>
+          <p data-number="18">Panneau Composite</p>
+          <p data-number="19">Céramique</p>
+          <p data-number="20">Demi-agrape</p>
+          <p data-number="21">Agrafe</p>
+          <p data-number="22">Sikatack panneau</p>
+          <p data-number="23">Ruban double face</p>
+          <p data-number="24">Équerre</p>
+          <p data-number="25">Cheville à clou</p>
+          <p data-number="26">Extrudé</p>
+          <p data-number="27">Joint fenêtre</p>
+          <p data-number="28">Grille en aluminium perforé</p>
+          <p data-number="29">Feuille d'étanchéité</p>
+          <p data-number="30">Tôle en aluminium pliée laquée</p>
+          <p data-number="31">Profil F extrudé</p>
+          <p data-number="32">Séparateur</p>
+          <p data-number="33">Polystyrène expansé</p>
+          <p data-number="34">Vis autoperceuse à tête plate</p>
+          <p data-number="35">Frise décorative</p>
         </LegendList>
       </StyledSistemas>
     </>

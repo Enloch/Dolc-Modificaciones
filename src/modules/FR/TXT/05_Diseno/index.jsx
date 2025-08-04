@@ -21,7 +21,7 @@ const DisenosTline = ({ id }) => {
   return (
     <>
       <StyledGaleria id={id[0]} backgroundColor={COLORS.gray02}>
-        <Titulo>Diseño</Titulo>
+        <Titulo>Design</Titulo>
         <StyledSlider className='Slider'>
           <ImageGallery
             items={imagenesGaleria}
@@ -37,7 +37,7 @@ const DisenosTline = ({ id }) => {
         </StyledSlider>
       </StyledGaleria>
       <StyledDisenos id={id[1]} backgroundColor={COLORS.gray01} isEspesores>
-        <Titulo2>Espesores y sistemas de fijación</Titulo2>
+        <Titulo2>Épaisseurs et systèmes de fixation</Titulo2>
         <div className='espesor espesor-1'>
           <img src={ranurado6} alt='' />
           <ul>
@@ -112,7 +112,7 @@ const DisenosTline = ({ id }) => {
       </StyledDisenos>
       {/* <IndiceSeries id={id[1]} queSerieActiva={setSerieActiva} /> */}
       <StyledDisenos id={id[2]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Configurador</Titulo2>
+        <Titulo2>Configurateur</Titulo2>
         <div className='rotador'>
           <Escena3DTXT />
         </div>

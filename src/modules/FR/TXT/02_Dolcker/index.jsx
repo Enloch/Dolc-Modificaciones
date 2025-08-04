@@ -26,11 +26,11 @@ const DolckerTline = ({ id }) => {
   };
 
   const propsVisualizador = {
-    text: "Pasa el ratón por los puntos para ver la información",
+    text: "Passez la souris sur les points pour voir les informations",
     type: "normal",
     indicadores: config,
     imgBackground: img4,
-    alt: "Imagen de fondo con indicadores",
+    alt: "Image de fond avec indicateurs",
   };
 
   return (
@@ -43,7 +43,7 @@ const DolckerTline = ({ id }) => {
         <img src={selectedImage} alt="Ampliada" />
       </Modal>
       <StyledDolcker id={id} backgroundColor={COLORS.gray03}>
-        <Titulo>Dolcker TXT soluciona</Titulo>
+        <Titulo>Dolcker TXT résout</Titulo>
         <div className="dolcker-info">
           {/* <ImageWithCaption
 						src={img3}
@@ -69,26 +69,27 @@ const DolckerTline = ({ id }) => {
             caption="Sistema TXT 11"
           />
           <Text>
-            Innovacion en fachadas ventiladas.
+            Innovation en façades ventilées.
             <br />
             <br />
-            La nueva línea de fachadas ventiladas Dolcker TXT está diseñada para
-            ofrecer versatilidad, eficiencia y un diseño innovador, adaptándose
-            a las exigencias arquitectónicas más vanguardistas.
+            La nouvelle ligne de façades ventilées Dolcker TXT est conçue pour
+            offrir versatilité, efficacité et un design innovant, s'adaptant
+            aux exigences architecturales les plus avant-gardistes.
             <br />
             <br />
-            Su estructura modular y sus diferentes opciones de fijación permiten
-            configuraciones personalizadas que garantizan un resultado estético
-            y funcional de alto nivel.
+            Sa structure modulaire et ses différentes options de fixation permettent
+            des configurations personnalisées qui garantissent un résultat esthétique
+            et fonctionnel de haut niveau.
           </Text>
           <Text>
-            • TXT 11 – Fachadas con alineaciones de revestimiento diferenciadas,
-            destacando una junta vertical lacada en el color elegido por el
-            diseñador.
+            • TXT 11 – Façades avec alignements de revêtement différenciés,
+            mettant en valeur une jointure verticale laquée dans la couleur choisie par le
+            concepteur.
             <br />
-            <br />• TXT 13 – Fachadas que incorporan perfiles estratégicos para
-            generar sombras y potenciar la volumetría.
+            <br />• TXT 13 – Façades intégrant des profils stratégiques pour
+            générer des ombres et valoriser la volumétrie.
           </Text>
+
         </div>
 
         <VisualizadorNota {...propsVisualizador} />

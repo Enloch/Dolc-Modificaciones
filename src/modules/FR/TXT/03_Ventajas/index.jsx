@@ -8,7 +8,7 @@ import Listado from "@components/Listado";
 const VentajasTline = ({ id }) => {
   return (
     <StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-      <Titulo>Ventajas del sistema Dolcker TXT</Titulo>
+      <Titulo>Avantages du système Dolcker TXT</Titulo>
       <ImageWithCaption
         src={img1}
         alt="Imagen de Ventajas 1"
@@ -16,55 +16,53 @@ const VentajasTline = ({ id }) => {
         columnSpan="6"
       />
       <Text>
-        Diseño, innovación y funcionalidad en un solo sistema para fachadas
-        ventiladas.
+        Design, innovation et fonctionnalité en un seul système pour façades
+        ventilées.
       </Text>
       <Listado>
         <li>
-          <strong>Fijación técnica mejorada:</strong> Adaptable a las
-          necesidades estéticas y funcionales de cada proyecto.
+          <strong>Fixation technique améliorée :</strong> Adaptable aux
+          besoins esthétiques et fonctionnels de chaque projet.
         </li>
         <li>
-          <strong>Sistema de fijación mecánica:</strong> Opción de fijación
-          oculta o vista combinada con fijación elástica.
+          <strong>Système de fixation mécanique :</strong> Option de fixation
+          cachée ou apparente combinée avec fixation élastique.
         </li>
         <li>
-          Perfiles diseñados para un{" "}
-          <strong>sistema de libre colocación</strong>, brindando flexibilidad
-          total en el diseño.
+          Profils conçus pour un <strong>système de pose libre</strong>, offrant une flexibilité
+          totale dans la conception.
         </li>
         <li>
-          <strong>Versatilidad dimensional:</strong> Piezas en múltiples
-          tamaños, espesores de 6, 9, 11 y 14 mm, y despiece a medida.
+          <strong>Versatilité dimensionnelle :</strong> Pièces en plusieurs
+          tailles, épaisseurs de 6, 9, 11 et 14 mm, et découpe sur mesure.
         </li>
         <li>
-          Cámaras de hasta 20 cm, optimizando la{" "}
-          <strong>eficiencia térmica y acústica.</strong>
+          Chambres jusqu'à 20 cm, optimisant l'<strong>efficacité thermique et acoustique.</strong>
         </li>
         <li>
-          <strong>Acabados premium:</strong> Piezas con canto oculto lacado y
-          texturas mate, flamed y honed.
+          <strong>Finitions premium :</strong> Pièces avec chant caché laqué et
+          textures mate, flamed et honed.
         </li>
         <li>
-          <strong>Montaje rápido y seguro</strong>, optimizando tiempos de
-          instalación.
+          <strong>Montage rapide et sûr</strong>, optimisant les temps de
+          installation.
         </li>
         <li>
-          <strong>Creatividad sin límites:</strong> Sistema con múltiples formas
-          de colocación, permitiendo diseños innovadores con volúmenes y paños
-          únicos.
+          <strong>Créativité sans limites :</strong> Système avec multiples formes
+          de pose, permettant des designs innovants avec des volumes et des panneaux
+          uniques.
         </li>
         <li>
-          <strong>Perfilería personalizable:</strong> Lacado en colores RAL,
-          imitaciones madera y opciones anodizadas.
+          <strong>Profilés personnalisables :</strong> Laqués en couleurs RAL,
+          imitations bois et options anodisées.
         </li>
         <li>
-          <strong>Opciones de fijación:</strong> Colocación con grapa vista o
-          grapa oculta, según el estilo del proyecto.
+          <strong>Options de fixation :</strong> Pose avec agrafe apparente ou
+          agrafe cachée, selon le style du projet.
         </li>
       </Listado>
       <Text>
-        Más que un revestimiento, una solución que transforma la arquitectura.
+        Plus qu'un revêtement, une solution qui transforme l'architecture.
       </Text>
     </StyledVentajas>
   );
