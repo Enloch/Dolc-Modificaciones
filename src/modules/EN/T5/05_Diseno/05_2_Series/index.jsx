@@ -170,7 +170,7 @@ const Series = ({ ids }) => {
 				<ImageWithCaption
 					src={configfachadaimg}
 					alt="Imagen de Diseños 1"
-					caption="intercambiador de fachada"
+					caption="facade exchanger"
 					columnSpan="6"
 				/>
 				<Anotaciones className="anotacion-variaciones">

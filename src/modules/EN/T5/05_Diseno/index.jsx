@@ -17,7 +17,7 @@ import acabados from "@assets/images/T5/Diseno/Acabados/Dolcker enmallados T5_we
 const Disenos = ({ id }) => {
 	const propsFormato = {
 		anotacion: {
-			text: "Pulsa en el punto para ver las posibilidades de formato",
+			text: "Click on the point to see formatting possibilities",
 			type: "click",
 		},
 		visualizador: {
@@ -30,95 +30,93 @@ const Disenos = ({ id }) => {
 	return (
 		<>
 			<StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
-				<Titulo>Diseño</Titulo>
+				<Titulo>Design</Titulo>
 				<ImageWithCaption
 					src={img1}
 					alt="Imagen de Diseños 1"
-					caption="Arquitectos pasan la referencia"
+					caption="Architects provide the reference"
 					columnSpan="6"
 				/>
 				<Cita
-					cita="La arquitectura debe hablar de su tiempo y lugar, pero anhelar la eternidad"
+					cita="Architecture should speak of its time and place, but yearn for timelessness"
 					author="Frank Gehry"
 					colorAutor={COLORS.gray05}
 				/>
 			</StyledDisenos>
 			<StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
-				<Titulo2>Malla de seguridad</Titulo2>
+				<Titulo2>Safety mesh</Titulo2>
 				<Anotaciones>
 					<Text>
-						El enmallado en la parte trasera del porcelánico de gran formato es
-						una malla de fibra de vidrio adherida con resina a la cara posterior
-						de la losa. Su propósito es reforzar la resistencia mecánica del
-						material, reduciendo el riesgo de fracturas y facilitando su
-						manipulación, transporte e instalación.
+						The mesh on the back of large-format porcelain is a fiberglass mesh
+						bonded with resin to the back of the slab. Its purpose is to
+						reinforce the mechanical strength of the material, reducing the risk
+						of fractures and facilitating handling, transport, and installation.
 						<br />
 						<br />
 						<strong>
-							Beneficios del enmallado en porcelánico de gran formato:
+							Benefits of mesh reinforcement in large-format porcelain:
 						</strong>
 						<br />
 						<br />
-						1. Mayor resistencia a la rotura: La fibra de vidrio ayuda a evitar
-						que la pieza se quiebre con facilidad, especialmente durante el
-						corte o la instalación.
+						1. Greater breakage resistance: The fiberglass helps prevent the
+						piece from breaking easily, especially during cutting or
+						installation.
 						<br />
 						<br />
-						2. Seguridad en la manipulación: Reduce el riesgo de desprendimiento
-						de fragmentos en caso de rotura.
+						2. Handling safety: Reduces the risk of fragment detachment in case
+						of breakage.
 						<br />
 						<br />
-						3. Facilita la instalación: En algunos casos, mejora la adherencia
-						con ciertos adhesivos y morteros.
+						3. Facilitates installation: In some cases, it improves adhesion
+						with certain adhesives and mortars.
 						<br />
 						<br />
-						4. Compensación de tensiones: Ayuda a absorber pequeñas tensiones
-						mecánicas que pueden surgir por variaciones térmicas o flexión del
-						soporte.
+						4. Stress compensation: Helps absorb small mechanical stresses that
+						may arise from thermal variations or substrate flexing.
 						<br />
 						<br />
-						Este tipo de refuerzo es común en losas porcelánicas ultrafinas y en
-						piezas de gran formato que requieren mayor integridad estructural
-						debido a su tamaño
+						This type of reinforcement is common in ultra-thin porcelain slabs
+						and in large-format pieces that require greater structural integrity
+						due to their size.
 					</Text>
 				</Anotaciones>
 				<ImageWithCaption
 					src={acabados}
-					alt="enmallado"
-					caption="(De arriba a abajo)Sin malla, malla continua, malla discontinua"
+					alt="mesh"
+					caption="(Top to bottom) No mesh, continuous mesh, discontinuous mesh"
 					columnSpan="6"
 				/>
 			</StyledDisenos>
 			<StyledDisenos id={id[2]} backgroundColor={COLORS.gray01} isEspesores>
-				<Titulo2>Espesores</Titulo2>
+				<Titulo2>Thicknesses</Titulo2>
 				<div className="espesor espesor-1">
 					<img src={ranurado3} alt="" />
 					<ul>
 						<strong>TC 5 / 3 mm.</strong>
-						<li>Suelo</li>
-						<li>Techo</li>
-						<li>Fachada</li>
-						<li>Recerco</li>
+						<li>Floor</li>
+						<li>Ceiling</li>
+						<li>Facade</li>
+						<li>Frame</li>
 					</ul>
 				</div>
 				<div className="espesor espesor-2">
 					<img src={ranurado5} alt="" />
 					<ul>
 						<strong>TC 5 / 5.6 mm.</strong>
-						<li>Suelo</li>
-						<li>Techo</li>
-						<li>Fachada</li>
-						<li>Recerco</li>
+						<li>Floor</li>
+						<li>Ceiling</li>
+						<li>Facade</li>
+						<li>Frame</li>
 					</ul>
 				</div>
 				<div className="espesor espesor-3">
 					<img src={ranurado8} alt="" />
 					<ul>
 						<strong>TC 5 / 8 mm.</strong>
-						<li>Suelo</li>
-						<li>Techo</li>
-						<li>Fachada</li>
-						<li>Recerco</li>
+						<li>Floor</li>
+						<li>Ceiling</li>
+						<li>Facade</li>
+						<li>Frame</li>
 					</ul>
 				</div>
 			</StyledDisenos>

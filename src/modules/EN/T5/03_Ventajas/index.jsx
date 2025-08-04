@@ -9,7 +9,7 @@ import Listado from "@components/Listado";
 const Ventajas = ({ id }) => {
 	return (
 		<StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-			<Titulo>Ventajas del sistema Dolcker T5 XL</Titulo>
+			<Titulo>Advantages of the Dolcker T5 XL system</Titulo>
 			<ImageWithCaption
 				src={img1}
 				alt="Imagen de Ventajas 1"
@@ -17,16 +17,10 @@ const Ventajas = ({ id }) => {
 				columnSpan="6"
 			/>
 			<Text>
-				Ventajas del Sistema de Fachadas Ventiladas y T5 con Revestimientos de
-				Porcelánico de Gran Formato
+				Advantages of the Ventilated Facade System and T5 with Large Format Porcelain Cladding
 				<br />
 				<br />
-				Las fachadas ventiladas con revestimientos de porcelánico de gran
-				formato ofrecen una solución innovadora y altamente eficiente para la
-				construcción y rehabilitación de edificios. La combinación con sistemas
-				de fijación química optimiza la instalación y el rendimiento del
-				sistema, proporcionando beneficios clave en términos de durabilidad,
-				eficiencia energética y diseño.
+				Ventilated facades with large format porcelain cladding offer an innovative and highly efficient solution for the construction and renovation of buildings. The combination with chemical fixing systems optimizes installation and system performance, providing key benefits in terms of durability, energy efficiency, and design.
 			</Text>
 			<Listado>
 				<strong>Máxima Durabilidad</strong>

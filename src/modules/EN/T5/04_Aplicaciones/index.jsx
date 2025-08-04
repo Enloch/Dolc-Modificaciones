@@ -31,7 +31,7 @@ const Aplicaciones = ({ id }) => {
 				backgroundColor={COLORS.gray02}
 				rowGap={DISTANCES.long}
 			>
-				<Titulo color={COLORS.gray08}>Aplicaciones</Titulo>
+				<Titulo color={COLORS.gray08}>Applications</Titulo>
 				<ImageWithCaption
 					src={img1}
 					alt="Imagen de Aplicaciones 1"
@@ -39,7 +39,7 @@ const Aplicaciones = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="La fachada es el rostro del edificio, y como tal, debe expresar su carácter y propósito."
+					cita="The facade is the face of the building, and as such, it must express its character and purpose."
 					author="Louis Kahn"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -81,7 +81,7 @@ const Aplicaciones = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.medium}
 			>
-				<Titulo2 color={COLORS.gray08}>Rehabilitación</Titulo2>
+				<Titulo2 color={COLORS.gray08}>Renovation</Titulo2>
 				<ImageWithCaption
 					src={img2}
 					alt="Imagen de Aplicaciones 1"
@@ -89,7 +89,7 @@ const Aplicaciones = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="La fachada es el espejo del alma de un edificio."
+					cita="The facade is the mirror of a building's soul."
 					author="Norman Foster"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -100,7 +100,7 @@ const Aplicaciones = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.medium}
 			>
-				<Titulo2 color={COLORS.gray08}>Obra nueva</Titulo2>
+				<Titulo2 color={COLORS.gray08}>New construction</Titulo2>
 				<ImageWithCaption
 					src={img3}
 					alt="Imagen de Aplicaciones 1"
@@ -108,7 +108,7 @@ const Aplicaciones = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="La arquitectura es el juego sabio, correcto y magnífico de los volúmenes bajo la luz."
+					cita="Architecture is the wise, correct, and magnificent play of volumes under the light."
 					author="Le Corbusier"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -119,7 +119,7 @@ const Aplicaciones = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.medium}
 			>
-				<Titulo3 color={COLORS.gray08}>- Fachadas</Titulo3>
+				<Titulo3 color={COLORS.gray08}>- Facades</Titulo3>
 				<ImageWithCaption
 					src={img4}
 					alt="Imagen de Aplicaciones 4"
@@ -133,7 +133,7 @@ const Aplicaciones = ({ id }) => {
 				rowGap={DISTANCES.medium}
 			>
 				<Titulo3 color={COLORS.gray08}>
-					— Terrazas, suelos elevados, techos y soluciones
+					— Terraces, raised floors, ceilings, and solutions
 				</Titulo3>
 				<ImageWithCaption
 					src={img5}

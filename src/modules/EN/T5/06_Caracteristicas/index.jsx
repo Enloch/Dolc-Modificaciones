@@ -47,7 +47,7 @@ const Caracteristicas = ({ id }) => {
   return (
     <>
       <StyledCaracteristicas id={id[0]} backgroundColor={COLORS.gray02}>
-        <Titulo>Características técnicas</Titulo>
+        <Titulo>Technical characteristics</Titulo>
         <ImageWithCaption
           src={caracter1}
           alt='Render por parte de 7475'
@@ -55,47 +55,45 @@ const Caracteristicas = ({ id }) => {
           columnSpan='6'
         />
         <Text>
-          <strong>Diseño y Versatilidad</strong>
+          <strong>Design and Versatility</strong>
         </Text>
         <Listado>
-          <li>Porque la variedad es fundamental, T5 XL te permite elegir entre una rica diversidad de diseños de todos los estilos.</li>
-          <li>Cada serie presenta gráficas diferenciadas para obtener acabados personalizados y abundantes en matices.</li>
-          <li>La colección T5 XL ofrece soluciones estéticas para cada espacio y proyecto.</li>
-          <li>Versatilidad cromática que se adapta a cualquier ambiente interior o exterior.</li>
-          <li>Posibilidad de combinación entre diferentes series para crear espacios únicos.</li>
+          <li>Because variety is essential, T5 XL lets you choose from a rich diversity of designs in all styles.</li>
+          <li>Each series features unique graphics for personalized finishes full of nuances.</li>
+          <li>The T5 XL collection offers aesthetic solutions for every space and project.</li>
+          <li>Chromatic versatility that adapts to any indoor or outdoor environment.</li>
+          <li>Possibility of combining different series to create unique spaces.</li>
         </Listado>
         <Text>
-          <strong>Formato y Rendimiento</strong>
+          <strong>Format and Performance</strong>
         </Text>
         <Listado>
-          <li>Grande en tamaño, grande en prestaciones. Con T5 XL todas las ventajas son XXL.</li>
-          <li>El formato de gran dimensión permite crear espacios continuos con menor número de juntas.</li>
-          <li>Facilidad de instalación gracias a su relación tamaño-peso optimizada.</li>
-          <li>Perfecto para proyectos de gran envergadura donde el impacto visual es primordial.</li>
-          <li>Ideal para espacios amplios donde se busca maximizar la sensación de amplitud.</li>
+          <li>Big in size, big in performance. With T5 XL, all the advantages are XXL.</li>
+          <li>The large format allows for continuous spaces with fewer joints.</li>
+          <li>Easy installation thanks to its optimized size-to-weight ratio.</li>
+          <li>Perfect for large-scale projects where visual impact is key.</li>
+          <li>Ideal for spacious areas where maximizing the sense of openness is desired.</li>
         </Listado>
         <Text>
-          <strong>Innovación y Calidad</strong>
+          <strong>Innovation and Quality</strong>
         </Text>
         <Listado>
-          <li>T5 XL es el resultado de una constante apuesta por la innovación tecnológica.</li>
-          <li>Los últimos avances en I+D incorporados al proceso de fabricación permiten disfrutar de un producto con cualidades extraordinarias.</li>
-          <li>Resistencia superior a impactos y desgaste diario.</li>
-          <li>Propiedades antibacterianas que garantizan superficies higiénicas y seguras.</li>
-          <li>Materiales seleccionados de primera calidad para asegurar durabilidad extrema.</li>
-          <li>Proceso de producción sostenible comprometido con el medio ambiente.</li>
-          <li>T5 XL representa la vanguardia en diseño con carácter atemporal.</li>
+          <li>T5 XL is the result of a constant commitment to technological innovation.</li>
+          <li>The latest R&D advances incorporated into the manufacturing process result in a product with extraordinary qualities.</li>
+          <li>Superior resistance to impacts and daily wear.</li>
+          <li>Antibacterial properties that ensure hygienic and safe surfaces.</li>
+          <li>Top-quality selected materials to ensure extreme durability.</li>
+          <li>Sustainable production process committed to the environment.</li>
+          <li>T5 XL represents the cutting edge in design with timeless character.</li>
         </Listado>
       </StyledCaracteristicas>
       <StyledCaracteristicas id={id[1]} backgroundColor={COLORS.gray02}>
-        <Titulo>Datos técnicos</Titulo>
+        <Titulo>Technical data</Titulo>
         <Text>
-          <strong>CARACTERÍSTICAS FÍSICAS Y MECÁNICAS</strong>
+          <strong>PHYSICAL AND MECHANICAL CHARACTERISTICS</strong>
           <br />
           <br />
-          Las piezas de cerámica se clasifican como baldosas cerámicas prensadas
-          en seco con baja absorción de agua según norma UNE-EN 14411, con las
-          siguientes características declaradas por el fabricante:
+          The ceramic pieces are classified as dry-pressed ceramic tiles with low water absorption according to UNE-EN 14411, with the following characteristics declared by the manufacturer:
         </Text>
 
         <Box sx={{ width: "100%", overflow: "auto", mt: 3 }}>
@@ -126,7 +124,7 @@ const Caracteristicas = ({ id }) => {
               }}
             >
               <Typography sx={{ fontWeight: 600 }}>
-                CARACTERÍSTICAS DIMENSIONALES / DIMENSIONAL CHARACTERISTICS
+                DIMENSIONAL CHARACTERISTICS
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -155,7 +153,7 @@ const Caracteristicas = ({ id }) => {
                       </TableCell>
                       <TableCell sx={{ padding: "10px 10px", width: "180px" }}>
                         <Typography sx={{ fontWeight: 600 }}>
-                          CARACTERÍSTICAS TÉCNICAS/
+                          TECHNICAL CHARACTERISTICS/
                           <br />
                           CARACTERÍSTICAS TÉCNICAS
                         </Typography>
@@ -203,7 +201,7 @@ const Caracteristicas = ({ id }) => {
                       </TableCell>
                       <TableCell sx={{ padding: "10px 10px" }}>
                         <Typography variant="body2">
-                          LONGITUD Y ANCHURA/
+                          LENGTH AND WIDTH/
                           <br />
                           LENGTH AND WIDTH
                         </Typography>
@@ -225,7 +223,7 @@ const Caracteristicas = ({ id }) => {
                     <TableRow>
                       <TableCell sx={{ padding: "10px 10px" }}>
                         <Typography variant="body2">
-                          ESPESOR/
+                          THICKNESS/
                           <br />
                           THICKNESS
                         </Typography>
@@ -251,7 +249,7 @@ const Caracteristicas = ({ id }) => {
                     <TableRow>
                       <TableCell sx={{ padding: "10px 10px" }}>
                         <Typography variant="body2">
-                          RECTITUD DE LOS LADOS/
+                          STRAIGHTNESS OF EDGES/
                           <br />
                           WARPAGE OF EDGES
                         </Typography>
@@ -273,7 +271,7 @@ const Caracteristicas = ({ id }) => {
                     <TableRow>
                       <TableCell sx={{ padding: "10px 10px" }}>
                         <Typography variant="body2">
-                          ORTOGONALIDAD/
+                          ORTHOGONALITY/
                           <br />
                           WEDGING
                         </Typography>

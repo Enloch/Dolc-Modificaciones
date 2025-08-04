@@ -6,7 +6,7 @@ import { Titulo } from "@components/Titulos";
 import useSerie from "@hooks/useSerie";
 import StyledSerie from "./styles";
 
-// Define el componente `Serie` que recibe varias props
+// Define the `Serie` component that receives several props
 const Serie = ({
 	children,
 	id,
@@ -15,7 +15,7 @@ const Serie = ({
 	setFullScreenTitulo,
 	backgroundColor,
 }) => {
-	// Usa el hook `useSerie` para obtener datos de configuración y elementos de la serie
+	// Use the `useSerie` hook to get configuration data and series elements
 	const {
 		titulo,
 		descripcion,
@@ -26,36 +26,36 @@ const Serie = ({
 		imgSelectorAmbiente,
 	} = useSerie(config, setFullScreenSrc, setFullScreenTitulo);
 
-	// Define un estado local `isOverflow` para indicar si hay desbordamiento horizontal en la sección de imágenes
+	// Define a local state `isOverflow` to indicate if there is horizontal overflow in the images section
 	const [isOverflow, setIsOverflow] = useState(false);
 
-	// Usa el hook `useRef` para obtener una referencia al contenedor de imágenes de muestra
+	// Use the `useRef` hook to get a reference to the sample images container
 	const divEjemplosRef = useRef();
 
-	// Define una función que se ejecuta cuando se carga el componente
+	// Define a function that runs when the component loads
 	const handleOnLoad = () => {
-		// Verifica si hay desbordamiento horizontal en el contenedor de imágenes de muestra
+		// Check if there is horizontal overflow in the sample images container
 		const overflowBoolean =
 			divEjemplosRef.current.scrollWidth > divEjemplosRef.current.clientWidth;
 		setIsOverflow(overflowBoolean);
 	};
 
-	// Renderiza los elementos HTML de la serie
+	// Render the HTML elements of the series
 	return (
 		<StyledSerie id={id} backgroundColor={backgroundColor}>
-			{/* Muestra el título de la serie */}
+			{/* Show the series title */}
 			<Titulo>{titulo}</Titulo>
 
-			{/* Muestra una anotación si hay desbordamiento horizontal en la sección de imágenes */}
+			{/* Show an annotation if there is horizontal overflow in the images section */}
 			{isOverflow ? (
 				<Anotacion
 					type="swipe"
-					text="Desliza con el ratón o el dedo para ver todas las imágenes"
+					text="Swipe with your mouse or finger to view all images"
 					className="anotacion-ejemplo"
 				/>
 			) : undefined}
 
-			{/* Muestra los elementos de selección de ambiente y los indicadores */}
+			{/* Show the environment selection elements and indicators */}
 			<AmbienteContainer onLoad={handleOnLoad} ref={divEjemplosRef}>
 				{imgAmbiente}
 				<AmbienteContainer.SeleccionarMuestra>
@@ -64,23 +64,23 @@ const Serie = ({
 				</AmbienteContainer.SeleccionarMuestra>
 			</AmbienteContainer>
 
-			{/* Muestra la descripción de la serie */}
+			{/* Show the series description */}
 			<Text className="text-descripcion">{descripcion}</Text>
 
-			{/* Muestra una anotación interactiva */}
+			{/* Show an interactive annotation */}
 			<Anotacion
 				type="click"
-				text="Pulsa en la imagen para ver la imagen a tamaño completo"
+				text="Click on the image to view it in full size"
 				className="anotacion-muestra"
 			/>
 
-			{/* Muestra las imágenes de muestra */}
+			{/* Show the sample images */}
 			<div className="muestra-container">{imgsMuestra}</div>
 
-			{/* Muestra las imágenes de acabado si están disponibles */}
+			{/* Show the finish images if available */}
 			{imgsAcabados ? (
 				<>
-					<Text className="text-acabados">Acabados</Text>
+					<Text className="text-acabados">Finishes</Text>
 					<div className="acabado-container">{imgsAcabados}</div>
 				</>
 			) : undefined}
@@ -91,5 +91,5 @@ const Serie = ({
 	);
 };
 
-// Exporta el componente `Serie` como valor predeterminado
+// Export the `Serie` component as the default value
 export default Serie;

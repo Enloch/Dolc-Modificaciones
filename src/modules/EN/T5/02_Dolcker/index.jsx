@@ -12,7 +12,7 @@ import config from "@configs/configDolckerT5";
 
 const Dolcker = ({ id }) => {
 	const propsVisualizador = {
-		text: "Pasa el ratón por los puntos para ver la información",
+		text: "Hover over the points to see information",
 		type: "normal",
 		indicadores: config,
 		imgBackground: img3,
@@ -22,68 +22,53 @@ const Dolcker = ({ id }) => {
 	return (
 		<>
 			<StyledDolcker id={id} backgroundColor={COLORS.gray03}>
-				<Titulo>Dolcker T5 XL soluciona</Titulo>
+				<Titulo>Dolcker T5 XL solution</Titulo>
 				<div className="dolcker-info">
 					<ImageWithCaption
 						src={img1}
 						alt="Imagen Dolcker 2"
-						caption="Ejemplo de Sistemas Dolcker T5 XL"
+						caption="Example of Dolcker T5 XL Systems"
 					/>
 					<Text>
-						Dolcker T5 XL: innovación y diseño para fachadas ventiladas de
-						última generación.
+						Dolcker T5 XL: innovation and design for next-generation ventilated facades.
 						<br />
 						<br />
-						El <strong>Sistema DOL-T5 XL</strong> es una solución avanzada para
-						fachadas ventiladas, diseñada para la instalación de revestimientos
-						cerámicos de gran formato con un sistema de fijación híbrido,
-						combinando grapa oculta y adhesivo estructural. Su diseño optimizado
-						garantiza un montaje ligero, seguro y eficiente, utilizando
-						materiales de la más alta calidad. Características Principales
+						The <strong>DOL-T5 XL System</strong> is an advanced solution for ventilated facades, designed for the installation of large-format ceramic cladding with a hybrid fixing system, combining hidden clips and structural adhesive. Its optimized design ensures a lightweight, safe, and efficient assembly using the highest quality materials. Main Features
 						<br />
 						<br />
-						<strong>Sistema de fijación:</strong>
+						<strong>Fixing system:</strong>
 						<br />
-						Grapa oculta para una estética limpia y uniforme.
+						Hidden clip for a clean and uniform aesthetic.
 						<br />
-						Compatible con cerámica de 3,5 - 5,6 - 10,5 - 12 mm de espesor.
+						Compatible with ceramics of 3.5 - 5.6 - 10.5 - 12 mm thickness.
 						<br />
-						Juntas horizontales de 5-6 mm y juntas verticales de 2 mm o más,
-						asegurando estabilidad y estética.
-						<br />
-						<br />
-						<strong>Anclaje y perfilería:</strong>
-						<br />
-						Ménsulas simples y dobles en L de aluminio para una fijación
-						robusta.
-						<br />
-						Perfiles verticales en T y L de aluminio extruido, lacados en negro,
-						garantizando resistencia y durabilidad.
-						<br />
-						Anclaje expansivo inoxidable para fijación en forjados.
-						<br />
-						Anclaje con taco de nylon y tornillo para muros de ladrillo.
-						<br />
-						Tornillería auto-taladrante con arandela de EPDM de acero
-						inoxidable, asegurando máxima sujeción.
-						<br /> Tornillería auto-taladrante de cabeza plana lacada en acero
-						inoxidable para una fijación discreta y resistente.
+						Horizontal joints of 5-6 mm and vertical joints of 2 mm or more, ensuring stability and aesthetics.
 						<br />
 						<br />
-						<strong>Fijaciones:</strong>
+						<strong>Anchoring and profiles:</strong>
 						<br />
-						Fijación mecánica con grapa oculta lacada en acero inoxidable con
-						una salida de 5,6 mm.
+						Single and double L-shaped aluminum brackets for robust fixing.
 						<br />
-						Fijación química con adhesivo estructural SikaTack Panel, asegurando
-						una unión fuerte y duradera.
+						Vertical T and L extruded aluminum profiles, lacquered in black, ensuring resistance and durability.
+						<br />
+						Stainless steel expansion anchor for slab fixing.
+						<br />
+						Anchor with nylon plug and screw for brick walls.
+						<br />
+						Self-drilling screws with EPDM washer in stainless steel, ensuring maximum hold.
+						<br /> Flat head self-drilling screws lacquered in stainless steel for discreet and resistant fixing.
 						<br />
 						<br />
-						<strong>Otros componentes:</strong>
-						<br /> Imprimación Sika Primer 210T, optimizando la adherencia del
-						adhesivo.
-						<br /> Cinta adhesiva de doble cara, mejorando la fijación inicial y
-						facilitando la instalación.
+						<strong>Fixings:</strong>
+						<br />
+						Mechanical fixing with hidden lacquered stainless steel clip with a 5.6 mm outlet.
+						<br />
+						Chemical fixing with SikaTack Panel structural adhesive, ensuring a strong and durable bond.
+						<br />
+						<br />
+						<strong>Other components:</strong>
+						<br /> Sika Primer 210T, optimizing adhesive bonding.
+						<br /> Double-sided adhesive tape, improving initial fixing and facilitating installation.
 					</Text>
 				</div>
 				<VisualizadorNota {...propsVisualizador} />
