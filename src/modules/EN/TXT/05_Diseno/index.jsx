@@ -103,7 +103,7 @@ const DisenosTline = ({ id }) => {
 					maximum structural stability and an exceptional visual impact.
 					<br />
 					<br />
-					• TC 9 – Grapa vista designed for pieces with thicknesses of 9 mm,
+					• TC 9 – Visible clip designed for pieces with thicknesses of 9 mm,
 					offering secure and aesthetic support.
 					<br />
 					<br />• TC 11 & TC 14 – Hidden fastening system with continuous
