@@ -1,0 +1,103 @@
+[
+  {
+    "title": "Accueil",
+    "link": "/"
+  },
+  {
+    "title": "Dolcker T5 XL résout",
+    "link": "#dolcker"
+  },
+  {
+    "title": "Avantages du système Dolcker T5 XL",
+    "link": "#ventajas"
+  },
+  {
+    "title": "Applications",
+    "subList": [
+      {
+        "title": "Applications",
+        "link": "#aplicaciones"
+      },
+      {
+        "title": "Rénovation",
+        "link": "#rehabilitacion"
+      },
+      {
+        "title": "Construction neuve",
+        "subList": [
+          {
+            "title": "Construction neuve",
+            "link": "#obra-nueva"
+          },
+          {
+            "title": "Façades",
+            "link": "#fachadas"
+          },
+          {
+            "title": "Terrasses, sols surélevés, plafonds et solutions",
+            "link": "#terrazas"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Design",
+    "subList": [
+      {
+        "title": "Design",
+        "link": "#diseno"
+      },
+      {
+        "title": "Mailles de sécurité",
+        "link": "#mallas-de-seguridad"
+      },
+      {
+        "title": "Épaisseurs",
+        "link": "#espesores"
+      },
+      {
+        "title": "Séries",
+        "link": "#series"
+      }
+    ]
+  },
+  {
+    "title": "Caractéristiques",
+    "subList": [
+      {
+        "title": "Caractéristiques techniques",
+        "link": "#caracteristicas-especiales"
+      },
+      {
+        "title": "Données techniques",
+        "link": "#datos-tecnicos"
+      }
+    ]
+  },
+  {
+    "title": "Systèmes",
+    "subList": [
+      {
+        "title": "Systèmes",
+        "link": "#sistemas"
+      },
+      {
+        "title": "T5 XL GO",
+        "link": "#t5-go"
+      },
+      {
+        "title": "T5 XL GV",
+        "link": "#t5-gv"
+      },
+      {
+        "title": "T5 XL PLUS",
+        "link": "#t5-plus"
+      }
+    ]
+  },
+  {
+    "title": "Téléchargements",
+    "link": "#descargas"
+  }
+]
