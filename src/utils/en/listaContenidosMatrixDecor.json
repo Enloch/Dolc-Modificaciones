@@ -1,0 +1,61 @@
+[
+	{
+		"title": "Home",
+		"link": "/en"
+	},
+	{
+		"title": "Dolcker Matrix Decor solves",
+		"link": "#dolcker"
+	},
+	{
+		"title": "Advantages of Dolcker Matrix Decor system",
+		"link": "#ventajas"
+	},
+	{
+		"title": "Applications",
+		"subList": [
+			{
+				"title": "Applications",
+				"link": "#aplicaciones"
+			},
+			{
+				"title": "Portals",
+				"link": "#portales"
+			},
+			{
+				"title": "Bath",
+				"link": "#bano"
+			},
+			{
+				"title": "Spaces",
+				"link": "#espacios"
+			}
+		]
+	},
+	{
+		"title": "Design",
+		"subList": [
+			{
+				"title": "Design",
+				"link": "#diseno"
+			},
+			{
+				"title": "Collections",
+				"link": "#colecciones"
+			},
+			{
+				"title": "Configurator",
+				"link": "#configurador"
+			}
+		]
+	},
+	{
+		"title": "Technical features",
+		"subList": [
+			{
+				"title": "Technical features",
+				"link": "#caracteristicas-especiales"
+			}
+		]
+	}
+]

@@ -1,4 +1,4 @@
-import ListaContenidos from "../../../../components/ListaContenidosTline";
+import ListaContenidos from "../../../../components/ListaContenidosMatrix";
 import { Titulo } from "../../../../components/Titulos";
 import { COLORS } from "../../../../global/GlobalStyles";
 import { StyledIndice } from "./styles";

@@ -5,6 +5,7 @@ import { StyledIndice } from "./styles";
 import { BsMouse } from "react-icons/bs";
 import scrollTo from "../../../../helpers/scrollTo";
 import useMenuDesplegable from "../../../../hooks/useMenuDesplegable";
+import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 // Define la animación para la flecha
 const pulse = keyframes`
@@ -39,7 +40,7 @@ const Indice = ({ indiceRef }) => {
 		<>
 			<StyledIndice backgroundColor={COLORS.gray06} ref={indiceRef} id="indice">
 				<Titulo color={COLORS.gray01}>Dolcker MATRIX DECOR</Titulo>
-				<ListaContenidos />
+				<ListaContenidos en={true} />
 				<AnimatedArrow
 					size={32}
 					color="white"
@@ -47,12 +48,13 @@ const Indice = ({ indiceRef }) => {
 					className="flecha-indice"
 					onClick={handleClickFlecha}
 				/>
-				{/* <div className='idiomas'>
-          <Link to='/dolcker-system' className='seleccionado'>
-            ES
-          </Link>
-          <Link to='/en/dolcker-system'>EN</Link>
-        </div> */}
+				<div className="idiomas">
+					<Link to="/dolcker-matrix-decor">ES</Link>
+					<Link to="/en/dolcker-matrix-decor" className="seleccionado">
+						EN
+					</Link>
+					<Link to="/fr/dolcker-matrix-decor">FR</Link>
+				</div>
 			</StyledIndice>
 			{menuDesplegable}
 			{btnIndice}

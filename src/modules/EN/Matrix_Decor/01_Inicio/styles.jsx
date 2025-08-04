@@ -6,9 +6,8 @@ const StyledIndice = styled(Seccion)`
 	min-height: 100vh;
 	.flecha-indice {
 		width: 25px;
-		grid-column: 6;
+		grid-column: 5;
 		align-self: flex-end;
-		justify-self: flex-end;
 		cursor: pointer;
 		${mediaQueryTablet(css`
 			display: none;
@@ -21,6 +20,7 @@ const StyledIndice = styled(Seccion)`
 		grid-column: 12;
 		grid-row: 1;
 		display: flex;
+		gap: 1rem;
 		${TextMedium}
 
 		a {
