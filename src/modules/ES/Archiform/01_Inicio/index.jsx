@@ -22,44 +22,45 @@ const pulse = keyframes`
 `;
 // Define los estilos para la flecha animada
 const AnimatedArrow = styled(BsMouse)`
-  animation: ${pulse} 2s ease-in-out infinite;
+	animation: ${pulse} 2s ease-in-out infinite;
 `;
 const Indice = ({ indiceRef }) => {
-  const { menuDesplegable, btnIndice } = useMenuDesplegable(
-    ListaContenidos,
-    "Índice",
-    indiceRef
-  );
+	const { menuDesplegable, btnIndice } = useMenuDesplegable(
+		ListaContenidos,
+		"Índice",
+		indiceRef
+	);
 
-  const handleClickFlecha = () => {
-    const position =
-      indiceRef.current.offsetHeight + indiceRef.current.offsetTop;
-    scrollTo(position, 2000);
-  };
+	const handleClickFlecha = () => {
+		const position =
+			indiceRef.current.offsetHeight + indiceRef.current.offsetTop;
+		scrollTo(position, 2000);
+	};
 
-  return (
-    <>
-      <StyledIndice backgroundColor={COLORS.gray06} ref={indiceRef} id='indice'>
-        <Titulo color={COLORS.gray01}>Dolcker ARCHIFORM</Titulo>
-        <ListaContenidos />
-        <AnimatedArrow
-          size={32}
-          color='white'
-          alt=''
-          className='flecha-indice'
-          onClick={handleClickFlecha}
-        />
-        {/* <div className='idiomas'>
-          <Link to='/dolcker-system' className='seleccionado'>
-            ES
-          </Link>
-          <Link to='/en/dolcker-system'>EN</Link>
-        </div> */}
-      </StyledIndice>
-      {menuDesplegable}
-      {btnIndice}
-    </>
-  );
+	return (
+		<>
+			<StyledIndice backgroundColor={COLORS.gray06} ref={indiceRef} id="indice">
+				<Titulo color={COLORS.gray01}>Dolcker ARCHIFORM</Titulo>
+				<ListaContenidos />
+				<AnimatedArrow
+					size={32}
+					color="white"
+					alt=""
+					className="flecha-indice"
+					onClick={handleClickFlecha}
+				/>
+				<div className="idiomas">
+					<Link to="/dolcker-archiform" className="seleccionado">
+						ES
+					</Link>
+					<Link to="/en/dolcker-archiform">EN</Link>
+					<Link to="/fr/dolcker-archiform">FR</Link>
+				</div>
+			</StyledIndice>
+			{menuDesplegable}
+			{btnIndice}
+		</>
+	);
 };
 
 export default Indice;
