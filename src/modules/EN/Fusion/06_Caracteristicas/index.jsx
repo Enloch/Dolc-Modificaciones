@@ -197,8 +197,8 @@ const Caracteristicas = ({ id }) => {
 									},
 								}}
 							>
-								<Typography sx={{ fontWeight: 600 }}>
-									CARACTERÍSTICAS DIMENSIONALES / DIMENSIONAL CHARACTERISTICS
+								<Typography sx={{ fontWeight: "bold" }}>
+									Dimensions and Tolerances
 								</Typography>
 							</AccordionSummary>
 							<AccordionDetails>
@@ -224,8 +224,6 @@ const Caracteristicas = ({ id }) => {
 													sx={{ padding: "10px 10px", width: "60px" }}
 												></TableCell>
 												<TableCell sx={{ padding: "10px 10px" }}>
-													CARACTERÍSTICAS DIMENSIONALES
-													<br />
 													DIMENSIONAL CHARACTERISTICS
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -238,8 +236,7 @@ const Caracteristicas = ({ id }) => {
 													colSpan={3}
 													sx={{ padding: "10px 10px" }}
 												>
-													DOLCKER VALORES PRIMERA CALIDAD / DOLCKER VALUES 1ST
-													QUALITY
+													DOLCKER VALUES 1ST QUALITY
 													<TableRow>
 														<TableCell
 															align="center"
@@ -288,8 +285,6 @@ const Caracteristicas = ({ id }) => {
 													/>
 												</TableCell>
 												<TableCell sx={{ padding: "10px 10px" }}>
-													LONGITUD
-													<br />
 													LENGTH AND WIDTH
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -307,8 +302,6 @@ const Caracteristicas = ({ id }) => {
 											</TableRow>
 											<TableRow>
 												<TableCell sx={{ padding: "10px 10px" }}>
-													ESPESOR
-													<br />
 													THICKNESS
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -326,8 +319,6 @@ const Caracteristicas = ({ id }) => {
 											</TableRow>
 											<TableRow>
 												<TableCell sx={{ padding: "10px 10px" }}>
-													RECTITUD DE LOS LADOS
-													<br />
 													WARPAGE OF EDGES
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -345,8 +336,6 @@ const Caracteristicas = ({ id }) => {
 											</TableRow>
 											<TableRow>
 												<TableCell sx={{ padding: "10px 10px" }}>
-													ORTOGONALIDAD
-													<br />
 													WEDGING
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -380,8 +369,6 @@ const Caracteristicas = ({ id }) => {
 													/>
 												</TableCell>
 												<TableCell sx={{ padding: "10px 10px" }}>
-													CURVATURA CENTRAL Y LATERAL
-													<br />
 													CENTRAL AND EDGE CURVATURE
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -399,8 +386,6 @@ const Caracteristicas = ({ id }) => {
 											</TableRow>
 											<TableRow>
 												<TableCell sx={{ padding: "10px 10px" }}>
-													ALABEO
-													<br />
 													WARPAGE
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -430,8 +415,6 @@ const Caracteristicas = ({ id }) => {
 													/>
 												</TableCell>
 												<TableCell sx={{ padding: "10px 10px" }}>
-													ABSORCIÓN DE AGUA
-													<br />
 													WATER ABSORPTION
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -477,8 +460,8 @@ const Caracteristicas = ({ id }) => {
 									},
 								}}
 							>
-								<Typography sx={{ fontWeight: 600 }}>
-									CARACTERÍSTICAS MECÁNICAS / MECHANICAL CHARACTERISTICS
+								<Typography sx={{ fontWeight: "bold" }}>
+									Mechanical Characteristics
 								</Typography>
 							</AccordionSummary>
 							<AccordionDetails>
@@ -819,8 +802,8 @@ const Caracteristicas = ({ id }) => {
 									},
 								}}
 							>
-								<Typography sx={{ fontWeight: 600 }}>
-									CARACTERÍSTICAS HIGIÉNICAS / HYGIENIC CHARACTERISTICS
+								<Typography sx={{ fontWeight: "bold" }}>
+									Hygiene Characteristics
 								</Typography>
 							</AccordionSummary>
 							<AccordionDetails>
@@ -851,15 +834,11 @@ const Caracteristicas = ({ id }) => {
 												<TableCell
 													sx={{ width: "180px", padding: "10px 10px" }}
 												>
-													CARACTERÍSTICAS HIGIÉNICAS
-													<br />
 													HYGIENIC CHARACTERISTICS
 												</TableCell>
 												<TableCell
 													sx={{ width: "220px", padding: "10px 10px" }}
 												>
-													TIPO DE ÁCIDO O BASE
-													<br />
 													TYPE OF ACID OR BASE
 												</TableCell>
 												<TableCell
@@ -889,7 +868,7 @@ const Caracteristicas = ({ id }) => {
 												>
 													DOLCKER
 													<br />
-													Valores 1ª Calidad / Values 1st Quality
+													Values 1st Quality
 												</TableCell>
 											</TableRow>
 											<TableRow>
@@ -946,13 +925,9 @@ const Caracteristicas = ({ id }) => {
 													/>
 												</TableCell>
 												<TableCell rowSpan={4} sx={{ padding: "10px 10px" }}>
-													RESISTENCIA QUÍMICA
-													<br />
 													CHEMICAL RESISTANCE
 												</TableCell>
 												<TableCell sx={{ padding: "10px 10px" }}>
-													ÁCIDOS BAJA CONCENTRACIÓN
-													<br />
 													LOW CONCENTRATION ACIDS
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -962,19 +937,17 @@ const Caracteristicas = ({ id }) => {
 													MD
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
-													CLASE LA
+													CLASS LA
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
-													CLASE LA
+													CLASS LA
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
-													CLASE LA
+													CLASS LA
 												</TableCell>
 											</TableRow>
 											<TableRow>
 												<TableCell sx={{ padding: "10px 10px" }}>
-													ÁCIDOS ALTA CONCENTRACIÓN
-													<br />
 													HIGH CONCENTRATION ACIDS
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -984,19 +957,17 @@ const Caracteristicas = ({ id }) => {
 													MD
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
-													CLASE HA
+													CLASS HA
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
-													CLASE HA
+													CLASS HA
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
-													CLASE HA
+													CLASS HA
 												</TableCell>
 											</TableRow>
 											<TableRow>
 												<TableCell sx={{ padding: "10px 10px" }}>
-													BASES BAJA CONCENTRACIÓN
-													<br />
 													LOW CONCENTRATION ALKALI
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -1006,19 +977,17 @@ const Caracteristicas = ({ id }) => {
 													MD
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
-													CLASE LA
+													CLASS LA
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
-													CLASE LA
+													CLASS LA
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
-													CLASE LA
+													CLASS LA
 												</TableCell>
 											</TableRow>
 											<TableRow>
 												<TableCell sx={{ padding: "10px 10px" }}>
-													BASES ALTA CONCENTRACIÓN
-													<br />
 													HIGH CONCENTRATION ALKALI
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
@@ -1028,13 +997,13 @@ const Caracteristicas = ({ id }) => {
 													MD
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
-													CLASE HA
+													CLASS HA
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
-													CLASE HA
+													CLASS HA
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
-													CLASE HA
+													CLASS HA
 												</TableCell>
 											</TableRow>
 											<TableRow>
@@ -1051,8 +1020,6 @@ const Caracteristicas = ({ id }) => {
 													/>
 												</TableCell>
 												<TableCell sx={{ padding: "10px 10px" }}>
-													RESISTENCIA A LAS MANCHAS
-													<br />
 													STAINS RESISTANCE
 												</TableCell>
 												<TableCell sx={{ padding: "10px 10px" }}></TableCell>
@@ -1086,8 +1053,6 @@ const Caracteristicas = ({ id }) => {
 													/>
 												</TableCell>
 												<TableCell sx={{ padding: "10px 10px" }}>
-													PRODUCTOS DOMÉSTICOS DE LIMPIEZA Y SALES DE PISCINA
-													<br />
 													HOUSEHOLD DETERGENTS AND ADDITIVES FOR SWIMMING-POOLS
 												</TableCell>
 												<TableCell sx={{ padding: "10px 10px" }}></TableCell>
@@ -1100,13 +1065,13 @@ const Caracteristicas = ({ id }) => {
 													MINIMUM UB
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
-													CLASE LA
+													CLASS LA
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
-													CLASE LA
+													CLASS LA
 												</TableCell>
 												<TableCell align="center" sx={{ padding: "10px 10px" }}>
-													CLASE LA
+													CLASS LA
 												</TableCell>
 											</TableRow>
 										</TableBody>
