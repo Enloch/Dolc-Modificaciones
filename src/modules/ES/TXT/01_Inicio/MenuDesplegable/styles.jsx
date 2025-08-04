@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Seccion from "../../../../components/Seccion";
+import Seccion from "@components/Seccion";
 
 const StyledMenuDesplegable = styled(Seccion)`
   min-height: 100vh;

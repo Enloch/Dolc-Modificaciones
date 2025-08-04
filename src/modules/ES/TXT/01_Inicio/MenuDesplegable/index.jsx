@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import { COLORS } from '../../../../global/GlobalStyles'
-import { slideDown } from '../../../../helpers/animations'
+import { COLORS } from '@global/GlobalStyles'
+import { slideDown } from '@helpers/animations'
 import StyledMenuDesplegable from './styles'
 
 const MenuDesplegable = ({ children, menuRef, setIsOpen }) => {
