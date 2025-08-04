@@ -1,0 +1,193 @@
+[
+  {
+    "title": "Accueil",
+    "link": "/"
+  },
+  {
+    "title": "Le système Dolcker Fusion résout",
+    "link": "#dolcker"
+  },
+  {
+    "title": "Avantages du système Dolcker Fusion",
+    "link": "#ventajas"
+  },
+  {
+    "title": "Applications",
+    "subList": [
+      {
+        "title": "Applications",
+        "link": "#aplicaciones"
+      },
+      {
+        "title": "Fusion Terracotta",
+        "link": "#terracota"
+      },
+      {
+        "title": "Fusion Couleur",
+        "link": "#color"
+      },
+      {
+        "title": "Fusion Petra",
+        "link": "#petra"
+      },
+      {
+        "title": "Fusion Texture",
+        "link": "#textura"
+      }
+    ]
+  },
+  {
+    "title": "Conception",
+    "subList": [
+      {
+        "title": "Conception",
+        "link": "#diseno"
+      },
+      {
+        "title": "Finition",
+        "link": "#acabados"
+      },
+      {
+        "title": "Épaisseurs",
+        "link": "#espesores"
+      },
+      {
+        "title": "Séries",
+        "subList": [
+          {
+            "title": "Séries",
+            "link": "#series"
+          },
+          {
+            "title": "Pierre",
+            "subList": [
+              {
+                "title": "DO&BASALT",
+                "link": "#basalt"
+              },
+              {
+                "title": "DO&DOLM",
+                "link": "#dolm"
+              },
+              {
+                "title": "DO&DQUARTZ",
+                "link": "#dquartz"
+              },
+              {
+                "title": "DO&MARBLE",
+                "link": "#marble"
+              },
+              {
+                "title": "DO&STONE",
+                "link": "#stone"
+              },
+              {
+                "title": "DO&QUARCITY",
+                "link": "#quarcity"
+              }
+            ]
+          },
+          {
+            "title": "Ciment",
+            "subList": [
+              {
+                "title": "DO&CRETE",
+                "link": "#crete"
+              },
+              {
+                "title": "DO&PORTLAND",
+                "link": "#portland"
+              },
+              {
+                "title": "DO&SPACE",
+                "link": "#space"
+              },
+              {
+                "title": "DO&TZMENT",
+                "link": "#tzment"
+              }
+            ]
+          },
+          {
+            "title": "Bois",
+            "subList": [
+              {
+                "title": "DO&WOOD",
+                "link": "#wood"
+              }
+            ]
+          },
+          {
+            "title": "Terrazzo",
+            "subList": [
+              {
+                "title": "DO&TERRAZO",
+                "link": "#terrazo"
+              }
+            ]
+          },
+          {
+            "title": "Monochrome",
+            "subList": [
+              {
+                "title": "DO&ARQUITECT",
+                "link": "#arquitect"
+              }
+            ]
+          },
+          {
+            "title": "Volume",
+            "subList": [
+              {
+                "title": "DO&VOLUMEN",
+                "link": "#volumen"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Caractéristiques",
+    "subList": [
+      {
+        "title": "Caractéristiques techniques",
+        "link": "#caracteristicas-especiales"
+      },
+      {
+        "title": "Données techniques",
+        "link": "#datos-tecnicos"
+      }
+    ]
+  },
+  {
+    "title": "Systèmes",
+    "subList": [
+      {
+        "title": "Systèmes",
+        "link": "#sistemas"
+      },
+      {
+        "title": "Dolcker & Clip",
+        "link": "#dolcker-and-clip"
+      },
+      {
+        "title": "Dol-TC11",
+        "link": "#dol-tc11"
+      },
+      {
+        "title": "Dol-TC14",
+        "link": "#dol-tc14"
+      },
+      {
+        "title": "Dol-HC20",
+        "link": "#dol-hc20"
+      }
+    ]
+  },
+  {
+    "title": "Téléchargements",
+    "link": "#descargas"
+  }
+]

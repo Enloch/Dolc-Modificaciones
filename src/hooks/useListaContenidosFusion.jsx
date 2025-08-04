@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import ElementoLista from "../components/ListaContenidos/ElementoLista";
-import Sublista from "../components/ListaContenidos/Sublista";
+import ElementoLista from "../components/ListaContenidosFusion/ElementoLista";
+import Sublista from "../components/ListaContenidosFusion/Sublista";
 
 const useListaContenidos = (
 	elementosJSON,

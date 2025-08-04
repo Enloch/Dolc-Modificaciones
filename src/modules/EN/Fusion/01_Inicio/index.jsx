@@ -26,8 +26,9 @@ const AnimatedArrow = styled(BsMouse)`
 const Indice = ({ indiceRef }) => {
 	const { menuDesplegable, btnIndice } = useMenuDesplegable(
 		ListaContenidos,
-		"Índice",
-		indiceRef
+		"Index",
+		indiceRef,
+		"en"
 	);
 
 	const handleClickFlecha = () => {
@@ -40,7 +41,7 @@ const Indice = ({ indiceRef }) => {
 		<>
 			<StyledIndice backgroundColor={COLORS.gray06} ref={indiceRef} id="indice">
 				<Titulo color={COLORS.gray01}>Dolcker Fusion</Titulo>
-				<ListaContenidos />
+				<ListaContenidos en={true} />
 				<AnimatedArrow
 					size={32}
 					color="white"
@@ -49,10 +50,10 @@ const Indice = ({ indiceRef }) => {
 					onClick={handleClickFlecha}
 				/>
 				<div className="idiomas">
-					<Link to="/dolcker-fusion" className="seleccionado">
-						ES
+					<Link to="/dolcker-fusion">ES</Link>
+					<Link to="/en/dolcker-fusion" className="seleccionado">
+						EN
 					</Link>
-					<Link to="/en/dolcker-fusion">EN</Link>
 					<Link to="/fr/dolcker-fusion">FR</Link>
 				</div>
 			</StyledIndice>
