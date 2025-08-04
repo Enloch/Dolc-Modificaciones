@@ -56,15 +56,15 @@ export { default as CaracteristicasLeiva } from "./Leiva/06_Caracteristicas";
 export { default as SistemasLeiva } from "./Leiva/07_Sistemas";
 export { default as DescargasLeiva } from "./Leiva/08_Descargas";
 //TXT
-export { default as IndiceTXT } from "./TXT/01_Inicio";
-export { default as DolckerTXT } from "./TXT/02_Dolcker";
-export { default as VentajasTXT } from "./TXT/03_Ventajas";
-export { default as AplicacionesTXT } from "./TXT/04_Aplicaciones";
-export { default as DisenosTXT } from "./TXT/05_Diseno";
-export { default as CaracteristicasTXT } from "./TXT/06_Caracteristicas";
-export { default as SistemasTXT } from "./TXT/07_Sistemas";
-export { default as DescargasTXT } from "./TXT/08_Descargas";
-export { default as GaleriaTXT } from "./TXT/11_Galeria";
+export { default as IndiceTXT } from "./ES/TXT/01_Inicio";
+export { default as DolckerTXT } from "./ES/TXT/02_Dolcker";
+export { default as VentajasTXT } from "./ES/TXT/03_Ventajas";
+export { default as AplicacionesTXT } from "./ES/TXT/04_Aplicaciones";
+export { default as DisenosTXT } from "./ES/TXT/05_Diseno";
+export { default as CaracteristicasTXT } from "./ES/TXT/06_Caracteristicas";
+export { default as SistemasTXT } from "./ES/TXT/07_Sistemas";
+export { default as DescargasTXT } from "./ES/TXT/08_Descargas";
+export { default as GaleriaTXT } from "./ES/TXT/11_Galeria";
 //MatrixDecor
 export { default as IndiceDecor } from "./ES/Matrix_Decor/01_Inicio";
 export { default as DolckerDecor } from "./ES/Matrix_Decor/02_Dolcker";
