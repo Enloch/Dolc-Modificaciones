@@ -10,33 +10,33 @@ import Listado from "../../../../components/Listado";
 const VentajasTline = ({ id }) => {
 	return (
 		<StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-			<Titulo>Advantages of the Dolcker Matrix Decor system</Titulo>
+			<Titulo>Avantages du système Dolcker Matrix Decor</Titulo>
 			<ImageWithCaption
 				src={img1}
-				alt="Imagen de Ventajas 1"
+				alt="Image des avantages 1"
 				caption=""
 				columnSpan="6"
 			/>
 			<Text>
-				The dolcker matrix decor system has an improved technical development
-				of fixing for ventilated facades, to adapt to both the aesthetic and
-				functional needs of the project.
+				Le système dolcker matrix decor dispose d'un développement technique
+				amélioré de fixation pour les façades ventilées, afin de s'adapter
+				aux besoins esthétiques et fonctionnels du projet.
 			</Text>
 			<Listado>
-				<li>Hidden + clipped mechanical fastening system</li>
-				<li>Demountable system</li>
+				<li>Système de fixation mécanique caché + à clips</li>
+				<li>Système démontable</li>
 				<li>
-					Vertical or horizontal aluminum profile for different installations
+					Profil en aluminium vertical ou horizontal pour différentes installations
 				</li>
-				<li>Possibility of manufacturing different aluminum alloys</li>
-				<li>Free placement system</li>
-				<li>Myriad of piece DESIGNS</li>
-				<li>Custom cutting</li>
-				<li>Possibility of manufacturing slats ACCORDING TO DESIGN</li>
-				<li>System developed for chambers up to 20 cm</li>
-				<li>Pieces with solid, metallic, wood, anodized FINISHES</li>
-				<li>Quick and safe assembly</li>
-				<li>Versatile system when designing the facade</li>
+				<li>Possibilité de fabriquer différentes alliages d'aluminium</li>
+				<li>Système de placement libre</li>
+				<li>Myriade de DESIGNS de pièces</li>
+				<li>Coupe sur mesure</li>
+				<li>Possibilité de fabriquer des lamelles SELON LE DESIGN</li>
+				<li>Système développé pour des chambres jusqu'à 20 cm</li>
+				<li>Pièces avec finitions solides, métalliques, bois, anodisées</li>
+				<li>Montage rapide et sûr</li>
+				<li>Système polyvalent lors de la conception de la façade</li>
 			</Listado>
 		</StyledVentajas>
 	);

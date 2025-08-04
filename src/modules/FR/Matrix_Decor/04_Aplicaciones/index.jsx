@@ -50,7 +50,7 @@ const AplicacionesTline = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="Design is a balance between form and function. It's not enough for a space to be beautiful, it must also be useful."
+					cita="Le design est un équilibre entre la forme et la fonction. Il ne suffit pas qu'un espace soit beau, il doit aussi être utile."
 					author="Frank Lloyd Wright"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -62,7 +62,7 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.small}
 			>
-				<Titulo2 color={COLORS.gray08}>Portals</Titulo2>
+				<Titulo2 color={COLORS.gray08}>Portails</Titulo2>
 				<ImageWithCaption
 					src={portales}
 					alt="Imagen de Aplicaciones 1"
@@ -70,7 +70,7 @@ const AplicacionesTline = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="Design is where science and art reach a balance point."
+					cita="Le design est l'endroit où la science et l'art atteignent un point d'équilibre."
 					author="Robin Mathew"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -96,7 +96,7 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.small}
 			>
-				<Titulo2 color={COLORS.gray08}>Bathroom</Titulo2>
+				<Titulo2 color={COLORS.gray08}>Salle de bain</Titulo2>
 				<ImageWithCaption
 					src={img3}
 					alt="Imagen de Aplicaciones 1"
@@ -104,7 +104,7 @@ const AplicacionesTline = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="The details are not the details. The details are the design."
+					cita="Les détails ne sont pas des détails. Les détails constituent le design."
 					author="Charles Eames"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -130,7 +130,7 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.small}
 			>
-				<Titulo2 color={COLORS.gray08}>Spaces</Titulo2>
+				<Titulo2 color={COLORS.gray08}>Espaces</Titulo2>
 				<ImageWithCaption
 					src={img4}
 					alt="Imagen de Aplicaciones 1"
@@ -138,7 +138,7 @@ const AplicacionesTline = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="Originality consists in returning to the origin; thus, original is that which returns to the simplicity of the first solutions."
+					cita="L'originalité consiste à revenir à l'origine ; ainsi, l'original est ce qui revient à la simplicité des premières solutions."
 					author="Antonio Gaudí"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}

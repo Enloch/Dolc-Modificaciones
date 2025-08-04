@@ -11,39 +11,39 @@ import config from "../../../../configs/configDolckerMatrixDecor";
 
 const DolckerTline = ({ id }) => {
 	const propsVisualizador = {
-		text: "Hover over the dots to see information",
+		text: "Survolez les points pour voir les informations",
 		type: "normal",
 		indicadores: config,
 		imgBackground: img3,
-		alt: "Background image with indicators",
+		alt: "Image de fond avec indicateurs",
 	};
 
 	return (
 		<StyledDolcker id={id} backgroundColor={COLORS.gray03}>
-			<Titulo>Dolcker Matrix Decor solutions</Titulo>
+			<Titulo>Solutions Dolcker Matrix Decor</Titulo>
 			<div className="dolcker-info">
 				<ImageWithCaption
 					src={img2}
-					alt="Imagen Dolcker 2"
-					caption="Matrix Decor system with extruded aluminum matrices."
+					alt="Image Dolcker 2"
+					caption="Système Matrix Decor avec matrices en aluminium extrudé."
 				/>
 				<Text>
-					<strong>MATRIX DECOR SYSTEM</strong> is an innovative system for
-					aluminum slat cladding with an exclusive clipped installation
-					mechanism, which guarantees a quick, safe and trouble-free
-					assembly. Its wide variety of designs and finishes makes it a
-					versatile solution for creating ventilated facades, interior
-					claddings and decorative panels with high visual impact.
+					<strong>SYSTÈME MATRIX DECOR</strong> est un système innovant de
+					bardage en lamelles d'aluminium avec un mécanisme d'installation
+					à clips exclusif, qui garantit un montage rapide, sûr et sans
+					problème. Sa grande variété de designs et de finitions en fait une
+					solution polyvalente pour créer des façades ventilées, des
+					bardages intérieurs et des panneaux décoratifs à fort impact visuel.
 					<br />
 					<br />
-					Thanks to its carefully crafted aesthetics and premium quality,{" "}
-					<strong>MATRIX DECOR</strong> is an ideal option for
-					<strong>high decoration</strong> projects, bringing sophistication
-					and modernity to interior spaces. Its combination of design and
-					functionality allows environments to be transformed with a
-					contemporary and elegant style, making it the perfect choice for
-					architects and designers looking for a distinctive and durable
-					cladding.
+					Grâce à son esthétique soigneusement travaillée et à sa qualité
+					premium, <strong>MATRIX DECOR</strong> est une option idéale pour
+					les projets de <strong>haute décoration</strong>, apportant
+					sophistication et modernité aux espaces intérieurs. Sa combinaison
+					de design et de fonctionnalité permet de transformer les
+					environnements avec un style contemporain et élégant, ce qui en fait
+					le choix parfait pour les architectes et les designers à la
+					recherche d'un bardage distinctif et durable.
 				</Text>
 			</div>
 			<VisualizadorNota {...propsVisualizador} />

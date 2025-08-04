@@ -9,95 +9,81 @@ const CaracteristicasTline = ({ id }) => {
 	return (
 		<>
 			<StyledCaracteristicas id={id[0]} backgroundColor={COLORS.gray02}>
-				<Titulo>Technical characteristics</Titulo>
+				<Titulo>Caractéristiques techniques</Titulo>
 				<ImageWithCaption
 					src={caracter1}
-					alt="Render by 7475"
+					alt="Rendu par 7475"
 					caption=""
 					columnSpan="6"
 				/>
 				<Text>
-					<strong>Strength and durability</strong>
+					<strong>Résistance et durabilité</strong>
 					<br />
 					<br />
-					Extruded aluminum is known for its great structural strength, which
+					L'aluminium extrudé est connu pour sa grande résistance structurelle, ce qui
 					<strong>
-						{" "}
-						allows it to withstand loads and physical stresses without
-						deforming.
+						lui permet de supporter les charges et les contraintes physiques sans
+						se déformer.
 					</strong>
-					This makes it an ideal material for applications in the construction
-					industry, as it can withstand adverse conditions, such as temperature
-					changes, humidity, and corrosion.
+					Cela en fait un matériau idéal pour les applications dans l'industrie
+					de la construction, car il peut résister aux conditions défavorables, telles que les variations
+					de température, l'humidité et la corrosion.
 					<br />
 					<br />
-					In addition to its strength, extruded aluminum stands out for its
-					long-term durability. Its{" "}
-					<strong>ability to resist oxidation and corrosion</strong>
-					guarantees a prolonged lifespan, which{" "}
-					<strong>reduces maintenance and replacement costs.</strong>
+					Outre sa résistance, l'aluminium extrudé se distingue par sa
+					durabilité à long terme. Sa <strong>capacité à résister à l'oxydation et à la corrosion</strong>
+					garantit une durée de vie prolongée, ce qui <strong>réduit les coûts de maintenance et de remplacement.</strong>
 					<br />
 					<br />
 				</Text>
 				<Text>
-					<strong>Variety of shapes and profiles</strong>
+					<strong>Variété de formes et de profils</strong>
 					<br />
 					<br />
-					The <strong>aluminum extrusion process</strong> allows for a wide
-					variety of shapes and <strong>aluminum extrusion profiles.</strong>
+					Le <strong>processus d'extrusion de l'aluminium</strong> permet une grande
+					variété de formes et de <strong>profils d'extrusion en aluminium.</strong>
 					<br />
 					<br />
-					The aluminum extrusion pieces obtained are of great{" "}
-					<strong>resistance</strong>, with a perfect shape and a very low risk
-					of leaving the factory with imperfections or errors.
+					Les pièces d'extrusion en aluminium obtenues sont d'une grande <strong>résistance</strong>, avec une forme parfaite et un risque très faible
+					de quitter l'usine avec des imperfections ou des erreurs.
 					<br />
 					<br />
-					From bars and tubes to complex and customized profiles,
-					<strong>aluminum extrusion offers versatility</strong> to adapt to
-					different design needs and specific applications
+					Des barres et tubes aux profils complexes et personnalisés,
+					<strong>l'extrusion d'aluminium offre de la versatilité</strong> pour s'adapter aux
+					nécessités de design différentes et aux applications spécifiques
 					<br />
 					<br />
-					These profiles can be used in the manufacture of
-					<strong>security aluminum extrusion shutters</strong>, facades, among
-					others. The{" "}
-					<strong>
-						extruded aluminum profiles allow for flexibility and create
+					Ces profils peuvent être utilisés dans la fabrication de
+					<strong>volets roulants en aluminium extrudé de sécurité</strong>, de façades, entre
+					autres. Les <strong>
+						profils en aluminium extrudé permettent de la flexibilité et créent
 					</strong>
-					solutions tailored to the technical and aesthetic requirements of each
-					project.
-					<strong>
-						persianas de aluminio extrusionado autoblocantes de seguridad
-					</strong>
-					, fachadas, entre otros. Los{" "}
-					<strong>
-						perfiles extrusionados de aluminio permiten dar flexibilidad y crear
-						soluciones a medida
-					</strong>
-					, adaptadas a los requisitos técnicos y estéticos de cada proyecto.
+					des solutions sur mesure adaptées aux exigences techniques et esthétiques de chaque
+					projet.
 					<br />
 					<br />
 				</Text>
 				<Text>
-					<strong>Lightweight and resistant</strong>
+					<strong>Léger et résistant</strong>
 					<br />
 					<br />
-					First of all, one of the main properties of aluminum is its lightness.
-					This does not prevent adjusting the composition of its alloy to
-					achieve great strength, and as a result, it can be adapted to almost
-					any application.
+					Tout d'abord, l'une des principales propriétés de l'aluminium est sa légèreté.
+					Cela n'empêche pas d'ajuster la composition de son alliage pour
+					obtenir une grande résistance, et par conséquent, il peut être adapté à presque
+					toute application.
 					<br />
 					<br />
 				</Text>
 				<Text>
-					<strong>Zero maintenance</strong>
+					<strong>Entretien zéro</strong>
 					<br />
 					<br />
-					Through the aluminum finishing process, whether anodized or painted,
-					important protection is conferred against aggressive atmospheric
-					agents. Decorative possibilities are also achieved that are adapted to
-					the environment or design of the structures that compose it.
-					Therefore, it does not require specific maintenance, which entails
-					considerable cost savings.
+					Grâce au processus de finition de l'aluminium, qu'il soit anodisé ou peint,
+					une protection importante est conférée contre les agents atmosphériques
+					agressifs. Des possibilités décoratives sont également obtenues, adaptées à
+					l'environnement ou au design des structures qui le composent.
+					Par conséquent, il ne nécessite pas d'entretien spécifique, ce qui implique
+					des économies de coûts considérables.
 					<br />
 					<br />
 				</Text>
@@ -105,34 +91,34 @@ const CaracteristicasTline = ({ id }) => {
 					<strong>Recyclable</strong>
 					<br />
 					<br />
-					Aluminum is a fully recyclable material and contributes to reducing
-					energy consumption by 95%. The characteristics of recycled material do
-					not differ from those of material from the mineral. This high
-					recycling capacity has a sustainability value for the environment.
+					L'aluminium est un matériau entièrement recyclable et contribue à réduire
+					la consommation d'énergie de 95%. Les caractéristiques du matériau recyclé ne
+					diffèrent pas de celles du matériau issu du minerai. Cette grande
+					capacité de recyclage a une valeur de durabilité pour l'environnement.
 					<br />
 					<br />
 				</Text>
 				<Text>
-					<strong>Variety of finishes</strong>
+					<strong>Variété de finitions</strong>
 					<br />
 					<br />
-					Aluminum is the ideal material for creating contemporary building
-					concepts. Whether you choose a painted or anodized surface finish, you
-					will enjoy the lasting beauty of windows without having to invest in
-					paint or varnish.
+					L'aluminium est le matériau idéal pour créer des concepts de construction
+					contemporains. Que vous choisissiez une finition de surface peinte ou anodisée, vous
+					profiterez de la beauté durable des fenêtres sans avoir à investir dans
+					de la peinture ou du vernis.
 					<br />
 					<br />
 				</Text>
 				<Text>
-					<strong>Corrosion resistant</strong>
+					<strong>Résistant à la corrosion</strong>
 					<br />
 					<br />
-					Naturally, aluminum generates a self-protective oxide layer that makes
-					it highly resistant to corrosion.
+					Naturellement, l'aluminium génère une couche d'oxyde autoprotectrice qui le rend
+					très résistant à la corrosion.
 					<br />
 					<br />
-					Through controlled industrial processes, different types of surface
-					treatments can be applied to further improve this property.
+					Grâce à des processus industriels contrôlés, différents types de traitements
+					de surface peuvent être appliqués pour améliorer davantage cette propriété.
 				</Text>
 			</StyledCaracteristicas>
 		</>

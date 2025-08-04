@@ -9,17 +9,17 @@ const SistemasTline = ({ id }) => {
 	return (
 		<>
 			<StyledSistemas id={id[0]} backgroundColor={COLORS.gray02}>
-				<Titulo>Construction systems</Titulo>
+				<Titulo>Systèmes de construction</Titulo>
 				<ImageWithCaption
 					src={sistemas}
-					alt="Sistemas introducción"
+					alt="Introduction aux systèmes"
 					caption=""
 					columnSpan="5"
 				/>
 				<Enlaces>
 					<li>
 						<a href={"#" + id[1]}>
-							System
+							Système
 							<br />
 							<strong>MATRIX</strong>
 						</a>
@@ -30,32 +30,31 @@ const SistemasTline = ({ id }) => {
 			<StyledSistemas id={id[1]}>
 				<Titulo2>MATRIX</Titulo2>
 				<Text>
-					The DOLCKER MATRIX system for dolcker-type ceramic facades is a
-					system with high inertia profiling and double security. Each and every
-					one of the elements that make up this system are manufactured with
-					high-quality raw materials. It is a mechanical clip + chemical fixing system for installing an aluminum capping strip clipped to the system, through a substructure composed of adjustable high-quality aluminum brackets in the shape
-					of "L" with a thickness of 3 mm, which transmit stresses and are fixed
-					by anchoring to the base structure of the building (brick wall
-					or concrete slab). On these brackets, vertical aluminum profiles
-					extruded in the shape of "T" with a thickness of 3 mm are fixed using
-					self-drilling stainless steel screws.
+					Le système DOLCKER MATRIX pour les façades céramiques de type dolcker est un
+					système avec profilage à haute inertie et double sécurité. Chacun des
+					éléments qui composent ce système est fabriqué avec
+					des matières premières de haute qualité. C'est un système de fixation mécanique à clips + chimique pour installer une bande de finition en aluminium clipsée sur le système, par l'intermédiaire d'une sous-structure composée de consoles en aluminium de haute qualité réglables en forme
+					de "L" avec une épaisseur de 3 mm, qui transmettent les contraintes et sont fixées
+					par ancrage à la structure de base du bâtiment (mur en briques
+					ou dalle en béton). Sur ces consoles, des profils en aluminium verticaux
+					extrudés en forme de "T" avec une épaisseur de 3 mm sont fixés en utilisant
+					des vis autoperceuses en acier inoxydable.
 					<br />
 					<br />
-					On these "T" shaped profiles, horizontal profiles in the shape of "G" are screwed, allowing the piece to be fully supported. It is the ideal system for
-					installing ceramics, allowing replacement of pieces since it
-					has a stainless steel sliding clip achieving infinite
-					installations. It also allows painting the capping profile according to the
-					color of the carpentry, allowing the customer to choose the color of
+					Sur ces profils en forme de "T", des profils horizontaux en forme de "G" sont vissés, permettant au élément d'être entièrement supporté. C'est le système idéal pour
+					installer des céramiques, permettant le remplacement des éléments puisqu'il
+					possède un clip coulissant en acier inoxydable réalisant des
+					installations infinies. Il permet également de peindre le profil de finition selon la
+					couleur de la menuiserie, permettant au client de choisir la couleur
 					<br />
 					<br />
-					It is undoubtedly a system with multiple facade composition options since it is possible to break the vertical joints. These vertical joints are minimized to just 1 mm, thus enhancing the horizontal joints.
+					C'est sans aucun doute un système avec plusieurs options de composition de façade puisqu'il est possible de rompre les joints verticaux. Ces joints verticaux sont réduits à seulement 1 mm, améliorant ainsi les joints horizontaux.
 				</Text>
 				<Text>
-					<strong>MATRIX</strong> is an innovative aluminum slat cladding system with an exclusive clipped installation mechanism that guarantees quick, safe, and trouble-free assembly. Its wide variety of designs and finishes makes it a versatile solution for creating ventilated facades, interior claddings, and decorative panels with high visual impact.
+					<strong>MATRIX</strong> est un système de bardage en lamelles d'aluminium innovant avec un mécanisme d'installation à clips exclusif qui garantit un montage rapide, sûr et sans problème. Sa grande variété de designs et de finitions en fait une solution polyvalente pour créer des façades ventilées, des bardages intérieurs et des panneaux décoratifs à fort impact visuel.
 					<br />
 					<br />
-					Thanks to its carefully crafted aesthetics and premium quality,{" "}
-					<strong>MATRIX</strong> is an ideal option for <strong>high decoration</strong> projects, bringing sophistication and modernity to interior spaces. Its combination of design and functionality allows environments to be transformed with a contemporary and elegant style, making it the perfect choice for architects and designers looking for a distinctive and durable cladding.
+					Grâce à son esthétique soigneusement travaillée et à sa qualité premium, <strong>MATRIX</strong> est une option idéale pour les projets de <strong>haute décoration</strong>, apportant sophistication et modernité aux espaces intérieurs. Sa combinaison de design et de fonctionnalité permet de transformer les environnements avec un style contemporain et élégant, ce qui en fait le choix parfait pour les architectes et les designers à la recherche d'un bardage distinctif et durable.
 				</Text>
 				{/* <ImageWithCaption
           src={dolckerClip1}
