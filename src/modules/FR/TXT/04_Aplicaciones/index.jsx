@@ -12,67 +12,66 @@ import Cita from "@components/Cita";
 import ImageWithCaptionSlider from "@components/ImageWithCaptionSlider";
 import Reemplazo from "@assets/images/DolckerTXT/temporal.webp";
 const AplicacionesTline = ({ id }) => {
-  return (
-    <>
-      <StyledAplicaciones
-        id={id[0]}
-        backgroundColor={COLORS.gray02}
-        rowGap={DISTANCES.small}
-      >
-        <Titulo color={COLORS.gray08}>Applications</Titulo>
-        <ImageWithCaption
-          src={img1}
-          alt="Imagen de Aplicaciones 1"
-          caption=""
-          columnSpan="6"
-        />
-        <Cita
-          cita="La arquitectura debe ser la expresión de nuestro tiempo, pero también debe ser intemporal."
-          author=" Daniel Libeskind"
-          colorCita={COLORS.gray08}
-          colorAutor={COLORS.gray04}
-        />
-      </StyledAplicaciones>
-      <StyledAplicaciones
-        id={id[1]}
-        backgroundColor={COLORS.gray01}
-        rowGap={DISTANCES.small}
-      >
-        <Titulo2 color={COLORS.gray08}>Rénovation</Titulo2>
-        <ImageWithCaption
-          src={img2}
-          alt="Imagen de Aplicaciones 1"
-          caption=""
-          columnSpan="6"
-        />
-        <Cita
-          cita="El diseño urbano es el arte de crear lugares que sean habitables, funcionales y hermosos"
-          author="Jan Gehlr"
-          colorCita={COLORS.gray08}
-          colorAutor={COLORS.gray04}
-        />
-      </StyledAplicaciones>
-      <StyledAplicaciones
-        id={id[2]}
-        backgroundColor={COLORS.gray01}
-        rowGap={DISTANCES.small}
-      >
-        <Titulo2 color={COLORS.gray08}>Nouvelle construction</Titulo2>
-        <ImageWithCaption
-          src={img3}
-          alt="Imagen de Aplicaciones 1"
-          //   caption='Jorge dará la referencia o imágen.' 
-          columnSpan="6"
-        />
-        <Cita
-          cita="La ciudad del futuro debe ser una ciudad para todos."
-          author="Le Corbusier"
-          colorCita={COLORS.gray08}
-          colorAutor={COLORS.gray04}
-        />
-      </StyledAplicaciones>
-    </>
-  );
+	return (
+		<>
+			<StyledAplicaciones
+				id={id[0]}
+				backgroundColor={COLORS.gray02}
+				rowGap={DISTANCES.small}
+			>
+				<Titulo color={COLORS.gray08}>Applications</Titulo>
+				<ImageWithCaption
+					src={img1}
+					alt="Imagen de Aplicaciones 1"
+					caption=""
+					columnSpan="6"
+				/>
+				<Cita
+					cita="L'architecture doit être l'expression de notre temps, mais elle doit également être intemporelle."
+					author=" Daniel Libeskind"
+					colorCita={COLORS.gray08}
+					colorAutor={COLORS.gray04}
+				/>
+			</StyledAplicaciones>
+			<StyledAplicaciones
+				id={id[1]}
+				backgroundColor={COLORS.gray01}
+				rowGap={DISTANCES.small}
+			>
+				<Titulo2 color={COLORS.gray08}>Rénovation</Titulo2>
+				<ImageWithCaption
+					src={img2}
+					alt="Imagen de Aplicaciones 1"
+					caption=""
+					columnSpan="6"
+				/>
+				<Cita
+					cita="Le design urbain est l'art de créer des lieux qui soient habitables, fonctionnels et beaux"
+					author="Jan Gehlr"
+					colorCita={COLORS.gray08}
+					colorAutor={COLORS.gray04}
+				/>
+			</StyledAplicaciones>
+			<StyledAplicaciones
+				id={id[2]}
+				backgroundColor={COLORS.gray01}
+				rowGap={DISTANCES.small}
+			>
+				<Titulo2 color={COLORS.gray08}>Nouvelle construction</Titulo2>
+				<ImageWithCaption
+					src={img3}
+					alt="Imagen de Aplicaciones 1"
+					columnSpan="6"
+				/>
+				<Cita
+					cita="La ville du futur doit être une ville pour tous."
+					author="Le Corbusier"
+					colorCita={COLORS.gray08}
+					colorAutor={COLORS.gray04}
+				/>
+			</StyledAplicaciones>
+		</>
+	);
 };
 
 export default AplicacionesTline;
