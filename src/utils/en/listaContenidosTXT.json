@@ -1,55 +1,55 @@
 [
   {
-    "title": "Inicio",
-    "link": "/"
+    "title": "Home",
+    "link": "/en"
   },
   {
-    "title": "Dolcker TXT soluciona",
+    "title": "Dolcker TXT solves",
     "link": "#dolcker"
   },
   {
-    "title": "Ventajas del sistema Dolcker TXT",
+    "title": "Advantages of Dolcker TXT system",
     "link": "#ventajas"
   },
   {
-    "title": "Aplicaciones",
+    "title": "Applications",
     "subList": [
       {
-        "title": "Aplicaciones",
+        "title": "Applications",
         "link": "#aplicaciones"
       },
       {
-        "title": "Rehabilitación",
+        "title": "Rehabilitation",
         "link": "#rehabilitacion"
       },
       {
-        "title": "Obra nueva",
+        "title": "New construction",
         "link": "#obra-nueva"
       }
     ]
   },
   {
-    "title": "Diseño",
+    "title": "Design",
     "subList": [
       {
-        "title": "Diseño",
+        "title": "Design",
         "link": "#diseno"
       },
       {
-        "title": "Espesores",
+        "title": "Thickness",
         "link": "#espesores"
       },
       {
-        "title": "Configurador",
+        "title": "Configurator",
         "link": "#configurador"
       }
     ]
   },
   {
-    "title": "Sistemas",
+    "title": "Systems",
     "subList": [
       {
-        "title": "Sistemas",
+        "title": "Systems",
         "link": "#sistemas"
       },
       {
