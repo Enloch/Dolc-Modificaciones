@@ -13,7 +13,7 @@ const CaracteristicasTline = ({ id }) => {
   return (
     <>
       <StyledCaracteristicas id={id[0]} backgroundColor={COLORS.gray02}>
-        <Titulo>Características técnicas</Titulo>
+        <Titulo>Technical characteristics</Titulo>
         <ImageWithCaption
           src={Reemplazo}
           alt='Render por parte de 7475'

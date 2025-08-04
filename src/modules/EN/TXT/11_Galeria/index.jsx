@@ -15,7 +15,7 @@ const Galeria = ({ id }) => {
   return (
     <>
       <StyledGaleria id={id} backgroundColor={COLORS.gray02}>
-        <Titulo>Galeria de proyectos</Titulo>
+        <Titulo>Project gallery</Titulo>
         <StyledSlider className='Slider'>
           <ImageGallery
             items={imagenesGaleria}

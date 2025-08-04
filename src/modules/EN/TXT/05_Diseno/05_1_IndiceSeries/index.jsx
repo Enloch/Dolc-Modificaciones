@@ -91,7 +91,7 @@ const IndiceSeries = ({ id, queSerieActiva }) => {
         backgroundColor={COLORS.gray02}
         style={{ paddingBottom: "0", rowGap: "20px" }}
       >
-        <Titulo style={{ paddingBottom: "0" }}>Colecciones</Titulo>
+        <Titulo style={{ paddingBottom: "0" }}>Collections</Titulo>
       </StyledIndiceSeries>
       <StyledFamilia>
         <ContenedorTitulos>
@@ -102,7 +102,7 @@ const IndiceSeries = ({ id, queSerieActiva }) => {
               color: "#000000",
             }}
           >
-            Colección
+            Collection
           </TituloFamilia>
           {CreaTitulos}
         </ContenedorTitulos>
@@ -114,7 +114,7 @@ const IndiceSeries = ({ id, queSerieActiva }) => {
               color: "#000000",
             }}
           >
-            Modelos
+            Models
           </TituloFamilia>
           {CreaTituloColecciones}
         </ContenedorTitulosColeccion>
