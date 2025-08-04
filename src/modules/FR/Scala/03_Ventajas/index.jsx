@@ -8,42 +8,42 @@ import Listado from "../../../../components/Listado";
 const VentajasTline = ({ id }) => {
   return (
     <StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-      <Titulo>Ventajas del sistema Dolcker Scala</Titulo>
+      <Titulo>Avantages du système Dolcker Scala</Titulo>
       <ImageWithCaption
         src={img1}
-        alt="Imagen de Ventajas 1"
+        alt="Image d'Avantages 1"
         caption="DOLCKER &CLIP"
         columnSpan="6"
       />
       <Text>
-        DOLCKER ha desarrollado tres espesores de placa, 11, 14, 20 mm
-        combinables dentro de su sistema de colocación de alta seguridad,
-        facilitando a los técnicos la creación de edificios singulares y
-        personalizados.
+        DOLCKER a développé trois épaisseurs de plaque, 11, 14, 20 mm
+        combinables dans son système de pose de haute sécurité,
+        facilitant aux techniciens la création de bâtiments singuliers et
+        personnalisés.
         <br />
         <br />
-        Dispone de un desarrollo técnico de{" "}
-        <strong>fijación para fachadas ventiladas mejorado,</strong> para
-        adaptarse a las necesidades tanto estéticas como funcionales del
-        proyecto.
+        Il dispose d'un développement technique de{" "}
+        <strong>fixation pour façades ventilées amélioré,</strong> pour
+        s'adapter aux besoins tant esthétiques que fonctionnels du
+        projet.
       </Text>
       <Listado>
-        <li>Sistema de fijación mecánica oculta + fijación elástica</li>
-        <li>Sistema desmontable</li>
+        <li>Système de fixation mécanique cachée + fixation élastique</li>
+        <li>Système démontable</li>
         <li>
-          Clip correderos (seguridad para piezas de ariostamiento andamios)
+          Clips coulissants (sécurité pour pièces d'étrésillage d'échafaudages)
         </li>
-        <li>Perfil continuo de gran inercia para soporte de grandes cargas</li>
-        <li>Ranura continua calibrada en fábrica</li>
-        <li>Sistema de libre colocación</li>
-        <li>Multitud de tamaños de piezas</li>
-        <li>Despiece a medida</li>
-        <li>Diferentes espesores de piezas (11, 14 y 20 mm)</li>
-        <li>Sistema desarrollado para cámaras de hasta 20 cm</li>
-        <li>Piezas con canto visto &quot;full body&quot;</li>
-        <li>Fabricación de piezas con texturas mate, flamed y honed</li>
-        <li>Montaje rápido y seguro</li>
-        <li>Sistema versátil a la hora de diseñar la fachada</li>
+        <li>Profil continu d'inertie importante pour support de grandes charges</li>
+        <li>Rainure continue calibrée en usine</li>
+        <li>Système de pose libre</li>
+        <li>Multitude de tailles de pièces</li>
+        <li>Découpe sur mesure</li>
+        <li>Différentes épaisseurs de pièces (11, 14 et 20 mm)</li>
+        <li>Système développé pour chambres jusqu'à 20 cm</li>
+        <li>Pièces avec chant apparent &quot;full body&quot;</li>
+        <li>Fabrication de pièces avec textures mate, flamed et honed</li>
+        <li>Montage rapide et sûr</li>
+        <li>Système versatile pour concevoir la façade</li>
       </Listado>
     </StyledVentajas>
   );

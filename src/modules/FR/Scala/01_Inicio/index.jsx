@@ -7,11 +7,11 @@ import scrollTo from "../../../../helpers/scrollTo";
 import useMenuDesplegable from "../../../../hooks/useMenuDesplegable";
 import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
-// Define la animación para la flecha
+// Définit l'animation pour la flèche
 /**
- * Animación para la flecha que apunta hacia abajo en el
- *   índice. La flecha se mueve hacia abajo y arriba en
- *   un ciclo infinito.
+ * Animation pour la flèche qui pointe vers le bas dans l'
+ *   index. La flèche se déplace vers le bas et vers le haut dans
+ *   un cycle infini.
  */
 const pulse = keyframes`
     0% {
@@ -31,7 +31,7 @@ const AnimatedArrow = styled(BsMouse)`
 const Indice = ({ indiceRef }) => {
 	const { menuDesplegable, btnIndice } = useMenuDesplegable(
 		ListaContenidos,
-		"Índice",
+		"Index",
 		indiceRef,
 		"fr"
 	);

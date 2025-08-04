@@ -37,22 +37,22 @@ const Series = ({ ids }) => {
 
     const propsFormato = {
         anotacionPDF: {
-            text: 'Haz click aquí para descargar un PDF con tu colocación',
+            text: 'Cliquez ici pour télécharger un PDF avec votre disposition',
             type: 'pdf',
             onClick: () => createPDF(visRef),
         },
         anotacion2: {
-            text: 'Selecciona las áreas donde quieras aplicar la pieza',
+            text: 'Sélectionnez les zones où vous souhaitez appliquer la pièce',
             type: 'normal',
         },
         anotacion: {
-            text: 'Haz click en el punto para seleccionar la pieza a aplicar',
+            text: 'Cliquez sur le point pour sélectionner la pièce à appliquer',
             type: 'click',
         },
         visualizador: {
             config: indicadoresFormato,
             srcfondo: fondo,
-            altFondo: 'Imagen de fondo con indicadores',
+            altFondo: 'Image de fond avec indicateurs',
             volumen: { listaCambios, cleanListaCambios, addIdsMenu, idsMenu },
             visRef,
         },

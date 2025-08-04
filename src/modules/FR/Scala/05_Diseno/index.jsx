@@ -22,54 +22,54 @@ import IndiceSeries from "./05_1_IndiceSeries";
 const DisenosTline = ({ id }) => {
   const propsFormato = {
     anotacion: {
-      text: "Pulsa en el punto para ver las posibilidades de formato",
+      text: "Cliquez sur le point pour voir les possibilités de format",
       type: "click",
     },
     visualizador: {
       config: indicadoresFormato,
       srcfondo: fondo,
-      altFondo: "Imagen de fondo con indicadores",
+      altFondo: "Image de fond avec indicateurs",
     },
   };
 
   return (
     <>
       <StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
-        <Titulo>Diseño</Titulo>
+        <Titulo>Design</Titulo>
         <ImageWithCaption
           src={img1}
-          alt="Imagen de Diseños 1"
+          alt="Image de Designs 1"
           caption="DOLCKER &CLIP. Do&Dolm Grafito"
           columnSpan="6"
         />
         <Cita
-          cita="“La simplicidad es la clave de la verdadera elegancia.”"
+          cita="« La simplicité est la clé de la véritable élégance. »"
           author="— Coco Chanel"
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
       </StyledDisenos>
       <StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Formato</Titulo2>
+        <Titulo2>Format</Titulo2>
         <Anotacion {...propsFormato.anotacion} />
         <VisualizadorVariaciones {...propsFormato.visualizador} />
       </StyledDisenos>
       <StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Acabados</Titulo2>
+        <Titulo2>Finitions</Titulo2>
         <Anotaciones>
           <Anotacion
             type="normal"
-            text="Pulsa en el punto para ver todas las posibilidades de piezas especiales"
+            text="Cliquez sur le point pour voir toutes les possibilités de pièces spéciales"
           />
           <Anotacion
             type="swipe"
-            text="Desliza con el ratón o el dedo para apreciar la textura"
+            text="Faites glisser avec la souris ou le doigt pour apprécier la texture"
           />
         </Anotaciones>
         <VisualizadorDesplazador config={configAcabados} />
       </StyledDisenos>
       <StyledDisenos id={id[4]} backgroundColor={COLORS.gray01} isEspesores>
-        <Titulo2>Espesores</Titulo2>
+        <Titulo2>Épaisseurs</Titulo2>
         <div className="espesor espesor-1">
           <img src={ranurado11} alt="" />
           <ul>
@@ -104,15 +104,15 @@ const DisenosTline = ({ id }) => {
         </div>
       </StyledDisenos>
       <StyledDisenos id={id[5]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Piezas especiales</Titulo2>
+        <Titulo2>Pièces spéciales</Titulo2>
         <Anotaciones>
           <Anotacion
             type="normal"
-            text="Pulsa en el punto para ver todas las posibilidades de piezas especiales"
+            text="Cliquez sur le point pour voir toutes les possibilités de pièces spéciales"
           />
           <Anotacion
             type="swipe"
-            text="Desliza con el ratón o el dedo para rotar la imagen 360º"
+            text="Faites glisser avec la souris ou le doigt pour faire pivoter l'image 360º"
           />
         </Anotaciones>
         <VisualizadorRotador config={config} />

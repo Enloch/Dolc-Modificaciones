@@ -9,103 +9,103 @@ import dolckerClip2 from "../../../../assets/icons/Sistemas/dolcker-clip.svg";
 import ImageWithCaption from "../../../../components/ImageWithCaption";
 
 const Sistemas = ({ id }) => {
-  return (
-    <>
-      <StyledSistemas id={id[0]} backgroundColor={COLORS.gray02}>
-        <Titulo>Sistema constructivos</Titulo>
-        <ImageWithCaption
-          src={sistemas}
-          alt="Sistemas introducción"
-          columnSpan="5"
-        />
-        <Enlaces>
-          <li>
-            <a href={"#" + id[1]}>
-              Sistema
-              <br />
-              <strong>Dolcker & Clip</strong>
-            </a>
-          </li>
-          {/* <li>
+	return (
+		<>
+			<StyledSistemas id={id[0]} backgroundColor={COLORS.gray02}>
+				<Titulo>Systèmes constructifs</Titulo>
+				<ImageWithCaption
+					src={sistemas}
+					alt="Introduction aux systèmes"
+					columnSpan="5"
+				/>
+				<Enlaces>
+					<li>
+						<a href={"#" + id[1]}>
+							Système
+							<br />
+							<strong>Dolcker & Clip</strong>
+						</a>
+					</li>
+					{/* <li>
             <a href={"#" + id[2]}>
               Sistema
               <br />
               <strong>DOL - TC11</strong>
             </a>
           </li> */}
-          {/* <li>
+					{/* <li>
             <a href={"#" + id[3]}>
               Sistema
               <br />
               <strong>DOL - TC14</strong>
             </a>
           </li> */}
-          {/* <li>
+					{/* <li>
             <a href={"#" + id[4]}>
               Sistema
               <br />
               <strong>DOL - HC20</strong>
             </a>
           </li> */}
-        </Enlaces>
-      </StyledSistemas>
+				</Enlaces>
+			</StyledSistemas>
 
-      <StyledSistemas id={id[1]}>
-        <Titulo2>Dolcker & Clip</Titulo2>
-        <Text>
-          El sistema DOLCKER & CLIP para fachadas de cerámica tipo dolcker es un
-          sistema con perfilería de alta inercia y doble seguridad. Todos y cada
-          uno de los elementos que componen este sistema están fabricados con
-          materias primas de máxima calidad.
-          <br />
-          <br />
-          Se trata de un sistema de fijación mecánica de clip + fijación química
-          mediante una subestructura que está compuesta por ménsulas regulables
-          de aluminio de alta calidad en forma de “L” de 3 mm de espesor, que
-          transmiten esfuerzos y que van fijadas mediante anclaje a la
-          estructura base del edificio (pared de ladrillo o forjado de
-          hormigón).Sobre estas ménsulas se fijan mediante tornillos
-          autotaladrantes de acero inoxidable los perfiles verticales de
-          aluminio extruidos en forma de“T”de 3 mm de espesor.
-          <br />
-          <br />
-          En estos perfiles en forma de “T” se atornillan unos perfiles
-          horizontales en forma de “G”, permitiendo así que la pieza esté
-          apoyada en su totalidad. Se trata del sistema idóneo para la
-          colocación de cerámicas, permitiendo sustituir las piezas ya que
-          dispone de un clip corredera de acero inoxidable logrando infinidad de
-          colocaciones. Además permite lacar el perfil horizontal en función del
-          color de su carpintería, permitiendo que el cliente elija el color de
-          la junta. Se colocan al menos dos clips correderas en la parte
-          superior de la pieza de arranque a 1/5 de distancia respecto a la
-          longitud de la pieza. En el resto de piezas intermedias, se procederá
-          a la colocación de al menos 4 clips por cada pieza de cerámica. Se le
-          añadirá puntos de masilla poliuretano de pegado y sellado sika-111 o
-          similar (4 por pieza) que nos permita absorber las dilataciones de la
-          fachada en los clips correderas.
-          <br />
-          <br />
-          Se trata sin duda de un sistema con múltiples opciones de composición
-          de fachada ya que es posible romper las juntas verticales. Éstas
-          juntas verticales se ven minimizadas a tan solo 1 mm potenciando de
-          esta manera las juntas horizontales. La salida de la cerámica es entre
-          43-47 mm dependiendo del espesor de la cerámica escogida.
-        </Text>
-        <ImageWithCaption
-          src={dolckerClip1}
-          alt="Dolcker-clip demostración"
-          columnSpan="6"
-          isGray
-        />
-        <ImageWithCaption
-          src={dolckerClip2}
-          alt="Dolcker-clip tabla"
-          columnSpan="6"
-          isGray
-        />
-      </StyledSistemas>
+			<StyledSistemas id={id[1]}>
+				<Titulo2>Dolcker & Clip</Titulo2>
+				<Text>
+					Le système DOLCKER & CLIP pour les façades en céramique de type
+					dolcker est un système avec profilés d'inertie élevée et double
+					sécurité. Tous et chacun des éléments qui composent ce système sont
+					fabriqués avec des matières premières de qualité maximale.
+					<br />
+					<br />
+					Il s'agit d'un système de fixation mécanique par clip + fixation
+					chimique au moyen d'une sous-structure composée de consoles réglables
+					en aluminium de haute qualité en forme de « L » de 3 mm d'épaisseur,
+					qui transmettent des efforts et qui sont fixées par ancrage à la
+					structure de base du bâtiment (mur en brique ou dalle en béton). Sur
+					ces consoles sont fixés au moyen de vis autoréseautantes en acier
+					inoxydable les profils verticaux en aluminium extrudés en forme de « T
+					» de 3 mm d'épaisseur.
+					<br />
+					<br />
+					Sur ces profils en forme de « T » sont vissés des profils horizontaux
+					en forme de « G », permettant ainsi que la pièce soit supportée dans
+					sa totalité. Il s'agit du système idéal pour la pose de céramiques,
+					permettant de remplacer les pièces puisque dispose d'un clip
+					coulissant en acier inoxydable obtenant une infinité de poses. De
+					plus, il permet de laquer le profil horizontal en fonction de la
+					couleur de sa menuiserie, permettant au client de choisir la couleur
+					de du joint. On place au moins deux clips coulissants sur la partie
+					supérieure de la pièce de départ à 1/5 de distance par rapport à la
+					longueur de la pièce. Pour le reste des pièces intermédiaires, on
+					procédera à la pose d'au moins 4 clips par pièce de céramique. On
+					ajoutera des points de mastic polyuréthane de collage et d'étanchéité
+					sika-111 ou similaire (4 par pièce) qui nous permettent d'absorber les
+					dilatations de la façade sur les clips coulissants.
+					<br />
+					<br />
+					Il s'agit sans aucun doute d'un système avec de multiples options de
+					composition de façade puisqu'il est possible de rompre les joints
+					verticaux. Ces joints verticaux sont réduits à seulement 1 mm en
+					favorisant ainsi les joints horizontaux. La sortie de la céramique est
+					entre 43-47 mm selon l'épaisseur de la céramique choisie.
+				</Text>
+				<ImageWithCaption
+					src={dolckerClip1}
+					alt="Démonstration Dolcker-clip"
+					columnSpan="6"
+					isGray
+				/>
+				<ImageWithCaption
+					src={dolckerClip2}
+					alt="Tableau Dolcker-clip"
+					columnSpan="6"
+					isGray
+				/>
+			</StyledSistemas>
 
-      {/* <StyledSistemas id={id[2]}>
+			{/* <StyledSistemas id={id[2]}>
         <Titulo2>DOL - TC11</Titulo2>
         <Text>
           El sistema DOL-TC11 para fachadas de cerámica con grapa oculta es un
@@ -191,8 +191,8 @@ const Sistemas = ({ id }) => {
           isGray
         />
       </StyledSistemas> */}
-    </>
-  );
+		</>
+	);
 };
 
 export default Sistemas;
