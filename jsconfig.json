@@ -6,8 +6,42 @@
         "jsx": "react",
         "allowImportingTsExtensions": true,
         "strictNullChecks": true,
-        "strictFunctionTypes": true
+        "strictFunctionTypes": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ],
+            "@components/*": [
+                "./src/components/*"
+            ],
+            "@global/*": [
+                "./src/global/*"
+            ],
+            "@assets/*": [
+                "./src/assets/*"
+            ],
+            "@configs/*": [
+                "./src/configs/*"
+            ],
+            "@helpers/*": [
+                "./src/helpers/*"
+            ],
+            "@hooks/*": [
+                "./src/hooks/*"
+            ],
+            "@modules/*": [
+                "./src/modules/*"
+            ],
+            "@styles/*": [
+                "./src/styles/*"
+            ]
+        }
     },
+    "include": [
+        "src/**/*",
+        "vite.config.js"
+    ],
     "exclude": [
         "node_modules",
         "**/node_modules/*"
