@@ -28,8 +28,12 @@ import Tline from "../../assets/images/DolckerTline/tline.jpg";
 import Matrix from "../../assets/images/DolckerMatrix/facade.jpg";
 import Decor from "../..//assets/images/DolckerMatrixDecor/decor.jpg";
 import TXT from "../../assets/images/DolckerTXT/txt.jpg";
-import Navbar from "../../components/Menu/menuFR";
+import Scala from "../../assets/images/Scala/Volum97.jpg";
+import Archiform from "../../assets/images/Archiform/Archiform27.jpg";
+import Fusion from "../../assets/images/Fusion/fusion.jpg";
 import T5 from "../../assets/images/T5/IMG_3280.jpg";
+import Invisifix from "../../assets/images/Invisifix/invisifix.jpg";
+import Navbar from "../../components/Menu/menuFR";
 import { Final } from "../../modules/FR";
 
 export const MainFr = () => {
@@ -37,7 +41,8 @@ export const MainFr = () => {
 		{
 			src: System,
 			title: "Système Dolcker",
-			subtitle: "Solution intégrale pour les façades et revêtements pleine masse",
+			subtitle:
+				"Solution intégrale pour les façades et revêtements pleine masse",
 			link: "fr/dolcker-system",
 		},
 		{
@@ -49,13 +54,15 @@ export const MainFr = () => {
 		{
 			src: Matrix,
 			title: "Façade Dolcker Matrix",
-			subtitle: "Lames en aluminium clipsées pour façades ventilées et revêtements.",
+			subtitle:
+				"Lames en aluminium clipsées pour façades ventilées et revêtements.",
 			link: "fr/dolcker-matrix-facade",
 		},
 		{
 			src: Decor,
 			title: "Décor Dolcker Matrix",
-			subtitle: "Lames en aluminium clipsées pour revêtements et intérieurs avant-gardistes.",
+			subtitle:
+				"Lames en aluminium clipsées pour revêtements et intérieurs avant-gardistes.",
 			link: "fr/dolcker-matrix-decor",
 		},
 		{
@@ -70,6 +77,30 @@ export const MainFr = () => {
 			subtitle: "Système de façade ventilée avec profilés en aluminium",
 			link: "fr/dolcker-t5",
 		},
+		{
+			src: Scala,
+			title: "Dolcker Scala",
+			subtitle: "Solución integral full&body para fachadas y revestimientos",
+			link: "dolcker-scala",
+		},
+		{
+			src: Archiform,
+			title: "Dolcker Archiform",
+			subtitle: "Solución integral full&body para fachadas y revestimientos",
+			link: "dolcker-archiform",
+		},
+		// {
+		// 	src: Fusion,
+		// 	title: "Dolcker Fusion",
+		// 	subtitle: "Solución integral full&body para fachadas y revestimientos",
+		// 	link: "dolcker-fusion",
+		// },
+		// {
+		// 	src: Invisifix,
+		// 	title: "Dolcker Invisifix",
+		// 	subtitle: "Solución integral full&body para fachadas y revestimientos",
+		// 	link: "dolcker-invisifix",
+		// },
 	];
 
 	return (
@@ -81,7 +112,8 @@ export const MainFr = () => {
 						<WrapperContenido>
 							<GridSeccion>
 								<Titulo id="scroller">
-									DÉVELOPPEMENT DE FAÇADES VENTILÉES INNOVANTES ET HAUTES PERFORMANCES
+									DÉVELOPPEMENT DE FAÇADES VENTILÉES INNOVANTES ET HAUTES
+									PERFORMANCES
 									<br />
 								</Titulo>
 							</GridSeccion>

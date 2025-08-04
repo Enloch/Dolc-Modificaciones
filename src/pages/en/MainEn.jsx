@@ -28,8 +28,12 @@ import Tline from "../../assets/images/DolckerTline/tline.jpg";
 import Matrix from "../../assets/images/DolckerMatrix/facade.jpg";
 import Decor from "../..//assets/images/DolckerMatrixDecor/decor.jpg";
 import TXT from "../../assets/images/DolckerTXT/txt.jpg";
-import Navbar from "../../components/Menu/menuEN";
+import Scala from "../../assets/images/Scala/Volum97.jpg";
+import Archiform from "../../assets/images/Archiform/Archiform27.jpg";
+import Fusion from "../../assets/images/Fusion/fusion.jpg";
 import T5 from "../../assets/images/T5/IMG_3280.jpg";
+import Invisifix from "../../assets/images/Invisifix/invisifix.jpg";
+import Navbar from "../../components/Menu/menuEN";
 import { Final } from "../../modules/EN";
 
 export const MainEn = () => {
@@ -49,8 +53,7 @@ export const MainEn = () => {
 		{
 			src: Matrix,
 			title: "Dolcker Matrix Facade",
-			subtitle:
-				"Clipped aluminum slats for ventilated facades and cladding.",
+			subtitle: "Clipped aluminum slats for ventilated facades and cladding.",
 			link: "en/dolcker-matrix-facade",
 		},
 		{
@@ -72,6 +75,30 @@ export const MainEn = () => {
 			subtitle: "Ventilated facade system with aluminum profiling",
 			link: "en/dolcker-t5",
 		},
+		{
+			src: Scala,
+			title: "Dolcker Scala",
+			subtitle: "Solución integral full&body para fachadas y revestimientos",
+			link: "dolcker-scala",
+		},
+		{
+			src: Archiform,
+			title: "Dolcker Archiform",
+			subtitle: "Solución integral full&body para fachadas y revestimientos",
+			link: "dolcker-archiform",
+		},
+		// {
+		// 	src: Fusion,
+		// 	title: "Dolcker Fusion",
+		// 	subtitle: "Solución integral full&body para fachadas y revestimientos",
+		// 	link: "dolcker-fusion",
+		// },
+		// {
+		// 	src: Invisifix,
+		// 	title: "Dolcker Invisifix",
+		// 	subtitle: "Solución integral full&body para fachadas y revestimientos",
+		// 	link: "dolcker-invisifix",
+		// },
 	];
 
 	return (
