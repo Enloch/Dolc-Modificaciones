@@ -14,7 +14,7 @@ const ListaContenidos = ({
 	const contenidos = useListaContenidos(data);
 
 	return (
-		<StyledListaContenidos isMenuDesplegable={isMenuDesplegable} fr={fr}>
+		<StyledListaContenidos isMenuDesplegable={isMenuDesplegable}>
 			<ul>{contenidos}</ul>
 		</StyledListaContenidos>
 	);

@@ -81,7 +81,11 @@ const useMenuDesplegable = (Lista, titulo, indiceRef, language = "es") => {
 			setMenuDesplegable(
 				<MenuDesplegable menuRef={menuRef} setIsOpen={setIsOpen}>
 					<Titulo color={COLORS.gray01}>{titulo}</Titulo>
-					<Lista isMenuDesplegable={true} />
+					<Lista
+						isMenuDesplegable={true}
+						fr={language === "fr"}
+						en={language === "en"}
+					/>
 				</MenuDesplegable>
 			);
 		} else {
