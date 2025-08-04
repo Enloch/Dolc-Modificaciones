@@ -21,10 +21,10 @@ const DisenosTline = ({ id }) => {
 	return (
 		<>
 			<StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
-				<Titulo>Diseño</Titulo>
+				<Titulo>Design</Titulo>
 				<ImageWithCaption src={img1} alt="Imagen de Diseños 1" columnSpan="6" />
 				<Cita
-					cita="El diseño no es solo lo que se ve y se siente. El diseño es cómo funciona."
+					cita="Design is not just what it looks like and feels like. Design is how it works."
 					author="Steve Jobs"
 					colorAutor={COLORS.gray05}
 				/>
@@ -46,7 +46,7 @@ const DisenosTline = ({ id }) => {
 			</StyledGaleria>
 			<IndiceSeries id={id[1]} queSerieActiva={setSerieActiva} />
 			<StyledDisenos id={id[2]} backgroundColor={COLORS.gray01}>
-				<Titulo2>Configurador</Titulo2>
+				<Titulo2>Configurator</Titulo2>
 				<div className="rotador">
 					<RotadorMatrix />
 				</div>

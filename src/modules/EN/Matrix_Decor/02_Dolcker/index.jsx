@@ -11,40 +11,39 @@ import config from "../../../../configs/configDolckerMatrixDecor";
 
 const DolckerTline = ({ id }) => {
 	const propsVisualizador = {
-		text: "Pasa el ratón por los puntos para ver la información",
+		text: "Hover over the dots to see information",
 		type: "normal",
 		indicadores: config,
 		imgBackground: img3,
-		alt: "Imagen de fondo con indicadores",
+		alt: "Background image with indicators",
 	};
 
 	return (
 		<StyledDolcker id={id} backgroundColor={COLORS.gray03}>
-			<Titulo>Dolcker Matrix Decor soluciona</Titulo>
+			<Titulo>Dolcker Matrix Decor solutions</Titulo>
 			<div className="dolcker-info">
 				<ImageWithCaption
 					src={img2}
 					alt="Imagen Dolcker 2"
-					caption="Sistema Matrix Decor con matrices de aluminio extruido."
+					caption="Matrix Decor system with extruded aluminum matrices."
 				/>
 				<Text>
-					<strong>SISTEMA MATRIX DECOR</strong> es un innovador sistema de
-					revestimiento de lamas de aluminio con un exclusivo mecanismo de
-					colocación clipada, que garantiza un montaje rápido, seguro y sin
-					complicaciones. Su amplia variedad de diseños y acabados lo convierte
-					en una solución versátil para la creación de fachadas ventiladas,
-					revestimientos interiores y paneles decorativos de alto impacto
-					visual.
+					<strong>MATRIX DECOR SYSTEM</strong> is an innovative system for
+					aluminum slat cladding with an exclusive clipped installation
+					mechanism, which guarantees a quick, safe and trouble-free
+					assembly. Its wide variety of designs and finishes makes it a
+					versatile solution for creating ventilated facades, interior
+					claddings and decorative panels with high visual impact.
 					<br />
 					<br />
-					Gracias a su cuidada estética y calidad premium,{" "}
-					<strong>MATRIX DECOR</strong> es una opción ideal para proyectos de
-					<strong> alta decoración</strong>, aportando sofisticación y
-					modernidad a espacios interiores. Su combinación de diseño y
-					funcionalidad permite transformar ambientes con un estilo
-					contemporáneo y elegante, convirtiéndose en la elección perfecta para
-					arquitectos y diseñadores que buscan un revestimiento distintivo y
-					duradero.
+					Thanks to its carefully crafted aesthetics and premium quality,{" "}
+					<strong>MATRIX DECOR</strong> is an ideal option for
+					<strong>high decoration</strong> projects, bringing sophistication
+					and modernity to interior spaces. Its combination of design and
+					functionality allows environments to be transformed with a
+					contemporary and elegant style, making it the perfect choice for
+					architects and designers looking for a distinctive and durable
+					cladding.
 				</Text>
 			</div>
 			<VisualizadorNota {...propsVisualizador} />

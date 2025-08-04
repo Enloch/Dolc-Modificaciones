@@ -42,7 +42,7 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray02}
 				rowGap={DISTANCES.small}
 			>
-				<Titulo color={COLORS.gray08}>Aplicaciones</Titulo>
+				<Titulo color={COLORS.gray08}>Applications</Titulo>
 				<ImageWithCaption
 					src={img1}
 					alt="Imagen de Aplicaciones 1"
@@ -50,7 +50,7 @@ const AplicacionesTline = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="El diseño es un equilibrio entre forma y función. No basta con que un espacio sea hermoso, también debe ser útil."
+					cita="Design is a balance between form and function. It's not enough for a space to be beautiful, it must also be useful."
 					author="Frank Lloyd Wright"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -62,7 +62,7 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.small}
 			>
-				<Titulo2 color={COLORS.gray08}>Portales</Titulo2>
+				<Titulo2 color={COLORS.gray08}>Portals</Titulo2>
 				<ImageWithCaption
 					src={portales}
 					alt="Imagen de Aplicaciones 1"
@@ -70,7 +70,7 @@ const AplicacionesTline = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="El diseño es donde la ciencia y el arte llegan a un punto de equilibrio."
+					cita="Design is where science and art reach a balance point."
 					author="Robin Mathew"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -96,7 +96,7 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.small}
 			>
-				<Titulo2 color={COLORS.gray08}>Baño</Titulo2>
+				<Titulo2 color={COLORS.gray08}>Bathroom</Titulo2>
 				<ImageWithCaption
 					src={img3}
 					alt="Imagen de Aplicaciones 1"
@@ -104,7 +104,7 @@ const AplicacionesTline = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="Los detalles no son los detalles. Los detalles son el diseño."
+					cita="The details are not the details. The details are the design."
 					author="Charles Eames"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -130,7 +130,7 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.small}
 			>
-				<Titulo2 color={COLORS.gray08}>Espacios</Titulo2>
+				<Titulo2 color={COLORS.gray08}>Spaces</Titulo2>
 				<ImageWithCaption
 					src={img4}
 					alt="Imagen de Aplicaciones 1"
@@ -138,7 +138,7 @@ const AplicacionesTline = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="La originalidad consiste en el retorno al origen; así pues, original es aquello que vuelve a la simplicidad de las primeras soluciones."
+					cita="Originality consists in returning to the origin; thus, original is that which returns to the simplicity of the first solutions."
 					author="Antonio Gaudí"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}

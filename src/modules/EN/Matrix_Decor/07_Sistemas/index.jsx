@@ -9,7 +9,7 @@ const SistemasTline = ({ id }) => {
 	return (
 		<>
 			<StyledSistemas id={id[0]} backgroundColor={COLORS.gray02}>
-				<Titulo>Sistema constructivos</Titulo>
+				<Titulo>Construction systems</Titulo>
 				<ImageWithCaption
 					src={sistemas}
 					alt="Sistemas introducción"
@@ -19,7 +19,7 @@ const SistemasTline = ({ id }) => {
 				<Enlaces>
 					<li>
 						<a href={"#" + id[1]}>
-							Sistema
+							System
 							<br />
 							<strong>MATRIX</strong>
 						</a>
@@ -30,44 +30,32 @@ const SistemasTline = ({ id }) => {
 			<StyledSistemas id={id[1]}>
 				<Titulo2>MATRIX</Titulo2>
 				<Text>
-					El sistema DOLCKER MATRIX para fachadas de cerámica tipo dolcker es un
-					sistema con perfilería de alta inercia y doble seguridad. Todos y cada
-					uno de los elementos que componen este sistema están fabricados con
-					materias primas de máxima calidad. Se trata de un sistema de fijación
-					mecánica de clip + fijación química para la colocación de una cenefa
-					de aluminio clipada al sistema , mediante una subestructura que está
-					compuesta por ménsulas regulables de aluminio de alta calidad en forma
-					de “L” de 3 mm de espesor, que transmiten esfuerzos y que van fijadas
-					mediante anclaje a la estructura base del edificio (pared de ladrillo
-					o forjado de hormigón).Sobre estas ménsulas se fijan mediante
-					tornillos autotaladrantes de acero inoxidable los perfiles verticales
-					de aluminio extruidos en forma de“T”de 3 mm de espesor.
+					The DOLCKER MATRIX system for dolcker-type ceramic facades is a
+					system with high inertia profiling and double security. Each and every
+					one of the elements that make up this system are manufactured with
+					high-quality raw materials. It is a mechanical clip + chemical fixing system for installing an aluminum capping strip clipped to the system, through a substructure composed of adjustable high-quality aluminum brackets in the shape
+					of "L" with a thickness of 3 mm, which transmit stresses and are fixed
+					by anchoring to the base structure of the building (brick wall
+					or concrete slab). On these brackets, vertical aluminum profiles
+					extruded in the shape of "T" with a thickness of 3 mm are fixed using
+					self-drilling stainless steel screws.
 					<br />
 					<br />
-					En estos perfiles en forma de “T” se atornillan unos perfiles
-					horizontales en forma de “G”, permitiendo así que la pieza esté
-					apoyada en su totalidad. Se trata del sistema idóneo para la
-					colocación de cerámicas, permitiendo sustituir las piezas ya que
-					dispone de un clip corredera de acero inoxidable logrando infinidad de
-					colocaciones. Además permite lacar el perfil cenefa en función del
-					color de su carpintería, permitiendo que el cliente elija el color de
-					la misma . Se colocan al menos dos clips correderas en la parte
-					superior de la pieza de arranque a 1/5 de distancia respecto a la
-					longitud de la pieza. En el resto de piezas intermedias, se procederá
-					a la colocación de al menos 4 clips por cada pieza de cerámica. Se le
-					añadirá puntos de masilla poliuretano de pegado y sellado sika-111 o
-					similar (4 por pieza) que nos permita absorber las dilataciones de la
-					fachada en los clips correderas. Una vez situados todos los clip se
-					procede a la colocación de la cenefa decoratica clipandose en los
-					clips ya colocados.Este sistema dispone de un perfil de seguridad para
-					formatos de dimensiones superiores a 100 cms para su colocacion con
-					fijacion química , que permiten mejorar subciones de viento.
+					On these "T" shaped profiles, horizontal profiles in the shape of "G" are screwed, allowing the piece to be fully supported. It is the ideal system for
+					installing ceramics, allowing replacement of pieces since it
+					has a stainless steel sliding clip achieving infinite
+					installations. It also allows painting the capping profile according to the
+					color of the carpentry, allowing the customer to choose the color of
 					<br />
 					<br />
-					Se trata sin duda de un sistema con múltiples opciones de composición
-					de fachada ya que es posible romper las juntas verticales. Éstas
-					juntas verticales se ven minimizadas a tan solo 1 mm potenciando de
-					esta manera las juntas horizontales.
+					It is undoubtedly a system with multiple facade composition options since it is possible to break the vertical joints. These vertical joints are minimized to just 1 mm, thus enhancing the horizontal joints.
+				</Text>
+				<Text>
+					<strong>MATRIX</strong> is an innovative aluminum slat cladding system with an exclusive clipped installation mechanism that guarantees quick, safe, and trouble-free assembly. Its wide variety of designs and finishes makes it a versatile solution for creating ventilated facades, interior claddings, and decorative panels with high visual impact.
+					<br />
+					<br />
+					Thanks to its carefully crafted aesthetics and premium quality,{" "}
+					<strong>MATRIX</strong> is an ideal option for <strong>high decoration</strong> projects, bringing sophistication and modernity to interior spaces. Its combination of design and functionality allows environments to be transformed with a contemporary and elegant style, making it the perfect choice for architects and designers looking for a distinctive and durable cladding.
 				</Text>
 				{/* <ImageWithCaption
           src={dolckerClip1}

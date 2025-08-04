@@ -33,6 +33,7 @@ import QuienesSomosEn from "./pages/en/QuienesSomoEn";
 import FachadaVentiladaEn from "./pages/en/catalogos/FachadaVentiladaEn";
 import DolckerTlineEn from "./pages/en/catalogos/DolckerTLineEn";
 import DolckerMatrixEn from "./pages/en/catalogos/DolckerMatrixEn";
+import DolckerMatrixDecorEn from "./pages/en/catalogos/DolckerMatrixDecor";
 import PoliticaPrivacidadEn from "./pages/en/PoliticaPrivacidad";
 import AvisoLegalEn from "./pages/en/AvisoLegal";
 //French
@@ -117,6 +118,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 						<Route
 							path="/en/dolcker-matrix-facade"
 							element={<DolckerMatrixEn />}
+						/>
+						<Route
+							path="/en/dolcker-matrix-decor"
+							element={<DolckerMatrixDecorEn />}
 						/>
 						<Route path="/en/quienes-somos" element={<QuienesSomosEn />} />
 						<Route
