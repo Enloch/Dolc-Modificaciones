@@ -27,7 +27,8 @@ const Indice = ({ indiceRef }) => {
 	const { menuDesplegable, btnIndice } = useMenuDesplegable(
 		ListaContenidos,
 		"Index",
-		indiceRef
+		indiceRef,
+		"en"
 	);
 
 	const handleClickFlecha = () => {
