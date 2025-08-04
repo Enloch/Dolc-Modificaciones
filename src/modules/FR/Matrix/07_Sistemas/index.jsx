@@ -9,17 +9,17 @@ const SistemasTline = ({ id }) => {
   return (
     <>
       <StyledSistemas id={id[0]} backgroundColor={COLORS.gray02}>
-        <Titulo>Sistema constructivos</Titulo>
+        <Titulo>Systèmes constructifs</Titulo>
         <ImageWithCaption
           src={sistemas}
-          alt='Sistemas introducción'
+          alt='Introduction aux systèmes'
           caption=''
           columnSpan='5'
         />
         <Enlaces>
           <li>
             <a href={"#" + id[1]}>
-              Sistema
+              Système
               <br />
               <strong>MATRIX</strong>
             </a>
@@ -30,44 +30,43 @@ const SistemasTline = ({ id }) => {
       <StyledSistemas id={id[1]}>
         <Titulo2>MATRIX</Titulo2>
         <Text>
-          El sistema DOLCKER MATRIX para fachadas de cerámica tipo dolcker es un
-          sistema con perfilería de alta inercia y doble seguridad. Todos y cada
-          uno de los elementos que componen este sistema están fabricados con
-          materias primas de máxima calidad. Se trata de un sistema de fijación
-          mecánica de clip + fijación química para la colocación de una cenefa
-          de aluminio clipada al sistema , mediante una subestructura que está
-          compuesta por ménsulas regulables de aluminio de alta calidad en forma
-          de “L” de 3 mm de espesor, que transmiten esfuerzos y que van fijadas
-          mediante anclaje a la estructura base del edificio (pared de ladrillo
-          o forjado de hormigón).Sobre estas ménsulas se fijan mediante
-          tornillos autotaladrantes de acero inoxidable los perfiles verticales
-          de aluminio extruidos en forma de“T”de 3 mm de espesor.
+          Le système DOLCKER MATRIX pour les façades en céramique de type dolcker est un
+          système avec profilés d'inertie élevée et double sécurité. Tous les éléments
+          composant ce système sont fabriqués avec des matières premières de qualité
+          supérieure. Il s'agit d'un système de fixation mécanique par clip + fixation
+          chimique pour la pose d'une frise en aluminium clipée au système, au moyen
+          d'une sous-structure composée de consoles réglables en aluminium de haute
+          qualité en forme de "L" de 3 mm d'épaisseur, qui transmettent les efforts
+          et qui sont fixées par ancrage à la structure de base du bâtiment (mur en
+          brique ou plancher en béton). Sur ces consoles sont fixés au moyen de vis
+          autoréseautantes en acier inoxydable les profils verticaux en aluminium
+          extrudés en forme de "T" de 3 mm d'épaisseur.
           <br />
           <br />
-          En estos perfiles en forma de “T” se atornillan unos perfiles
-          horizontales en forma de “G”, permitiendo así que la pieza esté
-          apoyada en su totalidad. Se trata del sistema idóneo para la
-          colocación de cerámicas, permitiendo sustituir las piezas ya que
-          dispone de un clip corredera de acero inoxidable logrando infinidad de
-          colocaciones. Además permite lacar el perfil cenefa en función del
-          color de su carpintería, permitiendo que el cliente elija el color de
-          la misma . Se colocan al menos dos clips correderas en la parte
-          superior de la pieza de arranque a 1/5 de distancia respecto a la
-          longitud de la pieza. En el resto de piezas intermedias, se procederá
-          a la colocación de al menos 4 clips por cada pieza de cerámica. Se le
-          añadirá puntos de masilla poliuretano de pegado y sellado sika-111 o
-          similar (4 por pieza) que nos permita absorber las dilataciones de la
-          fachada en los clips correderas. Una vez situados todos los clip se
-          procede a la colocación de la cenefa decoratica clipandose en los
-          clips ya colocados.Este sistema dispone de un perfil de seguridad para
-          formatos de dimensiones superiores a 100 cms para su colocacion con
-          fijacion química , que permiten mejorar subciones de viento.
+          Sur ces profils en forme de "T" sont vissés des profils horizontaux en
+          forme de "G", permettant ainsi à la pièce d'être supportée dans son
+          intégralité. Il s'agit du système idéal pour la pose de céramiques,
+          permettant de remplacer les pièces puisqu'il dispose d'un clip coulissant
+          en acier inoxydable permettant une infinité de poses. De plus, il permet
+          de laquer le profil de frise en fonction de la couleur de la menuiserie,
+          permettant au client de choisir la couleur de celle-ci. Au moins deux
+          clips coulissants sont placés sur la partie supérieure de la pièce de
+          départ à 1/5 de distance par rapport à la longueur de la pièce. Pour le
+          reste des pièces intermédiaires, on procède à la pose d'au moins 4 clips
+          par pièce de céramique. On ajoutera des points de mastic polyuréthane
+          d'adhésion et d'étanchéité sika-111 ou similaire (4 par pièce) qui nous
+          permettent d'absorber les dilatations de la façade dans les clips
+          coulissants. Une fois tous les clips positionnés, on procède à la pose
+          de la frise décorative en la clipant sur les clips déjà posés. Ce
+          système dispose d'un profil de sécurité pour les formats de dimensions
+          supérieures à 100 cm pour leur pose avec fixation chimique, qui
+          permettent d'améliorer les résistances au vent.
           <br />
           <br />
-          Se trata sin duda de un sistema con múltiples opciones de composición
-          de fachada ya que es posible romper las juntas verticales. Éstas
-          juntas verticales se ven minimizadas a tan solo 1 mm potenciando de
-          esta manera las juntas horizontales.
+          Il s'agit sans aucun doute d'un système avec de multiples options de
+          composition de façade puisqu'il est possible de rompre les joints
+          verticaux. Ces joints verticaux sont réduits à seulement 1 mm, mettant
+          ainsi en valeur les joints horizontaux.
         </Text>
         {/* <ImageWithCaption
           src={dolckerClip1}

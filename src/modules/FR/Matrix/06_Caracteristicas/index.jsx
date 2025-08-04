@@ -9,189 +9,128 @@ const CaracteristicasTline = ({ id }) => {
 	return (
 		<>
 			<StyledCaracteristicas id={id[0]} backgroundColor={COLORS.gray02}>
-				<Titulo>Características técnicas</Titulo>
+				<Titulo>Caractéristiques techniques</Titulo>
 				<ImageWithCaption
 					src={caracter1}
-					alt="Render por parte de 7475"
+					alt="Rendu par 7475"
 					caption=""
 					columnSpan="6"
 				/>
 				<Text>
-					<strong>Resistencia y durabilidad</strong>
+					<strong>Résistance et durabilité</strong>
 					<br />
 					<br />
-					El <strong>aluminio extrusionado </strong>es conocido por su gran
-					resistencia estructural, lo que le{" "}
+					L'<strong>aluminium extrudé</strong> est connu pour sa grande
+					résistance structurelle, ce qui lui{" "}
 					<strong>
-						permite soportar cargas y esfuerzos físicos sin deformarse.
+						permet de supporter des charges et des efforts physiques sans se déformer.
 					</strong>
-					Esto lo convierte en un material ideal para aplicaciones en la
-					industria de la construcción, ya que puede resistir condiciones
-					adversas, como cambios de temperatura, humedad y corrosión.
+					Cela en fait un matériau idéal pour les applications dans
+					l'industrie de la construction, car il peut résister à des conditions
+					adverses, comme les changements de température, l'humidité et la corrosion.
 					<br />
 					<br />
-					Además de su resistencia, el aluminio extrusionado destaca por su
-					durabilidad a largo plazo. Su
-					<strong> capacidad para resistir la oxidación y la corrosión </strong>
-					garantiza una vida útil prolongada, lo que
-					<strong> reduce los costos de mantenimiento y reemplazo.</strong>
+					En plus de sa résistance, l'aluminium extrudé se distingue par sa
+					durabilité à long terme. Sa
+					<strong> capacité à résister à l'oxydation et à la corrosion </strong>
+					garantit une durée de vie prolongée, ce qui
+					<strong> réduit les coûts de maintenance et de remplacement.</strong>
 					<br />
 					<br />
 				</Text>
 				<Text>
-					<strong>Variedad de formas y perfiles</strong>
+					<strong>Variété de formes et de profils</strong>
 					<br />
 					<br />
-					El<strong> proceso de extrusión del aluminio </strong>permite obtener
-					una amplia variedad de formas y
-					<strong> perfiles de aluminio extrusionado.</strong>
+					Le <strong>processus d'extrusion de l'aluminium </strong>permet d'obtenir
+					une grande variété de formes et
+					<strong> de profils en aluminium extrudé.</strong>
 					<br />
 					<br />
-					Las piezas de aluminio extrusionado que se obtienen son de un
-					<strong> gran resistencia </strong>, con una forma perfecta y con un
-					riesgo muy bajo de salir de fábrica con imperfecciones o errores.
+					Les pièces en aluminium extrudé obtenues sont d'une
+					<strong> grande résistance </strong>, avec une forme parfaite et avec un
+					risque très faible de sortir d'usine avec des imperfections ou des erreurs.
 					<br />
 					<br />
-					Desde barras y tubos hasta perfiles complejos y personalizados,
-					<strong> el aluminio extrusionado ofrece versatilidad</strong> para
-					adaptarse a diferentes necesidades de diseño y aplicaciones
-					específicas
+					Depuis des barres et des tubes jusqu'à des profils complexes et personnalisés,
+					<strong> l'aluminium extrudé offre de la versatilité</strong> pour
+					s'adapter à différentes nécessités de conception et d'applications
+					spécifiques
 					<br />
 					<br />
-					Estos perfiles se pueden utilizar en la fabricación de{" "}
+					Ces profils peuvent être utilisés dans la fabrication de{" "}
 					<strong>
-						persianas de aluminio extrusionado autoblocantes de seguridad
+						volets persiennés en aluminium extrudé autobloquants de sécurité
 					</strong>
-					, fachadas, entre otros. Los{" "}
+					, de façades, entre autres. Les{" "}
 					<strong>
-						perfiles extrusionados de aluminio permiten dar flexibilidad y crear
-						soluciones a medida
+						profils extrudés en aluminium permettent d'apporter de la flexibilité et de créer
+						des solutions sur mesure
 					</strong>
-					, adaptadas a los requisitos técnicos y estéticos de cada proyecto.
+					, adaptées aux exigences techniques et esthétiques de chaque projet.
 					<br />
 					<br />
 				</Text>
 				<Text>
-					<strong>Ligero y resistente</strong>
+					<strong>Léger et résistant</strong>
 					<br />
 					<br />
-					En primer lugar, una de las principales propiedades del aluminio es su
-					ligereza. Esto no impide que ajustando la composición de su aleación
-					se puede lograr una gran resistencia y como resultado puede adaptarse
-					a casi cualquier aplicación.
-					<br />
-					<br />
-				</Text>
-				<Text>
-					<strong>Mantenimiento 0</strong>
-					<br />
-					<br />
-					Mediante el proceso de acabado del aluminio, bien sea anodizado o
-					lacado, se confiere una protección importante frente a los agentes
-					agresivos atmosféricos. También se consiguen posibilidades decorativas
-					adaptadas al entorno o el diseño de las estructuras que lo componen.
-					Por tanto no requiere de mantenimiento específico, lo que conlleva un
-					ahorro de costes considerable.
+					Tout d'abord, l'une des principales propriétés de l'aluminium est sa
+					légèreté. Cela n'empêche pas qu'en ajustant la composition de son alliage
+					on peut obtenir une grande résistance et en conséquence il peut s'adapter
+					à presque n'importe quelle application.
 					<br />
 					<br />
 				</Text>
 				<Text>
-					<strong>Reciclable</strong>
+					<strong>Maintenance 0</strong>
 					<br />
 					<br />
-					El aluminio es un material totalmente reciclable y contribuye a
-					reducir el consumo energético en un 95%. Las características del
-					material reciclado no difieren de las del material proveniente del
-					mineral. Esta  alta capacidad de reciclaje tiene un valor de
-					sostenibilidad pera el medio ambiente.
-					<br />
-					<br />
-				</Text>
-				<Text>
-					<strong>Variedad de acabados</strong>
-					<br />
-					<br />
-					El aluminio es el material ideal para la creación de conceptos de
-					edificación contemporáneos. Tanto si se opta por un acabado de la
-					superficie lacado o anodizado, disfrutará de la belleza duradera de
-					las ventanas sin tener que invertir en pintura ni en barniz
+					Au moyen du processus de finition de l'aluminium, qu'il soit anodisé ou
+					laqué, on confère une protection importante contre les agents
+					atmosphériques agressifs. On obtient également des possibilités décoratives
+					adaptées à l'environnement ou à la conception des structures qui le composent.
+					Par conséquent, il ne nécessite pas de maintenance spécifique, ce qui entraîne une
+					économie de coûts considérable.
 					<br />
 					<br />
 				</Text>
 				<Text>
-					<strong>Resistente a la corrosión</strong>
+					<strong>Recyclable</strong>
 					<br />
 					<br />
-					De forma natural, el aluminio genera una capa de óxido autoprotectora
-					que lo hace muy resistente a la corrosión.
+					L'aluminium est un matériau totalement recyclable et contribue à
+					réduire la consommation énergétique de 95%. Les caractéristiques du
+					matériau recyclé ne diffèrent pas de celles du matériau provenant du
+					minéral. Cette   haute capacité de recyclage a une valeur de
+					durabilité pour l'environnement.
 					<br />
 					<br />
-					Mediante procesos industriales controlados  se pueden aplicar
-					diferentes tipos de tratamiento de superficie para conseguir mejorar
-					aún más esta propiedad.
+				</Text>
+				<Text>
+					<strong>Variété de finitions</strong>
+					<br />
+					<br />
+					L'aluminium est le matériau idéal pour la création de concepts d'
+					édification contemporains. Que ce soit en optant pour une finition de la
+					surface laquée ou anodisée, vous profiterez de la beauté durable des
+					fenêtres sans avoir à investir dans la peinture ni dans le vernis
+					<br />
+					<br />
+				</Text>
+				<Text>
+					<strong>Résistant à la corrosion</strong>
+					<br />
+					<br />
+					De façon naturelle, l'aluminium génère une couche d'oxyde autoprotectrice
+					qui le rend très résistant à la corrosion.
+					<br />
+					<br />
+					Au moyen de processus industriels contrôlés, on peut appliquer
+					différents types de traitement de surface pour réussir à améliorer
+					encore plus cette propriété.
 				</Text>
 			</StyledCaracteristicas>
-			{/* <StyledCaracteristicas id={id[1]} backgroundColor={COLORS.gray02}> */}
-			{/* <Titulo>Datos técnicos</Titulo> */}
-			{/* <ImageWithCaption
-          src={caracter1}
-          alt='Imágenes técnicas (Jorge)'
-          caption=''
-          columnSpan='6'
-          isGray
-        />
-        <ImageWithCaption
-          src={caracter1}
-          alt='Imágenes técnicas (Jorge)'
-          caption=''
-          columnSpan='6'
-          isGray
-        /> */}
-			{/* <Text>
-          <strong>Textos (Jorge)</strong>
-        </Text> */}
-			{/* <ImageWithCaption
-          src={caracter1}
-          alt='Imágenes técnicas (Jorge)'
-          caption=''
-          columnSpan='6'
-        />
-        <ImageWithCaption
-          src={Norm1}
-          alt='Imágenes técnicas (Jorge)'
-          caption=''
-          columnSpan='6'
-        />
-        <ImageWithCaption
-          src={caracter1}
-          alt='Imágenes técnicas (Jorge)'
-          caption=''
-          columnSpan='6'
-          isGray
-        />
-        <ImageWithCaption
-          src={caracter1}
-          alt='Imágenes técnicas (Jorge)'
-          caption=''
-          columnSpan='6'
-          isGray
-        /> */}
-			{/* <Text>
-          <strong>Textos (Jorge)</strong>
-        </Text> */}
-			{/* <ImageWithCaption
-          src={caracter1}
-          alt='Imágenes técnicas (Jorge)'
-          caption=''
-          columnSpan='6'
-        />
-        <ImageWithCaption
-          src={caracter1}
-          alt='Imágenes técnicas (Jorge)'
-          caption=''
-          columnSpan='6'
-        /> */}
-			{/* </StyledCaracteristicas> */}
 		</>
 	);
 };

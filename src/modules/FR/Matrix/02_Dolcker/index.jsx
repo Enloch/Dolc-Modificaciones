@@ -11,29 +11,29 @@ import config from "../../../../configs/configDolckerMatrix";
 
 const DolckerTline = ({ id }) => {
   const propsVisualizador = {
-    text: "Pasa el ratón por los puntos para ver la información",
+    text: "Passez la souris sur les points pour voir les informations",
     type: "normal",
     indicadores: config,
     imgBackground: img3,
-    alt: "Imagen de fondo con indicadores",
+    alt: "Image de fond avec indicateurs",
   };
 
   return (
     <StyledDolcker id={id} backgroundColor={COLORS.gray03}>
-      <Titulo>Dolcker Matrix Facade soluciona</Titulo>
+      <Titulo>Dolcker Matrix Facade résout</Titulo>
       <div className="dolcker-info">
         <ImageWithCaption
           src={img2}
-          alt="Imagen Dolcker 2"
-          caption="Sistema Matrix Facade con matrices de aluminio extruido."
+          alt="Image Dolcker 2"
+          caption="Système Matrix Facade avec matrices en aluminium extrudé."
         />
 
         <Text>
-          SISTEMA MATRIX FACADE es un sistema de revestimiento de lamas de
-          aluminio para una colocacion cliplada de facil montaje. La gran
-          variedad de diseños, le confieren una gran versatilidad, para el
-          diseño de fachadas ventiladas, revestimientos interiores, paneles
-          decorativos.
+          SYSTÈME MATRIX FACADE est un système de revêtement de lames en
+          aluminium pour un montage clip facile. La grande
+          variété de designs lui confère une grande polyvalence pour la
+          conception de façades ventilées, de revêtements intérieurs et de panneaux
+          décoratifs.
         </Text>
       </div>
       <VisualizadorNota {...propsVisualizador} />

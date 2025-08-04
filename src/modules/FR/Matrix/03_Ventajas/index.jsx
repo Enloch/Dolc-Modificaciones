@@ -9,33 +9,33 @@ import Listado from "../../../../components/Listado";
 const VentajasTline = ({ id }) => {
 	return (
 		<StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-			<Titulo>Ventajas del sistema Dolcker Matrix Facade</Titulo>
+			<Titulo>Avantages du système Dolcker Matrix Facade</Titulo>
 			<ImageWithCaption
 				src={img1}
-				alt="Imagen de Ventajas 1"
+				alt="Image des Avantages 1"
 				caption=""
 				columnSpan="6"
 			/>
 			<Text>
-				Sistema dolcker matrix facade dispone de un desarrollo técnico de
-				fijación para fachadas ventiladas mejorado, para adaptarse a las
-				necesidades tanto estéticas como funcionales del proyecto.
+				Le système Dolcker Matrix Facade dispose d'un développement technique de
+				fixation pour façades ventilées amélioré, pour s'adapter aux
+				besoins tant esthétiques que fonctionnels du projet.
 			</Text>
 			<Listado>
-				<li>Sistema de fijación mecánica oculta + clipada</li>
-				<li>Sistema desmontable</li>
+				<li>Système de fixation mécanique cachée + clip</li>
+				<li>Système démontable</li>
 				<li>
-					Perfil de alumnio vertical o horizontal para disistinas colocaciones
+					Profil en aluminium vertical ou horizontal pour différentes poses
 				</li>
-				<li>Posibilidad de fabricacion diferentes aleaciones de aluminio</li>
-				<li>Sistema de libre colocación</li>
-				<li>Multitud de DISEÑOS de piezas</li>
-				<li>Despiece a medida</li>
-				<li>Posibilidad de fabricacion lamas SEGUN DISEÑO</li>
-				<li>Sistema desarrollado para cámaras de hasta 20 cm</li>
-				<li>Piezas con ACABADOS solidos , metalicos , maderas , anodizados</li>
-				<li>Montaje rápido y seguro</li>
-				<li>Sistema versátil a la hora de diseñar la fachada</li>
+				<li>Possibilité de fabrication de différentes alliages d'aluminium</li>
+				<li>Système de pose libre</li>
+				<li>Multitude de DESIGN de pièces</li>
+				<li>Découpe sur mesure</li>
+				<li>Possibilité de fabrication de lames SELON DESIGN</li>
+				<li>Système développé pour chambres jusqu'à 20 cm</li>
+				<li>Pièces avec FINITIONS solides, métalliques, bois, anodisées</li>
+				<li>Montage rapide et sûr</li>
+				<li>Système versatile pour concevoir la façade</li>
 			</Listado>
 		</StyledVentajas>
 	);

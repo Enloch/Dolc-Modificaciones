@@ -21,10 +21,10 @@ const DisenosTline = ({ id }) => {
   return (
     <>
       <StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
-        <Titulo>Diseño</Titulo>
-        <ImageWithCaption src={img1} alt="Imagen de Diseños 1" columnSpan="6" />
+        <Titulo>Conception</Titulo>
+        <ImageWithCaption src={img1} alt="Image des Conceptions 1" columnSpan="6" />
         <Cita
-          cita="Proporcionar arquitectura significativa no es parodiar la historia, sino articularla."
+          cita="Fournir une architecture significative, ce n'est pas parodier l'histoire, mais l'articuler."
           author="Daniel Libeskind"
           colorAutor={COLORS.gray04}
         />
@@ -46,7 +46,7 @@ const DisenosTline = ({ id }) => {
       </StyledGaleria>
       <IndiceSeries id={id[1]} />
       <StyledDisenos id={id[2]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Configurador</Titulo2>
+        <Titulo2>Configurateur</Titulo2>
         <div className="rotador">
           <RotadorMatrix />
         </div>

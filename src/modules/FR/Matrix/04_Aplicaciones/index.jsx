@@ -33,129 +33,130 @@ const AplicacionesTline = ({ id }) => {
 		thumbnail: imagesObra[key].default,
 	}));
 
-	const imagenesGaleriaExterior = Object.keys(imagesExterior).map((key) => ({
-		original: imagesExterior[key].default,
-		thumbnail: imagesExterior[key].default,
-	}));
-	return (
-		<>
-			<StyledAplicaciones
-				id={id[0]}
-				backgroundColor={COLORS.gray02}
-				rowGap={DISTANCES.small}
-			>
-				<Titulo color={COLORS.gray08}>Aplicaciones</Titulo>
-				<ImageWithCaption
-					src={img1}
-					alt="Imagen de Aplicaciones 1"
-					caption=""
-					columnSpan="6"
-				/>
-				<Cita
-					cita="Los detalles no son los detalles. Los detalles son el diseño."
-					author="Charles Eames "
-					colorCita={COLORS.gray08}
-					colorAutor={COLORS.gray04}
-				/>
-			</StyledAplicaciones>
-			<StyledAplicaciones
-				id={id[1]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.small}
-			>
-				<Titulo2 color={COLORS.gray08}>Rehabilitación</Titulo2>
-				<ImageWithCaption
-					src={logos}
-					alt="Imagen de Aplicaciones 1"
-					caption=""
-					columnSpan="6"
-				/>
-				<Cita
-					cita="Lo funcional es mejor que lo bello, porque lo que funciona bien permanece en el tiempo."
-					author="Ray Eames"
-					colorCita={COLORS.gray08}
-					colorAutor={COLORS.gray04}
-				/>
-			</StyledAplicaciones>
-			<StyledGaleria id="galeria-obra-nueva" backgroundColor={COLORS.gray01}>
-				<StyledSlider className="Slider">
-					<ImageGallery
-						items={imagesGaleriaRehabilitar}
-						showPlayButton={false}
-						showFullscreenButton={true}
-						showThumbnails={false}
-						autoPlay={true}
-						showBullets={true}
-						showNav={false}
-						lazyLoad={true}
-						slideDuration={450}
-					/>
-				</StyledSlider>
-			</StyledGaleria>
-			<StyledAplicaciones
-				id={id[2]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.small}
-			>
-				<Titulo2 color={COLORS.gray08}>Obra nueva</Titulo2>
-				<ImageWithCaption
-					src={img3}
-					alt="Imagen de Aplicaciones 1"
-					//   caption='Jorge dará la referencia o imágen.'
-					columnSpan="6"
-				/>
-				<Cita
-					cita="El espacio no tiene sentido sin luz. Un edificio habla a través del silencio de la percepción orquestada por la luz."
-					author="Steven Holl"
-					colorCita={COLORS.gray08}
-					colorAutor={COLORS.gray04}
-				/>
-			</StyledAplicaciones>
-			<StyledGaleria id="galeria-obra-nueva" backgroundColor={COLORS.gray01}>
-				<StyledSlider className="Slider">
-					<ImageGallery
-						items={imagenesGaleriaObra}
-						showPlayButton={false}
-						showFullscreenButton={true}
-						showThumbnails={false}
-						autoPlay={true}
-						showBullets={true}
-						showNav={false}
-						lazyLoad={true}
-						slideDuration={450}
-					/>
-				</StyledSlider>
-			</StyledGaleria>
-			<StyledAplicaciones
-				id={id[3]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.small}
-			>
-				<Titulo2 color={COLORS.gray08}>Exteriores</Titulo2>
-				<ImageWithCaption
-					src={img5}
-					alt="Imagen de Aplicaciones 1"
-					//   caption='Jorge dará la referencia o imágen.'
-					columnSpan="6"
-				/>
-			</StyledAplicaciones>
-			<StyledGaleria id="galeria-obra-nueva" backgroundColor={COLORS.gray01}>
-				<StyledSlider className="Slider">
-					<ImageGallery
-						items={imagenesGaleriaExterior}
-						showPlayButton={false}
-						showFullscreenButton={true}
-						showThumbnails={false}
-						autoPlay={true}
-						showBullets={true}
-						showNav={false}
-						lazyLoad={true}
-						slideDuration={450}
-					/>
-				</StyledSlider>
-			</StyledGaleria>
-		</>
-	);
+  const imagenesGaleriaExterior = Object.keys(imagesExterior).map((key) => ({
+    original: imagesExterior[key].default,
+    thumbnail: imagesExterior[key].default,
+  }));
+
+  return (
+    <>
+      <StyledAplicaciones
+        id={id[0]}
+        backgroundColor={COLORS.gray02}
+        rowGap={DISTANCES.small}
+      >
+        <Titulo color={COLORS.gray08}>Applications</Titulo>
+        <ImageWithCaption
+          src={img1}
+          alt="Image des Applications 1"
+          caption=""
+          columnSpan="6"
+        />
+        <Cita
+          cita="Les détails ne sont pas des détails. Les détails, c'est le design."
+          author="Charles Eames "
+          colorCita={COLORS.gray08}
+          colorAutor={COLORS.gray04}
+        />
+      </StyledAplicaciones>
+      <StyledAplicaciones
+        id={id[1]}
+        backgroundColor={COLORS.gray01}
+        rowGap={DISTANCES.small}
+      >
+        <Titulo2 color={COLORS.gray08}>Réhabilitation</Titulo2>
+        <ImageWithCaption
+          src={logos}
+          alt="Image des Applications 1"
+          caption=""
+          columnSpan="6"
+        />
+        <Cita
+          cita="Le fonctionnel est meilleur que le beau, car ce qui fonctionne bien perdure dans le temps."
+          author="Ray Eames"
+          colorCita={COLORS.gray08}
+          colorAutor={COLORS.gray04}
+        />
+      </StyledAplicaciones>
+      <StyledGaleria id="galeria-obra-nueva" backgroundColor={COLORS.gray01}>
+        <StyledSlider className="Slider">
+          <ImageGallery
+            items={imagesGaleriaRehabilitar}
+            showPlayButton={false}
+            showFullscreenButton={true}
+            showThumbnails={false}
+            autoPlay={true}
+            showBullets={true}
+            showNav={false}
+            lazyLoad={true}
+            slideDuration={450}
+          />
+        </StyledSlider>
+      </StyledGaleria>
+      <StyledAplicaciones
+        id={id[2]}
+        backgroundColor={COLORS.gray01}
+        rowGap={DISTANCES.small}
+      >
+        <Titulo2 color={COLORS.gray08}>Nouvelle construction</Titulo2>
+        <ImageWithCaption
+          src={img3}
+          alt="Image des Applications 1"
+          //   caption='Jorge dará la referencia o imágen.'
+          columnSpan="6"
+        />
+        <Cita
+          cita="L'espace n'a pas de sens sans lumière. Un bâtiment parle à travers le silence de la perception orchestrée par la lumière."
+          author="Steven Holl"
+          colorCita={COLORS.gray08}
+          colorAutor={COLORS.gray04}
+        />
+      </StyledAplicaciones>
+      <StyledGaleria id="galeria-obra-nueva" backgroundColor={COLORS.gray01}>
+        <StyledSlider className="Slider">
+          <ImageGallery
+            items={imagenesGaleriaObra}
+            showPlayButton={false}
+            showFullscreenButton={true}
+            showThumbnails={false}
+            autoPlay={true}
+            showBullets={true}
+            showNav={false}
+            lazyLoad={true}
+            slideDuration={450}
+          />
+        </StyledSlider>
+      </StyledGaleria>
+      <StyledAplicaciones
+        id={id[3]}
+        backgroundColor={COLORS.gray01}
+        rowGap={DISTANCES.small}
+      >
+        <Titulo2 color={COLORS.gray08}>Extérieurs</Titulo2>
+        <ImageWithCaption
+          src={img5}
+          alt="Image des Applications 1"
+          //   caption='Jorge dará la referencia o imágen.'
+          columnSpan="6"
+        />
+      </StyledAplicaciones>
+      <StyledGaleria id="galeria-obra-nueva" backgroundColor={COLORS.gray01}>
+        <StyledSlider className="Slider">
+          <ImageGallery
+            items={imagenesGaleriaExterior}
+            showPlayButton={false}
+            showFullscreenButton={true}
+            showThumbnails={false}
+            autoPlay={true}
+            showBullets={true}
+            showNav={false}
+            lazyLoad={true}
+            slideDuration={450}
+          />
+        </StyledSlider>
+      </StyledGaleria>
+    </>
+  );
 };
 
 export default AplicacionesTline;
