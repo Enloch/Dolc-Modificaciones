@@ -9,61 +9,61 @@ import Imagen1 from "../../../../assets/images/Fusion/Dolcker/IMG_7282.jpg";
 import Imagen2 from "../../../../assets/images/Fusion/Dolcker/IMG_7346.jpg";
 
 const DolckerTline = ({ id }) => {
-  const propsVisualizador = {
-    text: "Pasa el ratón por los puntos para ver la información",
-    type: "normal",
-    indicadores: config,
-    imgBackground: Imagen2,
-    alt: "Imagen de fondo con indicadores",
-  };
+	const propsVisualizador = {
+		text: "Hover over the points to see information",
+		type: "normal",
+		indicadores: config,
+		imgBackground: Imagen2,
+		alt: "Background image with indicators",
+	};
 
-  return (
-    <StyledDolcker id={id} backgroundColor={COLORS.gray03}>
-      <Titulo>Sistema Fusion soluciona</Titulo>
-      <div className="dolcker-info">
-        <ImageWithCaption
-          src={Imagen1}
-          alt="Imagen Dolcker 2"
-          caption="Sistema Fusion"
-        />
+	return (
+		<StyledDolcker id={id} backgroundColor={COLORS.gray03}>
+			<Titulo>Fusion System solves</Titulo>
+			<div className="dolcker-info">
+				<ImageWithCaption
+					src={Imagen1}
+					alt="Dolcker Image 2"
+					caption="Fusion System"
+				/>
 
-        <Text>
-          Sistema de fachadas modulares con combinaciones personalizadas
-          <br />
-          <br />
-          DOLCKER FUSIÓN es la evolución natural del reconocido sistema DOLCKER
-          SYSTEM, creado para ofrecer una libertad creativa sin precedentes en
-          el diseño de envolventes arquitectónicas.
-          <br />
-          <br />
-          Su principal valor diferencial reside en la posibilidad de combinar
-          diferentes colecciones dentro de una misma fachada, permitiendo
-          mezclar colores, texturas y acabados en los porcentajes definidos a
-          medida por el arquitecto o prescriptor.
-          <br />
-          <br />
-          Esta personalización se mantiene a lo largo de toda la cadena
-          logística: el material se entrega clasificado, mezclado y combinado
-          según proyecto, en palets preparados para su instalación directa,
-          facilitando la ejecución y optimizando el trabajo en obra.
-          <br />
-          <br />
-          Gracias a esta innovación, se pueden concebir fachadas con una
-          estética única, donde el control del diseño está plenamente en manos
-          del proyectista, permitiendo una expresión arquitectónica libre,
-          sofisticada y eficiente.
-        </Text>
-        <ImageWithCaption
-          src={Imagen2}
-          alt="Imagen Dolcker 2"
-          // caption="Sistema Volumen"
-        />
-      </div>
-      {/* <VisualizadorNota {...propsVisualizador} /> */}
+				<Text>
+					Modular facade system with customized combinations
+					<br />
+					<br />
+					DOLCKER FUSIÓN is the natural evolution of the renowned DOLCKER
+					SYSTEM, created to offer unprecedented creative freedom in the design
+					of architectural envelopes.
+					<br />
+					<br />
+					Its main differentiating value lies in the possibility of combining
+					different collections within the same facade, allowing to mix colors,
+					textures and finishes in the percentages defined to measure by the
+					architect or prescriptor.
+					<br />
+					<br />
+					This personalization is maintained throughout the entire logistics
+					chain: the material is delivered classified, mixed and combined
+					according to project, in pallets prepared for direct installation,
+					facilitating execution and optimizing work on site.
+					<br />
+					<br />
+					Thanks to this innovation, facades with a unique aesthetic can be
+					conceived, where design control is fully in the hands of the designer,
+					allowing for free, sophisticated and efficient architectural
+					expression.
+				</Text>
+				<ImageWithCaption
+					src={Imagen2}
+					alt="Dolcker Image 2"
+					// caption="Sistema Volumen"
+				/>
+			</div>
+			{/* <VisualizadorNota {...propsVisualizador} /> */}
 
-      <Text />
-    </StyledDolcker>
-  );
+			<Text />
+		</StyledDolcker>
+	);
 };
 
 export default DolckerTline;

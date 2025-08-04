@@ -38,6 +38,8 @@ import DolckerTXTEn from "./pages/en/catalogos/DolckerTXT";
 import DolckerT5En from "./pages/en/catalogos/DolckerT5";
 import DolckerScalaEn from "./pages/en/catalogos/DolckerScala";
 import DolckerArchiformEn from "./pages/en/catalogos/DolckerArchiform";
+import DolckerFusionEn from "./pages/en/catalogos/DolckerFusion";
+
 import PoliticaPrivacidadEn from "./pages/en/PoliticaPrivacidad";
 import AvisoLegalEn from "./pages/en/AvisoLegal";
 //French
@@ -139,6 +141,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 							path="/en/dolcker-archiform"
 							element={<DolckerArchiformEn />}
 						/>
+						<Route path="/en/dolcker-fusion" element={<DolckerFusionEn />} />
 						<Route path="/en/quienes-somos" element={<QuienesSomosEn />} />
 						<Route
 							path="/en/aviso-legal"

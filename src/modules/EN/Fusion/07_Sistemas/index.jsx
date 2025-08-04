@@ -21,37 +21,37 @@ const Sistemas = ({ id }) => {
   return (
     <>
       <StyledSistemas id={id[0]} backgroundColor={COLORS.gray02}>
-        <Titulo>Sistema constructivos</Titulo>
+        <Titulo>Construction Systems</Titulo>
         <ImageWithCaption
           src={sistemas}
-          alt="Sistemas introducción"
+          alt="Systems introduction image"
           columnSpan="6"
         />
         <Enlaces>
           <li>
             <a href={"#" + id[1]}>
-              Sistema
+              System
               <br />
               <strong>Dolcker & Clip</strong>
             </a>
           </li>
           <li>
             <a href={"#" + id[2]}>
-              Sistema
+              System
               <br />
               <strong>DOL - TC11</strong>
             </a>
           </li>
           <li>
             <a href={"#" + id[3]}>
-              Sistema
+              System
               <br />
               <strong>DOL - TC14</strong>
             </a>
           </li>
           <li>
             <a href={"#" + id[4]}>
-              Sistema
+              System
               <br />
               <strong>DOL - HC20</strong>
             </a>
@@ -62,53 +62,49 @@ const Sistemas = ({ id }) => {
       <StyledSistemas id={id[1]}>
         <Titulo2>Dolcker & Clip</Titulo2>
         <Text>
-          El sistema DOLCKER & CLIP para fachadas de cerámica tipo dolcker es un
-          sistema con perfilería de alta inercia y doble seguridad. Todos y cada
-          uno de los elementos que componen este sistema están fabricados con
-          materias primas de máxima calidad.
+          The DOLCKER & CLIP system for ceramic-type dolcker facades is a system
+          with high inertia profiles and double safety. Each and every one of the
+          components of this system are manufactured with top quality raw materials.
           <br />
           <br />
-          Se trata de un sistema de fijación mecánica de clip + fijación química
-          mediante una subestructura que está compuesta por ménsulas regulables
-          de aluminio de alta calidad en forma de “L” de 3 mm de espesor, que
-          transmiten esfuerzos y que van fijadas mediante anclaje a la
-          estructura base del edificio (pared de ladrillo o forjado de
-          hormigón).Sobre estas ménsulas se fijan mediante tornillos
-          autotaladrantes de acero inoxidable los perfiles verticales de
-          aluminio extruidos en forma de“T”de 3 mm de espesor.
+          It is a mechanical fixing system of clip + chemical fixing through a
+          substructure composed of adjustable aluminum brackets in "L" shape of 3 mm
+          thickness, which transmit efforts and are fixed by anchoring to the base
+          structure of the building (brick wall or concrete slab).
           <br />
           <br />
-          En estos perfiles en forma de “T” se atornillan unos perfiles
-          horizontales en forma de “G”, permitiendo así que la pieza esté
-          apoyada en su totalidad. Se trata del sistema idóneo para la
-          colocación de cerámicas, permitiendo sustituir las piezas ya que
-          dispone de un clip corredera de acero inoxidable logrando infinidad de
-          colocaciones. Además permite lacar el perfil horizontal en función del
-          color de su carpintería, permitiendo que el cliente elija el color de
-          la junta. Se colocan al menos dos clips correderas en la parte
-          superior de la pieza de arranque a 1/5 de distancia respecto a la
-          longitud de la pieza. En el resto de piezas intermedias, se procederá
-          a la colocación de al menos 4 clips por cada pieza de cerámica. Se le
-          añadirá puntos de masilla poliuretano de pegado y sellado sika-111 o
-          similar (4 por pieza) que nos permita absorber las dilataciones de la
-          fachada en los clips correderas.
+          On these brackets, vertical aluminum profiles extruded in "T" shape of 3 mm
+          thickness are fixed by self-tapping stainless steel screws.
           <br />
           <br />
-          Se trata sin duda de un sistema con múltiples opciones de composición
-          de fachada ya que es posible romper las juntas verticales. Éstas
-          juntas verticales se ven minimizadas a tan solo 1 mm potenciando de
-          esta manera las juntas horizontales. La salida de la cerámica es entre
-          43-47 mm dependiendo del espesor de la cerámica escogida.
+          In these "T" shaped profiles, horizontal profiles in "G" shape are screwed,
+          thus allowing the piece to be fully supported. It is the ideal system for
+          the placement of ceramics, allowing the replacement of pieces since it has
+          a stainless steel sliding clip that allows countless placements. Moreover,
+          it allows the lacquering of the horizontal profile according to the color
+          of the carpentry, allowing the customer to choose the color of the joint.
+          At least two sliding clips are placed in the upper part of the starting
+          piece at 1/5 of the distance from the length of the piece. In the rest of
+          the intermediate pieces, at least 4 clips are placed per ceramic piece.
+          Polyurethane adhesive and sealing points (4 per piece) are added, which
+          allow us to absorb the expansions of the facade in the sliding clips.
+          <br />
+          <br />
+          It is undoubtedly a system with multiple facade composition options, as it
+          is possible to break the vertical joints. These vertical joints are
+          minimized to just 1 mm, thus enhancing the horizontal joints. The ceramic
+          outlet is between 43-47 mm depending on the thickness of the chosen
+          ceramic.
         </Text>
         <ImageWithCaption
           src={dolckerClip1}
-          alt="Dolcker-clip demostración"
+          alt="Dolcker-clip demonstration"
           columnSpan="6"
           isGray
         />
         <ImageWithCaption
           src={dolckerClip2}
-          alt="Dolcker-clip tabla"
+          alt="Dolcker-clip table"
           columnSpan="6"
           isGray
         />
@@ -117,27 +113,25 @@ const Sistemas = ({ id }) => {
       <StyledSistemas id={id[2]}>
         <Titulo2>DOL - TC11</Titulo2>
         <Text>
-          El sistema DOL-TC11 para fachadas de cerámica con grapa oculta es un
-          sistema seguro, fácil y sencillo de instalar. Todos y cada uno de los
-          elementos que componen este sistema están fabricados con materias
-          primeras de máxima calidad.
+          The DOL-TC11 system for ceramic facades with hidden clip is a safe, easy
+          and simple system to install. Each and every one of the components of this
+          system are manufactured with top quality raw materials.
           <br />
           <br />
-          Se trata de un de fijación mecánica oculta mediante una subestructura
-          que está compuesta por escuadras (ménsulas) regulables de aluminio de
-          alta calidad de 3 mm de espesor con función de separadora, que también
-          transmiten esfuerzos y que van fijadas a la estructura base del
-          edificio (pared de ladrillo o forjado de hormigón)
+          It is a mechanical fixing system with hidden clip through a substructure
+          composed of adjustable aluminum brackets of 3 mm thickness with separator
+          function, which also transmit efforts and are fixed to the base structure
+          of the building (brick wall or concrete slab).
         </Text>
         <ImageWithCaption
           src={tc111}
-          alt="DOL-TC11 demostración"
+          alt="DOL-TC11 demonstration"
           columnSpan="6"
           isGray
         />
         <ImageWithCaption
           src={tc112}
-          alt="DOL-TC11 tabla"
+          alt="DOL-TC11 table"
           columnSpan="6"
           isGray
         />
@@ -146,27 +140,25 @@ const Sistemas = ({ id }) => {
       <StyledSistemas id={id[3]}>
         <Titulo2>DOL - TC14</Titulo2>
         <Text>
-          El sistema DOL-TC14 para fachadas de cerámica con grapa oculta es un
-          sistema seguro, fácil y sencillo de instalar. Todos y cada uno de los
-          elementos que componen este sistema están fabricados con materias
-          primeras de máxima calidad.
+          The DOL-TC14 system for ceramic facades with hidden clip is a safe, easy
+          and simple system to install. Each and every one of the components of this
+          system are manufactured with top quality raw materials.
           <br />
           <br />
-          Se trata de un de fijación mecánica oculta mediante una subestructura
-          que está compuesta por escuadras (ménsulas) regulables de aluminio de
-          alta calidad de 3 mm de espesor con función de separadora, que también
-          transmiten esfuerzos y que van fijadas a la estructura base del
-          edificio (pared de ladrillo o forjado de hormigón)
+          It is a mechanical fixing system with hidden clip through a substructure
+          composed of adjustable aluminum brackets of 3 mm thickness with separator
+          function, which also transmit efforts and are fixed to the base structure
+          of the building (brick wall or concrete slab).
         </Text>
         <ImageWithCaption
           src={tc141}
-          alt="DOL-TC14 demostración"
+          alt="DOL-TC14 demonstration"
           columnSpan="6"
           isGray
         />
         <ImageWithCaption
           src={tc142}
-          alt="DOL-TC14 tabla"
+          alt="DOL-TC14 table"
           columnSpan="6"
           isGray
         />
@@ -175,27 +167,25 @@ const Sistemas = ({ id }) => {
       <StyledSistemas id={id[4]}>
         <Titulo2>DOL - HC20</Titulo2>
         <Text>
-          El sistema DOL-HC20 para fachadas de cerámica o piedra de 20 mm con
-          grapa oculta es un sistema seguro, fácil y sencillo de instalar. Todos
-          y cada uno de los elementos que componen este sistema están fabricados
-          con materias primeras de máxima calidad.
+          The DOL-HC20 system for ceramic or stone facades of 20 mm with hidden clip
+          is a safe, easy and simple system to install. Each and every one of the
+          components of this system are manufactured with top quality raw materials.
           <br />
           <br />
-          Se trata de un de fijación mecánica oculta mediante una subestructura
-          que está compuesta por escuadras (ménsulas) regulables de aluminio de
-          alta calidad de 3 mm de espesor con función de separadora, que también
-          transmiten esfuerzos y que van fijadas a la estructura base del
-          edificio (pared de ladrillo o forjado de hormigón)
+          It is a mechanical fixing system with hidden clip through a substructure
+          composed of adjustable aluminum brackets of 3 mm thickness with separator
+          function, which also transmit efforts and are fixed to the base structure
+          of the building (brick wall or concrete slab).
         </Text>
         <ImageWithCaption
           src={hc201}
-          alt="DOL-HC20 demostración"
+          alt="DOL-HC20 demonstration"
           columnSpan="6"
           isGray
         />
         <ImageWithCaption
           src={hc202}
-          alt="DOL-HC20 tabla"
+          alt="DOL-HC20 table"
           columnSpan="6"
           isGray
         />

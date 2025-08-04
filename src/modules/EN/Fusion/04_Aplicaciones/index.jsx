@@ -60,7 +60,7 @@ const AplicacionesTline = ({ id }) => {
   return (
     <>
       <StyledGaleria id={id[0]} backgroundColor={COLORS.gray02}>
-        <Titulo color={COLORS.gray08}>Aplicaciones</Titulo>
+        <Titulo color={COLORS.gray08}>Applications</Titulo>
         <StyledSlider className="Slider">
           <ImageGallery
             items={imagesGaleriaAplicaciones}
@@ -75,42 +75,39 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-          Fusión es la herramienta de diseño de fachadas y envolventes
-          desarrollada para arquitectos y técnicos que buscan libertad creativa
-          con soluciones técnicas precisas.
+          Fusion is the facade and envelope design tool developed for architects
+          and technicians looking for creative freedom with precise technical solutions.
           <br />
           <br />
-          Con Dolcker Fusión puedes:
+          With Dolcker Fusion you can:
           <br />
-          • Diseñar edificios nuevos o rehabilitar fachadas existentes,
-          adaptando los acabados a las condiciones del entorno urbano o al
-          estilo del proyecto.
+          • Design new buildings or rehabilitate existing facades,
+          adapting finishes to urban environment conditions or project style.
           <br />
-          • Combinar colores en porcentajes definidos por el diseñador,
-          generando composiciones únicas en cerámica, piedra o materiales
-          técnicos.
+          • Combine colors in percentages defined by the designer,
+          generating unique compositions in ceramic, stone or technical materials.
           <br />
-          • Seleccionar texturas específicas como mate, brillo o flameada,
-          aportando un lenguaje estético acorde con la identidad del edificio.
+          • Select specific textures like matte, gloss or flamed,
+          providing an aesthetic language in line with the building's identity.
           <br />
-          • Elegir sistemas de anclaje personalizados: desde sistemas clip hasta
-          despieces a medida, con asesoramiento técnico incluido para garantizar
-          una instalación eficaz y duradera.
+          • Choose customized anchoring systems: from clip systems to
+          custom cuts, with included technical advice to ensure effective
+          and long-lasting installation.
           <br />
           <br />
-          Dolcker Fusión ofrece una solución integral para llevar el diseño
-          arquitectónico al siguiente nivel, combinando creatividad, técnica y
-          soporte profesional en cada fase del proyecto.
+          Dolcker Fusion offers an integral solution to take architectural design
+          to the next level, combining creativity, technique, and professional
+          support in each phase of the project.
         </Text>
         <Cita
-          cita="“El color es un poder que influye directamente en el alma”"
+          cita="“Color is a power that directly influences the soul”"
           author="— Wassily Kandinsky"
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
       </StyledGaleria>
       <StyledGaleria id={id[1]} backgroundColor={COLORS.gray01}>
-        <Titulo3 color={COLORS.gray08}>- Fusión Terracota</Titulo3>
+        <Titulo3 color={COLORS.gray08}>- Fusion Terracota</Titulo3>
         <StyledSlider className="Slider">
           <ImageGallery
             items={imagesGaleriaTerracota}
@@ -125,40 +122,40 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-        Fusión Terracota es una línea de superficies arquitectónicas que
-          explora la belleza atemporal de los tonos naturales de la arcilla
-          cocida. Diseñada para proyectos contemporáneos que buscan una conexión
-          con la materia prima y el equilibrio visual, esta colección se adapta
-          tanto a composiciones sobrias como expresivas.
+          Fusion Terracota is a line of architectural surfaces that explores the
+          timeless beauty of natural earth tones of fired clay. Designed for
+          contemporary projects seeking a connection with raw materials and
+          visual balance, this collection adapts to both sober and expressive
+          compositions.
           <br />
           <br />
-          Características principales:
+          Main characteristics:
           <br />
-          • Colores tierra suaves y naturales: gamas que evocan la esencia del
-          barro, la arena, el óxido o el siena.
+          • Soft and natural earth colors: ranges that evoke the essence of
+          clay, sand, oxide, or sienna.
           <br />
-          • Superficies de gran pureza visual, pensadas para ofrecer texturas
-          auténticas y acabados cerámicos cálidos, duraderos y versátiles.
+          • Surfaces of great visual purity, designed to offer authentic textures
+          and warm, durable, and versatile ceramic finishes.
           <br />
-          • Posibilidad de combinar colores en proporciones personalizadas,
-          adaptando cada diseño a la identidad estética del proyecto.
+          • Possibility of combining colors in personalized proportions,
+          adapting each design to the aesthetic identity of the project.
           <br />
-          • Perfecta para arquitectura contemporánea, rehabilitación o
-          integración en paisajes urbanos sensibles.
+          • Perfect for contemporary architecture, rehabilitation, or integration
+          into sensitive urban landscapes.
           <br />
           <br />
-          Elige los tonos directamente de la tierra y crea composiciones que
-          hablen el lenguaje de la arquitectura honesta, natural y esencial.
+          Choose the tones directly from the earth and create compositions that
+          speak the language of honest, natural, and essential architecture.
         </Text>
         <Cita
-          cita="“La arquitectura empieza cuando se colocan cuidadosamente dos ladrillos juntos.”"
+          cita="“Architecture begins when you place two bricks carefully together.”"
           author="— Ludwig Mies van der Rohe"
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
       </StyledGaleria>
       <StyledGaleria id={id[2]} backgroundColor={COLORS.gray01}>
-        <Titulo3 color={COLORS.gray08}>- Fusión Color</Titulo3>
+        <Titulo3 color={COLORS.gray08}>- Fusion Color</Titulo3>
         <StyledSlider className="Slider">
           <ImageGallery
             items={imagesGaleriaColor}
@@ -173,43 +170,41 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-        Fusión Color es la herramienta creativa de la colección ARQ que
-          permite combinar colores monolíticos para obtener composiciones
-          arquitectónicas personalizadas, equilibradas o atrevidas, según la
-          identidad del proyecto.
+          Fusion Color is the creative tool of the ARQ collection that allows
+          combining monolithic colors to obtain personalized architectural
+          compositions, balanced or bold, according to the project's identity.
           <br />
           <br />
-          Partiendo de una cuidada gama de monocolores, la colección ofrece la
-          posibilidad de:
+          Starting from a carefully selected range of monochromatic colors, the
+          collection offers the possibility of:
           <br />
-          • Realizar combinaciones suaves, usando tonos próximos dentro de una
-          misma gama cromática.
+          • Creating soft combinations, using tones close to each other within
+          the same chromatic range.
           <br />
-          • Crear efectos entonados, con matices sutiles para una armonía visual
-          continua.
+          • Generating harmonious effects, with subtle nuances for continuous
+          visual harmony.
           <br />
-          • Apostar por una alta dispersión cromática, jugando con colores
-          intensos o contrastados que generan impacto y carácter.
-          <br />
-          <br />
-          Cada combinación puede definirse en la proporción exacta deseada, lo
-          que permite controlar el ritmo visual y la atmósfera del diseño, desde
-          lo más sobrio hasta lo más expresivo.
+          • Betting on high chromatic dispersion, playing with intense or
+          contrasting colors that generate impact and character.
           <br />
           <br />
-          Fusión Color convierte la cerámica en una herramienta de lenguaje
-          arquitectónico, donde el color se estructura, se equilibra y se
-          expresa con intención.
+          Each combination can be defined in the exact proportion desired,
+          allowing control over the visual rhythm and atmosphere of the design,
+          from the most sober to the most expressive.
+          <br />
+          <br />
+          Fusion Color turns ceramics into an architectural language tool,
+          where color is structured, balanced, and expressed with intention.
         </Text>
         <Cita
-          cita="“El diseño no es solo lo que se ve o se siente. El diseño es cómo funciona.”"
+          cita="“Design is not just what it looks like and feels like. Design is how it works.”"
           author="— Steve Jobs"
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
       </StyledGaleria>
       <StyledGaleria id={id[3]} backgroundColor={COLORS.gray01}>
-        <Titulo3 color={COLORS.gray08}>- Fusión Petra</Titulo3>
+        <Titulo3 color={COLORS.gray08}>- Fusion Petra</Titulo3>
         <StyledSlider className="Slider">
           <ImageGallery
             items={imagesGaleriaPetra}
@@ -224,42 +219,42 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-          Fusión Petra es la propuesta creativa que permite combinar distintas
-          colecciones de piedra natural para crear fachadas únicas,
-          contemporáneas y con un alto valor estético.
+          Fusion Petra is the creative proposal that allows combining different
+          natural stone collections to create unique, contemporary, and
+          aesthetically valuable facades.
           <br />
           <br />
-          Las piedras naturales, por su origen geológico y su diversidad
-          cromática y gráfica, ofrecen una riqueza visual incomparable.
+          Natural stones, due to their geological origin and chromatic and
+          graphic diversity, offer unparalleled visual richness.
           <br />
           <br />
-          Fusión Petra parte de esa singularidad para ofrecer al arquitecto o
-          diseñador la posibilidad de:
+          Fusion Petra starts from this singularity to offer architects or
+          designers the possibility of:
           <br />
-          • Mezclar tonos y texturas de diferentes piedras en una misma fachada.
+          • Mixing tones and textures of different stones in the same facade.
           <br />
-          • Diseñar composiciones elegantes, modernas y de estilo vanguardista.
+          • Designing elegant, modern, and avant-garde compositions.
           <br />
-          • Definir la proporción exacta de cada tipo de piedra, adaptando el
-          ritmo visual y el impacto del proyecto.
+          • Defining the exact proportion of each type of stone, adapting the
+          visual rhythm and impact of the project.
           <br />
-          • Jugar con gráficas y vetas naturales para generar efectos dinámicos
-          o sobrios, según el lenguaje del edificio.
+          • Playing with natural graphics and veins to generate dynamic or
+          sober effects, according to the building's language.
           <br />
           <br />
-          Con Fusión Petra, las piedras dejan de ser un material complementario
-          para convertirse en una herramienta compositiva central, capaz de
-          construir identidad y sofisticación desde lo esencial.
+          With Fusion Petra, stones cease to be a complementary material to
+          become a central compositional tool, capable of building identity and
+          sophistication from the essential.
         </Text>
         <Cita
-          cita="“Diseñar no es hacer bonito, es hacer con sentido.”"
-          author="— Frase atribuida a múltiples diseñadores (origen no confirmado)"
+          cita="“Designing is not making it look good, it's making it make sense.”"
+          author="— Phrase attributed to multiple designers (unconfirmed origin)"
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
       </StyledGaleria>
       <StyledGaleria id={id[4]} backgroundColor={COLORS.gray01}>
-        <Titulo3 color={COLORS.gray08}>- Fusión Textura</Titulo3>
+        <Titulo3 color={COLORS.gray08}>- Fusion Textura</Titulo3>
         <StyledSlider className="Slider">
           <ImageGallery
             items={imagesGaleriaTextura}
@@ -274,33 +269,32 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-          Fusión Textura es la herramienta creativa que permite diseñar y
-          personalizar fachadas combinando distintos acabados y colores,
-          generando composiciones con profundidad, ritmo visual y una
-          interacción dinámica con la luz.
+          Fusion Textura is the creative tool that allows designing and
+          personalizing facades by combining different finishes and colors,
+          generating compositions with depth, visual rhythm, and dynamic
+          interaction with light.
           <br />
           <br />
-          A través de esta propuesta, puedes:
+          Through this proposal, you can:
           <br />
-          • Combinar texturas mate, brillo y flameado dentro de una misma
-          superficie arquitectónica.
+          • Combine matte, gloss, and flamed textures within the same
+          architectural surface.
           <br />
-          • Aplicar cualquier acabado disponible en nuestras colecciones para
-          generar fachadas con carácter único.
+          • Apply any finish available in our collections to generate facades
+          with unique character.
           <br />
-          • Definir tus propios porcentajes de combinación, adaptando el diseño
-          a las necesidades estéticas y técnicas del proyecto.
+          • Define your own combination percentages, adapting the design to the
+          aesthetic and technical needs of the project.
           <br />
-          • Crear efectos de luz y sombra, aportando volumen, relieve y
-          sofisticación a la envolvente del edificio.
+          • Create light and shadow effects, adding volume, relief, and
+          sophistication to the building's envelope.
           <br /> <br />
-          Fusión Textura ofrece libertad creativa total, elevando la fachada a
-          un lenguaje expresivo donde el acabado se convierte en materia de
-          diseño.
+          Fusion Textura offers total creative freedom, elevating the facade to
+          an expressive language where the finish becomes a design matter.
         </Text>
         <Cita
-          cita="“Donde el color y la textura se encuentran, nace el carácter del espacio.”"
-          author="— Inspiración propia / Original"
+          cita="“Where color and texture meet, the character of the space is born.”"
+          author="— Original inspiration"
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />

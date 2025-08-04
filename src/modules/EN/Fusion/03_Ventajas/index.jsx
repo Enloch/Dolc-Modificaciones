@@ -9,55 +9,54 @@ import Reemplazo from "../../../../assets/images/DolckerMatrix/temporal.webp";
 const VentajasTline = ({ id }) => {
   return (
     <StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-      <Titulo>Ventajas del sistema Dolcker Fusion</Titulo>
+      <Titulo>Advantages of the Dolcker Fusion system</Titulo>
       <ImageWithCaption
         src={img1}
-        alt="Imagen de Ventajas 1"
+        alt="Image of Advantages 1"
         caption="DOLCKER Fusion Terracotta"
         columnSpan="6"
       />
       <Text>
-        DOLCKER FUSION ha desarrollado un innovador sistema modular que permite
-        una personalización total de la fachada, combinando:
+        DOLCKER FUSION has developed an innovative modular system that allows
+        complete facade customization by combining:
         <br />
         <br />
         <strong>1. </strong>
-        Tres espesores de placa: 11, 14 y 20 mm.
+        Three plate thicknesses: 11, 14 and 20 mm.
         <br />
         <strong>2. </strong>
-        Tres texturas por modelo, totalmente combinables entre sí
+        Three textures per model, fully combinable with each other
         <br />
         <strong>3. </strong>
-        Modulación predefinida por porcentaje, según el diseño del prescriptor
+        Predefined percentage modulation according to the designer's specifications
         <br />
         <br />
-        Gracias a nuestro exclusivo sistema de clasificación, los pedidos se
-        suministran organizados según los porcentajes definidos de color y
-        textura, de forma que el instalador no necesita realizar ninguna
-        clasificación previa en obra.
+        Thanks to our exclusive classification system, orders are delivered
+        organized according to defined color and texture percentages, so the
+        installer doesn't need to perform any prior classification on site.
         <br />
         <br />
-        El sistema DOLCKER FUSION incorpora un desarrollo técnico de fijación
-        para fachadas ventiladas, diseñado para satisfacer tanto exigencias
-        estéticas como funcionales del proyecto.
+        The DOLCKER FUSION system incorporates a technical fixing development
+        for ventilated facades, designed to meet both aesthetic and functional
+        project requirements.
       </Text>
       <Listado>
-        <li>Sistema de fijación mecánica oculta + fijación elástica</li>
-        <li>Sistema desmontable</li>
+        <li>Hidden mechanical fixing system + elastic fixing</li>
+        <li>Demountable system</li>
         <li>
-          Clip correderos (seguridad para piezas de ariostamiento andamios)
+          Sliding clips (safety for scaffolding bracing pieces)
         </li>
-        <li>Perfil continuo de gran inercia para soporte de grandes cargas</li>
-        <li>Ranura continua calibrada en fábrica</li>
-        <li>Sistema de libre colocación</li>
-        <li>Multitud de tamaños de piezas</li>
-        <li>Despiece a medida</li>
-        <li>Diferentes espesores de piezas (11, 14 y 20 mm)</li>
-        <li>Sistema desarrollado para cámaras de hasta 20 cm</li>
-        <li>Piezas con canto visto &quot;full body&quot;</li>
-        <li>Fabricación de piezas con texturas mate, flamed y honed</li>
-        <li>Montaje rápido y seguro</li>
-        <li>Sistema versátil a la hora de diseñar la fachada</li>
+        <li>Continuous profile with high inertia for supporting heavy loads</li>
+        <li>Factory-calibrated continuous slot</li>
+        <li>Free placement system</li>
+        <li>Multiple piece sizes</li>
+        <li>Custom cutting</li>
+        <li>Different piece thicknesses (11, 14 and 20 mm)</li>
+        <li>System developed for chambers up to 20 cm</li>
+        <li>Pieces with "full body" visible edge</li>
+        <li>Manufacture of pieces with matte, flamed and honed textures</li>
+        <li>Fast and secure assembly</li>
+        <li>Versatile system for facade design</li>
       </Listado>
     </StyledVentajas>
   );

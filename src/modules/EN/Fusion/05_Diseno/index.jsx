@@ -22,97 +22,97 @@ import IndiceSeries from "./05_1_IndiceSeries";
 const DisenosTline = ({ id }) => {
   const propsFormato = {
     anotacion: {
-      text: "Pulsa en el punto para ver las posibilidades de formato",
+      text: "Click on the point to see the format possibilities",
       type: "click",
     },
     visualizador: {
       config: indicadoresFormato,
       srcfondo: fondo,
-      altFondo: "Imagen de fondo con indicadores",
+      altFondo: "Background image with indicators",
     },
   };
 
   return (
     <>
       <StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
-        <Titulo>Diseño</Titulo>
+        <Titulo>Design</Titulo>
         <ImageWithCaption
           src={img1}
-          alt="Imagen de Diseños 1"
+          alt="Designs 1 Image"
           caption="DOLCKER Fusion Color"
           columnSpan="6"
         />
         <Cita
-          cita="“La arquitectura es el aprendizaje de la luz, el espacio y la forma”"
+          cita="“Architecture is the learning of light, space and form”"
           author="— Louis Kahn"
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
       </StyledDisenos>
       <StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Formato</Titulo2>
+        <Titulo2>Format</Titulo2>
         <Anotacion {...propsFormato.anotacion} />
         <VisualizadorVariaciones {...propsFormato.visualizador} />
       </StyledDisenos>
       <StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Acabados</Titulo2>
+        <Titulo2>Finishes</Titulo2>
         <Anotaciones>
           <Anotacion
             type="normal"
-            text="Pulsa en el punto para ver todas las posibilidades de piezas especiales"
+            text="Click on the point to see all the possibilities of special pieces"
           />
           <Anotacion
             type="swipe"
-            text="Desliza con el ratón o el dedo para apreciar la textura"
+            text="Swipe with the mouse or finger to appreciate the texture"
           />
         </Anotaciones>
         <VisualizadorDesplazador config={configAcabados} />
       </StyledDisenos>
       <StyledDisenos id={id[4]} backgroundColor={COLORS.gray01} isEspesores>
-        <Titulo2>Espesores</Titulo2>
+        <Titulo2>Thicknesses</Titulo2>
         <div className="espesor espesor-1">
           <img src={ranurado11} alt="" />
           <ul>
             <strong>TC 11 / 11 mm.</strong>
-            <li>Suelo</li>
-            <li>Techo</li>
-            <li>Fachada</li>
+            <li>Floor</li>
+            <li>Ceiling</li>
+            <li>Facade</li>
           </ul>
         </div>
         <div className="espesor espesor-2">
           <img src={ranurado14} alt="" />
           <ul>
             <strong>TC 14 / 14 mm.</strong>
-            <li>Suelo</li>
-            <li>Techo</li>
-            <li>Fachada</li>
-            <li>Recerco</li>
+            <li>Floor</li>
+            <li>Ceiling</li>
+            <li>Facade</li>
+            <li>Frame</li>
           </ul>
         </div>
         <div className="espesor espesor-3">
           <img src={ranurado20} alt="" />
           <ul>
             <strong>TC 20 / 20 mm.</strong>
-            <li>Suelo técnico</li>
-            <li>Fachada</li>
-            <li>Recerco</li>
-            <li>Cubiertas</li>
-            <li>Vierteaguas</li>
-            <li>Rejilla</li>
-            <li>Peldaño</li>
+            <li>Technical floor</li>
+            <li>Facade</li>
+            <li>Frame</li>
+            <li>Coverings</li>
+            <li>Water spouts</li>
+            <li>Grille</li>
+            <li>Step</li>
           </ul>
         </div>
       </StyledDisenos>
       <StyledDisenos id={id[5]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Piezas especiales</Titulo2>
+        <Titulo2>Special pieces</Titulo2>
         <Anotaciones>
           <Anotacion
             type="normal"
-            text="Pulsa en el punto para ver todas las posibilidades de piezas especiales"
+            text="Click on the point to see all the possibilities of special pieces"
           />
           <Anotacion
             type="swipe"
-            text="Desliza con el ratón o el dedo para rotar la imagen 360º"
+            text="Swipe with the mouse or finger to rotate the image 360º"
           />
         </Anotaciones>
         <VisualizadorRotador config={config} />
