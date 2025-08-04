@@ -37,6 +37,7 @@ import DolckerMatrixDecorEn from "./pages/en/catalogos/DolckerMatrixDecor";
 import DolckerTXTEn from "./pages/en/catalogos/DolckerTXT";
 import DolckerT5En from "./pages/en/catalogos/DolckerT5";
 import DolckerScalaEn from "./pages/en/catalogos/DolckerScala";
+import DolckerArchiformEn from "./pages/en/catalogos/DolckerArchiform";
 import PoliticaPrivacidadEn from "./pages/en/PoliticaPrivacidad";
 import AvisoLegalEn from "./pages/en/AvisoLegal";
 //French
@@ -133,6 +134,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 						<Route path="/en/dolcker-txt" element={<DolckerTXTEn />} />
 						<Route path="/en/dolcker-t5" element={<DolckerT5En />} />
 						<Route path="/en/dolcker-scala" element={<DolckerScalaEn />} />
+						<Route
+							path="/en/dolcker-archiform"
+							element={<DolckerArchiformEn />}
+						/>
 						<Route path="/en/quienes-somos" element={<QuienesSomosEn />} />
 						<Route
 							path="/en/aviso-legal"
