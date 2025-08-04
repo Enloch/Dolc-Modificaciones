@@ -13,8 +13,8 @@ export default defineConfig({
 	server: {
 		host: true,
 		open: {
-			browser: 'chrome'
-		}
+			browser: "chrome",
+		},
 	},
 	build: {
 		chunkSizeWarningLimit: 1600,
@@ -30,6 +30,7 @@ export default defineConfig({
 			"@hooks": path.resolve(__dirname, "./src/hooks"),
 			"@modules": path.resolve(__dirname, "./src/modules"),
 			"@styles": path.resolve(__dirname, "./src/styles"),
+			"@utils": path.resolve(__dirname, "./src/utils"),
 		},
 	},
 });

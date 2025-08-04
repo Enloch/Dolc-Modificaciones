@@ -75,14 +75,14 @@ export { default as CaracteristicasDecor } from "./ES/Matrix_Decor/06_Caracteris
 export { default as SistemasDecor } from "./ES/Matrix_Decor/07_Sistemas";
 export { default as DescargasDecor } from "./ES/Matrix_Decor/08_Descargas";
 //T5
-export { default as IndiceT5 } from "./T5/01_Inicio";
-export { default as DolckerT5 } from "./T5/02_Dolcker";
-export { default as VentajasT5 } from "./T5/03_Ventajas";
-export { default as AplicacionesT5 } from "./T5/04_Aplicaciones";
-export { default as DisenosT5 } from "./T5/05_Diseno";
-export { default as CaracteristicasT5 } from "./T5/06_Caracteristicas";
-export { default as SistemasT5 } from "./T5/07_Sistemas";
-export { default as DescargasT5 } from "./T5/08_Descargas";
+export { default as IndiceT5 } from "./ES/T5/01_Inicio";
+export { default as DolckerT5 } from "./ES/T5/02_Dolcker";
+export { default as VentajasT5 } from "./ES/T5/03_Ventajas";
+export { default as AplicacionesT5 } from "./ES/T5/04_Aplicaciones";
+export { default as DisenosT5 } from "./ES/T5/05_Diseno";
+export { default as CaracteristicasT5 } from "./ES/T5/06_Caracteristicas";
+export { default as SistemasT5 } from "./ES/T5/07_Sistemas";
+export { default as DescargasT5 } from "./ES/T5/08_Descargas";
 //Archiform
 export { default as IndiceArchiform } from "./ES/Archiform/01_Inicio";
 export { default as DolckerArchiform } from "./ES/Archiform/02_Dolcker";
