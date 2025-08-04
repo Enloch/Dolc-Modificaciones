@@ -1,60 +1,59 @@
 [
 	{
-		"title": "Inicio",
-		"link": "/"
+		"title": "Accueil",
+		"link": "/fr"
 	},
 	{
-		"title": "Dolcker Matrix Decor soluciona",
+		"title": "Dolcker Matrix Decor résout",
 		"link": "#dolcker"
 	},
 	{
-		"title": "Ventajas del sistema Dolcker Matrix Decor",
+		"title": "Avantages du système Dolcker Matrix Decor",
 		"link": "#ventajas"
 	},
 	{
-		"title": "Aplicaciones",
+		"title": "Applications",
 		"subList": [
 			{
-				"title": "Aplicaciones",
+				"title": "Applications",
 				"link": "#aplicaciones"
 			},
 			{
-				"title": "Portales",
+				"title": "Portes",
 				"link": "#portales"
 			},
-
 			{
-				"title": "Baño",
+				"title": "Bain",
 				"link": "#bano"
 			},
 			{
-				"title": "Espacios",
+				"title": "Espaces",
 				"link": "#espacios"
 			}
 		]
 	},
 	{
-		"title": "Diseño",
+		"title": "Design",
 		"subList": [
 			{
-				"title": "Diseño",
+				"title": "Design",
 				"link": "#diseno"
 			},
 			{
-				"title": "Colecciones",
+				"title": "Collections",
 				"link": "#colecciones"
 			},
 			{
-				"title": "Configurador",
+				"title": "Configurateur",
 				"link": "#configurador"
 			}
 		]
 	},
 	{
-		"title": "Características",
+		"title": "Caractéristiques",
 		"subList": [
 			{
-				"title": "Características técnicas",
+				"title": "Caractéristiques techniques",
 				"link": "#caracteristicas-especiales"
 			}
 		]

@@ -28,7 +28,7 @@ const Indice = ({ indiceRef }) => {
 		ListaContenidos,
 		"Index",
 		indiceRef,
-		"en"
+		"fr"
 	);
 
 	const handleClickFlecha = () => {
@@ -41,7 +41,7 @@ const Indice = ({ indiceRef }) => {
 		<>
 			<StyledIndice backgroundColor={COLORS.gray06} ref={indiceRef} id="indice">
 				<Titulo color={COLORS.gray01}>Dolcker MATRIX DECOR</Titulo>
-				<ListaContenidos en={true} />
+				<ListaContenidos fr={true} />
 				<AnimatedArrow
 					size={32}
 					color="white"
@@ -51,10 +51,10 @@ const Indice = ({ indiceRef }) => {
 				/>
 				<div className="idiomas">
 					<Link to="/dolcker-matrix-decor">ES</Link>
-					<Link to="/en/dolcker-matrix-decor" className="seleccionado">
-						EN
+					<Link to="/en/dolcker-matrix-decor">EN</Link>
+					<Link to="/fr/dolcker-matrix-decor" className="seleccionado">
+						FR
 					</Link>
-					<Link to="/fr/dolcker-matrix-decor">FR</Link>
 				</div>
 			</StyledIndice>
 			{menuDesplegable}
