@@ -26,7 +26,7 @@ const Sistemas = ({ id }) => {
 	return (
 		<>
 			<StyledSistemas id={id[0]} backgroundColor={COLORS.gray02}>
-				<Titulo>Construction systems</Titulo>
+				<Titulo>Systèmes constructifs</Titulo>
 				<ImageWithCaption
 					src={sistemas}
 					alt="Sistemas introducción"
@@ -36,21 +36,21 @@ const Sistemas = ({ id }) => {
 				<Enlaces>
 					<li>
 						<a href={"#" + id[1]}>
-							System
+							Système
 							<br />
 							<strong>T5 XL GO</strong>
 						</a>
 					</li>
 					<li>
 						<a href={"#" + id[2]}>
-							System
+							Système
 							<br />
 							<strong>T5 XL GV</strong>
 						</a>
 					</li>
 					<li>
 						<a href={"#" + id[3]}>
-							System
+							Système
 							<br />
 							<strong>T5 XL PLUS</strong>
 						</a>
@@ -61,21 +61,26 @@ const Sistemas = ({ id }) => {
 			<StyledSistemas id={id[1]}>
 				<Titulo2>T5 XL GO</Titulo2>
 				<Text>
-					<strong>Chemical fixing system + concealed support clip</strong>
+					<strong>Système de fixation chimique + clip de support caché</strong>
 					<br />
 					<br />
-					<li>Ideal for projects requiring a discreet and robust fixing.</li>
-					<li>Ensures a solid hold while maintaining a clean aesthetic.</li>
 					<li>
-						Allows free expansion of porcelain without visual interference.
+						Idéal pour les projets nécessitant une fixation discrète et solide.
+					</li>
+					<li>
+						Assure une prise solide tout en maintenant une apparence esthétique.
+					</li>
+					<li>
+						Permet l'expansion libre de la céramique sans interférer
+						visuellement.
 					</li>
 				</Text>
 				<ImageWithCaption
 					src={IMG1}
-					alt="Dolcker-clip demostración"
+					alt="Démonstration Dolcker-clip"
 					columnSpan="6"
-					caption="Technical details T5 XL GO"
-					onClickFunc={() => openModal(IMG1, "Technical details T5 XL GO")}
+					caption="Détails techniques T5 XL GO"
+					onClickFunc={() => openModal(IMG1, "Détails techniques T5 XL GO")}
 				/>
 				{/* <ImageWithCaption
 					src={dolckerClip2}
@@ -88,21 +93,27 @@ const Sistemas = ({ id }) => {
 			<StyledSistemas id={id[2]}>
 				<Titulo2>T5 XL GV</Titulo2>
 				<Text>
-					<strong>Chemical fixing system + exposed fixing clip</strong>
+					<strong>
+						Système de fixation chimique + clip de fixation visible
+					</strong>
 					<br />
 					<br />
-					<li>Incorporates visible clips as a fixing and design element.</li>
-					<li>Adds a technical and contemporary touch to the facade.</li>
 					<li>
-						Allows easy installation with a high level of structural safety.
+						Intègre des clips visibles comme un élément de fixation et de
+						design.
+					</li>
+					<li>Ajoute un touché technique et contemporain à la façade.</li>
+					<li>
+						Permet une installation facile avec un haut niveau de sécurité
+						structurale.
 					</li>
 				</Text>
 				<ImageWithCaption
 					src={IMG2}
-					alt="Dolcker-clip demostración"
+					alt="Démonstration Dolcker-clip"
 					columnSpan="6"
-					caption="Technical details T5 XL GV"
-					onClickFunc={() => openModal(IMG2, "Technical details T5 XL GV")}
+					caption="Détails techniques T5 XL GV"
+					onClickFunc={() => openModal(IMG2, "Détails techniques T5 XL GV")}
 				/>
 				{/* <ImageWithCaption
 					src={dolckerClip2}
@@ -115,33 +126,34 @@ const Sistemas = ({ id }) => {
 			<StyledSistemas id={id[3]}>
 				<Titulo2>T5 XL PLUS</Titulo2>
 				<Text>
-					<strong>
-						Chemical fixing system + concealed rear retention clip
-					</strong>
+					<strong>Système de fixation chimique + clip de fixation caché</strong>
 					<br />
 					<br />
 					<li>
-						Provides reinforced holding without affecting the material's
-						aesthetics.
+						Fournit une prise renforcée sans affecter l'apparence du matériau.
 					</li>
 					<li>
-						Perfect for projects requiring maximum safety in large formats.
+						Idéal pour les projets nécessitant une sécurité maximale dans les
+						formats grands.
 					</li>
-					<li>Ensures stability against wind loads and temperature changes.</li>
+					<li>
+						Assure une stabilité contre les charges de vent et les variations de
+						la température.
+					</li>
 				</Text>
 				<ImageWithCaption
 					src={IMG3}
-					alt="Dolcker-clip demostración"
+					alt="Démonstration Dolcker-clip"
 					columnSpan="6"
-					caption="Technical details T5 XL PLUS"
-					onClickFunc={() => openModal(IMG3, "Technical details T5 XL PLUS")}
+					caption="Détails techniques T5 XL PLUS"
+					onClickFunc={() => openModal(IMG3, "Détails techniques T5 XL PLUS")}
 				/>
 				<ImageWithCaption
 					src={IMG1}
-					alt="Dolcker-clip demostración"
+					alt="Démonstration Dolcker-clip"
 					columnSpan="6"
-					caption="Startup details T5 XL PLUS"
-					onClickFunc={() => openModal(IMG1, "Startup details T5 XL PLUS")}
+					caption="Détails de démarrage T5 XL PLUS"
+					onClickFunc={() => openModal(IMG1, "Détails de démarrage T5 XL PLUS")}
 				/>
 				{/* <ImageWithCaption
 					src={dolckerClip2}
@@ -151,56 +163,61 @@ const Sistemas = ({ id }) => {
 				/> */}
 			</StyledSistemas>
 			<StyledSistemas>
-				<Titulo2>GRAPAS T5 XL</Titulo2>
+				<Titulo2>Agrafes T5 XL</Titulo2>
 				<ImageWithCaption
 					src={IMG4}
-					alt="Dolcker-clip demostración"
+					alt="Démonstration Dolcker-clip"
 					columnSpan="6"
-					caption="Rear detail T5 XL clip placement"
+					caption="Détail de la mise en place du clip T5 XL"
 					onClickFunc={() =>
-						openModal(IMG4, "Rear detail T5 XL clip placement")
+						openModal(IMG4, "Détail de la mise en place du clip T5 XL")
 					}
 				/>
 				<Text>
-					<strong>Expansion Point in Ceramic Clip T5 XL clips</strong>
+					<strong>Point d'expansion dans le clip en céramique T5 XL</strong>
 					<br />
 					<br />
-					The T5 XL system for large-format ceramic facades, where the pieces
-					are fixed with structural adhesives and complemented with metal
-					support and retention clips, requires expansion points to absorb
-					movements caused by changes in temperature and humidity.
+					Le système T5 XL pour les façades en céramique à grands formats, où
+					les pieces sont fixées avec des adhésifs structuraux et complétées
+					avec des supports et des clips de retenue en métal, nécessite des
+					points d'expansion pour absorber les mouvements causés par les
+					variations de température et d'humidité.
 					<br />
 					<br />
-					For this, TX 5 * clips have both fixed points and slots, as well as a
-					space between the clip tab that allows porcelain expansion.
+					Pour cela, les clips TX 5 * ont à la fois des points fixes et des
+					fentes, ainsi qu'un espace entre la tige du clip qui permet à la
+					céramique d'expansion.
 					<br />
 					<br />
-					<strong>1. Clip Fixing and Its Expansion Function</strong>
-					The clip must allow a certain degree of mobility, avoiding the
-					creation of rigid points that prevent the natural expansion and
-					contraction of the ceramic. This is key to avoiding internal stresses
-					that could cause cracks or detachment in the cladding system.
+					<strong>1. Fixation du clip et sa fonction d'expansion</strong>
+					Le clip doit permettre un certain degré de mobilité, évitant la
+					création des points rigides qui empêchent l'expansion et la
+					contraction naturelle du céramique. C'est la clé pour éviter les
+					tensions internes qui pourraient causer des fissures ou des
+					détachements dans le système de revêtement.
 					<br />
 					<br />
-					<strong>2. Importance of the Expansion Point in Ceramic Clip</strong>
+					<strong>
+						2. Importance du point d'expansion dans le clip en céramique
+					</strong>
 					<br />
 					<br />
 					<li>
-						<strong>Prevention of cracks and detachment:</strong> Ceramic
-						undergoes dimensional changes with temperature variations. If
-						adequate expansion space is not provided, stresses may arise that
-						compromise its stability.
+						<strong>Prévention des fissures et détachements:</strong> Le
+						céramique subit des changements de dimension avec les variations de
+						température. Si non, les tensions peuvent se développer et
+						compromettre sa stabilité.
 					</li>
 					<li>
-						<strong>System durability:</strong> Proper planning of expansion
-						joints ensures the resistance and longevity of the cladding,
-						preventing premature failures.
+						<strong>Durabilité du système:</strong> Le planification des joints
+						d'expansion garantit la résistance et la longévité du revêtement,
+						prenant en charge les échecs prématurés.
 					</li>
 					<li>
-						<strong>Ease of installation and maintenance:</strong> The expansion
-						space facilitates the correct placement of the pieces, allowing
-						replacements or adjustments without affecting the general behavior
-						of the system.
+						<strong>Facilité d'installation et de maintenance:</strong> L'espace
+						d'expansion facilite le placement correct des pièces, permettant des
+						remplacements ou des ajustements sans affecter le comportement
+						général du système.
 					</li>
 				</Text>
 			</StyledSistemas>

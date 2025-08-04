@@ -9,111 +9,114 @@ import Listado from "@components/Listado";
 const Ventajas = ({ id }) => {
 	return (
 		<StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-			<Titulo>Advantages of the Dolcker T5 XL system</Titulo>
+			<Titulo>Avantages du système Dolcker T5 XL</Titulo>
 			<ImageWithCaption
 				src={img1}
 				alt="Imagen de Ventajas 1"
-				caption="Sistema T5"
+				caption="Système T5"
 				columnSpan="6"
 			/>
 			<Text>
-				Advantages of the Ventilated Facade System and T5 with Large Format Porcelain Cladding
+				Avantages du système de façade ventilée et du T5 avec revêtement en grès
+				cérame grand format
 				<br />
 				<br />
-				Ventilated facades with large format porcelain cladding offer an innovative and highly efficient solution for the construction and renovation of buildings. The combination with chemical fixing systems optimizes installation and system performance, providing key benefits in terms of durability, energy efficiency, and design.
+				Les façades ventilées avec revêtement en grès cérame grand format
+				offrent une solution innovante et très efficace pour la construction et
+				la rénovation des bâtiments. La combinaison avec des systèmes de
+				fixation chimique optimise l'installation et la performance du système,
+				apportant des avantages clés en termes de durabilité, d'efficacité
+				énergétique et de design.
 			</Text>
 			<Listado>
-				<strong>Máxima Durabilidad</strong>
+				<strong>Durabilité maximale</strong>
 				<br />
 				<br />
-				El porcelánico de gran formato, combinado con un sistema de fijación
-				química, garantiza una resistencia superior a los impactos, agentes
-				químicos y condiciones climáticas extremas. Gracias a su baja porosidad,
-				el material es altamente resistente a la humedad, la radiación UV y los
-				cambios bruscos de temperatura, evitando degradación, fisuras o
-				desprendimientos a lo largo del tiempo
+				Le grès cérame grand format, combiné à un système de fixation chimique,
+				garantit une résistance supérieure aux impacts, aux agents chimiques et
+				aux conditions climatiques extrêmes. Grâce à sa faible porosité, le
+				matériau est hautement résistant à l'humidité, au rayonnement UV et aux
+				variations brusques de température, évitant ainsi la dégradation, les
+				fissures ou les décollements au fil du temps.
 				<br />
 				<br />
 				<li>
-					Inmunidad frente a productos químicos agresivos y contaminación
-					ambiental.
+					Immunité contre les produits chimiques agressifs et la pollution
+					environnementale.
 				</li>
 				<li>
-					Comportamiento óptimo en zonas con climas extremos (altas
-					temperaturas, heladas, lluvias ácidas, etc.).
-				</li>
-			</Listado>
-			<Listado>
-				<strong>Eficiencia Energética</strong>
-				<br />
-				<br />
-				El sistema de fachada ventilada crea una cámara de aire que mejora el
-				aislamiento térmico y acústico del edificio. Este efecto reduce la
-				transmisión de calor en verano y minimiza las pérdidas térmicas en
-				invierno, optimizando el consumo energético y mejorando el confort
-				interior.
-				<br />
-				<br />
-				<li>
-					Contribución a la sostenibilidad y eficiencia del edificio,
-					alineándose con estándares de construcción ecológica.
+					Comportement optimal dans les zones à climat extrême (hautes
+					températures, gel, pluies acides, etc.).
 				</li>
 			</Listado>
 			<Listado>
-				<strong>Versatilidad de Diseño</strong>
+				<strong>Efficacité énergétique</strong>
 				<br />
 				<br />
-				El porcelánico de gran formato está disponible en una amplia variedad de
-				acabados, colores y texturas, permitiendo diseñar fachadas modernas y
-				sofisticadas. Su capacidad de imitar materiales naturales como piedra,
-				madera o mármol ofrece una estética premium sin comprometer la
-				durabilidad y el mantenimiento.
+				Le système de façade ventilée crée une lame d'air qui améliore
+				l'isolation thermique et acoustique du bâtiment. Cet effet réduit la
+				transmission de chaleur en été et minimise les pertes thermiques en
+				hiver, optimisant ainsi la consommation d'énergie et améliorant le
+				confort intérieur.
 				<br />
 				<br />
 				<li>
-					Diversidad de formatos y espesores que se adaptan a distintas
-					soluciones arquitectónicas.
-				</li>
-				<li>
-					Posibilidad de personalización según los requerimientos del proyecto.
-				</li>
-				<li>
-					Acabados de alta gama con un impacto visual atractivo y elegante.
+					Contribution à la durabilité et à l'efficacité du bâtiment, en accord
+					avec les normes de construction écologique.
 				</li>
 			</Listado>
 			<Listado>
-				<strong>Montaje Rápido y Seguro</strong>
+				<strong>Polyvalence du design</strong>
 				<br />
 				<br />
-				La fijación química permite una instalación eficiente, evitando
-				perforaciones y reduciendo los tiempos de montaje. Además, garantiza una
-				adhesión homogénea y segura, minimizando riesgos de desprendimiento y
-				ofreciendo una solución estructuralmente estable.
+				Le grès cérame grand format est disponible dans une large gamme de
+				finitions, de couleurs et de textures, permettant de concevoir des
+				façades modernes et sophistiquées. Sa capacité à imiter des matériaux
+				naturels tels que la pierre, le bois ou le marbre offre une esthétique
+				haut de gamme sans compromettre la durabilité et l'entretien.
 				<br />
 				<br />
 				<li>
-					Sistemas de fijación adaptados a cada necesidad y tipo de proyecto.
+					Diversité de formats et d'épaisseurs adaptés à différentes solutions
+					architecturales.
 				</li>
+				<li>Possibilité de personnalisation selon les exigences du projet.</li>
 				<li>
-					Menor tiempo de instalación en comparación con sistemas tradicionales.
+					Finitions haut de gamme avec un impact visuel attrayant et élégant.
 				</li>
 			</Listado>
 			<Listado>
-				<strong>Bajo Mantenimiento</strong>
+				<strong>Montage rapide et sûr</strong>
 				<br />
 				<br />
-				El porcelánico es un material de fácil limpieza y alta resistencia al
-				paso del tiempo. No requiere tratamientos especiales ni repintados
-				periódicos, lo que reduce los costos de mantenimiento a largo plazo.
+				La fixation chimique permet une installation efficace, sans perçage et
+				réduit les temps de montage. Elle garantit également une adhérence
+				homogène et sûre, minimisant les risques de décollement et offrant une
+				solution structurelle stable.
 				<br />
 				<br />
+				<li>Systèmes de fixation adaptés à chaque besoin et type de projet.</li>
 				<li>
-					Superficie no porosa que evita la acumulación de suciedad y moho.
+					Temps d'installation réduit par rapport aux systèmes traditionnels.
 				</li>
-				<li>Fácil limpieza con agua y detergentes neutros.</li>
+			</Listado>
+			<Listado>
+				<strong>Entretien minimal</strong>
+				<br />
+				<br />
+				Le grès cérame est un matériau facile à nettoyer et très résistant au
+				temps. Il ne nécessite pas de traitements spéciaux ni de repeints
+				périodiques, ce qui réduit les coûts d'entretien à long terme.
+				<br />
+				<br />
 				<li>
-					Mantenimiento prácticamente nulo, conservando su estética y
-					funcionalidad durante décadas.
+					Surface non poreuse qui évite l'accumulation de saleté et de
+					moisissures.
+				</li>
+				<li>Nettoyage facile à l'eau et aux détergents neutres.</li>
+				<li>
+					Entretien pratiquement nul, conservant son esthétique et sa
+					fonctionnalité pendant des décennies.
 				</li>
 			</Listado>
 		</StyledVentajas>

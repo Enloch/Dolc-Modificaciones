@@ -35,11 +35,11 @@ const Aplicaciones = ({ id }) => {
 				<ImageWithCaption
 					src={img1}
 					alt="Imagen de Aplicaciones 1"
-					caption="texto informativo"
+					// caption="texto informativo"
 					columnSpan="6"
 				/>
 				<Cita
-					cita="The facade is the face of the building, and as such, it must express its character and purpose."
+					cita="La façade est le visage du bâtiment, et à ce titre, elle doit exprimer son caractère et sa fonction."
 					author="Louis Kahn"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -81,15 +81,15 @@ const Aplicaciones = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.medium}
 			>
-				<Titulo2 color={COLORS.gray08}>Renovation</Titulo2>
+				<Titulo2 color={COLORS.gray08}>Rénovation</Titulo2>
 				<ImageWithCaption
 					src={img2}
 					alt="Imagen de Aplicaciones 1"
-					caption="texto informativo"
+					// caption="texto informativo"
 					columnSpan="6"
 				/>
 				<Cita
-					cita="The facade is the mirror of a building's soul."
+					cita="La façade est le miroir de l'âme d'un bâtiment."
 					author="Norman Foster"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -100,15 +100,15 @@ const Aplicaciones = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.medium}
 			>
-				<Titulo2 color={COLORS.gray08}>New construction</Titulo2>
+				<Titulo2 color={COLORS.gray08}>Nouvelle construction</Titulo2>
 				<ImageWithCaption
 					src={img3}
 					alt="Imagen de Aplicaciones 1"
-					caption="texto informativo"
+					// caption="texto informativo"
 					columnSpan="6"
 				/>
 				<Cita
-					cita="Architecture is the wise, correct, and magnificent play of volumes under the light."
+					cita="L'architecture est le jeu sage, correct et magnifique des volumes sous la lumière."
 					author="Le Corbusier"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -119,11 +119,11 @@ const Aplicaciones = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.medium}
 			>
-				<Titulo3 color={COLORS.gray08}>- Facades</Titulo3>
+				<Titulo3 color={COLORS.gray08}>- Façades</Titulo3>
 				<ImageWithCaption
 					src={img4}
 					alt="Imagen de Aplicaciones 4"
-					caption="texto informativo"
+					// caption="texto informativo"
 					columnSpan="6"
 				/>
 			</StyledAplicaciones>
@@ -133,12 +133,12 @@ const Aplicaciones = ({ id }) => {
 				rowGap={DISTANCES.medium}
 			>
 				<Titulo3 color={COLORS.gray08}>
-					— Terraces, raised floors, ceilings, and solutions
+					— Terrasses, planchers surélevés, plafonds et solutions
 				</Titulo3>
 				<ImageWithCaption
 					src={img5}
 					alt="Imagen de Aplicaciones 5"
-					caption="texto informativo"
+					// caption="texto informativo"
 					columnSpan="6"
 				/>
 			</StyledAplicaciones>

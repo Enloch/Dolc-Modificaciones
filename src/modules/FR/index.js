@@ -45,3 +45,12 @@ export { default as DisenosTXT } from "./TXT/05_Diseno";
 export { default as CaracteristicasTXT } from "./TXT/06_Caracteristicas";
 export { default as SistemasTXT } from "./TXT/07_Sistemas";
 export { default as DescargasTXT } from "./TXT/08_Descargas";
+//t5
+export { default as IndiceT5 } from "./T5/01_Inicio";
+export { default as DolckerT5 } from "./T5/02_Dolcker";
+export { default as VentajasT5 } from "./T5/03_Ventajas";
+export { default as AplicacionesT5 } from "./T5/04_Aplicaciones";
+export { default as DisenosT5 } from "./T5/05_Diseno";
+export { default as CaracteristicasT5 } from "./T5/06_Caracteristicas";
+export { default as SistemasT5 } from "./T5/07_Sistemas";
+export { default as DescargasT5 } from "./T5/08_Descargas";

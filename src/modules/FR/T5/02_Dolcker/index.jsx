@@ -12,7 +12,7 @@ import config from "@configs/configDolckerT5";
 
 const Dolcker = ({ id }) => {
 	const propsVisualizador = {
-		text: "Hover over the points to see information",
+		text: "Survolez les points pour voir les informations",
 		type: "normal",
 		indicadores: config,
 		imgBackground: img3,
@@ -22,69 +22,72 @@ const Dolcker = ({ id }) => {
 	return (
 		<>
 			<StyledDolcker id={id} backgroundColor={COLORS.gray03}>
-				<Titulo>Dolcker T5 XL solution</Titulo>
+				<Titulo>Solution Dolcker T5 XL</Titulo>
 				<div className="dolcker-info">
 					<ImageWithCaption
 						src={img1}
-						alt="Imagen Dolcker 2"
-						caption="Example of Dolcker T5 XL Systems"
+						alt="Image Dolcker 2"
+						caption="Exemple de systèmes Dolcker T5 XL"
 					/>
 					<Text>
-						Dolcker T5 XL: innovation and design for next-generation ventilated facades.
+						Dolcker T5 XL : innovation et design pour des façades ventilées de
+						nouvelle génération.
 						<br />
 						<br />
-						The <strong>DOL-T5 XL System</strong> is an advanced solution for ventilated facades, designed for the installation of large-format ceramic cladding with a hybrid fixing system, combining hidden clips and structural adhesive. Its optimized design ensures a lightweight, safe, and efficient assembly using the highest quality materials. Main Features
+						Le <strong>Système DOL-T5 XL</strong> est une solution avancée pour
+						les façades ventilées, conçue pour l'installation de revêtements
+						céramiques grand format avec un système de fixation hybride,
+						combinant des clips cachés et une colle structurelle. Son design
+						optimisé garantit un assemblage léger, sûr et efficace avec des
+						matériaux de la plus haute qualité. Caractéristiques principales
 						<br />
 						<br />
-						<strong>Fixing system:</strong>
+						<strong>Système de fixation :</strong>
 						<br />
-						Hidden clip for a clean and uniform aesthetic.
+						Clip caché pour une esthétique propre et uniforme.
 						<br />
-						Compatible with ceramics of 3.5 - 5.6 - 10.5 - 12 mm thickness.
+						Compatible avec des céramiques de 3,5 - 5,6 - 10,5 - 12 mm
+						d'épaisseur.
 						<br />
-						Horizontal joints of 5-6 mm and vertical joints of 2 mm or more, ensuring stability and aesthetics.
-						<br />
-						<br />
-						<strong>Anchoring and profiles:</strong>
-						<br />
-						Single and double L-shaped aluminum brackets for robust fixing.
-						<br />
-						Vertical T and L extruded aluminum profiles, lacquered in black, ensuring resistance and durability.
-						<br />
-						Stainless steel expansion anchor for slab fixing.
-						<br />
-						Anchor with nylon plug and screw for brick walls.
-						<br />
-						Self-drilling screws with EPDM washer in stainless steel, ensuring maximum hold.
-						<br /> Flat head self-drilling screws lacquered in stainless steel for discreet and resistant fixing.
+						Joints horizontaux de 5-6 mm et joints verticaux de 2 mm ou plus,
+						assurant stabilité et esthétique.
 						<br />
 						<br />
-						<strong>Fixings:</strong>
+						<strong>Ancrages et profils :</strong>
 						<br />
-						Mechanical fixing with hidden lacquered stainless steel clip with a 5.6 mm outlet.
+						Équerres en aluminium en L simples et doubles pour une fixation
+						robuste.
 						<br />
-						Chemical fixing with SikaTack Panel structural adhesive, ensuring a strong and durable bond.
+						Profils verticaux en T et en L en aluminium extrudé, laqués en noir,
+						assurant résistance et durabilité.
+						<br />
+						Cheville d'expansion en acier inoxydable pour la fixation sur dalle.
+						<br />
+						Cheville avec douille en nylon et vis pour murs en brique.
+						<br />
+						Vis autoperceuses avec rondelle EPDM en acier inoxydable, assurant
+						une tenue maximale.
+						<br /> Vis autoperceuses à tête plate laquées en acier inoxydable
+						pour une fixation discrète et résistante.
 						<br />
 						<br />
-						<strong>Other components:</strong>
-						<br /> Sika Primer 210T, optimizing adhesive bonding.
-						<br /> Double-sided adhesive tape, improving initial fixing and facilitating installation.
+						<strong>Fixations :</strong>
+						<br />
+						Fixation mécanique avec clip caché en acier inoxydable laqué avec
+						une sortie de 5,6 mm.
+						<br />
+						Fixation chimique avec colle structurelle SikaTack Panel, assurant
+						une liaison forte et durable.
+						<br />
+						<br />
+						<strong>Autres composants :</strong>
+						<br /> Sika Primer 210T, optimisant l'adhérence de la colle.
+						<br /> Ruban adhésif double face, améliorant la fixation initiale et
+						facilitant l'installation.
 					</Text>
 				</div>
 				<VisualizadorNota {...propsVisualizador} />
-				<Text>
-					{/* <strong>Imagen Exterior G10(Arquitecto )</strong>
-        <br />
-        -Esquina {'( dibujo técnico/croquis por parte del arquitecto)'}
-        <br />
-        -Recerco {'( dibujo técnico/croquis por parte del arquitecto)'}
-        <br />
-        -Coronación {'( dibujo técnico/croquis por parte del arquitecto)'}
-        <br />
-        -Arranque {'( dibujo técnico/croquis por parte del arquitecto)'}
-        <br />
-        -Fachada {'( dibujo técnico/croquis por parte del arquitecto)'} */}
-				</Text>
+				<Text></Text>
 			</StyledDolcker>
 		</>
 	);

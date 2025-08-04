@@ -231,7 +231,7 @@ const IndiceSeries = ({ id }) => {
 
 	return (
 		<StyledIndiceSeries id={id} backgroundColor={COLORS.gray02}>
-			<Titulo2>Collections</Titulo2>
+			<Titulo2>Séries</Titulo2>
 
 			<div className="carousel-container">
 				<Slider {...sliderSettings}>

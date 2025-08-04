@@ -34,89 +34,92 @@ const Disenos = ({ id }) => {
 				<ImageWithCaption
 					src={img1}
 					alt="Imagen de Diseños 1"
-					caption="Architects provide the reference"
+					caption="Les architectes fournissent la référence"
 					columnSpan="6"
 				/>
 				<Cita
-					cita="Architecture should speak of its time and place, but yearn for timelessness"
+					cita="L'architecture doit parler de son époque et de son lieu, mais aspirer à l'intemporalité"
 					author="Frank Gehry"
 					colorAutor={COLORS.gray05}
 				/>
 			</StyledDisenos>
 			<StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
-				<Titulo2>Safety mesh</Titulo2>
+				<Titulo2>Maille de sécurité</Titulo2>
 				<Anotaciones>
 					<Text>
-						The mesh on the back of large-format porcelain is a fiberglass mesh
-						bonded with resin to the back of the slab. Its purpose is to
-						reinforce the mechanical strength of the material, reducing the risk
-						of fractures and facilitating handling, transport, and installation.
+						La maille au dos du grès cérame grand format est une maille en fibre
+						de verre collée à la résine à l'arrière de la dalle. Son objectif
+						est de renforcer la résistance mécanique du matériau, réduisant le
+						risque de fractures et facilitant la manipulation, le transport et
+						l'installation.
 						<br />
 						<br />
 						<strong>
-							Benefits of mesh reinforcement in large-format porcelain:
+							Bénéfices du renforcement par maille dans le grès cérame grand
+							format :
 						</strong>
 						<br />
 						<br />
-						1. Greater breakage resistance: The fiberglass helps prevent the
-						piece from breaking easily, especially during cutting or
-						installation.
+						1. Résistance accrue à la rupture : La fibre de verre aide à éviter
+						que la pièce ne se casse facilement, notamment lors de la coupe ou
+						de l'installation.
 						<br />
 						<br />
-						2. Handling safety: Reduces the risk of fragment detachment in case
-						of breakage.
+						2. Sécurité de manipulation : Réduit le risque de détachement de
+						fragments en cas de casse.
 						<br />
 						<br />
-						3. Facilitates installation: In some cases, it improves adhesion
-						with certain adhesives and mortars.
+						3. Facilite l'installation : Dans certains cas, elle améliore
+						l'adhérence avec certains adhésifs et mortiers.
 						<br />
 						<br />
-						4. Stress compensation: Helps absorb small mechanical stresses that
-						may arise from thermal variations or substrate flexing.
+						4. Compensation des contraintes : Aide à absorber les petites
+						contraintes mécaniques pouvant survenir en raison de variations
+						thermiques ou de flexions du support.
 						<br />
 						<br />
-						This type of reinforcement is common in ultra-thin porcelain slabs
-						and in large-format pieces that require greater structural integrity
-						due to their size.
+						Ce type de renforcement est courant dans les dalles de grès cérame
+						ultra-minces et dans les pièces grand format nécessitant une plus
+						grande intégrité structurelle en raison de leur taille.
 					</Text>
 				</Anotaciones>
 				<ImageWithCaption
 					src={acabados}
 					alt="mesh"
-					caption="(Top to bottom) No mesh, continuous mesh, discontinuous mesh"
+					caption="(De haut en bas) Sans maille, maille continue, maille discontinue"
 					columnSpan="6"
 				/>
 			</StyledDisenos>
 			<StyledDisenos id={id[2]} backgroundColor={COLORS.gray01} isEspesores>
-				<Titulo2>Thicknesses</Titulo2>
+				<Titulo2>Épaisseurs</Titulo2>
 				<div className="espesor espesor-1">
 					<img src={ranurado3} alt="" />
 					<ul>
 						<strong>TC 5 / 3 mm.</strong>
-						<li>Floor</li>
-						<li>Ceiling</li>
-						<li>Facade</li>
-						<li>Frame</li>
+						<li>Sol</li>
+						<li>Plafond</li>
+						<li>Façade</li>
+						<li>Encadrement</li>
 					</ul>
 				</div>
 				<div className="espesor espesor-2">
 					<img src={ranurado5} alt="" />
 					<ul>
 						<strong>TC 5 / 5.6 mm.</strong>
-						<li>Floor</li>
-						<li>Ceiling</li>
-						<li>Facade</li>
-						<li>Frame</li>
+						<li>Sol</li>
+						<li>Plafond</li>
+						<li>Façade</li>
+						<li>Encadrement</li>
 					</ul>
 				</div>
 				<div className="espesor espesor-3">
 					<img src={ranurado8} alt="" />
 					<ul>
 						<strong>TC 5 / 8 mm.</strong>
-						<li>Floor</li>
-						<li>Ceiling</li>
-						<li>Facade</li>
-						<li>Frame</li>
+						<li>Sol</li>
+						<li>Plafond</li>
+						<li>Façade</li>
+						<li>Encadrement</li>
 					</ul>
 				</div>
 			</StyledDisenos>
