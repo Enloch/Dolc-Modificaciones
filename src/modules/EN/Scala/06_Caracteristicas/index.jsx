@@ -232,7 +232,6 @@ const Caracteristicas = ({ id }) => {
 													UNE EN-14411 (1)
 													<br />
 													ISO 13006 ANEXO G
-{{ ... }}
 												</TableCell>
 												<TableCell
 													align="center"
