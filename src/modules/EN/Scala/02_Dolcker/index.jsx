@@ -10,7 +10,7 @@ import Imagen2 from "../../../../assets/images/Scala/Dolcker/Volum62.jpg";
 
 const DolckerTline = ({ id }) => {
   const propsVisualizador = {
-    text: "Pasa el ratón por los puntos para ver la información",
+    text: "Move the mouse over the points to see the information",
     type: "normal",
     indicadores: config,
     imgBackground: Imagen2,
@@ -19,32 +19,31 @@ const DolckerTline = ({ id }) => {
 
   return (
     <StyledDolcker id={id} backgroundColor={COLORS.gray03}>
-      <Titulo>Sistema Scala soluciona</Titulo>
+      <Titulo>Scala System solves</Titulo>
       <div className="dolcker-info">
         <ImageWithCaption
           src={Imagen1}
           alt="Imagen Dolcker 2"
-          caption="Sistema Scala"
+          caption="Scala System"
         />
 
         <Text>
-          DOLCKER SCALA es el primer sistema de ranura continua{" "}
-          <strong>full&body</strong>, que ofrece infinitas posibilidades de
-          modulación. Combina placas de distintos espesores —11, 14 y 20 mm—
-          para generar relieves, sombras y espacios entre las piezas de la
-          fachada.
+          DOLCKER SCALA is the first continuous groove system{" "}
+          <strong>full&body</strong>, offering infinite modulation possibilities. It combines plates of different thicknesses —11, 14 and 20 mm—
+          to generate reliefs, shadows and spaces between the pieces of the
+          facade.
           <br />
           <br />
-          Este innovador sistema permite diseñar envolventes arquitectónicas con
-          soluciones técnicas aplicables también a suelos elevados, techos,
-          recercados de ventanas y tapas de coronación, utilizando siempre el
-          mismo material para lograr una estética continua y coherente en todo
-          el proyecto.
+          This innovative system allows designing architectural envelopes with
+          technical solutions also applicable to raised floors, ceilings,
+          window reveals and coping covers, always using the
+          same material to achieve a continuous and coherent aesthetic throughout
+          the project.
           <br />
           <br />
-          Gracias a la tecnología full&body, es posible diseñar aristas
-          completamente continuas, obteniendo un acabado uniforme, preciso y de
-          alta calidad arquitectónica.
+          Thanks to full&body technology, it is possible to design completely
+          continuous edges, achieving a uniform, precise and
+          high architectural quality finish.
         </Text>
         <ImageWithCaption
           src={Imagen2}

@@ -37,16 +37,16 @@ const Series = ({ ids }) => {
 
     const propsFormato = {
         anotacionPDF: {
-            text: 'Haz click aquí para descargar un PDF con tu colocación',
+            text: 'Click here to download a PDF with your layout',
             type: 'pdf',
             onClick: () => createPDF(visRef),
         },
         anotacion2: {
-            text: 'Selecciona las áreas donde quieras aplicar la pieza',
+            text: 'Select the areas where you want to apply the piece',
             type: 'normal',
         },
         anotacion: {
-            text: 'Haz click en el punto para seleccionar la pieza a aplicar',
+            text: 'Click on the point to select the piece to apply',
             type: 'click',
         },
         visualizador: {

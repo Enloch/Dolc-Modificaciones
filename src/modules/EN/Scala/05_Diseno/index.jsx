@@ -20,124 +20,124 @@ import VisualizadorDesplazador from "../../../../components/VisualizadorDesplaza
 import IndiceSeries from "./05_1_IndiceSeries";
 
 const DisenosTline = ({ id }) => {
-  const propsFormato = {
-    anotacion: {
-      text: "Pulsa en el punto para ver las posibilidades de formato",
-      type: "click",
-    },
-    visualizador: {
-      config: indicadoresFormato,
-      srcfondo: fondo,
-      altFondo: "Imagen de fondo con indicadores",
-    },
-  };
+	const propsFormato = {
+		anotacion: {
+			text: "Click on the point to see the formatting possibilities",
+			type: "click",
+		},
+		visualizador: {
+			config: indicadoresFormato,
+			srcfondo: fondo,
+			altFondo: "Background image with indicators",
+		},
+	};
 
-  return (
-    <>
-      <StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
-        <Titulo>Diseño</Titulo>
-        <ImageWithCaption
-          src={img1}
-          alt="Imagen de Diseños 1"
-          caption="DOLCKER &CLIP. Do&Dolm Grafito"
-          columnSpan="6"
-        />
-        <Cita
-          cita="“La simplicidad es la clave de la verdadera elegancia.”"
-          author="— Coco Chanel"
-          colorCita={COLORS.gray08}
-          colorAutor={COLORS.gray04}
-        />
-      </StyledDisenos>
-      <StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Formato</Titulo2>
-        <Anotacion {...propsFormato.anotacion} />
-        <VisualizadorVariaciones {...propsFormato.visualizador} />
-      </StyledDisenos>
-      <StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Acabados</Titulo2>
-        <Anotaciones>
-          <Anotacion
-            type="normal"
-            text="Pulsa en el punto para ver todas las posibilidades de piezas especiales"
-          />
-          <Anotacion
-            type="swipe"
-            text="Desliza con el ratón o el dedo para apreciar la textura"
-          />
-        </Anotaciones>
-        <VisualizadorDesplazador config={configAcabados} />
-      </StyledDisenos>
-      <StyledDisenos id={id[4]} backgroundColor={COLORS.gray01} isEspesores>
-        <Titulo2>Espesores</Titulo2>
-        <div className="espesor espesor-1">
-          <img src={ranurado11} alt="" />
-          <ul>
-            <strong>TC 11 / 11 mm.</strong>
-            <li>Suelo</li>
-            <li>Techo</li>
-            <li>Fachada</li>
-          </ul>
-        </div>
-        <div className="espesor espesor-2">
-          <img src={ranurado14} alt="" />
-          <ul>
-            <strong>TC 14 / 14 mm.</strong>
-            <li>Suelo</li>
-            <li>Techo</li>
-            <li>Fachada</li>
-            <li>Recerco</li>
-          </ul>
-        </div>
-        <div className="espesor espesor-3">
-          <img src={ranurado20} alt="" />
-          <ul>
-            <strong>TC 20 / 20 mm.</strong>
-            <li>Suelo técnico</li>
-            <li>Fachada</li>
-            <li>Recerco</li>
-            <li>Cubiertas</li>
-            <li>Vierteaguas</li>
-            <li>Rejilla</li>
-            <li>Peldaño</li>
-          </ul>
-        </div>
-      </StyledDisenos>
-      <StyledDisenos id={id[5]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Piezas especiales</Titulo2>
-        <Anotaciones>
-          <Anotacion
-            type="normal"
-            text="Pulsa en el punto para ver todas las posibilidades de piezas especiales"
-          />
-          <Anotacion
-            type="swipe"
-            text="Desliza con el ratón o el dedo para rotar la imagen 360º"
-          />
-        </Anotaciones>
-        <VisualizadorRotador config={config} />
-      </StyledDisenos>
-      <IndiceSeries id={id[6]} />
-      <Series
-        ids={[
-          "basalt",
-          "dolm",
-          "dquartz",
-          "marble",
-          "stone",
-          "quarcity",
-          "crete",
-          "portland",
-          "space",
-          "tzment",
-          "wood",
-          "terrazo",
-          "arquitect",
-          "volumen",
-        ]}
-      />
-    </>
-  );
+	return (
+		<>
+			<StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
+				<Titulo>Design</Titulo>
+				<ImageWithCaption
+					src={img1}
+					alt="Imagen de Diseños 1"
+					caption="DOLCKER &CLIP. Do&Dolm Grafito"
+					columnSpan="6"
+				/>
+				<Cita
+					cita="“Simplicity is the key to true elegance.”"
+					author="— Coco Chanel"
+					colorCita={COLORS.gray08}
+					colorAutor={COLORS.gray04}
+				/>
+			</StyledDisenos>
+			<StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
+				<Titulo2>Format</Titulo2>
+				<Anotacion {...propsFormato.anotacion} />
+				<VisualizadorVariaciones {...propsFormato.visualizador} />
+			</StyledDisenos>
+			<StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
+				<Titulo2>Finishes</Titulo2>
+				<Anotaciones>
+					<Anotacion
+						type="normal"
+						text="Pulsa en el punto para ver todas las posibilidades de piezas especiales"
+					/>
+					<Anotacion
+						type="swipe"
+						text="Swipe with your mouse or finger to appreciate the texture"
+					/>
+				</Anotaciones>
+				<VisualizadorDesplazador config={configAcabados} />
+			</StyledDisenos>
+			<StyledDisenos id={id[4]} backgroundColor={COLORS.gray01} isEspesores>
+				<Titulo2>Thicknesses</Titulo2>
+				<div className="espesor espesor-1">
+					<img src={ranurado11} alt="" />
+					<ul>
+						<strong>TC 11 / 11 mm.</strong>
+						<li>Floor</li>
+						<li>Ceiling</li>
+						<li>Facade</li>
+					</ul>
+				</div>
+				<div className="espesor espesor-2">
+					<img src={ranurado14} alt="" />
+					<ul>
+						<strong>TC 14 / 14 mm.</strong>
+						<li>Floor</li>
+						<li>Ceiling</li>
+						<li>Facade</li>
+						<li>Reveal</li>
+					</ul>
+				</div>
+				<div className="espesor espesor-3">
+					<img src={ranurado20} alt="" />
+					<ul>
+						<strong>TC 20 / 20 mm.</strong>
+						<li>Technical floor</li>
+						<li>Facade</li>
+						<li>Reveal</li>
+						<li>Coverings</li>
+						<li>Water spillway</li>
+						<li>Grating</li>
+						<li>Step</li>
+					</ul>
+				</div>
+			</StyledDisenos>
+			<StyledDisenos id={id[5]} backgroundColor={COLORS.gray01}>
+				<Titulo2>Special pieces</Titulo2>
+				<Anotaciones>
+					<Anotacion
+						type="normal"
+						text="Pulsa en el punto para ver todas las posibilidades de piezas especiales"
+					/>
+					<Anotacion
+						type="swipe"
+						text="Swipe with your mouse or finger to rotate the image 360º"
+					/>
+				</Anotaciones>
+				<VisualizadorRotador config={config} />
+			</StyledDisenos>
+			<IndiceSeries id={id[6]} />
+			<Series
+				ids={[
+					"basalt",
+					"dolm",
+					"dquartz",
+					"marble",
+					"stone",
+					"quarcity",
+					"crete",
+					"portland",
+					"space",
+					"tzment",
+					"wood",
+					"terrazo",
+					"arquitect",
+					"volumen",
+				]}
+			/>
+		</>
+	);
 };
 
 export default DisenosTline;

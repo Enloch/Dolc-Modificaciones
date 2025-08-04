@@ -8,7 +8,7 @@ import Listado from "../../../../components/Listado";
 const VentajasTline = ({ id }) => {
   return (
     <StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-      <Titulo>Ventajas del sistema Dolcker Scala</Titulo>
+      <Titulo>Advantages of the Dolcker Scala system</Titulo>
       <ImageWithCaption
         src={img1}
         alt="Imagen de Ventajas 1"
@@ -16,34 +16,34 @@ const VentajasTline = ({ id }) => {
         columnSpan="6"
       />
       <Text>
-        DOLCKER ha desarrollado tres espesores de placa, 11, 14, 20 mm
-        combinables dentro de su sistema de colocación de alta seguridad,
-        facilitando a los técnicos la creación de edificios singulares y
-        personalizados.
+        DOLCKER has developed three plate thicknesses, 11, 14, 20 mm
+        combinable within its high-security installation system,
+        facilitating technicians to create unique and
+        personalized buildings.
         <br />
         <br />
-        Dispone de un desarrollo técnico de{" "}
-        <strong>fijación para fachadas ventiladas mejorado,</strong> para
-        adaptarse a las necesidades tanto estéticas como funcionales del
-        proyecto.
+        It has a technical development of{" "}
+        <strong>improved fixing for ventilated facades,</strong> to
+        adapt to both aesthetic and functional needs of the
+        project.
       </Text>
       <Listado>
-        <li>Sistema de fijación mecánica oculta + fijación elástica</li>
-        <li>Sistema desmontable</li>
+        <li>Hidden mechanical fixing system + elastic fixing</li>
+        <li>Demountable system</li>
         <li>
-          Clip correderos (seguridad para piezas de ariostamiento andamios)
+          Sliding clips (security for scaffold anchoring pieces)
         </li>
-        <li>Perfil continuo de gran inercia para soporte de grandes cargas</li>
-        <li>Ranura continua calibrada en fábrica</li>
-        <li>Sistema de libre colocación</li>
-        <li>Multitud de tamaños de piezas</li>
-        <li>Despiece a medida</li>
-        <li>Diferentes espesores de piezas (11, 14 y 20 mm)</li>
-        <li>Sistema desarrollado para cámaras de hasta 20 cm</li>
-        <li>Piezas con canto visto &quot;full body&quot;</li>
-        <li>Fabricación de piezas con texturas mate, flamed y honed</li>
-        <li>Montaje rápido y seguro</li>
-        <li>Sistema versátil a la hora de diseñar la fachada</li>
+        <li>Continuous profile with high inertia to support heavy loads</li>
+        <li>Factory-calibrated continuous groove</li>
+        <li>Free placement system</li>
+        <li>Multiple piece sizes</li>
+        <li>Custom cutting</li>
+        <li>Different piece thicknesses (11, 14 and 20 mm)</li>
+        <li>System developed for chambers up to 20 cm</li>
+        <li>Pieces with visible edge &quot;full body&quot;</li>
+        <li>Manufacturing of pieces with matte, flamed and honed textures</li>
+        <li>Quick and secure assembly</li>
+        <li>Versatile system when designing the facade</li>
       </Listado>
     </StyledVentajas>
   );

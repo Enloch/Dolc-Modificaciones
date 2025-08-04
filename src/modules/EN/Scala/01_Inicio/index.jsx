@@ -9,9 +9,9 @@ import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 // Define la animación para la flecha
 /**
- * Animación para la flecha que apunta hacia abajo en el
- *   índice. La flecha se mueve hacia abajo y arriba en
- *   un ciclo infinito.
+ * Animation for the arrow pointing down in the
+ *   index. The arrow moves down and up in
+ *   an infinite cycle.
  */
 const pulse = keyframes`
     0% {
@@ -31,7 +31,7 @@ const AnimatedArrow = styled(BsMouse)`
 const Indice = ({ indiceRef }) => {
 	const { menuDesplegable, btnIndice } = useMenuDesplegable(
 		ListaContenidos,
-		"Índice",
+		"Index",
 		indiceRef,
 		"en"
 	);
