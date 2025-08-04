@@ -6,46 +6,50 @@ import Text from "../../../../components/Text";
 import { COLORS } from "../../../../global/GlobalStyles";
 import Listado from "../../../../components/Listado";
 import Reemplazo from "../../../../assets/images/DolckerMatrix/temporal.webp";
+
 const VentajasTline = ({ id }) => {
-  return (
-    <StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-      <Titulo>Advantages of the Dolcker Archiform System</Titulo>
-      <ImageWithCaption
-        src={img1}
-        alt="Advantages Image 1"
-        caption="DOLCKER & CLIP Archiform"
-        columnSpan="6"
-      />
-      <Text>
-        DOLCKER has developed two slab thicknesses, 14 and 20 mm combinable
-        within its high-security installation system, making it easier for
-        technicians to create unique and customized buildings.
-        <br />
-        <br />
-        It has a technical development of <strong>improved fixing system for ventilated facades</strong>, to
-        adapt to both the aesthetic and functional needs of the
-        project.
-      </Text>
-      <Listado>
-        <li>Mechanical hidden fixing system + elastic fixing</li>
-        <li>Removable system</li>
-        <li>
-          Sliding clips (safety for scaffolding and lifting pieces)
-        </li>
-        <li>Continuous profile with high inertia for supporting large loads</li>
-        <li>Continuous calibrated groove in the factory</li>
-        <li>Free placement system</li>
-        <li>Multiple sizes of pieces</li>
-        <li>Made-to-measure cutting</li>
-        <li>Different thicknesses of pieces (14 and 20 mm)</li>
-        <li>System developed for chambers up to 20 cm</li>
-        <li>Pieces with visible edge "full body"</li>
-        <li>Manufacturing of pieces with matte, flamed and honed textures</li>
-        <li>Fast and secure assembly</li>
-        <li>Versatile system for designing the facade</li>
-      </Listado>
-    </StyledVentajas>
-  );
+	return (
+		<StyledVentajas id={id} backgroundColor={COLORS.gray02}>
+			<Titulo>Avantages du système Dolcker Archiform</Titulo>
+			<ImageWithCaption
+				src={img1}
+				alt="Image Avantages 1"
+				caption="DOLCKER & CLIP Archiform"
+				columnSpan="6"
+			/>
+			<Text>
+				DOLCKER a développé deux épaisseurs de dalle, 14 et 20 mm combinables
+				dans son système d'installation haute sécurité, facilitant le travail
+				des techniciens pour créer des bâtiments uniques et personnalisés.
+				<br />
+				<br />
+				Il dispose d'un développement technique de{" "}
+				<strong>système de fixation amélioré pour façades ventilées</strong>,
+				pour s'adapter à la fois aux besoins esthétiques et fonctionnels du
+				projet.
+			</Text>
+			<Listado>
+				<li>Système de fixation mécanique caché + fixation élastique</li>
+				<li>Système amovible</li>
+				<li>
+					Clips coulissants (sécurité pour échafaudages et levage de pièces)
+				</li>
+				<li>
+					Profil continu à haute inertie pour supporter des charges importantes
+				</li>
+				<li>Rainure calibrée continue en usine</li>
+				<li>Système de placement libre</li>
+				<li>Plusieurs tailles de pièces</li>
+				<li>Découpe sur mesure</li>
+				<li>Différentes épaisseurs de pièces (14 et 20 mm)</li>
+				<li>Système développé pour des chambres jusqu'à 20 cm</li>
+				<li>Pièces avec bord visible "full body"</li>
+				<li>Fabrication de pièces avec textures mates, flammées et polies</li>
+				<li>Assemblage rapide et sécurisé</li>
+				<li>Système polyvalent pour concevoir la façade</li>
+			</Listado>
+		</StyledVentajas>
+	);
 };
 
 export default VentajasTline;

@@ -42,12 +42,12 @@ const AplicacionesTline = ({ id }) => {
 				<Titulo color={COLORS.gray08}>Applications</Titulo>
 				<ImageWithCaption
 					src={img1}
-					alt="Applications Image 1"
+					alt="Image Applications 1"
 					caption="DOLCKER & CLIP Archiform."
 					columnSpan="6"
 				/>
 				<Cita
-					cita="“Architecture is the learned game, correct and magnificent, of forms assembled in the light.”"
+					cita="“L'architecture est le jeu savant, correct et magnifique, des formes assemblées dans la lumière.”"
 					author="— Le Corbusier"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -73,7 +73,7 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.medium}
 			>
-				<Titulo2 color={COLORS.gray08}>Renovation</Titulo2>
+				<Titulo2 color={COLORS.gray08}>Rénovation</Titulo2>
 				<ImageWithCaption
 					src={img2}
 					alt="Applications Image 2"
@@ -81,7 +81,7 @@ const AplicacionesTline = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="“Everything is permissible as long as it is fantastic”"
+					cita="“Tout est permis tant que c'est fantastique”"
 					author="— Carlo Mollino"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -92,7 +92,7 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.medium}
 			>
-				<Titulo2 color={COLORS.gray08}>New Construction</Titulo2>
+				<Titulo2 color={COLORS.gray08}>Construction neuve</Titulo2>
 				<ImageWithCaption
 					src={img3}
 					alt="Applications Image 3"
@@ -100,7 +100,7 @@ const AplicacionesTline = ({ id }) => {
 					columnSpan="6"
 				/>
 				<Cita
-					cita="“Architecture is a question of dreams and fantasies, of generous curves and wide spaces”"
+					cita="“L'architecture est une question de rêves et de fantasmes, de courbes généreuses et d'espaces larges”"
 					author="— Oscar Niemeyer"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -126,7 +126,7 @@ const AplicacionesTline = ({ id }) => {
 				backgroundColor={COLORS.gray01}
 				rowGap={DISTANCES.medium}
 			>
-				<Titulo3 color={COLORS.gray08}>- Facades</Titulo3>
+				<Titulo3 color={COLORS.gray08}>- Façades</Titulo3>
 				<ImageWithCaption
 					src={img4}
 					alt="Applications Image 4"
@@ -140,7 +140,7 @@ const AplicacionesTline = ({ id }) => {
 				rowGap={DISTANCES.medium}
 			>
 				<Titulo3 color={COLORS.gray08}>
-					- Terraces, raised floors, ceilings and solutions
+					- Terrasses, planchers surélevés, plafonds et solutions
 				</Titulo3>
 				<ImageWithCaption
 					src={img5}

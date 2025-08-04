@@ -22,13 +22,13 @@ import IndiceSeries from "./05_1_IndiceSeries";
 const DisenosTline = ({ id }) => {
 	const propsFormato = {
 		anotacion: {
-			text: "Click on the point to see format possibilities",
+			text: "Cliquez sur le point pour voir les possibilités de format",
 			type: "click",
 		},
 		visualizador: {
 			config: indicadoresFormato,
 			srcfondo: fondo,
-			altFondo: "Background image with indicators",
+			altFondo: "Image de fond avec des indicateurs",
 		},
 	};
 
@@ -38,12 +38,12 @@ const DisenosTline = ({ id }) => {
 				<Titulo>Design</Titulo>
 				<ImageWithCaption
 					src={img1}
-					alt="Design Image 1"
+					alt="Image Conception 1"
 					caption="DOLCKER & CLIP Archiform."
 					columnSpan="6"
 				/>
 				<Cita
-					cita={`"Architecture is the learning of light, space and form"`}
+					cita="L'architecture est l'apprentissage de la lumière, de l'espace et de la forme"
 					author="— Louis Kahn"
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
@@ -55,55 +55,55 @@ const DisenosTline = ({ id }) => {
 				<VisualizadorVariaciones {...propsFormato.visualizador} />
 			</StyledDisenos>
 			<StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
-				<Titulo2>Finishes</Titulo2>
+				<Titulo2>Finition</Titulo2>
 				<Anotaciones>
 					<Anotacion
 						type="normal"
-						text="Click on the point to see all special piece possibilities"
+						text="Cliquez sur le point pour voir toutes les possibilités de pièces spéciales"
 					/>
 					<Anotacion
 						type="swipe"
-						text="Swipe with mouse or finger to appreciate the texture"
+						text="Faites glisser avec la souris ou le doigt pour apprécier la texture"
 					/>
 				</Anotaciones>
 				<VisualizadorDesplazador config={configAcabados} />
 			</StyledDisenos>
 			<StyledDisenos id={id[4]} backgroundColor={COLORS.gray01} isEspesores>
-				<Titulo2>Thicknesses</Titulo2>
+				<Titulo2>Épaisseurs</Titulo2>
 				<div className="espesor espesor-1">
 					<img src={ranurado14} alt="" />
 					<ul>
 						<strong>TC 14 / 14 mm.</strong>
-						<li>Floor</li>
-						<li>Ceiling</li>
-						<li>Facade</li>
-						<li>Window frame</li>
+						<li>Plancher</li>
+						<li>Plafond</li>
+						<li>Façade</li>
+						<li>Cadre de fenêtre</li>
 					</ul>
 				</div>
 				<div className="espesor espesor-2">
 					<img src={ranurado20} alt="" />
 					<ul>
 						<strong>TC 20 / 20 mm.</strong>
-						<li>Technical floor</li>
-						<li>Facade</li>
-						<li>Window frame</li>
-						<li>Roofs</li>
-						<li>Drip edge</li>
+						<li>Plancher technique</li>
+						<li>Façade</li>
+						<li>Cadre de fenêtre</li>
+						<li>Toits</li>
+						<li>Gouttière</li>
 						<li>Grille</li>
-						<li>Step</li>
+						<li>Marche</li>
 					</ul>
 				</div>
 			</StyledDisenos>
 			<StyledDisenos id={id[5]} backgroundColor={COLORS.gray01}>
-				<Titulo2>Special pieces</Titulo2>
+				<Titulo2>Pièces spéciales</Titulo2>
 				<Anotaciones>
 					<Anotacion
 						type="normal"
-						text="Click on the point to see all special piece possibilities"
+						text="Cliquez sur le point pour voir toutes les possibilités de pièces spéciales"
 					/>
 					<Anotacion
 						type="swipe"
-						text="Swipe with mouse or finger to rotate the image 360°"
+						text="Faites glisser avec la souris ou le doigt pour faire pivoter l'image à 360°"
 					/>
 				</Anotaciones>
 				<VisualizadorRotador config={config} />

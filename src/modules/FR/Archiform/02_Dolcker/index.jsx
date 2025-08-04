@@ -10,45 +10,45 @@ import Imagen2 from "../../../../assets/images/Archiform/Dolcker/Archiform01.jpg
 
 const DolckerTline = ({ id }) => {
   const propsVisualizador = {
-    text: "Hover over the points to see information",
+    text: "Passez la souris sur les points pour voir les informations",
     type: "normal",
     indicadores: config,
     imgBackground: Imagen2,
-    alt: "Background image with indicators",
+    alt: "Image d'arrière-plan avec indicateurs",
   };
 
   return (
     <StyledDolcker id={id} backgroundColor={COLORS.gray03}>
-      <Titulo>Archiform System solves</Titulo>
+      <Titulo>Le système Archiform résout</Titulo>
       <div className="dolcker-info">
         <ImageWithCaption
           src={Imagen1}
           alt="Imagen Dolcker 2"
-          caption="Archiform System"
+          caption="Système Archiform"
         />
 
         <Text>
-          DOLCKER & Archiform presents its innovative system for trapezoidal formats
-          with continuous groove in 14 and 20 mm thicknesses: the
-          first <strong>full&body</strong> system with continuous groove, offering
-          infinite possibilities of modulation and design.
+          DOLCKER & Archiform présente son système innovant pour les formats trapézoïdaux
+          avec rainure continue en épaisseurs de 14 et 20 mm : le
+          premier système <strong>full&body</strong> avec rainure continue, offrant
+          des possibilités infinies de modulation et de conception.
           <br />
           <br />
-          Thanks to full&body technology, it's possible to create facades with
-          completely continuous edges, providing a differentiating aesthetic
-          compared to traditional square or rectangular formats. An
-          ideal solution for elegant and distinctive architectural envelopes.
+          Grâce à la technologie full&body, il est possible de créer des façades avec
+          des bords complètement continus, offrant une esthétique différenciante
+          par rapport aux formats carrés ou rectangulaires traditionnels. Une
+          solution idéale pour des enveloppes architecturales élégantes et distinctives.
           <br />
           <br />
-          The DOLCKER & Archiform system goes beyond facades, offering
-          comprehensive solutions also for raised floors, ceilings, window frames
-          and coping caps, always maintaining the same material and finish. This
-          allows total coherence in architectural design.
+          Le système DOLCKER & Archiform va au-delà des façades, offrant
+          des solutions complètes également pour les planchers surélevés, les plafonds, les cadres de fenêtres
+          et les chapeaux de protection, tout en conservant le même matériau et la même finition. Cela
+          permet une cohérence totale dans la conception architecturale.
           <br />
           <br />
-          Additionally, DOLCKER has developed a high-security installation system,
-          designed to facilitate technicians' work and guarantee maximum
-          performance in unique buildings, both technically and aesthetically.
+          De plus, DOLCKER a développé un système d'installation haute sécurité,
+          conçu pour faciliter le travail des techniciens et garantir des performances maximales
+          dans des bâtiments uniques, tant sur le plan technique qu'esthétique.
         </Text>
         <ImageWithCaption
           src={Imagen2}

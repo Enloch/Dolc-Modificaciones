@@ -46,111 +46,95 @@ const Caracteristicas = ({ id }) => {
 	return (
 		<>
 			<StyledCaracteristicas id={id[0]} backgroundColor={COLORS.gray02}>
-				<Titulo>Technical Characteristics</Titulo>
+				<Titulo>Caractéristiques techniques</Titulo>
 				<ImageWithCaption
 					src={caracter1}
-					alt="technical characteristics image"
+					alt="Image des caractéristiques techniques"
 					columnSpan="6"
 				/>
 				<Text>
-					DOLCKER is a compact, resistant material characterized by almost
-					non-existent porosity and water absorption of less than 0.1%
+					DOLCKER est un matériau compact et résistant caractérisé par une porosité presque inexistante et une absorption d'eau inférieure à 0,1%
 					<br />
 					<br />
-					Its vitrified structure, with a low degree of porosity, guarantees
-					high impermeability to dirt and ice.
+					Sa structure vitrifiée, avec un faible degré de porosité, garantit une grande imperméabilité à la saleté et au gel.
 					<br />
 					<br />
-					Full&body construction
+					Construction full&body
 					<br />
 					<br />
-					The advantages of a unique material.
+					Les avantages d'un matériau unique.
 				</Text>
 				<Listado>
 					<li>
 						<strong>
-							Wide range of colors, formats, thicknesses and finishes.
+							Large gamme de couleurs, formats, épaisseurs et finitions.
 						</strong>
 					</li>
 					<li>
-						<strong>Acid-resistant.</strong> Insensitive to most common acids
-						(Does not resist hydrofluoric acid attack).
+						<strong>Résistant aux acides.</strong> Insensible à la plupart des acides courants (ne résiste pas à l'attaque de l'acide fluorhydrique).
 					</li>
 					<li>
-						<strong>Highly durable.</strong> More resistant to abrasion and wear
-						than any natural material.
+						<strong>Très durable.</strong> Plus résistant à l'abrasion et à l'usure que tout matériau naturel.
 					</li>
 					<li>
-						<strong>Non-combustible.</strong> The material does not burn or
-						produce toxic fumes in case of fire or flame exposure.
+						<strong>Incombustible.</strong> Le matériau ne brûle pas et ne produit pas de fumées toxiques en cas d'exposition au feu ou aux flammes.
 					</li>
 					<li>
 						<strong>
-							Does not retain organic substances and bacteria, causes of
-							allergies and disorders.
+							Ne retient pas les substances organiques et les bactéries, causes d'allergies et de troubles.
 						</strong>
 					</li>
 					<li>
-						<strong>Easy to work with.</strong> The product can be worked (cut,
-						drilled, etc.) like natural stone to satisfy any customization need.
+						<strong>Facile à travailler.</strong> Le produit peut être travaillé (coupé, percé, etc.) comme la pierre naturelle pour satisfaire tout besoin de personnalisation.
 					</li>
 					<li>
-						<strong>Highly resistant.</strong> No problems with hot pans or lit
-						cigarettes, which would damage wood, plastic laminates or resin
-						composites.
+						<strong>Très résistant.</strong> Pas de problème avec les casseroles chaudes ou les cigarettes allumées, qui endommageraient le bois, les stratifiés plastiques ou les composites en résine.
 					</li>
 					<li>
-						<strong>Easy to clean.</strong> Strong detergents or solvents can be
-						used without risk of damaging the material.
+						<strong>Facile à nettoyer.</strong> Des détergents forts ou des solvants peuvent être utilisés sans risque d'endommager le matériau.
 					</li>
 					<li>
-						<strong>Frost-resistant.</strong> The material is resistant to cold
-						and ice.
+						<strong>Résistant au gel.</strong> Le matériau est résistant au froid et à la glace.
 					</li>
 					<li>
-						<strong>Color stable.</strong> Colors are completely stable and
-						won't alter from sun exposure, weather conditions, or smog.
+						<strong>Couleur stable.</strong> Les couleurs sont complètement stables et ne changent pas avec l'exposition au soleil, aux conditions météorologiques ou à la pollution.
 					</li>
 				</Listado>
 				<Text>
-					<strong>ECO-FRIENDLY</strong>
+					<strong>ÉCOLOGIQUE</strong>
 					<br />
 					<br />
-					Contains no chemical waterproofing agents, varnishes or resins, emits
-					no fumes even when exposed to flame. Unlike some natural stones, it
-					doesn't emit Radon or other radioactive gases and isn't polished with
-					lead. Produced respecting the environment.
+					Ne contient pas d'agents hydrofuges chimiques, de vernis ou de résines, n'émet pas de fumées même en cas d'exposition à la flamme. Contrairement à certaines pierres naturelles, il n'émet pas de radon ou de gaz radioactifs et n'est pas poli avec du plomb. Produit en respectant l'environnement.
 					<br />
 					<br />
-					<strong>RESISTANCE TO SUDDEN TEMPERATURE CHANGES</strong>
+					<strong>RÉSISTANCE AUX CHANGEMENTS BRUSQUES DE TEMPÉRATURE</strong>
 					<br />
 					<br />
-					<strong>RESISTANCE TO BENDING WITH FIXED AND STATIC LOADS</strong>
+					<strong>RÉSISTANCE À LA FLEXION AVEC CHARGES FIXES ET STATIQUES</strong>
 					<br />
 					<br />
-					<strong>RESISTANCE TO IMPACT, ABRASION SAFETY</strong>
+					<strong>RÉSISTANCE À L'IMPACT, SÉCURITÉ À L'ABRASION</strong>
 				</Text>
 				<Listado>
-					<li>Negligible moisture expansion</li>
-					<li>Non-combustible</li>
-					<li>Fireproof</li>
-					<li>No danger in case of fire</li>
-					<li>Electrical safety</li>
+					<li>Expansion de l'humidité négligeable</li>
+					<li>Incombustible</li>
+					<li>Résistant au feu</li>
+					<li>Pas de danger en cas d'incendie</li>
+					<li>Sécurité électrique</li>
 				</Listado>
 				<Text>
-					<strong>HEALTH AND WELL-BEING</strong>
+					<strong>SANTÉ ET BIEN-ÊTRE</strong>
 				</Text>
 				<Listado>
-					<li>No inherent or acquired odor</li>
-					<li>Resistance to dust release</li>
-					<li>Easy cleaning of acquired dust</li>
+					<li>Pas d'odeur inhérente ou acquise</li>
+					<li>Résistance à la libération de poussière</li>
+					<li>Nettoyage facile de la poussière acquise</li>
 					<li>
-						As an electrical insulator, it prevents attraction of electrically
-						active environmental dust
+						En tant qu'isolant électrique, il empêche l'attraction de la poussière électriquement active de l'environnement
 					</li>
-					<li>Suitable where water use is abundant</li>
+					<li>Convenable lorsque l'utilisation de l'eau est abondante</li>
 					<li>
-						Permanent installation: requires no maintenance after installation
+						Installation permanente : ne nécessite pas de maintenance après installation
 					</li>
 				</Listado>
 			</StyledCaracteristicas>
