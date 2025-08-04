@@ -1,9 +1,9 @@
 import useListaContenidos from "../../hooks/useListaContenidosTline";
 import StyledListaContenidos from "./styles";
 import { useContext } from "react";
-import ListaContenidosContext from "../../contexts/ListaContenidosContextMatrix";
-import inglesLista from "../../utils/en/listaContenidosMatrix.json";
-import francesLista from "../../utils/fr/listaContenidosMatrix.json";
+import ListaContenidosContext from "../../contexts/ListaContenidosContextTline";
+import inglesLista from "../../utils/en/listaContenidosTline.json";
+import francesLista from "../../utils/fr/listaContenidosTline.json";
 const ListaContenidos = ({
 	en = false,
 	isMenuDesplegable = false,

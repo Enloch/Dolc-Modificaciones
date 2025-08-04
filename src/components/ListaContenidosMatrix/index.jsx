@@ -3,14 +3,18 @@ import StyledListaContenidos from "./styles";
 import { useContext } from "react";
 import ListaContenidosContext from "../../contexts/ListaContenidosContextMatrix";
 import inglesLista from "../../utils/en/listaContenidosMatrix.json";
-
-const ListaContenidos = ({ en = false, isMenuDesplegable = false }) => {
+import francesLista from "../../utils/fr/listaContenidosMatrix.json";
+const ListaContenidos = ({
+	en = false,
+	isMenuDesplegable = false,
+	fr = false,
+}) => {
 	const contendiosJSON = useContext(ListaContenidosContext);
-	const dataToUse = en ? inglesLista : contendiosJSON;
-	const contenidos = useListaContenidos(dataToUse);
+	const data = en ? inglesLista : fr ? francesLista : contendiosJSON;
+	const contenidos = useListaContenidos(data);
 
 	return (
-		<StyledListaContenidos isMenuDesplegable={isMenuDesplegable}>
+		<StyledListaContenidos isMenuDesplegable={isMenuDesplegable} fr={fr}>
 			<ul>{contenidos}</ul>
 		</StyledListaContenidos>
 	);
