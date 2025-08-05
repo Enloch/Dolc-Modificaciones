@@ -27,7 +27,8 @@ const Indice = ({ indiceRef }) => {
 	const { menuDesplegable, btnIndice } = useMenuDesplegable(
 		ListaContenidos,
 		"Índice",
-		indiceRef
+		indiceRef,
+		"en"
 	);
 
 	const handleClickFlecha = () => {
@@ -40,7 +41,7 @@ const Indice = ({ indiceRef }) => {
 		<>
 			<StyledIndice backgroundColor={COLORS.gray06} ref={indiceRef} id="indice">
 				<Titulo color={COLORS.gray01}>Dolcker Invisifix</Titulo>
-				<ListaContenidos />
+				<ListaContenidos en={true} />
 				<AnimatedArrow
 					size={32}
 					color="white"
@@ -49,10 +50,10 @@ const Indice = ({ indiceRef }) => {
 					onClick={handleClickFlecha}
 				/>
 				<div className="idiomas">
-					<Link to="/dolcker-invisifix" className="seleccionado">
-						ES
+					<Link to="/dolcker-invisifix">ES</Link>
+					<Link to="/en/dolcker-invisifix" className="seleccionado">
+						EN
 					</Link>
-					<Link to="/en/dolcker-invisifix">EN</Link>
 					<Link to="/fr/dolcker-invisifix">FR</Link>
 				</div>
 			</StyledIndice>

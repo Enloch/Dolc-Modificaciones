@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Index",
+    "link": "/fr"
+  },
+  {
+    "title": "Dolcker Invisifix résout",
+    "link": "#dolcker"
+  },
+  {
+    "title": "Avantages du système Dolcker Invisifix",
+    "link": "#ventajas"
+  },
+  {
+    "title": "Applications",
+    "subList": [
+      {
+        "title": "Applications",
+        "link": "#aplicaciones"
+      },
+      {
+        "title": "Neuf",
+        "link": "#obra-nueva"
+      }
+    ]
+  },
+  {
+    "title": "Design",
+    "subList": [
+      {
+        "title": "Design",
+        "link": "#diseno"
+      },
+      {
+        "title": "Finition",
+        "link": "#acabados"
+      },
+      {
+        "title": "Épaisseurs",
+        "link": "#espesores"
+      },
+      {
+        "title": "Séries",
+        "link": "#series"
+      }
+    ]
+  },
+  {
+    "title": "Téléchargements",
+    "link": "#descargas"
+  }
+]

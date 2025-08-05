@@ -89,12 +89,12 @@ export const Landing = () => {
 			subtitle: "Solución integral full&body para fachadas y revestimientos",
 			link: "dolcker-fusion",
 		},
-		// {
-		//   src: Invisifix,
-		//   title: "Dolcker Invisifix",
-		//   subtitle: "Solución integral full&body para fachadas y revestimientos",
-		//   link: "dolcker-invisifix",
-		// },
+		{
+			src: Invisifix,
+			title: "Dolcker Invisifix",
+			subtitle: "Solución integral full&body para fachadas y revestimientos",
+			link: "dolcker-invisifix",
+		},
 	];
 
 	return (
