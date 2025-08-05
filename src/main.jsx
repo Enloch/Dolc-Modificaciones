@@ -53,6 +53,7 @@ import DolckerT5Fr from "./pages/fr/catalogos/DolckerT5";
 import DolckerScalaFr from "./pages/fr/catalogos/DolckerScala";
 import DolckerArchiformFr from "./pages/fr/catalogos/DolckerArchiform";
 import DolckerFusionFr from "./pages/fr/catalogos/DolckerFusion";
+import DolckerInvisifixFr from "./pages/fr/catalogos/DolckerInvisifix";
 import ContactoFr from "./pages/fr/Contacto";
 import PoliticaPrivacidadFr from "./pages/fr/PoliticaPrivacidad";
 import AvisoLegalFr from "./pages/fr/AvisoLegal";
@@ -175,6 +176,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 						<Route
 							path="/fr/dolcker-archiform"
 							element={<DolckerArchiformFr />}
+						/>
+						<Route
+							path="/fr/dolcker-invisifix"
+							element={<DolckerInvisifixFr />}
 						/>
 						<Route path="/fr/dolcker-fusion" element={<DolckerFusionFr />} />
 						<Route path="/fr/quienes-somos" element={<QuienesSomosFr />} />
