@@ -79,26 +79,26 @@ export const MainEn = () => {
 			src: Scala,
 			title: "Dolcker Scala",
 			subtitle: "Solución integral full&body para fachadas y revestimientos",
-			link: "dolcker-scala",
+			link: "en/dolcker-scala",
 		},
 		{
 			src: Archiform,
 			title: "Dolcker Archiform",
 			subtitle: "Solución integral full&body para fachadas y revestimientos",
-			link: "dolcker-archiform",
+			link: "en/dolcker-archiform",
 		},
-		// {
-		// 	src: Fusion,
-		// 	title: "Dolcker Fusion",
-		// 	subtitle: "Solución integral full&body para fachadas y revestimientos",
-		// 	link: "dolcker-fusion",
-		// },
-		// {
-		// 	src: Invisifix,
-		// 	title: "Dolcker Invisifix",
-		// 	subtitle: "Solución integral full&body para fachadas y revestimientos",
-		// 	link: "dolcker-invisifix",
-		// },
+		{
+			src: Fusion,
+			title: "Dolcker Fusion",
+			subtitle: "Solución integral full&body para fachadas y revestimientos",
+			link: "en/dolcker-fusion",
+		},
+		{
+			src: Invisifix,
+			title: "Dolcker Invisifix",
+			subtitle: "Solución integral full&body para fachadas y revestimientos",
+			link: "en/dolcker-invisifix",
+		},
 	];
 
 	return (
