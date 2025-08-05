@@ -72,3 +72,12 @@ export { default as DisenosArchiform } from "./Archiform/05_Diseno";
 export { default as CaracteristicasArchiform } from "./Archiform/06_Caracteristicas";
 export { default as SistemasArchiform } from "./Archiform/07_Sistemas";
 export { default as DescargasArchiform } from "./Archiform/08_Descargas";
+//Fusion
+export { default as IndiceFusion } from "./Fusion/01_Inicio";
+export { default as DolckerFusion } from "./Fusion/02_Dolcker";
+export { default as VentajasFusion } from "./Fusion/03_Ventajas";
+export { default as AplicacionesFusion } from "./Fusion/04_Aplicaciones";
+export { default as DisenosFusion } from "./Fusion/05_Diseno";
+export { default as CaracteristicasFusion } from "./Fusion/06_Caracteristicas";
+export { default as SistemasFusion } from "./Fusion/07_Sistemas";
+export { default as DescargasFusion } from "./Fusion/08_Descargas";
