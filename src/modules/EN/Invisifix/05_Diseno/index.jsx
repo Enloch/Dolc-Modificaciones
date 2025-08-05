@@ -19,79 +19,79 @@ import IndiceSeries from "./05_1_IndiceSeries";
 const DisenosTline = ({ id }) => {
   const propsFormato = {
     anotacion: {
-      text: "Pulsa en el punto para ver las posibilidades de formato",
+      text: "Click on the point to see format options",
       type: "click",
     },
     visualizador: {
       config: indicadoresFormato,
       srcfondo: fondo,
-      altFondo: "Imagen de fondo con indicadores",
+      altFondo: "Background image with indicators",
     },
   };
 
   return (
     <>
       <StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
-        <Titulo>Diseño</Titulo>
+        <Titulo>Design</Titulo>
         <ImageWithCaption
           src={img1}
-          alt="Imagen de Diseños 1"
+          alt="Designs image 1"
           caption="DOLCKER Invisifix"
           columnSpan="6"
         />
         <Cita
-          cita="“La arquitectura es el aprendizaje de la luz, el espacio y la forma”"
+          cita={`"Architecture is the learned game of light, space and form"`}
           author="— Louis Kahn"
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
       </StyledDisenos>
       <StyledDisenos id={id[1]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Acabados</Titulo2>
+        <Titulo2>Finishes</Titulo2>
         <Anotaciones>
           <Anotacion
             type="normal"
-            text="Pulsa en el punto para ver todas las posibilidades de piezas especiales"
+            text="Click on the point to see all special piece options"
           />
           <Anotacion
             type="swipe"
-            text="Desliza con el ratón o el dedo para apreciar la textura"
+            text="Swipe with mouse or finger to appreciate the texture"
           />
         </Anotaciones>
         <VisualizadorDesplazador config={configAcabados} />
       </StyledDisenos>
       <StyledDisenos id={id[2]} backgroundColor={COLORS.gray01} isEspesores>
-        <Titulo2>Espesores</Titulo2>
+        <Titulo2>Thicknesses</Titulo2>
         <div className="espesor espesor-1">
           <img src={ranurado11} alt="" />
           <ul>
-            <strong>Porcelánico 8/9/10 mm</strong>
-            <li>Suelo</li>
-            <li>Techo</li>
-            <li>Fachada</li>
+            <strong>Porcelain 8/9/10 mm</strong>
+            <li>Floor</li>
+            <li>Ceiling</li>
+            <li>Facade</li>
           </ul>
         </div>
         <div className="espesor espesor-2">
           <img src={ranurado14} alt="" />
           <ul>
             <strong>Color & FullBody 11 mm</strong>
-            <li>Suelo</li>
-            <li>Techo</li>
-            <li>Fachada</li>
-            <li>Recerco</li>
+            <li>Floor</li>
+            <li>Ceiling</li>
+            <li>Facade</li>
+            <li>Edge</li>
           </ul>
         </div>
         <div className="espesor espesor-3">
           <img src={ranurado20} alt="" />
           <ul>
-            <strong>Formato XL 3/6/8 mm</strong>
-            <li>Suelo técnico</li>
-            <li>Fachada</li>
-            <li>Recerco</li>
-            <li>Cubiertas</li>
-            <li>Vierteaguas</li>
-            <li>Rejilla</li>
-            <li>Peldaño</li>
+            <strong>XL Format 3/6/8 mm</strong>
+            <li>Technical floor</li>
+            <li>Facade</li>
+            <li>Edge</li>
+            <li>Coverings</li>
+            <li>Drip edges</li>
+            <li>Grille</li>
+            <li>Step</li>
           </ul>
         </div>
       </StyledDisenos>

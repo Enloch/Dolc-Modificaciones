@@ -1,174 +1,71 @@
-import ImageWithCaption from "../../../../components/ImageWithCaption";
-import { Titulo } from "../../../../components/Titulos";
-import { COLORS } from "../../../../global/GlobalStyles";
-import StyledCaracteristicas from "./styles";
-import caracter1 from "../../../../assets/images/Invisifix/Caracteristicas/IMG_5754.jpg";
-import Text from "../../../../components/Text";
-import Listado from "../../../../components/Listado";
-import { useState } from "react";
-// Importar componentes de MUI
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Paper,
-  Box,
-  Typography,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-} from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import dimension1 from "../../../../assets/icons/caracteristicas/medida1.svg";
-import dimension2 from "../../../../assets/icons/caracteristicas/medida2.svg";
-import dimension3 from "../../../../assets/icons/caracteristicas/medida3.svg";
-import mecanica1 from "../../../../assets/icons/caracteristicas/mecanica1.svg";
-import mecanica2 from "../../../../assets/icons/caracteristicas/mecanica2.svg";
-import mecanica3 from "../../../../assets/icons/caracteristicas/mecanica3.svg";
-import mecanica4 from "../../../../assets/icons/caracteristicas/mecanica4.svg";
-import mecanica5 from "../../../../assets/icons/caracteristicas/mecanica5.svg";
-import mecanica6 from "../../../../assets/icons/caracteristicas/mecanica6.svg";
-import higiene1 from "../../../../assets/icons/caracteristicas/higiene1.svg";
-import higiene2 from "../../../../assets/icons/caracteristicas/higiene2.svg";
-import higiene3 from "../../../../assets/icons/caracteristicas/higiene3.svg";
 const Caracteristicas = ({ id }) => {
-  // Estado para controlar qué acordeón está expandido
-  const [expandedPanel, setExpandedPanel] = useState(false);
-
-  // Función para manejar el cambio de acordeón
-  const handleAccordionChange = (panel) => (event, isExpanded) => {
-    setExpandedPanel(isExpanded ? panel : false);
-  };
-
   return (
     <>
       <StyledCaracteristicas id={id[0]} backgroundColor={COLORS.gray02}>
-        <Titulo>Características técnicas</Titulo>
+        <Titulo>Technical Specifications</Titulo>
         <ImageWithCaption
           src={caracter1}
-          alt="características técnicas imagen"
+          alt="technical specifications image"
           columnSpan="6"
         />
         <Text>
-          DOLCKER es un material compacto, resistente y caracterizado por una
-          porosidad casi inexistente y, por absorción del agua menor al 0,1 %
-          <br />
-          <br />
-          Su estructura vitrificada, con un grado bajo de porosidad, garantiza
-          una elevada impermeabilidad a suciedad y al hielo.
-          <br />
-          <br />
-          Cuerpo full&body
-          <br />
-          <br />
-          Las ventajas de un material único.
+          DOLCKER is a compact, resistant material characterized by almost non-existent porosity and water absorption of less than 0.1%.
+          <br /><br />
+          Its vitrified structure, with a low degree of porosity, guarantees high impermeability to dirt and ice.
+          <br /><br />
+          Full&body composition
+          <br /><br />
+          The advantages of a unique material.
         </Text>
         <Listado>
-          <li>
-            <strong>
-              Amplia gama de colores, formatos, espesores y acabados.
-            </strong>
-          </li>
-          <li>
-            <strong>Es antiácido.</strong> Es insensible a los ácidos más
-            difundidos (No resiste al ataque del ácido fluorhídrico).
-          </li>
-          <li>
-            <strong>Es resistente.</strong> Resistente a la abrasión y al
-            desgaste más que cualquier material natural.
-          </li>
-          <li>
-            <strong>No combustible.</strong> El material no se quema ni produce
-            gases o humos tóxico-nocivos en caso de incendio o exposición a las
-            llamas.
-          </li>
-          <li>
-            <strong>
-              No retiene sustancias orgánicas y bacterias, causa de alergias y
-              disturbios.
-            </strong>
-          </li>
-          <li>
-            <strong>Fácil de trabajar.</strong> El producto se presta a ser
-            trabajado (cortado, perforado, etc.) como la piedra natural para
-            satisfacer cualquier tipo de personalización.
-          </li>
-          <li>
-            <strong>Es Inatacable.</strong> Ningún problema con ollas calientes
-            o cigarrillos encendidos, que al contrario dañan la madera,
-            laminados plásticos o aglomerados con resinas.
-          </li>
-          <li>
-            <strong>Fácil de limpiar.</strong> Es posible utilizar detergentes
-            muy fuertes o disolventes sin el peligro de dañar el material.
-          </li>
-          <li>
-            <strong>Resistente al hielo.</strong> El material es resistente al
-            frío y al hielo.
-          </li>
-          <li>
-            <strong>Establo cromático.</strong> Los colores son totalmente
-            estables y no se alteran ni por la exposición al sol, ni a los
-            agentes atmosféricos, ni al smog.
-          </li>
+          <li><strong>Wide range of colors, formats, thicknesses and finishes.</strong></li>
+          <li><strong>Acid-resistant.</strong> Insensitive to most common acids (Does not resist hydrofluoric acid attack).</li>
+          <li><strong>Highly durable.</strong> More resistant to abrasion and wear than any natural material.</li>
+          <li><strong>Non-combustible.</strong> The material does not burn or produce toxic-harmful gases or smoke in case of fire or exposure to flames.</li>
+          <li><strong>Does not retain organic substances and bacteria, causes of allergies and disorders.</strong></li>
+          <li><strong>Easy to work with.</strong> The product can be worked (cut, drilled, etc.) like natural stone to satisfy any customization need.</li>
+          <li><strong>Resistant.</strong> No issues with hot pans or lit cigarettes, which can damage wood, plastic laminates, or resin agglomerates.</li>
+          <li><strong>Easy to clean.</strong> It is possible to use very strong detergents or solvents without the risk of damaging the material.</li>
+          <li><strong>Resistant to ice.</strong> The material is resistant to cold and ice.</li>
+          <li><strong>Stable color.</strong> The colors are totally stable and do not change due to exposure to the sun, atmospheric agents, or smog.</li>
         </Listado>
         <Text>
-          <strong>ECOLÓGICO</strong>
-          <br />
-          <br />
-          No contiene impermeabilizantes químicos, barnices o resinas, no emite
-          exhalaciones tampoco con el calor de una llama. Al contrario de
-          algunas piedras naturales no emana Radon u otros gases radioactivos y
-          no viene pulido con plomo. Se produce respetando el medio ambiente.
-          <br />
-          <br />
-          <strong>RESISTENCIA A LOS CAMBIOS BRUSCOS DE TEMPERATURA</strong>
-          <br />
-          <br />
-          <strong>RESISTENCIA A LA FLEXIÓN CON CARGAS FIJAS Y ESTÁTICAS</strong>
-          <br />
-          <br />
-          <strong>RESISTENCIA AL IMPACTO, A LA ABRASIÓN SEGURIDAD</strong>
+          <strong>ECOLOGICAL</strong>
+          <br /><br />
+          Does not contain chemical sealers, varnishes, or resins, does not emit fumes even with the heat of a flame. Unlike some natural stones, it does not emit Radon or other radioactive gases and is not polished with lead. It is produced respecting the environment.
+          <br /><br />
+          <strong>RESISTANCE TO SUDDEN TEMPERATURE CHANGES</strong>
+          <br /><br />
+          <strong>RESISTANCE TO FLEXION WITH FIXED AND STATIC LOADS</strong>
+          <br /><br />
+          <strong>IMPACT RESISTANCE, ABRASION, AND SAFETY</strong>
         </Text>
         <Listado>
-          <li>Expansión por humedad insignificante</li>
-          <li>Incombustible</li>
-          <li>Ignífugo</li>
-          <li>Ausencia de peligro en caso de incendio</li>
-          <li>Seguridad eléctrica</li>
+          <li>Insignificant expansion due to humidity</li>
+          <li>Non-combustible</li>
+          <li>Fireproof</li>
+          <li>No danger in case of fire</li>
+          <li>Electrical safety</li>
         </Listado>
         <Text>
-          <strong>SALUD Y BIENESTAR</strong>
+          <strong>HEALTH AND WELL-BEING</strong>
         </Text>
         <Listado>
-          <li>Carencia de olor propio o adquirido</li>
-          <li>Resistencia a la liberación de polvo propio</li>
-          <li>Facilidad de limpieza de polvo adquirido</li>
-          <li>
-            Es un producto que, por su capacidad de aislante eléctrico, evita la
-            captación de polvo ambiental eléctricamente activo
-          </li>
-          <li>Adecuado donde el uso de agua es abundante</li>
-          <li>
-            Es la instalación definitiva: no necesita ningún mantenimiento
-            después de su puesta en obra
-          </li>
+          <li>Lack of inherent or acquired odor</li>
+          <li>Resistance to the release of its own dust</li>
+          <li>Ease of cleaning of acquired dust</li>
+          <li>It is a product that, due to its electrical insulation capacity, prevents the capture of electrically active ambient dust</li>
+          <li>Suitable where water use is abundant</li>
+          <li>It is the definitive installation: it does not require any maintenance after its installation</li>
         </Listado>
       </StyledCaracteristicas>
       <StyledCaracteristicas id={id[1]} backgroundColor={COLORS.gray02}>
-        <Titulo>Datos técnicos</Titulo>
+        <Titulo>Technical Data</Titulo>
         <Text>
-          <strong>CARACTERÍSTICAS FÍSICAS Y MECÁNICAS</strong>
-          <br />
-          <br />
-          Las piezas de cerámica se clasifican como baldosas cerámicas prensadas
-          en seco con baja absorción de agua según norma UNE-EN 14411, con las
-          siguientes características declaradas por el fabricante:
-          <br />
-          <br />
+          <strong>PHYSICAL AND MECHANICAL CHARACTERISTICS</strong>
+          <br /><br />
+          Ceramic pieces are classified as dry-pressed ceramic tiles with low water absorption according to standard UNE-EN 14411, with the following characteristics declared by the manufacturer:
+          <br /><br />
         </Text>
         <>
           <Box sx={{ width: "100%", overflow: "auto", mt: 1 }}>
@@ -198,7 +95,7 @@ const Caracteristicas = ({ id }) => {
                 }}
               >
                 <Typography sx={{ fontWeight: 600 }}>
-                  CARACTERÍSTICAS DIMENSIONALES / DIMENSIONAL CHARACTERISTICS
+                  DIMENSIONAL CHARACTERISTICS / DIMENSIONAL CHARACTERISTICS
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
@@ -212,7 +109,7 @@ const Caracteristicas = ({ id }) => {
                   }}
                 >
                   <Table
-                    aria-label="tabla de características dimensionales"
+                    aria-label="table of dimensional characteristics"
                     sx={{
                       tableLayout: "fixed",
                       minWidth: 900,
@@ -224,7 +121,7 @@ const Caracteristicas = ({ id }) => {
                           sx={{ padding: "10px 10px", width: "60px" }}
                         ></TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          CARACTERÍSTICAS DIMENSIONALES
+                          DIMENSIONAL CHARACTERISTICS
                           <br />
                           DIMENSIONAL CHARACTERISTICS
                         </TableCell>
@@ -238,8 +135,7 @@ const Caracteristicas = ({ id }) => {
                           colSpan={3}
                           sx={{ padding: "10px 10px" }}
                         >
-                          DOLCKER VALORES PRIMERA CALIDAD / DOLCKER VALUES 1ST
-                          QUALITY
+                          DOLCKER VALUES 1ST QUALITY / DOLCKER VALUES 1ST QUALITY
                           <TableRow>
                             <TableCell
                               align="center"
@@ -288,7 +184,7 @@ const Caracteristicas = ({ id }) => {
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          LONGITUD
+                          LENGTH
                           <br />
                           LENGTH AND WIDTH
                         </TableCell>
@@ -307,7 +203,7 @@ const Caracteristicas = ({ id }) => {
                       </TableRow>
                       <TableRow>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          ESPESOR
+                          THICKNESS
                           <br />
                           THICKNESS
                         </TableCell>
@@ -326,7 +222,7 @@ const Caracteristicas = ({ id }) => {
                       </TableRow>
                       <TableRow>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          RECTITUD DE LOS LADOS
+                          RECTILINEARITY OF EDGES
                           <br />
                           WARPAGE OF EDGES
                         </TableCell>
@@ -345,7 +241,7 @@ const Caracteristicas = ({ id }) => {
                       </TableRow>
                       <TableRow>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          ORTOGONALIDAD
+                          ORTHOGONALITY
                           <br />
                           WEDGING
                         </TableCell>
@@ -380,7 +276,7 @@ const Caracteristicas = ({ id }) => {
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          CURVATURA CENTRAL Y LATERAL
+                          CENTRAL AND LATERAL CURVATURE
                           <br />
                           CENTRAL AND EDGE CURVATURE
                         </TableCell>
@@ -399,7 +295,7 @@ const Caracteristicas = ({ id }) => {
                       </TableRow>
                       <TableRow>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          ALABEO
+                          WARPAGE
                           <br />
                           WARPAGE
                         </TableCell>
@@ -430,7 +326,7 @@ const Caracteristicas = ({ id }) => {
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          ABSORCIÓN DE AGUA
+                          WATER ABSORPTION
                           <br />
                           WATER ABSORPTION
                         </TableCell>
@@ -478,7 +374,7 @@ const Caracteristicas = ({ id }) => {
                 }}
               >
                 <Typography sx={{ fontWeight: 600 }}>
-                  CARACTERÍSTICAS MECÁNICAS / MECHANICAL CHARACTERISTICS
+                  MECHANICAL CHARACTERISTICS / MECHANICAL CHARACTERISTICS
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
@@ -492,7 +388,7 @@ const Caracteristicas = ({ id }) => {
                   }}
                 >
                   <Table
-                    aria-label="tabla de características mecánicas"
+                    aria-label="table of mechanical characteristics"
                     sx={{
                       tableLayout: "fixed",
                       minWidth: 900,
@@ -504,7 +400,7 @@ const Caracteristicas = ({ id }) => {
                           sx={{ padding: "10px 10px", width: "60px" }}
                         ></TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          CARACTERÍSTICAS MECÁNICAS
+                          MECHANICAL CHARACTERISTICS
                           <br />
                           MECHANICAL CHARACTERISTICS
                         </TableCell>
@@ -518,8 +414,7 @@ const Caracteristicas = ({ id }) => {
                           colSpan={3}
                           sx={{ padding: "10px 10px" }}
                         >
-                          DOLCKER VALORES PRIMERA CALIDAD / DOLCKER VALUES 1ST
-                          QUALITY
+                          DOLCKER VALUES 1ST QUALITY / DOLCKER VALUES 1ST QUALITY
                           <TableRow>
                             <TableCell
                               align="center"
@@ -568,7 +463,7 @@ const Caracteristicas = ({ id }) => {
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          FUERZA DE ROTURA
+                          BREAKING STRENGTH
                           <br />
                           BREAKING STRENGTH
                         </TableCell>
@@ -587,7 +482,7 @@ const Caracteristicas = ({ id }) => {
                       </TableRow>
                       <TableRow>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          RESISTENCIA A LA FLEXIÓN
+                          BENDING STRENGTH
                           <br />
                           BENDING STRENGTH
                         </TableCell>
@@ -622,7 +517,7 @@ const Caracteristicas = ({ id }) => {
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          RESISTENCIA AL IMPACTO
+                          IMPACT RESISTANCE
                           <br />
                           IMPACT RESISTANCE
                         </TableCell>
@@ -657,7 +552,7 @@ const Caracteristicas = ({ id }) => {
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          RESISTENCIA A LA ABRASIÓN PROFUNDA
+                          DEEP ABRASION RESISTANCE
                           <br />
                           DEEP ABRASION RESISTANCE
                         </TableCell>
@@ -692,9 +587,9 @@ const Caracteristicas = ({ id }) => {
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          DILATACIÓN TÉRMICA LINEAL
+                          LINEAR THERMAL EXPANSION
                           <br />
-                          LINEAR THERMAL-EXPANSION
+                          LINEAR THERMAL EXPANSION
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
                           6
@@ -727,7 +622,7 @@ const Caracteristicas = ({ id }) => {
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          CHOQUE TÉRMICO
+                          THERMAL SHOCK
                           <br />
                           THERMAL SHOCK
                         </TableCell>
@@ -738,12 +633,12 @@ const Caracteristicas = ({ id }) => {
                           MD
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          RESISTE
+                          RESISTS
                           <br />
                           RESISTS
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          RESISTE
+                          RESISTS
                           <br />
                           RESISTS
                         </TableCell>
@@ -766,7 +661,7 @@ const Caracteristicas = ({ id }) => {
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          RESISTENCIA AL HIELO
+                          FROST RESISTANCE
                           <br />
                           FROST RESISTANCE
                         </TableCell>
@@ -774,17 +669,17 @@ const Caracteristicas = ({ id }) => {
                           12
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          EXIGIDO
+                          REQUIRED
                           <br />
                           REQUIRED
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          RESISTE
+                          RESISTS
                           <br />
                           RESISTS
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          RESISTE
+                          RESISTS
                           <br />
                           RESISTS
                         </TableCell>
@@ -820,7 +715,7 @@ const Caracteristicas = ({ id }) => {
                 }}
               >
                 <Typography sx={{ fontWeight: 600 }}>
-                  CARACTERÍSTICAS HIGIÉNICAS / HYGIENIC CHARACTERISTICS
+                  HYGIENIC CHARACTERISTICS / HYGIENIC CHARACTERISTICS
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
@@ -834,7 +729,7 @@ const Caracteristicas = ({ id }) => {
                   }}
                 >
                   <Table
-                    aria-label="tabla de características higiénicas"
+                    aria-label="table of hygienic characteristics"
                     sx={{
                       tableLayout: "fixed",
                       minWidth: 900,
@@ -851,14 +746,14 @@ const Caracteristicas = ({ id }) => {
                         <TableCell
                           sx={{ width: "180px", padding: "10px 10px" }}
                         >
-                          CARACTERÍSTICAS HIGIÉNICAS
+                          HYGIENIC CHARACTERISTICS
                           <br />
                           HYGIENIC CHARACTERISTICS
                         </TableCell>
                         <TableCell
                           sx={{ width: "220px", padding: "10px 10px" }}
                         >
-                          TIPO DE ÁCIDO O BASE
+                          TYPE OF ACID OR BASE
                           <br />
                           TYPE OF ACID OR BASE
                         </TableCell>
@@ -889,7 +784,7 @@ const Caracteristicas = ({ id }) => {
                         >
                           DOLCKER
                           <br />
-                          Valores 1ª Calidad / Values 1st Quality
+                          VALUES 1ST QUALITY / VALUES 1ST QUALITY
                         </TableCell>
                       </TableRow>
                       <TableRow>
@@ -946,12 +841,12 @@ const Caracteristicas = ({ id }) => {
                           />
                         </TableCell>
                         <TableCell rowSpan={4} sx={{ padding: "10px 10px" }}>
-                          RESISTENCIA QUÍMICA
+                          CHEMICAL RESISTANCE
                           <br />
                           CHEMICAL RESISTANCE
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          ÁCIDOS BAJA CONCENTRACIÓN
+                          LOW CONCENTRATION ACIDS
                           <br />
                           LOW CONCENTRATION ACIDS
                         </TableCell>
@@ -962,18 +857,18 @@ const Caracteristicas = ({ id }) => {
                           MD
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE LA
+                          CLASS LA
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE LA
+                          CLASS LA
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE LA
+                          CLASS LA
                         </TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          ÁCIDOS ALTA CONCENTRACIÓN
+                          HIGH CONCENTRATION ACIDS
                           <br />
                           HIGH CONCENTRATION ACIDS
                         </TableCell>
@@ -984,18 +879,18 @@ const Caracteristicas = ({ id }) => {
                           MD
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE HA
+                          CLASS HA
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE HA
+                          CLASS HA
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE HA
+                          CLASS HA
                         </TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          BASES BAJA CONCENTRACIÓN
+                          LOW CONCENTRATION ALKALI
                           <br />
                           LOW CONCENTRATION ALKALI
                         </TableCell>
@@ -1006,18 +901,18 @@ const Caracteristicas = ({ id }) => {
                           MD
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE LA
+                          CLASS LA
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE LA
+                          CLASS LA
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE LA
+                          CLASS LA
                         </TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          BASES ALTA CONCENTRACIÓN
+                          HIGH CONCENTRATION ALKALI
                           <br />
                           HIGH CONCENTRATION ALKALI
                         </TableCell>
@@ -1028,13 +923,13 @@ const Caracteristicas = ({ id }) => {
                           MD
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE HA
+                          CLASS HA
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE HA
+                          CLASS HA
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE HA
+                          CLASS HA
                         </TableCell>
                       </TableRow>
                       <TableRow>
@@ -1051,7 +946,7 @@ const Caracteristicas = ({ id }) => {
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          RESISTENCIA A LAS MANCHAS
+                          STAINS RESISTANCE
                           <br />
                           STAINS RESISTANCE
                         </TableCell>
@@ -1086,7 +981,7 @@ const Caracteristicas = ({ id }) => {
                           />
                         </TableCell>
                         <TableCell sx={{ padding: "10px 10px" }}>
-                          PRODUCTOS DOMÉSTICOS DE LIMPIEZA Y SALES DE PISCINA
+                          HOUSEHOLD DETERGENTS AND ADDITIVES FOR SWIMMING-POOLS
                           <br />
                           HOUSEHOLD DETERGENTS AND ADDITIVES FOR SWIMMING-POOLS
                         </TableCell>
@@ -1095,18 +990,18 @@ const Caracteristicas = ({ id }) => {
                           13
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          MÍNIMO UB
+                          MINIMUM UB
                           <br />
                           MINIMUM UB
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE LA
+                          CLASS LA
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE LA
+                          CLASS LA
                         </TableCell>
                         <TableCell align="center" sx={{ padding: "10px 10px" }}>
-                          CLASE LA
+                          CLASS LA
                         </TableCell>
                       </TableRow>
                     </TableBody>

@@ -30,7 +30,7 @@ const AplicacionesTline = ({ id }) => {
   return (
     <>
       <StyledGaleria id={id[0]} backgroundColor={COLORS.gray02}>
-        <Titulo color={COLORS.gray08}>Aplicaciones</Titulo>
+        <Titulo color={COLORS.gray08}>Applications</Titulo>
         <StyledSlider className="Slider">
           <ImageGallery
             items={imagesGaleriaAplicaciones}
@@ -45,42 +45,31 @@ const AplicacionesTline = ({ id }) => {
           />
         </StyledSlider>
         <Text>
-          Invisifix es la herramienta de diseño de fachadas y envolventes
-          desarrollada para arquitectos y técnicos que buscan libertad creativa
-          con soluciones técnicas precisas.
+          Invisifix is the facade and envelope design tool developed for architects and technicians who seek creative freedom with precise technical solutions.
           <br />
           <br />
-          Con Dolcker Invisifix puedes:
+          With Dolcker Invisifix you can:
           <br />
-          • Diseñar edificios nuevos o rehabilitar fachadas existentes,
-          adaptando los acabados a las condiciones del entorno urbano o al
-          estilo del proyecto.
+          • Design new buildings or rehabilitate existing facades, adapting the finishes to the conditions of the urban environment or the style of the project.
           <br />
-          • Combinar colores en porcentajes definidos por el diseñador,
-          generando composiciones únicas en cerámica, piedra o materiales
-          técnicos.
+          • Combine colors in defined percentages by the designer, generating unique compositions in ceramic, stone or technical materials.
           <br />
-          • Seleccionar texturas específicas como mate, brillo o flameada,
-          aportando un lenguaje estético acorde con la identidad del edificio.
+          • Select specific textures such as matte, gloss or flame, providing an aesthetic language in line with the identity of the building.
           <br />
-          • Elegir sistemas de anclaje personalizados: desde sistemas clip hasta
-          despieces a medida, con asesoramiento técnico incluido para garantizar
-          una instalación eficaz y duradera.
+          • Choose customized anchoring systems: from clip systems to custom-made pieces, with included technical advice to ensure an efficient and durable installation.
           <br />
           <br />
-          Dolcker Fusión ofrece una solución integral para llevar el diseño
-          arquitectónico al siguiente nivel, combinando creatividad, técnica y
-          soporte profesional en cada fase del proyecto.
+          Dolcker Fusion offers an integral solution to take architectural design to the next level, combining creativity, technique and professional support in each phase of the project.
         </Text>
         <Cita
-          cita="“El color es un poder que influye directamente en el alma”"
+          cita={`"Color is a power which directly influences the soul"`}
           author="— Wassily Kandinsky"
           colorCita={COLORS.gray08}
           colorAutor={COLORS.gray04}
         />
       </StyledGaleria>
       <StyledGaleria id={id[1]} backgroundColor={COLORS.gray01}>
-        <Titulo3 color={COLORS.gray08}>- Obra Nueva</Titulo3>
+        <Titulo3 color={COLORS.gray08}>- New Construction</Titulo3>
         <StyledSlider className="Slider">
           <ImageGallery
             items={imagesGaleriaObraNueva}

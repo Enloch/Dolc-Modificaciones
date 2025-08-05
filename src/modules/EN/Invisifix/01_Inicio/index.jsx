@@ -7,7 +7,7 @@ import scrollTo from "../../../../helpers/scrollTo";
 import useMenuDesplegable from "../../../../hooks/useMenuDesplegable";
 import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
-// Define la animación para la flecha
+// Define the animation for the arrow
 const pulse = keyframes`
     0% {
         transform: translateY(0);
@@ -19,14 +19,14 @@ const pulse = keyframes`
         transform: translateY(0);
     }
 `;
-// Define los estilos para la flecha animada
+// Define styles for the animated arrow
 const AnimatedArrow = styled(BsMouse)`
 	animation: ${pulse} 2s ease-in-out infinite;
 `;
 const Indice = ({ indiceRef }) => {
 	const { menuDesplegable, btnIndice } = useMenuDesplegable(
 		ListaContenidos,
-		"Índice",
+		"Index",
 		indiceRef,
 		"en"
 	);
