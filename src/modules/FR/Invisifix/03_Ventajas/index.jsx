@@ -5,55 +5,66 @@ import img1 from "../../../../assets/images/Invisifix/Ventajas/IMG_0060.jpg";
 import Text from "../../../../components/Text";
 import { COLORS } from "../../../../global/GlobalStyles";
 import Listado from "../../../../components/Listado";
+
 const VentajasTline = ({ id }) => {
-  return (
-    <StyledVentajas id={id} backgroundColor={COLORS.gray02}>
-      <Titulo>Advantages of the Dolcker Invisifix system</Titulo>
-      <ImageWithCaption
-        src={img1}
-        alt="Advantages image 1"
-        caption="DOLCKER Invisifix"
-        columnSpan="6"
-      />
-      <Text>
-        DOLCKER INVISIFIX has developed an innovative modular system that allows complete customization of facades, combining:
-        <br />
-        <br />
-        <strong>1. </strong>
-        Three plate thicknesses: 11, 14 and 20 mm.
-        <br />
-        <strong>2. </strong>
-        Three textures per model, fully combinable with each other
-        <br />
-        <strong>3. </strong>
-        Predefined modulation by percentage, according to the designer's specifications
-        <br />
-        <br />
-        Thanks to our exclusive classification system, orders are supplied organized according to the defined percentages of color and texture, so that the installer does not need to make any prior classification on site.
-        <br />
-        <br />
-        The DOLCKER INVISIFIX system incorporates a technical development of fixation for ventilated facades, designed to meet both aesthetic and functional requirements of the project.
-      </Text>
-      <Listado>
-        <li>Mechanical fixation system + elastic fixation</li>
-        <li>Removable system</li>
-        <li>
-          Sliding clips (safety for scaffolding and lifting equipment)
-        </li>
-        <li>Continuous profile of high inertia for supporting large loads</li>
-        <li>Continuous calibrated groove in the factory</li>
-        <li>Free placement system</li>
-        <li>Multiple sizes of pieces</li>
-        <li>Made-to-measure cutting</li>
-        <li>Different thicknesses of pieces (11, 14 and 20 mm)</li>
-        <li>System developed for chambers up to 20 cm</li>
-        <li>Pieces with visible edge "full body"</li>
-        <li>Manufacture of pieces with matte, flamed and honed textures</li>
-        <li>Fast and secure assembly</li>
-        <li>Versatile system for designing the facade</li>
-      </Listado>
-    </StyledVentajas>
-  );
+	return (
+		<StyledVentajas id={id} backgroundColor={COLORS.gray02}>
+			<Titulo>Avantages du système Dolcker Invisifix</Titulo>
+			<ImageWithCaption
+				src={img1}
+				alt="Image avantages 1"
+				caption="DOLCKER Invisifix"
+				columnSpan="6"
+			/>
+			<Text>
+				DOLCKER INVISIFIX a développé un système modulaire innovant permettant
+				une personnalisation complète des façades, combinant :
+				<br />
+				<br />
+				<strong>1. </strong>
+				Trois épaisseurs de plaque : 11, 14 et 20 mm.
+				<br />
+				<strong>2. </strong>
+				Trois textures par modèle, entièrement combinables entre elles
+				<br />
+				<strong>3. </strong>
+				Modulation prédéfinie par pourcentage, selon les spécifications du
+				concepteur
+				<br />
+				<br />
+				Grâce à notre système de classification exclusif, les commandes sont
+				fournies organisées selon les pourcentages définis de couleur et de
+				texture, de sorte que l'installateur n'a pas besoin de faire de
+				classification préalable sur site.
+				<br />
+				<br />
+				Le système DOLCKER INVISIFIX intègre un développement technique de
+				fixation pour façades ventilées, conçu pour répondre à la fois aux
+				exigences esthétiques et fonctionnelles du projet.
+			</Text>
+			<Listado>
+				<li>Système de fixation mécanique + fixation élastique</li>
+				<li>Système amovible</li>
+				<li>
+					Clips coulissants (sécurité pour échafaudages et équipements de
+					levage)
+				</li>
+				<li>
+					Profil continu de haute inertie pour supporter des charges importantes
+				</li>
+				<li>Rainure calibrée en continu en usine</li>
+				<li>Système de placement libre</li>
+				<li>Plusieurs tailles de pièces</li>
+				<li>Découpe sur mesure</li>
+				<li>Différentes épaisseurs de pièces (11, 14 et 20 mm)</li>
+				<li>Système développé pour des chambres jusqu'à 20 cm</li>
+				<li>Pièces avec bord visible "pleine masse"</li>
+				<li>Fabrication de pièces avec textures mate, flammée et adoucie</li>
+				<li>Assemblage rapide et sécurisé</li>
+				<li>Système polyvalent pour concevoir la façade</li>
+			</Listado>
+		</StyledVentajas>
+	);
 };
 
 export default VentajasTline;

@@ -10,56 +10,56 @@ import Imagen2 from "../../../../assets/images/Invisifix/Dolcker/IMG_7842.jpg";
 
 const DolckerTline = ({ id }) => {
   const propsVisualizador = {
-    text: "Hover over the points to see information",
+    text: "Passez la souris sur les points pour voir les informations",
     type: "normal",
     indicadores: config,
     imgBackground: Imagen2,
-    alt: "Background image with indicators",
+    alt: "Image d'arrière-plan avec indicateurs",
   };
 
   return (
     <StyledDolcker id={id} backgroundColor={COLORS.gray03}>
-      <Titulo>Invisifix System solves</Titulo>
+      <Titulo>Le système Invisifix résout</Titulo>
       <div className="dolcker-info">
         <ImageWithCaption
           src={Imagen1}
-          alt="Dolcker image 2"
-          caption="Invisifix System"
+          alt="Image Dolcker 2"
+          caption="Système Invisifix"
         />
 
         <div className="text-content">
-          The new generation of Dolcker invisible clips
+          La nouvelle génération de clips invisibles Dolcker
           <br />
           <br />
-          Invisifix is the natural evolution of the Dolcker T20 system, a clip with optimized design that replaces the original anchorage with a more robust, precise and discreet solution, maintaining the philosophy of minimal visibility and maximum aesthetic integration.
+          Invisifix est l'évolution naturelle du système Dolcker T20, un clip avec un design optimisé qui remplace l'ancrage original par une solution plus robuste, précise et discrète, tout en conservant la philosophie de visibilité minimale et d'intégration esthétique maximale.
           <br />
           <br />
-          Designed for projects where the constructive detail is key —such as ceilings, interior balconies or areas with close viewing angles—, Invisifix takes visual discretion to the maximum level without compromising structural safety.
+          Conçu pour les projets où le détail constructif est clé - tels que les plafonds, les balcons intérieurs ou les zones avec des angles de vue rapprochés - Invisifix pousse la discrétion visuelle au niveau maximum sans compromettre la sécurité structurelle.
           <br />
           <br />
-          Main features of Invisifix:
+          Principales caractéristiques d'Invisifix :
           <ul>
             <li>
-              Improved composition and higher mechanical performance: high-strength steel for a safer and more durable clip.
+              Composition améliorée et performance mécanique supérieure : acier haute résistance pour un clip plus sûr et plus durable.
             </li>
             <li>
-              Reduced and beveled visible tab, designed to go unnoticed even in close observation conditions.
+              Patte visible réduite et biseautée, conçue pour passer inaperçue même dans des conditions d'observation rapprochée.
             </li>
             <li>
-              Recessed fastening, which moves the anchorage point away from the visible edge of the plate, reducing its visual impact.
+              Fixation encastrée, qui éloigne le point d'ancrage du bord visible de la plaque, réduisant ainsi son impact visuel.
             </li>
             <li>
-              Partial QUALICOAT coating in the visible area, available in any RAL, with a black background for aesthetic integration with the joint.
+              Revêtement QUALICOAT partiel dans la zone visible, disponible dans n'importe quel RAL, avec un fond noir pour une intégration esthétique avec le joint.
             </li>
             <li>
-              Compatible with ceramic pieces of different thicknesses, fully integrated into the Dolcker T20 system.
+              Compatible avec des pièces céramiques de différentes épaisseurs, entièrement intégré au système Dolcker T20.
             </li>
           </ul>
           <br />
-          Invisifix is a discreet, precise and adaptable solution, ideal for high-value-added architectures, where the integration between technique and design is essential.
+          Invisifix est une solution discrète, précise et adaptable, idéale pour les architectures à haute valeur ajoutée, où l'intégration entre technique et design est essentielle.
         </div>
       </div>
-      <ImageWithCaption columnSpan="6" src={Imagen2} alt="Dolcker image 2" />
+      <ImageWithCaption columnSpan="6" src={Imagen2} alt="Image Dolcker 2" />
     </StyledDolcker>
   );
 };
