@@ -1,17 +1,9 @@
 import getDataFromModules from "../helpers/getDataFromModules";
 
-const flamed = import.meta.globEager(
-		"../assets/images/Diseno/Acabados/RENDER FLAMED/**"
-	),
-	lapado = import.meta.globEager(
-		"../assets/images/Diseno/Acabados/RENDER LAPADO/**"
-	),
-	mate = import.meta.globEager(
-		"../assets/images/Diseno/Acabados/RENDER MATE/**"
-	),
-	rigato = import.meta.globEager(
-		"../assets/images/Diseno/Acabados/RENDER RIGATO/**"
-	);
+const flamed = import.meta.globEager("../assets/images/Diseno/Acabados/RENDER FLAMED/**"),
+	lapado = import.meta.globEager("../assets/images/Diseno/Acabados/RENDER LAPADO/**"),
+	mate = import.meta.globEager("../assets/images/Diseno/Acabados/RENDER MATE/**"),
+	rigato = import.meta.globEager("../assets/images/Diseno/Acabados/RENDER RIGATO/**");
 
 const flamedImports = getDataFromModules(flamed),
 	lapadoImports = getDataFromModules(lapado),
@@ -31,7 +23,7 @@ const config = {
 			imgs: mateImports,
 		},
 		{
-			titulo: "Rigato",
+			titulo: "Rigatto",
 			imgs: rigatoImports,
 		},
 		{
