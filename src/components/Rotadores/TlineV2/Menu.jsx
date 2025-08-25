@@ -2,12 +2,7 @@ import React, { useState } from "react";
 import { NombreMateriales } from "./Materiales";
 import { SketchPicker } from "react-color";
 import IconoRAL from "../../../assets/icons/RAL.png";
-import modelConfig, {
-	CATEGORIES,
-	LED_TYPES,
-	getModelsByType,
-	getModelById,
-} from "./modelosConfig";
+import modelConfig, { CATEGORIES, LED_TYPES, getModelsByType, getModelById } from "./modelosConfig";
 
 // Import MUI components
 import {
@@ -15,7 +10,7 @@ import {
 	Typography,
 	Tabs,
 	Tab,
-	Grid2,
+	Grid,
 	Button,
 	Card,
 	CardContent,
@@ -104,14 +99,7 @@ const StyledTabs = muiStyled(Tabs)(({ theme }) => ({
 	},
 }));
 
-const Menu = ({
-	handleModelChange,
-	handleMaterialChange,
-	color,
-	setColor,
-	colorPickerActive,
-	setColorPickerActive,
-}) => {
+const Menu = ({ handleModelChange, handleMaterialChange, color, setColor, colorPickerActive, setColorPickerActive }) => {
 	// State for navigation
 	const [currentView, setCurrentView] = useState("models"); // 'models', 'materials'
 	const [selectedCategory, setSelectedCategory] = useState(CATEGORIES.CG);
@@ -165,33 +153,23 @@ const Menu = ({
 	const renderModelsView = () => (
 		<Box>
 			<Box sx={{ borderBottom: 1, borderColor: "divider", mb: 2 }}>
-				<StyledTabs
-					value={selectedCategory}
-					onChange={handleCategoryChange}
-					variant="fullWidth"
-					aria-label="model categories"
-				>
+				<StyledTabs value={selectedCategory} onChange={handleCategoryChange} variant="fullWidth" aria-label="model categories">
 					<StyledTab label="C-Clip" value={CATEGORIES.CG} />
 					<StyledTab label="C-Grapa" value={CATEGORIES.SG} />
 				</StyledTabs>
 			</Box>
 
 			<Box sx={{ borderBottom: 1, borderColor: "divider", mb: 2 }}>
-				<StyledTabs
-					value={selectedType}
-					onChange={handleTypeChange}
-					variant="fullWidth"
-					aria-label="model types"
-				>
+				<StyledTabs value={selectedType} onChange={handleTypeChange} variant="fullWidth" aria-label="model types">
 					<StyledTab label="LED" value={LED_TYPES.LED} />
 					<StyledTab label="NO LED" value={LED_TYPES.NOLED} />
 				</StyledTabs>
 			</Box>
 
 			<Box sx={{ maxHeight: "70vh", overflow: "auto", p: 1 }}>
-				<Grid2 container spacing={1}>
+				<Grid container spacing={1}>
 					{currentModels.map((model) => (
-						<Grid2 item xs={6} sm={4} key={model.id}>
+						<Grid size={{ xs: 6, sm: 4 }} key={model.id}>
 							<ModelCard onClick={() => handleModelSelect(model.id)}>
 								<ModelCardMedia image={model.image} title={model.name} />
 								<CardContent sx={{ p: 1 }}>
@@ -200,9 +178,9 @@ const Menu = ({
 									</Typography>
 								</CardContent>
 							</ModelCard>
-						</Grid2>
+						</Grid>
 					))}
-				</Grid2>
+				</Grid>
 			</Box>
 		</Box>
 	);
@@ -217,10 +195,7 @@ const Menu = ({
 				<Typography variant="subtitle1">Seleccionar Material</Typography>
 			</Box>
 
-			<Accordion
-				expanded={materialType === "metales"}
-				onChange={() => handleMaterialTypeChange("metales")}
-			>
+			<Accordion expanded={materialType === "metales"} onChange={() => handleMaterialTypeChange("metales")}>
 				<AccordionSummary expandIcon={<ExpandMoreIcon />}>
 					<Typography>Metales</Typography>
 				</AccordionSummary>
@@ -232,28 +207,17 @@ const Menu = ({
 							justifyContent: "flex-start",
 						}}
 					>
-						{NombreMateriales.filter((m) => m.tipo === "metal").map(
-							(material, index) => (
-								<MaterialButton
-									key={index}
-									onClick={() => handleMaterialChange(index)}
-								>
-									<MaterialImage
-										src={material.textura}
-										alt={`Material ${material.nombre}`}
-									/>
-									<MaterialText>{material.nombre}</MaterialText>
-								</MaterialButton>
-							)
-						)}
+						{NombreMateriales.filter((m) => m.tipo === "metal").map((material, index) => (
+							<MaterialButton key={index} onClick={() => handleMaterialChange(index)}>
+								<MaterialImage src={material.textura} alt={`Material ${material.nombre}`} />
+								<MaterialText>{material.nombre}</MaterialText>
+							</MaterialButton>
+						))}
 					</Box>
 				</AccordionDetails>
 			</Accordion>
 
-			<Accordion
-				expanded={materialType === "maderas"}
-				onChange={() => handleMaterialTypeChange("maderas")}
-			>
+			<Accordion expanded={materialType === "maderas"} onChange={() => handleMaterialTypeChange("maderas")}>
 				<AccordionSummary expandIcon={<ExpandMoreIcon />}>
 					<Typography>Maderas</Typography>
 				</AccordionSummary>
@@ -265,28 +229,18 @@ const Menu = ({
 							justifyContent: "flex-start",
 						}}
 					>
-						{NombreMateriales.filter((m) => m.tipo === "madera").map(
-							(material, index) => {
-								// Find the actual index in the full array
-								const metalCount = NombreMateriales.filter(
-									(m) => m.tipo === "metal"
-								).length;
-								const actualIndex = metalCount + index;
+						{NombreMateriales.filter((m) => m.tipo === "madera").map((material, index) => {
+							// Find the actual index in the full array
+							const metalCount = NombreMateriales.filter((m) => m.tipo === "metal").length;
+							const actualIndex = metalCount + index;
 
-								return (
-									<MaterialButton
-										key={actualIndex}
-										onClick={() => handleMaterialChange(actualIndex)}
-									>
-										<MaterialImage
-											src={material.textura}
-											alt={`Material ${material.nombre}`}
-										/>
-										<MaterialText>{material.nombre}</MaterialText>
-									</MaterialButton>
-								);
-							}
-						)}
+							return (
+								<MaterialButton key={actualIndex} onClick={() => handleMaterialChange(actualIndex)}>
+									<MaterialImage src={material.textura} alt={`Material ${material.nombre}`} />
+									<MaterialText>{material.nombre}</MaterialText>
+								</MaterialButton>
+							);
+						})}
 					</Box>
 				</AccordionDetails>
 			</Accordion>
@@ -305,11 +259,7 @@ const Menu = ({
 				<AccordionDetails>
 					{showColorPicker && (
 						<Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
-							<SketchPicker
-								color={color}
-								onChange={handleColorChange}
-								disableAlpha
-							/>
+							<SketchPicker color={color} onChange={handleColorChange} disableAlpha />
 						</Box>
 					)}
 				</AccordionDetails>
@@ -317,11 +267,7 @@ const Menu = ({
 		</Box>
 	);
 
-	return (
-		<Box sx={{ height: "100%", overflow: "hidden" }}>
-			{currentView === "models" ? renderModelsView() : renderMaterialsView()}
-		</Box>
-	);
+	return <Box sx={{ height: "100%", overflow: "hidden" }}>{currentView === "models" ? renderModelsView() : renderMaterialsView()}</Box>;
 };
 
 export default Menu;
