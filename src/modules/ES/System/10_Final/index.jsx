@@ -1,8 +1,10 @@
 import React from "react";
-import { Box, Container, Grid, Typography, Link, IconButton, Stack, Button } from "@mui/material";
+import { Box, Container, Typography, Link, Grid, IconButton, Stack, Button } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import logoDolcker from "/logo.png";
+import { Link as RouterLink } from "react-router-dom";
+
 function Final() {
 	const socialButtonStyles = {
 		borderRadius: "20px",
@@ -15,41 +17,33 @@ function Final() {
 	};
 
 	return (
-		<Box component="footer" sx={{ backgroundColor: "#f8f8f8", color: "common.black", py: { xs: 6, md: 10 } }}>
-			<Container maxWidth="xxl" sx={{ px: { xs: "3vw" } }}>
-				<Grid container spacing={{ xs: 4, md: 1 }}>
-					<Grid size={{ xs: 12, md: 4 }}>
-						<img src={logoDolcker} alt="Logo Dolcker" width={100} />
-
+		<Box component="footer" sx={{ backgroundColor: "#f8f8f8", color: "common.black", py: { xs: 6, md: 12 } }}>
+			<Container maxWidth={"xxl"} sx={{ px: { xs: "3vw" } }}>
+				<Grid container spacing={{ xs: 0 }} justifyContent="space-between">
+					<Grid size={{ xs: 12, sm: 6, md: 4 }}>
+						<Link component={RouterLink} to="/">
+							<img src={logoDolcker} alt="Logo Dolcker" width={100} />
+						</Link>
 						<Stack direction="row" spacing={1} sx={{ mb: 4, mt: 2 }}>
 							<Button
-								href="https://www.linkedin.com/company/105421562"
+								href="https://www.linkedin.com/company/www.dolcestone.com"
 								target="_blank"
 								startIcon={<LinkedInIcon />}
 								sx={socialButtonStyles}
 							>
 								LinkedIn
 							</Button>
-							<Button
-								href="https://www.instagram.com/mk_hub_experience/"
-								target="_blank"
-								startIcon={<InstagramIcon />}
-								sx={socialButtonStyles}
-							>
+							<Button href="https://www.instagram.com/dolcestone_/" target="_blank" startIcon={<InstagramIcon />} sx={socialButtonStyles}>
 								Instagram
 							</Button>
 						</Stack>
-						<Typography variant="body1" component="p" sx={{ fontWeight: "bold" }}>
-							Horario de atención
-						</Typography>
-						<Typography variant="body2">Lunes a Viernes: 8:00 - 18:00</Typography>
 					</Grid>
-					<Grid size={{ xs: 12, md: 10 }}>
+					<Grid size={{ xs: 12, sm: 6, md: 4 }}>
 						<Stack spacing={1.5}>
 							<Link
-								component="h3"
+								component={RouterLink}
+								to="/quienes-somos"
 								variant="h3"
-								href="#sectores"
 								color="inherit"
 								underline="none"
 								sx={{
@@ -58,15 +52,15 @@ function Final() {
 									background: "none",
 									cursor: "pointer",
 									transition: "opacity 0.2s ease-in-out",
-									width: { xs: "none", md: "26ch" },
+									width: "100%",
 								}}
 							>
-								Sectores
+								Quiénes Somos
 							</Link>
 							<Link
-								component="h3"
+								component={RouterLink}
+								to="/contacto"
 								variant="h3"
-								href="#demos"
 								color="inherit"
 								underline="none"
 								sx={{
@@ -75,63 +69,34 @@ function Final() {
 									background: "none",
 									cursor: "pointer",
 									transition: "opacity 0.2s ease-in-out",
-									width: { xs: "none", md: "26ch" },
+									width: "100%",
 								}}
 							>
-								Catálogos
-							</Link>
-							<Link
-								component="h3"
-								variant="h3"
-								href="#proyectos"
-								color="inherit"
-								underline="none"
-								sx={{
-									textAlign: "left",
-									border: "none",
-									background: "none",
-									cursor: "pointer",
-									transition: "opacity 0.2s ease-in-out",
-									width: { xs: "none", md: "26ch" },
-								}}
-							>
-								Proyectos
-							</Link>
-							<Link
-								component="h3"
-								variant="h3"
-								href="#faq"
-								color="inherit"
-								underline="none"
-								sx={{
-									textAlign: "left",
-									border: "none",
-									background: "none",
-									cursor: "pointer",
-									transition: "opacity 0.2s ease-in-out",
-									width: { xs: "none", md: "26ch" },
-								}}
-							>
-								FAQ
+								Contacto
 							</Link>
 						</Stack>
 					</Grid>
-					<Grid size={{ xs: 12, md: 3 }}>
+					<Grid size={{ xs: 12, sm: 12, md: 4 }}>
 						<Typography variant="body1" component="p" sx={{ fontWeight: "bold" }}>
 							Contacto
 						</Typography>
 						<Typography variant="body2" component="address" sx={{ fontStyle: "normal", mt: 1 }}>
-							Calle Principal 123
+							DOLCKER SISTEMAS, S.L.
 							<br />
-							28001 Madrid
+							Calle Talamanca del Jarama, 19
 							<br />
-							España
+							28051 Madrid (España)
+							<br />
+							(+34) 902 363 725
 						</Typography>
-						<Link href="tel:+34912345678" color="inherit" underline="hover" sx={{ display: "block", mt: 2 }}>
-							+34 912 345 678
+						<Link href="tel:+34902363725" color="inherit" underline="hover" sx={{ display: "block", mt: 2 }}>
+							(+34) 902 363 725
 						</Link>
-						<Link href="mailto:info@mk.com" color="inherit" underline="hover" sx={{ display: "block" }}>
-							info@mk.com
+						<Link href="mailto:administracion@dolcker.es" color="inherit" underline="hover" sx={{ display: "block" }}>
+							administracion@dolcker.es
+						</Link>
+						<Link href="mailto:dolcker@dolcker.es" color="inherit" underline="hover" sx={{ display: "block" }}>
+							dolcker@dolcker.es
 						</Link>
 					</Grid>
 				</Grid>
@@ -154,10 +119,22 @@ function Final() {
 						penal.
 					</Typography>
 					<Stack direction="row" spacing={2}>
-						<Button variant="text" size="small" sx={{ color: "grey.600", textTransform: "none", fontWeight: "normal" }}>
+						<Button
+							component={RouterLink}
+							to="/aviso-legal"
+							variant="text"
+							size="small"
+							sx={{ color: "grey.600", textTransform: "none", fontWeight: "normal" }}
+						>
 							Aviso Legal
 						</Button>
-						<Button variant="text" size="small" sx={{ color: "grey.600", textTransform: "none", fontWeight: "normal" }}>
+						<Button
+							component={RouterLink}
+							to="/politica-privacidad"
+							variant="text"
+							size="small"
+							sx={{ color: "grey.600", textTransform: "none", fontWeight: "normal" }}
+						>
 							Política de Privacidad
 						</Button>
 					</Stack>
