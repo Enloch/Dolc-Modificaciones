@@ -13,7 +13,6 @@ import ranurado8 from "@assets/images/T5/Diseno/Espesores/Dolcker_espesor_11mm.j
 import Text from "@components/Text";
 import IndiceSeries from "./05_1_IndiceSeries";
 import acabados from "@assets/images/T5/Diseno/Acabados/Dolcker enmallados T5_web.jpg";
-const images = import.meta.glob("@assets/images/GaleriaT5/*", { eager: true });
 
 const Disenos = ({ id }) => {
 	const propsFormato = {
@@ -32,12 +31,7 @@ const Disenos = ({ id }) => {
 		<>
 			<StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
 				<Titulo>Diseño</Titulo>
-				<ImageWithCaption
-					src={img1}
-					alt="Imagen de Diseños 1"
-					caption="Arquitectos pasan la referencia"
-					columnSpan="6"
-				/>
+				<ImageWithCaption src={img1} alt="Imagen de Diseños 1" caption="Arquitectos pasan la referencia" columnSpan="6" />
 				<Cita
 					cita="La arquitectura debe hablar de su tiempo y lugar, pero anhelar la eternidad"
 					author="Frank Gehry"
@@ -48,39 +42,30 @@ const Disenos = ({ id }) => {
 				<Titulo2>Malla de seguridad</Titulo2>
 				<Anotaciones>
 					<Text>
-						El enmallado en la parte trasera del porcelánico de gran formato es
-						una malla de fibra de vidrio adherida con resina a la cara posterior
-						de la losa. Su propósito es reforzar la resistencia mecánica del
-						material, reduciendo el riesgo de fracturas y facilitando su
-						manipulación, transporte e instalación.
+						El enmallado en la parte trasera del porcelánico de gran formato es una malla de fibra de vidrio adherida con resina a la cara
+						posterior de la losa. Su propósito es reforzar la resistencia mecánica del material, reduciendo el riesgo de fracturas y
+						facilitando su manipulación, transporte e instalación.
 						<br />
 						<br />
-						<strong>
-							Beneficios del enmallado en porcelánico de gran formato:
-						</strong>
+						<strong>Beneficios del enmallado en porcelánico de gran formato:</strong>
 						<br />
 						<br />
-						1. Mayor resistencia a la rotura: La fibra de vidrio ayuda a evitar
-						que la pieza se quiebre con facilidad, especialmente durante el
-						corte o la instalación.
+						1. Mayor resistencia a la rotura: La fibra de vidrio ayuda a evitar que la pieza se quiebre con facilidad, especialmente durante
+						el corte o la instalación.
 						<br />
 						<br />
-						2. Seguridad en la manipulación: Reduce el riesgo de desprendimiento
-						de fragmentos en caso de rotura.
+						2. Seguridad en la manipulación: Reduce el riesgo de desprendimiento de fragmentos en caso de rotura.
 						<br />
 						<br />
-						3. Facilita la instalación: En algunos casos, mejora la adherencia
-						con ciertos adhesivos y morteros.
+						3. Facilita la instalación: En algunos casos, mejora la adherencia con ciertos adhesivos y morteros.
 						<br />
 						<br />
-						4. Compensación de tensiones: Ayuda a absorber pequeñas tensiones
-						mecánicas que pueden surgir por variaciones térmicas o flexión del
-						soporte.
+						4. Compensación de tensiones: Ayuda a absorber pequeñas tensiones mecánicas que pueden surgir por variaciones térmicas o flexión
+						del soporte.
 						<br />
 						<br />
-						Este tipo de refuerzo es común en losas porcelánicas ultrafinas y en
-						piezas de gran formato que requieren mayor integridad estructural
-						debido a su tamaño
+						Este tipo de refuerzo es común en losas porcelánicas ultrafinas y en piezas de gran formato que requieren mayor integridad
+						estructural debido a su tamaño
 					</Text>
 				</Anotaciones>
 				<ImageWithCaption

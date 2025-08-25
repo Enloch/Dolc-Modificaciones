@@ -3,10 +3,10 @@ import { Children } from "react";
 import getDataFromModules from "../helpers/getDataFromModules";
 import Enlace from "../modules/ES/System/06_Diseno/06_1_IndiceSeries/Enlace";
 
-const imagenesAmbienteImports = import.meta.glob("../assets/images/Series/**/EJEMPLO/**");
+const imagenesAmbienteImports = import.meta.glob("../assets/images/Series/**/EJEMPLO/**", { eager: true });
 
 // Importar imágenes de las series de Tline
-const imagenesAmbienteTlineImports = import.meta.glob("../assets/images/DolckerTline/Series/**/EJEMPLO/**");
+const imagenesAmbienteTlineImports = import.meta.glob("../assets/images/DolckerTline/Series/**/EJEMPLO/**", { eager: true });
 
 const imagenesAmbiente = getDataFromModules(imagenesAmbienteImports);
 const imagenesAmbienteTline = getDataFromModules(imagenesAmbienteTlineImports);

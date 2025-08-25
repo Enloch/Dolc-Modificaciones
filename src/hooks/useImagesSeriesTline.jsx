@@ -3,7 +3,7 @@ import { Children } from "react";
 import getDataFromModules from "../helpers/getDataFromModules";
 import Enlace from "../modules/ES/System/06_Diseno/06_1_IndiceSeries/Enlace";
 import img1 from "../assets/images/DolckerTline/ranurado11mm.webp";
-const imagenesAmbienteImports = import.meta.glob("../assets/images/DolckerTline/Series/**/EJEMPLO/**");
+const imagenesAmbienteImports = import.meta.glob("../assets/images/DolckerTline/Series/**/EJEMPLO/**", { eager: true });
 
 const imagenesAmbiente = getDataFromModules(imagenesAmbienteImports);
 

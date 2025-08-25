@@ -4,10 +4,8 @@ import ImageWithCaption from "../../../../components/ImageWithCaption";
 import { Titulo, Titulo2 } from "../../../../components/Titulos";
 import { COLORS } from "../../../../global/GlobalStyles";
 import StyledDisenos from "./styles";
-const imagesImport = import.meta.glob('../../../../assets/images/*', { eager: true });
-const images = Object.values(imagesImport);
-const img1 = images[0];
-const fondo = images[1];
+import img1 from "../../../../assets/images/DolckerTline/Diseno/catalogo3-1-14.webp";
+import fondo from "../../../../assets/images/Diseno/Formato/fondo.webp";
 import indicadoresFormato from "../../../../utils/indicadoresFormato";
 import Anotacion from "../../../../components/Tline/Anotacion";
 import Anotaciones from "../../../../components/Tline/Anotacion/Anotaciones";
@@ -144,33 +142,18 @@ const DisenosTline = ({ id }) => {
 			<StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
 				<Titulo2>Acabados Cerámica</Titulo2>
 				<Anotaciones>
-					<Anotacion
-						type="normal"
-						text="Pulsa en el punto para ver todas las posibilidades de piezas especiales"
-					/>
-					<Anotacion
-						type="swipe"
-						text="Desliza con el ratón o el dedo para apreciar la textura"
-					/>
+					<Anotacion type="normal" text="Pulsa en el punto para ver todas las posibilidades de piezas especiales" />
+					<Anotacion type="swipe" text="Desliza con el ratón o el dedo para apreciar la textura" />
 				</Anotaciones>
 				<VisualizadorDesplazador config={configAcabados} />
 			</StyledDisenos>
 			<StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
 				<Titulo2>Acabados y Perfiles de Cenefas</Titulo2>
 				<Anotaciones>
-					<Anotacion
-						type="normal"
-						text="Pulsa en el punto para ver todas las posibilidades de piezas especiales"
-					/>
-					<Anotacion
-						type="swipe"
-						text="Desliza con el ratón o el dedo para apreciar la textura"
-					/>
+					<Anotacion type="normal" text="Pulsa en el punto para ver todas las posibilidades de piezas especiales" />
+					<Anotacion type="swipe" text="Desliza con el ratón o el dedo para apreciar la textura" />
 				</Anotaciones>
-				<div
-					className="rotador"
-					onClick={() => !showRotador && setShowRotador(true)}
-				>
+				<div className="rotador" onClick={() => !showRotador && setShowRotador(true)}>
 					{showRotador ? (
 						<Suspense
 							fallback={
