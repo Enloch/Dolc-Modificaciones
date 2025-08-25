@@ -76,7 +76,7 @@ function Final() {
 							</Link>
 						</Stack>
 					</Grid>
-					<Grid size={{ xs: 12, sm: 12, md: 4 }}>
+					<Grid size={{ xs: 12, sm: 12, md: 4 }} sx={{ textAlign: { xs: "left", md: "right" } }}>
 						<Typography variant="body1" component="p" sx={{ fontWeight: "bold" }}>
 							Contactez-nous
 						</Typography>

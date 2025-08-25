@@ -27,6 +27,15 @@ export default defineConfig(({ mode }) => ({
 	},
 	build: {
 		chunkSizeWarningLimit: 1600,
+		rollupOptions: {
+			output: {
+				manualChunks: {
+					three: ["three"],
+					react: ["react", "react-dom"],
+					mui: ["@mui/material", "@mui/icons-material"],
+				},
+			},
+		},
 	},
 	resolve: {
 		alias: {
