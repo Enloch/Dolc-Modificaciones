@@ -1,11 +1,11 @@
 import getDataFromModules from '../../../helpers/getDataFromModules'
 
-const ambientesImports = import.meta.globEager(
-    '../../../assets/images/Series/VOLUMEN/AMBIENTES/**'
+const ambientesImports = import.meta.glob(
+    '../../../assets/images/Series/VOLUMEN/AMBIENTES/**', { eager: true }
 )
 
-const muestrasImports = import.meta.globEager(
-    '../../../assets/images/Series/VOLUMEN/DESPIECE/**'
+const muestrasImports = import.meta.glob(
+    '../../../assets/images/Series/VOLUMEN/DESPIECE/**', { eager: true }
 )
 
 const ambientes = getDataFromModules(ambientesImports)

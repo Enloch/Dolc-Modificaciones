@@ -11,41 +11,24 @@ import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 const AplicacionesTline = ({ id }) => {
-	// Actualizado para usar import.meta.glob con eager: true en lugar de globEager
-	const imagesRehabilitar = import.meta.glob(
-		"../../../../assets/images/GaleriaArchiform/Aplicaciones/*",
-		{ eager: true }
-	);
-	const imagesGaleriaRehabilitar = Object.keys(imagesRehabilitar).map(
-		(key) => ({
-			original: imagesRehabilitar[key].default,
-			thumbnail: imagesRehabilitar[key].default,
-		})
-	);
+	// Actualizado para usar import.meta.glob con eager: true en lugar de glob
+	const imagesRehabilitar = import.meta.glob("../../../../assets/images/GaleriaArchiform/Aplicaciones/*", { eager: true });
+	const imagesGaleriaRehabilitar = Object.keys(imagesRehabilitar).map((key) => ({
+		original: imagesRehabilitar[key].default,
+		thumbnail: imagesRehabilitar[key].default,
+	}));
 
-	// Actualizado para usar import.meta.glob con eager: true en lugar de globEager
-	const imagesobra = import.meta.glob(
-		"../../../../assets/images/GaleriaArchiform/ObraNueva/*",
-		{ eager: true }
-	);
+	// Actualizado para usar import.meta.glob con eager: true en lugar de glob
+	const imagesobra = import.meta.glob("../../../../assets/images/GaleriaArchiform/ObraNueva/*", { eager: true });
 	const imagesGaleriaObra = Object.keys(imagesobra).map((key) => ({
 		original: imagesobra[key].default,
 		thumbnail: imagesobra[key].default,
 	}));
 	return (
 		<>
-			<StyledAplicaciones
-				id={id[0]}
-				backgroundColor={COLORS.gray02}
-				rowGap={DISTANCES.medium}
-			>
+			<StyledAplicaciones id={id[0]} backgroundColor={COLORS.gray02} rowGap={DISTANCES.medium}>
 				<Titulo color={COLORS.gray08}>Applications</Titulo>
-				<ImageWithCaption
-					src={img1}
-					alt="Applications Image 1"
-					caption="DOLCKER & CLIP Archiform."
-					columnSpan="6"
-				/>
+				<ImageWithCaption src={img1} alt="Applications Image 1" caption="DOLCKER & CLIP Archiform." columnSpan="6" />
 				<Cita
 					cita="“Architecture is the learned game, correct and magnificent, of forms assembled in the light.”"
 					author="— Le Corbusier"
@@ -68,18 +51,9 @@ const AplicacionesTline = ({ id }) => {
 					/>
 				</StyledSlider>
 			</StyledGaleria>
-			<StyledAplicaciones
-				id={id[1]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.medium}
-			>
+			<StyledAplicaciones id={id[1]} backgroundColor={COLORS.gray01} rowGap={DISTANCES.medium}>
 				<Titulo2 color={COLORS.gray08}>Renovation</Titulo2>
-				<ImageWithCaption
-					src={img2}
-					alt="Applications Image 2"
-					caption="DOL - TC14 Archiform."
-					columnSpan="6"
-				/>
+				<ImageWithCaption src={img2} alt="Applications Image 2" caption="DOL - TC14 Archiform." columnSpan="6" />
 				<Cita
 					cita="“Everything is permissible as long as it is fantastic”"
 					author="— Carlo Mollino"
@@ -87,18 +61,9 @@ const AplicacionesTline = ({ id }) => {
 					colorAutor={COLORS.gray04}
 				/>
 			</StyledAplicaciones>
-			<StyledAplicaciones
-				id={id[2]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.medium}
-			>
+			<StyledAplicaciones id={id[2]} backgroundColor={COLORS.gray01} rowGap={DISTANCES.medium}>
 				<Titulo2 color={COLORS.gray08}>New Construction</Titulo2>
-				<ImageWithCaption
-					src={img3}
-					alt="Applications Image 3"
-					caption="DOL -TC20 Archiform."
-					columnSpan="6"
-				/>
+				<ImageWithCaption src={img3} alt="Applications Image 3" caption="DOL -TC20 Archiform." columnSpan="6" />
 				<Cita
 					cita="“Architecture is a question of dreams and fantasies, of generous curves and wide spaces”"
 					author="— Oscar Niemeyer"
@@ -121,33 +86,13 @@ const AplicacionesTline = ({ id }) => {
 					/>
 				</StyledSlider>
 			</StyledGaleria>
-			<StyledAplicaciones
-				id={id[3]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.medium}
-			>
+			<StyledAplicaciones id={id[3]} backgroundColor={COLORS.gray01} rowGap={DISTANCES.medium}>
 				<Titulo3 color={COLORS.gray08}>- Facades</Titulo3>
-				<ImageWithCaption
-					src={img4}
-					alt="Applications Image 4"
-					caption="DOL - TC20 Archiform."
-					columnSpan="6"
-				/>
+				<ImageWithCaption src={img4} alt="Applications Image 4" caption="DOL - TC20 Archiform." columnSpan="6" />
 			</StyledAplicaciones>
-			<StyledAplicaciones
-				id={id[4]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.medium}
-			>
-				<Titulo3 color={COLORS.gray08}>
-					- Terraces, raised floors, ceilings and solutions
-				</Titulo3>
-				<ImageWithCaption
-					src={img5}
-					alt="Applications Image 5"
-					caption="DOL - TC14 Archiform."
-					columnSpan="6"
-				/>
+			<StyledAplicaciones id={id[4]} backgroundColor={COLORS.gray01} rowGap={DISTANCES.medium}>
+				<Titulo3 color={COLORS.gray08}>- Terraces, raised floors, ceilings and solutions</Titulo3>
+				<ImageWithCaption src={img5} alt="Applications Image 5" caption="DOL - TC14 Archiform." columnSpan="6" />
 			</StyledAplicaciones>
 		</>
 	);

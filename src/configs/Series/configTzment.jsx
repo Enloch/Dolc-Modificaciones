@@ -1,28 +1,28 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 import imgSeleccionar from '../../assets/images/Series/TZMENT/YDRAY-Dolcker-ZEMENT_OK.webp'
 
-const ambientesImports = import.meta.globEager(
-    '../../assets/images/Series/TZMENT/AMBIENTES/**'
+const ambientesImports = import.meta.glob(
+    '../../assets/images/Series/TZMENT/AMBIENTES/**', { eager: true }
 )
 
-const muestrasImports = import.meta.globEager(
-    '../../assets/images/Series/TZMENT/DESPIECE/**'
+const muestrasImports = import.meta.glob(
+    '../../assets/images/Series/TZMENT/DESPIECE/**', { eager: true }
 )
 
-const muestrasBLACKImports = import.meta.globEager(
-    '../../assets/images/Series/TZMENT/MUESTRAS_ACABADOS/BLACK/**'
+const muestrasBLACKImports = import.meta.glob(
+    '../../assets/images/Series/TZMENT/MUESTRAS_ACABADOS/BLACK/**', { eager: true }
 )
-const muestrasCOALImports = import.meta.globEager(
-    '../../assets/images/Series/TZMENT/MUESTRAS_ACABADOS/COAL/**'
+const muestrasCOALImports = import.meta.glob(
+    '../../assets/images/Series/TZMENT/MUESTRAS_ACABADOS/COAL/**', { eager: true }
 )
-const muestrasSTEELImports = import.meta.globEager(
-    '../../assets/images/Series/TZMENT/MUESTRAS_ACABADOS/STEEL/**'
+const muestrasSTEELImports = import.meta.glob(
+    '../../assets/images/Series/TZMENT/MUESTRAS_ACABADOS/STEEL/**', { eager: true }
 )
-const muestrasWHITEImports = import.meta.globEager(
-    '../../assets/images/Series/TZMENT/MUESTRAS_ACABADOS/WHITE/**'
+const muestrasWHITEImports = import.meta.glob(
+    '../../assets/images/Series/TZMENT/MUESTRAS_ACABADOS/WHITE/**', { eager: true }
 )
 
-const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
+const acabadosImports = import.meta.glob('../../assets/icons/acabados/**', { eager: true })
 
 const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)

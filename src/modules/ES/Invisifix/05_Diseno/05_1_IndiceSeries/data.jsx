@@ -22,60 +22,60 @@ import configStorm from "../../../../../configs/SeriesTline/configStorm";
 import configUnik from "../../../../../configs/SeriesTline/configUnik";
 
 // Import images for each series
-const ARQUITECTImports = import.meta.globEager(
-  "../../../../../assets/images/Series/ARQUITECT/DESPIECE/**"
+const ARQUITECTImports = import.meta.glob(
+  "../../../../../assets/images/Series/ARQUITECT/DESPIECE/**", { eager: true }
 );
-const BASALTImports = import.meta.globEager(
-  "../../../../../assets/images/Series/BASALT/DESPIECE/**"
+const BASALTImports = import.meta.glob(
+  "../../../../../assets/images/Series/BASALT/DESPIECE/**", { eager: true }
 );
-const CRETEImports = import.meta.globEager(
-  "../../../../../assets/images/Series/CRETE/DESPIECE/**"
+const CRETEImports = import.meta.glob(
+  "../../../../../assets/images/Series/CRETE/DESPIECE/**", { eager: true }
 );
-const DOLMImports = import.meta.globEager(
-  "../../../../../assets/images/Series/DOLM/DESPIECE/**"
+const DOLMImports = import.meta.glob(
+  "../../../../../assets/images/Series/DOLM/DESPIECE/**", { eager: true }
 );
-const MARBLEImports = import.meta.globEager(
-  "../../../../../assets/images/Series/MARBLE/DESPIECE/**"
+const MARBLEImports = import.meta.glob(
+  "../../../../../assets/images/Series/MARBLE/DESPIECE/**", { eager: true }
 );
-const PORTLANDImports = import.meta.globEager(
-  "../../../../../assets/images/Series/PORTLAND/DESPIECE/**"
+const PORTLANDImports = import.meta.glob(
+  "../../../../../assets/images/Series/PORTLAND/DESPIECE/**", { eager: true }
 );
-const QUARCITYImports = import.meta.globEager(
-  "../../../../../assets/images/Series/QUARCITY/DESPIECE/**"
+const QUARCITYImports = import.meta.glob(
+  "../../../../../assets/images/Series/QUARCITY/DESPIECE/**", { eager: true }
 );
-const QUARTZImports = import.meta.globEager(
-  "../../../../../assets/images/Series/QUARTZ/DESPIECE/**"
+const QUARTZImports = import.meta.glob(
+  "../../../../../assets/images/Series/QUARTZ/DESPIECE/**", { eager: true }
 );
-const SPACEImports = import.meta.globEager(
-  "../../../../../assets/images/Series/SPACE/DESPIECE/**"
+const SPACEImports = import.meta.glob(
+  "../../../../../assets/images/Series/SPACE/DESPIECE/**", { eager: true }
 );
-const STONEImports = import.meta.globEager(
-  "../../../../../assets/images/Series/STONE/DESPIECE/**"
+const STONEImports = import.meta.glob(
+  "../../../../../assets/images/Series/STONE/DESPIECE/**", { eager: true }
 );
-const TERRAZOImports = import.meta.globEager(
-  "../../../../../assets/images/Series/TERRAZO/DESPIECE/**"
+const TERRAZOImports = import.meta.glob(
+  "../../../../../assets/images/Series/TERRAZO/DESPIECE/**", { eager: true }
 );
-const TZMENTImports = import.meta.globEager(
-  "../../../../../assets/images/Series/TZMENT/DESPIECE/**"
+const TZMENTImports = import.meta.glob(
+  "../../../../../assets/images/Series/TZMENT/DESPIECE/**", { eager: true }
 );
-const WOODImports = import.meta.globEager(
-  "../../../../../assets/images/Series/WOOD/DESPIECE/**"
+const WOODImports = import.meta.glob(
+  "../../../../../assets/images/Series/WOOD/DESPIECE/**", { eager: true }
 );
 //Series CLean
-const BRERAImports = import.meta.globEager(
-  "../../../../../assets/images/Invisifix/Series/BRERA/**"
+const BRERAImports = import.meta.glob(
+  "../../../../../assets/images/Invisifix/Series/BRERA/**", { eager: true }
 );
-const DOMUSImports = import.meta.globEager(
-  "../../../../../assets/images/Invisifix/Series/DOMUS/**"
+const DOMUSImports = import.meta.glob(
+  "../../../../../assets/images/Invisifix/Series/DOMUS/**", { eager: true }
 );
-const LUCENAImports = import.meta.globEager(
-  "../../../../../assets/images/Invisifix/Series/LUCENA/**"
+const LUCENAImports = import.meta.glob(
+  "../../../../../assets/images/Invisifix/Series/LUCENA/**", { eager: true }
 );
-const MELBOURNEImports = import.meta.globEager(
-  "../../../../../assets/images/Invisifix/Series/MELBOURNE/**"
+const MELBOURNEImports = import.meta.glob(
+  "../../../../../assets/images/Invisifix/Series/MELBOURNE/**", { eager: true }
 );
-const VALONIAImports = import.meta.globEager(
-  "../../../../../assets/images/Invisifix/Series/VALONIA/**"
+const VALONIAImports = import.meta.glob(
+  "../../../../../assets/images/Invisifix/Series/VALONIA/**", { eager: true }
 );
 
 // Get data from modules

@@ -1,28 +1,28 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 import imgSeleccionar from '../../assets/images/Series/MARBLE/Dolcker MARBLE STONE_seleccionar.webp'
 
-const ambientesImports = import.meta.globEager(
-    '../../assets/images/Series/MARBLE/AMBIENTES/**'
+const ambientesImports = import.meta.glob(
+    '../../assets/images/Series/MARBLE/AMBIENTES/**', { eager: true }
 )
 
-const muestrasImports = import.meta.globEager(
-    '../../assets/images/Series/MARBLE/DESPIECE/**'
+const muestrasImports = import.meta.glob(
+    '../../assets/images/Series/MARBLE/DESPIECE/**', { eager: true }
 )
 
-const muestrasCALACATTAImports = import.meta.globEager(
-    '../../assets/images/Series/MARBLE/MUESTRAS_ACABADOS/CALACATTA/**'
+const muestrasCALACATTAImports = import.meta.glob(
+    '../../assets/images/Series/MARBLE/MUESTRAS_ACABADOS/CALACATTA/**', { eager: true }
 )
-const muestrasCREMAImports = import.meta.globEager(
-    '../../assets/images/Series/MARBLE/MUESTRAS_ACABADOS/CREMA/**'
+const muestrasCREMAImports = import.meta.glob(
+    '../../assets/images/Series/MARBLE/MUESTRAS_ACABADOS/CREMA/**', { eager: true }
 )
-const muestrasLAVAImports = import.meta.globEager(
-    '../../assets/images/Series/MARBLE/MUESTRAS_ACABADOS/LAVA/**'
+const muestrasLAVAImports = import.meta.glob(
+    '../../assets/images/Series/MARBLE/MUESTRAS_ACABADOS/LAVA/**', { eager: true }
 )
-const muestrasGREYImports = import.meta.globEager(
-    '../../assets/images/Series/MARBLE/MUESTRAS_ACABADOS/GREY/**'
+const muestrasGREYImports = import.meta.glob(
+    '../../assets/images/Series/MARBLE/MUESTRAS_ACABADOS/GREY/**', { eager: true }
 )
 
-const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
+const acabadosImports = import.meta.glob('../../assets/icons/acabados/**', { eager: true })
 
 const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)

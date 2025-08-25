@@ -9,9 +9,7 @@ import RotadorMatrix from "../../../../components/Rotadores/MatrixDecor/Rotador"
 import ImageGallery from "react-image-gallery";
 import IndiceSeries from "./05_1_IndiceSeries";
 const DisenosTline = ({ id }) => {
-	const imagesDiseño = import.meta.globEager(
-		"../../../../assets/images/GaleriaDecor/Diseño/*"
-	);
+	const imagesDiseño = import.meta.glob("../../../../assets/images/GaleriaDecor/Diseño/*");
 	const imagenesGaleria = Object.keys(imagesDiseño).map((key) => ({
 		original: imagesDiseño[key].default,
 		thumbnail: imagesDiseño[key].default,

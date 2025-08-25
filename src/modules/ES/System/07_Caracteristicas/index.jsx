@@ -240,32 +240,35 @@ const Caracteristicas = ({ id }) => {
                         >
                           DOLCKER VALORES PRIMERA CALIDAD / DOLCKER VALUES 1ST
                           QUALITY
-                          <TableRow>
-                            <TableCell
-                              align="center"
-                              sx={{ padding: "10px 10px" }}
-                            >
-                              SATINADO 60X120 11,5 MM
-                              <br />
-                              CALIBRE 1 597,2 X 1197,3
-                            </TableCell>
-                            <TableCell
-                              align="center"
-                              sx={{ padding: "10px 10px" }}
-                            >
-                              MATE 60X120 14 MM
-                              <br />
-                              CALIBRE 1 597,2 X 1197,3
-                            </TableCell>
-                            <TableCell
-                              align="center"
-                              sx={{ padding: "10px 10px" }}
-                            >
-                              RÚSTICO 60X120 14MM
-                              <br />
-                              CALIBRE 5 600,4 X 1200,4
-                            </TableCell>
-                          </TableRow>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell></TableCell>
+                        <TableCell></TableCell>
+                        <TableCell></TableCell>
+                        <TableCell
+                          align="center"
+                          sx={{ padding: "10px 10px" }}
+                        >
+                          SATINADO 60X120 11,5 MM
+                          <br />
+                          CALIBRE 1 597,2 X 1197,3
+                        </TableCell>
+                        <TableCell
+                          align="center"
+                          sx={{ padding: "10px 10px" }}
+                        >
+                          MATE 60X120 14 MM
+                          <br />
+                          CALIBRE 1 597,2 X 1197,3
+                        </TableCell>
+                        <TableCell
+                          align="center"
+                          sx={{ padding: "10px 10px" }}
+                        >
+                          RÚSTICO 60X120 14MM
+                          <br />
+                          CALIBRE 5 600,4 X 1200,4
                         </TableCell>
                       </TableRow>
                     </TableHead>
@@ -517,32 +520,35 @@ const Caracteristicas = ({ id }) => {
                         >
                           DOLCKER VALORES PRIMERA CALIDAD / DOLCKER VALUES 1ST
                           QUALITY
-                          <TableRow>
-                            <TableCell
-                              align="center"
-                              sx={{ padding: "10px 10px" }}
-                            >
-                              SATINADO 60X120 11,5 MM
-                              <br />
-                              CALIBRE 1 597,2 X 1197,3
-                            </TableCell>
-                            <TableCell
-                              align="center"
-                              sx={{ padding: "10px 10px" }}
-                            >
-                              MATE 60X120 14 MM
-                              <br />
-                              CALIBRE 1 597,2 X 1197,3
-                            </TableCell>
-                            <TableCell
-                              align="center"
-                              sx={{ padding: "10px 10px" }}
-                            >
-                              RÚSTICO 60X120 14MM
-                              <br />
-                              CALIBRE 5 600,4 X 1200,4
-                            </TableCell>
-                          </TableRow>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell></TableCell>
+                        <TableCell></TableCell>
+                        <TableCell></TableCell>
+                        <TableCell
+                          align="center"
+                          sx={{ padding: "10px 10px" }}
+                        >
+                          SATINADO 60X120 11,5 MM
+                          <br />
+                          CALIBRE 1 597,2 X 1197,3
+                        </TableCell>
+                        <TableCell
+                          align="center"
+                          sx={{ padding: "10px 10px" }}
+                        >
+                          MATE 60X120 14 MM
+                          <br />
+                          CALIBRE 1 597,2 X 1197,3
+                        </TableCell>
+                        <TableCell
+                          align="center"
+                          sx={{ padding: "10px 10px" }}
+                        >
+                          RÚSTICO 60X120 14MM
+                          <br />
+                          CALIBRE 5 600,4 X 1200,4
                         </TableCell>
                       </TableRow>
                     </TableHead>

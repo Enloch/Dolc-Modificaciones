@@ -1,32 +1,32 @@
 import getDataFromModules from '../../../helpers/getDataFromModules'
 import imgSeleccionar from '../../../assets/images/Series/WOOD/Dolcker WOOD_seleccionar.webp'
 
-const ambientesImports = import.meta.globEager(
-    '../../../assets/images/Series/WOOD/AMBIENTES/**'
+const ambientesImports = import.meta.glob(
+    '../../../assets/images/Series/WOOD/AMBIENTES/**', { eager: true }
 )
 
-const muestrasImports = import.meta.globEager(
-    '../../../assets/images/Series/WOOD/DESPIECE/**'
+const muestrasImports = import.meta.glob(
+    '../../../assets/images/Series/WOOD/DESPIECE/**', { eager: true }
 )
 
-const muestrasABEDULImports = import.meta.globEager(
-    '../../../assets/images/Series/WOOD/MUESTRAS_ACABADOS/ABEDUL/**'
+const muestrasABEDULImports = import.meta.glob(
+    '../../../assets/images/Series/WOOD/MUESTRAS_ACABADOS/ABEDUL/**', { eager: true }
 )
-const muestrasENCINAImports = import.meta.globEager(
-    '../../../assets/images/Series/WOOD/MUESTRAS_ACABADOS/ENCINA/**'
+const muestrasENCINAImports = import.meta.glob(
+    '../../../assets/images/Series/WOOD/MUESTRAS_ACABADOS/ENCINA/**', { eager: true }
 )
-const muestrasEUCALIPTOImports = import.meta.globEager(
-    '../../../assets/images/Series/WOOD/MUESTRAS_ACABADOS/EUCALIPTO/**'
+const muestrasEUCALIPTOImports = import.meta.glob(
+    '../../../assets/images/Series/WOOD/MUESTRAS_ACABADOS/EUCALIPTO/**', { eager: true }
 )
-const muestrasMANZANOImports = import.meta.globEager(
-    '../../../assets/images/Series/WOOD/MUESTRAS_ACABADOS/MANZANO/**'
+const muestrasMANZANOImports = import.meta.glob(
+    '../../../assets/images/Series/WOOD/MUESTRAS_ACABADOS/MANZANO/**', { eager: true }
 )
-const muestrasSAUCEImports = import.meta.globEager(
-    '../../../assets/images/Series/WOOD/MUESTRAS_ACABADOS/SAUCE/**'
+const muestrasSAUCEImports = import.meta.glob(
+    '../../../assets/images/Series/WOOD/MUESTRAS_ACABADOS/SAUCE/**', { eager: true }
 )
 
-const acabadosImports = import.meta.globEager(
-    '../../../assets/icons/acabados/**'
+const acabadosImports = import.meta.glob(
+    '../../../assets/icons/acabados/**', { eager: true }
 )
 
 const ambientes = getDataFromModules(ambientesImports)

@@ -1,35 +1,35 @@
 import getDataFromModules from '../../../helpers/getDataFromModules'
 import imgSeleccionar from '../../../assets/images/Series/SPACE/Dolcker SPACE_seleccionar.webp'
 
-const ambientesImports = import.meta.globEager(
-    '../../../assets/images/Series/SPACE/AMBIENTES/**'
+const ambientesImports = import.meta.glob(
+    '../../../assets/images/Series/SPACE/AMBIENTES/**', { eager: true }
 )
 
-const muestrasImports = import.meta.globEager(
-    '../../../assets/images/Series/SPACE/DESPIECE/**'
+const muestrasImports = import.meta.glob(
+    '../../../assets/images/Series/SPACE/DESPIECE/**', { eager: true }
 )
 
-const muestrasBLACKmports = import.meta.globEager(
-    '../../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/BLACK/**'
+const muestrasBLACKmports = import.meta.glob(
+    '../../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/BLACK/**', { eager: true }
 )
-const muestrasDARKmports = import.meta.globEager(
-    '../../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/DARK/**'
+const muestrasDARKmports = import.meta.glob(
+    '../../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/DARK/**', { eager: true }
 )
-const muestrasIVORYmports = import.meta.globEager(
-    '../../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/IVORY/**'
+const muestrasIVORYmports = import.meta.glob(
+    '../../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/IVORY/**', { eager: true }
 )
-const muestrasSOFTmports = import.meta.globEager(
-    '../../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/SOFT/**'
+const muestrasSOFTmports = import.meta.glob(
+    '../../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/SOFT/**', { eager: true }
 )
-const muestrasTAUPEmports = import.meta.globEager(
-    '../../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/TAUPE/**'
+const muestrasTAUPEmports = import.meta.glob(
+    '../../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/TAUPE/**', { eager: true }
 )
-const muestrasWHITEmports = import.meta.globEager(
-    '../../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/WHITE/**'
+const muestrasWHITEmports = import.meta.glob(
+    '../../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/WHITE/**', { eager: true }
 )
 
-const acabadosImports = import.meta.globEager(
-    '../../../assets/icons/acabados/**'
+const acabadosImports = import.meta.glob(
+    '../../../assets/icons/acabados/**', { eager: true }
 )
 
 const ambientes = getDataFromModules(ambientesImports)

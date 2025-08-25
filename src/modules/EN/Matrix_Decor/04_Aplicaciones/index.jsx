@@ -10,15 +10,9 @@ import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 
-const imagesBaño = import.meta.globEager(
-	"../../../../assets/images/GaleriaDecor/Bano/*"
-);
-const imagesPortales = import.meta.globEager(
-	"../../../../assets/images/GaleriaDecor/Portales/*"
-);
-const imagesEspacios = import.meta.globEager(
-	"../../../../assets/images/GaleriaDecor/Espacios/*"
-);
+const imagesBaño = import.meta.glob("../../../../assets/images/GaleriaDecor/Bano/*");
+const imagesPortales = import.meta.glob("../../../../assets/images/GaleriaDecor/Portales/*");
+const imagesEspacios = import.meta.glob("../../../../assets/images/GaleriaDecor/Espacios/*");
 
 const imagenesGaleriaBaño = Object.keys(imagesBaño).map((key) => ({
 	original: imagesBaño[key].default,
@@ -37,18 +31,9 @@ const imagenesGaleriaEspacios = Object.keys(imagesEspacios).map((key) => ({
 const AplicacionesTline = ({ id }) => {
 	return (
 		<>
-			<StyledAplicaciones
-				id={id[0]}
-				backgroundColor={COLORS.gray02}
-				rowGap={DISTANCES.small}
-			>
+			<StyledAplicaciones id={id[0]} backgroundColor={COLORS.gray02} rowGap={DISTANCES.small}>
 				<Titulo color={COLORS.gray08}>Applications</Titulo>
-				<ImageWithCaption
-					src={img1}
-					alt="Imagen de Aplicaciones 1"
-					caption=""
-					columnSpan="6"
-				/>
+				<ImageWithCaption src={img1} alt="Imagen de Aplicaciones 1" caption="" columnSpan="6" />
 				<Cita
 					cita="Design is a balance between form and function. It's not enough for a space to be beautiful, it must also be useful."
 					author="Frank Lloyd Wright"
@@ -57,18 +42,9 @@ const AplicacionesTline = ({ id }) => {
 				/>
 			</StyledAplicaciones>
 
-			<StyledAplicaciones
-				id={id[1]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.small}
-			>
+			<StyledAplicaciones id={id[1]} backgroundColor={COLORS.gray01} rowGap={DISTANCES.small}>
 				<Titulo2 color={COLORS.gray08}>Portals</Titulo2>
-				<ImageWithCaption
-					src={portales}
-					alt="Imagen de Aplicaciones 1"
-					caption=""
-					columnSpan="6"
-				/>
+				<ImageWithCaption src={portales} alt="Imagen de Aplicaciones 1" caption="" columnSpan="6" />
 				<Cita
 					cita="Design is where science and art reach a balance point."
 					author="Robin Mathew"
@@ -91,11 +67,7 @@ const AplicacionesTline = ({ id }) => {
 					/>
 				</StyledSlider>
 			</StyledGaleria>
-			<StyledAplicaciones
-				id={id[2]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.small}
-			>
+			<StyledAplicaciones id={id[2]} backgroundColor={COLORS.gray01} rowGap={DISTANCES.small}>
 				<Titulo2 color={COLORS.gray08}>Bathroom</Titulo2>
 				<ImageWithCaption
 					src={img3}
@@ -125,11 +97,7 @@ const AplicacionesTline = ({ id }) => {
 					/>
 				</StyledSlider>
 			</StyledGaleria>
-			<StyledAplicaciones
-				id={id[3]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.small}
-			>
+			<StyledAplicaciones id={id[3]} backgroundColor={COLORS.gray01} rowGap={DISTANCES.small}>
 				<Titulo2 color={COLORS.gray08}>Spaces</Titulo2>
 				<ImageWithCaption
 					src={img4}

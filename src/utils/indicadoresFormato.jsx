@@ -2,11 +2,11 @@ import getDataFromModules from '../helpers/getDataFromModules'
 import SvgComponent from '../assets/images/Diseno/Formato/ColorSVG'
 import { Children } from 'react'
 
-const backgroundImports = import.meta.globEager(
-    '../assets/images/Diseno/Formato/backgrounds/**'
+const backgroundImports = import.meta.glob(
+    '../assets/images/Diseno/Formato/backgrounds/**', { eager: true }
 )
-const selectImports = import.meta.globEager(
-    '../assets/icons/SelectoresFormato/**'
+const selectImports = import.meta.glob(
+    '../assets/icons/SelectoresFormato/**', { eager: true }
 )
 
 const backgrounds = getDataFromModules(backgroundImports)

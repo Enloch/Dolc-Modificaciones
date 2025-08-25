@@ -11,8 +11,8 @@ import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 const AplicacionesTline = ({ id }) => {
-	const imagesAplicaciones = import.meta.globEager(
-		"../../../../assets/images/GaleriaTline/aplicaciones/*"
+	const imagesAplicaciones = import.meta.glob(
+		"../../../../assets/images/GaleriaTline/aplicaciones/*", { eager: true }
 	);
 	const imagesGaleriaAplicaciones = Object.keys(imagesAplicaciones).map(
 		(key) => ({

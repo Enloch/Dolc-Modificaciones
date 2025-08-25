@@ -1,52 +1,52 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
 import imgSeleccionar from "../../assets/images/Series/ARQUITECT/Dolcker ARQUITECT_seleccionar.webp";
 
-const ambientesImport = import.meta.globEager(
-  "../../assets/images/Series/ARQUITECT/AMBIENTES/**"
+const ambientesImport = import.meta.glob(
+  "../../assets/images/Series/ARQUITECT/AMBIENTES/**", { eager: true }
 );
 
-const muestrasImports = import.meta.globEager(
-  "../../assets/images/Series/ARQUITECT/DESPIECE/**"
+const muestrasImports = import.meta.glob(
+  "../../assets/images/Series/ARQUITECT/DESPIECE/**", { eager: true }
 );
 
-const muestrasAMARILLOImports = import.meta.globEager(
-  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/AMARILLO/**"
+const muestrasAMARILLOImports = import.meta.glob(
+  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/AMARILLO/**", { eager: true }
 );
-const muestrasAZULImports = import.meta.globEager(
-  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/AZUL/**"
+const muestrasAZULImports = import.meta.glob(
+  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/AZUL/**", { eager: true }
 );
-const muestrasBLANCOImports = import.meta.globEager(
-  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/BLANCO/**"
+const muestrasBLANCOImports = import.meta.glob(
+  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/BLANCO/**", { eager: true }
 );
-const muestrasCENIZAImports = import.meta.globEager(
-  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/CENIZA/**"
+const muestrasCENIZAImports = import.meta.glob(
+  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/CENIZA/**", { eager: true }
 );
-const muestrasGRAFITOImports = import.meta.globEager(
-  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/GRAFITO/**"
+const muestrasGRAFITOImports = import.meta.glob(
+  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/GRAFITO/**", { eager: true }
 );
-const muestrasGRISImports = import.meta.globEager(
-  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/GRIS/**"
+const muestrasGRISImports = import.meta.glob(
+  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/GRIS/**", { eager: true }
 );
-const muestrasMALVAImports = import.meta.globEager(
-  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/MALVA/**"
+const muestrasMALVAImports = import.meta.glob(
+  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/MALVA/**", { eager: true }
 );
-const muestrasMANGOImports = import.meta.globEager(
-  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/MANGO/**"
+const muestrasMANGOImports = import.meta.glob(
+  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/MANGO/**", { eager: true }
 );
-const muestrasNEGROImports = import.meta.globEager(
-  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/NEGRO/**"
+const muestrasNEGROImports = import.meta.glob(
+  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/NEGRO/**", { eager: true }
 );
-const muestrasROJOImports = import.meta.globEager(
-  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/ROJO/**"
+const muestrasROJOImports = import.meta.glob(
+  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/ROJO/**", { eager: true }
 );
-const muestrasTURQUESAImports = import.meta.globEager(
-  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/TURQUESA/**"
+const muestrasTURQUESAImports = import.meta.glob(
+  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/TURQUESA/**", { eager: true }
 );
-const muestrasVERDEImports = import.meta.globEager(
-  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/VERDE/**"
+const muestrasVERDEImports = import.meta.glob(
+  "../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/VERDE/**", { eager: true }
 );
 
-const acabadosImports = import.meta.globEager("../../assets/icons/acabados/**");
+const acabadosImports = import.meta.glob("../../assets/icons/acabados/**", { eager: true });
 
 const ambientes = getDataFromModules(ambientesImport);
 const muestras = getDataFromModules(muestrasImports);

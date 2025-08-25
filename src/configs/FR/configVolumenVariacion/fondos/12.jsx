@@ -1,10 +1,10 @@
 import getDataFromModules from '../../../../helpers/getDataFromModules'
 
-const fondosImport = import.meta.globEager(
-    '../../../../assets/images/VolumenVariacion/Fondos/L/**'
+const fondosImport = import.meta.glob(
+    '../../../../assets/images/VolumenVariacion/Fondos/L/**', { eager: true }
 )
-const selectoresImport = import.meta.globEager(
-    '../../../../assets/images/VolumenVariacion/Iconos/**'
+const selectoresImport = import.meta.glob(
+    '../../../../assets/images/VolumenVariacion/Iconos/**', { eager: true }
 )
 
 const fondos = getDataFromModules(fondosImport)

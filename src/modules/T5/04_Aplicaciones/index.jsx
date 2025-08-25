@@ -10,16 +10,16 @@ import img5 from "../../../assets/images/T5/Aplicaciones/catalogo3-1-13.jpg";
 import Cita from "../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 
-const imagenesAplicaciones = import.meta.globEager(
-	"../../../assets/images/GaleriaT5/*"
+const imagenesAplicaciones = import.meta.glob(
+	"../../../assets/images/GaleriaT5/*", { eager: true }
 );
 const imagenesApli = Object.keys(imagenesAplicaciones).map((key) => ({
 	original: imagenesAplicaciones[key].default,
 	thumbnail: imagenesAplicaciones[key].default,
 }));
 
-const imagenesDecor = import.meta.globEager(
-	"../../../assets/images/GaleriaT5/decor/*"
+const imagenesDecor = import.meta.glob(
+	"../../../assets/images/GaleriaT5/decor/*", { eager: true }
 );
 const imagenesDeco = Object.keys(imagenesDecor).map((key) => ({
 	original: imagenesDecor[key].default,

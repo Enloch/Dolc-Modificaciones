@@ -7,7 +7,7 @@ import Text from "@components/Text";
 import "react-image-gallery/styles/css/image-gallery.css";
 import Escena3DTXT from "@components/Configuradores/TXT";
 
-const images = import.meta.globEager("@assets/images/GaleriaTXT/*");
+const images = import.meta.glob("@assets/images/GaleriaTXT/*", { eager: true });
 
 const imagenesGaleria = Object.keys(images).map((key) => ({
 	original: images[key].default,

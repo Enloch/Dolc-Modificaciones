@@ -1,28 +1,28 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 import imgSeleccionar from '../../assets/images/Series/QUARCITY/YDRAY-Dolcker-QUARCITY_OK_seleccionar.webp'
 
-const ambientesImports = import.meta.globEager(
-    '../../assets/images/Series/QUARCITY/AMBIENTES/**'
+const ambientesImports = import.meta.glob(
+    '../../assets/images/Series/QUARCITY/AMBIENTES/**', { eager: true }
 )
 
-const muestrasImports = import.meta.globEager(
-    '../../assets/images/Series/QUARCITY/DESPIECE/**'
+const muestrasImports = import.meta.glob(
+    '../../assets/images/Series/QUARCITY/DESPIECE/**', { eager: true }
 )
 
-const muestrasBEIGEImports = import.meta.globEager(
-    '../../assets/images/Series/QUARCITY/MUESTRAS_ACABADOS/BEIGE/**'
+const muestrasBEIGEImports = import.meta.glob(
+    '../../assets/images/Series/QUARCITY/MUESTRAS_ACABADOS/BEIGE/**', { eager: true }
 )
-const muestrasBLACKImports = import.meta.globEager(
-    '../../assets/images/Series/QUARCITY/MUESTRAS_ACABADOS/BLACK/**'
+const muestrasBLACKImports = import.meta.glob(
+    '../../assets/images/Series/QUARCITY/MUESTRAS_ACABADOS/BLACK/**', { eager: true }
 )
-const muestrasGRAPHITEImports = import.meta.globEager(
-    '../../assets/images/Series/QUARCITY/MUESTRAS_ACABADOS/GRAPHITE/**'
+const muestrasGRAPHITEImports = import.meta.glob(
+    '../../assets/images/Series/QUARCITY/MUESTRAS_ACABADOS/GRAPHITE/**', { eager: true }
 )
-const muestrasGREYImports = import.meta.globEager(
-    '../../assets/images/Series/QUARCITY/MUESTRAS_ACABADOS/GREY/**'
+const muestrasGREYImports = import.meta.glob(
+    '../../assets/images/Series/QUARCITY/MUESTRAS_ACABADOS/GREY/**', { eager: true }
 )
 
-const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
+const acabadosImports = import.meta.glob('../../assets/icons/acabados/**', { eager: true })
 
 const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)

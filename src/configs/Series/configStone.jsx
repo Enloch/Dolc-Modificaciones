@@ -2,15 +2,15 @@ import getDataFromModules from '../../helpers/getDataFromModules'
 
 import imgSeleccionar from '../../assets/images/Series/STONE/Dolcker NATURAL STONE_seleccionar.webp'
 
-const ambientesImports = import.meta.globEager(
-    '../../assets/images/Series/STONE/AMBIENTES/**'
+const ambientesImports = import.meta.glob(
+    '../../assets/images/Series/STONE/AMBIENTES/**', { eager: true }
 )
 
-const muestrasImports = import.meta.globEager(
-    '../../assets/images/Series/STONE/DESPIECE/**'
+const muestrasImports = import.meta.glob(
+    '../../assets/images/Series/STONE/DESPIECE/**', { eager: true }
 )
 
-const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
+const acabadosImports = import.meta.glob('../../assets/icons/acabados/**', { eager: true })
 
 const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)

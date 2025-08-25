@@ -1,27 +1,27 @@
 import getDataFromModules from '../../../helpers/getDataFromModules'
 import imgSeleccionar from '../../../assets/images/Series/DOLM/YDRAY-Dolcker-DOLMEN_OK_seleccionar.webp'
 
-const ambientesImports = import.meta.globEager(
-    '../../../assets/images/Series/DOLM/AMBIENTES/**'
+const ambientesImports = import.meta.glob(
+    '../../../assets/images/Series/DOLM/AMBIENTES/**', { eager: true }
 )
-const muestrasImports = import.meta.globEager(
-    '../../../assets/images/Series/DOLM/DESPIECE/**'
+const muestrasImports = import.meta.glob(
+    '../../../assets/images/Series/DOLM/DESPIECE/**', { eager: true }
 )
-const muestrasBEIGEImport = import.meta.globEager(
-    '../../../assets/images/Series/DOLM/MUESTRAS_ACABADOS/BEIGE/**'
+const muestrasBEIGEImport = import.meta.glob(
+    '../../../assets/images/Series/DOLM/MUESTRAS_ACABADOS/BEIGE/**', { eager: true }
 )
-const muestrasBLACKImport = import.meta.globEager(
-    '../../../assets/images/Series/DOLM/MUESTRAS_ACABADOS/BLACK/**'
+const muestrasBLACKImport = import.meta.glob(
+    '../../../assets/images/Series/DOLM/MUESTRAS_ACABADOS/BLACK/**', { eager: true }
 )
-const muestrasGRAFITOImport = import.meta.globEager(
-    '../../../assets/images/Series/DOLM/MUESTRAS_ACABADOS/GRAFITO/**'
+const muestrasGRAFITOImport = import.meta.glob(
+    '../../../assets/images/Series/DOLM/MUESTRAS_ACABADOS/GRAFITO/**', { eager: true }
 )
-const muestrasGRISImport = import.meta.globEager(
-    '../../../assets/images/Series/DOLM/MUESTRAS_ACABADOS/BEIGE/**'
+const muestrasGRISImport = import.meta.glob(
+    '../../../assets/images/Series/DOLM/MUESTRAS_ACABADOS/BEIGE/**', { eager: true }
 )
 
-const acabadosImports = import.meta.globEager(
-    '../../../assets/icons/acabados/**'
+const acabadosImports = import.meta.glob(
+    '../../../assets/icons/acabados/**', { eager: true }
 )
 
 const ambientes = getDataFromModules(ambientesImports)

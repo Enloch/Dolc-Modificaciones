@@ -13,6 +13,7 @@ import ranurado8 from "@assets/images/T5/Diseno/Espesores/Dolcker_espesor_11mm.j
 import Text from "@components/Text";
 import IndiceSeries from "./05_1_IndiceSeries";
 import acabados from "@assets/images/T5/Diseno/Acabados/Dolcker enmallados T5_web.jpg";
+const images = import.meta.glob("@assets/images/GaleriaT5/*", { eager: true });
 
 const Disenos = ({ id }) => {
 	const propsFormato = {

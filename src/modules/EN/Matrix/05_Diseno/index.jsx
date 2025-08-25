@@ -10,9 +10,7 @@ import IndiceSeries from "./05_1_IndiceSeries";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 const DisenosTline = ({ id }) => {
-	const imagesDiseño = import.meta.globEager(
-		"../../../../assets/images/GaleriaMatrix/Diseño/*"
-	);
+	const imagesDiseño = import.meta.glob("../../../../assets/images/GaleriaMatrix/Diseño/*");
 	const imagenesGaleria = Object.keys(imagesDiseño).map((key) => ({
 		original: imagesDiseño[key].default,
 		thumbnail: imagesDiseño[key].default,

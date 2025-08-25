@@ -1,29 +1,29 @@
 import getDataFromModules from '../../../helpers/getDataFromModules'
 import imgSeleccionar from '../../../assets/images/Series/CRETE/YDRAY-Dolcker-CRETE_OK_seleccionar.webp'
 
-const ambientesImports = import.meta.globEager(
-    '../../../assets/images/Series/CRETE/AMBIENTES/**'
+const ambientesImports = import.meta.glob(
+    '../../../assets/images/Series/CRETE/AMBIENTES/**', { eager: true }
 )
 
-const muestrasImports = import.meta.globEager(
-    '../../../assets/images/Series/CRETE/DESPIECE/**'
+const muestrasImports = import.meta.glob(
+    '../../../assets/images/Series/CRETE/DESPIECE/**', { eager: true }
 )
 
-const muestrasBLANCOImports = import.meta.globEager(
-    '../../../assets/images/Series/CRETE/MUESTRAS_ACABADOS/BLANCO/**'
+const muestrasBLANCOImports = import.meta.glob(
+    '../../../assets/images/Series/CRETE/MUESTRAS_ACABADOS/BLANCO/**', { eager: true }
 )
-const muestrasGRISImports = import.meta.globEager(
-    '../../../assets/images/Series/CRETE/MUESTRAS_ACABADOS/GRIS/**'
+const muestrasGRISImports = import.meta.glob(
+    '../../../assets/images/Series/CRETE/MUESTRAS_ACABADOS/GRIS/**', { eager: true }
 )
-const muestrasNEGROImports = import.meta.globEager(
-    '../../../assets/images/Series/CRETE/MUESTRAS_ACABADOS/NEGRO/**'
+const muestrasNEGROImports = import.meta.glob(
+    '../../../assets/images/Series/CRETE/MUESTRAS_ACABADOS/NEGRO/**', { eager: true }
 )
-const muestrasTAUPEImports = import.meta.globEager(
-    '../../../assets/images/Series/CRETE/MUESTRAS_ACABADOS/TAUPE/**'
+const muestrasTAUPEImports = import.meta.glob(
+    '../../../assets/images/Series/CRETE/MUESTRAS_ACABADOS/TAUPE/**', { eager: true }
 )
 
-const acabadosImports = import.meta.globEager(
-    '../../../assets/icons/acabados/**'
+const acabadosImports = import.meta.glob(
+    '../../../assets/icons/acabados/**', { eager: true }
 )
 
 const ambientes = getDataFromModules(ambientesImports)

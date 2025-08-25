@@ -11,14 +11,14 @@ import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 const AplicacionesTline = ({ id }) => {
-	const imagesRehabilitar = import.meta.globEager(
-		"../../../../assets/images/GaleriaMatrix/Rehabilitar/*"
+	const imagesRehabilitar = import.meta.glob(
+		"../../../../assets/images/GaleriaMatrix/Rehabilitar/*", { eager: true }
 	);
-	const imagesObra = import.meta.globEager(
-		"../../../../assets/images/GaleriaMatrix/Obra/*"
+	const imagesObra = import.meta.glob(
+		"../../../../assets/images/GaleriaMatrix/Obra/*", { eager: true }
 	);
-	const imagesExterior = import.meta.globEager(
-		"../../../../assets/images/GaleriaMatrix/Exterior/*"
+	const imagesExterior = import.meta.glob(
+		"../../../../assets/images/GaleriaMatrix/Exterior/*", { eager: true }
 	);
 
 	const imagesGaleriaRehabilitar = Object.keys(imagesRehabilitar).map(

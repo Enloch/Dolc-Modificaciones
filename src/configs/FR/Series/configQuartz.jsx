@@ -1,16 +1,16 @@
 import getDataFromModules from '../../../helpers/getDataFromModules'
 import imgSeleccionar from '../../../assets/images/Series/QUARTZ/YDRAY-Dolcker-QUARTZ-_OK_seleccionar.webp'
 
-const ambientesImports = import.meta.globEager(
-    '../../../assets/images/Series/QUARTZ/AMBIENTES/**'
+const ambientesImports = import.meta.glob(
+    '../../../assets/images/Series/QUARTZ/AMBIENTES/**', { eager: true }
 )
 
-const muestrasImports = import.meta.globEager(
-    '../../../assets/images/Series/QUARTZ/DESPIECE/**'
+const muestrasImports = import.meta.glob(
+    '../../../assets/images/Series/QUARTZ/DESPIECE/**', { eager: true }
 )
 
-const acabadosImports = import.meta.globEager(
-    '../../../assets/icons/acabados/**'
+const acabadosImports = import.meta.glob(
+    '../../../assets/icons/acabados/**', { eager: true }
 )
 
 const ambientes = getDataFromModules(ambientesImports)

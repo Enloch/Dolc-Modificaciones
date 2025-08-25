@@ -4,7 +4,7 @@ import { StyledGaleria, StyledSlider } from "./styles";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
-const images = import.meta.globEager("@assets/images/GaleriaTXT/*");
+const images = import.meta.glob("@assets/images/GaleriaTXT/*", { eager: true });
 
 const imagenesGaleria = Object.keys(images).map((key) => ({
   original: images[key].default,

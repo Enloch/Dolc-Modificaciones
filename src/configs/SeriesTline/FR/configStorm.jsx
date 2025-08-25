@@ -1,15 +1,15 @@
 import getDataFromModules from "../../../helpers/getDataFromModules";
 import imgSeleccionar from "../../../assets/images/DolckerTline/Series/STORM/DOLCKER STORM materiales seleccion.webp";
 import MuestraImg from "../../../assets/images/DolckerTline/ranurado11mm.webp";
-const ambientesImports = import.meta.globEager(
-  "../../../assets/images/DolckerTline/Series/STORM/AMBIENTES/**"
+const ambientesImports = import.meta.glob(
+  "../../../assets/images/DolckerTline/Series/STORM/AMBIENTES/**", { eager: true }
 );
 
-const muestrasImports = import.meta.globEager(
-  "../../../assets/images/DolckerTline/Series/STORM/DESPIECE/**"
+const muestrasImports = import.meta.glob(
+  "../../../assets/images/DolckerTline/Series/STORM/DESPIECE/**", { eager: true }
 );
 
-const acabadosImports = import.meta.globEager("../../../assets/icons/acabados/**");
+const acabadosImports = import.meta.glob("../../../assets/icons/acabados/**", { eager: true });
 
 const ambientes = getDataFromModules(ambientesImports);
 const muestras = getDataFromModules(muestrasImports);

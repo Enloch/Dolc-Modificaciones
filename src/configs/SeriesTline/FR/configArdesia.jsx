@@ -1,13 +1,13 @@
 import getDataFromModules from "../../../helpers/getDataFromModules";
 import imgSeleccionar from "../../../assets/images/DolckerTline/Series/ARDESIA/DOLCKER CR ARDESIA materiales seleccion.webp";
-const ambientesImports = import.meta.globEager(
-	"../../../assets/images/DolckerTline/Series/ARDESIA/AMBIENTES/**"
+const ambientesImports = import.meta.glob(
+	"../../../assets/images/DolckerTline/Series/ARDESIA/AMBIENTES/**", { eager: true }
 );
-const muestrasImports = import.meta.globEager(
-	"../../../assets/images/DolckerTline/Series/ARDESIA/DESPIECE/**"
+const muestrasImports = import.meta.glob(
+	"../../../assets/images/DolckerTline/Series/ARDESIA/DESPIECE/**", { eager: true }
 );
-const acabadosImports = import.meta.globEager(
-	"../../../assets/icons/acabados/**"
+const acabadosImports = import.meta.glob(
+	"../../../assets/icons/acabados/**", { eager: true }
 );
 
 const ambientes = getDataFromModules(ambientesImports);

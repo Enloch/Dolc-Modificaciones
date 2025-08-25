@@ -1,31 +1,31 @@
 import getDataFromModules from '../helpers/getDataFromModules'
 
-const selectoresImports = import.meta.globEager('../assets/icons/piezas/**')
+const selectoresImports = import.meta.glob('../assets/icons/piezas/**', { eager: true })
 const selectores = getDataFromModules(selectoresImports)
 
-const albardilla = import.meta.globEager(
-        '../assets/images/Diseno/Piezas especiales/ALBARDILLA/*.webp'
+const albardilla = import.meta.glob(
+        '../assets/images/Diseno/Piezas especiales/ALBARDILLA/*.webp', { eager: true }
     ),
-    peldano1 = import.meta.globEager(
-        '../assets/images/Diseno/Piezas especiales/PELDANO 1/*.webp'
+    peldano1 = import.meta.glob(
+        '../assets/images/Diseno/Piezas especiales/PELDANO 1/*.webp', { eager: true }
     ),
-    peldano2 = import.meta.globEager(
-        '../assets/images/Diseno/Piezas especiales/PELDANO 2/*.webp'
+    peldano2 = import.meta.glob(
+        '../assets/images/Diseno/Piezas especiales/PELDANO 2/*.webp', { eager: true }
     ),
-    peldano3 = import.meta.globEager(
-        '../assets/images/Diseno/Piezas especiales/PELDANO 3/*.webp'
+    peldano3 = import.meta.glob(
+        '../assets/images/Diseno/Piezas especiales/PELDANO 3/*.webp', { eager: true }
     ),
-    rejilla = import.meta.globEager(
-        '../assets/images/Diseno/Piezas especiales/REJILLA/*.webp'
+    rejilla = import.meta.glob(
+        '../assets/images/Diseno/Piezas especiales/REJILLA/*.webp', { eager: true }
     ),
-    sueloElevado = import.meta.globEager(
-        '../assets/images/Diseno/Piezas especiales/SUELO ELEVADO/*.webp'
+    sueloElevado = import.meta.glob(
+        '../assets/images/Diseno/Piezas especiales/SUELO ELEVADO/*.webp', { eager: true }
     ),
-    techo = import.meta.globEager(
-        '../assets/images/Diseno/Piezas especiales/TECHO/*.webp'
+    techo = import.meta.glob(
+        '../assets/images/Diseno/Piezas especiales/TECHO/*.webp', { eager: true }
     ),
-    vierteaguas = import.meta.globEager(
-        '../assets/images/Diseno/Piezas especiales/VIERTEAGUAS/*.webp'
+    vierteaguas = import.meta.glob(
+        '../assets/images/Diseno/Piezas especiales/VIERTEAGUAS/*.webp', { eager: true }
     )
 
 const albardillaImports = getDataFromModules(albardilla),
