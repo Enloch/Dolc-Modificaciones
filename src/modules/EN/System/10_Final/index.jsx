@@ -22,7 +22,7 @@ function Final() {
 				<Grid container spacing={{ xs: 0 }} justifyContent="space-between">
 					<Grid size={{ xs: 12, sm: 6, md: 4 }}>
 						<Link component={RouterLink} to="/">
-							<img src={logoDolcker} alt="Logo Dolcker" width={100} />
+							<img src={logoDolcker} alt="Logo Dolcker" style={{ maxWidth: "200px" }} />
 						</Link>
 						<Stack direction="row" spacing={1} sx={{ mb: 4, mt: 2 }}>
 							<Button
