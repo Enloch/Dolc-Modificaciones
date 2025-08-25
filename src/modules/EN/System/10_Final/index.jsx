@@ -1,41 +1,147 @@
-import Logo from '../../../../components/Logo'
-import Text from '../../../../components/Text'
-import { COLORS } from '../../../../global/GlobalStyles'
-import StyledFinal from './styles'
+import React from "react";
+import { Box, Container, Typography, Link, Grid, IconButton, Stack, Button } from "@mui/material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import logoDolcker from "/logo.png";
+import { Link as RouterLink } from "react-router-dom";
 
-const Final = ({ invert = false }) => {
-    const bgColor = invert ? COLORS.gray01 : COLORS.gray08
-    const textColor = invert ? COLORS.gray08 : COLORS.gray01
+function Final() {
+	const socialButtonStyles = {
+		borderRadius: "20px",
+		textTransform: "none",
+		backgroundColor: "rgba(0, 0, 0, 0.04)",
+		color: "common.black",
+		"&:hover": {
+			backgroundColor: "rgba(0, 0, 0, 0.08)",
+		},
+	};
 
-    return (
-        <StyledFinal backgroundColor={bgColor} fullScreen>
-            <Logo />
-            <Text color={textColor}>
-                The content of this catalog is protected by the Intellectual
-                Property Law, Royal Legislative Decree 1/1996. Any reproduction
-                of the same, in part or in its entirety, without the express
-                authorization of DOLCKER may be sanctioned in accordance with
-                the penal code.
-                <br />
-                <br />
-                DOLCKER reserves the right to modify and/or delete certain
-                models, characteristics or presentations of the models displayed
-                in this catalogue, without prior notice, due to production
-                requirements without incurring any right or prejudice.
-                <br />
-                <br />
-                All our standard measurements are subject to possible variations
-                due to production circumstances. The environments shown in this
-                catalog are decorative suggestions for advertising purposes. The
-                colors and/or tones of the pieces may present slight differences
-                with respect to the real pieces. It is important before laying
-                to check that the pieces correspond to the requested models and
-                characteristics of quality, tone and caliber. The installation
-                instructions published by DOLCKER must be used in the actual
-                installation.
-            </Text>
-        </StyledFinal>
-    )
+	return (
+		<Box component="footer" sx={{ backgroundColor: "#f8f8f8", color: "common.black", py: { xs: 6, md: 12 } }}>
+			<Container maxWidth={"xxl"} sx={{ px: { xs: "3vw" } }}>
+				<Grid container spacing={{ xs: 0 }} justifyContent="space-between">
+					<Grid size={{ xs: 12, sm: 6, md: 4 }}>
+						<Link component={RouterLink} to="/">
+							<img src={logoDolcker} alt="Logo Dolcker" width={100} />
+						</Link>
+						<Stack direction="row" spacing={1} sx={{ mb: 4, mt: 2 }}>
+							<Button
+								href="https://www.linkedin.com/company/www.dolcestone.com"
+								target="_blank"
+								startIcon={<LinkedInIcon />}
+								sx={socialButtonStyles}
+							>
+								LinkedIn
+							</Button>
+							<Button href="https://www.instagram.com/dolcestone_/" target="_blank" startIcon={<InstagramIcon />} sx={socialButtonStyles}>
+								Instagram
+							</Button>
+						</Stack>
+					</Grid>
+					<Grid size={{ xs: 12, sm: 6, md: 4 }}>
+						<Stack spacing={1.5}>
+							<Link
+								component={RouterLink}
+								to="/en/quienes-somos"
+								variant="h3"
+								color="inherit"
+								underline="none"
+								sx={{
+									textAlign: "left",
+									border: "none",
+									background: "none",
+									cursor: "pointer",
+									transition: "opacity 0.2s ease-in-out",
+									width: "100%",
+								}}
+							>
+								About Us
+							</Link>
+							<Link
+								component={RouterLink}
+								to="/en/contacto"
+								variant="h3"
+								color="inherit"
+								underline="none"
+								sx={{
+									textAlign: "left",
+									border: "none",
+									background: "none",
+									cursor: "pointer",
+									transition: "opacity 0.2s ease-in-out",
+									width: "100%",
+								}}
+							>
+								Contact
+							</Link>
+						</Stack>
+					</Grid>
+					<Grid size={{ xs: 12, sm: 12, md: 4 }}>
+						<Typography variant="body1" component="p" sx={{ fontWeight: "bold" }}>
+							Contact
+						</Typography>
+						<Typography variant="body2" component="address" sx={{ fontStyle: "normal", mt: 1 }}>
+							DOLCKER SISTEMAS, S.L.
+							<br />
+							Calle Talamanca del Jarama, 19
+							<br />
+							28051 Madrid (España)
+							<br />
+							(+34) 902 363 725
+						</Typography>
+						<Link href="tel:+34902363725" color="inherit" underline="hover" sx={{ display: "block", mt: 2 }}>
+							(+34) 902 363 725
+						</Link>
+						<Link href="mailto:administracion@dolcker.es" color="inherit" underline="hover" sx={{ display: "block" }}>
+							administracion@dolcker.es
+						</Link>
+						<Link href="mailto:dolcker@dolcker.es" color="inherit" underline="hover" sx={{ display: "block" }}>
+							dolcker@dolcker.es
+						</Link>
+					</Grid>
+				</Grid>
+				<Box
+					sx={{
+						borderTop: 1,
+						borderColor: "grey.300",
+						mt: { xs: 6, md: 10 },
+						pt: 4,
+						display: "flex",
+						justifyContent: "space-between",
+						alignItems: "center",
+						flexWrap: "wrap",
+						gap: 2,
+					}}
+				>
+					<Typography variant="body2" sx={{ color: "grey.600" }}>
+						The content of this catalog is protected by Intellectual Property Law, Royal Legislative Decree 1/1996. Any reproduction of the
+						same, in part or in its entirety, without the express authorization of DOLCKER may be sanctioned in accordance with the penal
+						code.
+					</Typography>
+					<Stack direction="row" spacing={2}>
+						<Button
+							component={RouterLink}
+							to="/en/aviso-legal"
+							variant="text"
+							size="small"
+							sx={{ color: "grey.600", textTransform: "none", fontWeight: "normal" }}
+						>
+							Legal Notice
+						</Button>
+						<Button
+							component={RouterLink}
+							to="/en/politica-privacidad"
+							variant="text"
+							size="small"
+							sx={{ color: "grey.600", textTransform: "none", fontWeight: "normal" }}
+						>
+							Privacy Policy
+						</Button>
+					</Stack>
+				</Box>
+			</Container>
+		</Box>
+	);
 }
 
-export default Final
+export default Final;
