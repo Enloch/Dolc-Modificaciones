@@ -161,7 +161,7 @@ export default function RotadorMatrix() {
 						gl={(gl) => {
 							gl.toneMapping = THREE.ACESFilmicToneMapping;
 							gl.toneMappingExposure = 0.8;
-							gl.outputEncoding = THREE.sRGBEncoding;
+							gl.outputColorSpace = THREE.SRGBColorSpace;
 						}}
 					>
 						{/* <Perf /> */}
