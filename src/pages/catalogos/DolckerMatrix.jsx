@@ -39,9 +39,7 @@ const DolckerMatrix = () => {
 			<Indice id="indice" indiceRef={indiceRef} />
 			<Dolcker id="dolcker" />
 			<Ventajas id="ventajas" />
-			<Aplicaciones
-				id={["aplicaciones", "rehabilitacion", "obra-nueva", "exteriores"]}
-			/>
+			<Aplicaciones id={["aplicaciones", "rehabilitacion", "obra-nueva", "exteriores"]} />
 			<Disenos id={["diseno", "colecciones", "configurador"]} />
 			<Caracteristicas id={["caracteristicas-especiales", "datos-tecnicos"]} />
 			{/* <Sistemas
@@ -53,7 +51,7 @@ const DolckerMatrix = () => {
           "dol-hc20",
         ]}
       /> */}
-			{/* <Descargas id='descargas' /> */}
+			<Descargas id="descargas" />
 			<Final />
 			{showButton && (
 				<StyledButton onClick={handleGoToIndice}>

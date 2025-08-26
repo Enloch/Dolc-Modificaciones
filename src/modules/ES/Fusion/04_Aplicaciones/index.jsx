@@ -1,16 +1,80 @@
 import { Titulo, Titulo3 } from "../../../../components/Titulos";
+import { useRef, useCallback } from "react";
 import { COLORS } from "../../../../global/GlobalStyles";
 import Text from "../../../../components/Text";
 import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
-import { StyledGaleria, StyledSlider } from "./styles";
+import { StyledGaleria, StyledSlider, CardsSlider, CardsViewport, CardsTrack, Card, CardMedia, CardBody, NavButton } from "./styles";
 const AplicacionesTline = ({ id }) => {
+	const viewportRef = useRef(null);
+	const onNav = useCallback((dir) => {
+		const vp = viewportRef.current;
+		if (!vp) return;
+		const gap = 16; // debe coincidir con gap en CardsTrack
+		const step = vp.clientWidth + gap; // 1 tarjeta por vista
+		const delta = dir === "next" ? step : -step;
+		vp.scrollBy({ left: delta, behavior: "smooth" });
+	}, []);
 	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
 	const ImagenesAplicaciones = import.meta.globEager("../../../../assets/images/Fusion/Galeria/aplicaciones/*");
-	const imagesGaleriaAplicaciones = Object.keys(ImagenesAplicaciones).map((key) => ({
-		original: ImagenesAplicaciones[key].default,
-		thumbnail: ImagenesAplicaciones[key].default,
-	}));
+
+	// Mapa opcional de textos por archivo (personalízalo según tus nombres de imagen)
+	// Clave: nombre de archivo (con extensión). Valores: título, descripción y bullets.
+	const textosAplicacionesPorArchivo = {
+		"IMG_7253.jpg": {
+			title: "Fachada Fusión 60×120 — Terracota cálida",
+			description: "Composición contemporánea en tonos cálidos para reforzar ritmo y profundidad en fachada ventilada.",
+			bullets: ["33% rojo terracota clásico", "33% rojo terracota suave", "33% crema"],
+		},
+		"IMG_7271.jpg": {
+			title: "Fachada Fusión 60×120 — Neutros satinados",
+			description: "Equilibrio de neutros con variación sutil de brillo para una lectura serena y técnica.",
+			bullets: ["33% gris claro", "33% gris medio", "33% gris oscuro"],
+		},
+		"IMG_7289.jpg": {
+			title: "Fachada Fusión 60×120 — Combinación cromática",
+			description: "Paleta controlada con acentos verdes y terracotas para dinamizar el alzado sin perder orden.",
+			bullets: ["33% rojo mate", "33% gris texturado", "33% verde brillo"],
+		},
+		"IMG_7339.jpg": {
+			title: "Fachada Fusión 60×120 — Gris técnico",
+			description: "Gama de grises técnicos con juntas enfatizadas para una estética sobria y precisa.",
+			bullets: ["33% gris claro", "33% gris medio", "33% gris oscuro"],
+		},
+		"IMG_7455.jpg": {
+			title: "Fachada Fusión 60×120 — Piedra neutra",
+			description: "Lectura pétrea en neutros con variación tonal suave que aporta naturalidad y equilibrio.",
+			bullets: ["33% beige liso", "33% marrón liso", "33% crema"],
+		},
+		"terracota01.jpg": {
+			title: "Propuesta cromática — Terracota 01",
+			description: "Secuencia cálida con modulación 60×120 para reforzar verticalidad y orden constructivo.",
+			bullets: ["Terracota clásico", "Terracota suave", "Crema"],
+		},
+		"terracota03.jpg": {
+			title: "Propuesta cromática — Terracota 03",
+			description: "Variación de terracotas con neutros para una fachada equilibrada y de alto rendimiento.",
+			bullets: ["33% Rojo mate", "Gris texturado", "Crema"],
+		},
+	};
+
+	// Texto por defecto si no hay entrada en el mapa
+	const textoDefaultAplicacion = {
+		title: "Diseño de fachada ventilada Dolcker Fusión",
+		description:
+			"Propuesta cromática y composición flexible para proyectos contemporáneos. Combina colores y texturas para crear ritmo y profundidad en la envolvente.",
+		bullets: ["33% rojo terracota clásico", "33% rojo terracota suave", "33% rojo crema"],
+	};
+
+	// Construye las tarjetas combinando imagen + textos
+	const cardsAplicaciones = Object.keys(ImagenesAplicaciones)
+		.sort()
+		.map((key) => {
+			const src = ImagenesAplicaciones[key].default;
+			const fileName = key.split("/").pop();
+			const meta = textosAplicacionesPorArchivo[fileName] || textoDefaultAplicacion;
+			return { image: src, ...meta };
+		});
 
 	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
 	const ImagenesTerracota = import.meta.globEager("../../../../assets/images/Fusion/Galeria/terracota/*");
@@ -73,19 +137,37 @@ const AplicacionesTline = ({ id }) => {
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
 				/>
-				<StyledSlider className="Slider">
-					<ImageGallery
-						items={imagesGaleriaAplicaciones}
-						showPlayButton={false}
-						showFullscreenButton={true}
-						showThumbnails={false}
-						autoPlay={true}
-						showBullets={false}
-						showNav={true}
-						lazyLoad={true}
-						slideDuration={450}
-					/>
-				</StyledSlider>
+				{/* Slider de tarjetas con mezcla de texto + imagen */}
+				<CardsSlider>
+					<CardsViewport ref={viewportRef}>
+						<CardsTrack>
+							{cardsAplicaciones.map((card, index) => (
+								<Card key={index} data-card="true">
+									<CardBody>
+										<h3>{card.title}</h3>
+										<p>{card.description}</p>
+										{card.bullets?.length ? (
+											<ul>
+												{card.bullets.map((b, i) => (
+													<li key={i}>{b}</li>
+												))}
+											</ul>
+										) : null}
+									</CardBody>
+									<CardMedia>
+										<img src={card.image} alt={`Aplicación Fusión ${index + 1}`} loading="lazy" />
+									</CardMedia>
+								</Card>
+							))}
+						</CardsTrack>
+					</CardsViewport>
+					<NavButton data-dir="prev" aria-label="Anterior" onClick={() => onNav("prev")}>
+						‹
+					</NavButton>
+					<NavButton data-dir="next" aria-label="Siguiente" onClick={() => onNav("next")}>
+						›
+					</NavButton>
+				</CardsSlider>
 			</StyledGaleria>
 			<StyledGaleria id={id[1]} backgroundColor={COLORS.gray01}>
 				<Titulo3 color={COLORS.gray08}>- Fusión Terracota</Titulo3>

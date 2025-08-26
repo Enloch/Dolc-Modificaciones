@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {
 	AplicacionesMatrix as Aplicaciones,
 	CaracteristicasMatrix as Caracteristicas,
+	DescargasMatrix as Descargas,
 	DisenosMatrix as Disenos,
 	DolckerMatrix as Dolcker,
 	Final,
@@ -37,11 +38,10 @@ const DolckerMatrixEn = () => {
 			<Indice id="indice" indiceRef={indiceRef} />
 			<Dolcker id="dolcker" />
 			<Ventajas id="ventajas" />
-			<Aplicaciones
-				id={["aplicaciones", "rehabilitacion", "obra-nueva", "exteriores"]}
-			/>
+			<Aplicaciones id={["aplicaciones", "rehabilitacion", "obra-nueva", "exteriores"]} />
 			<Disenos id={["diseno", "colecciones", "configurador"]} />
 			<Caracteristicas id={["caracteristicas-especiales", "datos-tecnicos"]} />
+			<Descargas id={["descargas"]} />
 			<Final />
 			{showButton && (
 				<StyledButton onClick={handleGoToIndice}>
