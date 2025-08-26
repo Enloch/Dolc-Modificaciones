@@ -112,7 +112,15 @@ export const CardMedia = styled.div`
 		height: 100%;
 		object-fit: cover;
 		display: block;
-		max-height: 50vh;
+		max-height: 75vh;
+	}
+	@media (max-width: ${TABLET_SIZE}) {
+		img {
+			max-height: 500px;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
 	}
 `;
 
