@@ -1,5 +1,5 @@
 import imagen from "../assets/images/DolckerTline/Descargas/portada.jpg";
-const downloadImgImport = import.meta.glob("../assets/images/DolckerTline/Descargas/**");
+const downloadImgImport = import.meta.globEager("../assets/images/DolckerTline/Descargas/**");
 
 const downloadImgSrc = {};
 

@@ -7,7 +7,7 @@ import Text from "@components/Text";
 import "react-image-gallery/styles/css/image-gallery.css";
 import Escena3DTXT from "@components/Configuradores/TXT";
 
-const images = import.meta.glob("@assets/images/GaleriaTXT/*", { eager: true });
+const images = import.meta.globEager("@assets/images/GaleriaTXT/*");
 
 const imagenesGaleria = Object.keys(images).map((key) => ({
 	original: images[key].default,
@@ -99,16 +99,13 @@ const DisenosTline = ({ id }) => {
 					</ul>
 				</div>
 				<Text>
-					• TC 6 – XXL panels with thicknesses of 3 mm and 6 mm, ensuring
-					maximum structural stability and an exceptional visual impact.
+					• TC 6 – XXL panels with thicknesses of 3 mm and 6 mm, ensuring maximum structural stability and an exceptional visual impact.
 					<br />
 					<br />
-					• TC 9 – Visible clip designed for pieces with thicknesses of 9 mm,
-					offering secure and aesthetic support.
+					• TC 9 – Visible clip designed for pieces with thicknesses of 9 mm, offering secure and aesthetic support.
 					<br />
-					<br />• TC 11 & TC 14 – Hidden fastening system with continuous
-					groove, compatible with thicknesses of 11 mm and 14 mm, providing a
-					clean and homogeneous finish.
+					<br />• TC 11 & TC 14 – Hidden fastening system with continuous groove, compatible with thicknesses of 11 mm and 14 mm, providing
+					a clean and homogeneous finish.
 				</Text>
 			</StyledDisenos>
 			{/* <IndiceSeries id={id[1]} queSerieActiva={setSerieActiva} /> */}

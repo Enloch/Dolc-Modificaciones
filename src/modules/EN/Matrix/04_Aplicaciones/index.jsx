@@ -11,22 +11,14 @@ import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 const AplicacionesTline = ({ id }) => {
-	const imagesRehabilitar = import.meta.glob(
-		"../../../../assets/images/GaleriaMatrix/Rehabilitar/*", { eager: true }
-	);
-	const imagesObra = import.meta.glob(
-		"../../../../assets/images/GaleriaMatrix/Obra/*", { eager: true }
-	);
-	const imagesExterior = import.meta.glob(
-		"../../../../assets/images/GaleriaMatrix/Exterior/*", { eager: true }
-	);
+	const imagesRehabilitar = import.meta.globEager("../../../../assets/images/GaleriaMatrix/Rehabilitar/*");
+	const imagesObra = import.meta.globEager("../../../../assets/images/GaleriaMatrix/Obra/*");
+	const imagesExterior = import.meta.globEager("../../../../assets/images/GaleriaMatrix/Exterior/*");
 
-	const imagesGaleriaRehabilitar = Object.keys(imagesRehabilitar).map(
-		(key) => ({
-			original: imagesRehabilitar[key].default,
-			thumbnail: imagesRehabilitar[key].default,
-		})
-	);
+	const imagesGaleriaRehabilitar = Object.keys(imagesRehabilitar).map((key) => ({
+		original: imagesRehabilitar[key].default,
+		thumbnail: imagesRehabilitar[key].default,
+	}));
 
 	const imagenesGaleriaObra = Object.keys(imagesObra).map((key) => ({
 		original: imagesObra[key].default,
@@ -39,18 +31,9 @@ const AplicacionesTline = ({ id }) => {
 	}));
 	return (
 		<>
-			<StyledAplicaciones
-				id={id[0]}
-				backgroundColor={COLORS.gray02}
-				rowGap={DISTANCES.small}
-			>
+			<StyledAplicaciones id={id[0]} backgroundColor={COLORS.gray02} rowGap={DISTANCES.small}>
 				<Titulo color={COLORS.gray08}>Applications</Titulo>
-				<ImageWithCaption
-					src={img1}
-					alt="Applications Image 1"
-					caption=""
-					columnSpan="6"
-				/>
+				<ImageWithCaption src={img1} alt="Applications Image 1" caption="" columnSpan="6" />
 				<Cita
 					cita="Details are not the details. They make the design."
 					author="Charles Eames "
@@ -58,18 +41,9 @@ const AplicacionesTline = ({ id }) => {
 					colorAutor={COLORS.gray04}
 				/>
 			</StyledAplicaciones>
-			<StyledAplicaciones
-				id={id[1]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.small}
-			>
+			<StyledAplicaciones id={id[1]} backgroundColor={COLORS.gray01} rowGap={DISTANCES.small}>
 				<Titulo2 color={COLORS.gray08}>Rehabilitation</Titulo2>
-				<ImageWithCaption
-					src={logos}
-					alt="Applications Image 1"
-					caption=""
-					columnSpan="6"
-				/>
+				<ImageWithCaption src={logos} alt="Applications Image 1" caption="" columnSpan="6" />
 				<Cita
 					cita="What is functional is better than what is beautiful, because what works well remains over time."
 					author="Ray Eames"
@@ -92,11 +66,7 @@ const AplicacionesTline = ({ id }) => {
 					/>
 				</StyledSlider>
 			</StyledGaleria>
-			<StyledAplicaciones
-				id={id[2]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.small}
-			>
+			<StyledAplicaciones id={id[2]} backgroundColor={COLORS.gray01} rowGap={DISTANCES.small}>
 				<Titulo2 color={COLORS.gray08}>New construction</Titulo2>
 				<ImageWithCaption
 					src={img3}
@@ -126,11 +96,7 @@ const AplicacionesTline = ({ id }) => {
 					/>
 				</StyledSlider>
 			</StyledGaleria>
-			<StyledAplicaciones
-				id={id[3]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.small}
-			>
+			<StyledAplicaciones id={id[3]} backgroundColor={COLORS.gray01} rowGap={DISTANCES.small}>
 				<Titulo2 color={COLORS.gray08}>Exteriors</Titulo2>
 				<ImageWithCaption
 					src={img5}

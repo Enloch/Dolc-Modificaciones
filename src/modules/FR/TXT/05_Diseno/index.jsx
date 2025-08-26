@@ -7,7 +7,7 @@ import Text from "@components/Text";
 import "react-image-gallery/styles/css/image-gallery.css";
 import Escena3DTXT from "@components/Configuradores/TXT";
 
-const images = import.meta.glob("@assets/images/GaleriaTXT/*", { eager: true });
+const images = import.meta.globEager("@assets/images/GaleriaTXT/*");
 
 const imagenesGaleria = Object.keys(images).map((key) => ({
 	original: images[key].default,
@@ -99,17 +99,14 @@ const DisenosTline = ({ id }) => {
 					</ul>
 				</div>
 				<Text>
-					• TC 6 – Panneaux de grand format XXL avec des épaisseurs de 3 mm et 6
-					mm, assurant une stabilité structurelle maximale et un impact visuel
-					exceptionnel.
+					• TC 6 – Panneaux de grand format XXL avec des épaisseurs de 3 mm et 6 mm, assurant une stabilité structurelle maximale et un
+					impact visuel exceptionnel.
 					<br />
 					<br />
-					• TC 9 – Agrafe apparente conçue pour les pièces avec des épaisseurs
-					de 9 mm, offrant une fixation sûre et esthétique.
+					• TC 9 – Agrafe apparente conçue pour les pièces avec des épaisseurs de 9 mm, offrant une fixation sûre et esthétique.
 					<br />
-					<br />• TC 11 & TC 14 – Système de fixation cachée avec rainure
-					continue, compatible avec des épaisseurs de 11 mm et 14 mm, procurant
-					une finition propre et homogène.
+					<br />• TC 11 & TC 14 – Système de fixation cachée avec rainure continue, compatible avec des épaisseurs de 11 mm et 14 mm,
+					procurant une finition propre et homogène.
 				</Text>
 			</StyledDisenos>
 			{/* <IndiceSeries id={id[1]} queSerieActiva={setSerieActiva} /> */}

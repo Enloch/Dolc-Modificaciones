@@ -5,36 +5,36 @@ import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 const AplicacionesTline = ({ id }) => {
-	// Actualizado para usar import.meta.glob con eager: true en lugar de glob
-	const ImagenesAplicaciones = import.meta.glob("../../../../assets/images/Fusion/Galeria/aplicaciones/*", { eager: true });
+	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
+	const ImagenesAplicaciones = import.meta.globEager("../../../../assets/images/Fusion/Galeria/aplicaciones/*");
 	const imagesGaleriaAplicaciones = Object.keys(ImagenesAplicaciones).map((key) => ({
 		original: ImagenesAplicaciones[key].default,
 		thumbnail: ImagenesAplicaciones[key].default,
 	}));
 
-	// Actualizado para usar import.meta.glob con eager: true en lugar de glob
-	const ImagenesTerracota = import.meta.glob("../../../../assets/images/Fusion/Galeria/terracota/*", { eager: true });
+	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
+	const ImagenesTerracota = import.meta.globEager("../../../../assets/images/Fusion/Galeria/terracota/*");
 	const imagesGaleriaTerracota = Object.keys(ImagenesTerracota).map((key) => ({
 		original: ImagenesTerracota[key].default,
 		thumbnail: ImagenesTerracota[key].default,
 	}));
 
-	// Actualizado para usar import.meta.glob con eager: true en lugar de glob
-	const ImagenesColor = import.meta.glob("../../../../assets/images/Fusion/Galeria/color/*", { eager: true });
+	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
+	const ImagenesColor = import.meta.globEager("../../../../assets/images/Fusion/Galeria/color/*");
 	const imagesGaleriaColor = Object.keys(ImagenesColor).map((key) => ({
 		original: ImagenesColor[key].default,
 		thumbnail: ImagenesColor[key].default,
 	}));
 
-	// Actualizado para usar import.meta.glob con eager: true en lugar de glob
-	const ImagenesPetra = import.meta.glob("../../../../assets/images/Fusion/Galeria/petra/*", { eager: true });
+	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
+	const ImagenesPetra = import.meta.globEager("../../../../assets/images/Fusion/Galeria/petra/*");
 	const imagesGaleriaPetra = Object.keys(ImagenesPetra).map((key) => ({
 		original: ImagenesPetra[key].default,
 		thumbnail: ImagenesPetra[key].default,
 	}));
 
-	// Actualizado para usar import.meta.glob con eager: true en lugar de glob
-	const ImagenesTextura = import.meta.glob("../../../../assets/images/Fusion/Galeria/textura/*", { eager: true });
+	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
+	const ImagenesTextura = import.meta.globEager("../../../../assets/images/Fusion/Galeria/textura/*");
 	const imagesGaleriaTextura = Object.keys(ImagenesTextura).map((key) => ({
 		original: ImagenesTextura[key].default,
 		thumbnail: ImagenesTextura[key].default,

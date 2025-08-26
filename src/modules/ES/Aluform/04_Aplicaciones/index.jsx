@@ -11,9 +11,9 @@ import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 const Aplicaciones = ({ id }) => {
-	const imagesRehabilitar = import.meta.glob("../../../../assets/images/Aluform/Galeria/Rehabilitacion/*", { eager: true });
-	const imagesObra = import.meta.glob("../../../../assets/images/Aluform/Galeria/Obra/*", { eager: true });
-	const imagesExterior = import.meta.glob("../../../../assets/images/Aluform/Galeria/Exteriores/*", { eager: true });
+	const imagesRehabilitar = import.meta.globEager("../../../../assets/images/Aluform/Galeria/Rehabilitacion/*");
+	const imagesObra = import.meta.globEager("../../../../assets/images/Aluform/Galeria/Obra/*");
+	const imagesExterior = import.meta.globEager("../../../../assets/images/Aluform/Galeria/Exteriores/*");
 
 	const imagesGaleriaRehabilitar = Object.keys(imagesRehabilitar).map((key) => ({
 		original: imagesRehabilitar[key].default,

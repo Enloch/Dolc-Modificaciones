@@ -2,107 +2,103 @@ import getDataFromModules from "../../../helpers/getDataFromModules";
 import imgSeleccionar from "../../../assets/images/DolckerTline/Series/CORE/DOLCKER CORE materiales seleccion.webp";
 import InteractivoImg from "../../../assets/images/DolckerTline/Interactivofachada.jpg";
 import MuestraImg from "../../../assets/images/DolckerTline/ranurado11mm.webp";
-const ambientesImports = import.meta.glob(
-  "../../../assets/images/DolckerTline/Series/CORE/AMBIENTES/**", { eager: true }
-);
+const ambientesImports = import.meta.globEager("../../../assets/images/DolckerTline/Series/CORE/AMBIENTES/**");
 
-const muestrasImports = import.meta.glob(
-  "../../../assets/images/DolckerTline/Series/CORE/DESPIECE/**", { eager: true }
-);
+const muestrasImports = import.meta.globEager("../../../assets/images/DolckerTline/Series/CORE/DESPIECE/**");
 
-const acabadosImports = import.meta.glob("../../../assets/icons/acabados/**", { eager: true });
+const acabadosImports = import.meta.globEager("../../../assets/icons/acabados/**");
 
 const ambientes = getDataFromModules(ambientesImports);
 const muestras = getDataFromModules(muestrasImports);
 const acabados = getDataFromModules(acabadosImports);
 
 const conficCore = {
-  titulo: "Dolcker & LineDolcker & Line  Cor",
-  descripcion:
-    "La collection offre une toile vierge sur laquelle exprimer votre créativité en fusionnant couleurs, textures et formats pour créer des espaces qui reflètent votre personnalité et votre style. La collection allie innovation technologique et tradition artisanale, résultant en un produit unique et de haute qualité. Un produit innovant qui vous permet d'être à l'avant-garde, animé uniquement par la passion du design et la recherche de l'excellence, ce qui se traduit par des environnements uniques et pleins de personnalité.",
-  imgSeleccionar,
-  indicadores: [
-    {
-      top: "8%",
-      left: "20%",
-      ambiente: {
-        imagen: ambientes[0],
-        titulo: "Dolcker & LineDolcker & Line  Cor ambre",
-      },
-    },
-    {
-      top: "22%",
-      left: "20%",
-      ambiente: {
-        imagen: ambientes[1],
-        titulo: "Dolcker & LineDolcker & Line  Cor Tortora",
-      },
-    },
-    {
-      top: "38%",
-      left: "20%",
-      ambiente: {
-        imagen: ambientes[2],
-        titulo: "Dolcker & LineDolcker & Line  Cor Snow",
-      },
-    },
-    {
-      top: "55%",
-      left: "20%",
-      ambiente: {
-        imagen: ambientes[3],
-        titulo: "Dolcker & LineDolcker & Line  Cor Concrete",
-      },
-    },
-    {
-      top: "71%",
-      left: "20%",
-      ambiente: {
-        imagen: ambientes[4],
-        titulo: "Dolcker & LineDolcker & Line  Cor plumb",
-      },
-    },
-    {
-      top: "86%",
-      left: "20%",
-      ambiente: {
-        imagen: ambientes[5],
-        titulo: "Dolcker & LineDolcker & Line  Cor argent",
-      },
-    },
-  ],
-  muestras: [
-    {
-      imagen: muestras[0],
-      titulo: "Dolcker & Line Ambre",
-    },
-    {
-      imagen: muestras[1],
-      titulo: "Dolcker & Line Argent",
-    },
-    {
-      imagen: muestras[2],
-      titulo: "Dolcker & Line Concrete",
-    },
-    {
-      imagen: muestras[3],
-      titulo: "Dolcker & Line Plumb",
-    },
-    {
-      imagen: muestras[4],
-      titulo: "Dolcker & Line Snow",
-    },
-    {
-      imagen: muestras[5],
-      titulo: "Dolcker & Line Tortora",
-    },
-  ],
-  // acabados: [
-  //   {
-  //     imagen: MuestraImg,
-  //     titulo: "Nombre acabado",
-  //   },
-  // ],
+	titulo: "Dolcker & LineDolcker & Line  Cor",
+	descripcion:
+		"La collection offre une toile vierge sur laquelle exprimer votre créativité en fusionnant couleurs, textures et formats pour créer des espaces qui reflètent votre personnalité et votre style. La collection allie innovation technologique et tradition artisanale, résultant en un produit unique et de haute qualité. Un produit innovant qui vous permet d'être à l'avant-garde, animé uniquement par la passion du design et la recherche de l'excellence, ce qui se traduit par des environnements uniques et pleins de personnalité.",
+	imgSeleccionar,
+	indicadores: [
+		{
+			top: "8%",
+			left: "20%",
+			ambiente: {
+				imagen: ambientes[0],
+				titulo: "Dolcker & LineDolcker & Line  Cor ambre",
+			},
+		},
+		{
+			top: "22%",
+			left: "20%",
+			ambiente: {
+				imagen: ambientes[1],
+				titulo: "Dolcker & LineDolcker & Line  Cor Tortora",
+			},
+		},
+		{
+			top: "38%",
+			left: "20%",
+			ambiente: {
+				imagen: ambientes[2],
+				titulo: "Dolcker & LineDolcker & Line  Cor Snow",
+			},
+		},
+		{
+			top: "55%",
+			left: "20%",
+			ambiente: {
+				imagen: ambientes[3],
+				titulo: "Dolcker & LineDolcker & Line  Cor Concrete",
+			},
+		},
+		{
+			top: "71%",
+			left: "20%",
+			ambiente: {
+				imagen: ambientes[4],
+				titulo: "Dolcker & LineDolcker & Line  Cor plumb",
+			},
+		},
+		{
+			top: "86%",
+			left: "20%",
+			ambiente: {
+				imagen: ambientes[5],
+				titulo: "Dolcker & LineDolcker & Line  Cor argent",
+			},
+		},
+	],
+	muestras: [
+		{
+			imagen: muestras[0],
+			titulo: "Dolcker & Line Ambre",
+		},
+		{
+			imagen: muestras[1],
+			titulo: "Dolcker & Line Argent",
+		},
+		{
+			imagen: muestras[2],
+			titulo: "Dolcker & Line Concrete",
+		},
+		{
+			imagen: muestras[3],
+			titulo: "Dolcker & Line Plumb",
+		},
+		{
+			imagen: muestras[4],
+			titulo: "Dolcker & Line Snow",
+		},
+		{
+			imagen: muestras[5],
+			titulo: "Dolcker & Line Tortora",
+		},
+	],
+	// acabados: [
+	//   {
+	//     imagen: MuestraImg,
+	//     titulo: "Nombre acabado",
+	//   },
+	// ],
 };
 
 export default conficCore;

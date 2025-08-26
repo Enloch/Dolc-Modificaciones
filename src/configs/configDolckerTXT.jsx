@@ -1,5 +1,5 @@
 import getDataFromModules from "../helpers/getDataFromModules";
-const piezasImport = import.meta.glob("../assets/icons/Tline/piezas/**");
+const piezasImport = import.meta.globEager("../assets/icons/Tline/piezas/**");
 const piezas = getDataFromModules(piezasImport);
 
 const config = [

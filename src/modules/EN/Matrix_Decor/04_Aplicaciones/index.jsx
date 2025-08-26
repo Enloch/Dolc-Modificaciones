@@ -10,9 +10,9 @@ import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 
-const imagesBaño = import.meta.glob("../../../../assets/images/GaleriaDecor/Bano/*");
-const imagesPortales = import.meta.glob("../../../../assets/images/GaleriaDecor/Portales/*");
-const imagesEspacios = import.meta.glob("../../../../assets/images/GaleriaDecor/Espacios/*");
+const imagesBaño = import.meta.globEager("../../../../assets/images/GaleriaDecor/Bano/*");
+const imagesPortales = import.meta.globEager("../../../../assets/images/GaleriaDecor/Portales/*");
+const imagesEspacios = import.meta.globEager("../../../../assets/images/GaleriaDecor/Espacios/*");
 
 const imagenesGaleriaBaño = Object.keys(imagesBaño).map((key) => ({
 	original: imagesBaño[key].default,

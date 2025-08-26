@@ -1,6 +1,6 @@
 import getDataFromModules from "../helpers/getDataFromModules";
 
-const piezasImport = import.meta.glob("../assets/icons/piezas/**", { eager: true });
+const piezasImport = import.meta.globEager("../assets/icons/piezas/**");
 const piezas = getDataFromModules(piezasImport);
 
 const config = [

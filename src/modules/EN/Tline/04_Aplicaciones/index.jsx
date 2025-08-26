@@ -11,30 +11,17 @@ import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 const AplicacionesTline = ({ id }) => {
-	const imagesAplicaciones = import.meta.glob(
-		"../../../../assets/images/GaleriaTline/aplicaciones/*", { eager: true }
-	);
-	const imagesGaleriaAplicaciones = Object.keys(imagesAplicaciones).map(
-		(key) => ({
-			original: imagesAplicaciones[key].default,
-			thumbnail: imagesAplicaciones[key].default,
-		})
-	);
+	const imagesAplicaciones = import.meta.globEager("../../../../assets/images/GaleriaTline/aplicaciones/*");
+	const imagesGaleriaAplicaciones = Object.keys(imagesAplicaciones).map((key) => ({
+		original: imagesAplicaciones[key].default,
+		thumbnail: imagesAplicaciones[key].default,
+	}));
 
 	return (
 		<>
-			<StyledAplicaciones
-				id={id[0]}
-				backgroundColor={COLORS.gray02}
-				rowGap={DISTANCES.long}
-			>
+			<StyledAplicaciones id={id[0]} backgroundColor={COLORS.gray02} rowGap={DISTANCES.long}>
 				<Titulo color={COLORS.gray08}>Applications</Titulo>
-				<ImageWithCaption
-					src={img1}
-					alt="Imagen de Aplicaciones 1"
-					caption=""
-					columnSpan="6"
-				/>
+				<ImageWithCaption src={img1} alt="Imagen de Aplicaciones 1" caption="" columnSpan="6" />
 				<Cita
 					cita="Architecture is the art of wasting space. "
 					author="Philip Johnson (1906-2005) "
@@ -57,18 +44,9 @@ const AplicacionesTline = ({ id }) => {
 					/>
 				</StyledSlider>
 			</StyledGaleria>
-			<StyledAplicaciones
-				id={id[1]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.medium}
-			>
+			<StyledAplicaciones id={id[1]} backgroundColor={COLORS.gray01} rowGap={DISTANCES.medium}>
 				<Titulo2 color={COLORS.gray08}>Rehabilitation</Titulo2>
-				<ImageWithCaption
-					src={img2}
-					alt="Imagen de Aplicaciones 1"
-					caption=""
-					columnSpan="6"
-				/>
+				<ImageWithCaption src={img2} alt="Imagen de Aplicaciones 1" caption="" columnSpan="6" />
 				<Cita
 					cita="Architecture is a way of translating dreams into the real world."
 					author="Bjarke Ingels"
@@ -76,11 +54,7 @@ const AplicacionesTline = ({ id }) => {
 					colorAutor={COLORS.gray04}
 				/>
 			</StyledAplicaciones>
-			<StyledAplicaciones
-				id={id[2]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.medium}
-			>
+			<StyledAplicaciones id={id[2]} backgroundColor={COLORS.gray01} rowGap={DISTANCES.medium}>
 				<Titulo2 color={COLORS.gray08}>New construction</Titulo2>
 				<ImageWithCaption
 					src={img3}
@@ -95,18 +69,9 @@ const AplicacionesTline = ({ id }) => {
 					colorAutor={COLORS.gray04}
 				/>
 			</StyledAplicaciones>
-			<StyledAplicaciones
-				id={id[3]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.medium}
-			>
+			<StyledAplicaciones id={id[3]} backgroundColor={COLORS.gray01} rowGap={DISTANCES.medium}>
 				<Titulo3 color={COLORS.gray08}>- Facades</Titulo3>
-				<ImageWithCaption
-					src={img4}
-					alt="Imagen de Aplicaciones 4"
-					caption="Dolcker & Line System"
-					columnSpan="6"
-				/>
+				<ImageWithCaption src={img4} alt="Imagen de Aplicaciones 4" caption="Dolcker & Line System" columnSpan="6" />
 			</StyledAplicaciones>
 		</>
 	);

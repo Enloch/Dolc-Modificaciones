@@ -1,4 +1,4 @@
-const downloadImgImport = import.meta.glob("../../assets/images/Descargas/**", { eager: true });
+const downloadImgImport = import.meta.globEager("../../assets/images/Descargas/**");
 
 const downloadImgSrc = {};
 

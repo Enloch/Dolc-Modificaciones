@@ -5,15 +5,15 @@ import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 const AplicacionesTline = ({ id }) => {
-	// Actualizado para usar import.meta.glob con eager: true en lugar de glob
-	const ImagenesAplicaciones = import.meta.glob("../../../../assets/images/Invisifix/Galeria/aplicaciones/*", { eager: true });
+	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
+	const ImagenesAplicaciones = import.meta.globEager("../../../../assets/images/Invisifix/Galeria/aplicaciones/*");
 	const imagesGaleriaAplicaciones = Object.keys(ImagenesAplicaciones).map((key) => ({
 		original: ImagenesAplicaciones[key].default,
 		thumbnail: ImagenesAplicaciones[key].default,
 	}));
 
-	// Actualizado para usar import.meta.glob con eager: true en lugar de glob
-	const ImagenesObraNueva = import.meta.glob("../../../../assets/images/Invisifix/Galeria/Obra/*", { eager: true });
+	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
+	const ImagenesObraNueva = import.meta.globEager("../../../../assets/images/Invisifix/Galeria/Obra/*");
 	const imagesGaleriaObraNueva = Object.keys(ImagenesObraNueva).map((key) => ({
 		original: ImagenesObraNueva[key].default,
 		thumbnail: ImagenesObraNueva[key].default,

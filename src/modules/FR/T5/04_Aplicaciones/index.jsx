@@ -10,15 +10,13 @@ import img5 from "@assets/images/T5/Aplicaciones/catalogo3-1-13.jpg";
 import Cita from "@components/Cita";
 import ImageGallery from "react-image-gallery";
 
-const imagenesAplicaciones = import.meta.glob(
-	"@assets/images/GaleriaT5/*", { eager: true }
-);
+const imagenesAplicaciones = import.meta.globEager("@assets/images/GaleriaT5/*");
 const imagenesApli = Object.keys(imagenesAplicaciones).map((key) => ({
 	original: imagenesAplicaciones[key].default,
 	thumbnail: imagenesAplicaciones[key].default,
 }));
 
-const imagenesDecor = import.meta.glob("@assets/images/GaleriaT5/decor/*", { eager: true });
+const imagenesDecor = import.meta.globEager("@assets/images/GaleriaT5/decor/*");
 const imagenesDeco = Object.keys(imagenesDecor).map((key) => ({
 	original: imagenesDecor[key].default,
 	thumbnail: imagenesDecor[key].default,
@@ -26,11 +24,7 @@ const imagenesDeco = Object.keys(imagenesDecor).map((key) => ({
 const Aplicaciones = ({ id }) => {
 	return (
 		<>
-			<StyledAplicaciones
-				id={id[0]}
-				backgroundColor={COLORS.gray02}
-				rowGap={DISTANCES.long}
-			>
+			<StyledAplicaciones id={id[0]} backgroundColor={COLORS.gray02} rowGap={DISTANCES.long}>
 				<Titulo color={COLORS.gray08}>Applications</Titulo>
 				<ImageWithCaption
 					src={img1}
@@ -76,11 +70,7 @@ const Aplicaciones = ({ id }) => {
 					/>
 				</StyledSlider>
 			</StyledGaleria>
-			<StyledAplicaciones
-				id={id[1]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.medium}
-			>
+			<StyledAplicaciones id={id[1]} backgroundColor={COLORS.gray01} rowGap={DISTANCES.medium}>
 				<Titulo2 color={COLORS.gray08}>Rénovation</Titulo2>
 				<ImageWithCaption
 					src={img2}
@@ -95,11 +85,7 @@ const Aplicaciones = ({ id }) => {
 					colorAutor={COLORS.gray04}
 				/>
 			</StyledAplicaciones>
-			<StyledAplicaciones
-				id={id[2]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.medium}
-			>
+			<StyledAplicaciones id={id[2]} backgroundColor={COLORS.gray01} rowGap={DISTANCES.medium}>
 				<Titulo2 color={COLORS.gray08}>Nouvelle construction</Titulo2>
 				<ImageWithCaption
 					src={img3}
@@ -114,11 +100,7 @@ const Aplicaciones = ({ id }) => {
 					colorAutor={COLORS.gray04}
 				/>
 			</StyledAplicaciones>
-			<StyledAplicaciones
-				id={id[3]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.medium}
-			>
+			<StyledAplicaciones id={id[3]} backgroundColor={COLORS.gray01} rowGap={DISTANCES.medium}>
 				<Titulo3 color={COLORS.gray08}>- Façades</Titulo3>
 				<ImageWithCaption
 					src={img4}
@@ -127,14 +109,8 @@ const Aplicaciones = ({ id }) => {
 					columnSpan="6"
 				/>
 			</StyledAplicaciones>
-			<StyledAplicaciones
-				id={id[4]}
-				backgroundColor={COLORS.gray01}
-				rowGap={DISTANCES.medium}
-			>
-				<Titulo3 color={COLORS.gray08}>
-					— Terrasses, planchers surélevés, plafonds et solutions
-				</Titulo3>
+			<StyledAplicaciones id={id[4]} backgroundColor={COLORS.gray01} rowGap={DISTANCES.medium}>
+				<Titulo3 color={COLORS.gray08}>— Terrasses, planchers surélevés, plafonds et solutions</Titulo3>
 				<ImageWithCaption
 					src={img5}
 					alt="Imagen de Aplicaciones 5"

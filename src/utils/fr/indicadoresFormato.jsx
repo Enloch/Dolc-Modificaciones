@@ -2,8 +2,8 @@ import { Children } from "react";
 import SvgComponent from "../../assets/images/Diseno/Formato/ColorSVG";
 import getDataFromModules from "../../helpers/getDataFromModules";
 
-const backgroundImports = import.meta.glob("../../assets/images/Diseno/Formato/backgrounds/**", { eager: true });
-const selectImports = import.meta.glob("../../assets/icons/SelectoresFormato/**", { eager: true });
+const backgroundImports = import.meta.globEager("../../assets/images/Diseno/Formato/backgrounds/**");
+const selectImports = import.meta.globEager("../../assets/icons/SelectoresFormato/**");
 
 const backgrounds = getDataFromModules(backgroundImports);
 const selects = getDataFromModules(selectImports);

@@ -1,9 +1,9 @@
 import getDataFromModules from "../helpers/getDataFromModules";
 
-const flamed = import.meta.glob("../assets/images/Diseno/Acabados/RENDER FLAMED/**", { eager: true }),
-	lapado = import.meta.glob("../assets/images/Diseno/Acabados/RENDER LAPADO/**", { eager: true }),
-	mate = import.meta.glob("../assets/images/Diseno/Acabados/RENDER MATE/**", { eager: true }),
-	rigato = import.meta.glob("../assets/images/Diseno/Acabados/RENDER RIGATO/**", { eager: true });
+const flamed = import.meta.globEager("../assets/images/Diseno/Acabados/RENDER FLAMED/**"),
+	lapado = import.meta.globEager("../assets/images/Diseno/Acabados/RENDER LAPADO/**"),
+	mate = import.meta.globEager("../assets/images/Diseno/Acabados/RENDER MATE/**"),
+	rigato = import.meta.globEager("../assets/images/Diseno/Acabados/RENDER RIGATO/**");
 
 const flamedImports = getDataFromModules(flamed),
 	lapadoImports = getDataFromModules(lapado),

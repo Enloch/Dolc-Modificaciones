@@ -11,15 +11,15 @@ import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 const AplicacionesTline = ({ id }) => {
-	// Actualizado para usar import.meta.glob con eager: true en lugar de glob
-	const imagesRehabilitar = import.meta.glob("../../../../assets/images/GaleriaVolumen/Aplicaciones/*", { eager: true });
+	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
+	const imagesRehabilitar = import.meta.globEager("../../../../assets/images/GaleriaVolumen/Aplicaciones/*");
 	const imagesGaleriaRehabilitar = Object.keys(imagesRehabilitar).map((key) => ({
 		original: imagesRehabilitar[key].default,
 		thumbnail: imagesRehabilitar[key].default,
 	}));
 
-	// Actualizado para usar import.meta.glob con eager: true en lugar de glob
-	const imagesobra = import.meta.glob("../../../../assets/images/GaleriaVolumen/Obra/*", { eager: true });
+	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
+	const imagesobra = import.meta.globEager("../../../../assets/images/GaleriaVolumen/Obra/*");
 	const imagesGaleriaObra = Object.keys(imagesobra).map((key) => ({
 		original: imagesobra[key].default,
 		thumbnail: imagesobra[key].default,

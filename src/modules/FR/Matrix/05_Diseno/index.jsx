@@ -10,49 +10,47 @@ import IndiceSeries from "./05_1_IndiceSeries";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider } from "./styles";
 const DisenosTline = ({ id }) => {
-  const imagesDiseño = import.meta.glob(
-    "../../../../assets/images/GaleriaMatrix/Diseño/*", { eager: true }
-  );
-  const imagenesGaleria = Object.keys(imagesDiseño).map((key) => ({
-    original: imagesDiseño[key].default,
-    thumbnail: imagesDiseño[key].default,
-  }));
+	const imagesDiseño = import.meta.globEager("../../../../assets/images/GaleriaMatrix/Diseño/*");
+	const imagenesGaleria = Object.keys(imagesDiseño).map((key) => ({
+		original: imagesDiseño[key].default,
+		thumbnail: imagesDiseño[key].default,
+	}));
 
-  return (
-    <>
-      <StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
-        <Titulo>Conception</Titulo>
-        <ImageWithCaption src={img1} alt="Image des Conceptions 1" columnSpan="6" />
-        <Cita
-          cita="Fournir une architecture significative, ce n'est pas parodier l'histoire, mais l'articuler."
-          author="Daniel Libeskind"
-          colorAutor={COLORS.gray04}
-        />
-      </StyledDisenos>
-      <StyledGaleria id="galeria-interiores" backgroundColor={COLORS.gray02}>
-        <StyledSlider className="Slider">
-          <ImageGallery
-            items={imagenesGaleria}
-            showPlayButton={false}
-            showFullscreenButton={true}
-            showThumbnails={false}
-            autoPlay={true}
-            showBullets={true}
-            showNav={false}
-            lazyLoad={true}
-            slideDuration={450}
-          />
-        </StyledSlider>
-      </StyledGaleria>
-      <IndiceSeries id={id[1]} />
-      <StyledDisenos id={id[2]} backgroundColor={COLORS.gray01}>
-        <Titulo2>Configurateur</Titulo2>
-        <div className="rotador">
-          <RotadorMatrix />
-        </div>
-      </StyledDisenos>
-    </>
-  );
+	return (
+		<>
+			<StyledDisenos id={id[0]} backgroundColor={COLORS.gray02}>
+				<Titulo>Conception</Titulo>
+				<ImageWithCaption src={img1} alt="Image des Conceptions 1" columnSpan="6" />
+				<Cita
+					cita="Fournir une architecture significative, ce n'est pas parodier l'histoire, mais l'articuler."
+					author="Daniel Libeskind"
+					colorAutor={COLORS.gray04}
+				/>
+			</StyledDisenos>
+			<StyledGaleria id="galeria-interiores" backgroundColor={COLORS.gray02}>
+				<StyledSlider className="Slider">
+					<ImageGallery
+						items={imagenesGaleria}
+						showPlayButton={false}
+						showFullscreenButton={true}
+						showThumbnails={false}
+						autoPlay={true}
+						showBullets={true}
+						showNav={false}
+						lazyLoad={true}
+						slideDuration={450}
+					/>
+				</StyledSlider>
+			</StyledGaleria>
+			<IndiceSeries id={id[1]} />
+			<StyledDisenos id={id[2]} backgroundColor={COLORS.gray01}>
+				<Titulo2>Configurateur</Titulo2>
+				<div className="rotador">
+					<RotadorMatrix />
+				</div>
+			</StyledDisenos>
+		</>
+	);
 };
 
 export default DisenosTline;

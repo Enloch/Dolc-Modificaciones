@@ -1,7 +1,7 @@
 import getDataFromModules from "../../../helpers/getDataFromModules";
 
-const fondosImport = import.meta.glob("../../../assets/images/VolumenVariacion/Fondos/X/**");
-const selectoresImport = import.meta.glob("../../../assets/images/VolumenVariacion/Iconos/**");
+const fondosImport = import.meta.globEager("../../../assets/images/VolumenVariacion/Fondos/X/**");
+const selectoresImport = import.meta.globEager("../../../assets/images/VolumenVariacion/Iconos/**");
 
 const fondos = getDataFromModules(fondosImport);
 const selectores = getDataFromModules(selectoresImport);

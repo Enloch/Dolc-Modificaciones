@@ -1,5 +1,5 @@
 import getDataFromModules from "../helpers/getDataFromModules";
-const piezasImport = import.meta.glob("../assets/icons/MatrixDecor/piezas/**");
+const piezasImport = import.meta.globEager("../assets/icons/MatrixDecor/piezas/**");
 const piezas = getDataFromModules(piezasImport);
 
 const config = [

@@ -1,8 +1,8 @@
 import getDataFromModules from "../../helpers/getDataFromModules";
 
-const ambientesImports = import.meta.glob("../../assets/images/Series/VOLUMEN/AMBIENTES/**", { eager: true });
+const ambientesImports = import.meta.globEager("../../assets/images/Series/VOLUMEN/AMBIENTES/**");
 
-const muestrasImports = import.meta.glob("../../assets/images/Series/VOLUMEN/DESPIECE/**", { eager: true });
+const muestrasImports = import.meta.globEager("../../assets/images/Series/VOLUMEN/DESPIECE/**");
 
 const ambientes = getDataFromModules(ambientesImports);
 const muestras = getDataFromModules(muestrasImports);
