@@ -1,16 +1,96 @@
 import { Titulo, Titulo3 } from "../../../../components/Titulos";
+import { useRef, useCallback } from "react";
 import { COLORS } from "../../../../global/GlobalStyles";
 import Text from "../../../../components/Text";
 import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
-import { StyledGaleria, StyledSlider } from "./styles";
+import { StyledGaleria, StyledSlider, CardsSlider, CardsViewport, CardsTrack, Card, CardMedia, CardBody, NavButton } from "./styles";
+import Ejemplo1 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Rojo.png";
+import Ejemplo2 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Gris.png";
+import Ejemplo3 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Mixto.png";
+import Ejemplo4 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Beige.png";
 const AplicacionesTline = ({ id }) => {
+	const viewportRef = useRef(null);
+	const onNav = useCallback((dir) => {
+		const vp = viewportRef.current;
+		if (!vp) return;
+		const gap = 16; // debe coincidir con gap en CardsTrack
+		const step = vp.clientWidth + gap; // 1 tarjeta por vista
+		const delta = dir === "next" ? step : -step;
+		vp.scrollBy({ left: delta, behavior: "smooth" });
+	}, []);
 	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
 	const ImagenesAplicaciones = import.meta.globEager("../../../../assets/images/Fusion/Galeria/aplicaciones/*");
-	const imagesGaleriaAplicaciones = Object.keys(ImagenesAplicaciones).map((key) => ({
-		original: ImagenesAplicaciones[key].default,
-		thumbnail: ImagenesAplicaciones[key].default,
-	}));
+	
+	// Lista ordenada de tarjetas (sin depender del nombre de archivo)
+	// Puedes controlar el orden con este array y usar:
+	// - img: import directo (preferido)
+	// - fileName: para resolver una imagen existente en la carpeta aplicaciones/
+	const tarjetasAplicaciones = [
+		{
+			id: "example-1",
+			img: Ejemplo1,
+			proposal: "Example 1",
+			title: "Design of ventilated facade with Dolcker Fusion porcelain stoneware (60x120 cm)",
+			subtitle: "Color proposal",
+			description:
+				"A ventilated facade with Dolcker Fusion Terracota porcelain stoneware in rectangular format 60 x 120 cm is proposed. This solution seeks to combine contemporary aesthetics with functionality, guaranteeing durability and energy efficiency.",
+			bullets: ["33% classic terracotta red", "33% soft terracotta red", "33% matte terracotta red"],
+			description2:
+				"The strategic arrangement of the pieces will avoid repetitive patterns and add depth and tonal richness to the surface.",
+		},
+		{
+			id: "example-2",
+			img: Ejemplo2,
+			proposal: "Example 2",
+			title: "Design of ventilated facade with Dolcker Fusion porcelain stoneware (60x120 cm)",
+			subtitle: "Color proposal",
+			description:
+				"A ventilated facade with Dolcker Fusion Color porcelain stoneware in rectangular format 60 x 120 cm is proposed. Balance of neutrals with subtle variation in gloss for a serene and technical reading.",
+			bullets: ["33% light gray", "33% medium gray", "33% dark gray"],
+			description2:
+				"The strategic arrangement of the pieces will avoid repetitive patterns and add depth and tonal richness to the surface.",
+		},
+		{
+			id: "example-3",
+			img: Ejemplo3,
+			proposal: "Example 3",
+			title: "Design of ventilated facade with Dolcker Fusion porcelain stoneware (60x120 cm)",
+			subtitle: "Color proposal",
+			description: "Controlled palette with green and terracotta accents to enliven the elevation without losing order.",
+			bullets: ["33% matte red", "33% textured gray", "33% glossy green"],
+			description2:
+				"The pieces will be placed strategically to avoid visible repetitions and achieve a fluid integration of colors throughout the building surface.",
+		},
+		{
+			id: "example-4",
+			img: Ejemplo4,
+			proposal: "Example 4",
+			title: "Design of ventilated facade with Dolcker Fusion porcelain stoneware (60x120 cm)",
+			description: "Range of technical beiges with emphasized joints for a sober and precise aesthetic.",
+			bullets: ["33% smooth beige", "33% smooth brown", "33% cream"],
+			description2:
+				"The pieces will be placed strategically to avoid visible repetitions and achieve a fluid integration of colors throughout the building surface.",
+		},
+	];
+
+	// Default text if there is no entry in the map
+	const textoDefaultAplicacion = {
+		title: "Dolcker Fusion ventilated facade design",
+		description:
+			"Color proposal and flexible composition for contemporary projects. Combine colors and textures to create rhythm and depth in the envelope.",
+		bullets: ["33% classic terracotta red", "33% soft terracotta red", "33% cream"],
+	};
+
+	// Build cards respecting array order and resolving image
+	const cardsAplicaciones = tarjetasAplicaciones.map((item) => {
+		let resolved = item.img;
+		if (!resolved && item.fileName) {
+			const matchKey = Object.keys(ImagenesAplicaciones).find((k) => k.endsWith(`/${item.fileName}`));
+			resolved = matchKey ? ImagenesAplicaciones[matchKey].default : undefined;
+		}
+		return { image: resolved, ...textoDefaultAplicacion, ...item };
+	});
 
 	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
 	const ImagenesTerracota = import.meta.globEager("../../../../assets/images/Fusion/Galeria/terracota/*");
@@ -44,19 +124,6 @@ const AplicacionesTline = ({ id }) => {
 		<>
 			<StyledGaleria id={id[0]} backgroundColor={COLORS.gray02}>
 				<Titulo color={COLORS.gray08}>Applications</Titulo>
-				<StyledSlider className="Slider">
-					<ImageGallery
-						items={imagesGaleriaAplicaciones}
-						showPlayButton={false}
-						showFullscreenButton={true}
-						showThumbnails={false}
-						autoPlay={true}
-						showBullets={false}
-						showNav={true}
-						lazyLoad={true}
-						slideDuration={450}
-					/>
-				</StyledSlider>
 				<Text>
 					Fusion is the facade and envelope design tool developed for architects and technicians looking for creative freedom with precise
 					technical solutions.
@@ -83,6 +150,40 @@ const AplicacionesTline = ({ id }) => {
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
 				/>
+				{/* Slider de tarjetas con mezcla de texto + imagen */}
+				<CardsSlider>
+					<CardsViewport ref={viewportRef}>
+						<CardsTrack>
+							{cardsAplicaciones.map((card, index) => (
+								<Card key={index} data-card="true">
+									<CardBody>
+										<h3 style={{ fontWeight: "bold" }}>{card.proposal}</h3>
+										<h3>{card.title}</h3>
+										<h4>{card.subtitle}</h4>
+										<p>{card.description}</p>
+										{card.bullets?.length ? (
+											<ul>
+												{card.bullets.map((b, i) => (
+													<li key={i}>{b}</li>
+												))}
+											</ul>
+										) : null}
+										{card.description2 ? <p>{card.description2}</p> : null}
+									</CardBody>
+									<CardMedia>
+										<img src={card.image} alt={`Fusion Application ${index + 1}`} loading="lazy" />
+									</CardMedia>
+								</Card>
+							))}
+						</CardsTrack>
+					</CardsViewport>
+					<NavButton data-dir="prev" aria-label="Previous" onClick={() => onNav("prev")}>
+						‹
+					</NavButton>
+					<NavButton data-dir="next" aria-label="Next" onClick={() => onNav("next")}>
+						›
+					</NavButton>
+				</CardsSlider>
 			</StyledGaleria>
 			<StyledGaleria id={id[1]} backgroundColor={COLORS.gray01}>
 				<Titulo3 color={COLORS.gray08}>- Fusion Terracota</Titulo3>

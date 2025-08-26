@@ -1,16 +1,96 @@
 import { Titulo, Titulo3 } from "../../../../components/Titulos";
+import { useRef, useCallback } from "react";
 import { COLORS } from "../../../../global/GlobalStyles";
 import Text from "../../../../components/Text";
 import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
-import { StyledGaleria, StyledSlider } from "./styles";
+import { StyledGaleria, StyledSlider, CardsSlider, CardsViewport, CardsTrack, Card, CardMedia, CardBody, NavButton } from "./styles";
+import Ejemplo1 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Rojo.png";
+import Ejemplo2 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Gris.png";
+import Ejemplo3 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Mixto.png";
+import Ejemplo4 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Beige.png";
 const AplicacionesTline = ({ id }) => {
+	const viewportRef = useRef(null);
+	const onNav = useCallback((dir) => {
+		const vp = viewportRef.current;
+		if (!vp) return;
+		const gap = 16; // debe coincidir con gap en CardsTrack
+		const step = vp.clientWidth + gap; // 1 tarjeta por vista
+		const delta = dir === "next" ? step : -step;
+		vp.scrollBy({ left: delta, behavior: "smooth" });
+	}, []);
 	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
 	const ImagenesAplicaciones = import.meta.globEager("../../../../assets/images/Fusion/Galeria/aplicaciones/*");
-	const imagesGaleriaAplicaciones = Object.keys(ImagenesAplicaciones).map((key) => ({
-		original: ImagenesAplicaciones[key].default,
-		thumbnail: ImagenesAplicaciones[key].default,
-	}));
+	
+	// Liste ordonnée de cartes (sans dépendre du nom de fichier)
+	// Vous pouvez contrôler l'ordre avec ce tableau et utiliser :
+	// - img : import direct (préféré)
+	// - fileName : pour résoudre une image existante dans le dossier applications/
+	const tarjetasAplicaciones = [
+		{
+			id: "exemple-1",
+			img: Ejemplo1,
+			proposition: "Exemple 1",
+			titre: "Conception de façade ventilée avec porcelaine Dolcker Fusion (60x120 cm)",
+			sousTitre: "Proposition chromatique",
+			description:
+				"Nous proposons une façade ventilée avec porcelaine Dolcker Fusion Terracota au format rectangulaire 60 x 120 cm. Cette solution cherche à combiner esthétique contemporaine et fonctionnalité, garantissant durabilité et efficacité énergétique.",
+			puces: ["33 % rouge terracota classique", "33 % rouge terracota doux", "33 % rouge terracota mat"],
+			description2:
+				"Le placement stratégique des pièces évitera les motifs répétitifs et apportera profondeur et richesse tonale à la surface.",
+		},
+		{
+			id: "exemple-2",
+			img: Ejemplo2,
+			proposition: "Exemple 2",
+			titre: "Conception de façade ventilée avec porcelaine Dolcker Fusion (60x120 cm)",
+			sousTitre: "Proposition chromatique",
+			description:
+				"Nous proposons une façade ventilée avec porcelaine Dolcker Fusion Color au format rectangulaire 60 x 120 cm. Équilibre de neutres avec une variation subtile de brillant pour une lecture sereine et technique.",
+			puces: ["33 % gris clair", "33 % gris moyen", "33 % gris foncé"],
+			description2:
+				"Le placement stratégique des pièces évitera les motifs répétitifs et apportera profondeur et richesse tonale à la surface.",
+		},
+		{
+			id: "exemple-3",
+			img: Ejemplo3,
+			proposition: "Exemple 3",
+			titre: "Conception de façade ventilée avec porcelaine Dolcker Fusion (60x120 cm)",
+			sousTitre: "Proposition chromatique",
+			description: "Palette contrôlée avec des accents verts et terracota pour dynamiser l'élévation sans perdre d'ordre.",
+			puces: ["33 % rouge mat", "33 % gris texturé", "33 % vert brillant"],
+			description2:
+				"Les pièces seront placées de manière stratégique pour éviter les répétitions visibles et assurer une intégration fluide des couleurs sur toute la surface du bâtiment.",
+		},
+		{
+			id: "exemple-4",
+			img: Ejemplo4,
+			proposition: "Exemple 4",
+			titre: "Conception de façade ventilée avec porcelaine Dolcker Fusion (60x120 cm)",
+			description: "Gamme de beiges techniques avec joints accentués pour une esthétique sobre et précise.",
+			puces: ["33 % beige lisse", "33 % marron lisse", "33 % crème"],
+			description2:
+				"Les pièces seront placées de manière stratégique pour éviter les répétitions visibles et assurer une intégration fluide des couleurs sur toute la surface du bâtiment.",
+		},
+	];
+
+	// Texte par défaut s'il n'y a pas d'entrée dans la carte
+	const textoDefaultAplicacion = {
+		titre: "Conception de façade ventilée Dolcker Fusion",
+		description:
+			"Proposition chromatique et composition flexible pour des projets contemporains. Combinez couleurs et textures pour créer du rythme et de la profondeur dans l'enveloppe.",
+		puces: ["33 % rouge terracota classique", "33 % rouge terracota doux", "33 % crème"],
+	};
+
+	// Construit les cartes en respectant l'ordre du tableau et en résolvant l'image
+	const cardsAplicaciones = tarjetasAplicaciones.map((item) => {
+		let resolved = item.img;
+		if (!resolved && item.fileName) {
+			const matchKey = Object.keys(ImagenesAplicaciones).find((k) => k.endsWith(`/${item.fileName}`));
+			resolved = matchKey ? ImagenesAplicaciones[matchKey].default : undefined;
+		}
+		return { image: resolved, ...textoDefaultAplicacion, ...item };
+	});
 
 	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
 	const ImagenesTerracota = import.meta.globEager("../../../../assets/images/Fusion/Galeria/terracota/*");
@@ -44,19 +124,6 @@ const AplicacionesTline = ({ id }) => {
 		<>
 			<StyledGaleria id={id[0]} backgroundColor={COLORS.gray02}>
 				<Titulo color={COLORS.gray08}>Applications</Titulo>
-				<StyledSlider className="Slider">
-					<ImageGallery
-						items={imagesGaleriaAplicaciones}
-						showPlayButton={false}
-						showFullscreenButton={true}
-						showThumbnails={false}
-						autoPlay={true}
-						showBullets={false}
-						showNav={true}
-						lazyLoad={true}
-						slideDuration={450}
-					/>
-				</StyledSlider>
 				<Text>
 					Fusion est l'outil de conception de façades et d'enveloppes développé pour les architectes et techniciens recherchant une liberté
 					créative avec des solutions techniques précises.
@@ -86,6 +153,40 @@ const AplicacionesTline = ({ id }) => {
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
 				/>
+				{/* Curseur de cartes avec mélange de texte + image */}
+				<CardsSlider>
+					<CardsViewport ref={viewportRef}>
+						<CardsTrack>
+							{cardsAplicaciones.map((card, index) => (
+								<Card key={index} data-card="true">
+									<CardBody>
+										<h3 style={{ fontWeight: "bold" }}>{card.proposition}</h3>
+										<h3>{card.titre}</h3>
+										<h4>{card.sousTitre}</h4>
+										<p>{card.description}</p>
+										{card.puces?.length ? (
+											<ul>
+												{card.puces.map((b, i) => (
+													<li key={i}>{b}</li>
+												))}
+											</ul>
+										) : null}
+										{card.description2 ? <p>{card.description2}</p> : null}
+									</CardBody>
+									<CardMedia>
+										<img src={card.image} alt={`Application Fusion ${index + 1}`} loading="lazy" />
+									</CardMedia>
+								</Card>
+							))}
+						</CardsTrack>
+					</CardsViewport>
+					<NavButton data-dir="prev" aria-label="Précédent" onClick={() => onNav("prev")}>
+						‹
+					</NavButton>
+					<NavButton data-dir="next" aria-label="Suivant" onClick={() => onNav("next")}>
+						›
+					</NavButton>
+				</CardsSlider>
 			</StyledGaleria>
 			<StyledGaleria id={id[1]} backgroundColor={COLORS.gray01}>
 				<Titulo3 color={COLORS.gray08}>- Fusion Terracota</Titulo3>
