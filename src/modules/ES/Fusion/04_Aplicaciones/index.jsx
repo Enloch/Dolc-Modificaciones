@@ -44,19 +44,6 @@ const AplicacionesTline = ({ id }) => {
 		<>
 			<StyledGaleria id={id[0]} backgroundColor={COLORS.gray02}>
 				<Titulo color={COLORS.gray08}>Aplicaciones</Titulo>
-				<StyledSlider className="Slider">
-					<ImageGallery
-						items={imagesGaleriaAplicaciones}
-						showPlayButton={false}
-						showFullscreenButton={true}
-						showThumbnails={false}
-						autoPlay={true}
-						showBullets={false}
-						showNav={true}
-						lazyLoad={true}
-						slideDuration={450}
-					/>
-				</StyledSlider>
 				<Text>
 					Fusión es la herramienta de diseño de fachadas y envolventes desarrollada para arquitectos y técnicos que buscan libertad creativa
 					con soluciones técnicas precisas.
@@ -86,6 +73,19 @@ const AplicacionesTline = ({ id }) => {
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
 				/>
+				<StyledSlider className="Slider">
+					<ImageGallery
+						items={imagesGaleriaAplicaciones}
+						showPlayButton={false}
+						showFullscreenButton={true}
+						showThumbnails={false}
+						autoPlay={true}
+						showBullets={false}
+						showNav={true}
+						lazyLoad={true}
+						slideDuration={450}
+					/>
+				</StyledSlider>
 			</StyledGaleria>
 			<StyledGaleria id={id[1]} backgroundColor={COLORS.gray01}>
 				<Titulo3 color={COLORS.gray08}>- Fusión Terracota</Titulo3>
