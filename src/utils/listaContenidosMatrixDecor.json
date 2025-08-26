@@ -22,7 +22,6 @@
 				"title": "Portales",
 				"link": "#portales"
 			},
-
 			{
 				"title": "Baño",
 				"link": "#bano"
@@ -58,5 +57,9 @@
 				"link": "#caracteristicas-especiales"
 			}
 		]
+	},
+	{
+		"title": "Descargas",
+		"link": "#descargas"
 	}
 ]

@@ -1,5 +1,5 @@
 import { Titulo } from "../../../../components/Titulos";
-import configDescargas from "../../../../configs/configDescargasMatrix";
+import configDescargas from "../../../../configs/configDescargasMatrixDecor";
 import { COLORS } from "../../../../global/GlobalStyles";
 import useDescargas from "../../../../hooks/useDescargas";
 import StyledDescargas from "./styles";

@@ -4,7 +4,7 @@ import { COLORS } from "../../../../global/GlobalStyles";
 import useDescargas from "../../../../hooks/useDescargas";
 import StyledDescargas from "./styles";
 
-const DescargasTline = ({ id }) => {
+const DescargasDecor = ({ id }) => {
 	const descargas = useDescargas(configDescargas);
 
 	return (
@@ -16,4 +16,4 @@ const DescargasTline = ({ id }) => {
 	);
 };
 
-export default DescargasTline;
+export default DescargasDecor;

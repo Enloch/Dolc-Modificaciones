@@ -4,7 +4,7 @@ import styled from "styled-components";
 import {
 	AplicacionesDecor as Aplicaciones,
 	CaracteristicasDecor as Caracteristicas,
-	// DescargasDecor as Descargas,
+	DescargasDecor as Descargas,
 	DisenosDecor as Disenos,
 	DolckerDecor as Dolcker,
 	Final,
@@ -51,7 +51,7 @@ const DolckerMatrixDecor = () => {
           "dol-hc20",
         ]}
       /> */}
-			{/* <Descargas id='descargas' /> */}
+			<Descargas id="descargas" />
 			<Final />
 			{showButton && (
 				<StyledButton onClick={handleGoToIndice}>
