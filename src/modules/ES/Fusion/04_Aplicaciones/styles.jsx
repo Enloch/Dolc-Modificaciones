@@ -2,7 +2,7 @@ import styled from "styled-components";
 import StyledCita from "../../../../components/Cita/styles";
 import StyledImageWithCaption from "../../../../components/ImageWithCaption/styles";
 import Seccion from "../../../../components/Seccion";
-import { Column6, MOBILE_SIZE, TABLET_SIZE, COLORS } from "../../../../global/GlobalStyles";
+import { Column6, MOBILE_SIZE, TABLET_SIZE, COLORS, Column8 } from "../../../../global/GlobalStyles";
 
 export const StyledGaleria = styled(Seccion)`
 	.Slider {
@@ -17,6 +17,42 @@ export const StyledGaleria = styled(Seccion)`
 		.Slider {
 			${Column6}
 		}
+	}
+	/* Swiper layout + arrows inside StyledGaleria */
+	.Swiper {
+		${Column8}
+		max-width: 100%;
+		overflow: hidden;
+		padding: 0 0 0 0;
+	}
+
+	/* Make slides auto-height to fit the Card grid */
+	.Swiper .swiper-wrapper {
+		align-items: stretch;
+	}
+	.Swiper .swiper-slide {
+		height: auto;
+		width: auto;
+	}
+
+	/* Arrow styles similar to your NavButton */
+	.Swiper .swiper-button-prev,
+	.Swiper .swiper-button-next {
+		color: ${COLORS.gray07};
+		width: 40px;
+		height: 40px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.Swiper .swiper-button-prev {
+		left: -8px;
+	}
+	.Swiper .swiper-button-next {
+		right: -8px;
+	}
+	.Swiper .swiper-button-prev:hover,
+	.Swiper .swiper-button-next:hover {
+		color: ${COLORS.gray01};
 	}
 `;
 export const StyledSlider = styled.div`
@@ -68,11 +104,12 @@ export const CardsTrack = styled.div`
 
 export const Card = styled.article`
 	scroll-snap-align: start;
-	background: ${COLORS.gray00};
-	border: 1px solid ${COLORS.gray02};
+	background: ${COLORS.gray01};
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	min-height: 360px;
+	width: 100%;
+	max-width: 100%;
 	@media (max-width: ${TABLET_SIZE}) {
 		grid-template-columns: 1fr;
 	}
@@ -80,39 +117,48 @@ export const Card = styled.article`
 
 export const CardBody = styled.div`
 	padding: 24px;
-	background: ${COLORS.gray00};
 	color: ${COLORS.gray08};
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 
 	h3 {
-		margin: 0 0 12px 0;
-		font-size: 1.4rem;
+		margin: 0 0 25px 0;
+		font-size: 1.35rem;
 		line-height: 1.2;
 	}
 	h4 {
 		margin: 0 0 12px 0;
 		font-size: 1.2rem;
-		line-height: 1;
+		line-height: 1.1;
 	}
 	p {
 		margin: 0 0 12px 0;
+		line-height: 1.1;
 		color: ${COLORS.gray06};
 	}
 	ul {
 		margin: 0 0 12px 0;
 		padding-left: 18px;
+		line-height: 1.1;
 		color: ${COLORS.gray06};
 	}
 `;
 
 export const CardMedia = styled.div`
 	position: relative;
-	background: ${COLORS.gray02};
+	background: ${COLORS.gray01};
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
 	img {
-		width: 100%;
+		width: auto;
 		height: 100%;
-		object-fit: cover;
+		object-fit: contain;
 		display: block;
-		max-height: 75vh;
+		max-height: 50vh;
+		max-width: 100%;
 	}
 	@media (max-width: ${TABLET_SIZE}) {
 		img {
@@ -142,10 +188,10 @@ export const NavButton = styled.button`
 	z-index: 1;
 
 	&[data-dir="prev"] {
-		left: -8px;
+		left: -16px;
 	}
 	&[data-dir="next"] {
-		right: -8px;
+		right: -16px;
 	}
 
 	&:hover {

@@ -1,11 +1,17 @@
-import { Titulo, Titulo3 } from "../../../../components/Titulos";
 import { useRef, useCallback } from "react";
+import { Titulo, Titulo3 } from "../../../../components/Titulos";
 import { COLORS } from "../../../../global/GlobalStyles";
 import Text from "../../../../components/Text";
 import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider, CardsSlider, CardsViewport, CardsTrack, Card, CardMedia, CardBody, NavButton } from "./styles";
-import Ejemplo1 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Rojo.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import Ejemplo1 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Rojo-t.png";
 import Ejemplo2 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Gris.png";
 import Ejemplo3 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Mixto.png";
 import Ejemplo4 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Beige.png";
@@ -30,8 +36,8 @@ const AplicacionesTline = ({ id }) => {
 		{
 			id: "ejemplo-1",
 			img: Ejemplo1,
-			propuesta: "Ejemplo 1",
-			title: "Diseño de fachada ventilada con porcelánico Dolcker Fusión (60x120 cm)",
+			propuesta: "Ejemplo 1.",
+			title: "Diseño con Dolcker Fusión Terracota (60x120 cm)",
 			subtitle: "Propuesta cromática",
 			description:
 				"Se propone una fachada ventilada con porcelánico Dolcker Fusión Terracota en formato rectangular de 60 x 120 cm. Esta solución busca combinar estética contemporánea con funcionalidad, garantizando durabilidad y eficiencia energética.",
@@ -43,7 +49,7 @@ const AplicacionesTline = ({ id }) => {
 			id: "ejemplo-2",
 			img: Ejemplo2,
 			propuesta: "Ejemplo 2",
-			title: "Diseño de fachada ventilada con porcelánico Dolcker Fusión (60x120 cm)",
+			title: "Diseño con Dolcker Fusión Color (60x120 cm)",
 			subtitle: "Propuesta cromática",
 			description:
 				"Se propone una fachada ventilada con porcelánico Dolcker Fusión Color en formato rectangular de 60 x 120 cm. Equilibrio de neutros con variación sutil de brillo para una lectura serena y técnica.",
@@ -55,7 +61,7 @@ const AplicacionesTline = ({ id }) => {
 			id: "ejemplo-3",
 			img: Ejemplo3,
 			propuesta: "Ejemplo 3",
-			title: "Diseño de fachada ventilada con porcelánico Dolcker Fusión (60x120 cm)",
+			title: "Diseño con Dolcker Fusión Texture (60x120 cm)",
 			subtitle: "Propuesta cromática",
 			description: "Paleta controlada con acentos verdes y terracotas para dinamizar el alzado sin perder orden.",
 			bullets: ["33% rojo mate", "33% gris texturado", "33% verde brillo"],
@@ -66,7 +72,7 @@ const AplicacionesTline = ({ id }) => {
 			id: "ejemplo-4",
 			img: Ejemplo4,
 			propuesta: "Ejemplo 4",
-			title: "Diseño de fachada ventilada con porcelánico Dolcker Fusión (60x120 cm)",
+			title: "Diseño con Dolcker Fusión Color (60x120 cm)",
 			description: "Gama de beiges técnicos con juntas enfatizadas para una estética sobria y precisa.",
 			bullets: ["33% beige liso", "33% marrón liso", "33% crema"],
 			description2:
@@ -153,40 +159,43 @@ const AplicacionesTline = ({ id }) => {
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
 				/>
-				{/* Slider de tarjetas con mezcla de texto + imagen */}
-				<CardsSlider>
-					<CardsViewport ref={viewportRef}>
-						<CardsTrack>
-							{cardsAplicaciones.map((card, index) => (
-								<Card key={index} data-card="true">
-									<CardBody>
-										<h3 style={{ fontWeight: "bold" }}>{card.propuesta}</h3>
-										<h3>{card.title}</h3>
-										<h4>{card.subtitle}</h4>
-										<p>{card.description}</p>
-										{card.bullets?.length ? (
-											<ul>
-												{card.bullets.map((b, i) => (
-													<li key={i}>{b}</li>
-												))}
-											</ul>
-										) : null}
-										{card.description2 ? <p>{card.description2}</p> : null}
-									</CardBody>
-									<CardMedia>
-										<img src={card.image} alt={`Aplicación Fusión ${index + 1}`} loading="lazy" />
-									</CardMedia>
-								</Card>
-							))}
-						</CardsTrack>
-					</CardsViewport>
-					<NavButton data-dir="prev" aria-label="Anterior" onClick={() => onNav("prev")}>
-						‹
-					</NavButton>
-					<NavButton data-dir="next" aria-label="Siguiente" onClick={() => onNav("next")}>
-						›
-					</NavButton>
-				</CardsSlider>
+				<Swiper
+					modules={[Navigation]}
+					className="Swiper swiper--aplicaciones"
+					navigation={false}
+					grabCursor
+					spaceBetween={16}
+					slidesPerView={1.5}
+					breakpoints={{
+						0: { slidesPerView: 1.1, spaceBetween: 12 },
+						600: { slidesPerView: 1.25, spaceBetween: 14 },
+						1080: { slidesPerView: 1.5, spaceBetween: 40 },
+					}}
+				>
+					{cardsAplicaciones.map((card, index) => (
+						<SwiperSlide key={index}>
+							<Card>
+								<CardBody>
+									<h3 style={{ fontWeight: "bold" }}>
+										{card.propuesta} {card.title}
+									</h3>
+									<p>{card.description}</p>
+									{card.bullets?.length ? (
+										<ul>
+											{card.bullets.map((b, i) => (
+												<li key={i}>{b}</li>
+											))}
+										</ul>
+									) : null}
+									{card.description2 ? <p>{card.description2}</p> : null}
+								</CardBody>
+								<CardMedia>
+									<img src={card.image} alt={`Aplicación Fusión ${index + 1}`} loading="lazy" />
+								</CardMedia>
+							</Card>
+						</SwiperSlide>
+					))}
+				</Swiper>
 			</StyledGaleria>
 			<StyledGaleria id={id[1]} backgroundColor={COLORS.gray01}>
 				<Titulo3 color={COLORS.gray08}>- Fusión Terracota</Titulo3>

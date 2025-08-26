@@ -10,7 +10,7 @@ export const column_start_end = (start = "auto", end = "auto") => css`
 export const column_total = column_start_end(1, -1);
 
 export const column_1_span2 = column_start_end(1, "span 2");
-
+export const column_2_span2 = column_start_end(2, "span 2");
 export const column_3_span2 = column_start_end(3, "span 2");
 
 export const column_5_span8 = column_start_end(5, "span 8");
