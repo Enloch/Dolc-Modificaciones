@@ -73,7 +73,6 @@ export const Card = styled.article`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	min-height: 360px;
-
 	@media (max-width: ${TABLET_SIZE}) {
 		grid-template-columns: 1fr;
 	}
@@ -86,15 +85,20 @@ export const CardBody = styled.div`
 
 	h3 {
 		margin: 0 0 12px 0;
-		font-size: 1.25rem;
+		font-size: 1.4rem;
 		line-height: 1.2;
+	}
+	h4 {
+		margin: 0 0 12px 0;
+		font-size: 1.2rem;
+		line-height: 1;
 	}
 	p {
 		margin: 0 0 12px 0;
 		color: ${COLORS.gray06};
 	}
 	ul {
-		margin: 0;
+		margin: 0 0 12px 0;
 		padding-left: 18px;
 		color: ${COLORS.gray06};
 	}
@@ -108,6 +112,7 @@ export const CardMedia = styled.div`
 		height: 100%;
 		object-fit: cover;
 		display: block;
+		max-height: 50vh;
 	}
 `;
 
@@ -118,24 +123,25 @@ export const NavButton = styled.button`
 	width: 40px;
 	height: 40px;
 	border-radius: 999px;
-	border: 1px solid ${COLORS.gray03};
-	background: rgba(255, 255, 255, 0.85);
+	border: transparent;
+	background: transparent;
 	color: ${COLORS.gray07};
 	display: grid;
 	place-items: center;
 	cursor: pointer;
 	user-select: none;
+	font-size: 40px;
 	z-index: 1;
 
 	&[data-dir="prev"] {
-		left: 8px;
+		left: -8px;
 	}
 	&[data-dir="next"] {
-		right: 8px;
+		right: -8px;
 	}
 
 	&:hover {
-		background: rgba(255, 255, 255, 1);
+		color: ${COLORS.gray01};
 	}
 `;
 const StyledAplicaciones = styled(Seccion)`

@@ -5,6 +5,10 @@ import Text from "../../../../components/Text";
 import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
 import { StyledGaleria, StyledSlider, CardsSlider, CardsViewport, CardsTrack, Card, CardMedia, CardBody, NavButton } from "./styles";
+import Ejemplo1 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Rojo.png";
+import Ejemplo2 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Gris.png";
+import Ejemplo3 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Mixto.png";
+import Ejemplo4 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Beige.png";
 const AplicacionesTline = ({ id }) => {
 	const viewportRef = useRef(null);
 	const onNav = useCallback((dir) => {
@@ -18,45 +22,57 @@ const AplicacionesTline = ({ id }) => {
 	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
 	const ImagenesAplicaciones = import.meta.globEager("../../../../assets/images/Fusion/Galeria/aplicaciones/*");
 
-	// Mapa opcional de textos por archivo (personalízalo según tus nombres de imagen)
-	// Clave: nombre de archivo (con extensión). Valores: título, descripción y bullets.
-	const textosAplicacionesPorArchivo = {
-		"IMG_7253.jpg": {
-			title: "Fachada Fusión 60×120 — Terracota cálida",
-			description: "Composición contemporánea en tonos cálidos para reforzar ritmo y profundidad en fachada ventilada.",
-			bullets: ["33% rojo terracota clásico", "33% rojo terracota suave", "33% crema"],
+	// Lista ordenada de tarjetas (sin depender del nombre de archivo)
+	// Puedes controlar el orden con este array y usar:
+	// - img: import directo (preferido)
+	// - fileName: para resolver una imagen existente en la carpeta aplicaciones/
+	const tarjetasAplicaciones = [
+		{
+			id: "ejemplo-1",
+			img: Ejemplo1,
+			propuesta: "Ejemplo 1",
+			title: "Diseño de fachada ventilada con porcelánico Dolcker Fusión (60x120 cm)",
+			subtitle: "Propuesta cromática",
+			description:
+				"Se propone una fachada ventilada con porcelánico Dolcker Fusión Terracota en formato rectangular de 60 x 120 cm. Esta solución busca combinar estética contemporánea con funcionalidad, garantizando durabilidad y eficiencia energética.",
+			bullets: ["33% rojo terracota clásico", "33% rojo terracota suave", "33% rojo terracota mate"],
+			description2:
+				"La disposición estratégica de las piezas evitará patrones repetitivos y aportará profundidad y riqueza tonal a la superficie.",
 		},
-		"IMG_7271.jpg": {
-			title: "Fachada Fusión 60×120 — Neutros satinados",
-			description: "Equilibrio de neutros con variación sutil de brillo para una lectura serena y técnica.",
+		{
+			id: "ejemplo-2",
+			img: Ejemplo2,
+			propuesta: "Ejemplo 2",
+			title: "Diseño de fachada ventilada con porcelánico Dolcker Fusión (60x120 cm)",
+			subtitle: "Propuesta cromática",
+			description:
+				"Se propone una fachada ventilada con porcelánico Dolcker Fusión Color en formato rectangular de 60 x 120 cm. Equilibrio de neutros con variación sutil de brillo para una lectura serena y técnica.",
 			bullets: ["33% gris claro", "33% gris medio", "33% gris oscuro"],
+			description2:
+				"La disposición estratégica de las piezas evitará patrones repetitivos y aportará profundidad y riqueza tonal a la superficie.",
 		},
-		"IMG_7289.jpg": {
-			title: "Fachada Fusión 60×120 — Combinación cromática",
+		{
+			id: "ejemplo-3",
+			img: Ejemplo3,
+			propuesta: "Ejemplo 3",
+			title: "Diseño de fachada ventilada con porcelánico Dolcker Fusión (60x120 cm)",
+			subtitle: "Propuesta cromática",
 			description: "Paleta controlada con acentos verdes y terracotas para dinamizar el alzado sin perder orden.",
 			bullets: ["33% rojo mate", "33% gris texturado", "33% verde brillo"],
+			description2:
+				"Las piezas se colocarán de forma estratégica para evitar repeticiones visibles y lograr una integración fluida de colores en toda la superficie del edificio.",
 		},
-		"IMG_7339.jpg": {
-			title: "Fachada Fusión 60×120 — Gris técnico",
-			description: "Gama de grises técnicos con juntas enfatizadas para una estética sobria y precisa.",
-			bullets: ["33% gris claro", "33% gris medio", "33% gris oscuro"],
-		},
-		"IMG_7455.jpg": {
-			title: "Fachada Fusión 60×120 — Piedra neutra",
-			description: "Lectura pétrea en neutros con variación tonal suave que aporta naturalidad y equilibrio.",
+		{
+			id: "ejemplo-4",
+			img: Ejemplo4,
+			propuesta: "Ejemplo 4",
+			title: "Diseño de fachada ventilada con porcelánico Dolcker Fusión (60x120 cm)",
+			description: "Gama de beiges técnicos con juntas enfatizadas para una estética sobria y precisa.",
 			bullets: ["33% beige liso", "33% marrón liso", "33% crema"],
+			description2:
+				"Las piezas se colocarán de forma estratégica para evitar repeticiones visibles y lograr una integración fluida de colores en toda la superficie del edificio.",
 		},
-		"terracota01.jpg": {
-			title: "Propuesta cromática — Terracota 01",
-			description: "Secuencia cálida con modulación 60×120 para reforzar verticalidad y orden constructivo.",
-			bullets: ["Terracota clásico", "Terracota suave", "Crema"],
-		},
-		"terracota03.jpg": {
-			title: "Propuesta cromática — Terracota 03",
-			description: "Variación de terracotas con neutros para una fachada equilibrada y de alto rendimiento.",
-			bullets: ["33% Rojo mate", "Gris texturado", "Crema"],
-		},
-	};
+	];
 
 	// Texto por defecto si no hay entrada en el mapa
 	const textoDefaultAplicacion = {
@@ -66,15 +82,15 @@ const AplicacionesTline = ({ id }) => {
 		bullets: ["33% rojo terracota clásico", "33% rojo terracota suave", "33% rojo crema"],
 	};
 
-	// Construye las tarjetas combinando imagen + textos
-	const cardsAplicaciones = Object.keys(ImagenesAplicaciones)
-		.sort()
-		.map((key) => {
-			const src = ImagenesAplicaciones[key].default;
-			const fileName = key.split("/").pop();
-			const meta = textosAplicacionesPorArchivo[fileName] || textoDefaultAplicacion;
-			return { image: src, ...meta };
-		});
+	// Construye las tarjetas respetando el orden del array y resolviendo la imagen
+	const cardsAplicaciones = tarjetasAplicaciones.map((item) => {
+		let resolved = item.img;
+		if (!resolved && item.fileName) {
+			const matchKey = Object.keys(ImagenesAplicaciones).find((k) => k.endsWith(`/${item.fileName}`));
+			resolved = matchKey ? ImagenesAplicaciones[matchKey].default : undefined;
+		}
+		return { image: resolved, ...textoDefaultAplicacion, ...item };
+	});
 
 	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
 	const ImagenesTerracota = import.meta.globEager("../../../../assets/images/Fusion/Galeria/terracota/*");
@@ -144,7 +160,9 @@ const AplicacionesTline = ({ id }) => {
 							{cardsAplicaciones.map((card, index) => (
 								<Card key={index} data-card="true">
 									<CardBody>
+										<h3 style={{ fontWeight: "bold" }}>{card.propuesta}</h3>
 										<h3>{card.title}</h3>
+										<h4>{card.subtitle}</h4>
 										<p>{card.description}</p>
 										{card.bullets?.length ? (
 											<ul>
@@ -153,6 +171,7 @@ const AplicacionesTline = ({ id }) => {
 												))}
 											</ul>
 										) : null}
+										{card.description2 ? <p>{card.description2}</p> : null}
 									</CardBody>
 									<CardMedia>
 										<img src={card.image} alt={`Aplicación Fusión ${index + 1}`} loading="lazy" />
