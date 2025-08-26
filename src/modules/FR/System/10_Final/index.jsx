@@ -14,6 +14,7 @@ function Final() {
 		"&:hover": {
 			backgroundColor: "rgba(0, 0, 0, 0.08)",
 		},
+		fontFamily: "inherit",
 	};
 
 	return (
@@ -47,12 +48,15 @@ function Final() {
 								color="inherit"
 								underline="none"
 								sx={{
+									fontFamily: "inherit",
+									fontSize: "30px",
 									textAlign: "left",
 									border: "none",
 									background: "none",
 									cursor: "pointer",
 									transition: "opacity 0.2s ease-in-out",
 									width: "100%",
+									textTransform: "uppercase",
 								}}
 							>
 								À propos de nous
@@ -64,12 +68,15 @@ function Final() {
 								color="inherit"
 								underline="none"
 								sx={{
+									fontFamily: "inherit",
+									fontSize: "30px",
 									textAlign: "left",
 									border: "none",
 									background: "none",
 									cursor: "pointer",
 									transition: "opacity 0.2s ease-in-out",
 									width: "100%",
+									textTransform: "uppercase",
 								}}
 							>
 								Contactez-nous
@@ -77,10 +84,10 @@ function Final() {
 						</Stack>
 					</Grid>
 					<Grid size={{ xs: 12, sm: 12, md: 4 }} sx={{ textAlign: { xs: "left", md: "right" } }}>
-						<Typography variant="body1" component="p" sx={{ fontWeight: "bold" }}>
+						<Typography variant="body1" component="p" sx={{ fontWeight: "bold", fontFamily: "inherit" }}>
 							Contactez-nous
 						</Typography>
-						<Typography variant="body2" component="address" sx={{ fontStyle: "normal", mt: 1 }}>
+						<Typography variant="body2" component="address" sx={{ fontStyle: "normal", mt: 1, fontFamily: "inherit" }}>
 							DOLCKER SISTEMAS, S.L.
 							<br />
 							Calle Talamanca del Jarama, 19
@@ -89,13 +96,18 @@ function Final() {
 							<br />
 							(+34) 902 363 725
 						</Typography>
-						<Link href="tel:+34902363725" color="inherit" underline="hover" sx={{ display: "block", mt: 2 }}>
+						<Link href="tel:+34902363725" color="inherit" underline="hover" sx={{ display: "block", mt: 2, fontFamily: "inherit" }}>
 							(+34) 902 363 725
 						</Link>
-						<Link href="mailto:administracion@dolcker.es" color="inherit" underline="hover" sx={{ display: "block" }}>
+						<Link
+							href="mailto:administracion@dolcker.es"
+							color="inherit"
+							underline="hover"
+							sx={{ display: "block", fontFamily: "inherit" }}
+						>
 							administracion@dolcker.es
 						</Link>
-						<Link href="mailto:dolcker@dolcker.es" color="inherit" underline="hover" sx={{ display: "block" }}>
+						<Link href="mailto:dolcker@dolcker.es" color="inherit" underline="hover" sx={{ display: "block", fontFamily: "inherit" }}>
 							dolcker@dolcker.es
 						</Link>
 					</Grid>
@@ -107,24 +119,19 @@ function Final() {
 						mt: { xs: 6, md: 10 },
 						pt: 4,
 						display: "flex",
-						justifyContent: "space-between",
+						justifyContent: "flex-end",
 						alignItems: "center",
 						flexWrap: "wrap",
 						gap: 2,
 					}}
 				>
-					<Typography variant="body2" sx={{ color: "grey.600" }}>
-						El contenido de este catálogo está protegido por la ley de Propiedad Intelectual, Real Decreto Legistlativo 1/1996. Cualquier
-						reproducción del mismo, en parte o en su totalidad, sin autorización expresa de DOLCKER puede ser sancionada conforme el código
-						penal.
-					</Typography>
 					<Stack direction="row" spacing={2}>
 						<Button
 							component={RouterLink}
 							to="/fr/aviso-legal"
 							variant="text"
 							size="small"
-							sx={{ color: "grey.600", textTransform: "none", fontWeight: "normal" }}
+							sx={{ color: "grey.600", textTransform: "none", fontWeight: "normal", fontFamily: "inherit" }}
 						>
 							Avis Legal
 						</Button>
@@ -133,7 +140,7 @@ function Final() {
 							to="fr/politica-privacidad"
 							variant="text"
 							size="small"
-							sx={{ color: "grey.600", textTransform: "none", fontWeight: "normal" }}
+							sx={{ color: "grey.600", textTransform: "none", fontWeight: "normal", fontFamily: "inherit" }}
 						>
 							Politique de confidentialite
 						</Button>
