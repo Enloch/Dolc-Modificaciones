@@ -4,24 +4,21 @@ import { COLORS } from "../../../../global/GlobalStyles";
 import Text from "../../../../components/Text";
 import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
-import { StyledGaleria, StyledSlider, CardsSlider, CardsViewport, CardsTrack, Card, CardMedia, CardBody, NavButton } from "./styles";
-import Ejemplo1 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Rojo.png";
-import Ejemplo2 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Gris.png";
-import Ejemplo3 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Mixto.png";
-import Ejemplo4 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Beige.png";
+import { StyledGaleria, StyledSlider, Card, CardMedia, CardBody } from "./styles";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import Ejemplo1 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Rojo-t.png";
+import Ejemplo2 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Gris-t.png";
+import Ejemplo3 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Mixto-t.png";
+import Ejemplo4 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Beige-t.png";
 const AplicacionesTline = ({ id }) => {
-	const viewportRef = useRef(null);
-	const onNav = useCallback((dir) => {
-		const vp = viewportRef.current;
-		if (!vp) return;
-		const gap = 16; // debe coincidir con gap en CardsTrack
-		const step = vp.clientWidth + gap; // 1 tarjeta por vista
-		const delta = dir === "next" ? step : -step;
-		vp.scrollBy({ left: delta, behavior: "smooth" });
-	}, []);
 	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
 	const ImagenesAplicaciones = import.meta.globEager("../../../../assets/images/Fusion/Galeria/aplicaciones/*");
-	
+
 	// Liste ordonnée de cartes (sans dépendre du nom de fichier)
 	// Vous pouvez contrôler l'ordre avec ce tableau et utiliser :
 	// - img : import direct (préféré)
@@ -77,6 +74,7 @@ const AplicacionesTline = ({ id }) => {
 	// Texte par défaut s'il n'y a pas d'entrée dans la carte
 	const textoDefaultAplicacion = {
 		titre: "Conception de façade ventilée Dolcker Fusion",
+		subtitle: "Proposition chromatique",
 		description:
 			"Proposition chromatique et composition flexible pour des projets contemporains. Combinez couleurs et textures pour créer du rythme et de la profondeur dans l'enveloppe.",
 		puces: ["33 % rouge terracota classique", "33 % rouge terracota doux", "33 % crème"],
@@ -89,7 +87,14 @@ const AplicacionesTline = ({ id }) => {
 			const matchKey = Object.keys(ImagenesAplicaciones).find((k) => k.endsWith(`/${item.fileName}`));
 			resolved = matchKey ? ImagenesAplicaciones[matchKey].default : undefined;
 		}
-		return { image: resolved, ...textoDefaultAplicacion, ...item };
+		// Map French field names to English equivalents for consistency
+		const mappedItem = {
+			...item,
+			title: item.titre,
+			subtitle: item.sousTitre,
+			bullets: item.puces,
+		};
+		return { image: resolved, ...textoDefaultAplicacion, ...mappedItem };
 	});
 
 	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
@@ -153,40 +158,44 @@ const AplicacionesTline = ({ id }) => {
 					colorCita={COLORS.gray08}
 					colorAutor={COLORS.gray04}
 				/>
-				{/* Curseur de cartes avec mélange de texte + image */}
-				<CardsSlider>
-					<CardsViewport ref={viewportRef}>
-						<CardsTrack>
-							{cardsAplicaciones.map((card, index) => (
-								<Card key={index} data-card="true">
-									<CardBody>
-										<h3 style={{ fontWeight: "bold" }}>{card.proposition}</h3>
-										<h3>{card.titre}</h3>
-										<h4>{card.sousTitre}</h4>
-										<p>{card.description}</p>
-										{card.puces?.length ? (
-											<ul>
-												{card.puces.map((b, i) => (
-													<li key={i}>{b}</li>
-												))}
-											</ul>
-										) : null}
-										{card.description2 ? <p>{card.description2}</p> : null}
-									</CardBody>
-									<CardMedia>
-										<img src={card.image} alt={`Application Fusion ${index + 1}`} loading="lazy" />
-									</CardMedia>
-								</Card>
-							))}
-						</CardsTrack>
-					</CardsViewport>
-					<NavButton data-dir="prev" aria-label="Précédent" onClick={() => onNav("prev")}>
-						‹
-					</NavButton>
-					<NavButton data-dir="next" aria-label="Suivant" onClick={() => onNav("next")}>
-						›
-					</NavButton>
-				</CardsSlider>
+				<Swiper
+					modules={[Navigation]}
+					className="Swiper swiper--aplicaciones"
+					navigation={false}
+					grabCursor
+					spaceBetween={16}
+					slidesPerView={1.5}
+					breakpoints={{
+						0: { slidesPerView: 1.1, spaceBetween: 12 },
+						600: { slidesPerView: 1.25, spaceBetween: 14 },
+						1080: { slidesPerView: 1.5, spaceBetween: 40 },
+					}}
+				>
+					{cardsAplicaciones.map((card, index) => (
+						<SwiperSlide key={index}>
+							<Card>
+								<CardBody>
+									<h3 style={{ fontWeight: "bold" }}>
+										{card.propuesta} {card.title}
+									</h3>
+									{card.subtitle ? <h4>{card.subtitle}</h4> : null}
+									<p>{card.description}</p>
+									{card.bullets?.length ? (
+										<ul>
+											{card.bullets.map((b, i) => (
+												<li key={i}>{b}</li>
+											))}
+										</ul>
+									) : null}
+									{card.description2 ? <p>{card.description2}</p> : null}
+								</CardBody>
+								<CardMedia>
+									<img src={card.image} alt={`Aplicación Fusión ${index + 1}`} loading="lazy" />
+								</CardMedia>
+							</Card>
+						</SwiperSlide>
+					))}
+				</Swiper>
 			</StyledGaleria>
 			<StyledGaleria id={id[1]} backgroundColor={COLORS.gray01}>
 				<Titulo3 color={COLORS.gray08}>- Fusion Terracota</Titulo3>

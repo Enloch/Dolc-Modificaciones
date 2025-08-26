@@ -1,27 +1,23 @@
 import { Titulo, Titulo3 } from "../../../../components/Titulos";
-import { useRef, useCallback } from "react";
 import { COLORS } from "../../../../global/GlobalStyles";
 import Text from "../../../../components/Text";
 import Cita from "../../../../components/Cita";
 import ImageGallery from "react-image-gallery";
-import { StyledGaleria, StyledSlider, CardsSlider, CardsViewport, CardsTrack, Card, CardMedia, CardBody, NavButton } from "./styles";
-import Ejemplo1 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Rojo.png";
-import Ejemplo2 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Gris.png";
-import Ejemplo3 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Mixto.png";
-import Ejemplo4 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Beige.png";
+import { StyledGaleria, StyledSlider, Card, CardMedia, CardBody } from "./styles";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import Ejemplo1 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Rojo-t.png";
+import Ejemplo2 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Gris-t.png";
+import Ejemplo3 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Mixto-t.png";
+import Ejemplo4 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Beige-t.png";
 const AplicacionesTline = ({ id }) => {
-	const viewportRef = useRef(null);
-	const onNav = useCallback((dir) => {
-		const vp = viewportRef.current;
-		if (!vp) return;
-		const gap = 16; // debe coincidir con gap en CardsTrack
-		const step = vp.clientWidth + gap; // 1 tarjeta por vista
-		const delta = dir === "next" ? step : -step;
-		vp.scrollBy({ left: delta, behavior: "smooth" });
-	}, []);
 	// Actualizado para usar import.meta.globEager con eager: true en lugar de glob
 	const ImagenesAplicaciones = import.meta.globEager("../../../../assets/images/Fusion/Galeria/aplicaciones/*");
-	
+
 	// Lista ordenada de tarjetas (sin depender del nombre de archivo)
 	// Puedes controlar el orden con este array y usar:
 	// - img: import directo (preferido)
@@ -31,7 +27,7 @@ const AplicacionesTline = ({ id }) => {
 			id: "example-1",
 			img: Ejemplo1,
 			proposal: "Example 1",
-			title: "Design of ventilated facade with Dolcker Fusion porcelain stoneware (60x120 cm)",
+			title: "Design of ventilated facade with Dolcker Fusion (60x120 cm)",
 			subtitle: "Color proposal",
 			description:
 				"A ventilated facade with Dolcker Fusion Terracota porcelain stoneware in rectangular format 60 x 120 cm is proposed. This solution seeks to combine contemporary aesthetics with functionality, guaranteeing durability and energy efficiency.",
@@ -43,7 +39,7 @@ const AplicacionesTline = ({ id }) => {
 			id: "example-2",
 			img: Ejemplo2,
 			proposal: "Example 2",
-			title: "Design of ventilated facade with Dolcker Fusion porcelain stoneware (60x120 cm)",
+			title: "Design of ventilated facade with Dolcker Fusion (60x120 cm)",
 			subtitle: "Color proposal",
 			description:
 				"A ventilated facade with Dolcker Fusion Color porcelain stoneware in rectangular format 60 x 120 cm is proposed. Balance of neutrals with subtle variation in gloss for a serene and technical reading.",
@@ -55,7 +51,7 @@ const AplicacionesTline = ({ id }) => {
 			id: "example-3",
 			img: Ejemplo3,
 			proposal: "Example 3",
-			title: "Design of ventilated facade with Dolcker Fusion porcelain stoneware (60x120 cm)",
+			title: "Design of ventilated facade with Dolcker Fusion (60x120 cm)",
 			subtitle: "Color proposal",
 			description: "Controlled palette with green and terracotta accents to enliven the elevation without losing order.",
 			bullets: ["33% matte red", "33% textured gray", "33% glossy green"],
@@ -66,7 +62,7 @@ const AplicacionesTline = ({ id }) => {
 			id: "example-4",
 			img: Ejemplo4,
 			proposal: "Example 4",
-			title: "Design of ventilated facade with Dolcker Fusion porcelain stoneware (60x120 cm)",
+			title: "Design of ventilated facade with Dolcker Fusion (60x120 cm)",
 			description: "Range of technical beiges with emphasized joints for a sober and precise aesthetic.",
 			bullets: ["33% smooth beige", "33% smooth brown", "33% cream"],
 			description2:
@@ -151,39 +147,44 @@ const AplicacionesTline = ({ id }) => {
 					colorAutor={COLORS.gray04}
 				/>
 				{/* Slider de tarjetas con mezcla de texto + imagen */}
-				<CardsSlider>
-					<CardsViewport ref={viewportRef}>
-						<CardsTrack>
-							{cardsAplicaciones.map((card, index) => (
-								<Card key={index} data-card="true">
-									<CardBody>
-										<h3 style={{ fontWeight: "bold" }}>{card.proposal}</h3>
-										<h3>{card.title}</h3>
-										<h4>{card.subtitle}</h4>
-										<p>{card.description}</p>
-										{card.bullets?.length ? (
-											<ul>
-												{card.bullets.map((b, i) => (
-													<li key={i}>{b}</li>
-												))}
-											</ul>
-										) : null}
-										{card.description2 ? <p>{card.description2}</p> : null}
-									</CardBody>
-									<CardMedia>
-										<img src={card.image} alt={`Fusion Application ${index + 1}`} loading="lazy" />
-									</CardMedia>
-								</Card>
-							))}
-						</CardsTrack>
-					</CardsViewport>
-					<NavButton data-dir="prev" aria-label="Previous" onClick={() => onNav("prev")}>
-						‹
-					</NavButton>
-					<NavButton data-dir="next" aria-label="Next" onClick={() => onNav("next")}>
-						›
-					</NavButton>
-				</CardsSlider>
+				<Swiper
+					modules={[Navigation]}
+					className="Swiper swiper--aplicaciones"
+					navigation={false}
+					grabCursor
+					spaceBetween={16}
+					slidesPerView={1.5}
+					breakpoints={{
+						0: { slidesPerView: 1.1, spaceBetween: 12 },
+						600: { slidesPerView: 1.25, spaceBetween: 14 },
+						1080: { slidesPerView: 1.5, spaceBetween: 40 },
+					}}
+				>
+					{cardsAplicaciones.map((card, index) => (
+						<SwiperSlide key={index}>
+							<Card>
+								<CardBody>
+									<h3 style={{ fontWeight: "bold" }}>
+										{card.propuesta} {card.title}
+									</h3>
+									{card.subtitle ? <h4>{card.subtitle}</h4> : null}
+									<p>{card.description}</p>
+									{card.bullets?.length ? (
+										<ul>
+											{card.bullets.map((b, i) => (
+												<li key={i}>{b}</li>
+											))}
+										</ul>
+									) : null}
+									{card.description2 ? <p>{card.description2}</p> : null}
+								</CardBody>
+								<CardMedia>
+									<img src={card.image} alt={`Aplicación Fusión ${index + 1}`} loading="lazy" />
+								</CardMedia>
+							</Card>
+						</SwiperSlide>
+					))}
+				</Swiper>
 			</StyledGaleria>
 			<StyledGaleria id={id[1]} backgroundColor={COLORS.gray01}>
 				<Titulo3 color={COLORS.gray08}>- Fusion Terracota</Titulo3>
@@ -203,22 +204,11 @@ const AplicacionesTline = ({ id }) => {
 				<Text>
 					Fusion Terracota is a line of architectural surfaces that explores the timeless beauty of natural earth tones of fired clay.
 					Designed for contemporary projects seeking a connection with raw materials and visual balance, this collection adapts to both
-					sober and expressive compositions.
-					<br />
-					<br />
-					Main characteristics:
-					<br />
-					• Soft and natural earth colors: ranges that evoke the essence of clay, sand, oxide, or sienna.
-					<br />
-					• Surfaces of great visual purity, designed to offer authentic textures and warm, durable, and versatile ceramic finishes.
-					<br />
-					• Possibility of combining colors in personalized proportions, adapting each design to the aesthetic identity of the project.
-					<br />
-					• Perfect for contemporary architecture, rehabilitation, or integration into sensitive urban landscapes.
-					<br />
-					<br />
-					Choose the tones directly from the earth and create compositions that speak the language of honest, natural, and essential
-					architecture.
+					sober and expressive compositions. Main characteristics: • Soft and natural earth colors: ranges that evoke the essence of clay,
+					sand, oxide, or sienna. • Surfaces of great visual purity, designed to offer authentic textures and warm, durable, and versatile
+					ceramic finishes. • Possibility of combining colors in personalized proportions, adapting each design to the aesthetic identity of
+					the project. • Perfect for contemporary architecture, rehabilitation, or integration into sensitive urban landscapes. Choose the
+					tones directly from the earth and create compositions that speak the language of honest, natural, and essential architecture.
 				</Text>
 				<Cita
 					cita="“Architecture begins when you place two bricks carefully together.”"
@@ -244,24 +234,13 @@ const AplicacionesTline = ({ id }) => {
 				</StyledSlider>
 				<Text>
 					Fusion Color is the creative tool of the ARQ collection that allows combining monolithic colors to obtain personalized
-					architectural compositions, balanced or bold, according to the project's identity.
-					<br />
-					<br />
-					Starting from a carefully selected range of monochromatic colors, the collection offers the possibility of:
-					<br />
-					• Creating soft combinations, using tones close to each other within the same chromatic range.
-					<br />
-					• Generating harmonious effects, with subtle nuances for continuous visual harmony.
-					<br />
-					• Betting on high chromatic dispersion, playing with intense or contrasting colors that generate impact and character.
-					<br />
-					<br />
-					Each combination can be defined in the exact proportion desired, allowing control over the visual rhythm and atmosphere of the
-					design, from the most sober to the most expressive.
-					<br />
-					<br />
-					Fusion Color turns ceramics into an architectural language tool, where color is structured, balanced, and expressed with
-					intention.
+					architectural compositions, balanced or bold, according to the project's identity. Starting from a carefully selected range of
+					monochromatic colors, the collection offers the possibility of: • Creating soft combinations, using tones close to each other
+					within the same chromatic range. • Generating harmonious effects, with subtle nuances for continuous visual harmony. • Betting on
+					high chromatic dispersion, playing with intense or contrasting colors that generate impact and character. Each combination can be
+					defined in the exact proportion desired, allowing control over the visual rhythm and atmosphere of the design, from the most sober
+					to the most expressive. Fusion Color turns ceramics into an architectural language tool, where color is structured, balanced, and
+					expressed with intention.
 				</Text>
 				<Cita
 					cita="“Design is not just what it looks like and feels like. Design is how it works.”"
@@ -287,25 +266,13 @@ const AplicacionesTline = ({ id }) => {
 				</StyledSlider>
 				<Text>
 					Fusion Petra is the creative proposal that allows combining different natural stone collections to create unique, contemporary,
-					and aesthetically valuable facades.
-					<br />
-					<br />
-					Natural stones, due to their geological origin and chromatic and graphic diversity, offer unparalleled visual richness.
-					<br />
-					<br />
-					Fusion Petra starts from this singularity to offer architects or designers the possibility of:
-					<br />
-					• Mixing tones and textures of different stones in the same facade.
-					<br />
-					• Designing elegant, modern, and avant-garde compositions.
-					<br />
-					• Defining the exact proportion of each type of stone, adapting the visual rhythm and impact of the project.
-					<br />
-					• Playing with natural graphics and veins to generate dynamic or sober effects, according to the building's language.
-					<br />
-					<br />
-					With Fusion Petra, stones cease to be a complementary material to become a central compositional tool, capable of building
-					identity and sophistication from the essential.
+					and aesthetically valuable facades. Natural stones, due to their geological origin and chromatic and graphic diversity, offer
+					unparalleled visual richness. Fusion Petra starts from this singularity to offer architects or designers the possibility of: •
+					Mixing tones and textures of different stones in the same facade. • Designing elegant, modern, and avant-garde compositions. •
+					Defining the exact proportion of each type of stone, adapting the visual rhythm and impact of the project. • Playing with natural
+					graphics and veins to generate dynamic or sober effects, according to the building's language. With Fusion Petra, stones cease to
+					be a complementary material to become a central compositional tool, capable of building identity and sophistication from the
+					essential.
 				</Text>
 				<Cita
 					cita="“Designing is not making it look good, it's making it make sense.”"
@@ -331,21 +298,12 @@ const AplicacionesTline = ({ id }) => {
 				</StyledSlider>
 				<Text>
 					Fusion Textura is the creative tool that allows designing and personalizing facades by combining different finishes and colors,
-					generating compositions with depth, visual rhythm, and dynamic interaction with light.
-					<br />
-					<br />
-					Through this proposal, you can:
-					<br />
-					• Combine matte, gloss, and flamed textures within the same architectural surface.
-					<br />
-					• Apply any finish available in our collections to generate facades with unique character.
-					<br />
-					• Define your own combination percentages, adapting the design to the aesthetic and technical needs of the project.
-					<br />
-					• Create light and shadow effects, adding volume, relief, and sophistication to the building's envelope.
-					<br /> <br />
-					Fusion Textura offers total creative freedom, elevating the facade to an expressive language where the finish becomes a design
-					matter.
+					generating compositions with depth, visual rhythm, and dynamic interaction with light. Through this proposal, you can: • Combine
+					matte, gloss, and flamed textures within the same architectural surface. • Apply any finish available in our collections to
+					generate facades with unique character. • Define your own combination percentages, adapting the design to the aesthetic and
+					technical needs of the project. • Create light and shadow effects, adding volume, relief, and sophistication to the building's
+					envelope. Fusion Textura offers total creative freedom, elevating the facade to an expressive language where the finish becomes a
+					design matter.
 				</Text>
 				<Cita
 					cita="“Where color and texture meet, the character of the space is born.”"

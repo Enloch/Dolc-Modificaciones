@@ -12,9 +12,9 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Ejemplo1 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Rojo-t.png";
-import Ejemplo2 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Gris.png";
-import Ejemplo3 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Mixto.png";
-import Ejemplo4 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Beige.png";
+import Ejemplo2 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Gris-t.png";
+import Ejemplo3 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Mixto-t.png";
+import Ejemplo4 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Beige-t.png";
 const AplicacionesTline = ({ id }) => {
 	const viewportRef = useRef(null);
 	const onNav = useCallback((dir) => {
@@ -179,6 +179,7 @@ const AplicacionesTline = ({ id }) => {
 									<h3 style={{ fontWeight: "bold" }}>
 										{card.propuesta} {card.title}
 									</h3>
+									{card.subtitle ? <h4>{card.subtitle}</h4> : null}
 									<p>{card.description}</p>
 									{card.bullets?.length ? (
 										<ul>
