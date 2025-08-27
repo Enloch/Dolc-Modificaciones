@@ -23,8 +23,8 @@ export const useConfigStore = create((set) => ({
   
   // Percentage-based finish selection
   materialPorcelanico1: TIPOS_MATERIAL.ALLUREA,
-  materialPorcelanico2: TIPOS_MATERIAL.BLANCBORG,
-  materialPorcelanico3: TIPOS_MATERIAL.PALADIO,
+  materialPorcelanico2: TIPOS_MATERIAL.ALLUREA,
+  materialPorcelanico3: TIPOS_MATERIAL.ALLUREA,
   porcentajeMaterial1: 50,
   porcentajeMaterial2: 30,
   porcentajeMaterial3: 20,

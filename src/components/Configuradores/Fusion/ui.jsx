@@ -7,6 +7,7 @@ import { CatalogoPerfiles } from "./Materiales";
 //--------
 import { TIPOS_MATERIAL, TEXTURAS_POR_MATERIAL, SISTEMAS_FUSION } from "./texturas";
 import { Popover, Button, RadioGroup, FormControlLabel, Radio, FormControl, Typography, Box, Slider } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
 import styled from "@emotion/styled";
 
 // Define Styled Components
@@ -98,6 +99,20 @@ const Thumbnail = styled.img`
 	object-fit: cover;
 	border: 2px solid rgba(0, 0, 0, 0.1);
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+`;
+
+const PlaceholderCircle = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #e0e0e0;
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	color: #9e9e9e;
 `;
 
 const MenuIcon = styled.img`
@@ -222,6 +237,11 @@ export const TXTUI = () => {
 	const [slotPopoverAnchor, setSlotPopoverAnchor] = useState(null);
 	const [activeSlot, setActiveSlot] = useState(null); // 1 | 2 | 3
 
+	// Track if user explicitly picked a material per slot (UI placeholder logic)
+	const [slot1Picked, setSlot1Picked] = useState(false);
+	const [slot2Picked, setSlot2Picked] = useState(false);
+	const [slot3Picked, setSlot3Picked] = useState(false);
+
 	const toggleMenu = () => {
 		setIsMenuOpen(!isMenuOpen);
 	};
@@ -237,6 +257,10 @@ export const TXTUI = () => {
 		if (id1) setMaterialPorcelanico1(id1);
 		if (id2) setMaterialPorcelanico2(id2);
 		if (id3) setMaterialPorcelanico3(id3);
+		// Reset UI picked flags so mini slots start empty when switching system
+		setSlot1Picked(false);
+		setSlot2Picked(false);
+		setSlot3Picked(false);
 	};
 
 	const handleReiniciarPosicionamiento = (event) => {
@@ -286,9 +310,18 @@ export const TXTUI = () => {
 	};
 
 	const handleSelectMaterialForActiveSlot = (materialId) => {
-		if (activeSlot === 1) setMaterialPorcelanico1(materialId);
-		if (activeSlot === 2) setMaterialPorcelanico2(materialId);
-		if (activeSlot === 3) setMaterialPorcelanico3(materialId);
+		if (activeSlot === 1) {
+			setMaterialPorcelanico1(materialId);
+			setSlot1Picked(true);
+		}
+		if (activeSlot === 2) {
+			setMaterialPorcelanico2(materialId);
+			setSlot2Picked(true);
+		}
+		if (activeSlot === 3) {
+			setMaterialPorcelanico3(materialId);
+			setSlot3Picked(true);
+		}
 		closeSlotPopover();
 	};
 
@@ -320,18 +353,36 @@ export const TXTUI = () => {
 					<Box sx={{ display: "flex", justifyContent: "center", gap: 1.5, mb: 2 }}>
 						<Box onClick={(e) => openSlotPopover(e, 1)} sx={{ cursor: "pointer", textAlign: "center", width: 100 }}>
 							<FooterLabel>{`${sistemaActivo} 1 (${porcentajeMaterial1}%)`}</FooterLabel>
-							<Thumbnail src={selectedPorcelain1?.imagenes?.[0] || ""} alt={selectedPorcelain1?.nombre || ""} />
-							<FooterValue>{selectedPorcelain1?.nombre || "Seleccionar"}</FooterValue>
+							{slot1Picked && selectedPorcelain1?.imagenes?.[0] ? (
+								<Thumbnail src={selectedPorcelain1.imagenes[0]} alt={selectedPorcelain1?.nombre || ""} />
+							) : (
+								<PlaceholderCircle>
+									<AddIcon fontSize="small" />
+								</PlaceholderCircle>
+							)}
+							<FooterValue>{slot1Picked ? selectedPorcelain1?.nombre || "Seleccionar" : "Selecciona material 1"}</FooterValue>
 						</Box>
 						<Box onClick={(e) => openSlotPopover(e, 2)} sx={{ cursor: "pointer", textAlign: "center", width: 100 }}>
 							<FooterLabel>{`${sistemaActivo} 2 (${porcentajeMaterial2}%)`}</FooterLabel>
-							<Thumbnail src={selectedPorcelain2?.imagenes?.[0] || ""} alt={selectedPorcelain2?.nombre || ""} />
-							<FooterValue>{selectedPorcelain2?.nombre || "Seleccionar"}</FooterValue>
+							{slot2Picked && selectedPorcelain2?.imagenes?.[0] ? (
+								<Thumbnail src={selectedPorcelain2.imagenes[0]} alt={selectedPorcelain2?.nombre || ""} />
+							) : (
+								<PlaceholderCircle>
+									<AddIcon fontSize="small" />
+								</PlaceholderCircle>
+							)}
+							<FooterValue>{slot2Picked ? selectedPorcelain2?.nombre || "Seleccionar" : "Selecciona material 2"}</FooterValue>
 						</Box>
 						<Box onClick={(e) => openSlotPopover(e, 3)} sx={{ cursor: "pointer", textAlign: "center", width: 100 }}>
 							<FooterLabel>{`${sistemaActivo} 3 (${porcentajeMaterial3}%)`}</FooterLabel>
-							<Thumbnail src={selectedPorcelain3?.imagenes?.[0] || ""} alt={selectedPorcelain3?.nombre || ""} />
-							<FooterValue>{selectedPorcelain3?.nombre || "Seleccionar"}</FooterValue>
+							{slot3Picked && selectedPorcelain3?.imagenes?.[0] ? (
+								<Thumbnail src={selectedPorcelain3.imagenes[0]} alt={selectedPorcelain3?.nombre || ""} />
+							) : (
+								<PlaceholderCircle>
+									<AddIcon fontSize="small" />
+								</PlaceholderCircle>
+							)}
+							<FooterValue>{slot3Picked ? selectedPorcelain3?.nombre || "Seleccionar" : "Selecciona material 3"}</FooterValue>
 						</Box>
 					</Box>
 
@@ -343,9 +394,9 @@ export const TXTUI = () => {
 						anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
 						transformOrigin={{ vertical: "top", horizontal: "left" }}
 					>
-						<Box sx={{ p: 2, width: 300 }}>
+						<Box sx={{ p: 2, width: 325 }}>
 							<Typography variant="subtitle1" sx={{ mb: 1 }}>
-								{`Seleccionar material para ${sistemaActivo} ${activeSlot ?? ""}`}
+								{`Seleccionar acabado para ${sistemaActivo} ${activeSlot ?? ""}`}
 							</Typography>
 							<Box sx={{ mb: 2 }}>
 								<Box
