@@ -19,6 +19,14 @@ export const TIPOS_MATERIAL = {
   // Puedes añadir más tipos de material aquí si es necesario
 };
 
+// Mapeo de sistemas Fusion a materiales disponibles
+export const SISTEMAS_FUSION = {
+  Terracota: [TIPOS_MATERIAL.ALLUREA, TIPOS_MATERIAL.PALADIO, TIPOS_MATERIAL.WEGAB],
+  Color: [TIPOS_MATERIAL.BERAICE, TIPOS_MATERIAL.EDRAL, TIPOS_MATERIAL.NOONGREY],
+  Petra: [TIPOS_MATERIAL.BERENLG, TIPOS_MATERIAL.CALACATTAVENA, TIPOS_MATERIAL.ESTATUARIO],
+  Texture: [TIPOS_MATERIAL.ALLURELG, TIPOS_MATERIAL.NOONSAND, TIPOS_MATERIAL.KENDOL],
+};
+
 /**
  * Genera las rutas de las imágenes para un material específico,
  * siguiendo el patrón "NOMBREMATERIAL DIMENSIONES (i).extension".

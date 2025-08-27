@@ -2,7 +2,7 @@ import { create } from "zustand";
 import { TIPOS_MATERIAL } from "./texturas";
 
 export const useConfigStore = create((set) => ({
-  sistemaActivo: "TXT 13",
+  sistemaActivo: "Terracota",
   setSistemaActivo: (sistema) => set({ sistemaActivo: sistema }),
   selectedSection: null,
   menuSeleccionActivo: false,
@@ -36,7 +36,38 @@ export const useConfigStore = create((set) => ({
   setPorcentajeMaterial2: (porcentaje) => set({ porcentajeMaterial2: porcentaje }),
   setPorcentajeMaterial3: (porcentaje) => set({ porcentajeMaterial3: porcentaje }),
 
+  // Balanced setter: adjust other two to keep total at 100
+  setPorcentajesBalanceados: (targetIndex, newValue) =>
+    set((state) => {
+      const clamped = Math.max(0, Math.min(100, Math.round(newValue)));
+      const original = [state.porcentajeMaterial1, state.porcentajeMaterial2, state.porcentajeMaterial3];
+      const idx = Math.max(1, Math.min(3, targetIndex)) - 1; // 0..2
+      const remaining = 100 - clamped;
+      const otherIdxs = [0, 1, 2].filter((i) => i !== idx);
+      const sumOthers = original[otherIdxs[0]] + original[otherIdxs[1]];
+      let a = 0;
+      let b = 0;
+      if (sumOthers > 0) {
+        const ratioA = original[otherIdxs[0]] / sumOthers;
+        a = Math.round(remaining * ratioA);
+        b = remaining - a; // ensure exact 100
+      } else {
+        a = Math.floor(remaining / 2);
+        b = remaining - a;
+      }
+      const next = [...original];
+      next[idx] = clamped;
+      next[otherIdxs[0]] = a;
+      next[otherIdxs[1]] = b;
+      return {
+        porcentajeMaterial1: next[0],
+        porcentajeMaterial2: next[1],
+        porcentajeMaterial3: next[2],
+      };
+    }),
+
   // --- Add state for Perfil material selection ---
   materialPerfilSeleccionado: "ORO_MATE", // Default to an ID from CatalogoPerfiles
   setMaterialPerfilSeleccionado: (materialId) => set({ materialPerfilSeleccionado: materialId }),
 }));
+
