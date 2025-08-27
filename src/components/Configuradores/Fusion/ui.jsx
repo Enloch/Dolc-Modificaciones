@@ -73,7 +73,7 @@ const FooterItem = styled.div`
 `;
 
 const FooterLabel = styled(Typography)`
-	font-size: 0.7rem;
+	font-size: 0.8rem;
 	color: #555;
 	margin-bottom: 4px;
 `;
@@ -82,7 +82,8 @@ const FooterValue = styled.div`
 	font-weight: 500;
 	text-align: center;
 	font-size: 0.8rem;
-	white-space: nowrap;
+	margin-top: 4px;
+	/* white-space: break-spaces; */
 	overflow: hidden;
 	text-overflow: ellipsis;
 	width: 100%;
@@ -429,7 +430,6 @@ export const TXTUI = () => {
 							</Button>
 						</Box>
 					</Box>
-
 				</MenuContent>
 
 				{/* Fixed Footer */}
@@ -438,7 +438,9 @@ export const TXTUI = () => {
 				<FooterTitle>Selección actual</FooterTitle>
 				<FooterContent>
 					<FooterItem>
-						<FooterLabel>Porcelánico 1 ({porcentajeMaterial1}%)</FooterLabel>
+						<FooterLabel>
+							{sistemaActivo} ({porcentajeMaterial1}%)
+						</FooterLabel>
 						{selectedPorcelain1 && selectedPorcelain1.imagenes && selectedPorcelain1.imagenes[0] ? (
 							<Thumbnail src={selectedPorcelain1.imagenes[0]} alt={selectedPorcelain1.nombre} />
 						) : (
@@ -448,7 +450,9 @@ export const TXTUI = () => {
 					</FooterItem>
 
 					<FooterItem>
-						<FooterLabel>Porcelánico 2 ({porcentajeMaterial2}%)</FooterLabel>
+						<FooterLabel>
+							{sistemaActivo} ({porcentajeMaterial2}%)
+						</FooterLabel>
 						{selectedPorcelain2 && selectedPorcelain2.imagenes && selectedPorcelain2.imagenes[0] ? (
 							<Thumbnail src={selectedPorcelain2.imagenes[0]} alt={selectedPorcelain2.nombre} />
 						) : (
@@ -458,7 +462,9 @@ export const TXTUI = () => {
 					</FooterItem>
 
 					<FooterItem>
-						<FooterLabel>Porcelánico 3 ({porcentajeMaterial3}%)</FooterLabel>
+						<FooterLabel>
+							{sistemaActivo} ({porcentajeMaterial3}%)
+						</FooterLabel>
 						{selectedPorcelain3 && selectedPorcelain3.imagenes && selectedPorcelain3.imagenes[0] ? (
 							<Thumbnail src={selectedPorcelain3.imagenes[0]} alt={selectedPorcelain3.nombre} />
 						) : (
