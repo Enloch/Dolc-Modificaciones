@@ -44,12 +44,20 @@
         "link": "#diseno"
       },
       {
+        "title": "Formato",
+        "link": "#formato"
+      },
+      {
         "title": "Acabados",
         "link": "#acabados"
       },
       {
         "title": "Espesores",
         "link": "#espesores"
+      },
+      {
+        "title": "Configurador",
+        "link": "#configurador"
       },
       {
         "title": "Series",
@@ -161,7 +169,6 @@
       }
     ]
   },
-
   {
     "title": "Sistemas",
     "subList": [

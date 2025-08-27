@@ -50,7 +50,7 @@ const DisenosTline = ({ id }) => {
 				<Anotacion {...propsFormato.anotacion} />
 				<VisualizadorVariaciones {...propsFormato.visualizador} />
 			</StyledDisenos>
-			<StyledDisenos id={id[3]} backgroundColor={COLORS.gray01}>
+			<StyledDisenos id={id[2]} backgroundColor={COLORS.gray01}>
 				<Titulo2>Acabados</Titulo2>
 				<Anotaciones>
 					<Anotacion type="normal" text="Pulsa en el punto para ver todas las posibilidades de piezas especiales" />
@@ -58,7 +58,7 @@ const DisenosTline = ({ id }) => {
 				</Anotaciones>
 				<VisualizadorDesplazador config={configAcabados} />
 			</StyledDisenos>
-			<StyledDisenos id={id[4]} backgroundColor={COLORS.gray01} isEspesores>
+			<StyledDisenos id={id[3]} backgroundColor={COLORS.gray01} isEspesores>
 				<Titulo2>Espesores</Titulo2>
 				<div className="espesor espesor-1">
 					<img src={ranurado11} alt="" />
@@ -107,13 +107,13 @@ const DisenosTline = ({ id }) => {
         </Anotaciones>
         <VisualizadorRotador config={config} />
       </StyledDisenos> */}
-			<StyledDisenos id={id[5]} backgroundColor={COLORS.gray01}>
+			<StyledDisenos id={id[4]} backgroundColor={COLORS.gray01}>
 				<Titulo2>Configurador</Titulo2>
 				<div className="Configurador">
 					<Escena3DFusion />
 				</div>
 			</StyledDisenos>
-			<IndiceSeries id={id[6]} />
+			<IndiceSeries id={id[5]} />
 			<Series
 				ids={[
 					"basalt",
