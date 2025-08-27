@@ -20,8 +20,21 @@ export const useConfigStore = create((set) => ({
   setSection5: (value) => set({ Section5: value }),
   Section6: 0,
   setSection6: (value) => set({ Section6: value }),
-  materialPorcelanicoSeleccionado: TIPOS_MATERIAL.ALLUREA,
-  setMaterialPorcelanicoSeleccionado: (material) => set({ materialPorcelanicoSeleccionado: material }),
+  
+  // Percentage-based finish selection
+  materialPorcelanico1: TIPOS_MATERIAL.ALLUREA,
+  materialPorcelanico2: TIPOS_MATERIAL.BLANCBORG,
+  materialPorcelanico3: TIPOS_MATERIAL.PALADIO,
+  porcentajeMaterial1: 50,
+  porcentajeMaterial2: 30,
+  porcentajeMaterial3: 20,
+  
+  setMaterialPorcelanico1: (material) => set({ materialPorcelanico1: material }),
+  setMaterialPorcelanico2: (material) => set({ materialPorcelanico2: material }),
+  setMaterialPorcelanico3: (material) => set({ materialPorcelanico3: material }),
+  setPorcentajeMaterial1: (porcentaje) => set({ porcentajeMaterial1: porcentaje }),
+  setPorcentajeMaterial2: (porcentaje) => set({ porcentajeMaterial2: porcentaje }),
+  setPorcentajeMaterial3: (porcentaje) => set({ porcentajeMaterial3: porcentaje }),
 
   // --- Add state for Perfil material selection ---
   materialPerfilSeleccionado: "ORO_MATE", // Default to an ID from CatalogoPerfiles

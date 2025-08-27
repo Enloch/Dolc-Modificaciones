@@ -203,8 +203,18 @@ export const TXTUI = () => {
   const {
     menuSeleccionActivo,
     setMenuSeleccionActivo,
-    materialPorcelanicoSeleccionado, // Get current selection
-    setMaterialPorcelanicoSeleccionado, // Get setter
+    materialPorcelanico1,
+    materialPorcelanico2,
+    materialPorcelanico3,
+    porcentajeMaterial1,
+    porcentajeMaterial2,
+    porcentajeMaterial3,
+    setMaterialPorcelanico1,
+    setMaterialPorcelanico2,
+    setMaterialPorcelanico3,
+    setPorcentajeMaterial1,
+    setPorcentajeMaterial2,
+    setPorcentajeMaterial3,
     materialPerfilSeleccionado,
     setMaterialPerfilSeleccionado,
     setSection1,
@@ -246,7 +256,9 @@ export const TXTUI = () => {
   };
 
   // Get the selected materials for the footer
-  const selectedPorcelain = Object.values(TEXTURAS_POR_MATERIAL).find((material) => material.id === materialPorcelanicoSeleccionado);
+  const selectedPorcelain1 = Object.values(TEXTURAS_POR_MATERIAL).find((material) => material.id === materialPorcelanico1);
+  const selectedPorcelain2 = Object.values(TEXTURAS_POR_MATERIAL).find((material) => material.id === materialPorcelanico2);
+  const selectedPorcelain3 = Object.values(TEXTURAS_POR_MATERIAL).find((material) => material.id === materialPorcelanico3);
   const selectedProfile = Object.values(CatalogoPerfiles).find((material) => material.id === materialPerfilSeleccionado);
 
   return (
@@ -306,27 +318,132 @@ export const TXTUI = () => {
               <Typography variant="body1">Acabado Porcelánico</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: "8px",
-                  justifyContent: "space-between", // Kept as per original, can be changed to "flex-start"
-                  width: "100%",
-                  maxHeight: "300px",
-                  overflow: "auto",
-                }}
-              >
-                {Object.values(TEXTURAS_POR_MATERIAL).map((material) => (
-                  <MaterialOption
-                    key={material.id}
-                    src={material.imagenes[0]} // Use the first image from the material's image array
-                    alt={material.nombre}
-                    label={material.nombre}
-                    isSelected={materialPorcelanicoSeleccionado === material.id}
-                    onClick={() => setMaterialPorcelanicoSeleccionado(material.id)}
-                  />
-                ))}
+              <Box sx={{ mb: 2 }}>
+                <Typography variant="subtitle1" gutterBottom>
+                  Material 1 ({porcentajeMaterial1}%)
+                </Typography>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "8px",
+                    justifyContent: "space-between",
+                    width: "100%",
+                    maxHeight: "200px",
+                    overflow: "auto",
+                    mb: 2,
+                  }}
+                >
+                  {Object.values(TEXTURAS_POR_MATERIAL).map((material) => (
+                    <MaterialOption
+                      key={`mat1-${material.id}`}
+                      src={material.imagenes[0]}
+                      alt={material.nombre}
+                      label={material.nombre}
+                      isSelected={materialPorcelanico1 === material.id}
+                      onClick={() => setMaterialPorcelanico1(material.id)}
+                    />
+                  ))}
+                </Box>
+                
+                <Typography variant="subtitle1" gutterBottom>
+                  Material 2 ({porcentajeMaterial2}%)
+                </Typography>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "8px",
+                    justifyContent: "space-between",
+                    width: "100%",
+                    maxHeight: "200px",
+                    overflow: "auto",
+                    mb: 2,
+                  }}
+                >
+                  {Object.values(TEXTURAS_POR_MATERIAL).map((material) => (
+                    <MaterialOption
+                      key={`mat2-${material.id}`}
+                      src={material.imagenes[0]}
+                      alt={material.nombre}
+                      label={material.nombre}
+                      isSelected={materialPorcelanico2 === material.id}
+                      onClick={() => setMaterialPorcelanico2(material.id)}
+                    />
+                  ))}
+                </Box>
+                
+                <Typography variant="subtitle1" gutterBottom>
+                  Material 3 ({porcentajeMaterial3}%)
+                </Typography>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "8px",
+                    justifyContent: "space-between",
+                    width: "100%",
+                    maxHeight: "200px",
+                    overflow: "auto",
+                    mb: 2,
+                  }}
+                >
+                  {Object.values(TEXTURAS_POR_MATERIAL).map((material) => (
+                    <MaterialOption
+                      key={`mat3-${material.id}`}
+                      src={material.imagenes[0]}
+                      alt={material.nombre}
+                      label={material.nombre}
+                      isSelected={materialPorcelanico3 === material.id}
+                      onClick={() => setMaterialPorcelanico3(material.id)}
+                    />
+                  ))}
+                </Box>
+                
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, mt: 2 }}>
+                  <Typography variant="subtitle1" gutterBottom>
+                    Distribución de porcentajes
+                  </Typography>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                    <Typography>Material 1:</Typography>
+                    <input 
+                      type="range" 
+                      min="0" 
+                      max="100" 
+                      value={porcentajeMaterial1} 
+                      onChange={(e) => setPorcentajeMaterial1(parseInt(e.target.value))}
+                      style={{ flex: 1 }}
+                    />
+                    <Typography>{porcentajeMaterial1}%</Typography>
+                  </Box>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                    <Typography>Material 2:</Typography>
+                    <input 
+                      type="range" 
+                      min="0" 
+                      max="100" 
+                      value={porcentajeMaterial2} 
+                      onChange={(e) => setPorcentajeMaterial2(parseInt(e.target.value))}
+                      style={{ flex: 1 }}
+                    />
+                    <Typography>{porcentajeMaterial2}%</Typography>
+                  </Box>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                    <Typography>Material 3:</Typography>
+                    <input 
+                      type="range" 
+                      min="0" 
+                      max="100" 
+                      value={porcentajeMaterial3} 
+                      onChange={(e) => setPorcentajeMaterial3(parseInt(e.target.value))}
+                      style={{ flex: 1 }}
+                    />
+                    <Typography>{porcentajeMaterial3}%</Typography>
+                  </Box>
+                  <Typography variant="body2" color="textSecondary">
+                    Total: {porcentajeMaterial1 + porcentajeMaterial2 + porcentajeMaterial3}%
+                  </Typography>
+                </Box>
               </Box>
             </AccordionDetails>
           </Accordion>
@@ -368,13 +485,33 @@ export const TXTUI = () => {
           </FooterItem>
 
           <FooterItem>
-            <FooterLabel>Porcelánico</FooterLabel>
-            {selectedPorcelain && selectedPorcelain.imagenes && selectedPorcelain.imagenes[0] ? (
-              <Thumbnail src={selectedPorcelain.imagenes[0]} alt={selectedPorcelain.nombre} />
+            <FooterLabel>Porcelánico 1 ({porcentajeMaterial1}%)</FooterLabel>
+            {selectedPorcelain1 && selectedPorcelain1.imagenes && selectedPorcelain1.imagenes[0] ? (
+              <Thumbnail src={selectedPorcelain1.imagenes[0]} alt={selectedPorcelain1.nombre} />
             ) : (
               <Thumbnail src="" alt="No seleccionado" style={{ backgroundColor: "#f0f0f0" }} />
             )}
-            <FooterValue>{selectedPorcelain?.nombre || "No seleccionado"}</FooterValue>
+            <FooterValue>{selectedPorcelain1?.nombre || "No seleccionado"}</FooterValue>
+          </FooterItem>
+
+          <FooterItem>
+            <FooterLabel>Porcelánico 2 ({porcentajeMaterial2}%)</FooterLabel>
+            {selectedPorcelain2 && selectedPorcelain2.imagenes && selectedPorcelain2.imagenes[0] ? (
+              <Thumbnail src={selectedPorcelain2.imagenes[0]} alt={selectedPorcelain2.nombre} />
+            ) : (
+              <Thumbnail src="" alt="No seleccionado" style={{ backgroundColor: "#f0f0f0" }} />
+            )}
+            <FooterValue>{selectedPorcelain2?.nombre || "No seleccionado"}</FooterValue>
+          </FooterItem>
+
+          <FooterItem>
+            <FooterLabel>Porcelánico 3 ({porcentajeMaterial3}%)</FooterLabel>
+            {selectedPorcelain3 && selectedPorcelain3.imagenes && selectedPorcelain3.imagenes[0] ? (
+              <Thumbnail src={selectedPorcelain3.imagenes[0]} alt={selectedPorcelain3.nombre} />
+            ) : (
+              <Thumbnail src="" alt="No seleccionado" style={{ backgroundColor: "#f0f0f0" }} />
+            )}
+            <FooterValue>{selectedPorcelain3?.nombre || "No seleccionado"}</FooterValue>
           </FooterItem>
 
           <FooterItem>
