@@ -13,8 +13,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Ejemplo1 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Rojo-t.png";
 import Ejemplo2 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Gris-t.png";
-import Ejemplo3 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Mixto-t.png";
-import Ejemplo4 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Beige-t.png";
+import Ejemplo3 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Texture-t.png";
+import Ejemplo4 from "../../../../assets/images/Fusion/Galeria/aplicaciones/Petra-t.png";
 const AplicacionesTline = ({ id }) => {
 	const viewportRef = useRef(null);
 	const onNav = useCallback((dir) => {
@@ -64,7 +64,7 @@ const AplicacionesTline = ({ id }) => {
 			title: "Diseño con Dolcker Fusión Texture (60x120 cm)",
 			subtitle: "Propuesta cromática",
 			description: "Paleta controlada con acentos verdes y terracotas para dinamizar el alzado sin perder orden.",
-			bullets: ["33% rojo mate", "33% gris texturado", "33% verde brillo"],
+			bullets: ["33% grid oscuro texturado", "33% gris texturado", "33% gris claro texturado"],
 			description2:
 				"Las piezas se colocarán de forma estratégica para evitar repeticiones visibles y lograr una integración fluida de colores en toda la superficie del edificio.",
 		},
@@ -72,7 +72,7 @@ const AplicacionesTline = ({ id }) => {
 			id: "ejemplo-4",
 			img: Ejemplo4,
 			propuesta: "Ejemplo 4",
-			title: "Diseño con Dolcker Fusión Color (60x120 cm)",
+			title: "Diseño con Dolcker Fusión Petra (60x120 cm)",
 			description: "Gama de beiges técnicos con juntas enfatizadas para una estética sobria y precisa.",
 			bullets: ["33% beige liso", "33% marrón liso", "33% crema"],
 			description2:
@@ -165,11 +165,11 @@ const AplicacionesTline = ({ id }) => {
 					navigation={false}
 					grabCursor
 					spaceBetween={16}
-					slidesPerView={1.5}
+					slidesPerView={1.7}
 					breakpoints={{
 						0: { slidesPerView: 1.1, spaceBetween: 12 },
 						600: { slidesPerView: 1.25, spaceBetween: 14 },
-						1080: { slidesPerView: 1.5, spaceBetween: 40 },
+						1080: { slidesPerView: 1.7, spaceBetween: 40 },
 					}}
 				>
 					{cardsAplicaciones.map((card, index) => (
