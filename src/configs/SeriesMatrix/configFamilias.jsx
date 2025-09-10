@@ -17,23 +17,23 @@ import { configTecnux } from "./configTecnux";
 import { configLeiva } from "./configLeiva";
 
 export const Familias = [
-  { id: 1, Titulo: "Planex", Imagen: Planex },
-  { id: 2, Titulo: "Tubex", Imagen: Tubex },
-  { id: 3, Titulo: "Vivex", Imagen: Vivex },
-  { id: 4, Titulo: "Vertex", Imagen: Vertex },
-  { id: 5, Titulo: "Windx", Imagen: Windx },
-  { id: 6, Titulo: "Displax", Imagen: Displax },
-  { id: 7, Titulo: "Tecnux", Imagen: Tecnux },
-  { id: 8, Titulo: "Leiva", Imagen: Leiva },
+	{ id: 1, Titulo: "Planex", Imagen: Planex },
+	{ id: 2, Titulo: "Tubex", Imagen: Tubex },
+	{ id: 3, Titulo: "Vivex", Imagen: Vivex },
+	{ id: 4, Titulo: "Vertex", Imagen: Vertex },
+	{ id: 5, Titulo: "Windx", Imagen: Windx },
+	{ id: 6, Titulo: "Displax", Imagen: Displax },
+	{ id: 7, Titulo: "Tecnux", Imagen: Tecnux },
+	{ id: 8, Titulo: "Leiva", Imagen: Leiva },
 ];
 
 export const configFamilias = [
-  { id: 1, config: configPlanex },
-  { id: 2, config: configTubex },
-  { id: 3, config: configVivex },
-  { id: 4, config: configVertex },
-  { id: 5, config: configWindx },
-  { id: 6, config: configDisplax },
-  { id: 7, config: configTecnux },
-  { id: 8, config: configLeiva },
+	{ id: 1, config: configPlanex },
+	{ id: 2, config: configTubex },
+	{ id: 3, config: configVivex },
+	{ id: 4, config: configVertex },
+	{ id: 5, config: configWindx },
+	{ id: 6, config: configDisplax },
+	{ id: 7, config: configTecnux },
+	{ id: 8, config: configLeiva },
 ];
